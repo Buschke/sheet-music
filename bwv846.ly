@@ -1,4 +1,4 @@
-\version "2.22.2"
+
 \language "deutsch"
 
 \header {
