@@ -17,7 +17,10 @@ a b a g c a2.
 }
 altoMusic = \relative c' { f f8 g a4 d,8 e f4 f e f }
 tenorMusic = \relative c { d' d8 e f4 g c, d c c }
-bassMusic = \relative c { d'8 c b4 a g f b, c f } 
+bassMusic = \relative c { d'8 c b4 a g f b, c f
+cis d8 e f g a4 a, d2
+d'8 c b4 a g f b,
+} 
 firstWords = \lyricmode { O Haupt voll Blut und Wunden, }
 secondWords = \lyricmode { Du ed -- les An -- ge -- sich -- te, }
 
