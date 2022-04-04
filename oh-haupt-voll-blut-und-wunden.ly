@@ -1,4 +1,6 @@
+\version "2.22.2"
 \language "deutsch"
+
 \header {
   title = "Oh Haupt voll Blut und Wunden"
   subtitle = "Matthäuspassion, Choral No. 63"
@@ -17,14 +19,14 @@ f'4 e8 f g4 f e d2 e4\fermata
 a, b a g c a2.\fermata\bar "|."
 }
 altoMusic = \relative c' {
-  f4 f8 g a4 d,8 e f4 f e f\fermata
-  a a a a a8 g f2.\fermata
-  f4 f8 g a4 d,8 e f4 f( e) f\fermata
-  a a a a a8 g f2.\fermata
-  a4 g g8 f f4 b b( a8 g) a4\fermata
-  a a8 g a4 g8 fis g4 fis2.\fermata
-  g4 g c c c c( h) c\fermata
-  f,8 e d e f4 f e f2.\fermata
+  f4 f8 g a4 d,8 e f4 f( e) f
+  a a a a a8 g f2.
+  f4 f8 g a4 d,8 e f4 f( e) f
+  a a a a a8 g f2.
+  a4 g g8 f f4 b b( a8 g) a4
+  a a8 g a4 g8 fis g4 fis2.
+  g4 g c c c c( h) c
+  f,8 e d e f4 f e f2.
 }
 tenorMusic = \relative c {
   d'4 d8 e f4 g c, d( c) c\fermata
@@ -37,14 +39,14 @@ tenorMusic = \relative c {
   c, b c c8( b16 a) g8 c c2.\fermata
 }
 bassMusic = \relative c {
-d'8 c b4 a g f b, c f\fermata
-cis d8 e f g a4 a, d2.\fermata
-d'8 c b4 a g f b,( c) f\fermata
-cis d8 e f g a4 a, d2.\fermata
-d4 g a b8 a g4 f2 f4\fermata
-f b fis g g, d'2.\fermata
-h4 c c'8 h a4 g f( g) c,\fermata
-f g a8 b c4 c, f2.\fermata
+d'8 c b4 a g f b,( c) f
+cis d8 e f g a4 a, d2.
+d'8 c b4 a g f b,( c) f
+cis d8 e f g a4 a, d2.
+d4 g a b8 a g4 f2 f4
+f b fis g g, d'2.
+h4 c c'8 h a4 g f( g) c,
+f g a8 b c4 c, f2.
 } 
 tenorWords = \lyricmode {
   O _ Haupt voll Blut und Wun -- den,
@@ -70,24 +72,31 @@ bassWords = \lyricmode {
 \score {
   \new ChoirStaff <<
     \new Staff {\clef "treble" \key f \major \tempo 4 = 60
+                <<
       \new Voice = "sopranos" {\partial 4
-        \sopranoMusic
+        \stemUp \sopranoMusic
       }
-    }
-    \new Staff {\clef "alto" \key f \major
+      \\
       \new Voice = "altos" {
-        \altoMusic
-      }
+        \stemDown \altoMusic
+                }
+  >>
     }
-    \new Staff {\clef "tenor" \key f \major
-        \new Voice = "tenor" {
-          \tenorMusic
-        }
-    }
+%   \new Staff {\clef "tenor" \key f \major
+%       \new Voice = "tenor" {
+%         \tenorMusic
+%       }
+%}
     \new Staff {\clef "bass" \key f \major
-      \new Voice = "bass" {
-        \bassMusic
+      <<
+      \new Voice = "tenor" {
+        \stemUp \tenorMusic
       }
+      
+      \new Voice = "bass" {
+        \stemDown \bassMusic
+      }
+      >>
     }
 %    \new Lyrics = "tenor"
 %   \new Lyrics = "bass"
