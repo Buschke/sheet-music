@@ -15,7 +15,7 @@ preambleUp = {\clef treble \mKey \time \mTime \mTempo}
 preambleDown = {\clef bass \mKey \time \mTime \mTempo}
 
 upperNotes = {
-  a4\mordent a8 a4\mordent  a8 h2.~\upmordent | % 1
+  a4\mf\mordent a8 a4\mordent  a8 h2.~\upmordent | % 1
   h16 a h gis a h cis d cis d fis e d  cis a cis e a fis dis h dis fis a fis | gis a gis fis e dis cis dis e dis cis h a cis e cis a cis fis a cis a fis  | % 2
   r1. | r | % 4
   r1. | r | % 6
@@ -29,7 +29,7 @@ upperNotes = {
   \bar "|."
 }
 lowerNotes = {
-  a'16 h cis  h a gis fis gis  a gis fis e d fis a fis d fis h, d fis d h d | % 1
+  a'16\pp h cis  h a gis fis gis  a gis fis e d fis a fis d fis h, d fis d h d | % 1
   r1. | r | % 2
   r1. | r | % 4
   r1. | r | % 6
