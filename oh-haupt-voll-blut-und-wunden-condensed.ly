@@ -1,4 +1,4 @@
-\version "2.22.1"
+\version "2.21.1"
 \language "deutsch"
 
 \header {
@@ -82,6 +82,11 @@ bassWords = \lyricmode {
                 }
   >>
     }
+%   \new Staff {\clef "tenor" \key f \major
+%       \new Voice = "tenor" {
+%         \tenorMusic
+%       }
+%}
     \new Staff {\clef "bass" \key f \major
       <<
       \new Voice = "tenor" {
@@ -93,6 +98,8 @@ bassWords = \lyricmode {
       }
       >>
     }
+%    \new Lyrics = "tenor"
+%   \new Lyrics = "bass"
     \context Lyrics = "tenor" {    
       \lyricsto "tenor" {
        \tenorWords
@@ -106,34 +113,5 @@ bassWords = \lyricmode {
     }
   >>
   \layout {}
-%  \midi {}
-}
-
-\score {
-  \new ChoirStaff <<
-    \new Staff {\clef "treble" \key f \major \tempo 4 = 60
-                <<
-      \new Voice = "sopranos" {\partial 4
-        \stemUp \sopranoMusic
-      }
-      \\
-      \new Voice = "altos" {
-        \stemDown \altoMusic
-                }
-  >>
-    }
-    \new Staff {\clef "bass" \key f \major
-      <<
-      \new Voice = "tenor" {
-        %\stemUp \tenorMusic
-      }
-      
-      \new Voice = "bass" {
-        %\stemDown \bassMusic
-      }
-      >>
-    }
-  >>
-
- \midi {} 
+  \midi {}
 }
