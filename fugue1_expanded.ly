@@ -152,22 +152,15 @@ bass = \relative c {
 \score {
   \new StaffGroup
   <<
-    \new Staff = "soprano"
-      \soprano
+    \new Staff = "soprano" {\set Staff.midiInstrument = "vibraphone" \soprano}
     
-     \new Staff = "alto" 
-       \alto
+     \new Staff = "alto" {\set Staff.midiInstrument = "violin" \alto }
    
-    \new Staff = "tenor"
-      { \clef bass \tenor }
+    \new Staff = "tenor" {\set Staff.midiInstrument = "piano" \clef bass \tenor }
         
-    \new Staff = "bass"
-      { \clef bass \bass }
-    
+    \new Staff = "bass" {\set Staff.midiInstrument = "trumpet" \clef bass \bass }
   >>
   
-\layout {
-  indent = 0.0
-}
+\layout {}
   \midi {}
 }

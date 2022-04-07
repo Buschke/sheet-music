@@ -1,61 +1,38 @@
-\version "2.22.2"
-\language "deutsch"
+%\version "2.22.2"
+%\language "deutsch"
 
 \header {
-  title = "Fuge XIV"
-  subtitle = "Fis-Moll, Wohltemperiertes Klavier I"
+  title = "WC 2 - Fuge 1"
+  subtitle = "C-Dur, Wohltemperiertes Clavier 2"
   composer = "Johann Sebastian Bach"
-  opus = "BWV 859"
+  opus = "BWV 846"
+  copyright = "Public Domain"
+  tagline = ""
 }
 
-mKey = {\key fis \minor}
-mTime = 6/4
-mTempo = {\tempo 4 = 120}
-preambleUp = {\clef treble \mKey \time \mTime \mTempo}
-preambleDown = {\clef bass \mKey \time \mTime \mTempo}
+global = {
+  \key c \major
+  \time 4/4
+  \tempo 4 = 120}
 
-sNotes = {
-  r1. | r |  r |  r |  r | % 1
-  r | r | r |  r |  r |  % 6
-  r | r | r |  r |  r |  % 11
-  r | r | r |  r |  r |  % 16
-  r | r | r |  r |  r |  % 21
-  r | r | r |  r |  r |  % 26
-  r | r | r |  r |  r |  % 31
-  r | r | r |  r |  r |  % 36
+
+preambleUp = {\clef treble \global}
+preambleDown = {\clef bass \global}
+
+soprano = {
+c
   \bar "|."
 }
-aNotes = {
-  r1. | r |  r |  r |  r | % 1
-  r | r | r |  r |  r |  % 6
-  r | r | r |  r |  r |  % 11
-  r | r | r |  r |  r |  % 16
-  r | r | r |  r |  r |  % 21
-  r | r | r |  r |  r |  % 26
-  r | r | r |  r |  r |  % 31
-  r | r | r |  r |  r |  % 36
+alto = {
+g
   \bar "|."
 }
-tNotes = {
-  r1. | r |  r |  r |  r | % 1
-  r | r | r |  r |  r |  % 6
-  r | r | r |  r |  r |  % 11
-  r | r | r |  r |  r |  % 16
-  r | r | r |  r |  r |  % 21
-  r | r | r |  r |  r |  % 26
-  r | r | r |  r |  r |  % 31
-  r | r | r |  r |  r |  % 36
+tenor = {
+e
   \bar "|."
 }
-bNotes = {
-  r1. | r |  r |  r |  r | % 1
-  r | r | r |  r |  r |  % 6
-  r | r | r |  r |  r |  % 11
-  r | r | r |  r |  r |  % 16
-  r | r | r |  r |  r |  % 21
-  r | r | r |  r |  r |  % 26
-  r | r | r |  r |  r |  % 31
-  r | r | r |  r |  r |  % 36
+bass = {
+c
   \bar "|."
 }
 
@@ -66,16 +43,16 @@ bNotes = {
     %\set PianoStaff.instrumentName = #"Piano  "
     \new Staff = "upper" \relative c' {\preambleUp
   <<
-  \new Voice = "s" { \voiceOne \sNotes }
+  \new Voice = "s" { \voiceOne \soprano }
   \\
-  \new Voice ="a" { \voiceTwo \aNotes }
+  \new Voice ="a" { \voiceTwo \alto }
   >>
 }
     \new Staff = "lower" \relative c {\preambleDown
   <<
-   \new Voice = "t" { \voiceThree \tNotes }
+   \new Voice = "t" { \voiceThree \tenor }
     \\
-   \new Voice = "b" { \voiceFour \bNotes }
+   \new Voice = "b" { \voiceFour \bass }
   >>
 }
   >>
@@ -86,16 +63,16 @@ bNotes = {
   \new PianoStaff <<
    \new Staff = "upper" \relative c' {\preambleUp
   <<
-  \new Voice { \voiceOne \sNotes }
+  \new Voice { \voiceOne \soprano }
   \\
-  \new Voice { \voiceTwo \aNotes }
+  \new Voice { \voiceTwo \alto }
   >>
 }
     \new Staff = "lower" \relative c {\preambleDown
   <<
-    \new Voice { \voiceThree \tNotes }
+    \new Voice { \voiceThree \tenor }
     \\
-    \new Voice { \voiceFour \bNotes }
+    \new Voice { \voiceFour \bass }
   >>
 }
   >>
