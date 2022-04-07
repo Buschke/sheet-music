@@ -1,24 +1,24 @@
-\version "2.18.2"
-
-%This edition was prepared and typeset by Kyle Rother using the 1866 Breitkopf & Härtel Bach-Gesellschaft Ausgabe as primary source. 
-%Reference was made to both the Henle and Bärenreiter urtext editions, as well as the critical and scholarly commentary of Alfred Dürr, however the final expression is in all cases that of the composer or present editor.
-%This edition is in the public domain, and the editor does not claim any rights in the content.
+\version "2.22.2"
+%\language "deutsch"
 
 \header {
-  title = "Fugue I"
-  subtitle = "4 voci, C Major, Wohltemperiertes Clavier I"
+  title = "WC 1 - Fuge 1"
+  subtitle = "C-Dur, Wohltemperiertes Clavier 1"
   composer = "Johann Sebastian Bach"
-  copyright = "No rights reserved."
-  tagline = ""
   opus = "BWV 846"
+  copyright = "Public Domain"
+  tagline = ""
 }
 
 global = {
   \key c \major
   \time 4/4
-  \tempo 8 = 116
-}
- 
+  \tempo 8 = 116}
+
+
+preambleUp = {\clef treble \global}
+preambleDown = {\clef bass \global}
+
 soprano = \relative c' {
   \global
  
@@ -151,46 +151,45 @@ bass = \relative c {
   
 }
 
+
+
 \score {
-  \new PianoStaff
+  \new PianoStaff <<
+    %\set PianoStaff.instrumentName = #"Piano  "
+    \new Staff = "upper" \relative c' {\preambleUp
   <<
-    \new Staff = "right" {\clef treble
-                          <<
-%    \new Voice = "soprano" \voiceOne \soprano
-    \\
-     \new Voice = "alto" \voiceTwo \alto
-                          >>
-    }
-   \new Staff = "left" {\clef bass
-                        <<
-    \new Voice = "tenor" \voiceThree \tenor
-        \\
-%    \new Voice = "bass" \voiceFour \bass 
-                        >>
-   }
+  \new Voice = "s" { \voiceOne \soprano }
+  \\
+  \new Voice ="a" { \voiceTwo \alto }
   >>
-  
-\layout {}
+}
+    \new Staff = "lower" \relative c {\preambleDown
+  <<
+   \new Voice = "t" { \voiceThree \tenor }
+    \\
+   \new Voice = "b" { \voiceFour \bass }
+  >>
+}
+  >>
+  \layout { }
 }
 
 \score {
-  \new PianoStaff
+  \new PianoStaff <<
+   \new Staff = "upper" \relative c' {\preambleUp
   <<
-    \new Staff = "right" {\clef treble \set Staff.midiInstrument = "violin"
-                          <<
-    \new Voice = "soprano" \with {midiInstrument = "violin"} \voiceOne \soprano
-    \\
-     \new Voice = "alto"  \with {midiInstrument = "violin"} \voiceTwo \alto
-                          >>
-    }
-   \new Staff = "left" {\clef bass \set Staff.midiInstrument = "cello"
-                        <<
-    \new Voice = "tenor"  \voiceThree \tenor
-        \\
-    \new Voice = "bass"   \voiceFour \bass 
-                        >>
-   }
+  \new Voice { \voiceOne \soprano }
+  \\
+  \new Voice { \voiceTwo \alto }
   >>
-  
-\midi {}
+}
+    \new Staff = "lower" \relative c {\preambleDown
+  <<
+    \new Voice { \voiceThree \tenor }
+    \\
+    \new Voice { \voiceFour \bass }
+  >>
+}
+  >>
+  \midi { }
 }
