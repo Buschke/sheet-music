@@ -3,7 +3,7 @@
 
 \header {
   title = "WC 2 - Fuge 23"
-  subtitle = "H-Dur, Wohltemperiertes Clavier 2"
+  subtitle = "H-Dur, 4 voci, Wohltemperiertes Clavier 2"
   composer = "Johann Sebastian Bach"
   opus = "BWV 892"
   copyright = "Public Domain"
