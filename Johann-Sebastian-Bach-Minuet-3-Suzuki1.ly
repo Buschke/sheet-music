@@ -98,7 +98,7 @@ lower = \relative c {
 }
 \score {
   <<
-    \new Staff {\clef treble \global
+    \new Staff {\set Staff.midiInstrument = "violin" \clef treble \global
       \violin
     }
     \new PianoStaff <<
