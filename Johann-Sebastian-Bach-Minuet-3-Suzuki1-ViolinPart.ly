@@ -35,7 +35,7 @@ violin = \relative c' {
   \layout {}
 }
 \score {
-    \new Staff {\clef treble \global
+    \new Staff {\set Staff.midiInstrument = "string ensemble 1" \clef treble \global
       \violin
     }  \midi {}
 }
