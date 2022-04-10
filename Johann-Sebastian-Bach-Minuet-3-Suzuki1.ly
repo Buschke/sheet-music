@@ -12,10 +12,12 @@
 global = {
   \key g \major
   \time 3/4
-  \tempo 2. = 66
+%  \tempo 2. = 66
+  \tempo 2. = 10
 }
 
 violin = \relative c' {
+  d8 r8 d r d r
   \repeat volta 1 {
   d'4\downbow\mf g,8( a) h c | d4 g,-.( g-.) | e' c8( d) e fis | g4-. g,-.( g-.) | c d8( c) h a | h4 c8( h) a g |
   fis4 g8( a) h g | \grace h( a2.) | d4--\downbow g,8( a) h c | d4 g,-.( g-.) | e' c8( d) e fis | g4 g,-.( g-.) |
@@ -29,6 +31,7 @@ violin = \relative c' {
 }
 
 upper = \relative c' {
+  d8 r8 d r d r
   \repeat volta 1 {
   d'4-5(\p g,8 a h c | d4) g,-. g-. | e'-3( c8 d e fis | g4-.) g,-. g-. | c-4\( d8 c h a | h4 c8 h a g |
   fis4-2 g8-1 a h g | \grace h( a2.)\) | d4-5( g,8 a h c | d4-.) g,-. g-. | e'-3( c8 d e fis | g4-.) g,-. g-. |
@@ -42,6 +45,7 @@ upper = \relative c' {
 }
 
 lower = \relative c {
+  d8 r8 d r d r
   \repeat volta 1{
   <<
     {

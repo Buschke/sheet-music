@@ -183,6 +183,7 @@ left = \relative c {\clef bass \global
 }
 
 \score {
+  \unfold
   \new PianoStaff <<
     \new Staff = "upper" {
       \right
