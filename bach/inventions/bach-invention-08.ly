@@ -64,7 +64,7 @@ voiceone =  \relative c' {
   <a, c f>4 r r \bar "|."					% bar 34
 }
 
-  
+
 voicetwo =  \relative c {
   \key f \major
   \time 3/4
@@ -108,7 +108,7 @@ voicetwo =  \relative c {
 }
 
 \score {
-   \context GrandStaff << 
+   \context GrandStaff <<
     \context Staff = "one" <<
       \voiceone
     >>
@@ -118,11 +118,12 @@ voicetwo =  \relative c {
   >>
 
   \layout{ }
-  
+
   \midi {
     \context {
       \Score
-      tempoWholesPerMinute = #(ly:make-moment 90 4)
+%      tempoWholesPerMinute = #(ly:make-moment 90 4)
+      tempoWholesPerMinute = #(ly:make-moment 60 4)
       }
     }
 

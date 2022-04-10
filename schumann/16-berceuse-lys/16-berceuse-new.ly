@@ -1,4 +1,4 @@
- \version "2.6.4"
+ \version "2.22.0"
 
      \header {
       title = "Feuilles d'album"
@@ -24,14 +24,14 @@
        lastupdated = "2006/Feb/07"
 
        footer = "Mutopia-2006/02/10-665"
-       tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2005. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 2.5 License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/2.5" http://creativecommons.org/licenses/by-sa/2.5 } } } }
+       tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url "http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url "http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2005. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 2.5 License, for details see: \hspace #-0.5 \with-url "http://creativecommons.org/licenses/by-sa/2.5" http://creativecommons.org/licenses/by-sa/2.5 } } } }
  }
 
 %comment créer quelques macros pour alléger le fichier? (autre configuration?)
 
 melodie = \relative c'' { \time 6/8    \key es \major   \clef treble
 	\phrasingSlurUp
-	\once \override TextScript #'extra-offset = #'(-5 . 2)
+	\once \override TextScript.extra-offset = #'(-5 . 2)
 	bes4.^\markup { \bold "Allegretto" }\( g'4. |
 	f es\) |
 	 \acciaccatura d8 \stemUp c8\( b! c es d c |
@@ -57,14 +57,14 @@ melodie = \relative c'' { \time 6/8    \key es \major   \clef treble
 	\voiceOne
 	<< { f'4.\( bes,\) |
 	bes\( a!4\) g8\( |
-	\times 3/2 {f8[ a!8]} \times 3/2 {c8[ es8]\)} |
+	\tuplet 2/3 {f8[ a!8]} \tuplet 2/3 {c8[ es8]\)} |
 \break %mes 20
 	<es, f a! es'>4.\( <d bes' d>\) |
 	f'4.\( b,!\) |
 	g'4\( c,8\) g'4\( cis,8\) |  \tempo 4=70
 	\textSpannerUp
-	\override TextSpanner #'padding = #2.8
-	\override TextSpanner #'edge-text = #'("ritardando " . "Au Tempo")
+	\override TextSpanner.padding = #2.8
+	\override TextSpanner.edge-text = #'("ritardando " . "Au Tempo")
 	<bes d>8\( <a! cis> \startTextSpan <bes d> \tempo 4=64 <d f> <c! es> a |
 	bes4.~ bes4\) d8\rest | \tempo 4=76
      }
@@ -147,14 +147,14 @@ melodie = \relative c'' { \time 6/8    \key es \major   \clef treble
 	\voiceOne
 	<< { f'4.\( bes,\) |
 	bes\( a!4\) g8\( |
-	\times 3/2 {f8[ a!8]} \times 3/2 {c8[ es8]\)} |
+	\tuplet 2/3 {f8[ a!8]} \tuplet 2/3 {c8[ es8]\)} |
 	<es, f a! es'>4.\( <d bes' d>\) |
 \break %mes 73
 	f'4.\( b,!\) |
 	g'4\( c,8\) g'4\( cis,8\) |  \tempo 4=70
 	\textSpannerUp
-	\override TextSpanner #'padding = #2.8
-	\override TextSpanner #'edge-text = #'("ritardando " . "Au Tempo")
+	\override TextSpanner.padding = #2.8
+	\override TextSpanner.edge-text = #'("ritardando " . "Au Tempo")
 	<bes d>8\( <a! cis> \startTextSpan <bes d> \tempo 4=64 <d f> <c! es> a |
 	bes4.~ bes4\) d8\rest | \tempo 4=76
      }
@@ -189,7 +189,7 @@ melodie = \relative c'' { \time 6/8    \key es \major   \clef treble
 	aes g\) |
 	 \acciaccatura g8 f\( e! f aes4 d,8 |
 \break %mes 92: coda
-	\once \override NoteColumn #'force-hshift = #0.1
+	\once \override NoteColumn.force-hshift = #0.1
 	 es2.\) | \tempo 4=72
 	\clef bass
 	<c es>4. <bes es> |
@@ -218,10 +218,10 @@ middle = \relative c' {
 
 	s2.*14   %mes. 15-16
 	<< {s2 s8 \hideNotes bes8~ \unHideNotes
-	\once \override NoteColumn #'force-hshift = #-0.8
+	\once \override NoteColumn.force-hshift = #-0.8
 	bes4. } \\
       {s2 s8 \hideNotes  aes8~ \unHideNotes
-	\once \override NoteColumn #'force-hshift = #1 aes4
+	\once \override NoteColumn.force-hshift = #1 aes4
 	\set followVoice = ##t
 	\hideNotes  g8 }
      >>
@@ -229,10 +229,10 @@ middle = \relative c' {
 	s2.*22     %mes. 39-40
 
 	<< {s2 s8 \hideNotes bes8~ \unHideNotes
-	\once \override NoteColumn #'force-hshift = #-0.8
+	\once \override NoteColumn.force-hshift = #-0.8
 	bes4. } \\
       {s2 s8 \hideNotes  aes8~ \unHideNotes
-	\once \override NoteColumn #'force-hshift = #0.8 aes4
+	\once \override NoteColumn.force-hshift = #0.8 aes4
 
 	\hideNotes \unHideNotes \set followVoice = ##t
 	\hideNotes  g8 }
@@ -241,10 +241,10 @@ middle = \relative c' {
 	s2.*26    %mes 67-68
 
 	<< {s2 s8 \hideNotes bes8~ \unHideNotes
-	\once \override NoteColumn #'force-hshift = #-0.8
+	\once \override NoteColumn.force-hshift = #-0.8
 	bes4. } \\
       {s2 s8 \hideNotes  aes8~ \unHideNotes
-	\once \override NoteColumn #'force-hshift = #0.8 aes4
+	\once \override NoteColumn.force-hshift = #0.8 aes4
 
 	\hideNotes \unHideNotes \set followVoice = ##t
 	\hideNotes  g8 }
@@ -254,10 +254,10 @@ middle = \relative c' {
 	 s2.*22    %mes 91-92
 
 	<< {s2 s8 \hideNotes bes8~ \unHideNotes
-	\once \override NoteColumn #'force-hshift = #0.5
+	\once \override NoteColumn.force-hshift = #0.5
 	bes4. } \\
       {s2 s8 \hideNotes  aes8~ \unHideNotes
-	\once \override NoteColumn #'force-hshift = #-0.7 aes4
+	\once \override NoteColumn.force-hshift = #-0.7 aes4
 
 	\hideNotes \unHideNotes \set followVoice = ##t
 	\hideNotes  g8 }
@@ -270,10 +270,10 @@ middle = \relative c' {
 basse = \relative c { \time 6/8 \clef bass \key es \major % Les arpèges
 
 	\phrasingSlurDown
-	\once\override PhrasingSlur  #'control-points =
+	\once\override PhrasingSlur.control-points =
 	    #'((0.5 . 3.2) (1 . 5) (11 . 10) (18 . 3.5))
 	es8\( bes'16 es g8~ g es16 bes es,8\)~ |
-	\once\override PhrasingSlur  #'control-points =
+	\once\override PhrasingSlur.control-points =
 	    #'((0.5 . 3.2) (1 . 5) (11 . 10) (18 . 3.5))
 	es8^\( bes'16 es g8~ g es16 bes es,8\)~ %
 	es8\( aes16 es' \change Staff=upper \tieDown aes8\) ~  aes\( \change Staff=lower es16 aes, \tieDown es8\) ~ |
@@ -315,7 +315,7 @@ basse = \relative c { \time 6/8 \clef bass \key es \major % Les arpèges
 	bes,4. d4\rest d8\rest |
      }
 	\context Voice = "1" { \voiceTwo \phrasingSlurDown
-	\override Staff.NoteCollision #'merge-differently-dotted = ##t
+	\override Staff.NoteCollision.merge-differently-dotted = ##t
 	\stemUp es8\( g16 c \change Staff=upper \stemDown g'8\) \change Staff=lower \stemUp e,!8\( g16 cis \change Staff=upper \stemDown g'8\) |
      \change Staff=lower \phrasingSlurUp \stemUp <bes, d>8\( <a! cis> <bes d> <d f> <c! es> c\) |
 	\phrasingSlurDown bes,8\( f'16 bes \change Staff=upper \stemDown d8\) aes'8\( f16 d \change Staff=lower \stemUp bes8\) |
@@ -323,7 +323,7 @@ basse = \relative c { \time 6/8 \clef bass \key es \major % Les arpèges
 	}
 	>>
 %mes 25
-	\once\override PhrasingSlur  #'control-points =
+	\once\override PhrasingSlur.control-points =
 	    #'((0.5 . 3.2) (1 . 5) (13 . 11) (21 . 4))
 	es,8\( bes'16 es g8~ g g16 es bes8\) |
 	es,8\( bes'16 es \change Staff=upper \stemDown g8 bes g16 \change Staff=lower es16 bes8\) |
@@ -393,12 +393,12 @@ basse = \relative c { \time 6/8 \clef bass \key es \major % Les arpèges
 	>>
 %mes 53
 	\bar "||"  \key es \major
-	\override Staff.NoteCollision #'merge-differently-dotted = ##t
+	\override Staff.NoteCollision.merge-differently-dotted = ##t
 	\stemDown  \phrasingSlurDown
-	\once\override PhrasingSlur  #'control-points =
+	\once\override PhrasingSlur.control-points =
 	    #'((0.5 . 3.2) (1 . 5) (9.6 . 10) (16.6 . 3.5))
 	es'8\( bes'16 es g8~ g es16 bes es,8\)~ |
-	\once\override PhrasingSlur  #'control-points =
+	\once\override PhrasingSlur.control-points =
 	    #'((0.5 . 3.2) (1 . 5) (9.6 . 10) (16.6 . 3.5))
 	es8\( bes'16 es g8~ g es16 bes es,8\)~ |
 	es8\( aes16 es' \change Staff=upper \tieDown aes8\) ~  aes\( \change Staff=lower es16 aes, \tieDown es8\) ~ |
@@ -437,13 +437,13 @@ basse = \relative c { \time 6/8 \clef bass \key es \major % Les arpèges
 	d8\( f16 bes d8\) f8\( d16 b! f8\) |
 	\voiceOne
 	<< { \stemDown
-	\override Staff.NoteCollision #'merge-differently-dotted = ##t
+	\override Staff.NoteCollision.merge-differently-dotted = ##t
 	 es4. e! |
 	f f4 f8\noBeam |
 	bes,4. d4\rest d8\rest |
      }
 	\context Voice = "1" { \voiceTwo \phrasingSlurDown
-	\stemUp \override Staff.NoteCollision #'merge-differently-dotted = ##t
+	\stemUp \override Staff.NoteCollision.merge-differently-dotted = ##t
 	es8\( g16 c \change Staff=upper \stemDown g'8\) \change Staff=lower \stemUp e,!8\( g16 cis \change Staff=upper \stemDown g'8\) |
      \change Staff=lower \phrasingSlurUp \stemUp <bes, d>8\( <a! cis> <bes d> <d f> <c! es> c\) |
 	\phrasingSlurDown bes,8\( f'16 bes \change Staff=upper \stemDown d8\) aes'8\( f16 d \change Staff=lower \stemUp bes8\) |
@@ -451,7 +451,7 @@ basse = \relative c { \time 6/8 \clef bass \key es \major % Les arpèges
 	}
 	>>
 %mes 77
-	\once\override PhrasingSlur  #'control-points =
+	\once\override PhrasingSlur.control-points =
 	    #'((0.5 . 3.2) (1 . 5) (9.6 . 10) (16.6 . 4.6))
 	es,8\( bes'16 es g8~ g g16 es bes8\) |
 	es,8\( bes'16 es \change Staff=upper \stemDown g8 bes g16 \change Staff=lower es16 bes8\) |
@@ -494,14 +494,14 @@ basse = \relative c { \time 6/8 \clef bass \key es \major % Les arpèges
      }
 % polyphonie: mes 92
 	\context Voice = "1" {\voiceTwo
-	\stemDown \override PianoStaff.NoteCollision #'merge-differently-dotted = ##t es,,4. \change Staff=upper \stemUp des'' | %exception
+	\stemDown \override PianoStaff.NoteCollision.merge-differently-dotted = ##t es,,4. \change Staff=upper \stemUp des'' | %exception
 	\change Staff=lower \stemDown es,,4. es4. |
 	es4. ~ es4. |
 	es4. es'4. |
 % plyphonie: mes 96
 	es4.\arpeggio es4. |
 	es8 bes'16 es \change Staff=upper \stemDown g8 s8 g16 \change Staff=lower \stemUp es16 bes8 |
-	\once \override TextScript #'extra-offset = #'(0 . 1.8)
+	\once \override TextScript.extra-offset = #'(0 . 1.8)
 	s4^\markup { \italic "dim." } g8 s4 es8 |
 	es,8  d'\rest d\rest \stemDown <es bes'>4.^\fermata |
 	\oneVoice } >>
@@ -536,7 +536,7 @@ basse = \relative c { \time 6/8 \clef bass \key es \major % Les arpèges
 	s8 s8\< s8\! s8 s8 s8\>
 	s8\! s4 s4.
 	s2.
-	s4.\once \override DynamicText #'extra-offset = #'(0 . 3) s4.\pp
+	s4.\once \override DynamicText.extra-offset = #'(0 . 3) s4.\pp
 
 	\bar "|."
      }
@@ -546,8 +546,8 @@ basse = \relative c { \time 6/8 \clef bass \key es \major % Les arpèges
 
      \score {
        \context PianoStaff <<
-   \set PianoStaff.instrument = \markup{ \fontsize #6 {"16. "} \hspace #1.0 }
-        \override Score.MetronomeMark #'transparent = ##t
+   \set PianoStaff.instrumentName = \markup{ \fontsize #6 {"16. "} \hspace #1.0 }
+        \override Score.MetronomeMark.transparent = ##t
 	\set PianoStaff.connectArpeggios = ##t
          \context Staff=upper <<
 	 \context Voice=Cinq \melodie
@@ -562,32 +562,12 @@ basse = \relative c { \time 6/8 \clef bass \key es \major % Les arpèges
 
        >>
        \layout {
-	raggedlast = ##f
-         \context {
-           \type "Engraver_group_engraver"
-           \name Dynamics
-           \alias Voice % So that \cresc works, for example.
-           \consists "Output_property_engraver"
-
-           minimumVerticalExtent = #'(5 . -40)
-
-           \consists "Script_engraver"
-           \consists "Dynamic_engraver"
-           \consists "Text_engraver"
-
-           \override TextScript #'font-size = #2
-           \override TextScript #'font-shape = #'italic
-           \override DynamicText #'extra-offset = #'(0 . 2.5)
-           \override Hairpin #'extra-offset = #'(0 . 2.5)
-
-           \consists "Skip_event_swallow_translator"
-
-           \consists "Axis_group_engraver"
-         }
+	ragged-last = ##f
+         % [Convert-ly] The Dynamics context is now included by default.
          \context {
            \PianoStaff
            \accepts Dynamics
-           \override VerticalAlignment #'forced-distance = #5.4
+           \override VerticalAlignment.forced-distance = #5.4
          }
        }
      }
@@ -604,7 +584,7 @@ basse = \relative c { \time 6/8 \clef bass \key es \major % Les arpèges
        \midi {
 	\tempo 4=76
          \context {
-           \type "Performer_group_performer"
+           \type "Performer_group"
            \name Dynamics
          }
 

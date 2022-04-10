@@ -14,7 +14,7 @@ global = {
   \key c \minor
   \time 2/2
 %  \tempo "Allegro molto e con fuoco." 2 = 80
-  \tempo "Allegro molto e con fuoco." 2 = 40
+  \tempo "Allegro molto e con fuoco." 2 = 80
 }
 
 upper = \relative c' {

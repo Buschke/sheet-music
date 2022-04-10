@@ -1,7 +1,7 @@
 \version "2.10.3"
 
-\include "LVB_Sonate_111_1_1.ly"
-\include "LVB_Sonate_111_1_2.ly"
+\include "lvb_sonate_111_1_1.ly"
+\include "lvb_sonate_111_1_2.ly"
 
  \header {
   title = "Piano Sonate Opus 111 (1st Movement)"

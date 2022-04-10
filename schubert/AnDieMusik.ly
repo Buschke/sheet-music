@@ -1,4 +1,4 @@
-﻿%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 %                                           FICHIER AnDieMusik.ly
 %
@@ -6,7 +6,7 @@
 %
 %                   FRANZ SCHUBERT: Gesang "An die Musik", für eine Singstimme mit Klavierbegleitung
 %                                           AVEC SORTIES PARTITION ET MIDI SEPAREES
-%                                                  
+%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \version "2.11.30"
@@ -201,7 +201,7 @@ poemeUn = \lyricmode {
 % 3 - 9
  Du hol -- de Kunst, in wie -- viel grau -- en Stun -- den,
  Wo mich des Le -- bens wil -- der Kreis um -- strickt,
- 
+
 % 11 - 19
  Hast du mein Herz zu war -- mer Lieb ent -- zun -- den,
  Hast mich in ei -- ne beß -- re Welt ent -- rückt,
@@ -217,7 +217,7 @@ poemeDeux = \lyricmode {
 % 23 - 29
  Oft hat ein Seuf -- zer, dei -- ner Harf ent -- flos -- sen,
  Ein sü -- ßer, hei -- li -- ger Ak -- kord von dir
- 
+
 % 31 - 39
  Den Him -- mel beß -- rer Zei -- ten mir er -- schlos -- sen,
  Du hol -- de Kunst, ich dan -- ke dir da -- für,
@@ -243,34 +243,34 @@ pianoHautNoteIntro = \relative do' {
 
 pianoHautNoteCorps = \relative do {
  \repeat volta 2 {
- 
+
 % 3 23
  <fad la re>8[ <la re fad> <la re fad> <la re fad>] <la re fad>[ <la re fad> <la re fad> <la re fad>]
- 
+
 % 4 24
  <la re fad>8[ <la re fad> <la re fad> <la re fad>] <fad re' fad>[ <fad re' fad> <si re fad> <si re fad>]
  r8 <la re fad>[ <la re fad> <la re fad>] r <la dod sol'>[ <la dod sol'> <la dod sol'>]
  r8 <la re fad>[ <la re fad> <la re fad>] <la re fad>[ <la re fad> <la re fad> <la re fad>]
  <la re la'>8[ <la re la'> <la re la'> <la re la'>] <si re si'>[ <si re si'> <si re si'> <si re si'>] \clef bass
- 
+
 % 8 28
  r8 <mi, sol dod>[ <mi sol dod> <mi sol dod>] r <re fad re'>[ <re fad re'> <re fad re'>] \clef treble
  r8 <sol la mi'>[ <sol la mi'> <sol la mi'>] r <fad la fad'>[ <fad la fad'> <fad la fad'>]
  <la dod mi>8[ <la dod mi> <la dod la'> <la dod la'>] <si re la'>[ <si re la'> <dod mi la> <dod mi la>]
  <re fad la>8[ <re fad la> <re fad la> <re fad la>] <mi sol la>[ <mi sol la> <mi sol la> <mi sol la>]
- 
+
 % 12 32
  <re fad la>8[ <re fad la> <dod mi la> <dod mi la>] <si re la'>[ <si re la'> <dod mi la> <dod mi la>]
  <re fad la>8[ <re fad la> <re fad la> <re fad la>] <mi sol la>[ <mi sol la> <mi sol la> <mi sol la>]
  r8 <la, re fad>[ <la re fad> <la re fad>] <la dod sol'>[ <la dod sol'> <do re la'> <do re la'>]
  r8 <si re si'>[ <si re si'> <si re si'>] r <re fa si>[ <re fa si> <re fa si>]
- 
+
 % 16 36
  r8 <re fad! la>[ <re fad la> <re fad la>] r <mi fad dod'>[ <mi fad dod'> <mi sol dod>]
  r8 <re fad re'>[ <re fad re'> <re fad re'>] r <re fa si>[ <re fa si> <re fa si>]
  r8 <re fad! la>[ <re fad la> <re fad la>] r <sol, la dod>[ <sol la dod> <sol la dod>]
  <fad la re>8[ <re' fad re'> <re fad re'> <re fad re'>] <re fad re'>[ <re fad re'> <mi sol dod> <fad la re>]
- 
+
 % 20 40
  << { <la dod>8^>[ ^(<sol si>) <re sol si>^. <re sol si>^.] <re sol si>[ <si sol' si> <re sol si> <mi sol si>] } \\
     { re4 } >>
@@ -407,10 +407,10 @@ pianoDynPartCorps = {
 
 % 4 24
  s1  s1  s1  s1
- 
+
 % 8 28
  s1  s1  s1  s1
- 
+
 % 12 32
  s1  s1  s1
  \cresD s2\cr s2\!
@@ -420,7 +420,7 @@ pianoDynPartCorps = {
  s2 s8 s8\p s4
  s1
  \pinceD s2\cr s4 s8\! s8
- 
+
 % 20 40
  \dynamD s1\fp
  \dynamD s1\fp
@@ -465,10 +465,10 @@ pianoDynMidiCorps = {
 
 % 4 24
  s1  s1  s1  s1
- 
+
 % 8 28
  s1  s1  s1  s1
- 
+
 % 12 32
  s1  s1  s1
  s1\cr
@@ -478,7 +478,7 @@ pianoDynMidiCorps = {
  s2\!\mf s2\p
  s1
  s2\cr s4 s4\!\mf
- 
+
 % 20 40
  s8\mf s8\p s2.
  s8\mf s8\p s2.
@@ -497,7 +497,7 @@ pianoDynMidi = {
  \pianoDynMidiIntro \pianoDynMidiCorps \pianoDynMidiCorps \pianoDynMidiFin
  }
 
- 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                           D. SORTIE PARTITION (pas de \midi)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -563,7 +563,8 @@ pianoDynMidi = {
  \midi {
 	 \context {
    \Score
-	  tempoWholesPerMinute = #(ly:make-moment 84 4)
+%	  tempoWholesPerMinute = #(ly:make-moment 84 4)
+	  tempoWholesPerMinute = #(ly:make-moment 40 4)
   }
   \context {
    \PianoStaff

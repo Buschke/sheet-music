@@ -1,5 +1,5 @@
 % PaulLiu
-% 
+%
 \version "2.6.0"
 \header {
  title = "Kinderscenen"
@@ -96,10 +96,10 @@ pedaltr =  {
 			s2
 			s2
 			s2
-}			
+}
 
 viola =  {
-	\relative c'' { 
+	\relative c'' {
 		\context Voice = "viola" {
 			\stemUp
 			\phrasingSlurUp
@@ -107,7 +107,7 @@ viola =  {
 			\dynamicUp
 			\override Voice.Rest #'staff-position = #4
 			<gis-3>8\p (
-			<a-4> \< [ <cis> <fis-5>\! <e-4> ] 
+			<a-4> \< [ <cis> <fis-5>\! <e-4> ]
 			<d-5> <a-3> ) r8 <a-4>^.
 			<a-5>16 ( [ <e-3>16^. ] ) <e-2> ( [fis] g8 b
 			a [ <fis-4> ] e ) <gis-4>^> (
@@ -136,7 +136,7 @@ viola =  {
 }
 
 violatwo =  {
-	\relative c'' { 
+	\relative c'' {
 		\context Voice = "violatwo" {
 			\stemDown
 			\phrasingSlurUp
@@ -147,7 +147,7 @@ violatwo =  {
 			a <e g> cis' \fingerD <g-1 a-2> fis' <g, a> e' <g, a>
 			d' <d, fis> a' <d, fis> r16 <d fis> a' <d, fis>
 			a' [<cis,-1>] <cis-1>8 g'16 <cis, e> b' <b, g'>
-			a' \fingerL <a, fis'-3> fis' <a, d> e' [<a, cis>] gis' [<e g>] 
+			a' \fingerL <a, fis'-3> fis' <a, d> e' [<a, cis>] gis' [<e g>]
 			a [<e g> r16 <g, a>] r16 <g a> cis <g a>
 			d' <fis, a> fis' <a, d> b' <d, fis> a' <d, fis>
 			g \fingerU <g, d'-2> b' <d, g> e' <e, g> d' <d, g>
@@ -156,7 +156,7 @@ violatwo =  {
 			a <e g> cis' \fingerD <g-1 a-2> fis' <g, a> e' <g, a>
 			d' <d, fis> a' <d, fis> r16 <d fis> a' <d, fis>
 			a' [<cis,-1>] <cis-1>8 g'16 <cis, e> b' <b, g'>
-			a' \fingerL <a, fis'-3> fis' <a, d> e' [<a, cis>] gis' [<e g>] 
+			a' \fingerL <a, fis'-3> fis' <a, d> e' [<a, cis>] gis' [<e g>]
 			a [<e g> r16 <g, a>] r16 <g a> cis <g a>
 			d' <fis, a> fis' <a, d> b' <d, fis> a' <d, fis>
 			g \fingerL <g, d'-2> b' <d, g> e' <e, g> d' <d, g>
@@ -169,14 +169,14 @@ violatwo =  {
 			bes' <e, g> e' <g, bes> a' <g, bes> g' <g, bes>
 			fis' <fis, a> cis' <g a> e' <e, a-2> d' <d, a'-3>
 			b' <d, g-4> fis <c d> a' <a, d-2> g' <g, d'>
-			fis' <a, d> e' <g, cis> d' <fis, a>8. 
-			
+			fis' <a, d> e' <g, cis> d' <fis, a>8.
+
 		}
 	}
 }
 
 oboes =  {
-	\relative c'' { 
+	\relative c'' {
 		\context Voice = "oboe" {
 			\stemNeutral
 			\change Staff=up
@@ -185,7 +185,7 @@ oboes =  {
 }
 
 oboestwo =  {
-	\relative c' { 
+	\relative c' {
 		\context Voice = "oboetwo" {
 			\stemNeutral
 			\change Staff=up
@@ -239,8 +239,8 @@ bassvoicestwo =  {
 			\tieUp
 			\dynamicDown
 			\fingerU
-			r8 
-			<a, a'>8^.\p \dynamicUp r8 r8  <cis'-4>8 (  
+			r8
+			<a, a'>8^.\p \dynamicUp r8 r8  <cis'-4>8 (
 			<d-3> \< [ fis b\! <a-1> ] )
 			a,16 [a'] <a-1>8 ~ a8 a, ~
 			a2
@@ -257,7 +257,7 @@ bassvoicestwo =  {
 			<d, d'>4. ) \fingerD <c-4 c'>8 \(
 			<b-5 b'>4. <bes-4 bes'>8
 			<a-5 a'> [ <b b'> <cis-4 cis'> <c c'>^>^"(ten.)" ~ \) ]
-			\fingerU <c c'>4. <e'-4>8 ( 
+			\fingerU <c c'>4. <e'-4>8 (
 			<f-3>8\< [ a  <d-1>\! <c-1> ] )
 			c,16 [d'] <d-1>8 g, e (
 			f4 e )
@@ -265,7 +265,7 @@ bassvoicestwo =  {
 			<d-5 d'> [<e e'> <f f'> <fis-4 fis'>]
 			\stemDown <g-5 g'> [<a a'> <bes-4 bes'>^> <b b'>] \stemUp
 			<a>4 ~ a4 \)
-			
+
 		}
 	}
 }
@@ -274,7 +274,7 @@ bassvoicestwo =  {
 \score {
 	\context PianoStaff  <<
 		\context Staff = "up" <<
-			\key d \major 
+			\key d \major
 			\time 2/4
 			\viola
 			\violatwo
@@ -297,9 +297,9 @@ bassvoicestwo =  {
 			\type "Engraver_group_engraver"
 			\name Dynamics
 			\consists "Output_property_engraver"
-			
+
 			minimumVerticalExtent = #'(-1 . 1)
-			
+
 			\consists "Piano_pedal_engraver"
 			\consists "Script_engraver"
 			\consists "Dynamic_engraver"
@@ -309,7 +309,7 @@ bassvoicestwo =  {
 		 \override TextScript #'font-shape = #'italic
 		 \override DynamicText #'extra-offset = #'(0 . 2.5)
 		 \override Hairpin #'extra-offset = #'(0 . 2.5)
-			
+
 			\consists "Skip_event_swallow_translator"
 
 			\consists "Axis_group_engraver"

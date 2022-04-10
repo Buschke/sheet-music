@@ -18,7 +18,7 @@
  footer = "Mutopia-2013/09/01-998"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \abs-fontsize #10 \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \concat { \abs-fontsize #8 www. \abs-fontsize #11 MutopiaProject \abs-fontsize #8 .org } \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \abs-fontsize #10 \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \concat { \abs-fontsize #8 www. \abs-fontsize #11 LilyPond \abs-fontsize #8 .org }} by \concat { \maintainer . } \hspace #0.5 Copyright © 2013. \hspace #0.5 Reference: \footer } } \line { \abs-fontsize #8 \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details \concat { see: \hspace #0.3 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } } }
 }
-  
+
 %{ Abreviations
   Suffixes rh = right hand
            lh = left hand
@@ -34,20 +34,20 @@
 
 %%% Right Hand
 
-ptrha = \relative c'' {  
-  c2-1(\mp e4-3 g-5 
+ptrha = \relative c'' {
+  c2-1(\mp e4-3 g-5
   b,4.-1_> c16 d c4) r4
   a'2-3(_\accent g4\< c\!
   g-3_\accent f8\trill\> e16 f e4)\! r4 % \break
-  
-  a,8\p\<\( b16 c d-1 e f g\!  a\> g f e d c-4 b a\! 
+
+  a,8\p\<\( b16 c d-1 e f g\!  a\> g f e d c-4 b a\!
   g8\< a16 b c-1 d e f\!  g\> f e d c \tag #'first b-4 \tag #'second b-3 a g\!
   f8\< g16 a b-1 c d e\!  f\> e d c \tag #'first {b a-4 g f\!} \tag #'second {b-3 a g f-2\!}
 
   e8\< f16 g  a-1 b c d\!  e\> d c b a \tag #'first g-4 \tag #'second g-3 f e\!\)
 }
 
-ptrhb = \relative c'' {  
+ptrhb = \relative c'' {
   b8->\f( g')  e-.-3 c-.-1  d-2( g)  e-. c-.
   d4-. <b d g>-. g-.-2 r4
 }
@@ -55,15 +55,15 @@ ptrhb = \relative c'' {
 ptrh = {
   \ptrha
 
-  \relative c' {  
-    d8\p\( e16 f  g-1 a b cis    d a\< b cis d-1 e f g\! 
+  \relative c' {
+    d8\p\( e16 f  g-1 a b cis    d a\< b cis d-1 e f g\!
     a b c! b  a g f-3 e  f g a g  f e d c!-2 \)
   }
-  
+
   \ptrhb
 }
 
-strha = \relative c' {  
+strha = \relative c' {
   r1
   d''8\mp( b) g4.( a16 b a8 g)
   \acciaccatura a8 g8.\trill-3( fis16-.-2) fis4-3 r2
@@ -72,12 +72,12 @@ strha = \relative c' {
   \acciaccatura a8 g8.\trill-3( fis16) fis4 r2
 }
 
-strhb = \relative c'' {  
+strhb = \relative c'' {
   d'4->-5 r16 d16-5 b-4 g-2 e4-1 r16 e16(-1 g-2 e)
-  c'4-> r16 c( a fis d4) 
+  c'4-> r16 c( a fis d4)
 }
 
-strhc = \relative c'' {  
+strhc = \relative c'' {
   r16 d16( fis d)
   % 20
   b'4->-5 r16 b( g e c4) r16 c( e c
@@ -88,13 +88,13 @@ strh = {
   \strha
   \strhb
   \strhc
-  \relative c'' {  
+  \relative c'' {
     a2\p) \acciaccatura b8-2 c4-.-3\< \acciaccatura dis8-2 e4-.-3\!
 
     \acciaccatura { gis8-2 } a4.-> b32( a gis a c8-5 a-3) c( a)
     b-3(\f g-1) d'2-5(\sf c16 b a g)
 
-    \phrasingSlurDown    
+    \phrasingSlurDown
     \acciaccatura b8-3 \afterGrace a1 \startTrillSpan \( ( {g16 [ a ] )
 							    \stopTrillSpan}
      g4\) g16-2( d g b-4 d-5 b-4 g b-4 c-5 a-3 fis-2 a-4
@@ -103,12 +103,12 @@ strh = {
    }
 }
 
-dvrh = \relative c'' {  
+dvrh = \relative c'' {
   g4-. g'16-2( d g bes-3 d-5 bes-3 g bes c-5 a-3 fis-2 a-4
   g4-.) g,16-2_( d g bes-3 d bes-3 g bes  c-5 a-3 fis-2 a-4
-  g4-.) r r16 g'-2 bes-4 a g f e-4 d 
-  
-  cis4-.\sf r r16 cis'-3( e d  cis bes a g-3 
+  g4-.) r r16 g'-2 bes-4 a g f e-4 d
+
+  cis4-.\sf r r16 cis'-3( e d  cis bes a g-3
   f4\sf)  d16-2( a-1 d f-4 a f-4 d-2 f g-5 e-3 cis-2 e-4
   d4-.) d,16-2 a d f-4  a f d-2 f  g-5 e-3 cis e
 
@@ -136,16 +136,16 @@ ptirh = \relative c'' {
 }
 
 stvrh = {
-  \transpose c f, { \strhb } 
-  \transpose d g { 
+  \transpose c f, { \strhb }
+  \transpose d g {
     \strhc
-     \relative c'' {  
+     \relative c'' {
        a2\p) \acciaccatura gis8-2 a4-. \acciaccatura gis8 a4-.
      }
-  } 
-  \relative c''' {  
+  }
+  \relative c''' {
     a2\p \acciaccatura gis8-2 a4-. \acciaccatura gis8 a4-.
-    
+
     g8-1\f( a16 b c-1 d e d c b-4 a g  f e-3d c)
 
     \phrasingSlurDown
@@ -154,7 +154,7 @@ stvrh = {
     \phrasingSlurUp
     c4-.\) c16-2\( g_> c e-4  g e-4 c e-4  f_> d-3 b d-3 c4-.
     c,16-2 g-> c e-4  g e-4 c e-4  f-> d-3 b d-3\)
-    c4-. <e'-1 g-2 c-5>-. c-2 r 
+    c4-. <e'-1 g-2 c-5>-. c-2 r
 
   }
 }
@@ -162,25 +162,25 @@ stvrh = {
 
 %%% Left Hand
 
-ptlha = \relative c'' {  
+ptlha = \relative c'' {
   c,8-5(\p g'-1 e-3 g  c,  g' e g)
   d-4 g-1 f-2 g  c,-5 g'-1 e-3 g
   c, a'-1 f-2 a  c, g'-1 e-3 g
   b,-5 g'-1 d-3 g  c,-4 g'-1 e-2 g
-  
+
   f4 r4 r4 \clef bass <f, c'>_4-.
   <e c'>-. r4 r4 <e c'>_4-.
-  <d c'>-. r4 r4 <d b'>_4-.  
+  <d c'>-. r4 r4 <d b'>_4-.
 }
 
-ptlhb = \relative c' {  
-  g,16-5\( b-4 d-2 g  g,-5 c-3 e-2 g  g, b d g  g, c e g  
+ptlhb = \relative c' {
+  g,16-5\( b-4 d-2 g  g,-5 c-3 e-2 g  g, b d g  g, c e g
   g,4-.\) g'-. g,-. r
 }
 
 ptlh = {
   \ptlha
-  \relative c {  
+  \relative c {
     <c c'>-. r4 r4 <c-5 e-3>-.
     <f-2 a-1>1
     f4._3( g8 a4. fis8_2)
@@ -188,7 +188,7 @@ ptlh = {
   \ptlhb
 }
 
-stlha = \relative c {  
+stlha = \relative c {
   cis'16->\p-2( d cis d  cis d cis d  c_2-> d c d  c d c d)
 
   b->_3 d b d \repeat unfold 3 { b d b d }
@@ -198,12 +198,12 @@ stlha = \relative c {
   c d b d  a d b d  c d b d  c d a d
 }
 
-stlhb = \relative c' {  
+stlhb = \relative c' {
   \clef treble r16 b-5( d-4 g-2 b4) r16 c,-5( e-4 g-2 c4)
   r16 a,-5( c-4 fis-2 a4) r16 b,-5( d-4 fis-2 b4)
 }
 
-stlhc = \relative c' {  
+stlhc = \relative c' {
   % 20
   r16 g-5( b-4 e-2 g4) r16 a,-5( c-4 e-2 a4)
   r16 fis,-5( a-4 d-2 fis4) r16 g,-5( b-4 d-2 g4)
@@ -216,12 +216,12 @@ stlh = {
   \relative c' {
     \clef treble \repeat unfold 16 <c e>8-.
 
-    d16_5 b'_1 g_2 b \repeat unfold 3 { d, b' g b } 
+    d16_5 b'_1 g_2 b \repeat unfold 3 { d, b' g b }
     \repeat unfold 4 { d, c' fis, c' }
 
     <g-2 b-1>4 r r <a c d,>
     <g-2 b-1> r r \clef bass <d, a' c>
-    <g b> <g g,> <g g,> r  
+    <g b> <g g,> <g g,> r
   }
 }
 
@@ -240,13 +240,13 @@ dvlh = \relative c {
   c4-.)\sf r \clef treble r16 d'-5( a'-1 g f e-1 d c
   \break
 
-  b4-.\sf) r r16 c-5( g' f  e d-1 c b 
+  b4-.\sf) r r16 c-5( g' f  e d-1 c b
   a4-.\sf) r r16 b-5( f' e  d c-1 b a
   \clef bass gis4-.\sf) r r16 a-3( c-1 b  a g-1 f e
-  
+
   d2\sf) <c g' bes>\sf
 }
-  
+
 ptilha = \relative c {
   f8-5 g16 a  bes c d-3 e f e d-1 c  bes a-1 g f
 }
@@ -257,18 +257,18 @@ ptilh = \relative c {
   e8 f16 g  a b-4 c d  e d c b  a-1 g f e
   d8 e16 f  g a b-3 c  d c b a  g-1 f e d
   \transpose f c { \ptilha }
-  
+
   \once \set fingeringOrientations = #'(right)
-  <f-2 a-1>1\p\) 
+  <f-2 a-1>1\p\)
   f4.-3 g8 a4. fis8-2
 
   \ptlhb
 }
 
 stvlh = {
-  \transpose c f, { \stlhb } 
-  \transpose d g { \stlhc } 
-  \relative c' {  
+  \transpose c f, { \stlhb }
+  \transpose d g { \stlhc }
+  \relative c' {
     r8 \repeat unfold 7 { <f a>8-. }
     \clef bass r8 \repeat unfold 7 { <fis, c' ees>8-. }
     \repeat unfold 4 { g16-5 e' c-2 e }
@@ -283,12 +283,12 @@ stvlh = {
 
 \score {
   \new PianoStaff <<
-    \new Staff { 
+    \new Staff {
       \override Fingering #'avoid-slur = #'inside
       \keepWithTag #'first
-      \repeat volta 2 { \ptrh \strh } \break 
+      \repeat volta 2 { \ptrh \strh } \break
       \repeat volta 2 {
-	\dvrh 
+	\dvrh
 	\phrasingSlurUp
 	\keepWithTag #'second
 	\transpose c f { \ptrha }
@@ -297,20 +297,21 @@ stvlh = {
 	\stvrh
       }
     }
-    \new Staff { 
+    \new Staff {
       \override Fingering #'avoid-slur = #'inside
-      \repeat volta 2 { \ptlh \stlh } 
+      \repeat volta 2 { \ptlh \stlh }
       \repeat volta 2 {
-	\dvlh 
+	\dvlh
 	\clef treble \transpose c f { \ptlha }
 	\ptilh
-	\clef treble \transpose c f { \stlha }	
+	\clef treble \transpose c f { \stlha }
 	\stvlh
       }
     }
   >>
   \layout {}
   \midi {
-    \tempo 4 = 132
+%    \tempo 4 = 132
+    \tempo 4 = 40
   }
 }
