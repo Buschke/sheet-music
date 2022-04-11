@@ -304,29 +304,29 @@ PartPEightVoiceOne =  \relative e {
      fis8  a8 ) ]  e8 ( [  a8  e8
      a8  d,8  fis8 ) ]  cis8 ( [  e8
      cis8  e8  d8  e8 ) ]  cis4 r4 r4
-     a'4 ( _\f \stemDown d4. \stemDown fis8 ) \stemDown fis8 ( [
-    \stemDown e8 ) ] \stemDown d4 r4  a4. ( \stemDown d8 [
-    \stemDown fis8 \stemDown a8 ) ] \stemDown a8 ( [ \stemDown g8 ) ]
-    \stemDown fis4 r4 \stemDown e4. \stemDown a8 ( [ \stemDown fis8
-    \stemDown a8 ) ] \stemDown e4. \stemDown a8 ( [ \stemDown b,8
-    \stemDown fis'8 ) ]  a,2 \grace {  cis16 ( }  b8.
+     a'4 ( _\f  d4.  fis8 )  fis8 ( [
+     e8 ) ]  d4 r4  a4. (  d8 [
+     fis8  a8 ) ]  a8 ( [  g8 ) ]
+     fis4 r4  e4.  a8 ( [  fis8
+     a8 ) ]  e4.  a8 ( [  b,8
+     fis'8 ) ]  a,2 \grace {  cis16 ( }  b8.
     ) [  a16 ]  a8  b8 ( [ _\p  a8  g8
      fis8  e8 ) ]  fis8 ( [  d8  fis8
-     d8  fis8  d8 ) ]  d8 \stemDown b'4 (
-    \stemDown a8 [ \stemDown g8 \stemDown fis8 ) ]  g8 ( [
+     d8  fis8  d8 ) ]  d8  b'4 (
+     a8 [  g8  fis8 ) ]  g8 ( [
      e8  g8  e8  g8  e8 ) ]  e8
-    \stemDown cis'4 ( \stemDown b8 [ \stemDown a8 \stemDown gis8 ) ]
+     cis'4 (  b8 [  a8  gis8 ) ]
      a8 ( [  cis,8  b8  e8  cis8
      g'8 ) ]  fis8 ( [  d8  e8  a8
      d,8  a'8 ) ]  e8 ( [  g8  fis8
-     a8  cis,8  e8 ) ]  d4 r4 r4 \stemDown
-    fis'4. ( _\f \stemDown e8 [ \stemDown d8 \stemDown cis8 ) ]
-    \stemDown b4 r4 r4 \stemDown g'4. ( \stemDown fis8 [ \stemDown e8
-    \stemDown d8 ) ] \stemDown cis4 r4 r4 \stemDown a'4. ( \stemDown g8
-    [ \stemDown fis8 \stemDown e8 ) ] \stemDown d8. ( [ \stemDown g16 )
-    ] \stemDown g4. ( \stemDown fis8 ) \stemDown e16 ( [ \stemDown b'16
-    \stemDown g16 \stemDown e16 ) ] \stemDown d4 \grace {  fis16
-        ( } \stemDown e8. [ \stemDown d16 ) ] \stemDown d8  b8 (
+     a8  cis,8  e8 ) ]  d4 r4 r4 
+    fis'4. ( _\f  e8 [  d8  cis8 ) ]
+     b4 r4 r4  g'4. (  fis8 [  e8
+     d8 ) ]  cis4 r4 r4  a'4. (  g8
+    [  fis8  e8 ) ]  d8. ( [  g16 )
+    ]  g4. (  fis8 )  e16 ( [  b'16
+     g16  e16 ) ]  d4 \grace {  fis16
+        ( }  e8. [  d16 ) ]  d8  b8 (
     [ _\p  a8  g8  fis8  e8 ) ] r8
     fis8 [  fis8  fis8  fis8  fis8 ] r8
      e8 [  e8  e8  e8  e8 ] r8
@@ -340,20 +340,20 @@ PartPEightVoiceOne =  \relative e {
      d,8 -.  b'8 -. ]  cis,8 r8  a'8 r8
      fis8 r8 r8  e8 ( [  cis8  e8  d8
      b8 ) ]  gis'4 (  a8 )  cis,4 (
-    d8 )  e8 r8 \stemDown e'8 -. r8 \stemDown a8 -. r8 r4
-    \stemDown fis8 -. r8 \stemDown b8 -. r8 r4 \stemDown g8 -. r8
-    \stemDown cis8 -. r8 r4 \stemDown a8 -. r8 \stemDown d8 -. r8 r4
-    \stemDown d,8 -. r8 \stemDown b'8 -. r8 r8  cis,,8 [
+    d8 )  e8 r8  e'8 -. r8  a8 -. r8 r4
+     fis8 -. r8  b8 -. r8 r4  g8 -. r8
+     cis8 -. r8 r4  a8 -. r8  d8 -. r8 r4
+     d,8 -. r8  b'8 -. r8 r8  cis,,8 [
     e8  a8  cis8  e8 ] r8  d,8 [  fis8
      b8  d8  fis8 ] r8  cis,8 [  cis8
      cis8  cis8  cis8 ]  b16 [ _\markup{
         \tiny\italic {cresc.} }  b16  b16  b16 ]
-     b4 :16  b4 :16  a8 _\f  a'4 \stemDown
-    cis4 \stemDown e8 \stemDown a8  cis,,8 [ _\p  cis8
+     b4 :16  b4 :16  a8 _\f  a'4 
+    cis4  e8  a8  cis,,8 [ _\p  cis8
      cis8  cis8  cis8 ]  d8 _\f  gis4
-    \stemDown b4 \stemDown d8 \stemDown gis8  d,8 [ _\p  d8
+     b4  d8  gis8  d,8 [ _\p  d8
      d8  d8  d8 ]  cis8 _\f  g'4
-    \stemDown cis4 \stemDown e8 \stemDown g4 r4 r4 ^\fermata
+     cis4  e8  g4 r4 r4 ^\fermata
     fis,8 ( [ _\p  a8  fis8  a8  fis8
      a8 ) ]  g8 ( [  a8  fis8  a8
      fis8  a8 ) ]  fis8 ( [  a8  fis8
@@ -364,34 +364,34 @@ PartPEightVoiceOne =  \relative e {
      cis8 ( [  e8  cis8  e8  d8
      e8 ) ]  cis8  b'8 ( [  a8  g8
      fis8  e8 ) ]  fis8 ( [  d8  fis8
-     d8  fis8  d8 ) ]  d8 \stemDown b'4 (
-    \stemDown a8 [ \stemDown g8 \stemDown fis8 ) ]  g8 ( [
+     d8  fis8  d8 ) ]  d8  b'4 (
+     a8 [  g8  fis8 ) ]  g8 ( [
      e8  g8  e8  g8  e8 ) ]  e8
-    \stemDown cis'4 ( \stemDown b8 [ \stemDown a8 \stemDown gis8 ) ]
+     cis'4 (  b8 [  a8  gis8 ) ]
      a8 ( [  cis,8  b8  e8  cis8
      g'8 ) ]  fis8 ( [  d8  e8  a8
      d,8  a'8 ) ]  e8 ( [  g8  fis8
-     a8  cis,8  e8 ) ]  d4 r4 r4 \stemDown
-    fis'4. ( _\f \stemDown e8 [ \stemDown d8 \stemDown cis8 ) ]
-    \stemDown b4 r4 r4 \stemDown g'4. ( \stemDown fis8 [ \stemDown e8
-    \stemDown d8 ) ] \stemDown cis4 r4 r4 \stemDown a'4. ( \stemDown g8
-    [ \stemDown fis8 \stemDown e8 ) ] \stemDown d8. ( [ \stemDown g16 )
-    ] \stemDown g4. ( \stemDown fis8 ) \stemDown e16 ( [ \stemDown b'16
-    \stemDown g16 \stemDown e16 ) ] \stemDown d4 \grace {  fis16
-        ( } \stemDown e8. ) [ \stemDown d16 ] \stemDown d8  a8 [
+     a8  cis,8  e8 ) ]  d4 r4 r4 
+    fis'4. ( _\f  e8 [  d8  cis8 ) ]
+     b4 r4 r4  g'4. (  fis8 [  e8
+     d8 ) ]  cis4 r4 r4  a'4. (  g8
+    [  fis8  e8 ) ]  d8. ( [  g16 )
+    ]  g4. (  fis8 )  e16 ( [  b'16
+     g16  e16 ) ]  d4 \grace {  fis16
+        ( }  e8. ) [  d16 ]  d8  a8 [
     _\p  a8  a8  a8  a8 ] r8  a8 [
      a8  a8  a8  a8 ] r8  a8 [
      a8  a8  a8  a8 ] r8  g8 [
      fis8  fis8  cis8  cis8 ]  d8 [
      d8  d8  d8  d8  d8 ] r8
-    e8 [  e8  e8  d8  d8 ] r8 \stemDown g'8
-    [ \stemDown g8 \stemDown g8 \stemDown fis8 \stemDown fis8 ]
-    \stemDown e4 r8  g,8 ( [  a8  b8 ) ] r8
+    e8 [  e8  e8  d8  d8 ] r8  g'8
+    [  g8  g8  fis8  fis8 ]
+     e4 r8  g,8 ( [  a8  b8 ) ] r8
     fis8 [  fis8  fis8  fis8  fis8 ]
     e16 [  e16  e16  e16 ]  e4 :16  e4
     :16  d4 r4  b8. ( [  g'16 ) ]  fis2
-     f8. [  e16 ]  d4 r4 \stemDown b''8 r8
-    \stemDown a8 r8 \stemDown fis8 r8 \stemDown e8 r8 \stemDown d8 -. r8
+     f8. [  e16 ]  d4 r4  b''8 r8
+     a8 r8  fis8 r8  e8 r8  d8 -. r8
      d,8 -. r8  d8 -. r8  d4 r4 r4 \bar "|."
     }
 
@@ -425,10 +425,10 @@ PartPNineVoiceOne =  \relative cis' {
      b8 ( [  e8  d8  fis8  a,8
      cis8 ) ]  d8  b'8 ( [ _\f  a8  g8
      fis8  e8 ) ]  fis8 ( [  d8  fis8
-     e8  d8  cis8 ) ]  b8 \stemDown b'4 (
-    \stemDown a8 [ \stemDown g8 \stemDown fis8 ) ]  g8 ( [
+     e8  d8  cis8 ) ]  b8  b'4 (
+     a8 [  g8  fis8 ) ]  g8 ( [
      e8  g8  fis8  e8  d8 ) ]
-    cis8 \stemDown cis'4 ( \stemDown b8 [ \stemDown a8 \stemDown gis8 )
+    cis8  cis'4 (  b8 [  a8  gis8 )
     ]  a8 ( [  cis,8  a'8  g8  fis8
      e8 ) ]  d8 ( [  b8  e8  a8
      d,8  a'8 ) ]  b8 ( [  g8  fis8
@@ -457,11 +457,11 @@ PartPNineVoiceOne =  \relative cis' {
      a,8 [  a8  a8  a8  a8 ]
     a16 [ _\markup{ \tiny\italic {cresc.} }  a16  a16
      a16 ]  gis2 :16  a8 _\f  e'4  a4
-    \stemDown cis8 \stemDown e8  a,,8 [ _\p  a8  a8
+     cis8  e8  a,,8 [ _\p  a8  a8
      a8  a8 ]  b8 _\f  d4  gis4
-    \stemDown b8 \stemDown d8  gis,,8 [ _\p  gis8
+     b8  d8  gis,,8 [ _\p  gis8
     gis8  gis8  gis8 ]  g8 _\f  e'4
-    g4 \stemDown cis8 \stemDown e4 r4 r4 ^\fermata  d,8 ( [ _\p
+    g4  cis8  e4 r4 r4 ^\fermata  d,8 ( [ _\p
      a8  d8  a8  d8  a8 ) ]
     cis8 ( [  a8  d8  a8  d8  a8 ) ]
      d8 ( [  a8  d8  a8  d8  a8
@@ -480,10 +480,10 @@ PartPNineVoiceOne =  \relative cis' {
     e'8  a,8  d8 ) ]  b8 ( [  e8  d8
      fis8  a,8  cis8 ) ]  d8  b'8 ( [
     _\f  a8  g8  fis8  e8 ) ]  fis8
-     fis4  fis4  fis8  g8 \stemDown b4 (
-    \stemDown a8 [ \stemDown g8 \stemDown fis8 ) ]  g8  g4
-     g4  gis8  a8 \stemDown cis4 ( \stemDown b8 [
-    \stemDown a8 \stemDown gis8 ) ]  a8  a4  a4
+     fis4  fis4  fis8  g8  b4 (
+     a8 [  g8  fis8 ) ]  g8  g4
+     g4  gis8  a8  cis4 (  b8 [
+     a8  gis8 ) ]  a8  a4  a4
      a8  a8 ( [  g8  d'8 )  d,8 (
      dis8  c'8 ) ]  b8 ( [  e,16  g16
     ) ]  fis8 ( [  a8  g8  a8 ) ]
@@ -493,175 +493,175 @@ PartPNineVoiceOne =  \relative cis' {
      fis8 ] r8  e8 [  d8  d8  a8
      a8 ]  a8 [  a8  a8  a8  a8
      a8 ] r8  a8 [  a8  a8  a8
-     a8 ] r8 \stemDown e''8 [ \stemDown e8 \stemDown e8 \stemDown
-    d8 \stemDown d8 ] \stemDown b4 r8  e,8 ( [  fis8
+     a8 ] r8  e''8 [  e8  e8 
+    d8  d8 ]  b4 r8  e,8 ( [  fis8
      g8 ) ] r8  d8 [  d8  d8  d8
      d8 ]  d16 [  d16  d16  d16 ]
      cis4 :16  cis4 :16  d4 r4  g,4
-    a2  a8 ( [  ais8 ) ]  b4 r4 \stemDown g''8 r8
-    \stemDown fis8 r8 \stemDown d8 r8  g,8 r8  fis8 -. r8
+    a2  a8 ( [  ais8 ) ]  b4 r4  g''8 r8
+     fis8 r8  d8 r8  g,8 r8  fis8 -. r8
      a,8 -. r8  a8 -. r8  a4 r4 r4 \bar "|."
     }
 
 PartPOneZeroVoiceOne =  \relative a {
-    \clef "alto" \time 3/4  \key d \major \stemUp a2. ~ _\p \stemUp a2. \stemUp a2. ~
-    \stemUp a2. \stemUp a2. ~ \stemUp a2 \stemUp fis4 \stemUp e2. ~
-    \stemUp e8 \stemDown g'8 ( [ _\f \stemDown fis8 \stemDown e8
-    \stemDown d8 \stemDown cis8 ) ] \stemUp d8 ( [ _\f \stemUp a8
-    \stemUp d8 \stemUp a8 \stemUp d8 \stemUp a8 ) ] \stemUp cis8 ( [
-    \stemUp a8 \stemUp d8 \stemUp a8 \stemUp d8 \stemUp a8 ) ] \stemUp d8
-    ( [ \stemUp a8 \stemUp d8 \stemUp a8 \stemUp d8 \stemUp a8 ) ]
-    \stemUp cis8 ( [ \stemUp a8 \stemUp d8 \stemUp a8 \stemUp d8 \stemUp
-    a8 ) ] \stemUp cis8 ( [ \stemUp a8 \stemUp cis8 \stemUp a8 \stemUp d8
-    \stemUp a8 ) ] \stemUp cis8 ( [ \stemUp a8 \stemUp cis8 \stemUp a8
-    \stemUp b8 \stemUp d8 ) ] \stemUp a8 ( [ \stemUp cis8 \stemUp a8
-    \stemUp cis8 \stemUp gis8 \stemUp b8 ) ] \stemUp a4 r4 r4 \stemUp
-    fis2. _\p \stemUp g4 \stemDown c4 ( \stemDown b8 [ \stemDown a8 ) ]
-    \stemUp g2. \stemUp a4 \stemDown d4 ( \stemDown cis8 [ \stemDown b8
-    ) ] \stemUp a4 ( \stemUp g4 \stemUp a4 ) \stemUp b4 ( \stemDown cis4
-    \stemDown d4 ) \stemUp g,8 ( [ \stemUp b8 ) ] \stemUp a4. ( \stemUp
-    g8 ) \stemUp fis8 \stemDown g'8 ( [ _\f \stemDown fis8 \stemDown e8
-    \stemDown d8 \stemDown cis8 ) ] \stemUp d8 ( [ \stemUp fis,8 \stemUp
-    d'8 \stemUp cis8 \stemUp b8 \stemUp a8 ) ] \stemUp g8 \stemDown g'4
-    ( \stemDown fis8 [ \stemDown e8 \stemDown dis8 ) ] \stemUp e8 ( [
-    \stemUp g,8 \stemUp b8 \stemUp a8 \stemUp g8 \stemUp fis8 ) ]
-    \stemUp e8 \stemDown a'4 ( \stemDown gis8 [ \stemDown fis8 \stemDown
-    eis8 ) ] \stemUp fis8 ( [ \stemUp a,8 \stemUp cis8 \stemUp b8
-    \stemUp a8 \stemUp g8 ) ] \stemUp fis8 ( [ \stemUp d'8 \stemUp a8
-    \stemUp e'8 \stemUp a,8 \stemUp d8 ) ] \stemDown b8 ( [ \stemDown e8
-    \stemDown a,8 \stemDown fis'8 \stemDown cis8 \stemDown e8 ) ]
-    \stemDown d4 r4 r4 r8 \stemUp a8 [ _\p \stemUp a8 \stemUp a8 \stemUp
-    a8 \stemUp a8 ] r8 \stemUp a8 [ \stemUp a8 \stemUp a8 \stemUp a8
-    \stemUp a8 ] r8 \stemUp gis4 \stemUp gis4 \stemUp gis8 ~ \stemUp gis8
-    [ \stemUp e8 ] \stemUp e4 r4 \stemUp a2. ~ \stemUp a2. \stemUp a2. ~
-    \stemUp a2. \stemUp e2. ~ \stemUp e8 r8 \stemUp a8 r8 \stemUp b8 r8
-    \stemUp e,2. \stemUp b'4 ( \stemUp a8 ) \stemUp a8 ( [ \stemUp gis8
-    \stemUp fis8 ) ] \stemDown e8 [ \stemDown e'8 -. \stemDown cis8 -.
-    \stemDown e8 -. \stemDown cis8 -. \stemDown e8 -. ] r8 \stemDown d8
-    -. [ \stemDown b8 -. \stemDown fis'8 -. \stemDown d8 -. \stemDown
-    fis8 -. ] r8 \stemDown e8 -. [ \stemDown cis8 -. \stemDown g'8 -.
-    \stemDown e8 -. \stemDown g8 -. ] r8 \stemDown fis8 -. [ \stemDown d8
-    -. \stemDown a'8 -. \stemDown fis8 -. \stemDown a8 -. ] r8 \stemDown
-    b,8 -. [ \stemDown e,8 -. \stemDown e'8 -. \stemDown b8 -. \stemDown
-    b'8 -. ] \stemUp a,4 r4 r4 \stemUp fis4 r4 r4 r8 \stemUp e8 [
-    \stemUp e8 \stemUp e8 \stemUp e8 \stemUp e8 ] \stemUp e8 [ _\markup{
-        \tiny\italic {cresc.} } \stemUp e8 \stemUp e8 \stemUp e8 \stemUp
-    d8 \stemUp d8 ] \stemUp cis8 _\f \stemDown cis'4 \stemDown e4
-    \stemDown a8 \stemDown cis4 r4 r4 \stemUp gis,8 \stemUp b4 \stemDown
-    d4 \stemDown gis8 \stemDown b4 r4 r4 \stemUp e,,8 \stemDown cis'4
-    \stemDown e4 \stemDown g8 \stemDown cis4 r4 r4 ^\fermata \stemUp a,2.
-    ~ _\p \stemUp a2. \stemUp a2. ~ \stemUp a2. \stemUp a2. ~ \stemUp a2
-    \stemUp fis4 \stemUp e2. ~ \stemUp e4 r4 r4 \stemUp fis2. \stemUp g4
-    \stemDown c4 ( \stemDown b8 [ \stemDown a8 ) ] \stemUp g2. \stemUp a4
-    \stemDown d4 ( \stemDown cis8 [ \stemDown b8 ) ] \stemUp a4 (
-    \stemUp g4 \stemUp a4 ) \stemUp b4 ( \stemDown cis4 \stemDown d4 )
-    \stemUp g,8 ( [ \stemUp b8 ) ] \stemUp a4. ( \stemUp g8 ) \stemUp
-    fis8 \stemDown g'8 ( [ _\f \stemDown fis8 \stemDown e8 \stemDown d8
-    \stemDown cis8 ) ] \stemUp a8 \stemUp a4 \stemUp a8 ( [ \stemUp b8
-    \stemUp cis8 ) ] \stemDown d8 \stemDown g4 ( \stemDown fis8 [
-    \stemDown e8 \stemDown dis8 ) ] \stemDown e8 \stemUp b4 \stemDown b8
-    ( [ \stemDown cis8 \stemDown d8 ) ] \stemDown e8 \stemDown a4 (
-    \stemDown gis8 [ \stemDown fis8 \stemDown eis8 ) ] \stemDown fis8
-    \stemDown cis4 \stemDown cis8 ( [ \stemDown d8 \stemDown e8 ) ]
-    \stemDown fis8 ( [ \stemDown g8 \stemDown d8 ) \stemDown bes8 (
-    \stemDown c8 \stemDown a8 ) ] \stemUp g8 ( [ \stemUp b8 ) ]
-    \stemDown a4 ( \stemDown cis4 ) \stemDown d8 \stemDown d8 [ _\p
-    \stemDown d8 \stemDown d8 \stemDown d8 \stemDown d8 ] r8 \stemDown e8
-    [ \stemDown e8 \stemDown e8 \stemDown d8 \stemDown d8 ] r8 \stemDown
-    e8 [ \stemDown e8 \stemDown e8 \stemDown d8 \stemDown d8 ] r8
-    \stemUp b8 [ \stemUp a8 \stemUp a8 \stemUp g8 \stemUp g8 ] \stemUp
-    fis8 [ \stemUp fis8 \stemUp fis8 \stemUp fis8 \stemUp fis8 \stemUp
-    fis8 ] r8 \stemUp g8 [ \stemUp g8 \stemUp g8 \stemUp fis8 \stemUp
-    fis8 ] r8 \stemDown a'8 [ \stemDown a8 \stemDown a8 \stemDown a8
-    \stemDown a8 ] \stemDown g4 r4 r4 r8 \stemUp a,8 [ \stemUp a8
-    \stemUp a8 \stemUp a8 \stemUp a8 ] \stemUp a16 [ \stemUp a16 \stemUp
-    a16 \stemUp a16 ] \stemUp a4 :16 \stemUp g4 :16 \stemUp fis4 r4 r4
-    R2. r2 \stemDown e'8 r8 \stemDown fis8 r8 \stemDown a8 r8 \stemUp a,8
-    r8 \stemDown d8 -. r8 \stemUp fis,8 -. r8 \stemUp fis8 -. r8 \stemUp
+    \clef "alto" \time 3/4  \key d \major  a2. ~ _\p  a2.  a2. ~
+     a2.  a2. ~  a2  fis4  e2. ~
+     e8  g'8 ( [ _\f  fis8  e8
+     d8  cis8 ) ]  d8 ( [ _\f  a8
+     d8  a8  d8  a8 ) ]  cis8 ( [
+     a8  d8  a8  d8  a8 ) ]  d8
+    ( [  a8  d8  a8  d8  a8 ) ]
+     cis8 ( [  a8  d8  a8  d8 
+    a8 ) ]  cis8 ( [  a8  cis8  a8  d8
+     a8 ) ]  cis8 ( [  a8  cis8  a8
+     b8  d8 ) ]  a8 ( [  cis8  a8
+     cis8  gis8  b8 ) ]  a4 r4 r4 
+    fis2. _\p  g4  c4 (  b8 [  a8 ) ]
+     g2.  a4  d4 (  cis8 [  b8
+    ) ]  a4 (  g4  a4 )  b4 (  cis4
+     d4 )  g,8 ( [  b8 ) ]  a4. ( 
+    g8 )  fis8  g'8 ( [ _\f  fis8  e8
+     d8  cis8 ) ]  d8 ( [  fis,8 
+    d'8  cis8  b8  a8 ) ]  g8  g'4
+    (  fis8 [  e8  dis8 ) ]  e8 ( [
+     g,8  b8  a8  g8  fis8 ) ]
+     e8  a'4 (  gis8 [  fis8 
+    eis8 ) ]  fis8 ( [  a,8  cis8  b8
+     a8  g8 ) ]  fis8 ( [  d'8  a8
+     e'8  a,8  d8 ) ]  b8 ( [  e8
+     a,8  fis'8  cis8  e8 ) ]
+     d4 r4 r4 r8  a8 [ _\p  a8  a8 
+    a8  a8 ] r8  a8 [  a8  a8  a8
+     a8 ] r8  gis4  gis4  gis8 ~  gis8
+    [  e8 ]  e4 r4  a2. ~  a2.  a2. ~
+     a2.  e2. ~  e8 r8  a8 r8  b8 r8
+     e,2.  b'4 (  a8 )  a8 ( [  gis8
+     fis8 ) ]  e8 [  e'8 -.  cis8 -.
+     e8 -.  cis8 -.  e8 -. ] r8  d8
+    -. [  b8 -.  fis'8 -.  d8 -. 
+    fis8 -. ] r8  e8 -. [  cis8 -.  g'8 -.
+     e8 -.  g8 -. ] r8  fis8 -. [  d8
+    -.  a'8 -.  fis8 -.  a8 -. ] r8 
+    b,8 -. [  e,8 -.  e'8 -.  b8 -. 
+    b'8 -. ]  a,4 r4 r4  fis4 r4 r4 r8  e8 [
+     e8  e8  e8  e8 ]  e8 [ _\markup{
+        \tiny\italic {cresc.} }  e8  e8  e8 
+    d8  d8 ]  cis8 _\f  cis'4  e4
+     a8  cis4 r4 r4  gis,8  b4 
+    d4  gis8  b4 r4 r4  e,,8  cis'4
+     e4  g8  cis4 r4 r4 ^\fermata  a,2.
+    ~ _\p  a2.  a2. ~  a2.  a2. ~  a2
+     fis4  e2. ~  e4 r4 r4  fis2.  g4
+     c4 (  b8 [  a8 ) ]  g2.  a4
+     d4 (  cis8 [  b8 ) ]  a4 (
+     g4  a4 )  b4 (  cis4  d4 )
+     g,8 ( [  b8 ) ]  a4. (  g8 ) 
+    fis8  g'8 ( [ _\f  fis8  e8  d8
+     cis8 ) ]  a8  a4  a8 ( [  b8
+     cis8 ) ]  d8  g4 (  fis8 [
+     e8  dis8 ) ]  e8  b4  b8
+    ( [  cis8  d8 ) ]  e8  a4 (
+     gis8 [  fis8  eis8 ) ]  fis8
+     cis4  cis8 ( [  d8  e8 ) ]
+     fis8 ( [  g8  d8 )  bes8 (
+     c8  a8 ) ]  g8 ( [  b8 ) ]
+     a4 (  cis4 )  d8  d8 [ _\p
+     d8  d8  d8  d8 ] r8  e8
+    [  e8  e8  d8  d8 ] r8 
+    e8 [  e8  e8  d8  d8 ] r8
+     b8 [  a8  a8  g8  g8 ] 
+    fis8 [  fis8  fis8  fis8  fis8 
+    fis8 ] r8  g8 [  g8  g8  fis8 
+    fis8 ] r8  a'8 [  a8  a8  a8
+     a8 ]  g4 r4 r4 r8  a,8 [  a8
+     a8  a8  a8 ]  a16 [  a16 
+    a16  a16 ]  a4 :16  g4 :16  fis4 r4 r4
+    R2. r2  e'8 r8  fis8 r8  a8 r8  a,8
+    r8  d8 -. r8  fis,8 -. r8  fis8 -. r8 
     fis4 r4 r4 \bar "|."
     }
 
 PartPOneOneVoiceOne =  \relative a, {
-    \clef "bass" \time 3/4  \key d \major \stemDown d2. _\p \stemUp a4 \stemDown d4 r4
-    \stemDown d2. \stemUp a4 \stemDown d4 r4 \stemUp a2. ~ \stemUp a2
-    \stemDown d4 \stemDown e4 \stemDown e4 \stemDown e4 \stemUp a,4 r4 r4
-    \stemDown d4 _\f r4 \stemDown d4 \stemUp a4 \stemDown d4 r4
-    \stemDown d4 r4 \stemDown d4 \stemUp a4 \stemDown d4 r4 \stemDown a'4
-    r4 r4 \stemDown a4 r4 \stemDown d,4 \stemDown e4 \stemDown e4
-    \stemDown e4 \stemUp a,4 r4 r4 \stemDown d2. _\p \stemDown g4 (
-    \stemDown a4 \stemDown b4 ) \stemDown e,2. \stemDown a4 ( \stemDown
-    b4 \stemDown cis4 ) \stemDown fis,4 ( \stemDown g4 \stemDown a4 )
-    \stemDown b4 ( \stemDown cis4 \stemDown d4 ) \stemDown g,4 \stemDown
-    a4 \stemUp a,4 \stemDown d4 r4 r4 \stemDown d4. ( _\f \stemDown e8
-    \stemDown fis4 ) \stemDown g4 ( \stemDown a4 \stemDown b4 )
-    \stemDown e,4 \stemUp e,8 ( [ \stemUp fis8 \stemUp g8 \stemUp gis8 )
-    ] \stemUp a4 ( \stemUp b4 \stemUp cis4 ) \stemUp fis,4. ( \stemUp g8
-    [ \stemUp a8 \stemUp ais8 ) ] \stemUp b4 ( \stemUp cis4 \stemDown d4
-    ) \stemUp g,4 \stemUp a4 \stemUp a4 \stemDown d4 r4 r4 \stemDown d4
-    _\p r4 r4 \stemUp a4 r4 r4 \stemDown e'2. ~ \stemDown e4 \stemDown
-    a,8 [ \stemDown a'8 ( \stemDown e8 \stemDown d8 ) ] \stemUp cis4 r4
-    r4 \stemDown d4 r4 r4 \stemDown e4 r4 r4 \stemDown fis4 r4 r4
-    \stemUp gis,2. \stemUp a8 r8 \stemUp cis8 r8 \stemDown d8 r8
-    \stemDown e2. \stemDown eis4 ( \stemDown fis8 ) \stemUp fis,8 ( [
-    \stemUp e8 \stemUp d8 ) ] \stemUp cis4 r4 r4 \stemUp d4 r4 r4
-    \stemUp e4 r4 r4 \stemUp fis4 r4 r4 \stemUp gis2. \stemUp a4 r4 r4
-    \stemDown d4 r4 r4 \stemDown e4 r4 r4 \stemDown e4 _\markup{
-        \tiny\italic {cresc.} } \stemDown e4 \stemDown e4 \stemDown a4
-    _\f \stemDown e4 \stemUp cis4 \stemUp a4 r4 r4 \stemDown a'4 \stemUp
-    a,4 \stemDown a'4 \stemUp a,4 r4 r4 \stemDown a'4 \stemDown e4
-    \stemUp cis4 \stemUp a4 r4 r4 ^\fermata \stemDown d2. _\p \stemUp a4
-    \stemDown d4 r4 \stemDown d2. \stemUp a4 \stemDown d4 r4 \stemUp a2.
-    ~ \stemUp a2 \stemDown d4 \stemDown e4 \stemDown e4 \stemDown e4
-    \stemUp a,4 r4 r4 \stemDown d2. \stemDown g4 ( \stemDown a4
-    \stemDown b4 ) \stemDown e,2. \stemDown a4 ( \stemDown b4 \stemDown
-    cis4 ) \stemDown fis,4 ( \stemDown g4 \stemDown a4 ) \stemDown b4 (
-    \stemDown cis4 \stemDown d4 ) \stemDown g,4 \stemDown a4 \stemUp a,4
-    \stemDown d4 r4 r4 \stemDown d4. ( _\f \stemUp cis8 [ \stemUp b8
-    \stemUp a8 ) ] \stemUp g4 ( \stemUp a4 \stemUp b4 ) \stemDown e4. (
-    \stemDown d8 [ \stemDown cis8 \stemDown b8 ) ] \stemUp a4 ( \stemUp
-    b4 \stemUp cis4 ) \stemDown fis4. ( \stemDown e8 [ \stemDown d8
-    \stemDown cis8 ) ] \stemUp b4 ( \stemUp bes4 \stemUp a4 ) \stemUp g4
-    \stemUp a4 \stemUp a4 \stemDown d4 r4 r4 \stemDown cis'2 ( _\p
-    \stemDown d4 ) \stemDown cis2 ( \stemDown d4 ) \stemDown g,4
-    \stemDown a4 \stemUp a,4 \stemDown d4 r4 r4 \stemUp cis2 ( \stemDown
-    d4 ) \stemUp cis2 ( \stemDown d4 ) \stemUp g,4 r4 r4 \stemUp a4 r4 r4
-    \stemUp a4 \stemUp a4 \stemUp a4 \stemUp b4 r4 r4 R2. r2 \stemUp g4
-    ( \stemUp a2. ) \stemDown d8 -. r8 \stemUp a8 -. r8 \stemUp fis8 -.
-    r8 \stemUp d4 r4 r4 \bar "|."
+    \clef "bass" \time 3/4  \key d \major  d2. _\p  a4  d4 r4
+     d2.  a4  d4 r4  a2. ~  a2
+     d4  e4  e4  e4  a,4 r4 r4
+     d4 _\f r4  d4  a4  d4 r4
+     d4 r4  d4  a4  d4 r4  a'4
+    r4 r4  a4 r4  d,4  e4  e4
+     e4  a,4 r4 r4  d2. _\p  g4 (
+     a4  b4 )  e,2.  a4 ( 
+    b4  cis4 )  fis,4 (  g4  a4 )
+     b4 (  cis4  d4 )  g,4 
+    a4  a,4  d4 r4 r4  d4. ( _\f  e8
+     fis4 )  g4 (  a4  b4 )
+     e,4  e,8 ( [  fis8  g8  gis8 )
+    ]  a4 (  b4  cis4 )  fis,4. (  g8
+    [  a8  ais8 ) ]  b4 (  cis4  d4
+    )  g,4  a4  a4  d4 r4 r4  d4
+    _\p r4 r4  a4 r4 r4  e'2. ~  e4 
+    a,8 [  a'8 (  e8  d8 ) ]  cis4 r4
+    r4  d4 r4 r4  e4 r4 r4  fis4 r4 r4
+     gis,2.  a8 r8  cis8 r8  d8 r8
+     e2.  eis4 (  fis8 )  fis,8 ( [
+     e8  d8 ) ]  cis4 r4 r4  d4 r4 r4
+     e4 r4 r4  fis4 r4 r4  gis2.  a4 r4 r4
+     d4 r4 r4  e4 r4 r4  e4 _\markup{
+        \tiny\italic {cresc.} }  e4  e4  a4
+    _\f  e4  cis4  a4 r4 r4  a'4 
+    a,4  a'4  a,4 r4 r4  a'4  e4
+     cis4  a4 r4 r4 ^\fermata  d2. _\p  a4
+     d4 r4  d2.  a4  d4 r4  a2.
+    ~  a2  d4  e4  e4  e4
+     a,4 r4 r4  d2.  g4 (  a4
+     b4 )  e,2.  a4 (  b4 
+    cis4 )  fis,4 (  g4  a4 )  b4 (
+     cis4  d4 )  g,4  a4  a,4
+     d4 r4 r4  d4. ( _\f  cis8 [  b8
+     a8 ) ]  g4 (  a4  b4 )  e4. (
+     d8 [  cis8  b8 ) ]  a4 ( 
+    b4  cis4 )  fis4. (  e8 [  d8
+     cis8 ) ]  b4 (  bes4  a4 )  g4
+     a4  a4  d4 r4 r4  cis'2 ( _\p
+     d4 )  cis2 (  d4 )  g,4
+     a4  a,4  d4 r4 r4  cis2 ( 
+    d4 )  cis2 (  d4 )  g,4 r4 r4  a4 r4 r4
+     a4  a4  a4  b4 r4 r4 R2. r2  g4
+    (  a2. )  d8 -. r8  a8 -. r8  fis8 -.
+    r8  d4 r4 r4 \bar "|."
     }
 
 PartPOneTwoVoiceOne =  \relative a, {
-    \clef "bass" \time 3/4  \key d \major \transposition c R2.*8 \stemDown d4 _\f r4
-    \stemDown d4 \stemUp a4 \stemDown d4 r4 \stemDown d4 r4 \stemDown d4
-    \stemUp a4 \stemDown d4 r4 \stemDown a'4 r4 r4 \stemDown a4 r4
-    \stemDown d,4 \stemDown e4 \stemDown e4 \stemDown e4 \stemUp a,4 r4
-    r4 R2.*8 \stemDown d4. ( _\f \stemDown e8 \stemDown fis4 ) \stemDown
-    g4 ( \stemDown a4 \stemDown b4 ) \stemDown e,4 \stemUp e,8 ( [
-    \stemUp fis8 \stemUp g8 \stemUp gis8 ) ] \stemUp a4 ( \stemUp b4
-    \stemUp cis4 ) \stemUp fis,4. ( \stemUp g8 [ \stemUp a8 \stemUp ais8
-    ) ] \stemUp b4 ( \stemUp cis4 \stemDown d4 ) \stemUp g,4 \stemUp a4
-    \stemUp a4 \stemDown d4 r4 r4 \stemDown d4 _\p r4 r4 \stemUp a4 r4 r4
-    \stemDown e'2. ~ \stemDown e4 \stemDown a,8 [ \stemDown a'8 (
-    \stemDown e8 \stemDown d8 ) ] \stemUp cis4 r4 r4 \stemDown d4 r4 r4
-    \stemDown e4 r4 r4 \stemDown fis4 r4 r4 \stemUp gis,2. \stemUp a8 r8
-    \stemUp cis8 r8 \stemDown d8 r8 \stemDown e2. \stemDown eis4 (
-    \stemDown fis8 ) \stemDown fis8 ( [ \stemDown e8 \stemDown d8 ) ]
-    \stemUp cis4 r4 r4 \stemDown d4 r4 r4 \stemDown e4 r4 r4 \stemDown
-    fis4 r4 r4 \stemDown gis2. \stemDown a4 r4 r4 \stemDown d,4 r4 r4
-    \stemDown e4 r4 r4 \stemDown e4 _\markup{ \tiny\italic {cresc.} }
-    \stemDown e4 \stemDown e4 \stemDown a4 _\f \stemDown e4 \stemUp cis4
-    \stemUp a4 r4 r4 \stemDown a'4 \stemUp a,4 \stemDown a'4 \stemUp a,4
-    r4 r4 \stemDown a'4 \stemDown e4 \stemUp cis4 \stemUp a4 r4 r4
-    ^\fermata R2.*16 \stemDown d4. ( _\f \stemUp cis8 [ \stemUp b8
-    \stemUp a8 ) ] \stemUp g4 ( \stemUp a4 \stemUp b4 ) \stemDown e4. (
-    \stemDown d8 [ \stemDown cis8 \stemDown b8 ) ] \stemUp a4 ( \stemUp
-    b4 \stemUp cis4 ) \stemDown fis4. ( \stemDown e8 [ \stemDown d8
-    \stemDown cis8 ) ] \stemUp b4 ( \stemUp bes4 \stemUp a4 ) \stemUp g4
-    \stemUp a4 \stemUp a4 \stemDown d4 r4 r4 R2.*4 \stemUp cis2 ( _\p
-    \stemDown d4 ) \stemUp cis2 ( \stemDown d4 ) \stemUp g,4 r4 r4
-    \stemUp a4 r4 r4 \stemUp a4 \stemUp a4 \stemUp a4 \stemUp b4 r4 r4
-    R2. r2 \stemUp g4 ( \stemUp a2. ) \stemDown d8 -. r8 \stemUp a8 -. r8
-    \stemUp fis8 -. r8 \stemUp d4 r4 r4 \bar "|."
+    \clef "bass" \time 3/4  \key d \major \transposition c R2.*8  d4 _\f r4
+     d4  a4  d4 r4  d4 r4  d4
+     a4  d4 r4  a'4 r4 r4  a4 r4
+     d,4  e4  e4  e4  a,4 r4
+    r4 R2.*8  d4. ( _\f  e8  fis4 ) 
+    g4 (  a4  b4 )  e,4  e,8 ( [
+     fis8  g8  gis8 ) ]  a4 (  b4
+     cis4 )  fis,4. (  g8 [  a8  ais8
+    ) ]  b4 (  cis4  d4 )  g,4  a4
+     a4  d4 r4 r4  d4 _\p r4 r4  a4 r4 r4
+     e'2. ~  e4  a,8 [  a'8 (
+     e8  d8 ) ]  cis4 r4 r4  d4 r4 r4
+     e4 r4 r4  fis4 r4 r4  gis,2.  a8 r8
+     cis8 r8  d8 r8  e2.  eis4 (
+     fis8 )  fis8 ( [  e8  d8 ) ]
+     cis4 r4 r4  d4 r4 r4  e4 r4 r4 
+    fis4 r4 r4  gis2.  a4 r4 r4  d,4 r4 r4
+     e4 r4 r4  e4 _\markup{ \tiny\italic {cresc.} }
+     e4  e4  a4 _\f  e4  cis4
+     a4 r4 r4  a'4  a,4  a'4  a,4
+    r4 r4  a'4  e4  cis4  a4 r4 r4
+    ^\fermata R2.*16  d4. ( _\f  cis8 [  b8
+     a8 ) ]  g4 (  a4  b4 )  e4. (
+     d8 [  cis8  b8 ) ]  a4 ( 
+    b4  cis4 )  fis4. (  e8 [  d8
+     cis8 ) ]  b4 (  bes4  a4 )  g4
+     a4  a4  d4 r4 r4 R2.*4  cis2 ( _\p
+     d4 )  cis2 (  d4 )  g,4 r4 r4
+     a4 r4 r4  a4  a4  a4  b4 r4 r4
+    R2. r2  g4 (  a2. )  d8 -. r8  a8 -. r8
+     fis8 -. r8  d4 r4 r4 \bar "|."
     }
 
 
