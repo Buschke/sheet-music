@@ -8,10 +8,12 @@ sfp = #(make-dynamic-script "sfp")
 \header {
     title =  "Clarinet Concerto A Major - Solo Part"
     subtitle = "2nd Movement"
+    subsubtitle = "Transposed from A to Bb Clarinet"
     composer =  \markup \column {
         \line { "Wolfgang Amadeus Mozart"}
         \line { "(1756-1791)"} }
-    poet = \markup \box { \pad-around #1 {"Basset Clarinet in A Solo"}}
+    opus = "KV 622"
+    poet = \markup \box { \pad-around #1 {"Bb Clarinet Solo"}}
 
     }
 
@@ -34,7 +36,7 @@ sfp = #(make-dynamic-script "sfp")
         }
     }
 
-PartPSevenVoiceOne =  \relative g' {
+PartPSevenVoiceOne =  \transpose bes a {\relative g' {
     \clef "treble" \time 3/4  \key f \major \transposition a  c4 (  f4.
      a8 )  a8 ( [  g8 ) ]  f4 r4
      c4. (  f8 [  a8  c8 ) ]
@@ -163,11 +165,12 @@ PartPSevenVoiceOne =  \relative g' {
      c4.  c8 ( [  d8  e8 ) ]  f4
      f4  f4  f2 r4 \bar "|."
     }
+}
 
 \score {
 \new Staff
         <<
-            \set Staff.instrumentName = "Solo-Clarinet in A"
+            \set Staff.instrumentName = "Solo Bb Clarinet"
             \set Staff.shortInstrumentName = "Solo Cl."
 
             \context Staff <<

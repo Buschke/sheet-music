@@ -8,6 +8,8 @@ sfp = #(make-dynamic-script "sfp")
 \header {
     title =  "Clarinet Concerto A Major"
     subtitle = "2nd Movement"
+    subsubtitle = "Transposed from A to Bb Clarinet"
+    opus = "KV 622"
     composer =  \markup \column {
         \line { "Wolfgang Amadeus Mozart"}
         \line { "(1756-1791)"} }
@@ -32,26 +34,32 @@ sfp = #(make-dynamic-script "sfp")
         }
     }
 
+global = {
+  \key d \major
+  \time 3/4
+  \tempo "Adagio" 4 = 60
+}
+
 PartPOneVoiceOne =  \relative b'' {
-    \clef "treble" \time 3/4  \key d \major \tempo 4=60 R2.*8  a2. ~ ^\markup{
-        \bold\small {Adagio} } _\f  a2.  a4. (
+    \clef "treble" \global
+    R2.*8  a2. ~   a2.  a4. (
      d8 [  fis,8  a8 ) ]  a8 ( [
      g8 ) ]  fis4 r4  e2 (  fis4 )
      e4 (  a8 ) [  cis8 (  b8
      fis'8 ) ]  a,2 \grace {  cis16 ( }
-     b8. ) [  a16 ]  a4 r4 r4 R2.*9 
+     b8. ) [  a16 ]  a4 r4 r4 R2.*9
     b4. ( _\f  a8 [  g8  fis8 ) ]  e4
     r4 r4  cis'4. (  b8 [  a8  gis8
     ) ]  fis4 r4 r4 r4  g4. (  fis8 )
      e16 ( [  b'16  g16  e16 ) ]
      d4 \grace {  fis16 ( }  e8. [  d16
     ) ]  d4 r4 r4 R2.*21  a'2. ~ _\f  a8 r8 r4
-    r4  d2. ~  d8 r8 r4 r4  cis2. ~ 
+    r4  d2. ~  d8 r8 r4 r4  cis2. ~
     cis4 r4 r4 ^\fermata R2.*17  b4. ( _\f  a8 [
      g8  fis8 ) ]  e4 r4 r4  cis'4.
     ( _\f  b8 [  a8  gis8 ) ]  fis4
-    r4 r4 r4  d4 (  dis4 )  e16 ( [ 
-    b'16  g16  e16 ) ]  d4 \grace { 
+    r4 r4 r4  d4 (  dis4 )  e16 ( [
+    b'16  g16  e16 ) ]  d4 \grace {
         fis16 ( }  e8. ) [  d16 ]  d4 r4 r4
     R2.*13  d'2. ~ _\p  d4 r4 r4 \bar "|."
     }
@@ -69,8 +77,8 @@ PartPTwoVoiceOne =  \relative gis' {
      e4 (  d4  b4  a4  cis4 )
      d4 r4 r4 R2.*21  cis2. ~ _\f  cis8 r8 r4
     r4  gis'2. ~  gis8 r8 r4 r4  g2. ~
-     g4 r4 r4 ^\fermata R2.*17  g4. ( _\f 
-    fis8 [  e8  dis8 ) ]  e4 r4 r4 
+     g4 r4 r4 ^\fermata R2.*17  g4. ( _\f
+    fis8 [  e8  dis8 ) ]  e4 r4 r4
     a4. ( _\f  gis8 [  fis8  eis8 ) ]
      fis4 r4 r4 r4  bes,4 (  c4  b4
      a4  cis4 )  d4 r4 r4 R2.*13  fis2.
@@ -81,7 +89,7 @@ PartPThreeVoiceOne =  \relative b' {
     \clef "bass" \time 3/4  \key d \major R2.*8  a,2. ~ _\f  a2.
      a2. ~  a2.  a2. ~  a2 (
      d4 )  cis2 (  b4 )  a4 r4 r4
-    R2.*8  a2 _\f r4 r4  c4 (  b4 ) 
+    R2.*8  a2 _\f r4 r4  c4 (  b4 )
     b4. (  a8 [  g8  fis8 ) ]  e8 r8
      d'4 (  cis4 )  cis4. (  b8 [
      a8  g8 ) ]  fis8 ( [  g8 ) ]
@@ -100,13 +108,13 @@ PartPThreeVoiceOne =  \relative b' {
 
 PartPFourVoiceOne =  \relative gis' {
     \clef "bass" \time 3/4  \key d \major R2.*8  d,2. _\f  a4
-     d4 r4  d2.  a4  d4 r4 
+     d4 r4  d2.  a4  d4 r4
     a'2. ~  a2 (  fis4 )  a2 (  gis4
     )  a4 r4 r4 R2.*9 r4  c4 ( _\f  b8 [
      a8 ) ]  g4. (  fis8 [  e8
      d8 ) ]  cis8 r8  d'4 (  cis8 [
      b8 ) ]  a4. (  g8 [  fis8
-     e8 ) ]  d4 (  cis4  d4 ) 
+     e8 ) ]  d4 (  cis4  d4 )
     g,4  a4  a4  d4 r4 r4 R2.*21  cis'2.
     ~ _\f  cis8 r8 r4 r4  b2. ~  b8 r8 r4 r4
      cis2. ~  cis4 r4 r4 ^\fermata R2.*16  d4.
@@ -123,7 +131,7 @@ PartPFourVoiceOne =  \relative gis' {
 PartPFiveVoiceOne =  \relative c'' {
     \clef "treble" \time 3/4  \transposition a R2.*8  g4 _\f  c4. (
      e8 )  e8 ( [  d8 ) ]  c4 r4
-     g4. (  c8 [  e8  g8 ) ] 
+     g4. (  c8 [  e8  g8 ) ]
     g8 ( [  f8 ) ]  e4 r4  d2 (  e4
     )  d2 (  e4 )  d2. ~  d4 r4 r4
     R2.*8  c2. ~ _\f  c4 r4 r4 R2.*2  g'4. (
@@ -155,7 +163,7 @@ PartPSixVoiceOne =  \relative c' {
         \bold {muta in A} } \bar "|."
     }
 
-PartPSevenVoiceOne =  \relative g' {
+PartPSevenVoiceOne =  \transpose bes a {\relative g' {
     \clef "treble" \time 3/4  \key f \major \transposition a  c4 (  f4.
      a8 )  a8 ( [  g8 ) ]  f4 r4
      c4. (  f8 [  a8  c8 ) ]
@@ -188,7 +196,7 @@ PartPSevenVoiceOne =  \relative g' {
      cis8 ( [  d8  g8 ) ]  f8. ( [
      g32  f32 ) ]  e4 r4  g,,4 ~
      g16 [  a32 (  b32 )  c16 -.  b16
-    -. ]  a16 ( [  g16  f16  e16 ) ] 
+    -. ]  a16 ( [  g16  f16  e16 ) ]
     cis4 (  d4 ) r4 \once \omit TupletBracket
     \times 4/6  {
          e16 ( [  d16  c16  d16  e16
@@ -198,7 +206,7 @@ PartPSevenVoiceOne =  \relative g' {
          g16 ( [  f16  e16  f16  g16
          a16 ) ] }
      bes16 ( -. [  c16 -.  d16 -.  e,16 ) -.
-    ]  g4 (  f4 ) r4  f'4 ~  f32 ( [ 
+    ]  g4 (  f4 ) r4  f'4 ~  f32 ( [
     g32  a32  g32  f32  e32  d32
      c32 ) ] \once \omit TupletBracket
     \times 4/6  {
@@ -207,7 +215,7 @@ PartPSevenVoiceOne =  \relative g' {
      c8 r8  g'''2  d,,8 r8  a'''2 \once
     \omit TupletBracket
     \times 4/6  {
-         g,16 ( [  gis16  a16  bes16 
+         g,16 ( [  gis16  a16  bes16
         b16  c16 ) ] }
     \once \omit TupletBracket
     \times 4/6  {
@@ -219,11 +227,11 @@ PartPSevenVoiceOne =  \relative g' {
          b16  c16 ) ] }
     \afterGrace {  d,2. } {  c16 [  d16 ] }
      c4 r4 r4  c,,4 ~  c32 ( [  e32
-     g32  c32  e32  g32  c32 
+     g32  c32  e32  g32  c32
     e32 ) ]  c32 ( [  d32  e32  f32
      g32  a32  b32  c32 ) ]
      b4 r4 r4  d,,,4 ~  d32 ( [  g32
-     b32  d32  f32  g32  b32 
+     b32  d32  f32  g32  b32
     d32 ) ]  b32 ( [  c32  d32  e32
      f32  g32  a32  b32 ) ]
      bes4 r4 r4  bes2. ^\fermata  c,4 (
@@ -233,13 +241,13 @@ PartPSevenVoiceOne =  \relative g' {
      bes8 ) ]  a4 r4  g4. (  c8 [
      a8  c8 ) ]  g4. (  c8 [
      d,8  a'8 ) ]  c,2 \grace {  e16 (
-        }  d8. ) [  c16 ]  c4 r4 r4 
+        }  d8. ) [  c16 ]  c4 r4 r4
     a'4. (  g8 [  f8  e8 ) ]  d4 r4
     r4  bes'4. (  a8 [  g8  f8 ) ]
      e4 r4 r4  c'4. (  bes8 [  a8
      g8 ) ]  f8 ( [  bes8 ) ]  bes4.
     (  a8 )  a16 ( [  g16  a16
-     bes16 ) ]  f4 \grace {  a16 ( } 
+     bes16 ) ]  f4 \grace {  a16 ( }
     g8. ) [  f16 ]  f4 r4 r4 R2.*7 r4 r4  c16
     ( [  e16  f16  a16 ) ]  c4 ~
      c16 ( [  b16  bes16  g16 ) ]
@@ -257,7 +265,7 @@ PartPSevenVoiceOne =  \relative g' {
     ) ]  bes16 ( [  a16 )  a16 (  f16 ) ]
      c4 ~  c16 ( [  b16  bes16  g16 )
     ]  bes16 ( [  a16 )  a16 (  f16 ) ]
-     d8  d'''8 ( [  c8  bes8 
+     d8  d'''8 ( [  c8  bes8
     a8  g8 ) ] \once \omit TupletBracket
     \times 2/3  {
          f16 ( [  c16  d16 ] }
@@ -279,14 +287,15 @@ PartPSevenVoiceOne =  \relative g' {
      c2 (  b8 [  bes8 ) ]  a4 r4 \once
     \omit TupletBracket
     \times 4/6  {
-         g,16 ( [  bes16  a16  g16 
+         g,16 ( [  bes16  a16  g16
         bes16  d16 ) ] }
      c4.  c8 ( [  d8  e8 ) ]  f4
      f4  f4  f2 r4 \bar "|."
     }
+}
 
-PartPEightVoiceOne =  \relative e' {
-    \clef "treble" \time 3/4  \key d \major  fis'8 ( [ _\p  a8 
+PartPEightVoiceOne =  \relative e {
+    \clef "treble" \time 3/4  \key d \major  fis'8 ( [ _\p  a8
     fis8  a8  fis8  a8 ) ]  g8 ( [  a8
      fis8  a8  fis8  a8 ) ]  fis8 ( [
      a8  fis8  a8  fis8  a8 ) ]
@@ -318,7 +327,7 @@ PartPEightVoiceOne =  \relative e' {
     ] \stemDown g4. ( \stemDown fis8 ) \stemDown e16 ( [ \stemDown b'16
     \stemDown g16 \stemDown e16 ) ] \stemDown d4 \grace {  fis16
         ( } \stemDown e8. [ \stemDown d16 ) ] \stemDown d8  b8 (
-    [ _\p  a8  g8  fis8  e8 ) ] r8 
+    [ _\p  a8  g8  fis8  e8 ) ] r8
     fis8 [  fis8  fis8  fis8  fis8 ] r8
      e8 [  e8  e8  e8  e8 ] r8
      d4  fis8 ( [  e8  d8 ) ]  b8. (
@@ -330,11 +339,11 @@ PartPEightVoiceOne =  \relative e' {
     -.  a8 -. ] r8  b8 -. [  d,8 -.  b'8 -.
      d,8 -.  b'8 -. ]  cis,8 r8  a'8 r8
      fis8 r8 r8  e8 ( [  cis8  e8  d8
-     b8 ) ]  gis'4 (  a8 )  cis,4 ( 
+     b8 ) ]  gis'4 (  a8 )  cis,4 (
     d8 )  e8 r8 \stemDown e'8 -. r8 \stemDown a8 -. r8 r4
     \stemDown fis8 -. r8 \stemDown b8 -. r8 r4 \stemDown g8 -. r8
     \stemDown cis8 -. r8 r4 \stemDown a8 -. r8 \stemDown d8 -. r8 r4
-    \stemDown d,8 -. r8 \stemDown b'8 -. r8 r8  cis,,8 [ 
+    \stemDown d,8 -. r8 \stemDown b'8 -. r8 r8  cis,,8 [
     e8  a8  cis8  e8 ] r8  d,8 [  fis8
      b8  d8  fis8 ] r8  cis,8 [  cis8
      cis8  cis8  cis8 ]  b16 [ _\markup{
@@ -344,13 +353,13 @@ PartPEightVoiceOne =  \relative e' {
      cis8  cis8  cis8 ]  d8 _\f  gis4
     \stemDown b4 \stemDown d8 \stemDown gis8  d,8 [ _\p  d8
      d8  d8  d8 ]  cis8 _\f  g'4
-    \stemDown cis4 \stemDown e8 \stemDown g4 r4 r4 ^\fermata 
+    \stemDown cis4 \stemDown e8 \stemDown g4 r4 r4 ^\fermata
     fis,8 ( [ _\p  a8  fis8  a8  fis8
      a8 ) ]  g8 ( [  a8  fis8  a8
      fis8  a8 ) ]  fis8 ( [  a8  fis8
      a8  fis8  a8 ) ]  e8 ( [  a8
      fis8  a8  fis8  a8 ) ]  e8 ( [
-     a8  e8  a8  fis8  a8 ) ] 
+     a8  e8  a8  fis8  a8 ) ]
     e8 ( [  a8  e8  a8  d,8  fis8 ) ]
      cis8 ( [  e8  cis8  e8  d8
      e8 ) ]  cis8  b'8 ( [  a8  g8
@@ -374,11 +383,11 @@ PartPEightVoiceOne =  \relative e' {
      a8  a8  a8  a8 ] r8  a8 [
      a8  a8  a8  a8 ] r8  g8 [
      fis8  fis8  cis8  cis8 ]  d8 [
-     d8  d8  d8  d8  d8 ] r8 
+     d8  d8  d8  d8  d8 ] r8
     e8 [  e8  e8  d8  d8 ] r8 \stemDown g'8
     [ \stemDown g8 \stemDown g8 \stemDown fis8 \stemDown fis8 ]
-    \stemDown e4 r8  g,8 ( [  a8  b8 ) ] r8 
-    fis8 [  fis8  fis8  fis8  fis8 ] 
+    \stemDown e4 r8  g,8 ( [  a8  b8 ) ] r8
+    fis8 [  fis8  fis8  fis8  fis8 ]
     e16 [  e16  e16  e16 ]  e4 :16  e4
     :16  d4 r4  b8. ( [  g'16 ) ]  fis2
      f8. [  e16 ]  d4 r4 \stemDown b''8 r8
@@ -390,7 +399,7 @@ PartPNineVoiceOne =  \relative cis' {
     \clef "treble" \time 3/4  \key d \major  d8 ( [ _\p  a8  d8
      a8  d8  a8 ) ]  cis8 ( [  a8
      d8  a8  d8  a8 ) ]  d8 ( [
-     a8  d8  a8  d8  a8 ) ] 
+     a8  d8  a8  d8  a8 ) ]
     cis8 ( [  a8  d8  a8  d8  a8 ) ]
      cis8 ( [  a8  cis8  a8  d8
      a8 ) ]  cis8 ( [  a8  cis8  a8
@@ -405,11 +414,11 @@ PartPNineVoiceOne =  \relative cis' {
      e8  a8  fis8  a8 ) ]  e8 ( [
      a8  e8  a8  d,8  fis8 ) ]
      cis8 ( [  e8  cis8  e8  d8
-     e8 ) ]  cis8  g'8 ( [ _\p  fis8 
+     e8 ) ]  cis8  g'8 ( [ _\p  fis8
     e8  d8  cis8 ) ]  d8 ( [  a8  d8
      a8  d8  a8 ) ]  b8  g'4 (
      fis8 [  e8  dis8 ) ]  e8 ( [  b8
-     e8  b8  e8  b8 ) ]  cis8 
+     e8  b8  e8  b8 ) ]  cis8
     a'4 (  gis8 [  fis8  eis8 ) ]  fis8 ( [
      a,8 ) ]  b4  a8 ( [  cis8 ) ]  d8
     ( [  b8  a8  e'8  a,8  d8 ) ]
@@ -418,7 +427,7 @@ PartPNineVoiceOne =  \relative cis' {
      fis8  e8 ) ]  fis8 ( [  d8  fis8
      e8  d8  cis8 ) ]  b8 \stemDown b'4 (
     \stemDown a8 [ \stemDown g8 \stemDown fis8 ) ]  g8 ( [
-     e8  g8  fis8  e8  d8 ) ] 
+     e8  g8  fis8  e8  d8 ) ]
     cis8 \stemDown cis'4 ( \stemDown b8 [ \stemDown a8 \stemDown gis8 )
     ]  a8 ( [  cis,8  a'8  g8  fis8
      e8 ) ]  d8 ( [  b8  e8  a8
@@ -436,7 +445,7 @@ PartPNineVoiceOne =  \relative cis' {
      d8 -. [  b8 -.  d8 -.  b8 -.  d8
     -. ]  a8 r8  e'8 r8  d8 r8 r8  cis8 ( [
      a8  cis8  b8  gis8 ) ]  d'4 (
-     cis8 )  a4 (  b8 )  cis8 -. [ 
+     cis8 )  a4 (  b8 )  cis8 -. [
     a'8 -.  e8 -.  a8 -.  e8 -.  a8 -. ] r8
      fis8 -. [  d8 -.  b'8 -.  fis8 -.
      b8 -. ] r8  g8 -. [  e8 -.  cis'8 -.
@@ -445,15 +454,15 @@ PartPNineVoiceOne =  \relative cis' {
      b8 -.  b'8 -.  e,8 -.  d'8 -. ] r8
      a,8 [  cis8  e8  a8  cis8 ] r8
      b,8 [  d8  fis8  b8  d8 ] r8
-     a,8 [  a8  a8  a8  a8 ] 
+     a,8 [  a8  a8  a8  a8 ]
     a16 [ _\markup{ \tiny\italic {cresc.} }  a16  a16
      a16 ]  gis2 :16  a8 _\f  e'4  a4
     \stemDown cis8 \stemDown e8  a,,8 [ _\p  a8  a8
      a8  a8 ]  b8 _\f  d4  gis4
-    \stemDown b8 \stemDown d8  gis,,8 [ _\p  gis8 
-    gis8  gis8  gis8 ]  g8 _\f  e'4 
+    \stemDown b8 \stemDown d8  gis,,8 [ _\p  gis8
+    gis8  gis8  gis8 ]  g8 _\f  e'4
     g4 \stemDown cis8 \stemDown e4 r4 r4 ^\fermata  d,8 ( [ _\p
-     a8  d8  a8  d8  a8 ) ] 
+     a8  d8  a8  d8  a8 ) ]
     cis8 ( [  a8  d8  a8  d8  a8 ) ]
      d8 ( [  a8  d8  a8  d8  a8
     ) ]  cis8 ( [  a8  d8  a8  d8
@@ -466,8 +475,8 @@ PartPNineVoiceOne =  \relative cis' {
     ) ]  b8  g'4 (  fis8 [  e8  dis8
     ) ]  e8 ( [  b8  e8  b8  e8
      b8 ) ]  cis8  a'4 (  gis8 [  fis8
-     eis8 ) ]  fis8 ( [  a,8 ) ]  b4 
-    a8 ( [  cis8 ) ]  d8 ( [  b8  a8 
+     eis8 ) ]  fis8 ( [  a,8 ) ]  b4
+    a8 ( [  cis8 ) ]  d8 ( [  b8  a8
     e'8  a,8  d8 ) ]  b8 ( [  e8  d8
      fis8  a,8  cis8 ) ]  d8  b'8 ( [
     _\f  a8  g8  fis8  e8 ) ]  fis8
@@ -477,7 +486,7 @@ PartPNineVoiceOne =  \relative cis' {
     \stemDown a8 \stemDown gis8 ) ]  a8  a4  a4
      a8  a8 ( [  g8  d'8 )  d,8 (
      dis8  c'8 ) ]  b8 ( [  e,16  g16
-    ) ]  fis8 ( [  a8  g8  a8 ) ] 
+    ) ]  fis8 ( [  a8  g8  a8 ) ]
     fis8  fis8 [ _\p  fis8  fis8  fis8
      fis8 ] r8  g8 [  g8  g8  fis8
      fis8 ] r8  g8 [  g8  g8  fis8
@@ -488,7 +497,7 @@ PartPNineVoiceOne =  \relative cis' {
     d8 \stemDown d8 ] \stemDown b4 r8  e,8 ( [  fis8
      g8 ) ] r8  d8 [  d8  d8  d8
      d8 ]  d16 [  d16  d16  d16 ]
-     cis4 :16  cis4 :16  d4 r4  g,4 
+     cis4 :16  cis4 :16  d4 r4  g,4
     a2  a8 ( [  ais8 ) ]  b4 r4 \stemDown g''8 r8
     \stemDown fis8 r8 \stemDown d8 r8  g,8 r8  fis8 -. r8
      a,8 -. r8  a8 -. r8  a4 r4 r4 \bar "|."
@@ -659,15 +668,15 @@ PartPOneTwoVoiceOne =  \relative a, {
 % The score definition
 \score {
     <<
-        
+
         \new StaffGroup
         <<
             \new Staff
             <<
                 \set Staff.instrumentName = "1st Flute"
                 \set Staff.shortInstrumentName = "Fl.1"
-                
-                \context Staff << 
+
+                \context Staff <<
                     \mergeDifferentlyDottedOn\mergeDifferentlyHeadedOn
                     \context Voice = "PartPOneVoiceOne" {  \PartPOneVoiceOne }
                     >>
@@ -676,8 +685,8 @@ PartPOneTwoVoiceOne =  \relative a, {
             <<
                 \set Staff.instrumentName = "2nd Flute"
                 \set Staff.shortInstrumentName = "Fl.2"
-                
-                \context Staff << 
+
+                \context Staff <<
                     \mergeDifferentlyDottedOn\mergeDifferentlyHeadedOn
                     \context Voice = "PartPTwoVoiceOne" {  \PartPTwoVoiceOne }
                     >>
@@ -686,8 +695,8 @@ PartPOneTwoVoiceOne =  \relative a, {
             <<
                 \set Staff.instrumentName = "1st Bassoon"
                 \set Staff.shortInstrumentName = "Bsn.1"
-                
-                \context Staff << 
+
+                \context Staff <<
                     \mergeDifferentlyDottedOn\mergeDifferentlyHeadedOn
                     \context Voice = "PartPThreeVoiceOne" {  \PartPThreeVoiceOne }
                     >>
@@ -696,13 +705,13 @@ PartPOneTwoVoiceOne =  \relative a, {
             <<
                 \set Staff.instrumentName = "2nd Bassoon"
                 \set Staff.shortInstrumentName = "Bsn.2"
-                
-                \context Staff << 
+
+                \context Staff <<
                     \mergeDifferentlyDottedOn\mergeDifferentlyHeadedOn
                     \context Voice = "PartPFourVoiceOne" {  \PartPFourVoiceOne }
                     >>
                 >>
-            
+
             >>
         \new StaffGroup
         <<
@@ -710,8 +719,8 @@ PartPOneTwoVoiceOne =  \relative a, {
             <<
                 \set Staff.instrumentName = "1st Horn in A"
                 \set Staff.shortInstrumentName = "A Hn.1"
-                
-                \context Staff << 
+
+                \context Staff <<
                     \mergeDifferentlyDottedOn\mergeDifferentlyHeadedOn
                     \context Voice = "PartPFiveVoiceOne" {  \PartPFiveVoiceOne }
                     >>
@@ -720,20 +729,20 @@ PartPOneTwoVoiceOne =  \relative a, {
             <<
                 \set Staff.instrumentName = "2nd Horn in A"
                 \set Staff.shortInstrumentName = "A Hn.2"
-                
-                \context Staff << 
+
+                \context Staff <<
                     \mergeDifferentlyDottedOn\mergeDifferentlyHeadedOn
                     \context Voice = "PartPSixVoiceOne" {  \PartPSixVoiceOne }
                     >>
                 >>
-            
+
             >>
         \new Staff
         <<
-            \set Staff.instrumentName = "Basset-Clarinet in A"
+            \set Staff.instrumentName = "Solo-Bb-Clarinet"
             \set Staff.shortInstrumentName = "Solo Cl."
-            
-            \context Staff << 
+
+            \context Staff <<
                 \mergeDifferentlyDottedOn\mergeDifferentlyHeadedOn
                 \context Voice = "PartPSevenVoiceOne" {  \PartPSevenVoiceOne }
                 >>
@@ -744,8 +753,8 @@ PartPOneTwoVoiceOne =  \relative a, {
             <<
                 \set Staff.instrumentName = "Violin 1"
                 \set Staff.shortInstrumentName = "Vln. 1"
-                
-                \context Staff << 
+
+                \context Staff <<
                     \mergeDifferentlyDottedOn\mergeDifferentlyHeadedOn
                     \context Voice = "PartPEightVoiceOne" {  \PartPEightVoiceOne }
                     >>
@@ -754,8 +763,8 @@ PartPOneTwoVoiceOne =  \relative a, {
             <<
                 \set Staff.instrumentName = "Violin 2"
                 \set Staff.shortInstrumentName = "Vln. 2"
-                
-                \context Staff << 
+
+                \context Staff <<
                     \mergeDifferentlyDottedOn\mergeDifferentlyHeadedOn
                     \context Voice = "PartPNineVoiceOne" {  \PartPNineVoiceOne }
                     >>
@@ -764,8 +773,8 @@ PartPOneTwoVoiceOne =  \relative a, {
             <<
                 \set Staff.instrumentName = "Viola"
                 \set Staff.shortInstrumentName = "Vla."
-                
-                \context Staff << 
+
+                \context Staff <<
                     \mergeDifferentlyDottedOn\mergeDifferentlyHeadedOn
                     \context Voice = "PartPOneZeroVoiceOne" {  \PartPOneZeroVoiceOne }
                     >>
@@ -774,8 +783,8 @@ PartPOneTwoVoiceOne =  \relative a, {
             <<
                 \set Staff.instrumentName = "Violoncello"
                 \set Staff.shortInstrumentName = "Vc."
-                
-                \context Staff << 
+
+                \context Staff <<
                     \mergeDifferentlyDottedOn\mergeDifferentlyHeadedOn
                     \context Voice = "PartPOneOneVoiceOne" {  \PartPOneOneVoiceOne }
                     >>
@@ -784,15 +793,15 @@ PartPOneTwoVoiceOne =  \relative a, {
             <<
                 \set Staff.instrumentName = "Contrabass"
                 \set Staff.shortInstrumentName = "Cb."
-                
-                \context Staff << 
+
+                \context Staff <<
                     \mergeDifferentlyDottedOn\mergeDifferentlyHeadedOn
                     \context Voice = "PartPOneTwoVoiceOne" {  \PartPOneTwoVoiceOne }
                     >>
                 >>
-            
+
             >>
-        
+
         >>
     \layout {}
     % To create MIDI output, uncomment the following line:
