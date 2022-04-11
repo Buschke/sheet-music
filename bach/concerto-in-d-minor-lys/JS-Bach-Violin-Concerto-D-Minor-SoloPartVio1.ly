@@ -1,9 +1,9 @@
 \header {
-  title = "Violin Concerto, D Minor"
-  subtitle = "2 Violins, Largo"
-  composer = "JS Bach"
-  opus = "BWV "
-  tagline = ""
+  title = "Concerto for Two Violins, D Minor"
+  subtitle = "2nd Movement (Largo)"
+  composer = "Johann Sebastian Bach"
+  opus = "BWV 1043"
+  tagline = "Engraved by Sven Buschke, 11.04.2022"
 }
 
 global = {
@@ -16,8 +16,8 @@ soloViolinBC =  \relative c' {
 
     R1. |
     R |
-    c''4. ~ c8 b a g4. ~ g8 f e |
-    d b c f4. ~ f8 e g c4 es,8 ~ |
+    c''4.-2-III ~ c8 b-3 a g4.-IV ~ g8 f e |
+    d-2-III b-1 c f4.-3-III ~ f8 e g c4 es,8 ~ |
     es d f bes4 d,8 ~ d c e a4 c,8 ~ |
     c bes d g4 bes,8 ~ bes a d g a16( g f  e) |
     f( e  f) d a d g( f  g) e c e a( g  a) f d f bes( a  bes) g a bes |
