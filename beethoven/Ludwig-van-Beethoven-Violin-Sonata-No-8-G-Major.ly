@@ -26,7 +26,7 @@ r4 | f\p\downbow( d b)~ b( g b)\upbow~ b( es) es8( as16 g) g4( es g)  f(d f~)( |
 }
 pianoright = \relative c' {
 g'4\p( as~ as8. f16 b8. d,16) | es2 f8( as16 g) | g2 as8\trill\grace {g16 as}( c16 b) | b2 es16( d) c( b) | b2\cresc \grace b16( as8)( g16 as) |
-\grace { g16( as b } as4 g) f8\trill( \grace { e16 f} as16 c) | c8\sf( es,4.) \turn   << {g8.\decresc( f16 | es4\p)} \\ {d4} >> r4 r | \clef bass \tuplet 3/2 { r8\cresc f,( b) } \tuplet 3/2 { r <d, f>( b')} \tuplet 3/2 { r <d, f>( b')} |
+\grace { g16( as b } as4 g) f8\trill( \grace { e16 f} as16 c) | c8\sf( es,4.)\turn   << {g8.\decresc( f16 | es4\p)} \\ {d4} >> r4 r | \clef bass \tuplet 3/2 { r8\cresc f,( b) } \tuplet 3/2 { r <d, f>( b')} \tuplet 3/2 { r <d, f>( b')} |
 \tuplet 3/2 { r <es, g>( b')} \tuplet 3/2 { r <es, g>( b')} \tuplet 3/2 { r <f as>( b) }  | \tuplet 3/2 { r <g b>( es')} \tuplet 3/2 { r <g, b>( es')} \tuplet 3/2 { r <as, c>( es')} | \tuplet 3/2 { r <g, b>( es')} \tuplet 3/2 { r b( es)} \tuplet 3/2 { r g,( b)}  |
 \tuplet 3/2 { r f( b)} \tuplet 3/2 { r f( d')} \tuplet 3/2 { r <f, as>( d')} | \tuplet 3/2 { r <f, as>( d')} \tuplet 3/2 { r <es, g>( es')} \tuplet 3/2 { r <es, f>( c')} | \tuplet 3/2 { r <es, fis>(\sf c')} \tuplet 3/2 { r <es, g>\decresc( b')} \tuplet 3/2 { r <d, as'>( b')} | <es, g>4\p r \clef treble g' | 
 << {g2 as8. h16 | c2 b8. a16 | g2 \acciaccatura h8 a8. g16} \\ { s2 g4 | g2 | g4 | s2 fis4 } >>

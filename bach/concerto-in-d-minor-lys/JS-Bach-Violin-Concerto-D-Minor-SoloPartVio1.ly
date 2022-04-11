@@ -3,6 +3,7 @@
   subtitle = "2nd Movement (Largo)"
   composer = "Johann Sebastian Bach"
   opus = "BWV 1043"
+  copyright = "Fingering: http://www.petruccilibrary.us/files/imglnks/music_files/PMLUS03096-Bach_Concerto_for_2_Violins_in_D_minor,_BWV_1043_-_Violin_1_Solo.pdf"
   tagline = "Engraved by Sven Buschke, 11.04.2022"
 }
 

@@ -6,6 +6,9 @@
     subtitle = "2nd Movement (Menuett), E flat major"
     composer = "Ludwig van Beethoven"
     opus = "Op. 30 No. 3"
+    poet = \markup \box { \pad-around #1 {"Violin Solo"}}	%% placé en haut à gauche
+    instrumentHeader = \markup {"Violin"}
+
     tagline = ""
     subsubtitle = "https://youtu.be/um6fiALO9pQ?t=435"
 }

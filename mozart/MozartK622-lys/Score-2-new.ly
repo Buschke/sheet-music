@@ -1,11 +1,11 @@
-﻿\version "2.22.0"				%%% score complet, sans suppression des lignes de silences
-\include "Fonctions.lyp"                     
-\include "Global.lyp"   
-                  
-#(set-global-staff-size 14)  
+\version "2.22.0"				%%% score complet, sans suppression des lignes de silences
+\include "Fonctions.lyp"
+\include "Global.lyp"
+
+#(set-global-staff-size 14)
 #(ly:set-option 'point-and-click #f)
 
-\paper{ 
+\paper{
 		#(define page-breaking ly:minimal-breaking)
     top-margin = 5\mm
     bottom-margin = 5\mm
@@ -24,7 +24,7 @@
 									(interpret-markup layout props arg)
                    empty-stencil))
 					\fill-line { \fromproperty #'header:copyright } }			%%%tagline
-		}			
+		}
 		ragged-last-bottom = ##f
 		ragged-bottom = ##f
 }	%%% fin paper
@@ -41,44 +41,44 @@
 			\box \center-align {\column {\center-align {
 				\small \line { \copyright }
 				\small \line {
-					"Typeset using GNU-Lilypond " \with-url "http://www.LilyPond.org" \hspace #-1.0 
+					"Typeset using GNU-Lilypond " \with-url "http://www.LilyPond.org" \hspace #-1.0
 					$(string-append "version " (lilypond-version)) \hspace #-1 . }
 				\small \line {
 					"Sheet music from http://www.MutopiaProject.org - Free to download, distribute, modify and perform."}
-				\teeny \line { 
+				\teeny \line {
 					"Licensed under the Creative Commons Attributio 3.0 License, 
 					for details see: http://creativecommons.org/licenses/by/3.0" }
 			}}}
-		}		
+		}
 }	%%% fin header
 
 \score {
   \new StaffGroup <<
-		\override Score.BarNumber.padding = #2 
-		\override Score.BarNumber.font-size = #2 
+		\override Score.BarNumber.padding = #2
+		\override Score.BarNumber.font-size = #2
 		\reperes											%% voir Foncions.lyp
 		\set Score.soloText = #"I."
 		\set Score.soloIIText = #"II."
 		\override Score.VerticalAlignment.max-stretch = #ly:align-interface::calc-max-stretch
-   
+
       \new Staff {
          \set Staff.instrumentName = "Flûte I-II"
          \set Staff.shortInstrumentName = "Fl"
-         \partCombine 
+         \partCombine
             \relative c'' {\keepWithTag #'score \include "Mvt2/Fl1-2.lyp"}
             \relative c'' {\keepWithTag #'score \include "Mvt2/Fl2-2.lyp"}
-       }     
+       }
       \new Staff {
          \set Staff.instrumentName = "Basson I-II"
          \set Staff.shortInstrumentName = "Bn"
-         \partCombine 
+         \partCombine
             \relative c {\keepWithTag #'score \include "Mvt2/Bn1-2.lyp"}
             \relative c {\keepWithTag #'score \include "Mvt2/Bn2-2.lyp"}
-       }     
+       }
       \new Staff {
          \set Staff.instrumentName = \markup {"Cor in A I-II"}
          \set Staff.shortInstrumentName = "C."
-         \partCombine 
+         \partCombine
             \relative c'' {\keepWithTag #'score \include "Mvt2/C1-2.lyp"}
             \relative c'' {\keepWithTag #'score \include "Mvt2/C2-2.lyp"}
       }
@@ -86,36 +86,37 @@
          \new Staff {
             \set Staff.instrumentName = "Violon I"
             \set Staff.shortInstrumentName = "v1"
-						\keepWithTag #'score 
+						\keepWithTag #'score
             \include "Mvt2/V1-2.lyp"
          }
          \new Staff {
             \set Staff.instrumentName = "Violon II"
             \set Staff.shortInstrumentName = "v2"
-						\keepWithTag #'score 
+						\keepWithTag #'score
             \include "Mvt2/V2-2.lyp"
          }
       >>
       \new Staff {
          \set Staff.instrumentName = "Alto"
          \set Staff.shortInstrumentName = "A."
-				 \keepWithTag #'score 
+				 \keepWithTag #'score
          \include "Mvt2/A-2.lyp"
       }
       \new Staff {
          \set Staff.instrumentName = "Violoncelle"
          \set Staff.shortInstrumentName = "Vc"
-				 \keepWithTag #'score 
+				 \keepWithTag #'score
          \include "Mvt2/Vc-2.lyp"
       }
       \new Staff {
          \set Staff.instrumentName = "Contrebasse"
          \set Staff.shortInstrumentName = "Cb"
-				 \keepWithTag #'score 
+				 \keepWithTag #'score
          \include "Mvt2/Cb-2.lyp"
       }
    >>
-\layout { 
+   \midi {}
+\layout {
 			%%	\context { \Staff \RemoveEmptyStaves }
 			%%	\context { \RhythmicStaff \RemoveEmptyStaves }
 }  %% layout

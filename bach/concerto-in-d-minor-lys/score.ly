@@ -1,4 +1,4 @@
-% This file creates the score.
+ % This file creates the score.
 
 % The edition from which this was typed has orchestral accompaniment.
 % I don't know if there's a piano arrangement which is out of copyright.
