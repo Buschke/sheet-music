@@ -13,6 +13,7 @@ sfp = #(make-dynamic-script "sfp")
         \line { "Wolfgang Amadeus Mozart"}
         \line { "(1756-1791)"} }
     }
+    tagline = ###f
 
 #(set-global-staff-size 15.717142857142859)
 \paper {
