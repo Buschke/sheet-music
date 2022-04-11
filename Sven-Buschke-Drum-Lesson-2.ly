@@ -62,4 +62,5 @@ drumsB = {
   }
   \drumsB
   >>
+  \midi {}
 }

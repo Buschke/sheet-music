@@ -5,7 +5,7 @@
   composer = "Sven Buschke"
   tagline = #f
 }
-
+\score {
 <<
   \new Voice {
     \clef bass
@@ -26,3 +26,6 @@
     <4 6> <3 6> <3 7>
   }
 >>
+  \layout {}
+  \midi {}
+}
