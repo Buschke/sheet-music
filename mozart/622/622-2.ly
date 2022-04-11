@@ -8,7 +8,6 @@ sfp = #(make-dynamic-script "sfp")
 \header {
     title =  "Clarinet Concerto A Major"
     subtitle = "2nd Movement"
-    subsubtitle = "Transposed from A to Bb Clarinet"
     opus = "KV 622"
     composer =  \markup \column {
         \line { "Wolfgang Amadeus Mozart"}
@@ -163,7 +162,7 @@ PartPSixVoiceOne =  \relative c' {
         \bold {muta in A} } \bar "|."
     }
 
-PartPSevenVoiceOne =  \transpose bes a {\relative g' {
+PartPSevenVoiceOne =  \transpose a a {\relative g' {
     \clef "treble" \time 3/4  \key f \major \transposition a  c4 (  f4.
      a8 )  a8 ( [  g8 ) ]  f4 r4
      c4. (  f8 [  a8  c8 ) ]
@@ -739,7 +738,7 @@ PartPOneTwoVoiceOne =  \relative a, {
             >>
         \new Staff
         <<
-            \set Staff.instrumentName = "Solo-Bb-Clarinet"
+            \set Staff.instrumentName = "Solo A Clarinet"
             \set Staff.shortInstrumentName = "Solo Cl."
 
             \context Staff <<
