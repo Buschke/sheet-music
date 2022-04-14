@@ -1,4 +1,4 @@
-\version "2.18.2"
+	\version "2.18.2"
 
 \header {
   title = "Pictures at an Exhibition"
@@ -120,16 +120,16 @@ upper = {
   <a' c'' a''> <e' bes' d''> <a' c'' a''> <e' bes' d''>
   \bar "|"
 
-  << { f''8 [ c'' ] } \\ { \longStem <f' a'>4 } >> 
+  << { f''8 [ c'' ] } \\ { \longStem <f' a'>4 } >>
   <f' bes' d''>4 <f' a' f''> <f' bes' d''>
-  << { f''8 [ c'' ] } \\ { \longStem <f' a'>4 } >> 
+  << { f''8 [ c'' ] } \\ { \longStem <f' a'>4 } >>
   <f' bes' d''>4
   \bar "|"
   \break
 
-  << { <g' c''>4 } \\ { ees'8 [ e' ] } >> 
+  << { <g' c''>4 } \\ { ees'8 [ e' ] } >>
   <c' f' a'>4 <d' f' bes'>
-  << { <g' c''>4 } \\ { ees'8 [ e' ] } >> 
+  << { <g' c''>4 } \\ { ees'8 [ e' ] } >>
   <c' f' a'>4
   << { bes'8 d'' } \\ { \longStem <d' f'>4 } >>
   \bar "|"
