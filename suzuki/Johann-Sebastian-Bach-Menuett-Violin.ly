@@ -14,11 +14,11 @@ global = {
 music = \new Staff {
       \relative c' {\global
         \repeat volta 2 {
-        d'( g,8 a h c d4-.) g,-. g-.
-        e'( c8 d e fis g4-.) g,-. g-. c( d8 c h a h4 c8 h a g
-        fis4 g8 a h g \acciaccatura h a2.)
-        d4( g,8 a h c d4-.) g,-. g-. e'( c8 d e fis g4-.) g,-. g-.
-        c\( d8 c h a h4 c8 h a g a4 h8 a g fis g2.\)
+        d'-3( g,8-3 a-4 h-1 c-2 d4-.-3) g,-.-3 g-.-3
+        e'-4( c8-2 d-3 e-4 fis-1 g4-.-2) g,-.-3 g-.-3 c-2( d8-3 c-2 h-1 a-4 h4-1 c8-2 h-1 a-4 g-3
+        fis4-2 g8-3 a-4 h-1 g-3 \acciaccatura h-1 a2.-4)
+        d4-3( g,8-3 a-4 h-1 c-2 d4-.-3) g,-.-3 g-.-3 e'-4( c8-2 d-3 e-4 fis-1 g4-.-2) g,-.-3 g-.-3
+        c-2\( d8-3 c-2 h-1 a-4 h4-1 c8-2 h-1 a-4 g-3 a4-4 h8-1 a-4 g-3 fis-3 g2.-3\)
         }
         \repeat volta 2 {
         h'4 g8 a h g a4 d,8 e fis d g4 e8 fis g d
