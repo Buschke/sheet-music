@@ -1,9 +1,9 @@
 \version "2.20.0"
 
 \header {
-  title = "E Bass Lesson # 8"
-  subtitle = "Einfache viertaktige Basslinie mit Achtelnoten"
-  subsubtitle = "Bass Riff"
+  title = "Drum Lesson # 1"
+  subtitle = "4/4 Grundschlag"
+  subsubtitle = "Basics"
   composer = "Standard"
   piece = "Rock"
   tagline = \markup {
@@ -11,40 +11,50 @@
   }
 }
 
+alldrums = \drummode {
+  \repeat unfold 4 {
+<<
+    {hhc8 hhc hhc hhc hhc hhc hhc hhc}
+\\
+    {bd4 sn bd sn}
+  >>
+  }
+}
+
+
 hhdrum = \drummode {
-  r4 hhc hho hhc
-  r hhc hho hhc
-  r hhc hho hhc
-  r hhc hho hhc
+  hhc4 hhc hhc hhc
+  
+  hhc4 hhc hhc hhc
+  hhc4 hhc hhc hhc
+  hhc4 hhc hhc hhc
 }
 
 cymdrum = \drummode {
-  cymc4 r r r
-  cymc4 r r r
-  cymc4 r r r
-  cymc4 r r r
+  r2.. cymc8
+  r2.. cymc8
+  r2.. cymc8
+  r2.. cymc8
 }
 
+
 tomdrum = \drummode {
-  tomfh tommh toml tommh
-  tomfh tommh toml tommh
-  tomfh tommh toml tommh
-  tomfh tommh toml tommh
+
 }
 
 
 sndrum = \drummode {
-  r4 sn r sn
-  r4 sn r sn
-  r4 sn r sn
-  r4 sn r sn
+  r4 sn sn8 sn sn8 r8
+  r4 sn sn8 sn sn8 r8
+  r4 sn sn8 sn sn8 r8
+  r4 sn sn8 sn sn8 r8
 }
 
 bdrum = \drummode {
-  bd4 r bd8 bd r4
-  bd4 r bd8 bd r4
-  bd4 r bd8 bd r4
-  bd4 r bd8 bd r4
+  bd8 bd r4 bd8 bd r4
+  bd8 bd r4 bd8 bd r4
+  bd8 bd r4 bd8 bd r4
+  bd8 bd r4 bd8 bd r4
 }
 
 %drh = \drummode {
@@ -90,18 +100,20 @@ c1 f g c
 
       }
     }
-   \new DrumStaff \with { instrumentName = "high hat" }
-      \new DrumVoice { \repeat volta \repetitions {\stemDown \hhdrum } }
-   \new DrumStaff \with { instrumentName = "cymbal" }
-      \new DrumVoice { \repeat volta \repetitions {\stemDown \cymdrum } }
-   \new DrumStaff \with { instrumentName = "toms" }
-      \new DrumVoice { \repeat volta \repetitions {\stemDown \tomdrum } }
-    \new DrumStaff \with { instrumentName = "snare" }
-    <<
-      \new DrumVoice { \repeat volta \repetitions {\stemUp \sndrum } }
-    >>
-   \new DrumStaff \with { instrumentName = "base" }
-      \new DrumVoice { \repeat volta \repetitions {\stemDown \bdrum } }
+   \new DrumStaff \with { instrumentName = "drums" }
+      \new DrumVoice { \repeat volta \repetitions {\alldrums } }
+%   \new DrumStaff \with { instrumentName = "high hat" }
+%      \new DrumVoice { \repeat volta \repetitions {\stemDown \hhdrum } }
+%   \new DrumStaff \with { instrumentName = "cymbal" }
+%      \new DrumVoice { \repeat volta \repetitions {\stemDown \cymdrum } }
+%   \new DrumStaff \with { instrumentName = "toms" }
+%      \new DrumVoice { \repeat volta \repetitions {\stemDown \tomdrum } }
+%    \new DrumStaff \with { instrumentName = "snare" }
+%    <<
+%      \new DrumVoice { \repeat volta \repetitions {\stemUp \sndrum } }
+%    >>
+%   \new DrumStaff \with { instrumentName = "base" }
+%      \new DrumVoice { \repeat volta \repetitions {\stemDown \bdrum } }
 <<
   \new ChordNames { \repeat volta \repetitions {\myChords} }
   \new FretBoards { \repeat volta \repetitions {\myChords} }
@@ -136,20 +148,22 @@ c1 f g c
     }
    \new DrumStaff \with { instrumentName = "high hat" }
       \new DrumVoice { \repeat unfold \repetitions {\stemDown \hhdrum } }
-   \new DrumStaff \with { instrumentName = "cymbal" }
-      \new DrumVoice { \repeat unfold \repetitions {\stemDown \cymdrum } }
-   \new DrumStaff \with { instrumentName = "toms" }
-      \new DrumVoice { \repeat unfold \repetitions {\stemDown \tomdrum } }
-    \new DrumStaff \with { instrumentName = "snare" }
-    <<
-      \new DrumVoice { \repeat unfold \repetitions {\stemUp \sndrum } }
-    >>
-   \new DrumStaff \with { instrumentName = "base" }
-      \new DrumVoice { \repeat unfold \repetitions {\stemDown \bdrum } }
+%   \new DrumStaff \with { instrumentName = "high hat" }
+%      \new DrumVoice { \repeat unfold \repetitions {\stemDown \hhdrum } }
+%   \new DrumStaff \with { instrumentName = "cymbal" }
+%      \new DrumVoice { \repeat unfold \repetitions {\stemDown \cymdrum } }
+%   \new DrumStaff \with { instrumentName = "toms" }
+%      \new DrumVoice { \repeat unfold \repetitions {\stemDown \tomdrum } }
+%    \new DrumStaff \with { instrumentName = "snare" }
+%    <<
+%      \new DrumVoice { \repeat unfold \repetitions {\stemUp \sndrum } }
+%    >>
+%   \new DrumStaff \with { instrumentName = "base" }
+%      \new DrumVoice { \repeat unfold \repetitions {\stemDown \bdrum } }
 <<
-  \new ChordNames { \repeat unfold \repetitions {\myChords} }
-  \new FretBoards { \repeat unfold \repetitions {\myChords} }
-  \new Staff { \repeat unfold \repetitions {\myChords} }
+%  \new ChordNames { \repeat unfold \repetitions {\myChords} }
+%  \new FretBoards { \repeat unfold \repetitions {\myChords} }
+%x  \new Staff { \repeat unfold \repetitions {\myChords} }
 >>
 \new Staff \with {
       \omit StringNumber
@@ -158,13 +172,13 @@ c1 f g c
       \set Staff.midiInstrument = #"acoustic bass"
       \set Staff.midiPanPosition = #-0.2
       \numericTimeSignature
-      \repeat unfold \repetitions {\notes}
+%      \repeat unfold \repetitions {\notes}
     }
     \new TabStaff \with {
       stringTunings = #bass-tuning
     } {
       \clef moderntab
-      \repeat unfold \repetitions {\notes}
+%      \repeat unfold \repetitions {\notes}
     }
   >>
   \midi { }
