@@ -66,47 +66,46 @@ L: “Der Herr sei mit euch!”, G: “Und mit deinem Geist”
 \section{13. **Halleluja** (entfällt Septuagesimae-Karfreitag)}
 G: “Halleluja, Halleluja, Halleluja.” (ggf. mit Halleluja-Vers)
 \newpage
-\lilypondfile{HGDmA-06-Halleluja-mit-Halleluja-Vers.ly}
+\lilypondfile{HGDoA-06-Halleluja-mit-Halleluja-Vers.ly}
 
 \section{14. **Hauptlied** (2)}
 EG 418
 \newpage
-\lilypondfile{.ly}
+\lilypondfile{EG418-Brich-dem-Hungrigen-dein-Brot.ly}
 
 \section{15. **Ankündigung Evangeliums**}
 “Ehre sei dir Herre!”
 \newpage
-\lilypondfile{.ly}
+\lilypondfile{HGDoA-07-Ankündigung-Evangelium.ly}
 
 \section{16. **Evangeliumslesung**}
 G: “Lob sei dir, o Christe!”
 \newpage
-\lilypondfile{.ly}
+\lilypondfile{HGDoA-08-Evangeliumslesung.ly}
 
 \section{17. Credo}
 \newpage
-\lilypondfile{.ly}
 
 \section{18. **Lied** (3)}: EG 147
 \newpage
-\lilypondfile{.ly}
+\lilypondfile{EG147-Wachet-auf-ruft-uns-die-Stimme.ly}
 
 \section{19. Predigt}
 \section{20. **Lied / Musik** (4)}: EG 362
 \newpage
-\lilypondfile{.ly}
+\lilypondfile{EG362-Ein-feste-Burg-ist-unser-Gott.ly}
 
 \section{21. Abkündigungen}
 \section{22. **Lied** (5)}
 EG NN
 \newpage
-\lilypondfile{.ly}
+\lilypondfile{EG362-Ein-feste-Burg-ist-unser-Gott.ly}
 
 \section{23. Fürbittengebet}
 \section{24. **Schlussstrophe Lied** (5)}
 EG NN
 \newpage
-\lilypondfile{.ly}
+\lilypondfile{EG362-Ein-feste-Burg-ist-unser-Gott.ly}
 
 \section{25. Vaterunser}
 Bitte vor dem Gottesdienst mit dem Küster klären, wer beim Vaterunser läutet. Beim Vaterunser ist der Knopf für die Glocke bei den markierten Worten zu drücken. Die Glocke schlägt mit ca. einer Sekunde Verzögerung. Der Knopf befindet sich links am Spieltisch, auf Höhe der Setzerschlösser unterhalb der Konsole.\par
@@ -128,17 +127,17 @@ Vaterunser\\
 \section{26. Sendungswort, **Ton angeben**}
 L: “Gehet hin im Frieden des Herrn!” G: “Gott sei Lob und Dank!”
 \newpage
-\lilypondfile{.ly}
+\lilypondfile{HGDoA-12-Sendungswort.ly}
 
 \section{27. **Segen**}
 G: “Amen, Amen, Amen.”
 \newpage
-\lilypondfile{.ly}
+\lilypondfile{HGDoA-13-Segen.ly}
 
 \section{28. **Orgelnachspiel**}
 BWV 657
 \newpage
-\lilypondfile{.ly}
+\lilypondfile{Johann-Sebastian-Bach-Orgelnachspiel-Nun-danket-alle-Gott.ly}
 
 \end{document}
 
