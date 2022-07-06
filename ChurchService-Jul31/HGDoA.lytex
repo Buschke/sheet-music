@@ -19,95 +19,96 @@
  
 \title{Hauptgottesdienst ohne Abendmahl - 31. Juli 2022\\(G: Gemeinde mit Orgelbegleitung, Ch: Chor, K: Kantor, L: Liturg)}
 \author{Sven Buschke}
-\date{31. Juli 2022}
+\date{31. Juli 2022, vers. 1.0}
 
 \begin{document}
 
 \maketitle
 
-\section{Introduction}
-
-\section{1. Glockengeläut}
-\section{2. **Musik zum Eingang**}
+\section{Glockengeläut}
+\section{**Musik zum Eingang**}
 BWV 662 (Allein Gott in der Höh sei Ehr)
 \newpage
 \lilypondfile{Johann-Sebastian-Bach-Orgelvorspiel-Allein-Gott-in-der-Hoeh.ly}
 
-\section{3. Begrüßung}
-\section{4. **Eingangslied** (1)EG 320}
+\section{Begrüßung}
+\section{**Eingangslied** (1)EG 320}
 \newpage
 \lilypondfile{EG320-Nun-lasst-uns-Gott-dem-Herren.ly}
 
-\section{5. Psalm}
-\section{6. **Gloria Patri / Ehr sei dem Vater** (entfällt Judica bis Karfreitag, **4 Töne Intonation**, G + Orgel):} K: “Ehr sei dem Vater und dem Sohn”, G: “und dem Heiligen Geist, wie es war im Anfang, jetzt und immerdar und von Ewigkeit zu Ewigkeit, Amen”
+\section{Psalm}
+\section{**Gloria Patri / Ehr sei dem Vater** (entfällt Judica bis Karfreitag, **4 Töne Intonation**, G + Orgel):} K: “Ehr sei dem Vater und dem Sohn”, G: “und dem Heiligen Geist, wie es war im Anfang, jetzt und immerdar und von Ewigkeit zu Ewigkeit, Amen”
 \newpage
 \lilypondfile{HGDoA-01-Gloria-Patri-Ehr-sei-dem-Vater.ly}
 
-\section{7. (**Orgelzwischenspiel**, bis die Konfirmanden sitzen)}
-\section{8. **Kyrie**}
+\section{(**Orgelzwischenspiel**, bis die Konfirmanden sitzen)}
+\section{**Kyrie**}
 K / Ch: “Kyrie eleison”, G: “Herr, erbarme dich, Christe eleison, Christe, erbarme dich, Kyrie eleison, Herr, erbarm dich über uns.”
 \newpage
 \lilypondfile{HGDoA-02-Kyrie.ly}
 
-\section{9. **Gloria**}
+\section{**Gloria**}
 (entällt 2.-4. Advent und Invocavit-Karfreitag außer Gründonnerstag)\par 
 “K: Ehre sei Gott in der Höhe!”, G: “Allein Gott in der Höh sei Ehr und Dank für seine Gnade, darum, dass nun und nimmermehr uns rühren kann kein Schade. Ein Wohlgefalln Gott an uns hat, nun ist groß Fried ohn Unterlass, all Fehd hat nun ein Ende.”
 \newpage
 \lilypondfile{HGDoA-03-Gloria.ly}
 
-\section{10. **Salutatio*}*
+\section{**Salutatio*}*
 L: “Der Herr sei mit euch!”, G: “Und mit deinem Geist”
-\section{11. Kollektengebet}
+\newpage
+\lilypondfile{HGDoA-04-Salutatio.ly}
+
+\section{Kollektengebet}
 **Amen**: G: “Amen”
 \newpage
 \lilypondfile{HGDoA-05-Kollektengebet.ly}
 
-\section{12. Epistellesung}
-\section{13. **Halleluja** (entfällt Septuagesimae-Karfreitag)}
+\section{Epistellesung}
+\section{**Halleluja** (entfällt Septuagesimae-Karfreitag)}
 G: “Halleluja, Halleluja, Halleluja.” (ggf. mit Halleluja-Vers)
 \newpage
 \lilypondfile{HGDoA-06-Halleluja-mit-Halleluja-Vers.ly}
 
-\section{14. **Hauptlied** (2)}
+\section{**Hauptlied** (2)}
 EG 418
 \newpage
 \lilypondfile{EG418-Brich-dem-Hungrigen-dein-Brot.ly}
 
-\section{15. **Ankündigung Evangeliums**}
+\section{**Ankündigung Evangeliums**}
 “Ehre sei dir Herre!”
 \newpage
 \lilypondfile{HGDoA-07-Ankündigung-Evangelium.ly}
 
-\section{16. **Evangeliumslesung**}
+\section{**Evangeliumslesung**}
 G: “Lob sei dir, o Christe!”
 \newpage
 \lilypondfile{HGDoA-08-Evangeliumslesung.ly}
 
-\section{17. Credo}
+\section{Credo}
 \newpage
 
-\section{18. **Lied** (3)}: EG 147
+\section{**Lied** (3)}: EG 147
 \newpage
 \lilypondfile{EG147-Wachet-auf-ruft-uns-die-Stimme.ly}
 
-\section{19. Predigt}
-\section{20. **Lied / Musik** (4)}: EG 362
+\section{Predigt}
+\section{**Lied / Musik** (4)}: EG 362
 \newpage
 \lilypondfile{EG362-Ein-feste-Burg-ist-unser-Gott.ly}
 
-\section{21. Abkündigungen}
-\section{22. **Lied** (5)}
+\section{Abkündigungen}
+\section{**Lied** (5)}
 EG NN
 \newpage
 \lilypondfile{EG362-Ein-feste-Burg-ist-unser-Gott.ly}
 
-\section{23. Fürbittengebet}
-\section{24. **Schlussstrophe Lied** (5)}
+\section{Fürbittengebet}
+\section{**Schlussstrophe Lied** (5)}
 EG NN
 \newpage
 \lilypondfile{EG362-Ein-feste-Burg-ist-unser-Gott.ly}
 
-\section{25. Vaterunser}
+\section{Vaterunser}
 Bitte vor dem Gottesdienst mit dem Küster klären, wer beim Vaterunser läutet. Beim Vaterunser ist der Knopf für die Glocke bei den markierten Worten zu drücken. Die Glocke schlägt mit ca. einer Sekunde Verzögerung. Der Knopf befindet sich links am Spieltisch, auf Höhe der Setzerschlösser unterhalb der Konsole.\par
 
 Vaterunser\\
@@ -124,17 +125,17 @@ Vaterunser\\
         Denn Dein ist das Reich und die Kraft und die Herrlichkeit in Ewigkeit.\\
         Amen. 
 
-\section{26. Sendungswort, **Ton angeben**}
+\section{Sendungswort, **Ton angeben**}
 L: “Gehet hin im Frieden des Herrn!” G: “Gott sei Lob und Dank!”
 \newpage
 \lilypondfile{HGDoA-12-Sendungswort.ly}
 
-\section{27. **Segen**}
+\section{**Segen**}
 G: “Amen, Amen, Amen.”
 \newpage
 \lilypondfile{HGDoA-13-Segen.ly}
 
-\section{28. **Orgelnachspiel**}
+\section{**Orgelnachspiel**}
 BWV 657
 \newpage
 \lilypondfile{Johann-Sebastian-Bach-Orgelnachspiel-Nun-danket-alle-Gott.ly}
