@@ -1,0 +1,144 @@
+\documentclass{article}
+\usepackage{ifxetex}
+\ifxetex
+%xetex specific stuff
+\usepackage{xunicode,fontspec,xltxtra}
+\setmainfont[Numbers=OldStyle]{Times New Roman}
+\setsansfont{Arial}
+\else
+%This can be empty if you are not going to use pdftex
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{mathptmx}%Times
+\usepackage{helvet}%Helvetica
+\fi
+%Here you can insert all packages that pdftex also understands
+\usepackage[ngerman,finnish,english]{babel}
+\usepackage{graphicx}
+
+ 
+\title{Hauptgottesdienst ohne Abendmahl - 31. Juli 2022\\(G: Gemeinde mit Orgelbegleitung, Ch: Chor, K: Kantor, L: Liturg)}
+\author{Sven Buschke}
+\date{31. Juli 2022}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+\section{1. Glockengeläut}
+\section{2. **Musik zum Eingang**}
+BWV 662 (Allein Gott in der Höh sei Ehr)
+\newpage
+\lilypondfile{Johann-Sebastian-Bach-Orgelvorspiel-Allein-Gott-in-der-Hoeh.ly}
+
+\section{3. Begrüßung}
+\section{4. **Eingangslied** (1)EG 320}
+\newpage
+\lilypondfile{EG320-Nun-lasst-uns-Gott-dem-Herren.ly}
+
+\section{5. Psalm}
+\section{6. **Gloria Patri / Ehr sei dem Vater** (entfällt Judica bis Karfreitag, **4 Töne Intonation**, G + Orgel):} K: “Ehr sei dem Vater und dem Sohn”, G: “und dem Heiligen Geist, wie es war im Anfang, jetzt und immerdar und von Ewigkeit zu Ewigkeit, Amen”
+\newpage
+\lilypondfile{HGDoA-01-Gloria-Patri-Ehr-sei-dem-Vater.ly}
+
+\section{7. (**Orgelzwischenspiel**, bis die Konfirmanden sitzen)}
+\section{8. **Kyrie**}
+K / Ch: “Kyrie eleison”, G: “Herr, erbarme dich, Christe eleison, Christe, erbarme dich, Kyrie eleison, Herr, erbarm dich über uns.”
+\newpage
+\lilypondfile{HGDoA-02-Kyrie.ly}
+
+\section{9. **Gloria**}
+(entällt 2.-4. Advent und Invocavit-Karfreitag außer Gründonnerstag)\par 
+“K: Ehre sei Gott in der Höhe!”, G: “Allein Gott in der Höh sei Ehr und Dank für seine Gnade, darum, dass nun und nimmermehr uns rühren kann kein Schade. Ein Wohlgefalln Gott an uns hat, nun ist groß Fried ohn Unterlass, all Fehd hat nun ein Ende.”
+\newpage
+\lilypondfile{HGDoA-03-Gloria.ly}
+
+\section{10. **Salutatio*}*
+L: “Der Herr sei mit euch!”, G: “Und mit deinem Geist”
+\section{11. Kollektengebet}
+**Amen**: G: “Amen”
+\newpage
+\lilypondfile{HGDoA-05-Kollektengebet.ly}
+
+\section{12. Epistellesung}
+\section{13. **Halleluja** (entfällt Septuagesimae-Karfreitag)}
+G: “Halleluja, Halleluja, Halleluja.” (ggf. mit Halleluja-Vers)
+\newpage
+\lilypondfile{HGDmA-06-Halleluja-mit-Halleluja-Vers.ly}
+
+\section{14. **Hauptlied** (2)}
+EG 418
+\newpage
+\lilypondfile{.ly}
+
+\section{15. **Ankündigung Evangeliums**}
+“Ehre sei dir Herre!”
+\newpage
+\lilypondfile{.ly}
+
+\section{16. **Evangeliumslesung**}
+G: “Lob sei dir, o Christe!”
+\newpage
+\lilypondfile{.ly}
+
+\section{17. Credo}
+\newpage
+\lilypondfile{.ly}
+
+\section{18. **Lied** (3)}: EG 147
+\newpage
+\lilypondfile{.ly}
+
+\section{19. Predigt}
+\section{20. **Lied / Musik** (4)}: EG 362
+\newpage
+\lilypondfile{.ly}
+
+\section{21. Abkündigungen}
+\section{22. **Lied** (5)}
+EG NN
+\newpage
+\lilypondfile{.ly}
+
+\section{23. Fürbittengebet}
+\section{24. **Schlussstrophe Lied** (5)}
+EG NN
+\newpage
+\lilypondfile{.ly}
+
+\section{25. Vaterunser}
+Bitte vor dem Gottesdienst mit dem Küster klären, wer beim Vaterunser läutet. Beim Vaterunser ist der Knopf für die Glocke bei den markierten Worten zu drücken. Die Glocke schlägt mit ca. einer Sekunde Verzögerung. Der Knopf befindet sich links am Spieltisch, auf Höhe der Setzerschlösser unterhalb der Konsole.\par
+
+Vaterunser\\
+        Vater unser im Himmel\\
+        \textbf{geheiligt} werde dein Name.\\
+        \textbf{Dein} Reich komme.\\
+        \textbf{Dein} Wille geschehe,\\
+        wie im Himmel so auf Erden.\\
+        Unser tägliches \textbf{Brot} gib uns heute.\\
+        Und \textbf{vergib} uns unsere Schuld,\\
+        wie auch wir vergeben unseren Schuldigern.\\
+        Und \textbf{führe} uns nicht in Versuchung,\\
+        sondern \textbf{erlöse} uns von dem Bösen.\\
+        Denn Dein ist das Reich und die Kraft und die Herrlichkeit in Ewigkeit.\\
+        Amen. 
+
+\section{26. Sendungswort, **Ton angeben**}
+L: “Gehet hin im Frieden des Herrn!” G: “Gott sei Lob und Dank!”
+\newpage
+\lilypondfile{.ly}
+
+\section{27. **Segen**}
+G: “Amen, Amen, Amen.”
+\newpage
+\lilypondfile{.ly}
+
+\section{28. **Orgelnachspiel**}
+BWV 657
+\newpage
+\lilypondfile{.ly}
+
+\end{document}
+
