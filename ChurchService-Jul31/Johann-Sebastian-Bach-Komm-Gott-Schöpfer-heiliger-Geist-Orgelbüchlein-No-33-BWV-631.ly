@@ -5,7 +5,7 @@
   arranger = "Arrangement: Sven Buschke"
   title = "Komm, Gott Schöpfer, heiliger Geist"
   subtitle = "Orgelbüchlein No. 33"
-  instrument = "2 man, 1 ped"
+  instrument = "Organ 2 man, 1 ped"
 
   opus = "BWV 631"
   tagline = ""
