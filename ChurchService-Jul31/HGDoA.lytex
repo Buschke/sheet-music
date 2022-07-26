@@ -1,3 +1,6 @@
+% steps to invoke
+% 1. lilypond-book HGDoA.lytex
+% 2. xelatex HGDoA.tex
 \documentclass{article}
 \usepackage{ifxetex}
 \ifxetex
@@ -13,13 +16,13 @@
 \usepackage{helvet}%Helvetica
 \fi
 %Here you can insert all packages that pdftex also understands
-\usepackage[ngerman,finnish,english]{babel}
+\usepackage[ngerman,english]{babel}
 \usepackage{graphicx}
 
  
-\title{Hauptgottesdienst ohne Abendmahl - 31. Juli 2022\\(G: Gemeinde mit Orgelbegleitung, Ch: Chor, K: Kantor, L: Liturg)}
-\author{Sven Buschke}
-\date{31. Juli 2022, vers. 1.0}
+\title{Hauptgottesdienst ohne Abendmahl - 31. Juli 2022 - 7. Sonntag nach Trinitatis\\(G: Gemeinde mit Orgelbegleitung, Ch: Chor, K: Kantor, L: Liturg)}
+\author{Michael Neumann und Sven Buschke}
+\date{31. Juli 2022, vers. 1.5}
 
 \begin{document}
 
@@ -27,16 +30,21 @@
 
 \section{Glockengeläut}
 \section{**Musik zum Eingang**}
-BWV 662 (Allein Gott in der Höh sei Ehr)
+BWV 628 (Erstanden ist der heilge Christ)
 \newpage
-\lilypondfile{Johann-Sebastian-Bach-Orgelvorspiel-Allein-Gott-in-der-Hoeh.ly}
+\lilypondfile{Johann-Sebastian-Bach-Erstanden-ist-der-heilge-Christ-Orgelbüchlein-No-30-BWV-628.ly}
+%\par BWV 662 (Allein Gott in der Höh sei Ehr) ALT
+%\newpage
+%\lilypondfile{Johann-Sebastian-Bach-Orgelvorspiel-Allein-Gott-in-der-Hoeh.ly}
 
 \section{Begrüßung}
-\section{**Eingangslied** (1)EG 320}
+\section{**Eingangslied** (1) EG 502: Nun preiset alle}
 \newpage
-\lilypondfile{EG320-Nun-lasst-uns-Gott-dem-Herren.ly}
+%\lilypondfile{EG320-Nun-lasst-uns-Gott-dem-Herren.ly}
+\lilypondfile{Matthäus-Apelles-von-Löwenstern-1644-Nun-preiset-alle-Evangelisches-Gesangbuch-EG-502.ly}
 
 \section{Psalm}
+|Psalm 107
 \section{**Gloria Patri / Ehr sei dem Vater** (entfällt Judica bis Karfreitag, **4 Töne Intonation**, G + Orgel):} K: “Ehr sei dem Vater und dem Sohn”, G: “und dem Heiligen Geist, wie es war im Anfang, jetzt und immerdar und von Ewigkeit zu Ewigkeit, Amen”
 \newpage
 \lilypondfile{HGDoA-01-Gloria-Patri-Ehr-sei-dem-Vater.ly}
@@ -70,9 +78,10 @@ G: “Halleluja, Halleluja, Halleluja.” (ggf. mit Halleluja-Vers)
 \lilypondfile{HGDoA-06-Halleluja-mit-Halleluja-Vers.ly}
 
 \section{**Hauptlied** (2)}
-EG 418
+EG 274 Der Herr ist mein getreuer Hirt
 \newpage
-\lilypondfile{EG418-Brich-dem-Hungrigen-dein-Brot.ly}
+%\lilypondfile{EG418-Brich-dem-Hungrigen-dein-Brot.ly}
+\lilypondfile{Johann-Walter-1524-Der-Herr-ist-mein-getreuer-Hirt-Evangelisches-Gesangbuch-EG-274.ly}
 
 \section{**Ankündigung Evangeliums**}
 “Ehre sei dir Herre!”
@@ -87,26 +96,30 @@ G: “Lob sei dir, o Christe!”
 \section{Credo}
 \newpage
 
-\section{**Lied** (3)}: EG 147
+\section{**Lied** (3)}: 320, 1 - 6 Nun lasst uns Gott, dem Herrenl
 \newpage
-\lilypondfile{EG147-Wachet-auf-ruft-uns-die-Stimme.ly}
+%\lilypondfile{EG147-Wachet-auf-ruft-uns-die-Stimme.ly}
+\lilypondfile{Bei-Nikolaus-Selnecker-1587-Nun-lasst-uns-Gott-dem-Herren-Evangelisches-Gesangbuch-EG-320.ly}
 
 \section{Predigt}
-\section{**Lied / Musik** (4)}: EG 362
+\section{**Lied / Musik** (4)}: 418 Brich dem Hungrigen dein Brot
 \newpage
-\lilypondfile{EG362-Ein-feste-Burg-ist-unser-Gott.ly}
+%\lilypondfile{EG362-Ein-feste-Burg-ist-unser-Gott.ly}
+\lilypondfile{Gerhard-Häussler-1953-Brich-dem-Hungrigen-dein-Brot-Evangelisches-Gesangbuch-EG-418.ly}
 
 \section{Abkündigungen}
 \section{**Lied** (5)}
-EG NN
+319 Die beste Zeit im Jahr
 \newpage
-\lilypondfile{EG362-Ein-feste-Burg-ist-unser-Gott.ly}
+%\lilypondfile{EG362-Ein-feste-Burg-ist-unser-Gott.ly}
+\lilypondfile{Böhmische-Brüder-1544-Die-beste-Zeit-im-Jahr-Evangelisches-Gesangbuch-EG-319.ly}
 
 \section{Fürbittengebet}
 \section{**Schlussstrophe Lied** (5)}
-EG NN
+320, 7 - 8 Wir bitten deine Güte
 \newpage
-\lilypondfile{EG362-Ein-feste-Burg-ist-unser-Gott.ly}
+%\lilypondfile{EG362-Ein-feste-Burg-ist-unser-Gott.ly}
+\lilypondfile{Bei-Nikolaus-Selnecker-1587-Wir-bitten-deine-Güte-Evangelisches-Gesangbuch-EG-320.ly}
 
 \section{Vaterunser}
 Bitte vor dem Gottesdienst mit dem Küster klären, wer beim Vaterunser läutet. Beim Vaterunser ist der Knopf für die Glocke bei den markierten Worten zu drücken. Die Glocke schlägt mit ca. einer Sekunde Verzögerung. Der Knopf befindet sich links am Spieltisch, auf Höhe der Setzerschlösser unterhalb der Konsole.\par
@@ -136,9 +149,12 @@ G: “Amen, Amen, Amen.”
 \lilypondfile{HGDoA-13-Segen.ly}
 
 \section{**Orgelnachspiel**}
-BWV 657
+BWV 631 (Komm, Gott Schöpfer, Heiliger Geist)
 \newpage
-\lilypondfile{Johann-Sebastian-Bach-Orgelnachspiel-Nun-danket-alle-Gott.ly}
+\lilypondfile{Johann-Sebastian-Bach-Komm-Gott-Schöpfer-heiliger-Geist-Orgelbüchlein-No-33-BWV-631.ly}
+%BWV 657
+%\newpage
+%\lilypondfile{Johann-Sebastian-Bach-Orgelnachspiel-Nun-danket-alle-Gott.ly}
 
 \end{document}
 

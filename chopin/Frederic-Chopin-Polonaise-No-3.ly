@@ -10,7 +10,7 @@
 settings = {
   \key a \major
   \time 3/4
-  \tempo "Allegro con brio" 4 = 40
+  \tempo "Allegro con brio" 4 = 96
 }
 
 rh_one = {
@@ -39,7 +39,7 @@ lh_one = {
 clave = {
         \new DrumStaff {
             \drummode {
-                sn4 cl cl cl |
+                sn4 cl cl
             }
         }
     }

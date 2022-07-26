@@ -1,15 +1,21 @@
+
+
 \version "2.22.0"
 
 \header {
   composer = "Johann Sebastian Bach"
   title = "Wachet auf, ruft uns die Stimme"
-  subtitle = "Schuebler-Chorale"
+  subtitle = "Schübler-Choräle"
   opus = "BWV 645"
+  arranger = "Sven Buschke"
+  copyright = \markup {  }
   tagline = ""
 }
 
 settings = {
   \key es \major
+  \time 4/4
+  \tempo 4 = 60
 }
 
 dex_int = \relative c' {
@@ -54,35 +60,35 @@ dex_two = \relative c' {
   bes'4 as16 g f es f es d c bes8 c16 d%24
   es f g f as g f es g8 f r bes,%25
   g' a4 bes8 es,16 d es8 r c%26
-  r1 %27
-  r1 %28
-  r1 %27
-  r1 %28
-  r1 %29
-  r1 %30
-  r1 %31
-  r1 %32
-  r1 %33
-  r1 %34
-  r1 %35
-  r1 %36
-  r1 %37
-  r1 %38
-  r1 %39
-  r1 %40
-  r1 %41
-  r1 %42
-  r1 %43
-  r1 %44
-  r1 %45
-  r1 %46
-  r1 %47
-  r1 %48
-  r1 %49
-  r1 %50
-  r1 %51
-  r1 %52
-  r1 %53
+  a' bes4 c8 es,16 d es8 r es'%27
+  d16 c bes8 bes16 a bes8 bes16 a g f es d c bes%28
+  c d es8 es16 d es8 es16 a bes c bes a g f%29
+  bes8 f d c16 bes bes es d c d8 bes%30
+  g8. a16 a8. g32 a bes4 r8 d%31
+  es f4 g8 bes,16 a bes8 r bes'%32
+  bes4 as16 g f es f es d c bes8 c16 d%33
+  es f g f as g f es g8 f r4%34
+  r r8 g c16 d es8 es%35
+  d f es g, f es'16 c d8 f, es%36
+  b' c r g g4 f16 es d c%37
+  d c b a g8 a16 b c d es d f es d c%38
+  es8 d r g, es' fis4 g8%39
+  c,16 bes c8 r a fis' g4 a8%40
+  c,16 bes c8 r c' bes16 a g8 g16 fis g8%41
+  g16 f es d c bes a g a bes c8 c16 bes c8%42
+  c16 fis g a g fis e d g8 d bes a16 g%43
+  f4 r r r8 bes%44
+  es16 f g8 g f as g bes, as%45
+  g'16 es f8 as, g d' es r4%46
+  r r8 bes' bes4 as16 g f es%47
+  f es d c bes8 c16 d es f g f as g f es%48
+  g8 f r es c' d4 es8%49
+  as,16 g as8 r8 c d es4 f8%50
+  as,16 g as8 r f g16 f es8 es16 d es8%51
+  es16 des' c bes as g f es f g as8 as16\trill g as8(%52
+  as16) d, es f es d c bes bes'8 es, g16 f es d%53
+  es as g f g8 es c8. d16 d8. es16%54
+  es1%55
 }
 
 sin_int = \relative c {
@@ -92,7 +98,7 @@ sin_int = \relative c {
   r1 %1
 }
 
-sin_one = \relative c, {
+sin_one = \relative c {
   r1%2
   r1%3
   r1%4
@@ -104,58 +110,58 @@ sin_one = \relative c, {
   r1%10
   r1%11
   r1%12
-  r1%13
-  r1%14
-  r1%15
-  r1%16
-  r1%17
-  r1%18
-  r1%19
-  r1%20
+  r2 es4 g%13
+  bes bes bes bes%14
+  c2 bes%15
+  r2 r4 bes%16
+  es bes es8 f g4%17
+  f4. es8 d4 c8. bes32 c%18
+  bes2 r%19
+  r4 bes es bes%20
 }
 
-sin_one_alt_one = \relative c, {
-  r1 %21
-  r1 %22
+sin_one_alt_one = \relative c {
+  c' g8. as32 bes as8 g f4%21
+  es2 r%22
 }
 
-sin_one_alt_two = \relative c, {
-  r1 %21
+sin_one_alt_two = \relative c {
+  c'4 g8. as32 bes as8 g f4%21
 }
 
-sin_two = \relative c, {
-  r1 %22
-  r1 %23
-  r1 %24
+sin_two = \relative c {
+  es2 r %24
   r1 %25
   r1 %26
   r1 %27
   r1 %28
   r1 %29
   r1 %30
-  r1 %31
-  r1 %32
-  r1 %33
-  r1 %34
-  r1 %35
-  r1 %36
-  r1 %37
-  r1 %38
-  r1 %39
-  r1 %40
-  r1 %41
-  r1 %42
-  r1 %43
-  r1 %44
-  r1 %45
-  r1 %46
-  r1 %47
-  r1 %48
-  r1 %49
-  r1 %50
-  r1 %51
-  r1 %52
-  r1 %53
+  r2 r4 bes' %31
+  bes as g f
+  es2 r
+  r4 bes' bes as
+  g f es2
+  r1
+  f4 g as2
+  g r
+  r1
+  r1
+  r1
+  r1
+  r1
+  r4 bes c
+  d es2 r
+  r r4 es8 f
+  g4 f es2
+  r1
+  r4 bes es bes
+  c g as8 g f4\trill
+  es1
+  r1
+  r1
+  r1
+  r1
 }
 
 ped_int = \relative c, {
@@ -231,6 +237,14 @@ ped_two = \relative c, {
   es1%55
 }
 
+clave = {
+  \new DrumStaff {
+    \drummode {
+      sn4 cl cl cl8
+    }
+  }
+}
+
 sheetmusic = {
   <<
     \new PianoStaff {
@@ -289,7 +303,7 @@ sheetmusicmidi = {
     \new Staff = "ped" {
       \clef bass
       \ped_int
-      \repeat unfold 2 {\ped_one}
+      \repeat unfold  2 {\ped_one}
       \alternative { { \ped_one_alt_one } { \ped_one_alt_two } }
       \ped_two
       \bar "|."
@@ -298,12 +312,18 @@ sheetmusicmidi = {
 }
 
 \score {
+%  {
+%    \clave
   \sheetmusic
+%  }
   \layout {}
 }
 
 \score {
+  {
+  \clave
   \sheetmusicmidi
+  }
   \midi {}
 }
 

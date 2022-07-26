@@ -20,8 +20,8 @@ settings = {
 
 s_in = \relative c' {\settings
   \partial 4.
-  g'4.
-  a g f g
+  g'4.-4
+  a-5 g f g
   c d c\fermata c
   g a8. b c4. d
   e e d\fermata d
@@ -34,8 +34,8 @@ s_in = \relative c' {\settings
 a_in = \relative c' {
   \settings
   \partial 4.
-  r8 d16 c d8
-  e c f d b e c d16 c d8 b e16 d e8(
+  r8 d16-2 c d8
+  e-3 c f d b e c d16 c d8 b e16 d e8(
   e) f16 g a g f8 d g e4.\fermata r8 g16 f g8
   d b e c f16 e f8 g a16 g f e d8 g16 f g8(
   g) e g c16 b a g a fis( fis8) g16 fis g a b a g fis g8(
