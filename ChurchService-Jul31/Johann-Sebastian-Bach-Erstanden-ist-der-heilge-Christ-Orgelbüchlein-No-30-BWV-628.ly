@@ -15,7 +15,7 @@
 settings = {
   \key d \major
   \time 3/2
-  \tempo 2 = 40
+  \tempo 2 = 25
 }
 
 s_in = \relative c' {\settings
@@ -105,8 +105,9 @@ pd_in = \relative c {
 
 sheetmusic = {
   <<
-    \new PianoStaff  \with {midiInstrument = "church organ"} {
-      <<
+%    \new PianoStaff  \with {midiInstrument = "church organ"} {
+     \new PianoStaff  \with {midiInstrument = "piano"} {
+     <<
         \new Staff = "up" {
           \clef treble
           <<
@@ -131,7 +132,8 @@ sheetmusic = {
         }
       >>
     }
-    \new Staff = "ped"  \with {midiInstrument = "church organ"} {
+%    \new Staff = "ped"  \with {midiInstrument = "church organ"} {
+    \new Staff = "ped"  \with {midiInstrument = "trumpet4"} {
       \clef bass
       {
         \pd_in
@@ -160,7 +162,20 @@ sheetmusic = {
 }
 
 % midi count in
-clave = {
+clave = {\new DrumStaff <<
+  \drummode {\settings
+   % bd4 sn4
+    << {
+%      \repeat unfold 16 cl16
+      \repeat unfold 16 hh16
+    } \\ {
+      bd4 sn4 bd4 sn4
+    } >>
+  }
+>>
+}
+
+claveOld = {
         \new DrumStaff {
             \drummode {\settings
                 sn2 cl

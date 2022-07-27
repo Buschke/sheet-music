@@ -18,7 +18,8 @@ settings = {
   \tempo 2 = 40
 }
 
-s_in = \relative c' {\settings
+s_in = \relative c' {
+  \settings
   \partial 4.
   g'4.-4
   a-5 g f g
@@ -113,30 +114,53 @@ sheetmusic = {
 
 \markup \bold \underline "Registrierung"
 \markup fwnum =
-  \markup \override #'(font-features . ("ss01" "-kern"))
-    \number \etc
+\markup \override #'(font-features . ("ss01" "-kern"))
+\number \etc
 
 \markuplist \tiny {
   \override #'(padding . 2)
   \table
-    #'(-1 -1 -1 -1 -1)
-    {
-      \underline { "Hauptwerk C-g''" "Positiv/Schwellwerk C-g''" "Rückpositiv  C-g''" "Pedal C-f'" "Spielhilfe"}
-      "Octave 8'" "Gedackt 8'" "" "Prinzipalbass 16'" "POS/HW"
-      "Octave 4'" "Praesant 4'" "" "Octavbass 8'"  ""
-      "Doublette 2'" "Octave 2'" "" "Choralbass 4'" ""
-     "Mixtur 4fach 2'" "Cymbal 4'" "" "Posaune 16'" ""
-     "" "" "" "Zinke 8'" ""
-    }
+  #'(-1 -1 -1 -1 -1)
+  {
+    \underline { "Hauptwerk C-g''" "Positiv/Schwellwerk C-g''" "Rückpositiv  C-g''" "Pedal C-f'" "Spielhilfe"}
+    "Octave 8'" "Gedackt 8'" "" "Prinzipalbass 16'" "POS/HW"
+    "Octave 4'" "Praesant 4'" "" "Octavbass 8'"  ""
+    "Doublette 2'" "Octave 2'" "" "Choralbass 4'" ""
+    "Mixtur 4fach 2'" "Cymbal 4'" "" "Posaune 16'" ""
+    "" "" "" "Zinke 8'" ""
+  }
 }
 %\wordwrap-string {\bold Registrierung: " \bold "I. HW " "(C - g''): Octave 8', Octave 4', Doublette 2', Mixtur 4fach 2', II. RP (C - g''): Gedackt 8', Praestant 4', Octave 2', Cymbal 4fach 1', III. SW (C - g''): , PD (C - f'): Prinzipalbass 16', Octavbass 8', Choralbass 4', Posaune 16', Zinke 8', Spielhilfe: POS/HW"}
+
+% midi count in
+% midi count in
+clave = {\new DrumStaff <<
+  \drummode {\settings
+   % bd4 sn4
+    << {
+%      \repeat unfold 16 cl16
+%      \repeat unfold 16 hh16
+        hh16 cl hh cl hh cl hh cl hh cl hh cl hh cl hh cl hh cl
+    } \\ {
+      bd4. sn4. bd4.
+    } >>
+  }
+>>
+}
+
 \score {
-%  \markuplist \box {
-  \sheetmusic
+  {
+    %  \markuplist \box {
+%    \clave
+    \sheetmusic
+  }
   \layout {}
 }
 
 \score {
-  \sheetmusic
+  {
+    \clave
+    \sheetmusic
+  }
   \midi {}
 }
