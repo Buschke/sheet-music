@@ -15,7 +15,7 @@
 settings = {
   \key d \major
   \time 3/2
-  \tempo 2 = 50
+  \tempo 2 = 40
 }
 
 s_in = \relative c' {\settings
@@ -158,12 +158,26 @@ sheetmusic = {
      "" "Cymbal 4fach 1'" "" "" ""
     }
 }
-\score {
+
+% midi count in
+clave = {
+        \new DrumStaff {
+            \drummode {\settings
+                sn2 cl
+            }
+        }
+}
+
+\score {{
+%  \clave
   \sheetmusic
+        }
   \layout {}
 }
 
-\score {
+\score {{
+  \clave
   \sheetmusic
+        }
   \midi {}
 }
