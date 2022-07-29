@@ -278,6 +278,42 @@ sheetmusicmidi = {
   >>
 }
 
+\markup \bold \underline "Registrierung Intonation"
+\markup fwnum =
+  \markup \override #'(font-features . ("ss01" "-kern"))
+    \number \etc
+
+\markuplist \tiny {
+  \override #'(padding . 2)
+  \table
+    #'(-1 -1 -1 -1 -1)
+    {
+      \underline { "Hauptwerk C-g''" "Positiv/Schwellwerk C-g''" "Rückpositiv  C-g''" "Pedal C-f'" "Spielhilfe"}
+      "" "Gedackt 8'" "" "Subbass 16'" ""
+      "" "Prästant 4'" "" "Choralbass 4'"  ""
+      "" "Octave 2'" "" "Zinke 8'" ""
+     "" "Cymbal 4fach 1'" "" "" ""
+    }
+}
+
+\markup \bold \underline "Registrierung Choral"
+\markup fwnum =
+  \markup \override #'(font-features . ("ss01" "-kern"))
+    \number \etc
+
+\markuplist \tiny {
+  \override #'(padding . 2)
+  \table
+    #'(-1 -1 -1 -1 -1)
+    {
+      \underline { "Hauptwerk C-g''" "Positiv/Schwellwerk C-g''" "Rückpositiv  C-g''" "Pedal C-f'" "Spielhilfe"}
+      "" "Gedackt 8'" "" "Subbass 16'" ""
+      "" "Prästant 4'" "" "Choralbass 4'"  ""
+      "" "Octave 2'" "" "Zinke 8'" ""
+     "" "Cymbal 4fach 1'" "" "" ""
+    }
+}
+
 \score {
   \sheetmusic
   \layout {}

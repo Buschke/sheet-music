@@ -106,7 +106,7 @@ pd_in = \relative c {
 sheetmusic = {
   <<
 %    \new PianoStaff  \with {midiInstrument = "church organ"} {
-     \new PianoStaff  \with {midiInstrument = "piano"} {
+     \new PianoStaff  \with {midiInstrument = "acoustic grand"} {
      <<
         \new Staff = "up" {
           \clef treble
@@ -133,7 +133,7 @@ sheetmusic = {
       >>
     }
 %    \new Staff = "ped"  \with {midiInstrument = "church organ"} {
-    \new Staff = "ped"  \with {midiInstrument = "trumpet4"} {
+    \new Staff = "ped"  \with {midiInstrument = "trumpet"} {
       \clef bass
       {
         \pd_in
@@ -175,13 +175,13 @@ clave = {\new DrumStaff <<
 >>
 }
 
-claveOld = {
-        \new DrumStaff {
-            \drummode {\settings
-                sn2 cl
-            }
-        }
-}
+%claveOld = {
+ %       \new DrumStaff {
+%            \drummode {\settings
+%                sn2 cl
+%            }
+%        }
+%}
 
 \score {{
 %  \clave
