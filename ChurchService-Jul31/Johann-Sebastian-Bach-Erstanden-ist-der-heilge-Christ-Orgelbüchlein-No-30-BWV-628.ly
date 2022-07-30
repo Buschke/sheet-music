@@ -5,7 +5,7 @@
   arranger = "Arrangement: Sven Buschke"
   title = "Erstanden ist der heilge Christ"
   subtitle = "Orgelbüchlein No. 30"
-  instrument = "Organ 2 man, 1 ped"
+  instrument = "2 man, 1 ped"
 
   opus = "BWV 628"
   tagline = ""
@@ -162,12 +162,26 @@ sheetmusic = {
 }
 
 % midi count in
+%clave = {\new DrumStaff <<
+ % \drummode {\settings
+   % bd4 sn4
+ %   << {
+%      \repeat unfold 16 cl16
+%      \repeat unfold 16 hh16
+ %   } \\ {
+  %    bd4 sn4 bd4 sn4
+ %   } >>
+ % }
+%>>
+%}
+
 clave = {\new DrumStaff <<
   \drummode {\settings
    % bd4 sn4
     << {
 %      \repeat unfold 16 cl16
-      \repeat unfold 16 hh16
+%      \repeat unfold 16 hh16
+        hh8 cl hh cl hh cl hh cl
     } \\ {
       bd4 sn4 bd4 sn4
     } >>
@@ -184,7 +198,7 @@ clave = {\new DrumStaff <<
 %}
 
 \score {{
-%  \clave
+ % \clave
   \sheetmusic
         }
   \layout {}

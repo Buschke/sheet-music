@@ -5,7 +5,7 @@
   arranger = "Arrangement: Sven Buschke"
   title = "Komm, Gott Schöpfer, heiliger Geist"
   subtitle = "Orgelbüchlein No. 33"
-  instrument = "Organ 2 man, 1 ped"
+  instrument = "2 man, 1 ped"
 
   opus = "BWV 631"
   tagline = ""
@@ -15,7 +15,7 @@
 settings = {
   \key c \major
   \time 12/8
-  \tempo 2 = 40
+  \tempo 4. = 30
 }
 
 s_in = \relative c' {
@@ -76,7 +76,8 @@ pd_in = \relative c {
 
 sheetmusic = {
   <<
-    \new PianoStaff \with {midiInstrument = "church organ"} {
+%    \new PianoStaff \with {midiInstrument = "church organ"} {
+    \new PianoStaff \with {midiInstrument = "acoustic grand"} {
       <<
         \new Staff = "up" {
           \clef treble
@@ -102,6 +103,7 @@ sheetmusic = {
         }
       >>
     }
+%    \new Staff = "ped" \with {midiInstrument = "church organ"} {
     \new Staff = "ped" \with {midiInstrument = "church organ"} {
       \clef bass
       {
