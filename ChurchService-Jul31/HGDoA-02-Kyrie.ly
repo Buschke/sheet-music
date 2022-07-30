@@ -10,21 +10,21 @@
   tagline = ""
 }
 
-global = {
+pieceSettings = {
   \key bes \major
   \time 4/4
-  \tempo 2 = 65
+  \tempo 4 = 65
 }
 
 stemOff = \hide Staff.Stem
 stemOn  = \undo \stemOff
 
-preambleUp = {\clef treble \global}
-preambleDown = {\clef bass \global}
-preamblePedal={\clef bass \global}
+preambleUp = {\clef treble \pieceSettings}
+preambleDown = {\clef bass \pieceSettings}
+preamblePedal={\clef bass \pieceSettings}
 
 melody = \relative a' {\stemOff
-  \global
+  \pieceSettings
   \cadenzaOn
   s4 s s2 s1 \bar "||"
 f4 c f g a g a f f \bar "|"
@@ -55,7 +55,7 @@ Herr, er -- barm dich ü -- ber uns. _
 }
 
 soprano = \relative c' {
-  \global
+  \pieceSettings
   \cadenzaOn
   f4 c f2( f1)
   f4 c f\( g\) a\( g\) a f2
@@ -67,7 +67,7 @@ soprano = \relative c' {
 }
 
 alto = \relative c' {
-  \global
+  \pieceSettings
   \cadenzaOn
   s4 s4 s2 s1
   f1.( f2.)
@@ -79,7 +79,7 @@ alto = \relative c' {
 }
 
 tenor = \relative c {
-  \global
+  \pieceSettings
   \cadenzaOn
   s4 s2 s4 c'1
   c1.( c2.)
@@ -89,7 +89,7 @@ tenor = \relative c {
 }
 
 bass = \relative c {
-  \global
+  \pieceSettings
   \cadenzaOn
   r4 c'2 bes4 f1
   f1.( f2.)
@@ -102,7 +102,7 @@ bass = \relative c {
 }
 
 pedal = \relative c {
-  \global
+  \pieceSettings
   \cadenzaOn
   s4 s4 s2 s1
   \repeat unfold 9 {s4}
@@ -113,29 +113,11 @@ pedal = \relative c {
     \repeat unfold 6 {s4}
 }
 
-\markup \bold \underline "Registrierung"
-\markup fwnum =
-  \markup \override #'(font-features . ("ss01" "-kern"))
-    \number \etc
-
-\markuplist \tiny {
-  \override #'(padding . 2)
-  \table
-    #'(-1 -1 -1 -1 -1)
-    {
-      \underline { "Hauptwerk C-g''" "Positiv/Schwellwerk C-g''" "Rückpositiv  C-g''" "Pedal C-f'" "Spielhilfe"}
-      "" "Gedackt 8'" "" "Subbass 16'" ""
-      "" "Prästant 4'" "" "Choralbass 4'"  ""
-      "" "Octave 2'" "" "Zinke 8'" ""
-     "" "Cymbal 4fach 1'" "" "" ""
-    }
-}
-
-\score {
+sheetmusic = {
   <<
     \new Voice = "m" << \preambleUp \melody >>
     \new Lyrics \lyricsto "m" \strophe
-              \new StaffGroup = "org" \with { instrumentName = "org" shortInstrumentName = "or" } <<
+          \new StaffGroup = "org" \with { instrumentName = "org" shortInstrumentName = "or" } <<
     \new PianoStaff <<
       %\set PianoStaff.instrumentName = #"Piano  "
       \new Staff = "upper" \relative c' {
@@ -161,11 +143,94 @@ pedal = \relative c {
           \new Voice = "p" { \pedal }
         >>
       }
-    >>
+
+          >>
   >>
+}
+
+sheetmusicmidi = {
+  <<
+    \new Voice = "m" << \preambleUp \melody >>
+    \new Lyrics \lyricsto "m" \strophe
+          \new StaffGroup = "org" \with { instrumentName = "org" shortInstrumentName = "or" } <<
+    \new PianoStaff <<
+      %\set PianoStaff.instrumentName = #"Piano  "
+      \new Staff = "upper" \relative c' {
+        \preambleUp
+        <<
+          \new Voice = "s" { \voiceOne \soprano }
+          \\
+          \new Voice ="a" { \voiceTwo \alto }
+        >>
+      }
+      \new Staff = "lower" \relative c {
+        \preambleDown
+        <<
+          \new Voice = "t" { \voiceThree \tenor }
+          \\
+          \new Voice = "b" { \voiceFour \bass }
+        >>
+      }
+    >>
+      \new Staff = "lower" \relative c {
+        \preambleDown
+        <<
+          \new Voice = "p" { \pedal }
+        >>
+      }
+
+          >>
+  >>
+}
+
+clave = {\new DrumStaff <<
+  \drummode {\pieceSettings
+   % bd4 sn4
+    << {
+%      \repeat unfold 16 cl16
+%      \repeat unfold 16 hh16
+        hh4 cl hh cl 
+    } \\ {
+      bd4 sn4 bd4 sn4
+    } >>
+  }
+>>
+}
+
+\markup \bold \underline "Registrierung"
+\markup fwnum =
+  \markup \override #'(font-features . ("ss01" "-kern"))
+    \number \etc
+
+\markuplist \tiny {
+  \override #'(padding . 2)
+  \table
+    #'(-1 -1 -1 -1 -1)
+    {
+      \underline { "Hauptwerk C-g''" "Positiv/Schwellwerk C-g''" "Rückpositiv  C-g''" "Pedal C-f'" "Spielhilfe"}
+      "" "Gedackt 8'" "" "Subbass 16'" ""
+      "" "Prästant 4'" "" "Choralbass 4'"  ""
+      "" "Octave 2'" "" "Zinke 8'" ""
+     "" "Cymbal 4fach 1'" "" "" ""
+    }
+}
+
+
+\score {
+  {
+    %\clave
+    \sheetmusic
+  }
   \layout {     \context {
       \Staff
       \remove "Time_signature_engraver"
     }}
+}
+
+\score {
+  {
+    \clave
+    \sheetmusicmidi
+  }
   \midi {}
 }
