@@ -1,0 +1,324 @@
+\version "2.22.2"
+
+\header {
+  composer = "Böhmische Brüder 1544"
+  arranger = "Arrangement: Sven Buschke"
+  title = "Die beste Zeit im Jahr"
+  subtitle = "Evangelisches Gesangbuch"
+  instrument = "2 man 1 ped"
+  opus = "EG 319"
+  tagline = ""
+  copyright = "Arrangement:  Sven Buschke © 25. Juli 2022"
+}
+
+pieceSettings = {
+  \key d \major
+  \time 4/4
+  \tempo 4. = 120
+}
+
+melody_intonation = \relative c' {\pieceSettings
+  r1^"Intonation"
+  r r r r r r
+  %\bar "|.|"
+%  \bar "||"
+}
+
+melody = \relative c' {
+  \partial 8*5
+  d8^"Choral" fis4 a
+  fis8 e d4 e e
+  d r8 a' b a b cis
+  d4 cis b b
+  a r a a8 a
+  fis4 e fis g
+  e r8 e fis e fis g
+  a4 d,8 e fis g e4 d4.
+}
+
+% STROPHE 2
+
+stropheEins = \lyricmode {
+  \set fontSize = #-.5
+  \set stanza = "1. "
+Die bes -- te Zeit _ im Jahr ist mein, da sin -- _ gen _ al -- le Vö -- ge -- lein, Him -- mel und Er -- den ist der voll, viel gut _ Ge -- _ sang, der _ lau -- _ tet wohl.
+
+
+
+
+}
+
+stropheZwei = \lyricmode {
+  \set fontSize = #-.5
+  \set stanza = "2. "
+Vo -- ran die lie -- _ be Nach -- ti -- gall macht al -- _ les _ fröh -- lich ü -- ber -- all mit ih -- _ rem lieb -- lichen Ge -- sang, des muss sie _ ha -- _ ben im -- _ mer _  Dank.
+
+
+}
+
+stropheDrei = \lyricmode {
+  \set fontSize = #-.5
+  \set stanza = "3. "
+Viel -- mehr der lie -- _ be Her -- re Gott, der sie _ al -- _ so ge -- schaf -- fen hat, zu sein die rech -- te Sän -- ger -- in, der Mu -- _ si --  _ ka ein  _ Mei -- _ ste -- rin.
+
+
+}
+
+stropheVier = \lyricmode {
+  \set fontSize = #-.5
+  \set stanza = "4. "
+Dem singt und springt _ sie Tag und Nacht, seins Lo -- _ bes _ sie nichts mü -- de macht: den ehrt und lobt auch mein Ge -- sang und sagt _ ihm _ ei -- nen _ e -- _ wgen Dank.
+}
+
+stropheFuenf = \lyricmode {
+  \set fontSize = #-.5
+  \set stanza = "5. "
+
+}
+
+stropheSechs = \lyricmode {
+  \set fontSize = #-.5
+  \set stanza = "6. "
+
+}
+
+stropheSieben = \lyricmode {
+  \set fontSize = #-.5
+  \set stanza = "7. "
+}
+
+stropheAcht = \lyricmode {
+  \set fontSize = #-.5
+  \set stanza = "8. "
+
+}
+
+sopran_intonation = \relative c' {\pieceSettings
+  r1^"Intonation"
+ r4 r8 d g fis g a
+ fis e d4 e e
+ d r8 a' b a b cis
+ d4 cis b b
+ a d,8 e fis g e4
+ d1
+%  \bar "||"
+}
+
+sopran = \relative c' {
+  \partial 8*5
+  d8^"Choral" fis4 a
+  fis8 e d4 e e
+  d r8 a' b a b cis
+  d4 cis b b
+  a r a a8 a
+  fis4 e fis g
+  e r8 e fis e fis g
+  a4 d,8 e fis g e4 d4.
+}
+
+alt_intonation = \relative c' {\pieceSettings
+  r1 r r r r r r
+}
+
+alt = \relative c' {
+  \partial 8*5
+  a8 d4 e
+  d a b cis
+  d r8 fis g2
+  a a4 gis
+  e r fis e
+  d2. d4
+  cis r8 cis d2
+  e4 b d cis
+  d4.
+}
+
+tenor_intonation = \relative c {\pieceSettings
+  r1 r r r r r r
+}
+
+tenor = \relative c {
+  \partial 8*5
+  fis8 b4 a
+  a fis e a
+  fis r8 d' d4. e8
+  fis4 e e2
+  cis4 r d a
+  a2. b4
+  a r8 a a4. b8
+  cis4 fis, b e, fis4.
+}
+
+bass_intonation = \relative c {\pieceSettings
+  r4 r8 d e d e fis
+  g4 fis e e
+  d r8 fis g fis g a
+  b4 a g g
+  fis r8 e fis e fis g
+  a4 r d, e
+  fis8 g e4 d2
+}
+
+bass = \relative c {
+  \partial 8*5
+  d8 b4 cis
+  d2 g,4 a
+  d r8 d g2
+  d e
+  a,4 r d cis
+  d2. g,4
+  a r8 a d4. b8
+  a4 b g a
+  d4.
+}
+
+pedal_intonation = \relative c {\pieceSettings
+  r1 r r r r r r
+}
+
+pedal = \relative c {
+  \partial 8*5
+  r8 r4 r
+  r1 r r r r r r r4.
+}
+
+sheetmusic = {
+  <<
+    \new Staff = "melody" \with { instrumentName = "Melodie" shortInstrumentName = "mel" }  {\clef treble
+                                                                                                   \new Voice = "mel" \with { midiInstrument = "voice oohs" } {
+        \melody_intonation
+        \repeat volta 5 { \melody }
+      }
+    }
+      \new Lyrics \lyricsto "mel" \stropheEins
+      \new Lyrics \lyricsto "mel" \stropheZwei
+      \new Lyrics \lyricsto "mel" \stropheDrei
+      \new Lyrics \lyricsto "mel" \stropheVier
+      \new Lyrics \lyricsto "mel" \stropheFuenf
+      \new Lyrics \lyricsto "mel" \stropheSechs
+    \new StaffGroup = "org" \with { instrumentName = "org" shortInstrumentName = "org" } <<
+            \new PianoStaff = "man"  \with { instrumentName = "man" shortInstrumentName = "man" } <<
+        \new Staff = "up" {\clef treble
+                           <<
+                             \new Voice = "s" \with { midiInstrument = "acoustic grand" } { \voiceOne { \sopran_intonation \repeat volta 5 {\sopran} } }
+                             \new Voice = "a" \with { midiInstrument = "acoustic grand"} { \voiceTwo { \alt_intonation \repeat volta 5 { \alt } } }
+                           >>
+        }
+        \new Staff = "down" {\clef bass
+        <<
+          \new Voice = "t" \with { midiInstrument = "acoustic grand" } { \voiceThree { \tenor_intonation \repeat volta 5 { \tenor } } }
+          \new Voice = "b" \with { midiInstrument = "acoustic grand" } { \voiceFour { \bass_intonation \repeat volta 5 { \bass } } }
+        >>
+        }
+      >>
+      \new Staff = "ped" \with { instrumentName = "ped" shortInstrumentName = "ped"} {\clef bass
+                                                                                      \new Voice = "p" \with { midiInstrument = "acoustic grand" } { \pedal_intonation \repeat volta 5 { \pedal }}
+      }
+    >>
+
+  >>
+}
+
+sheetmusicmidi = {
+  <<
+    \new Staff = "melody" \with { instrumentName = "Melodie" shortInstrumentName = "mel" }  {\clef treble
+                                                                                                   \new Voice = "mel" \with { midiInstrument = "voice oohs" } {
+        \melody_intonation
+        \repeat unfold 5 { \melody }
+      }
+    }
+      \new Lyrics \lyricsto "mel" \stropheEins
+      \new Lyrics \lyricsto "mel" \stropheZwei
+      \new Lyrics \lyricsto "mel" \stropheDrei
+      \new Lyrics \lyricsto "mel" \stropheVier
+      \new Lyrics \lyricsto "mel" \stropheFuenf
+      \new Lyrics \lyricsto "mel" \stropheSechs
+    \new StaffGroup = "org" \with { instrumentName = "org" shortInstrumentName = "org" } <<
+            \new PianoStaff = "man"  \with { instrumentName = "man" shortInstrumentName = "man" } <<
+        \new Staff = "up" {\clef treble
+                           <<
+                             \new Voice = "s" \with { midiInstrument = "acoustic grand" } { \voiceOne { \sopran_intonation \repeat unfold 5 {\sopran} } }
+                             \new Voice = "a" \with { midiInstrument = "acoustic grand"} { \voiceTwo { \alt_intonation \repeat unfold 5 { \alt } } }
+                           >>
+        }
+        \new Staff = "down" {\clef bass
+        <<
+          \new Voice = "t" \with { midiInstrument = "acoustic grand" } { \voiceThree { \tenor_intonation \repeat unfold 5 { \tenor } } }
+          \new Voice = "b" \with { midiInstrument = "acoustic grand" } { \voiceFour { \bass_intonation \repeat unfold 5 { \bass } } }
+        >>
+        }
+      >>
+      \new Staff = "ped" \with { instrumentName = "ped" shortInstrumentName = "ped"} {\clef bass
+                                                                                      \new Voice = "p" \with { midiInstrument = "acoustic grand" } { \pedal_intonation \repeat unfold 5 { \pedal }}
+      }
+    >>
+
+  >>
+}
+
+% midi count in
+clave = {\new DrumStaff <<
+  \drummode {\pieceSettings
+   % bd4 sn4
+    << {
+%      \repeat unfold 16 cl16
+%      \repeat unfold 16 hh16
+        hh8 cl hh cl hh cl hh cl
+    } \\ {
+      bd4 sn4 bd4 sn4
+    } >>
+  }
+>>
+}
+
+\markup \bold \underline "Registrierung Intonation"
+\markup fwnum =
+  \markup \override #'(font-features . ("ss01" "-kern"))
+    \number \etc
+
+\markuplist \tiny {
+  \override #'(padding . 2)
+  \table
+    #'(-1 -1 -1 -1 -1)
+    {
+      \underline { "Hauptwerk C-g''" "Positiv/Schwellwerk C-g''" "Rückpositiv  C-g''" "Pedal C-f'" "Spielhilfe"}
+      "" "Gedackt 8'" "" "Subbass 16'" ""
+      "" "Prästant 4'" "" "Choralbass 4'"  ""
+      "" "Octave 2'" "" "Zinke 8'" ""
+     "" "Cymbal 4fach 1'" "" "" ""
+    }
+}
+
+\markup \bold \underline "Registrierung Choral"
+\markup fwnum =
+  \markup \override #'(font-features . ("ss01" "-kern"))
+    \number \etc
+
+\markuplist \tiny {
+  \override #'(padding . 2)
+  \table
+    #'(-1 -1 -1 -1 -1)
+    {
+      \underline { "Hauptwerk C-g''" "Positiv/Schwellwerk C-g''" "Rückpositiv  C-g''" "Pedal C-f'" "Spielhilfe"}
+      "" "Gedackt 8'" "" "Subbass 16'" ""
+      "" "Prästant 4'" "" "Choralbass 4'"  ""
+      "" "Octave 2'" "" "Zinke 8'" ""
+     "" "Cymbal 4fach 1'" "" "" ""
+    }
+}
+
+\score {
+  {
+    %\clave
+    \sheetmusic
+  }
+  \layout {}
+}
+
+\score {
+  {
+    \clave
+    \sheetmusicmidi
+  }
+  \midi {}
+}

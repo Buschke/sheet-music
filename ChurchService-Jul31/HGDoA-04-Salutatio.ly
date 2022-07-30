@@ -55,9 +55,9 @@ f f f d f
 alto = \relative c' {
   \global
   \cadenzaOn
-  f4 f f d f
- \bar "|"
-f f f d f
+d2 f4 d c
+  \bar "|"
+d2 f4 d c
 
   \bar "||"
 }
@@ -65,30 +65,27 @@ f f f d f
 tenor = \relative c {
   \global
   \cadenzaOn
-  f4 f f d f
+  b'2 f4 d a'
  \bar "|"
-f f f d f
-
+  b2 f4 d a'
   \bar "||"
 }
 
 bass = \relative c {
   \global
   \cadenzaOn
-  f4 f f d f
+  bes2.( bes4)  f4
  \bar "|"
-f f f d f
-
+  bes2.( bes4)  f4
   \bar "||"
 }
 
 pedal = \relative c {
   \global
   \cadenzaOn
-  f4 f f d f
+  \repeat unfold 5 { s4 }
  \bar "|"
-f f f d f
-
+  \repeat unfold 5 { s4 }
   \bar "||"
 }
 
@@ -97,6 +94,7 @@ f f f d f
   <<
     \new Voice = "m" << \preambleUp \melody >>
     \new Lyrics \lyricsto "m" \strophe
+    \new StaffGroup = "org" \with { instrumentName = "org" shortInstrumentName = "or" } <<
     \new PianoStaff <<
       %\set PianoStaff.instrumentName = #"Piano  "
       \new Staff = "upper" \relative c' {
@@ -115,6 +113,7 @@ f f f d f
           \new Voice = "b" { \voiceFour \bass }
         >>
       }
+    >>
       \new Staff = "lower" \relative c {
         \preambleDown
         <<

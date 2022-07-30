@@ -20,17 +20,17 @@
 \usepackage{graphicx}
 
  
-\title{Hauptgottesdienst ohne Abendmahl - 31. Juli 2022 - 7. Sonntag nach Trinitatis\\(G: Gemeinde mit Orgelbegleitung, Ch: Chor, K: Kantor, L: Liturg)}
-\author{Michael Neumann und Sven Buschke}
+\title{Hauptgottesdienst ohne Abendmahl \\ 31. Juli 2022 - 10:30 Uhr \\ 7. Sonntag nach Trinitatis}
+\author{Michael Neumann (Pfarrer) und Sven Buschke (Orgel)}
 \date{31. Juli 2022, vers. 1.5}
 
 \begin{document}
 
 \maketitle
 
+Legende: G: Gemeinde mit Orgelbegleitung, Ch: Chor, K: Kantor, L: Liturg
 \section{Glockengeläut}
-\section{**Musik zum Eingang**}
-BWV 628 (Erstanden ist der heilge Christ)
+\section{Musik zum Eingang - BWV 628 (Erstanden ist der heilge Christ)}
 \newpage
 \lilypondfile{Johann-Sebastian-Bach-Erstanden-ist-der-heilge-Christ-Orgelbüchlein-No-30-BWV-628.ly}
 %\par BWV 662 (Allein Gott in der Höh sei Ehr) ALT
@@ -38,30 +38,38 @@ BWV 628 (Erstanden ist der heilge Christ)
 %\lilypondfile{Johann-Sebastian-Bach-Orgelvorspiel-Allein-Gott-in-der-Hoeh.ly}
 
 \section{Begrüßung}
-\section{**Eingangslied** (1) EG 502: Nun preiset alle}
+\section{Eingangslied (1): EG 502 - Nun preiset alle}
 \newpage
 %\lilypondfile{EG320-Nun-lasst-uns-Gott-dem-Herren.ly}
-\lilypondfile{Matthäus-Apelles-von-Löwenstern-1644-Nun-preiset-alle-Evangelisches-Gesangbuch-EG-502.ly}
+\lilypondfile{EG502-Matthäus-Apelles-von-Löwenstern-1644-Nun-preiset-alle-Evangelisches-Gesangbuch-EG-502.ly}
 
-\section{Psalm}
-|Psalm 107
-\section{**Gloria Patri / Ehr sei dem Vater** (entfällt Judica bis Karfreitag, **4 Töne Intonation**, G + Orgel):} K: “Ehr sei dem Vater und dem Sohn”, G: “und dem Heiligen Geist, wie es war im Anfang, jetzt und immerdar und von Ewigkeit zu Ewigkeit, Amen”
+\section{Psalm / Seligpreisungen: EG 759 - Matthäus 5 - Welcher der Geist Gottes treibt, die sind Gottes Kinder}
+Selig sind, die da geistlich arm sind, denn ihrer ist das Himmelreich.\\
+Selig sind, die da Leid tragen, denn sie sollen getröstet werden.\\
+Selig sind die Sanftmütigen, denn sie werden das Erdreich besitzen.\\
+Selig sind, die da hungern und dürsten nach Gerechtigkeit, denn sie sollen satt werden.\\
+Selig sind die Barmherzigen, denn sie werden Barmherzigkeit erlangen.\\
+Selig sind, die da reinen Herzens sind, denn sie werden Gott schauen.\\
+Selig sind, die Frieden stiften, denn sie werden Gottes Kinder heißen.\\
+Selig sind, die um der Gerechtigkeit willen verfolgt werden, denn ihrer ist das Himmelreich.
+
+\section{Gloria Patri / Ehr sei dem Vater (entfällt Judica bis Karfreitag, 4 Töne Intonation, G + Orgel):} K: “Ehr sei dem Vater und dem Sohn”, G: “und dem Heiligen Geist, wie es war im Anfang, jetzt und immerdar und von Ewigkeit zu Ewigkeit, Amen”
 \newpage
 \lilypondfile{HGDoA-01-Gloria-Patri-Ehr-sei-dem-Vater.ly}
 
-\section{(**Orgelzwischenspiel**, bis die Konfirmanden sitzen)}
-\section{**Kyrie**}
+\section{(Orgelzwischenspiel, bis die Konfirmanden sitzen, entfällt hier)}
+\section{Kyrie}
 K / Ch: “Kyrie eleison”, G: “Herr, erbarme dich, Christe eleison, Christe, erbarme dich, Kyrie eleison, Herr, erbarm dich über uns.”
 \newpage
 \lilypondfile{HGDoA-02-Kyrie.ly}
 
-\section{**Gloria**}
+\section{Gloria}
 (entällt 2.-4. Advent und Invocavit-Karfreitag außer Gründonnerstag)\par 
 “K: Ehre sei Gott in der Höhe!”, G: “Allein Gott in der Höh sei Ehr und Dank für seine Gnade, darum, dass nun und nimmermehr uns rühren kann kein Schade. Ein Wohlgefalln Gott an uns hat, nun ist groß Fried ohn Unterlass, all Fehd hat nun ein Ende.”
 \newpage
 \lilypondfile{HGDoA-03-Gloria.ly}
 
-\section{**Salutatio*}*
+\section{Salutatio}
 L: “Der Herr sei mit euch!”, G: “Und mit deinem Geist”
 \newpage
 \lilypondfile{HGDoA-04-Salutatio.ly}
@@ -72,54 +80,49 @@ L: “Der Herr sei mit euch!”, G: “Und mit deinem Geist”
 \lilypondfile{HGDoA-05-Kollektengebet.ly}
 
 \section{Epistellesung}
-\section{**Halleluja** (entfällt Septuagesimae-Karfreitag)}
+\section{Halleluja (entfällt Septuagesimae-Karfreitag)}
 G: “Halleluja, Halleluja, Halleluja.” (ggf. mit Halleluja-Vers)
 \newpage
 \lilypondfile{HGDoA-06-Halleluja-mit-Halleluja-Vers.ly}
 
-\section{**Hauptlied** (2)}
-EG 274 Der Herr ist mein getreuer Hirt
+\section{Hauptlied (2): EG 274 Der Herr ist mein getreuer Hirt}
 \newpage
 %\lilypondfile{EG418-Brich-dem-Hungrigen-dein-Brot.ly}
-\lilypondfile{Johann-Walter-1524-Der-Herr-ist-mein-getreuer-Hirt-Evangelisches-Gesangbuch-EG-274.ly}
+\lilypondfile{EG274-Johann-Walter-1524-Der-Herr-ist-mein-getreuer-Hirt-Evangelisches-Gesangbuch-EG-274.ly}
 
-\section{**Ankündigung Evangeliums**}
-“Ehre sei dir Herre!”
+\section{Ankündigung Evangeliums: "Ehre sei dir Herre!"}
 \newpage
 \lilypondfile{HGDoA-07-Ankündigung-Evangelium.ly}
 
-\section{**Evangeliumslesung**}
-G: “Lob sei dir, o Christe!”
+\section{Evangeliumslesung: "Lob sei dir, o Christe!"}
 \newpage
 \lilypondfile{HGDoA-08-Evangeliumslesung.ly}
 
 \section{Credo}
 \newpage
 
-\section{**Lied** (3)}: 320, 1 - 6 Nun lasst uns Gott, dem Herrenl
+\section{Lied (3): 320, 1 - 6 Nun lasst uns Gott, dem Herren}
 \newpage
 %\lilypondfile{EG147-Wachet-auf-ruft-uns-die-Stimme.ly}
-\lilypondfile{Bei-Nikolaus-Selnecker-1587-Nun-lasst-uns-Gott-dem-Herren-Evangelisches-Gesangbuch-EG-320.ly}
+\lilypondfile{EG320-1_6-Bei-Nikolaus-Selnecker-1587-Nun-lasst-uns-Gott-dem-Herren-Evangelisches-Gesangbuch-Strophen-1-6-EG-320-1-6.ly}
 
 \section{Predigt}
-\section{**Lied / Musik** (4)}: 418 Brich dem Hungrigen dein Brot
+\section{Lied / Musik (4): 418 Brich dem Hungrigen dein Brot}
 \newpage
 %\lilypondfile{EG362-Ein-feste-Burg-ist-unser-Gott.ly}
-\lilypondfile{Gerhard-Häussler-1953-Brich-dem-Hungrigen-dein-Brot-Evangelisches-Gesangbuch-EG-418.ly}
+\lilypondfile{EG418-Gerhard-Häussler-1953-Brich-dem-Hungrigen-dein-Brot-Evangelisches-Gesangbuch-EG-418.ly}
 
 \section{Abkündigungen}
-\section{**Lied** (5)}
-319 Die beste Zeit im Jahr
+\section{Lied (5): 319 Die beste Zeit im Jahr}
 \newpage
 %\lilypondfile{EG362-Ein-feste-Burg-ist-unser-Gott.ly}
-\lilypondfile{Böhmische-Brüder-1544-Die-beste-Zeit-im-Jahr-Evangelisches-Gesangbuch-EG-319.ly}
+\lilypondfile{EG319-Böhmische-Brüder-1544-Die-beste-Zeit-im-Jahr-Evangelisches-Gesangbuch-EG-319.ly}
 
 \section{Fürbittengebet}
-\section{**Schlussstrophe Lied** (5)}
-320, 7 - 8 Wir bitten deine Güte
+\section{Schlussstrophe Lied (5): 320, 7 - 8 Nun lasst uns Gott, dem Herren}
 \newpage
 %\lilypondfile{EG362-Ein-feste-Burg-ist-unser-Gott.ly}
-\lilypondfile{Bei-Nikolaus-Selnecker-1587-Wir-bitten-deine-Güte-Evangelisches-Gesangbuch-EG-320.ly}
+\lilypondfile{EG320-7_8-Bei-Nikolaus-Selnecker-1587-Nun-lasst-uns-Gott-dem-Herren-Evangelisches-Gesangbuch-Strophen-7-8-EG-320-7-8.ly}
 
 \section{Vaterunser}
 Bitte vor dem Gottesdienst mit dem Küster klären, wer beim Vaterunser läutet. Beim Vaterunser ist der Knopf für die Glocke bei den markierten Worten zu drücken. Die Glocke schlägt mit ca. einer Sekunde Verzögerung. Der Knopf befindet sich links am Spieltisch, auf Höhe der Setzerschlösser unterhalb der Konsole.\par
@@ -138,18 +141,15 @@ Vaterunser\\
         Denn Dein ist das Reich und die Kraft und die Herrlichkeit in Ewigkeit.\\
         Amen. 
 
-\section{Sendungswort, **Ton angeben**}
-L: “Gehet hin im Frieden des Herrn!” G: “Gott sei Lob und Dank!”
+\section{Sendungswort, Ton angeben: L: “Gehet hin im Frieden des Herrn!” G: “Gott sei Lob und Dank!”}
 \newpage
 \lilypondfile{HGDoA-12-Sendungswort.ly}
 
-\section{**Segen**}
-G: “Amen, Amen, Amen.”
+\section{Segen: G: “Amen, Amen, Amen.”}
 \newpage
 \lilypondfile{HGDoA-13-Segen.ly}
 
-\section{**Orgelnachspiel**}
-BWV 631 (Komm, Gott Schöpfer, Heiliger Geist)
+\section{Orgelnachspiel: BWV 631 (Komm, Gott Schöpfer, Heiliger Geist)}
 \newpage
 \lilypondfile{Johann-Sebastian-Bach-Komm-Gott-Schöpfer-heiliger-Geist-Orgelbüchlein-No-33-BWV-631.ly}
 %BWV 657
