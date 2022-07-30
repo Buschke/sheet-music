@@ -256,7 +256,7 @@ sheetmusic = {
     \new Staff = "melody" \with { instrumentName = "Melodie" shortInstrumentName = "ml" }  {\clef treble
       \new Voice = "mel" \with { midiInstrument = "voice oohs" } {
         \melody_intonation
-        \repeat volta 2 { \melody_one}
+        \repeat volta 5 { \melody_one}
         \alternative {{ \melody_altone } { \melody_alttwo }}
         \melody_two
       }
@@ -271,12 +271,12 @@ sheetmusic = {
         \new Staff = "up" {\clef treble
                            <<
                              \new Voice = "s" \with { midiInstrument = "acoustic grand" } { \voiceOne { \sopran_intonation
-        \repeat volta 2 { \sopran_one}
+        \repeat volta 5 { \sopran_one}
         \alternative {{ \sopran_altone } { \sopran_alttwo }}
         \sopran_two
                              } }
                              \new Voice = "a" \with { midiInstrument = "acoustic grand"} { \voiceTwo { \alt_intonation
-                                                                                                              \repeat volta 2 { \alt_one}
+                                                                                                              \repeat volta 5 { \alt_one}
         \alternative {{ \alt_altone } { \alt_alttwo }}
         \alt_two
                              } }
@@ -285,12 +285,12 @@ sheetmusic = {
         \new Staff = "down" {\clef bass
         <<
           \new Voice = "t" \with { midiInstrument = "acoustic grand" } { \voiceThree { \tenor_intonation
-                                                                                               \repeat volta 2 { \tenor_one}
+                                                                                               \repeat volta 5 { \tenor_one}
         \alternative {{ \tenor_altone } { \tenor_alttwo }}
         \tenor_two
           } }
           \new Voice = "b" \with { midiInstrument = "acoustic grand" } { \voiceFour { \bass_intonation
-                                                                                              \repeat volta 2 { \bass_one}
+                                                                                              \repeat volta 5 { \bass_one}
         \alternative {{ \bass_altone } { \bass_alttwo }}
         \bass_two
           } }
@@ -299,7 +299,7 @@ sheetmusic = {
       >>
       \new Staff = "ped" \with { instrumentName = "ped" shortInstrumentName = "pd"} {\clef bass
                                                                                       \new Voice = "p" \with { midiInstrument = "acoustic grand" } { \pedal_intonation
-        \repeat volta 2 { \pedal_one}
+        \repeat volta 5 { \pedal_one}
         \alternative {{ \pedal_altone } { \pedal_alttwo }}
         \pedal_two
                                                                                      }
@@ -309,7 +309,60 @@ sheetmusic = {
 }
 
 sheetmusicmidi = {
-
+  <<
+    \new Staff = "melody" \with { instrumentName = "Melodie" shortInstrumentName = "ml" }  {\clef treble
+      \new Voice = "mel" \with { midiInstrument = "voice oohs" } {
+        \melody_intonation
+        \repeat unfold 5 { \melody_one}
+        \alternative {{ \melody_altone } { \melody_alttwo }}
+        \melody_two
+      }
+                                                                  }
+      \new Lyrics \lyricsto "mel" \stropheEins
+      \new Lyrics \lyricsto "mel" \stropheZwei
+      \new Lyrics \lyricsto "mel" \stropheDrei
+      \new Lyrics \lyricsto "mel" \stropheVier
+      \new Lyrics \lyricsto "mel" \stropheFuenf
+      \new StaffGroup = "org" \with { instrumentName = "org" shortInstrumentName = "or" } <<
+      \new PianoStaff = "man"  \with { instrumentName = "man" shortInstrumentName = "mn" } <<
+        \new Staff = "up" {\clef treble
+                           <<
+                             \new Voice = "s" \with { midiInstrument = "acoustic grand" } { \voiceOne { \sopran_intonation
+        \repeat unfold 5 { \sopran_one}
+        \alternative {{ \sopran_altone } { \sopran_alttwo }}
+        \sopran_two
+                             } }
+                             \new Voice = "a" \with { midiInstrument = "acoustic grand"} { \voiceTwo { \alt_intonation
+                                                                                                              \repeat unfold 5 { \alt_one}
+        \alternative {{ \alt_altone } { \alt_alttwo }}
+        \alt_two
+                             } }
+                           >>
+        }
+        \new Staff = "down" {\clef bass
+        <<
+          \new Voice = "t" \with { midiInstrument = "acoustic grand" } { \voiceThree { \tenor_intonation
+                                                                                               \repeat unfold 5 { \tenor_one}
+        \alternative {{ \tenor_altone } { \tenor_alttwo }}
+        \tenor_two
+          } }
+          \new Voice = "b" \with { midiInstrument = "acoustic grand" } { \voiceFour { \bass_intonation
+                                                                                              \repeat unfold 5 { \bass_one}
+        \alternative {{ \bass_altone } { \bass_alttwo }}
+        \bass_two
+          } }
+        >>
+        }
+      >>
+      \new Staff = "ped" \with { instrumentName = "ped" shortInstrumentName = "pd"} {\clef bass
+                                                                                      \new Voice = "p" \with { midiInstrument = "acoustic grand" } { \pedal_intonation
+        \repeat unfold 5 { \pedal_one}
+        \alternative {{ \pedal_altone } { \pedal_alttwo }}
+        \pedal_two
+                                                                                     }
+      }
+  >>
+  >>
 }
 
 % midi count in

@@ -10,21 +10,21 @@
   tagline = ""
 }
 
-global = {
+pieceSettings = {
   \key c \major
   \time 4/4
-  \tempo 2 = 65
+  \tempo 2 = 40
 }
 
 stemOff = \hide Staff.Stem
 stemOn  = \undo \stemOff
 
-preambleUp = {\clef treble \global}
-preambleDown = {\clef bass \global}
-preamblePedal={\clef bass \global}
+preambleUp = {\clef treble \pieceSettings}
+preambleDown = {\clef bass \pieceSettings}
+preamblePedal={\clef bass \pieceSettings}
 
 melody = \relative a' {\stemOff
-  \global
+  \pieceSettings
   \cadenzaOn
   f4 f f d f
  \bar "|"
@@ -43,7 +43,7 @@ Und mit dei -- nem Geist
 }
 
 soprano = \relative c' {
-  \global
+  \pieceSettings
   \cadenzaOn
   f4 f f d f
  \bar "|"
@@ -53,7 +53,7 @@ f f f d f
 }
 
 alto = \relative c' {
-  \global
+  \pieceSettings
   \cadenzaOn
 d2 f4 d c
   \bar "|"
@@ -63,16 +63,16 @@ d2 f4 d c
 }
 
 tenor = \relative c {
-  \global
+  \pieceSettings
   \cadenzaOn
-  b'2 f4 d a'
+  bes'2 f4 d a'
  \bar "|"
-  b2 f4 d a'
+  bes2 f4 d a'
   \bar "||"
 }
 
 bass = \relative c {
-  \global
+  \pieceSettings
   \cadenzaOn
   bes2.( bes4)  f4
  \bar "|"
@@ -81,7 +81,7 @@ bass = \relative c {
 }
 
 pedal = \relative c {
-  \global
+  \pieceSettings
   \cadenzaOn
   \repeat unfold 5 { s4 }
  \bar "|"
@@ -90,11 +90,11 @@ pedal = \relative c {
 }
 
 
-\score {
+sheetmusic = {
   <<
     \new Voice = "m" << \preambleUp \melody >>
     \new Lyrics \lyricsto "m" \strophe
-    \new StaffGroup = "org" \with { instrumentName = "org" shortInstrumentName = "or" } <<
+          \new StaffGroup = "org" \with { instrumentName = "org" shortInstrumentName = "or" } <<
     \new PianoStaff <<
       %\set PianoStaff.instrumentName = #"Piano  "
       \new Staff = "upper" \relative c' {
@@ -120,11 +120,94 @@ pedal = \relative c {
           \new Voice = "p" { \pedal }
         >>
       }
-    >>
+
+          >>
   >>
+}
+
+sheetmusicmidi = {
+  <<
+    \new Voice = "m" << \preambleUp \melody >>
+    \new Lyrics \lyricsto "m" \strophe
+          \new StaffGroup = "org" \with { instrumentName = "org" shortInstrumentName = "or" } <<
+    \new PianoStaff <<
+      %\set PianoStaff.instrumentName = #"Piano  "
+      \new Staff = "upper" \relative c' {
+        \preambleUp
+        <<
+          \new Voice = "s" { \voiceOne \soprano }
+          \\
+          \new Voice ="a" { \voiceTwo \alto }
+        >>
+      }
+      \new Staff = "lower" \relative c {
+        \preambleDown
+        <<
+          \new Voice = "t" { \voiceThree \tenor }
+          \\
+          \new Voice = "b" { \voiceFour \bass }
+        >>
+      }
+    >>
+      \new Staff = "lower" \relative c {
+        \preambleDown
+        <<
+          \new Voice = "p" { \pedal }
+        >>
+      }
+
+          >>
+  >>
+}
+
+clave = {\new DrumStaff <<
+  \drummode {\pieceSettings
+   % bd4 sn4
+    << {
+%      \repeat unfold 16 cl16
+%      \repeat unfold 16 hh16
+        hh4 cl hh cl 
+    } \\ {
+      bd4 sn4 bd4 sn4
+    } >>
+  }
+>>
+}
+
+\markup \bold \underline "Registrierung"
+\markup fwnum =
+  \markup \override #'(font-features . ("ss01" "-kern"))
+    \number \etc
+
+\markuplist \tiny {
+  \override #'(padding . 2)
+  \table
+    #'(-1 -1 -1 -1 -1)
+    {
+      \underline { "Hauptwerk C-g''" "Positiv/Schwellwerk C-g''" "Rückpositiv  C-g''" "Pedal C-f'" "Spielhilfe"}
+      "" "Gedackt 8'" "" "Subbass 16'" ""
+      "" "Prästant 4'" "" "Choralbass 4'"  ""
+      "" "Octave 2'" "" "Zinke 8'" ""
+     "" "Cymbal 4fach 1'" "" "" ""
+    }
+}
+
+
+\score {
+  {
+    %\clave
+    \sheetmusic
+  }
   \layout {     \context {
       \Staff
       \remove "Time_signature_engraver"
     }}
+}
+
+\score {
+  {
+    \clave
+    \sheetmusicmidi
+  }
   \midi {}
 }

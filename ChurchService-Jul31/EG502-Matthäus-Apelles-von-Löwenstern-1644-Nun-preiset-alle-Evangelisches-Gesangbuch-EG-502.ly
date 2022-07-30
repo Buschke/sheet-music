@@ -14,7 +14,7 @@
 pieceSettings = {
   \key f \major
   \time 6/4
-  \tempo 4. = 96
+  \tempo 4 = 80
 }
 
 melody_intonation = \relative c' {\pieceSettings
@@ -285,6 +285,20 @@ sheetmusicmidi = {
   >>
 }
 
+clave = {\new DrumStaff <<
+  \drummode {\pieceSettings
+   % bd4 sn4
+    << {
+%      \repeat unfold 16 cl16
+%      \repeat unfold 16 hh16
+        hh8 cl hh cl hh cl
+    } \\ {
+      bd4 sn4 sn4
+    } >>
+  }
+>>
+}
+
 \markup \bold \underline "Registrierung Intonation"
 \markup fwnum =
   \markup \override #'(font-features . ("ss01" "-kern"))
@@ -322,11 +336,17 @@ sheetmusicmidi = {
 }
 
 \score {
-  \sheetmusic
+  {
+    %\clave
+    \sheetmusic
+  }
   \layout {}
 }
 
 \score {
-  \sheetmusicmidi
+  {
+    \clave
+    \sheetmusicmidi
+  }
   \midi {}
 }
