@@ -14,7 +14,7 @@
 pieceSettings = {
   \key f \major
   \time 6/4
-  \tempo 4 = 70
+  \tempo 4 = 80
 }
 
 melody_intonation = \relative c' {\pieceSettings
@@ -137,19 +137,17 @@ alto_intonation = \relative c' {\pieceSettings
 
 alto = \relative c' {
  \partial 2.
- c4 d e
- f c2 \breathe e4. e8 f4
- f4. f8 f4 \breathe f f f
- e e2 \breathe f4. f8 d4
- e4. e8 e4 \breathe
- e e fis
- g2 f4 es2 g4
- fis2 g4 \breathe f4. f8 f4
- f4. f8 f4 d2 f4
- e2 f4 \breathe f4. f8 f4
- f4. f8 f4 d e f
- f e2 c2.
-
+ c4 c e
+ f d2 e4. e8 f4
+ f4. f8 f4 f f f
+ f e2 f4. f8 g4
+ g4. f8 e4 e e f
+ f2 f4 f2 f4
+ f2 e4 f4. f8 f4
+ f4. f8 f4 f2 f4
+ e2 c4 f4. e8 f4
+ f4. f8 f4 f2 f4
+ e2. c
 }
 
 tenor_intonation = \relative c {\pieceSettings
@@ -161,18 +159,16 @@ tenor_intonation = \relative c {\pieceSettings
 tenor = \relative c {
  \partial 2.
  a'4 a c
- c a2 c4. c8 c4
- d4. d8 d4 c c f,
- g c2 c4. c8 g4
- g4. g8 g4
- c c c
- d2 bes4 g2 d'4
- d2 bes4 bes4. c8 d4
- a4. d8 c4 bes2 c4
- c2 a4 bes4. c8 d4
- a4. d8 c4
- bes2 c4
- c2 g4 a2.
+ c bes2 c4. c8 c4
+ d4. d8 d4 c c d
+ c c2 c4. c8 d4
+ e4. a,8 g4 c c c
+ d2 bes4 a2 d4
+ c2 c4 bes4. a8 d4
+ a4. d8 c4 d2 c4
+ c2 a4 bes4. g8 d4
+ c4. d8 c4 d2 c4
+ g2. a
 }
 
 bass_intonation = \relative c {\pieceSettings
@@ -187,19 +183,16 @@ bass_intonation = \relative c {\pieceSettings
 
 bass = \relative c {
  \partial 2.
- f4 d c
- f f,2 c'4. c8 f4
- bes,4. bes8  bes4
- f' f d
- c c2 f,4. f8 g4
- c4. c8 c4
- c c a
- g2 bes4 c2 g4
- d'2 g,4 bes4. bes8 bes4
- f'4. f8 f4 g2 f4
- c2 f4 bes,4. bes8 bes4
- f'4. f8 f4 g2 f4
- c2. f,2.
+ f4 f c
+ f bes,2 c4. c8 f4
+ bes,4. bes8 bes4
+ f f bes
+ f c2 f4. f8 g4
+ c4. f8 c4 c c f
+ bes2 bes4
+ f2 bes4
+ f2 c4 bes4. f8 bes4
+ f4. bes8 f4 bes2 f4 c2 f4 bes4. c8 bes4 f4. bes8 f4 bes2 f4 c2. f2.
 }
 
 pedal_intonation = \relative c {\pieceSettings
@@ -210,8 +203,16 @@ pedal_intonation = \relative c {\pieceSettings
 
 pedal = \relative c {
  \partial 2.
- r2.
- r1. r r r r r r r r r
+ f4 f c
+ f bes,2 c4. c8 f4
+ bes,4. bes8 bes4
+ f f bes
+ f c2 f4. f8 g4
+ c4. f8 c4 c c f
+ bes2 bes4
+ f2 bes4
+ f2 c4 bes4. f8 bes4
+ f4. bes8 f4 bes2 f4 c2 f4 bes4. c8 bes4 f4. bes8 f4 bes2 f4 c2. f2.
 }
 
 sheetmusic = {

@@ -14,7 +14,7 @@
 pieceSettings = {
   \key d \major
   \time 4/4
-  \tempo 4. = 120
+  \tempo 4 = 60
 }
 
 melody_intonation = \relative c' {\pieceSettings
