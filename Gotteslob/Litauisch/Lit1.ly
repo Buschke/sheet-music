@@ -86,5 +86,4 @@ pedal = \relative c {
   \midi { }
 }
 
-\score {
 
