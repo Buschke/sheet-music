@@ -43,7 +43,7 @@ right = \relative c'' {
   \global
   % Music follows here.
   \partial 16
-  f,16\f c'4-4 \appoggiatura b8-2 c4 \appoggiatura {b16-2 c d} c4-1 bf'-5 bf, r8\p a-3 \tuplet 3/2 {g-2( bf g) } \tuplet 3/2 { f-1( a_4 f-2)} \tuplet 3/2 {e-1( g e)} bf''4\f( bf,) r8\p a-3
+  f,16\f c'4-4 \appoggiatura b8-2 c4 \appoggiatura {b16-2 c d} c4-1 bf'-5 bf, r8\p a-3 \tuplet 3/2 {g-2( bf g) } \tuplet 3/2 { f-1( a-4 f-2)} \tuplet 3/2 {e-1( g e)} bf''4\f( bf,) r8\p a-3
   \tuplet 3/2 { g( bf g)} \tuplet 3/2 {f( a f)} \tuplet 3/2 {e( g e) }
   f4\f \tuplet 3/2 {r8 e\p_1( f} \tuplet 3/2 {g f-1) <g bf>-2-4}
   \tuplet 3/2 { <f a>\f-3-5( <e g>-1-4 <ds fs>-2-3) }
@@ -51,14 +51,14 @@ right = \relative c'' {
   \tuplet 3/2 {a g-1) <a c>-3-5} \tuplet 3/2 { <g bf>\f-2-4( <f a>-1-3 <e g>-1-2)} <f a>4
   <<
     {
-      c''-5~ \tuplet 3/2 {c8 cs_4( d)}
+      c''-5~ \omit TupletNumber \omit TupletBracket \tuplet 3/2 {c8 cs-4( d)}
       \tuplet 3/2 {c-4( bf) a-4}
       \tuplet 3/2 {a-5( g) f}
       \tuplet 3/2 {e-2 r\p r} s4 s
       \appoggiatura {fs32-3( g a} g2.\f->^"4-5") \appoggiatura {a32_5( g fs} g2.\f->-4-5) \appoggiatura {fs32-3( g a} g2.\f->)
     }
     \\ {
-      ef4 d2. \tuplet 3/2 { c8 g'-4\p g } \tuplet 3/2 { g g g} \tuplet 3/2 {g g g}
+      ef4 d2. \omit TupletNumber \omit TupletBracket \tuplet 3/2 { c8 g'-4\p g } \tuplet 3/2 { g g g} \tuplet 3/2 {g g g}
       \tuplet 3/2 {r b,( d)} \tuplet 3/2 {c\p( b d)} \tuplet 3/2 {c( b d)}
       \tuplet 3/2 {r c( e)} \tuplet 3/2 {d\p( c e)} \tuplet 3/2 {d( c e-2)}
       \tuplet 3/2 {r d( f)} \tuplet 3/2 {e\p( d f)} \tuplet 3/2 {e( d f)}
@@ -81,7 +81,7 @@ right = \relative c'' {
   \tuplet 3/2 {r <f a-4>( <e g>)} \tuplet 3/2 {r <e g-4>( <d f>)}
   \tuplet 3/2 {r <d f-4>(<c e>)}
   <<
-    { {\tuplet 3/2 {r e d)} \tuplet 3/2 {r d_5( c)} \tuplet 3/2 {r c_4( b)}} } \\
+   \omit TupletBracket \omit TupletNumber { {\tuplet 3/2 {r e d)} \tuplet 3/2 {r d_5( c)} \tuplet 3/2 {r c_4( b)}} } \\
     { a4-2 g f }
   >>
   \appoggiatura <f' a>8-2-4\f( <e g>4) \appoggiatura <e g-4>8( <d f>4) \appoggiatura <d f-4>8( <c e>4)
@@ -147,8 +147,8 @@ right_two = \relative c' {
   \tuplet 3/2 {c8 c'-5 c}
   \tuplet 3/2 {c\p c c}
   \tuplet 3/2 {c-4 c c}
-  << {\appoggiatura {b32-3 c d}( c2.->-"4-5")} \\ {  \tuplet 3/2 {r8\f e,-1 g-3} \tuplet 3/2 {f\p( e g)} \tuplet 3/2 {f( e g-2)}}>>
-  << {\appoggiatura {d'32-5 c b}( c2.->-"4-5")} \\ {  \tuplet 3/2 {r8\f f, a} \tuplet 3/2 {g\p( f a)} \tuplet 3/2 {g( f a-2)}}>>
+  << {\appoggiatura {b32-3 c d}( c2.->-"4-5")} \\ {  \omit TupletNumber \omit TupletBracket \tuplet 3/2 {r8\f e,-1 g-3} \tuplet 3/2 {f\p( e g)} \tuplet 3/2 {f( e g-2)}}>>
+  << {\appoggiatura {d'32-5 c b}( c2.->-"4-5")} \\ {  \\\tuplet 3/2 {r8\f f, a} \tuplet 3/2 {g\p( f a)} \tuplet 3/2 {g( f a-2)}}>>
   << {\appoggiatura {b32-3 c d}( c2.->-4)} \\ {  \tuplet 3/2 {r8\f g bf} \tuplet 3/2 {a( g bf)} \tuplet 3/2 {a( g bf)}}>>
   \tuplet 3/2 {r\p (a,-1 bf-2} \tuplet 3/2 {b c-2 cs} \tuplet 3/2 {d-3 e f)}
   g,4\fp( \tuplet 3/2 {g8) d'-5( c)} \tuplet 3/2
@@ -166,7 +166,7 @@ right_two = \relative c' {
   \tuplet 3/2 {r8\p <bf d-4>( <a c>)}
   \tuplet 3/2 {r8\f <a' c-4>( <g bf>)}
   \tuplet 3/2 {r8\p <g bf>( <f a>)}
-  << {\tuplet 3/2 {r a( g)} \tuplet 3/2 {r g( f)} \tuplet 3/2 {r f( e)}} \\ {d4-2( c bf-2)} >>
+  << \omit TupletBracket \omit TupletNumber {\tuplet 3/2 {r a( g)} \tuplet 3/2 {r g( f)} \tuplet 3/2 {r f( e)}} \\ {d4-2( c bf-2)} >>
   <a'-3 c-5>4 <g bf> <f a>
   << {\tuplet 3/2 {r8 a,( g)} \tuplet 3/2 {r g( f)} \tuplet 3/2 {r f-4( e)}} \\ {d4-2( c bf)} >>
   \appoggiatura <bf'-2 d-4>8( <a c>4\f
