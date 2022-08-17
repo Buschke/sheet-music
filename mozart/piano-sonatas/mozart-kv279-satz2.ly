@@ -34,6 +34,8 @@ global = {
   \numericTimeSignature
   \time 3/4
   \tempo "Andante" 4=40
+  \omit TupletNumber
+  \omit TupletBracket
   %\tempo "Andante" 4=69
 }
 
@@ -41,7 +43,7 @@ right = \relative c'' {
   \global
   % Music follows here.
   \partial 16
-  f,16\f c'4-4 \appoggiatura b8-2 c4 \appoggiatura {b16-2 c d} c4-1 bf'-5 bf, r8\p a-3 \tuplet 3/2 {g-2( bf g) } \tuplet 3/2 { f-1( a-4 f-2)} \tuplet 3/2 {e-1( g e)} bf''4\f( bf,) r8\p a-3
+  f,16\f c'4-4 \appoggiatura b8-2 c4 \appoggiatura {b16-2 c d} c4-1 bf'-5 bf, r8\p a-3 \tuplet 3/2 {g-2( bf g) } \tuplet 3/2 { f-1( a_4 f-2)} \tuplet 3/2 {e-1( g e)} bf''4\f( bf,) r8\p a-3
   \tuplet 3/2 { g( bf g)} \tuplet 3/2 {f( a f)} \tuplet 3/2 {e( g e) }
   f4\f \tuplet 3/2 {r8 e\p_1( f} \tuplet 3/2 {g f-1) <g bf>-2-4}
   \tuplet 3/2 { <f a>\f-3-5( <e g>-1-4 <ds fs>-2-3) }
@@ -49,7 +51,7 @@ right = \relative c'' {
   \tuplet 3/2 {a g-1) <a c>-3-5} \tuplet 3/2 { <g bf>\f-2-4( <f a>-1-3 <e g>-1-2)} <f a>4
   <<
     {
-      c''-5( \tuplet 3/2 {c8) cs_4( d)}
+      c''-5~ \tuplet 3/2 {c8 cs_4( d)}
       \tuplet 3/2 {c-4( bf) a-4}
       \tuplet 3/2 {a-5( g) f}
       \tuplet 3/2 {e-2 r\p r} s4 s
@@ -63,7 +65,7 @@ right = \relative c'' {
     }
   >>
   \tuplet 3/2 {r e\p-1( f-2} \tuplet 3/2 {fs g-1 gs-2} \tuplet 3/2 {a-3 b c)}
-  d,4\fp( \tuplet 3/2 {d8) a'-5( g)}
+  d,4\fp~ \tuplet 3/2 {d8\) a'-5( g)}
 
   \tuplet 3/2 {g32\trill\f f g f ( e8 d)}
   %  \tuplet 3/2 {f\trill\f( e d)}
@@ -107,7 +109,7 @@ right_two = \relative c' {
   \partial 16 c'16\f-1
   g'4-! g-!-3 g-!
   fs8.-2( g32 a) g4 r8. g16\p-3
-  g4-2( \tuplet 3/2 {g8) bf-.-4( a-.}
+  g4-2~ \tuplet 3/2 {g8 bf-.-4( a-.}
   \tuplet 3/2 {g-. f-. e-.-4)}
   d4-3( cs) r8. a16\f
   <cs-2 bf'-5>4 <d a'> r8\p f
@@ -128,7 +130,7 @@ right_two = \relative c' {
   \tuplet 3/2 {d\fp( bf g)}
   \tuplet 3/2 {d'\fp( bf g)}
   \tuplet 3/2 {d'\fp( bf g)}
-  f4\f-3( \tuplet 3/2 {f8\f-3)( e\p-2( f}
+  f4\f-3~ \tuplet 3/2 {f8\f-3( e\p-2( f}
   \tuplet 3/2 {g-1 a bf-3)}
   b16\sf-2( c d c)
   \appoggiatura c16-4( bf8\p)( a16 g)
@@ -182,8 +184,8 @@ right_two = \relative c' {
   \tuplet 3/2 {<e-1 g-4> fs\p-2( g}
   \tuplet 3/2 {a g-1) <a-2 c-4>}
   \tuplet 3/2 {<g\f-3 bf-5>( <f-2 a-4> <e-1 gs-3>)}
-  <f-2 a-4>4 <ef'-2 c'-5>(
-  \tuplet 3/2 {<ef c'>8) <d-1 bf'-4>) <c-1 a'-5>(}
+  <f-2 a-4>4 <ef'-2 c'-5>~
+  \tuplet 3/2 {<ef c'>8 <d-1 bf'-4>) <c-1 a'-5>(}
   \tuplet 3/2 {<c a'>\p) <bf-2 g'-5> <a-1 f'-4>(}
   \tuplet 3/2 {<a f'>) <bf-2 g'-5> <g-1 e'-4>}
   \tuplet 3/2 {<a-1 f'-5>\f a'-2( c-4) <>}
@@ -240,7 +242,7 @@ left = \relative c' {
   <c, c'>4 \tuplet 3/2 {r8 c'-3( e-2)}
   <<{\tuplet 3/2 {f( d b)}} \\ {g4}>>
   <c, c'>4 \tuplet 3/2 {r8 e-1(c)} g4
-  c,2( c8) r16
+  c,2~ c8 r16
 }
 
 left_two = \relative c' {
@@ -367,7 +369,7 @@ left_two = \relative c' {
   <f, f'>4
   \tuplet 3/2 {r8 a-2( f-3)}
   <c, c'>4
-  f2( f8) r16
+  f2~ f8 r16
 }
 
 clave = \new DrumStaff {
@@ -379,6 +381,7 @@ clave = \new DrumStaff {
       {bd4 sn sn8.}
     >>
   }
+  \version "2.22.2"
 }
 
 \score {
