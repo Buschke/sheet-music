@@ -33,14 +33,14 @@ global = {
   \key f \major
   \numericTimeSignature
   \time 3/4
-  \partial 16
-  \tempo "Andante" 4=69
+  \tempo "Andante" 4=40
+  %\tempo "Andante" 4=69
 }
 
 right = \relative c'' {
   \global
   % Music follows here.
-
+  \partial 16
   f,16\f c'4-4 \appoggiatura b8-2 c4 \appoggiatura {b16-2 c d} c4-1 bf'-5 bf, r8\p a-3 \tuplet 3/2 {g-2( bf g) } \tuplet 3/2 { f-1( a-4 f-2)} \tuplet 3/2 {e-1( g e)} bf''4\f( bf,) r8\p a-3
   \tuplet 3/2 { g( bf g)} \tuplet 3/2 {f( a f)} \tuplet 3/2 {e( g e) }
   f4\f \tuplet 3/2 {r8 e\p_1( f} \tuplet 3/2 {g f-1) <g bf>-2-4}
@@ -155,55 +155,56 @@ right_two = \relative c' {
 
   \tuplet 3/2 {c-3( cs d)} f,4-1
   f32\trill-2( e f e f e d32 e)
-%  e8.\trill-2( d32 e)
+  %  e8.\trill-2( d32 e)
 
-f4 r r
-\tuplet 3/2 {r8\f <g^1 e'-4>( <af^2 f'-5>)}
-\tuplet 3/2 {r8\p <af f'>( <g e'>)}
-\tuplet 3/2 {r8\f <a^1 cs-3>( <bf d>)}
-\tuplet 3/2 {r8\p <bf d-4>( <a c>)}
-\tuplet 3/2 {r8\f <a' c-4>( <g bf>)}
-\tuplet 3/2 {r8\p <g bf>( <f a>)}
-<< {\tuplet 3/2 {r a( g)} \tuplet 3/2 {r g( f)} \tuplet 3/2 {r f( e)}} \\ {d4-2( c bf-2)} >>
-<a'-3 c-5>4 <g bf> <f a>
-<< {\tuplet 3/2 {r8 a,( g)} \tuplet 3/2 {r g( f)} \tuplet 3/2 {r f-4( e)}} \\ {d4-2( c bf)} >>
-\appoggiatura <bf'-2 d-4>8( <a c>4\f
-\appoggiatura <a c-4>8( <g bf>4
-\appoggiatura <g bf-4>8( <f a>4
-\tuplet 3/2 {a8\p-3( g) r} r4 r
-\tuplet 3/2 {g8\f-2( af) r} r4 r
-\tuplet 3/2 {gs8\p-2( a) r} r4 \tuplet 3/2 {b'8\f-2( c) r}
-r4 \appoggiatura {f,32-1( g a}
-a32\trill-2)(g a g a g a g a g a g f16 g)
-%g4.\trill-2)( f16 g)
+  f4 r r
+  \tuplet 3/2 {r8\f <g^1 e'-4>( <af^2 f'-5>)}
+  \tuplet 3/2 {r8\p <af f'>( <g e'>)}
+  \tuplet 3/2 {r8\f <a^1 cs-3>( <bf d>)}
+  \tuplet 3/2 {r8\p <bf d-4>( <a c>)}
+  \tuplet 3/2 {r8\f <a' c-4>( <g bf>)}
+  \tuplet 3/2 {r8\p <g bf>( <f a>)}
+  << {\tuplet 3/2 {r a( g)} \tuplet 3/2 {r g( f)} \tuplet 3/2 {r f( e)}} \\ {d4-2( c bf-2)} >>
+  <a'-3 c-5>4 <g bf> <f a>
+  << {\tuplet 3/2 {r8 a,( g)} \tuplet 3/2 {r g( f)} \tuplet 3/2 {r f-4( e)}} \\ {d4-2( c bf)} >>
+  \appoggiatura <bf'-2 d-4>8( <a c>4\f
+  \appoggiatura <a c-4>8( <g bf>4
+  \appoggiatura <g bf-4>8( <f a>4
+  \tuplet 3/2 {a8\p-3( g) r} r4 r
+  \tuplet 3/2 {g8\f-2( af) r} r4 r
+  \tuplet 3/2 {gs8\p-2( a) r} r4 \tuplet 3/2 {b'8\f-2( c) r}
+  r4 \appoggiatura {f,32-1( g a}
+  a32\trill-2)(g a g a g a g a g a g f16 g)
+  %g4.\trill-2)( f16 g)
 
-f4 \tuplet 3/2 {r8 e,\p-1( f} \tuplet 3/2 {g f-1) <g-2 bf-4>}
-\tuplet 3/2 {<f-3 a-4>\f( <e-1 g-4> <ds-2 fs-3>)}
-\tuplet 3/2 {<e-1 g-4> fs\p-2( g}
-\tuplet 3/2 {a g-1) <a-2 c-4>}
-\tuplet 3/2 {<g\f-3 bf-5>( <f-2 a-4> <e-1 gs-3>)}
-<f-2 a-4>4 <ef'-2 c'-5>(
-\tuplet 3/2 {<ef c'>8) <d-1 bf'-4>) <c-1 a'-5>(}
-\tuplet 3/2 {<c a'>\p) <bf-2 g'-5> <a-1 f'-4>(}
-\tuplet 3/2 {<a f'>) <bf-2 g'-5> <g-1 e'-4>}
-\tuplet 3/2 {<a-1 f'-5>\f a'-2( c-4) <>}
-d32\trill-2(c d c d c b32 c)
-%c8.\trill-2( b32 c)
+  f4 \tuplet 3/2 {r8 e,\p-1( f} \tuplet 3/2 {g f-1) <g-2 bf-4>}
+  \tuplet 3/2 {<f-3 a-4>\f( <e-1 g-4> <ds-2 fs-3>)}
+  \tuplet 3/2 {<e-1 g-4> fs\p-2( g}
+  \tuplet 3/2 {a g-1) <a-2 c-4>}
+  \tuplet 3/2 {<g\f-3 bf-5>( <f-2 a-4> <e-1 gs-3>)}
+  <f-2 a-4>4 <ef'-2 c'-5>(
+  \tuplet 3/2 {<ef c'>8) <d-1 bf'-4>) <c-1 a'-5>(}
+  \tuplet 3/2 {<c a'>\p) <bf-2 g'-5> <a-1 f'-4>(}
+  \tuplet 3/2 {<a f'>) <bf-2 g'-5> <g-1 e'-4>}
+  \tuplet 3/2 {<a-1 f'-5>\f a'-2( c-4) <>}
+  d32\trill-2(c d c d c b32 c)
+  %c8.\trill-2( b32 c)
 
-\tuplet 3/2 {r8 bf-2( g-1)}
-\tuplet 3/2 {f-3( a c,)}
-d32\trill-2(c d c d c b32 c)
-%c8.\trill-2( b32 c)
+  \tuplet 3/2 {r8 bf-2( g-1)}
+  \tuplet 3/2 {f-3( a c,)}
+  d32\trill-2(c d c d c b32 c)
+  %c8.\trill-2( b32 c)
 
 
-\tuplet 3/2 {r8 bf\p_5( <bf, e g-4>)}
-<bf e g-5>2( <a f'>8) r16
+  \tuplet 3/2 {r8 bf\p_5( <bf, e g-4>)}
+  <bf e g-5>2( <a f'>8) r16
 }
 
 
 left = \relative c' {
   \global
   % Music follows here.
+  \partial 16
   r16
   \tuplet 3/2 { f,8( a c)} \tuplet 3/2 { g( bf c) } \tuplet 3/2 { f,( a c) }
   \tuplet 3/2 { e,( g c) } \tuplet 3/2 { c,( e g) } \tuplet 3/2 { f( a c) }
@@ -369,38 +370,55 @@ left_two = \relative c' {
   f2( f8) r16
 }
 
+clave = \new DrumStaff {
+  \global
+  \drummode {
+    <<
+      {\tuplet 3/2 {hh8 cl cl} \tuplet 3/2 {hh8 cl cl} hh8.}
+      \\
+      {bd4 sn sn8.}
+    >>
+  }
+}
+
 \score {
-  \new PianoStaff \with {
-    instrumentName = "Klavier"
-    shortInstrumentName = "Kl."
-  } <<
-    \new Staff = "right" \with {
-      midiInstrument = "acoustic grand"
-    } {
-      \repeat volta 2 {\right}
-      \repeat volta 2 {\right_two}
-    }
-    \new Staff = "left" \with {
-      midiInstrument = "acoustic grand"
-    } { \clef bass {\repeat volta 2 {\left}} \repeat volta 2 {\left_two} }
-  >>
+  {
+    %    \clave
+    \new PianoStaff \with {
+      instrumentName = "Klavier"
+      shortInstrumentName = "Kl."
+    } <<
+      \new Staff = "right" \with {
+        midiInstrument = "acoustic grand"
+      } {
+        \repeat volta 2 {\right}
+        \repeat volta 2 {\right_two}
+      }
+      \new Staff = "left" \with {
+        midiInstrument = "acoustic grand"
+      } { \clef bass {\repeat volta 2 {\left}} \repeat volta 2 {\left_two} }
+    >>
+  }
   \layout { }
 }
 
 \score {
-  \new PianoStaff \with {
-    instrumentName = "Klavier"
-    shortInstrumentName = "Kl."
-  } <<
-    \new Staff = "right" \with {
-      midiInstrument = "acoustic grand"
-    } {
-      \repeat unfold 2 {\right}
-      \repeat unfold 2 {\right_two}
-    }
-    \new Staff = "left" \with {
-      midiInstrument = "acoustic grand"
-    } { \clef bass {\repeat unfold 2 {\left}} \repeat unfold 2 {\left_two} }
-  >>
+  {
+    \clave
+    \new PianoStaff \with {
+      instrumentName = "Klavier"
+      shortInstrumentName = "Kl."
+    } <<
+      \new Staff = "right" \with {
+        midiInstrument = "acoustic grand"
+      } {
+        \repeat unfold 2 {\right}
+        \repeat unfold 2 {\right_two}
+      }
+      \new Staff = "left" \with {
+        midiInstrument = "acoustic grand"
+      } { \clef bass {\repeat unfold 2 {\left}} \repeat unfold 2 {\left_two} }
+    >>
+  }
   \midi { }
 }
