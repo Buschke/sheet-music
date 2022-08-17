@@ -58,7 +58,7 @@ right = \relative c'' {
       \appoggiatura {fs32-3( g a} g2.\f->^"4-5") \appoggiatura {a32_5( g fs} g2.\f->-4-5) \appoggiatura {fs32-3( g a} g2.\f->)
     }
     \\ {
-      ef4 d2. \omit TupletNumber \omit TupletBracket \tuplet 3/2 { c8 g'-4\p g } \tuplet 3/2 { g g g} \tuplet 3/2 {g g g}
+      ef4 d2. \omit TupletNumber \omit TupletBracket \tuplet 3/2 { c8 g'-4 g } \tuplet 3/2 { g g g} \tuplet 3/2 {g g g}
       \tuplet 3/2 {r b,( d)} \tuplet 3/2 {c\p( b d)} \tuplet 3/2 {c( b d)}
       \tuplet 3/2 {r c( e)} \tuplet 3/2 {d\p( c e)} \tuplet 3/2 {d( c e-2)}
       \tuplet 3/2 {r d( f)} \tuplet 3/2 {e\p( d f)} \tuplet 3/2 {e( d f)}
