@@ -33,7 +33,7 @@ global = {
   \key f \major
   \numericTimeSignature
   \time 3/4
-  \tempo "Andante" 4=40
+  \tempo "Andante" 4=30
   \omit TupletNumber
   \omit TupletBracket
   %\tempo "Andante" 4=69
@@ -168,7 +168,7 @@ right_two = \relative c' {
   \tuplet 3/2 {r8\p <g bf>( <f a>)}
   << \omit TupletBracket \omit TupletNumber {\tuplet 3/2 {r a( g)} \tuplet 3/2 {r g( f)} \tuplet 3/2 {r f( e)}} \\ {d4-2( c bf-2)} >>
   <a'-3 c-5>4 <g bf> <f a>
-  << {\tuplet 3/2 {r8 a,( g)} \tuplet 3/2 {r g( f)} \tuplet 3/2 {r f-4( e)}} \\ {d4-2( c bf)} >>
+  << \omit TupletBracket \omit TupletNumber {\tuplet 3/2 {r8 a,( g)} \tuplet 3/2 {r g( f)} \tuplet 3/2 {r f-4( e)}} \\ {d4-2( c bf)} >>
   \appoggiatura <bf'-2 d-4>8( <a c>4\f
   \appoggiatura <a c-4>8( <g bf>4
   \appoggiatura <g bf-4>8( <f a>4
@@ -185,9 +185,9 @@ right_two = \relative c' {
   \tuplet 3/2 {a g-1) <a-2 c-4>}
   \tuplet 3/2 {<g\f-3 bf-5>( <f-2 a-4> <e-1 gs-3>)}
   <f-2 a-4>4 <ef'-2 c'-5>~
-  \tuplet 3/2 {<ef c'>8 <d-1 bf'-4>) <c-1 a'-5>(}
-  \tuplet 3/2 {<c a'>\p) <bf-2 g'-5> <a-1 f'-4>(}
-  \tuplet 3/2 {<a f'>) <bf-2 g'-5> <g-1 e'-4>}
+  \tuplet 3/2 {<ef c'>8 <d-1 bf'-4>) <c-1 a'-5>~}
+  \tuplet 3/2 {<c a'>\p <bf-2 g'-5> <a-1 f'-4>~}
+  \tuplet 3/2 {<a f'> <bf-2 g'-5> <g-1 e'-4>}
   \tuplet 3/2 {<a-1 f'-5>\f a'-2( c-4) <>}
   d32\trill-2(c d c d c b32 c)
   %c8.\trill-2( b32 c)
