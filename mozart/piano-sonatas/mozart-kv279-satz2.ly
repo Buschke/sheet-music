@@ -381,7 +381,7 @@ clave = \new DrumStaff {
       {bd4 sn sn8.}
     >>
   }
-  \version "2.22.2"
+    \version "2.22.2"
 }
 
 \score {
