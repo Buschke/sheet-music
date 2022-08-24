@@ -80,8 +80,8 @@ sheetmusic = {
   \new StaffGroup = "o" \with { instrumentName = "Or" shortInstrumentName = "O"} <<
     \new PianoStaff = "m" <<
       \new Staff = "sa" \with { midiInstrument = "voice oohs" } {\clef treble << \new Voice { \voiceOne \sopran } \new Voice { \voiceTwo \alt } >>}
-      \new Staff = "tb" \with { midiInstrument = "violin" } {\clef bass << \new Voice { \voiceThree \tenor } \new Voice { \voiceFour \bass } }
-    >>
+      \new Staff = "tb" \with { midiInstrument = "violin" } {\clef bass << \new Voice { \voiceThree \tenor } \new Voice { \voiceFour \bass }
+      >>}
     \new Staff = "p" \with { midiInstrument = "church organ" } {\clef bass \new Voice { \pedal } }
   >>
 }
