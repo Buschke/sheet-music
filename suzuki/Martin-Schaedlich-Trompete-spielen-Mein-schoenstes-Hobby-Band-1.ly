@@ -62,8 +62,7 @@ scoreATrumpetBb = \relative c'' {
   g2 e4
   f e d
   c2 r4
-  \bar "|."
-  \bar "|."   
+  \bar "|."  
 }
 
 scoreATenorVoice = \relative c' {
