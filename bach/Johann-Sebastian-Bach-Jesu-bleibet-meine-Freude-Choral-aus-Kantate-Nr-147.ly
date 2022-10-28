@@ -206,7 +206,7 @@ pedalB = \relative c {
   d2.
   g4 fs e
   b' b e,
-  c b b
+  c d d
 }
 
 pedalC = \relative c {
