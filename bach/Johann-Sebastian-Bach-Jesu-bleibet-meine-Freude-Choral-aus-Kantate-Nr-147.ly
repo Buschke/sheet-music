@@ -260,6 +260,35 @@ pedalE = \relative c {
   \bar "|."
 }
 
+% midi count in
+% clave = {\new DrumStaff <<
+%   \drummode {\global
+%    % bd4 sn4
+%     << {
+% %      \repeat unfold 16 cl16
+% %      \repeat unfold 16 hh16
+%         hh16 cl hh cl hh cl hh cl hh cl hh cl hh cl hh cl hh cl
+%     } \\ {
+%       bd4. sn4. bd4.
+%     } >>
+%   }
+% >>
+% }
+clave = {\new DrumStaff <<
+  \drummode {\global
+   % bd4 sn4
+    << {
+%      \repeat unfold 16 cl16
+%      \repeat unfold 16 hh16
+%         hh8 cl hh cl hh cl
+        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
+    } \\ {
+      bd4 sn4 sn4
+    } >>
+  }
+>>
+}
+
 \score {
   <<
     \new PianoStaff \with {
@@ -278,5 +307,29 @@ pedalE = \relative c {
     } { \clef bass {\pedalA \repeat volta 2 {\pedalB} \alternative {\pedalC \pedalD} \pedalE} }
   >>
   \layout { }
+%  \midi { }
+}
+
+\score {
+  {
+    \clave
+    <<
+      \new PianoStaff \with {
+        instrumentName = "Orgel"
+        shortInstrumentName = "Org."
+      } <<
+        \new Staff = "right" \with {
+          midiInstrument = "church organ"
+        } {\rightA \repeat volta 2 {\rightB} \alternative {\rightC \rightD} \rightE }
+        \new Staff = "left" \with {
+          midiInstrument = "church organ"
+        } { \clef bass {\leftA \repeat volta 2 {\leftB} \alternative {\leftC \leftD} \leftE} }
+      >>
+      \new Staff = "pedal" \with {
+        midiInstrument = "church organ"
+      } { \clef bass {\pedalA \repeat volta 2 {\pedalB} \alternative {\pedalC \pedalD} \pedalE} }
+    >>
+  }
+%  \layout { }
   \midi { }
 }
