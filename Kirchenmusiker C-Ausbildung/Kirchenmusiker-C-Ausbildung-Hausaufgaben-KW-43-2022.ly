@@ -44,7 +44,7 @@ scoreARight = \relative c'' {
   \key c \major
   <e, g>^"Quintlage I-V-I, I-IV-I, I-VII-I"^"Enge Lage"^"C-Dur"<d g><e g> |
   <e g><f a><e g> |
-  <e g><d f><e g> |
+  <e g\(><d f\)\(><e g\)> |
   \breathe
   <g c>^"Oktavlage I-V-I, I-IV-I, I-VII-I" <g h><g c> |
   <g c><a c><g c> |
@@ -52,11 +52,11 @@ scoreARight = \relative c'' {
   \breathe
   <c, e>^"Terzlage I-V-I, I-IV-I, I-VII-I" <h d><c e> |
   <c e><c f><c e> |
-  <c e><h d><c e> |
+  <c e>8<h d><c e><c e><h f'><c e> |
   \break
-  <c g'>^"Quintlage I-V-I, I-IV-I, I-VII-I"^"Weite Lage"<h g'><c g'> |
+  <c g'>4^"Quintlage I-V-I, I-IV-I, I-VII-I"^"Weite Lage"<h g'><c g'> |
   <c g'><c a'><c g'> |
-  <c g'><d f><c g'> |
+  r4 r r |
   \breathe
   <e c'>^"Oktavlage I-V-I, I-IV-I, I-VII-I" <d h'><e c'> |
   <e c'><f c'><e c'> |
@@ -64,15 +64,15 @@ scoreARight = \relative c'' {
   \breathe
   <g, e'>^"Terzlage I-V-I, I-IV-I, I-VII-I" <g d'><g e'> |
   <g e'><f f'><g e'> |
-  <g e'><f d'><g e'> |
+  <g'\( e'>8<f\)\( d'><g\) e'><g e'><f d'><g e'> |
   \break
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % G-Dur
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \key g \major
-  <h' d>^"Quintlage I-V-I, I-IV-I, I-VII-I"^"Enge Lage"^"G-Dur"<a d><h d> |
+  <h, d>4^"Quintlage I-V-I, I-IV-I, I-VII-I"^"Enge Lage"^"G-Dur"<a d><h d> |
   <h d><c e><h d> |
-  <h d><a c><h d> |
+  <h d\(><a c\)\(><h d\)> |
   \breathe
   <d g>^"Oktavlage I-V-I, I-IV-I, I-VII-I" <d fis><d g> |
   <d g><e g><d g> |
@@ -80,39 +80,39 @@ scoreARight = \relative c'' {
   \breathe
   <g, h>^"Terzlage I-V-I, I-IV-I, I-VII-I" <fis a><g h> |
   <g h><g c><g h> |
-  <g h><fis a><g h> |
+  <g h>8<fis a><g h><g h><fis c'><g h> |
   \break
-  <g d'>^"Quintlage I-V-I, I-IV-I, I-VII-I"^"Weite Lage"<fis d'><g d'> |
+  <g' d'>4^"Quintlage I-V-I, I-IV-I, I-VII-I"^"Weite Lage"<fis d'><g d'> |
   <g d'><g e'><g d'> |
-  <g d'><a c><g d'> |
+  r4 r r |
   \breathe
-  <h g'>^"Oktavlage I-V-I, I-IV-I, I-VII-I" <a fis'><h g'> |
+  <h, g'>^"Oktavlage I-V-I, I-IV-I, I-VII-I" <a fis'><h g'> |
   <h g'><c g'><h g'> |
   <h g'><a fis'><h g'> |
   \breathe
-  <d, h'>^"Terzlage I-V-I, I-IV-I, I-VII-I" <d a'><d h'> |
+  <d h'>^"Terzlage I-V-I, I-IV-I, I-VII-I" <d a'><d h'> |
   <d h'><c c'><d h'> |
-  <d h'><c a'><d h'> |
+  <d\( h'>8<c\)\( a'><d\) h'><d h'><c a'><d h'> |
   \break
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % D-Dur
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \key d \major
-  <fis a>^"Quintlage I-V-I, I-IV-I, I-VII-I"^"Enge Lage"^"D-Dur"<e a><fis a> |
+  <fis a>4^"Quintlage I-V-I, I-IV-I, I-VII-I"^"Enge Lage"^"D-Dur"<e a><fis a> |
   <fis a><g h><fis a> |
-  <fis a><e g><fis a> |
+  <fis a\(><e g\)\(><fis a\)> |
   \breathe
-  <a d>^"Oktavlage I-V-I, I-IV-I, I-VII-I" <a cis><a d> |
+  <a, d>^"Oktavlage I-V-I, I-IV-I, I-VII-I" <a cis><a d> |
   <a d><h d><a d> |
   <a d><g cis><a d> |
   \breathe
-  <d, fis>^"Terzlage I-V-I, I-IV-I, I-VII-I" <cis e><d fis> |
+  <d fis>^"Terzlage I-V-I, I-IV-I, I-VII-I" <cis e><d fis> |
   <d fis><d g><d fis> |
-  <d fis><cis e><d fis> |
+  <d fis>8<cis e><d fis><d fis><cis g'><d fis> |
   \break
-  <d a'>^"Quintlage I-V-I, I-IV-I, I-VII-I"^"Weite Lage"<cis a'><d a'> |
+  <d a'>4^"Quintlage I-V-I, I-IV-I, I-VII-I"^"Weite Lage"<cis a'><d a'> |
   <d a'><d h'><d a'> |
-  <d a'><e g><d a'> |
+  r4 r r |
   \breathe
   <fis d'>^"Oktavlage I-V-I, I-IV-I, I-VII-I" <e cis'><fis d'> |
   <fis d'><g d'><fis d'> |
@@ -120,15 +120,15 @@ scoreARight = \relative c'' {
   \breathe
   <a, fis'>^"Terzlage I-V-I, I-IV-I, I-VII-I" <a e'><a fis'> |
   <a fis'><g g'><a fis'> |
-  <a fis'><g e'><a fis'> |
+  <a'\( fis'>8<g\)\( e'><a\) fis'><a fis'><g e'><a fis'> |
   \break
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % A-Dur
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \key a \major
-  <cis' e>^"Quintlage I-V-I, I-IV-I, I-VII-I"^"Enge Lage"^"A-Dur"<h e><cis e> |
+  <cis, e>4^"Quintlage I-V-I, I-IV-I, I-VII-I"^"Enge Lage"^"A-Dur"<h e><cis e> |
   <cis e><d fis><cis e> |
-  <cis e><h d><cis e> |
+  <cis e\(><h d\)\(><cis e\)> |
   \breathe
   <e a>^"Oktavlage I-V-I, I-IV-I, I-VII-I" <e gis><e a> |
   <e a><fis a><e a> |
@@ -136,11 +136,11 @@ scoreARight = \relative c'' {
   \breathe
   <a, cis>^"Terzlage I-V-I, I-IV-I, I-VII-I" <gis h><a cis> |
   <a cis><a d><a cis> |
-  <a cis><gis h><a cis> |
+  <a cis>8<gis h><a cis><a cis><gis d'><a cis> |
   \break
-  <a e'>^"Quintlage I-V-I, I-IV-I, I-VII-I"^"Weite Lage"<gis e'><a e'> |
+  <a e'>4^"Quintlage I-V-I, I-IV-I, I-VII-I"^"Weite Lage"<gis e'><a e'> |
   <a e'><a fis'><a e'> |
-  <a e'><h d><a e'> |
+  r4 r r |
   \breathe
   <cis a'>^"Oktavlage I-V-I, I-IV-I, I-VII-I" <h gis'><cis a'> |
   <cis a'><d a'><cis a'> |
@@ -148,27 +148,27 @@ scoreARight = \relative c'' {
   \breathe
   <e, cis'>^"Terzlage I-V-I, I-IV-I, I-VII-I" <e h'><e cis'> |
   <e cis'><d d'><e cis'> |
-  <e cis'><d h'><e cis'> |
+  <e'\( cis'>8<d\)\( h'><e\) cis'><e cis'><d h'><e cis'> |
   \break
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % E-Dur
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \key e \major
-  <gis h>^"Quintlage I-V-I, I-IV-I, I-VII-I"^"Enge Lage"^"E-Dur"<fis h><gis h> |
+  <gis h>4^"Quintlage I-V-I, I-IV-I, I-VII-I"^"Enge Lage"^"E-Dur"<fis h><gis h> |
   <gis h><a cis><gis h> |
-  <gis h><fis a><gis h> |
+  <gis h\(><fis a\)\(><gis h\)> |
   \breathe
-  <h e>^"Oktavlage I-V-I, I-IV-I, I-VII-I" <h dis><h e> |
+  <h, e>^"Oktavlage I-V-I, I-IV-I, I-VII-I" <h dis><h e> |
   <h e><cis e><h e> |
   <h e><a dis><h e> |
   \breathe
-  <e, gis>^"Terzlage I-V-I, I-IV-I, I-VII-I" <dis fis><e gis> |
+  <e gis>^"Terzlage I-V-I, I-IV-I, I-VII-I" <dis fis><e gis> |
   <e gis><e a><e gis> |
-  <e gis><dis fis><e gis> |
+  <e gis>8<dis fis><e gis><e gis><dis a'><e gis> |
   \break
-  <e h'>^"Quintlage I-V-I, I-IV-I, I-VII-I"^"Weite Lage"<dis h'><e h'> |
+  <e h'>4^"Quintlage I-V-I, I-IV-I, I-VII-I"^"Weite Lage"<dis h'><e h'> |
   <e h'><e cis'><e h'> |
-  <e h'><fis a><e h'> |
+  r4 r r |
   \breathe
   <gis e'>^"Oktavlage I-V-I, I-IV-I, I-VII-I" <fis dis'><gis e'> |
   <gis e'><a e'><gis e'> |
@@ -176,43 +176,43 @@ scoreARight = \relative c'' {
   \breathe
   <h, gis'>^"Terzlage I-V-I, I-IV-I, I-VII-I" <h fis'><h gis'> |
   <h gis'><a a'><h gis'> |
-  <h gis'><a fis'><h gis'> |
+  <h'\( gis'>8<a\)\( fis'><h\) gis'><h gis'><a fis'><h gis'> |
   \break
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % H-Dur
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \key h \major
-  <dis fis>^"Quintlage I-V-I, I-IV-I, I-VII-I"^"Enge Lage"^"H-Dur"<cis fis><dis fis> |
+  <dis fis>4^"Quintlage I-V-I, I-IV-I, I-VII-I"^"Enge Lage"^"H-Dur"<cis fis><dis fis> |
   <dis fis><e gis><dis fis> |
-  <dis fis><cis e><dis fis> |
+  <dis fis\(><cis e\)\(><dis fis\)> |
   \breathe
-  <fis h>^"Oktavlage I-V-I, I-IV-I, I-VII-I" <fis ais><fis h> |
+  <fis, h>^"Oktavlage I-V-I, I-IV-I, I-VII-I" <fis ais><fis h> |
   <fis h><gis h><fis h> |
   <fis h><e ais><fis h> |
   \breathe
   <h, dis>^"Terzlage I-V-I, I-IV-I, I-VII-I" <ais cis><h dis> |
   <h dis><h e><h dis> |
-  <h dis><ais cis><h dis> |
+  <h dis>8<ais cis><h dis><h dis><ais e'><h dis> |
   \break
-  <h fis'>^"Quintlage I-V-I, I-IV-I, I-VII-I"^"Weite Lage"<ais fis'><h fis'> |
+  <h fis'>4^"Quintlage I-V-I, I-IV-I, I-VII-I"^"Weite Lage"<ais fis'><h fis'> |
   <h fis'><h gis'><h fis'> |
-  <h fis'><cis e><h fis'> |
+  r4 r r |
   \breathe
   <dis h'>^"Oktavlage I-V-I, I-IV-I, I-VII-I" <cis ais'><dis h'> |
   <dis h'><e h'><dis h'> |
   <dis h'><cis ais'><dis h'> |
   \breathe
-  <fis dis'>^"Terzlage I-V-I, I-IV-I, I-VII-I" <fis cis'><fis dis'> |
+  <fis, dis'>^"Terzlage I-V-I, I-IV-I, I-VII-I" <fis cis'><fis dis'> |
   <fis dis'><e e'><fis dis'> |
-  <fis dis'><e cis'><fis dis'> |
+  <fis'\( dis'>8<e\)\( cis'><fis\) dis'><fis dis'><e cis'><fis dis'> |
   \break
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % Fis-Dur
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \key fis \major
-  <ais, cis>^"Quintlage I-V-I, I-IV-I, I-VII-I"^"Enge Lage"^"Fis-Dur"<gis cis><ais cis> |
+  <ais, cis>4^"Quintlage I-V-I, I-IV-I, I-VII-I"^"Enge Lage"^"Fis-Dur"<gis cis><ais cis> |
   <ais cis><h dis><ais cis> |
-  <ais cis><gis h><ais cis> |
+  <ais cis\(><gis h\)\(><ais cis\)> |
   \breathe
   <cis fis>^"Oktavlage I-V-I, I-IV-I, I-VII-I" <cis eis><cis fis> |
   <cis fis><dis fis><cis fis> |
@@ -220,11 +220,11 @@ scoreARight = \relative c'' {
   \breathe
   <fis ais>^"Terzlage I-V-I, I-IV-I, I-VII-I" <eis gis><fis ais> |
   <fis ais><fis h><fis ais> |
-  <fis ais><eis gis><fis ais> |
+  <fis ais>8<eis gis><fis ais><fis ais><eis h'><fis ais> |
   \break
-  <fis cis'>^"Quintlage I-V-I, I-IV-I, I-VII-I"^"Weite Lage"<eis cis'><fis cis'> |
+  <fis cis'>4^"Quintlage I-V-I, I-IV-I, I-VII-I"^"Weite Lage"<eis cis'><fis cis'> |
   <fis cis'><fis dis'><fis cis'> |
-  <fis cis'><gis h><fis cis'> |
+  r4 r r |
   \breathe
   <ais fis'>^"Oktavlage I-V-I, I-IV-I, I-VII-I" <gis eis'><ais fis'> |
   <ais fis'><h fis'><ais fis'> |
@@ -232,55 +232,55 @@ scoreARight = \relative c'' {
   \breathe
   <cis, ais'>^"Terzlage I-V-I, I-IV-I, I-VII-I" <cis gis'><cis ais'> |
   <cis ais'><h h'><cis ais'> |
-  <cis ais'><h gis'><cis ais'> |
+  <cis\( ais'>8<h\)\( gis'><cis\) ais'><cis ais'><h gis'><cis ais'> |
   \break
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % Ges-Dur
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \key ges \major
-  <b' des>^"Quintlage I-V-I, I-IV-I, I-VII-I"^"Enge Lage"^"Ges-Dur"<as des><b des> |
+  <b des>4^"Quintlage I-V-I, I-IV-I, I-VII-I"^"Enge Lage"^"Ges-Dur"<as des><b des> |
   <b des><ces es><b des> |
-  <b des><as ces><b des> |
+  <b des\(><as ces\)\(><b des\)> |
   \breathe
-  <des, ges>^"Oktavlage I-V-I, I-IV-I, I-VII-I" <des f><des ges> |
+  <des ges>^"Oktavlage I-V-I, I-IV-I, I-VII-I" <des f><des ges> |
   <des ges><es ges><des ges> |
   <des ges><ces f><des ges> |
   \breathe
-  <ges, b>^"Terzlage I-V-I, I-IV-I, I-VII-I" <f as><ges b> |
+  <ges b>^"Terzlage I-V-I, I-IV-I, I-VII-I" <f as><ges b> |
   <ges b><ges ces><ges b> |
-  <ges b><f as><ges b> |
+  <ges b>8<f as><ges b><ges b><f ces'><ges b> |
   \break
-  <ges des'>^"Quintlage I-V-I, I-IV-I, I-VII-I"^"Weite Lage"<f des'><ges des'> |
+  <ges des'>4^"Quintlage I-V-I, I-IV-I, I-VII-I"^"Weite Lage"<f des'><ges des'> |
   <ges des'><ges es'><ges des'> |
-  <ges des'><as ces><ges des'> |
+  r4 r r |
   \breathe
   <b ges'>^"Oktavlage I-V-I, I-IV-I, I-VII-I" <as f'><b ges'> |
   <b ges'><ces ges'><b ges'> |
   <b ges'><as f'><b ges'> |
   \breathe
-  <des b'>^"Terzlage I-V-I, I-IV-I, I-VII-I" <des as'><des b'> |
+  <des, b'>^"Terzlage I-V-I, I-IV-I, I-VII-I" <des as'><des b'> |
   <des b'><ces ces'><des b'> |
-  <des b'><ces as'><des b'> |
+  <des\( b'>8<ces\)\( as'><des\) b'><des b'><ces as'><des b'> |
   \break
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % Des-Dur
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \key des \major
-  <f as>^"Quintlage I-V-I, I-IV-I, I-VII-I"^"Enge Lage"^"Des-Dur"<es as><f as> |
+  <f as>4^"Quintlage I-V-I, I-IV-I, I-VII-I"^"Enge Lage"^"Des-Dur"<es as><f as> |
   <f as><ges b><f as> |
-  <f as><es ges><f as> |
+  <f as\(><es ges\)\(><f as\)> |
   \breathe
-  <as, des>^"Oktavlage I-V-I, I-IV-I, I-VII-I" <as c><as des> |
+  <as des>^"Oktavlage I-V-I, I-IV-I, I-VII-I" <as c><as des> |
   <as des><b des><as des> |
   <as des><ges c><as des> |
   \breathe
-  <des f>^"Terzlage I-V-I, I-IV-I, I-VII-I" <c es><des f> |
+  <des, f>^"Terzlage I-V-I, I-IV-I, I-VII-I" <c es><des f> |
   <des f><des ges><des f> |
-  <des f><c es><des f> |
+  <des f>8<c es><des f><des f><c ges'><des f> |
   \break
-  <des as'>^"Quintlage I-V-I, I-IV-I, I-VII-I"^"Weite Lage"<c as'><des as'> |
+  <des as'>4^"Quintlage I-V-I, I-IV-I, I-VII-I"^"Weite Lage"<c as'><des as'> |
   <des as'><des b'><des as'> |
-  <des as'><es ges><des as'> |
+  r4 r r |
   \breathe
   <f des'>^"Oktavlage I-V-I, I-IV-I, I-VII-I" <es c'><f des'> |
   <f des'><ges des'><f des'> |
@@ -288,55 +288,55 @@ scoreARight = \relative c'' {
   \breathe
   <as, f'>^"Terzlage I-V-I, I-IV-I, I-VII-I" <as es'><as f'> |
   <as f'><ges ges'><as f'> |
-  <as f'><ges es'><as f'> |
+  <as'\( f'>8<ges\)\( es'><as\) f'><as f'><ges es'><as f'> |
   \break
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % As-Dur
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \key as \major
-  <c' es>^"Quintlage I-V-I, I-IV-I, I-VII-I"^"Enge Lage"^"As-Dur"<b es><c es> |
+  <c, es>4^"Quintlage I-V-I, I-IV-I, I-VII-I"^"Enge Lage"^"As-Dur"<b es><c es> |
   <c es><des f><c es> |
-  <c es><b des><c es> |
+  <c es\(><b des\)\(><c es\)> |
   \breathe
-  <es, as>^"Oktavlage I-V-I, I-IV-I, I-VII-I" <es g><es as> |
+  <es as>^"Oktavlage I-V-I, I-IV-I, I-VII-I" <es g><es as> |
   <es as><f as><es as> |
   <es as><des g><es as> |
   \breathe
   <as, c>^"Terzlage I-V-I, I-IV-I, I-VII-I" <g b><as c> |
   <as c><as des><as c> |
-  <as c><g b><as c> |
+  <as c>8<g b><as c><as c><g des'><as c> |
   \break
-  <as es'>^"Quintlage I-V-I, I-IV-I, I-VII-I"^"Weite Lage"<g es'><as es'> |
+  <as' es'>4^"Quintlage I-V-I, I-IV-I, I-VII-I"^"Weite Lage"<g es'><as es'> |
   <as es'><as f'><as es'> |
-  <as es'><b des><as es'> |
+  r4 r r |
   \breathe
-  <c as'>^"Oktavlage I-V-I, I-IV-I, I-VII-I" <b g'><c as'> |
+  <c, as'>^"Oktavlage I-V-I, I-IV-I, I-VII-I" <b g'><c as'> |
   <c as'><des as'><c as'> |
   <c as'><b g'><c as'> |
   \breathe
   <es c'>^"Terzlage I-V-I, I-IV-I, I-VII-I" <es b'><es c'> |
   <es c'><des des'><es c'> |
-  <es c'><des b'><es c'> |
+  <es\( c'>8<des\)\( b'><es\) c'><es c'><des b'><es c'> |
   \break
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % Es-Dur
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \key es \major
-  <g b>^"Quintlage I-V-I, I-IV-I, I-VII-I"^"Enge Lage"^"Es-Dur"<f b><g b> |
+  <g b>4^"Quintlage I-V-I, I-IV-I, I-VII-I"^"Enge Lage"^"Es-Dur"<f b><g b> |
   <g b><as c><g b> |
-  <g b><f as><g b> |
+  <g b\(><f as\)\(><g b\)> |
   \breathe
-  <b es>^"Oktavlage I-V-I, I-IV-I, I-VII-I" <b d><b es> |
+  <b, es>^"Oktavlage I-V-I, I-IV-I, I-VII-I" <b d><b es> |
   <b es><c es><b es> |
   <b es><as d><b es> |
   \breathe
-  <es, g>^"Terzlage I-V-I, I-IV-I, I-VII-I" <d f><es g> |
+  <es g>^"Terzlage I-V-I, I-IV-I, I-VII-I" <d f><es g> |
   <es g><es as><es g> |
-  <es g><d f><es g> |
+  <es g>8<d f><es g><es g><d as'><es g> |
   \break
-  <es b'>^"Quintlage I-V-I, I-IV-I, I-VII-I"^"Weite Lage"<d b'><es b'> |
+  <es b'>4^"Quintlage I-V-I, I-IV-I, I-VII-I"^"Weite Lage"<d b'><es b'> |
   <es b'><es c'><es b'> |
-  <es b'><f as><es b'> |
+  r4 r r |
   \breathe
   <g es'>^"Oktavlage I-V-I, I-IV-I, I-VII-I" <f d'><g es'> |
   <g es'><as es'><g es'> |
@@ -344,15 +344,15 @@ scoreARight = \relative c'' {
   \breathe
   <b, g'>^"Terzlage I-V-I, I-IV-I, I-VII-I" <b f'><b g'> |
   <b g'><as as'><b g'> |
-  <b g'><as f'><b g'> |
+  <b\( g'>8<as\)\( f'><b\) g'><b g'><as f'><b g'> |
   \break
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % B-Dur
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \key b \major
-  <d f>^"Quintlage I-V-I, I-IV-I, I-VII-I"^"Enge Lage"^"B-Dur"<c f><d f> |
+  <d f>4^"Quintlage I-V-I, I-IV-I, I-VII-I"^"Enge Lage"^"F-Dur"<c f><d f> |
   <d f><es g><d f> |
-  <d f><c es><d f> |
+  <d f\(><c es\)\(><d f\)> |
   \breathe
   <f b>^"Oktavlage I-V-I, I-IV-I, I-VII-I" <f a><f b> |
   <f b><g b><f b> |
@@ -360,39 +360,39 @@ scoreARight = \relative c'' {
   \breathe
   <b, d>^"Terzlage I-V-I, I-IV-I, I-VII-I" <a c><b d> |
   <b d><b es><b d> |
-  <b d><a c><b d> |
+  <b d>8<a c><b d><b d><a es'><b d> |
   \break
-  <b f'>^"Quintlage I-V-I, I-IV-I, I-VII-I"^"Weite Lage"<a f'><b f'> |
+  <b f'>4^"Quintlage I-V-I, I-IV-I, I-VII-I"^"Weite Lage"<a f'><b f'> |
   <b f'><b g'><b f'> |
-  <b f'><c es><b f'> |
+  r4 r r |
   \breathe
   <d b'>^"Oktavlage I-V-I, I-IV-I, I-VII-I" <c a'><d b'> |
   <d b'><es b'><d b'> |
   <d b'><c a'><d b'> |
   \breathe
-  <f d'>^"Terzlage I-V-I, I-IV-I, I-VII-I" <f c'><f d'> |
+  <f, d'>^"Terzlage I-V-I, I-IV-I, I-VII-I" <f c'><f d'> |
   <f d'><es es'><f d'> |
-  <f d'><es c'><f d'> |
+  <f'\( d'>8<es\)\( c'><f\) d'><f d'><es c'><f d'> |
   \break
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % F-Dur
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \key f \major
-  <a c>^"Quintlage I-V-I, I-IV-I, I-VII-I"^"Enge Lage"^"F-Dur"<g c><a c> |
+  <a, c>4^"Quintlage I-V-I, I-IV-I, I-VII-I"^"Enge Lage"^"F-Dur"<g c><a c> |
   <a c><b d><a c> |
-  <a c><g b><a c> |
+  <a c\(><g b\)\(><a c\)> |
   \breathe
   <c f>^"Oktavlage I-V-I, I-IV-I, I-VII-I" <c e><c f> |
   <c f><d f><c f> |
   <c f><b e><c f> |
   \breathe
-  <f, a>^"Terzlage I-V-I, I-IV-I, I-VII-I" <e g><f a> |
+  <f a>^"Terzlage I-V-I, I-IV-I, I-VII-I" <e g><f a> |
   <f a><f b><f a> |
-  <f a><e g><f a> |
+  <f a>8<e g><f a><f a><e b'><f a> |
   \break
-  <f c'>^"Quintlage I-V-I, I-IV-I, I-VII-I"^"Weite Lage"<e c'><f c'> |
+  <f c'>4^"Quintlage I-V-I, I-IV-I, I-VII-I"^"Weite Lage"<e c'><f c'> |
   <f c'><f d'><f c'> |
-  <f c'><g b><f c'> |
+  r4 r r |
   \breathe
   <a f'>^"Oktavlage I-V-I, I-IV-I, I-VII-I" <g e'><a f'> |
   <a f'><b f'><a f'> |
@@ -400,7 +400,7 @@ scoreARight = \relative c'' {
   \breathe
   <c, a'>^"Terzlage I-V-I, I-IV-I, I-VII-I" <c g'><c a'> |
   <c a'><b b'><c a'> |
-  <c a'><b g'><c a'> |
+  <c\( a'>8<b\)\( g'><c\) a'><c a'><b g'><c a'> |
   \bar "|."  
 }
 
@@ -410,10 +410,11 @@ scoreALeft = \relative c' {
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % C-Dur
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \key c \major
   % Enge Lage
-  c h c |
+  c4 h c |
   c c c |
-  c h c |
+  c\( h\)\( c\) |
   \breathe
   e d e |
   e f e |
@@ -421,12 +422,12 @@ scoreALeft = \relative c' {
   \breathe
   g, g g |
   g f g |
-  g f g |
+  g8 f g g f g |
   \break
   % Weite Lage
-  e d e |
+  e4 d e |
   e f e |
-  e r e |
+  r4 r r |
   \breathe
   g g g |
   g a g |
@@ -434,16 +435,16 @@ scoreALeft = \relative c' {
   \breathe
   c, h c  |
   c c c |
-  c h c |
+  c'8\( h\)\( c\) c h c |
   \break
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % G-Dur
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \key g \major
   % Enge Lage
-  g' fis g |
+  g4 fis g |
   g g g |
-  g fis g |
+  g\( fis\)\( g\) |
   \breathe
   h a h |
   h c h |
@@ -451,12 +452,12 @@ scoreALeft = \relative c' {
   \breathe
   d, d d |
   d c d |
-  d c d |
+  d8 c d d c d |
   \break
   % Weite Lage
-  h a h |
+  h4 a h |
   h c h |
-  h r h |
+  r4 r r |
   \breathe
   d d d |
   d e d |
@@ -464,29 +465,29 @@ scoreALeft = \relative c' {
   \breathe
   g, fis g  |
   g g g |
-  g fis g |
+  g'8\( fis\)\( g\) g fis g |
   \break
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % D-Dur
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \key d \major
   % Enge Lage
-  d' cis d |
+  d'4 cis d |
   d d d |
-  d cis d |
+  d\( cis\)\( d\) |
   \breathe
-  fis e fis |
+  fis, e fis |
   fis g fis |
   fis e fis |
   \breathe
-  a, a a |
+  a a a |
   a g a |
-  a g a |
+  a8 g a a g a |
   \break
   % Weite Lage
-  fis' e fis |
+  fis4 e fis |
   fis g fis |
-  fis r fis |
+  r4 r r |
   \breathe
   a a a |
   a h a |
@@ -494,16 +495,16 @@ scoreALeft = \relative c' {
   \breathe
   d, cis d  |
   d d d |
-  d cis d |
+  d'8\( cis\)\( d\) d cis d |
   \break
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % A-Dur
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \key a \major
   % Enge Lage
-  a' gis a |
+  a4 gis a |
   a a a |
-  a gis a |
+  a\( gis\)\( a\) |
   \breathe
   cis h cis |
   cis d cis |
@@ -511,12 +512,12 @@ scoreALeft = \relative c' {
   \breathe
   e, e e |
   e d e |
-  e d e |
+  e8 d e e d e |
   \break
   % Weite Lage
-  cis h cis |
+  cis4 h cis |
   cis d cis |
-  cis r cis |
+  r4 r r |
   \breathe
   e e e |
   e fis e |
@@ -524,76 +525,76 @@ scoreALeft = \relative c' {
   \breathe
   a, gis a  |
   a a a |
-  a gis a |
+  a'8\( gis\)\( a\) a gis a |
   \break
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % E-Dur
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \key e \major
   % Enge Lage
-  e' dis e |
+  e'4 dis e |
   e e e |
-  e dis e |
+  e\( dis\)\( e\) |
   \breathe
-  gis fis gis |
+  gis, fis gis |
   gis a gis |
   gis fis gis |
   \breathe
-  h, h h |
+  h h h |
   h a h |
-  h a h |
+  h8 a h h a h |
   \break
   % Weite Lage
-  gis fis gis |
+  gis4 fis gis |
   gis a gis |
-  gis r gis |
+  r4 r r |
   \breathe
   h h h |
   h cis h |
   h a h |
   \breathe
-  e, dis e |
+  e, dis e  |
   e e e |
-  e dis e |
+  e'8\( dis\)\( e\) e dis e |
   \break
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % H-Dur
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \key h \major
   % Enge Lage
-  h'' ais h |
+  h4 ais h |
   h h h |
-  h ais h |
+  h\( ais\)\( h\) |
   \breathe
-  dis cis dis |
+  dis, cis dis |
   dis e dis |
   dis cis dis |
   \breathe
-  fis, fis fis |
+  fis fis fis |
   fis e fis |
-  fis e fis |
+  fis8 e fis fis e fis |
   \break
   % Weite Lage
-  dis cis dis |
+  dis4 cis dis |
   dis e dis |
-  dis r dis |
+  r4 r r |
   \breathe
   fis fis fis |
   fis gis fis |
   fis e fis |
   \breathe
-  h ais h  |
+  h, ais h  |
   h h h |
-  h ais h |
+  h'8\( ais\)\( h\) h ais h |
   \break
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % Fis-Dur
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \key fis \major
   % Enge Lage
-  fis eis fis |
+  fis4 eis fis |
   fis fis fis |
-  fis eis fis |
+  fis\( eis\)\( fis\) |
   \breathe
   ais gis ais |
   ais h ais |
@@ -601,72 +602,72 @@ scoreALeft = \relative c' {
   \breathe
   cis cis cis |
   cis h cis |
-  cis h cis |
+  cis8 h cis cis h cis |
   \break
   % Weite Lage
-  ais gis ais |
+  ais4 gis ais |
   ais h ais |
-  ais r ais |
+  r4 r r |
   \breathe
   cis cis cis |
   cis dis cis |
   cis h cis |
   \breathe
-  fis, eis fis |
+  fis, eis fis  |
   fis fis fis |
-  fis eis fis |
+  fis8\( eis\)\( fis\) fis eis fis |
   \break
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % Ges-Dur
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \key ges \major
   % Enge Lage
-  ges f ges |
+  ges4 f ges |
   ges ges ges |
-  ges f ges |
+  ges\( f\)\( ges\) |
   \breathe
   b as b |
   b ces b |
   b as b |
   \breathe
-  des, des des |
+  des des des |
   des ces des |
-  des ces des |
+  des8 ces des des ces des |
   \break
   % Weite Lage
-  b as b |
+  b4 as b |
   b ces b |
-  b r b |
+  r4 r r |
   \breathe
   des des des |
   des es des |
   des ces des |
   \breathe
-  ges f ges  |
+  ges, f ges  |
   ges ges ges |
-  ges f ges |
+  ges8\( f\)\( ges\) ges f ges |
   \break
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % Des-Dur
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \key des \major
   % Enge Lage
-  des' c des |
+  des'4 c des |
   des des des |
-  des c des |
+  des\( c\)\( des\) |
   \breathe
-  f, es f |
+  f es f |
   f ges f |
   f es f |
   \breathe
-  as as as |
+  as, as as |
   as ges as |
-  as ges as |
+  as8 ges as as ges as |
   \break
   % Weite Lage
-  f es f |
+  f4 es f |
   f ges f |
-  f r f |
+  r4 r r |
   \breathe
   as as as |
   as b as |
@@ -674,76 +675,76 @@ scoreALeft = \relative c' {
   \breathe
   des, c des  |
   des des des |
-  des c des |
+  des'8\( c\)\( des\) des c des |
   \break
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % As-Dur
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \key as \major
   % Enge Lage
-  as' g as |
+  as4 g as |
   as as as |
-  as g as |
+  as\( g\)\( as\) |
   \breathe
-  c, b c |
+  c b c |
   c des c |
   c b c |
   \breathe
   es, es es |
   es des es |
-  es des es |
+  es8 des es es des es |
   \break
   % Weite Lage
-  c' b c |
+  c4' b c |
   c des c |
-  c r c |
+  r4 r r |
   \breathe
-  es es es |
+  es, es es |
   es f es |
   es des es |
   \breathe
-  as, g as  |
+  as g as  |
   as as as |
-  as g as |
+  as8\( g\)\( as\) as g as |
   \break
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % Es-Dur
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \key es \major
   % Enge Lage
-  es' d es |
+  es'4 d es |
   es es es |
-  es d es |
+  es\( d\)\( es\) |
   \breathe
-  g f g |
+  g, f g |
   g as g |
   g f g |
   \breathe
-  b, b b |
+  b b b |
   b as b |
-  b as b |
+  b8 as b b as b |
   \break
   % Weite Lage
-  g f g |
+  g4 f g |
   g as g |
-  g r g |
+  r4 r r |
   \breathe
   b b b |
   b c b |
   b as b |
   \breathe
-  es d es  |
+  es, d es  |
   es es es |
-  es d es |
+  es8\( d\)\( es\) es d es |
   \break
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % B-Dur
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \key b \major
   % Enge Lage
-  b' a b |
+  b'4 a b |
   b b b |
-  b a b |
+  b\( a\)\( b\) |
   \breathe
   d c d |
   d es d |
@@ -751,50 +752,50 @@ scoreALeft = \relative c' {
   \breathe
   f, f f |
   f es f |
-  f es f |
+  f8 es f f es f |
   \break
   % Weite Lage
-  d c d |
+  d4 c d |
   d es d |
-  d r d |
+  r4 r r |
   \breathe
   f f f |
   f g f |
   f es f |
   \breathe
-  b a b |
+  b, a b  |
   b b b |
-  b a b |
+  b'8\( a\)\( b\) b a b |
   \break
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % F-Dur
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \key f \major
   % Enge Lage
-  f e f |
+  f4 e f |
   f f f |
-  f e f |
+  f\( e\)\( f\) |
   \breathe
   a g a |
   a b a |
   a g a |
   \breathe
-  c, c c |
+  c c c |
   c b c |
-  c b c |
+  c8 b c c b c |
   \break
   % Weite Lage
-  a' g a |
+  a4 g a |
   a b a |
-  a r a |
+  r4 r r |
   \breathe
   c c c |
   c d c |
   c b c |
   \breathe
-  f, e f | 
+  f, e f  |
   f f f |
-  f e f |
+  f8\( e\)\( f\) f e f |
   \bar "|."  
 }
 
@@ -806,7 +807,7 @@ scoreAPedal = \relative c {
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \key c \major
   % Enge Lage
-  c g c |
+  c4 g c |
   c f c |
   c d c |
   \breathe
@@ -816,12 +817,12 @@ scoreAPedal = \relative c {
   \breathe
   c g c |
   c f c |
-  c d c |
+  c8 d c c d c |
   \break
   % Weite Lage
-  c g c |
+  c4 g c |
   c f c |
-  c d c |
+  r4 r r  |
   \breathe
   c g c |
   c f c |
@@ -829,14 +830,14 @@ scoreAPedal = \relative c {
   \breathe
   c g c |
   c f c |
-  c d c |
+  c8 d c c d c |
   \break
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % G-Dur
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \key g \major
   % Enge Lage
-  g d g |
+  g4 d g |
   g c g |
   g a g |
   \breathe
@@ -846,12 +847,12 @@ scoreAPedal = \relative c {
   \breathe
   g d g |
   g c g |
-  g a g |
+  g8 a g g a g |
   \break
   % Weite Lage
-  g d g |
+  g4 d g |
   g c g |
-  g a g |
+  r4 r r  |
   \breathe
   g d g |
   g c g |
@@ -859,14 +860,14 @@ scoreAPedal = \relative c {
   \breathe
   g d g |
   g c g |
-  g a g |
+  g8 a g g a g |
   \break
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % D-Dur
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \key d \major
   % Enge Lage
-  d' a d |
+  d'4 a d |
   d g d |
   d e d |
   \breathe
@@ -876,12 +877,12 @@ scoreAPedal = \relative c {
   \breathe
   d a d |
   d g d |
-  d e d |
+  d8 e d d e d |
   \break
   % Weite Lage
-  d a d |
+  d4 a d |
   d g d |
-  d e d |
+  r4 r r  |
   \breathe
   d a d |
   d g d |
@@ -889,14 +890,14 @@ scoreAPedal = \relative c {
   \breathe
   d a d |
   d g d |
-  d e d |
+  d8 e d d e d |
   \break
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % A-Dur
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \key a \major
   % Enge Lage
-  a e a |
+  a4 e a |
   a d a |
   a h a |
   \breathe
@@ -906,12 +907,12 @@ scoreAPedal = \relative c {
   \breathe
   a e a |
   a d a |
-  a h a |
+  a8 h a a h a |
   \break
   % Weite Lage
-  a e a |
+  a4 e a |
   a d a |
-  a h a |
+  r4 r r  |
   \breathe
   a e a |
   a d a |
@@ -919,14 +920,14 @@ scoreAPedal = \relative c {
   \breathe
   a e a |
   a d a |
-  a h a |
+  a8 h a a h a |
   \break
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % E-Dur
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \key e \major
   % Enge Lage
-  e' h e |
+  e'4 h e |
   e a e |
   e fis e |
   \breathe
@@ -936,12 +937,12 @@ scoreAPedal = \relative c {
   \breathe
   e h e |
   e a e |
-  e fis e |
+  e8 fis e e fis e |
   \break
   % Weite Lage
-  e h e |
+  e4 h e |
   e a e |
-  e fis e |
+  r4 r r  |
   \breathe
   e h e |
   e a e |
@@ -949,14 +950,14 @@ scoreAPedal = \relative c {
   \breathe
   e h e |
   e a e |
-  e fis e |
+  e8 fis e e fis e |
   \break
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % H-Dur
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \key h \major
   % Enge Lage
-  h fis h |
+  h4 fis h |
   h e h |
   h cis h |
   \breathe
@@ -966,12 +967,12 @@ scoreAPedal = \relative c {
   \breathe
   h fis h |
   h e h |
-  h cis h |
+  h8 cis h h cis h |
   \break
   % Weite Lage
-  h fis h |
+  h4 fis h |
   h e h |
-  h cis h |
+  r4 r r  |
   \breathe
   h fis h |
   h e h |
@@ -979,14 +980,14 @@ scoreAPedal = \relative c {
   \breathe
   h fis h |
   h e h |
-  h cis h |
+  h8 cis h h cis h |
   \break
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % Fis-Dur
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \key fis \major
   % Enge Lage
-  fis' cis fis |
+  fis'4 cis fis |
   fis h fis |
   fis gis fis |
   \breathe
@@ -996,12 +997,12 @@ scoreAPedal = \relative c {
   \breathe
   fis cis fis |
   fis h fis |
-  fis gis fis |
+  fis8 gis fis fis gis fis |
   \break
   % Weite Lage
-  fis cis fis |
+  fis4 cis fis |
   fis h fis |
-  fis gis fis |
+  r4 r r  |
   \breathe
   fis cis fis |
   fis h fis |
@@ -1009,14 +1010,14 @@ scoreAPedal = \relative c {
   \breathe
   fis cis fis |
   fis h fis |
-  fis gis fis |
+  fis8, gis fis fis gis fis |
   \break
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % Ges-Dur
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \key ges \major
   % Enge Lage
-  ges des ges |
+  ges4 des ges |
   ges ces ges |
   ges as ges |
   \breathe
@@ -1026,12 +1027,12 @@ scoreAPedal = \relative c {
   \breathe
   ges des ges |
   ges ces ges |
-  ges as ges |
+  ges8 as ges ges as ges |
   \break
   % Weite Lage
-  ges des ges |
+  ges4 des ges |
   ges ces ges |
-  ges as ges |
+  r4 r r  |
   \breathe
   ges des ges |
   ges ces ges |
@@ -1039,14 +1040,14 @@ scoreAPedal = \relative c {
   \breathe
   ges des ges |
   ges ces ges |
-  ges as ges |
+  ges8 as ges ges as ges |
   \break
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % Des-Dur
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \key des \major
   % Enge Lage
-  des as des |
+  des'4 as des |
   des ges des |
   des es des |
   \breathe
@@ -1056,12 +1057,12 @@ scoreAPedal = \relative c {
   \breathe
   des as des |
   des ges des |
-  des es des |
+  des8 es des des es des |
   \break
   % Weite Lage
-  des as des |
+  des4 as des |
   des ges des |
-  des es des |
+  r4 r r  |
   \breathe
   des as des |
   des ges des |
@@ -1069,14 +1070,14 @@ scoreAPedal = \relative c {
   \breathe
   des as des |
   des ges des |
-  des es des |
+  des8 es des des es des |
   \break
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % As-Dur
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \key as \major
   % Enge Lage
-  as es as |
+  as4 es as |
   as des as |
   as b as |
   \breathe
@@ -1086,12 +1087,12 @@ scoreAPedal = \relative c {
   \breathe
   as es as |
   as des as |
-  as b as |
+  as8 b as as b as |
   \break
   % Weite Lage
-  as es as |
+  as4 es as |
   as des as |
-  as b as |
+  r4 r r  |
   \breathe
   as es as |
   as des as |
@@ -1099,14 +1100,14 @@ scoreAPedal = \relative c {
   \breathe
   as es as |
   as des as |
-  as b as |
+  as8 b as as b as |
   \break
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % Es-Dur
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \key es \major
   % Enge Lage
-  es' b es |
+  es'4 b es |
   es as es |
   es f es |
   \breathe
@@ -1116,27 +1117,27 @@ scoreAPedal = \relative c {
   \breathe
   es b es |
   es as es |
-  es f es |
+  es8 f es es f es |
   \break
   % Weite Lage
-  es b es |
+  es4 b es |
   es as es |
-  es f es |
+  r4 r r  |
   \breathe
   es b es |
   es as es |
   es f es |
   \breathe
   es b es |
-  es as es |
-  es f es |
+  es, as es |
+  es8 f es es f es |
   \break
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % B-Dur
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \key b \major
   % Enge Lage
-  b f b |
+  b'4 f b |
   b es b |
   b c b |
   \breathe
@@ -1146,12 +1147,12 @@ scoreAPedal = \relative c {
   \breathe
   b f b |
   b es b |
-  b c b |
+  b8 c b b c b |
   \break
   % Weite Lage
-  b f b |
+  b4 f b |
   b es b |
-  b c b |
+  r4 r r  |
   \breathe
   b f b |
   b es b |
@@ -1159,14 +1160,14 @@ scoreAPedal = \relative c {
   \breathe
   b f b |
   b es b |
-  b c b |
+  b8 c b b c b |
   \break
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % F-Dur
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \key f \major
   % Enge Lage
-  f' c f |
+  f'4 c f |
   f b f |
   f g f |
   \breathe
@@ -1174,22 +1175,22 @@ scoreAPedal = \relative c {
   f b f |
   f g f |
   \breathe
-  f c f |
+  f, c f |
   f b f |
-  f g f |
+  f8 g f f g f |
   \break
   % Weite Lage
-  f c f |
+  f4 c f |
   f b f |
-  f g f |
+  r4 r r  |
   \breathe
   f c f |
   f b f |
   f g f |
   \breathe
-  f c f | |
-  f b f | |
-  f g f | |
+  f c f |
+  f b f |
+  f8 g f f g f |
   \bar "|."  
 }
 
@@ -1207,198 +1208,198 @@ scoreAFigBass = \figuremode {
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % C-Dur
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  r2. r |
-  r4 <6> r |
-  r2. r |
-  <I>4 <6> <I> |    
-  r2. r |
-  r4 <6> r |
-  r2. r |
-  r4 <6> r |
-  r2. r |
-  r4 <6> r |
-  r2. r |
-  r4 <6> r |
+  s2. s |
+  s4 <6> s |
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s8 <6> s s <6> s |
+  s2. s |
+  s4 s s |
+  s2. s |
+  s4 <6> s |
+  s2. s |
+  s8 <6> s s <6> s |
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % G-Dur
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  r2. r |
-  r4 <6> r |
-  r2. r |
-  r4 <6> r |
-  r2. r |
-  r4 <6> r |
-  r2. r |
-  r4 <6> r |
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |
+  s2. s |
+  s4 <6> s |
+  s2. s |
+  s4 <6> s |
+  s2. s |
+  s4 <6> s |
+  s2. s |
+  s4 <6> s |
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % D-Dur
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  r2. r |
-  r4 <6> r |
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |
-  r2. r |
-  r4 <6> r |  
-  r2. r |
-  r4 <6> r |
+  s2. s |
+  s4 <6> s |
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |
+  s2. s |
+  s4 <6> s |  
+  s2. s |
+  s4 <6> s |
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % A-Dur
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  r2. r |
-  r4 <6> r |
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |
+  s2. s |
+  s4 <6> s |
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % E-Dur
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  r2. r |
-  r4 <6> r |
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |
+  s2. s |
+  s4 <6> s |
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % H-Dur
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  r2. r |
-  r4 <6> r |
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |
+  s2. s |
+  s4 <6> s |
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % Fis-Dur
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  r2. r |
-  r4 <6> r |
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |
+  s2. s |
+  s4 <6> s |
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % Ges-Dur
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  r2. r |
-  r4 <6> r |
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |
-  r2. r |
-  r4 <6> r    
-  r2. r |
-  r4 <6> r |
+  s2. s |
+  s4 <6> s |
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |
+  s2. s |
+  s4 <6> s    
+  s2. s |
+  s4 <6> s |
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % Des-Dur
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  r2. r |
-  r4 <6> r |
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |
+  s2. s |
+  s4 <6> s |
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % As-Dur
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  r2. r |
-  r4 <6> r |
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |
+  s2. s |
+  s4 <6> s |
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % Es-Dur
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  r2. r |
-  r4 <6> r |
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |
+  s2. s |
+  s4 <6> s |
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % B-Dur
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  r2. r |
-  r4 <6> r |
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |
+  s2. s |
+  s4 <6> s |
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % F-Dur
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  r2. r |
-  r4 <6> r |
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |  
+  s2. s |
+  s4 <6> s |
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |  
 }
 
 claveA = {\new DrumStaff <<
@@ -2635,198 +2636,198 @@ scoreBFigBass = \figuremode {
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % a-Moll
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  r2. r |
-  r4 <6> r |
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |   
+  s2. s |
+  s4 <6> s |
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |   
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % e-Moll
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  r2. r |
-  r4 <6> r |
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |   
+  s2. s |
+  s4 <6> s |
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |   
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % h-Moll
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  r2. r |
-  r4 <6> r |
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |   
+  s2. s |
+  s4 <6> s |
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |   
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % fis-Moll
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  r2. r |
-  r4 <6> r |
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |   
+  s2. s |
+  s4 <6> s |
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |   
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % cis-Moll
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  r2. r |
-  r4 <6> r |
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |   
+  s2. s |
+  s4 <6> s |
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |   
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % gis-Moll
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  r2. r |
-  r4 <6> r |
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |   
+  s2. s |
+  s4 <6> s |
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |   
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % dis-Moll
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  r2. r |
-  r4 <6> r |
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |   
+  s2. s |
+  s4 <6> s |
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |   
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % es-Moll
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  r2. r |
-  r4 <6> r |
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |   
+  s2. s |
+  s4 <6> s |
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |   
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % b-Moll
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  r2. r |
-  r4 <6> r |
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |   
+  s2. s |
+  s4 <6> s |
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |   
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % f-Moll
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  r2. r |
-  r4 <6> r |
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |   
+  s2. s |
+  s4 <6> s |
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |   
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % c-Moll
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  r2. r |
-  r4 <6> r |
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |   
+  s2. s |
+  s4 <6> s |
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |   
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % g-Moll
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  r2. r |
-  r4 <6> r |
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |   
+  s2. s |
+  s4 <6> s |
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |   
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % d-Moll
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  r2. r |
-  r4 <6> r |
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |
-  r2. r |
-  r4 <6> r |    
-  r2. r |
-  r4 <6> r |   
+  s2. s |
+  s4 <6> s |
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |
+  s2. s |
+  s4 <6> s |    
+  s2. s |
+  s4 <6> s |   
 }
 
 claveB = {\new DrumStaff <<
