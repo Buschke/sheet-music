@@ -113,7 +113,7 @@ scoreATenor = \relative c' {
   c4.( d8) c4 r8 e
   e d r d c4 f8 d
   c4 g r8 g d'16( c b d)
-  c4 r r8 e8, b'16( a g b)
+  c4 r r8 e,8 b'16( a g b)
   a4 r r8 c c16( d) c( b)
   c8. b32 c a8 c c b r4
   r e2( d4)
@@ -415,7 +415,7 @@ scoreBAlto = \relative c' {
 scoreBTenor = \relative c' {
   \global
   % Music follows here.
-  
+  r4
 }
 
 scoreBBass = \relative c {
@@ -589,6 +589,10 @@ scoreBBassoContinuoPart = <<
 scoreBBassFiguresPart = \new FiguredBass \scoreBFigBass
 
 \bookpart {
+\header {
+  subtitle = "Gloria"
+  meter = "ABC"
+}
   \score {
     <<
       \scoreBTrumpetBbPart
@@ -699,7 +703,7 @@ scoreCAlto = \relative c' {
 scoreCTenor = \relative c' {
   \global
   % Music follows here.
-  
+  r4
 }
 
 scoreCBass = \relative c {
@@ -873,6 +877,10 @@ scoreCBassoContinuoPart = <<
 scoreCBassFiguresPart = \new FiguredBass \scoreCFigBass
 
 \bookpart {
+\header {
+  subtitle = "Credo"
+  meter = "ABC"
+}
   \score {
     <<
       \scoreCTrumpetBbPart
@@ -983,7 +991,21 @@ scoreDAlto = \relative c' {
 scoreDTenor = \relative c' {
   \global
   % Music follows here.
-  
+  r1 r r r r r r
+  r2 c4 d8 b
+  c4 f8 e16 d e8 c r4
+  r2 r8 c d b
+  c8. c16 f4 e8 d r4
+  r4 r8 b d4 c8 r
+  r4 b8 b d4 c8 c
+  c8. c16 c8 c c4 c
+  d8 c c( b) c4 r8 g
+  a a r a g g r g\f
+  g a a r a g g r4
+  d'8 c c( b) c4 r
+  r r8 b d4 d
+  c8 c b4 c r
+  \bar "|."
 }
 
 scoreDBass = \relative c {
@@ -1157,7 +1179,11 @@ scoreDBassoContinuoPart = <<
 scoreDBassFiguresPart = \new FiguredBass \scoreDFigBass
 
 \bookpart {
-  \score {
+\header {
+  subtitle = "Sanctus"
+  meter = "ABC"
+}
+\score {
     <<
       \scoreDTrumpetBbPart
       \scoreDTimpaniPart
@@ -1267,7 +1293,7 @@ scoreEAlto = \relative c' {
 scoreETenor = \relative c' {
   \global
   % Music follows here.
-  
+  r4
 }
 
 scoreEBass = \relative c {
@@ -1441,7 +1467,11 @@ scoreEBassoContinuoPart = <<
 scoreEBassFiguresPart = \new FiguredBass \scoreEFigBass
 
 \bookpart {
-  \score {
+\header {
+  subtitle = "Benedictus"
+  meter = "ABC"
+}
+\score {
     <<
       \scoreETrumpetBbPart
       \scoreETimpaniPart
@@ -1551,7 +1581,7 @@ scoreFAlto = \relative c' {
 scoreFTenor = \relative c' {
   \global
   % Music follows here.
-  
+  r4
 }
 
 scoreFBass = \relative c {
@@ -1725,7 +1755,11 @@ scoreFBassoContinuoPart = <<
 scoreFBassFiguresPart = \new FiguredBass \scoreFFigBass
 
 \bookpart {
-  \score {
+\header {
+  subtitle = "Agnus Dei"
+  meter = "ABC"
+}
+\score {
     <<
       \scoreFTrumpetBbPart
       \scoreFTimpaniPart
