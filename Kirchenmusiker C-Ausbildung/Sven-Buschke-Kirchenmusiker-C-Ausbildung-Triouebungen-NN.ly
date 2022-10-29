@@ -1,15 +1,15 @@
 \version "2.22.2"
-\language "deutsch"
+\language "english"
 
 \header {
   dedication = "NN"
   title = "Kirchenmusiker C-Ausbildung"
-  subtitle = "Pedalübungen"
-  subsubtitle = "Hausaufgaben KW 43-2022"
+  subtitle = "Vom Himmel hoch"
+  subsubtitle = "Trioübungen, Hausaufgaben KW 43-2022"
   instrument = "Orgel"
-  composer = "Sven Buschke"
+  composer = "Johann Sebastian Bach"
   arranger = "Unterricht bei: Andreas Lang"
-  poet = "NN"
+  poet = "Satz: Sven Buschke"
   meter = "NN"
   piece = "NN"
   opus = "NN"
@@ -35,23 +35,73 @@ global = {
   \tempo "Andante" 4=100
 }
 
+globalA = {
+  \key d \major
+  \time 4/4
+  \tempo "Andante" 4=100
+}
+
 scoreARight = \relative c'' {
-  \global
+  \globalA
   % Music follows here.
-  c
+  r8 d cs b cs4 a |
+  r1
 }
 
 scoreALeft = \relative c' {
-  \global
+  \globalA
   % Music follows here.
-  c
+  r1 r r r r
+  d |
+  cs2 b |
+  cs a |
+  |b cs |
+  d1 |
+  r r
+  r2 d |
+  d a |
+  a fs |
+  fs g |
+  fs1
 }
 
 scoreAPedal = \relative c {
-  \global
+  \globalA
   % Music follows here.
-  c2\ltoe d\rtoe |
-  
+  r1 |
+  r2 d |
+  cs b |
+  cs b |
+  b cs |
+  d4 g fs8 e d4 |
+  a'4. cs,8 d4 e |
+  a, g fs2 |
+  g4 e a2 |
+  d4 fs, g fs8 e |
+  d2 fs8 g a4 |
+  b cs d g8 e |
+  fs4 fs, b2 |
+  fs4 g2 fs8 e |
+  d2. d'4 |
+  ds2 e |
+  as, b4 fs |
+  b2 fs'4 as, |
+  b d e g, |
+  a8 fs g a d4 b |
+  g2 gs4 e |
+  a1 |
+  d4 a e'4. d8 |
+  cs4 d a2 |
+  d,4 e fs8 g a4 |
+  b cs d e |
+  fs8 d fs fs, b4 e |
+  a,4. cs8 d4 e8 d |
+  c4 d g4. fs8 |
+  e a, d4 g, a8 g |
+  fs2 e |
+  d1~ |
+  d4 r r2
+  \bar "|."
 }
 
 \bookpart {
