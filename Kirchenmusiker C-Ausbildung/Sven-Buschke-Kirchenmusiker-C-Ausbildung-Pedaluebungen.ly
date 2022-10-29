@@ -51,7 +51,7 @@ scoreAPedal = \relative c {
   \global
   % Music follows here.
   c2\ltoe d\rtoe |
-  
+  c e |
 }
 
 \bookpart {
