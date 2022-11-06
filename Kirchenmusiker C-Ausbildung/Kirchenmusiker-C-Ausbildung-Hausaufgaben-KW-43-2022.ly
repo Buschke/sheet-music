@@ -31,7 +31,7 @@
 
 global = {
   \time 3/4
-  \tempo "Andante" 4=100
+  \tempo "Andante" 4=50
 }
 
 scoreARight = \relative c'' {
@@ -41,9 +41,9 @@ scoreARight = \relative c'' {
   % C-Dur
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \key c \major
-  g^"Quintlage I-V-I, I-IV-I, I-VII-I"^"Enge Lage"^"C-Dur - Sopran solistisch"g e |
+  g^"Quintlage I-V-I, I-IV-I, I-VII-I"^"Enge Lage"^"C-Dur - Sopran solistisch"g g |
   g a g |
-  g\( f\) g\) |
+  g\( f\)\( g\) |
   \breathe
   c,^"Oktavlage I-V-I, I-IV-I, I-VII-I" h c |
   c c c |
@@ -63,7 +63,7 @@ scoreARight = \relative c'' {
   \breathe
   e,^"Terzlage I-V-I, I-IV-I, I-VII-I" d e |
   e f e |
-  e8[ d e] e[ d e] |
+  e8[ d e] e[ f e] |
   \break
   <e g>4^"Quintlage I-V-I, I-IV-I, I-VII-I"^"Enge Lage"^"C-Dur - Tenor solistisch"<d g><e g>
   <e g><f a><e g> |
@@ -86,8 +86,8 @@ scoreARight = \relative c'' {
   <e c'><d h'><e c'> |
   \breathe
   <g e'>^"Terzlage I-V-I, I-IV-I, I-VII-I" <g d'><g e'> |
-  <g e'><f f'><g e'> |
-  <g\( e'>8[<f\)\( d'><g\) e'>]<g e'>[<f d'><g e'>] |
+  <g e'><a f'><g e'> |
+  <g\( e'>8[<f\)\( d'><g\) e'>]<g\( e'>[<f\)\( d'><g\) e'>] |
   \break
   \bar "|."  
 }
@@ -102,15 +102,15 @@ scoreALeft = \relative c' {
   % Enge Lage - Sopran solistisch
   <c e>4 <h d> <c e> |
   <c e> <c f> <c e> |
-  <c e>\( <h d>\)\( <c e>\) |
+  <c\( e> <h\)\( d> <c\) e> |
   \breathe
   <e, g><d g><e g> |
   <e g><f a><e g> |
   <e g><d f><e g> |
   \breathe
-  <g c><f h><g c> |
-  <g c><f h><g c> |
-  <g>8[<f><g>]<g>[<f><g>] |
+  <g c><g h><g c> |
+  <g c><a c><g c> |
+  <g c>8[<f h><g c>]<g c>[<f h><g c>] |
   \break
   % Weite Lage
   <e c'>4<d h'><e c'> |
@@ -123,10 +123,10 @@ scoreALeft = \relative c' {
   \breathe
   <c, g'><h g'><c g'> |
   <c g'><c a'><c g'> |
-  <c' g\(>8[<h f\)\(><c g\)>]<c g>[<h f><c g>] |
+  <c g'>8\([<h  f'>\)\(<c g'>\)]<c g'>\([<h f'>\)\(<c g'>\)] |
   \break
   % Enge Lage - Tenor solistisch
-  c4 h c |
+  c'4 h c |
   c c c |
   c\( h\)\( c\) |
   \breathe
@@ -135,7 +135,7 @@ scoreALeft = \relative c' {
   e d e |
   \breathe
   g, g g |
-  g f g |
+  g a g |
   g8[ f g] g[ f g] |
   \break
   % Weite Lage
@@ -149,7 +149,7 @@ scoreALeft = \relative c' {
   \breathe
   c h c  |
   c c c |
-  c8[\( h\)\( c\)] c[ h c] |
+  c8[\( h\)\( c\)] c\([ h\)\( c\)] |
   \break
   \bar "|."  
 }
