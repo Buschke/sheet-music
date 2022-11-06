@@ -33,7 +33,7 @@
 globalA = {
   \key g \major
   \time 2/2
-  \tempo "Allegro" 2=100
+  \tempo "Allegro" 2=50
 }
 
 scoreACello = \relative c {
@@ -358,7 +358,7 @@ scoreCPianoPartMidi = \new PianoStaff \with {
 globalD = {
   \key c \major
   \time 3/4
-  \tempo "Allegro" 4=100
+  \tempo "Allegro" 4=50
 }
 
 scoreDCelloA = \relative c {
