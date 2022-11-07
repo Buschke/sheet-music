@@ -147,6 +147,21 @@ scoreALeft = \relative c' {
   g4) d' g r
 }
 
+claveA = {\new DrumStaff <<
+  \drummode {\globalA
+   % bd4 sn4
+    << {
+%      \repeat unfold 16 cl16
+%      \repeat unfold 16 hh16
+         hh8 cl hh cl hh cl hh cl
+%        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
+    } \\ {
+      bd4 sn4 sn4 sn4
+    } >>
+  }
+>>
+}
+
 scoreACelloPart = \new Staff \with {
   instrumentName = "Cello"
   shortInstrumentName = "Cl."
@@ -175,11 +190,25 @@ scoreAPianoPart = \new PianoStaff \with {
   opus = "NN"
 }
   \score {
-    <<
-      \scoreACelloPart
-      \scoreAPianoPart
-    >>
+%    {
+%      \claveA
+      <<
+        \scoreACelloPart
+        \scoreAPianoPart
+      >>
+%    }
     \layout { }
+%    \midi { }
+  }
+  \score {
+    {
+      \claveA
+      <<
+        \scoreACelloPart
+        \scoreAPianoPart
+      >>
+    }
+%    \layout { }
     \midi { }
   }
 }
@@ -193,7 +222,9 @@ globalB = {
 scoreBCello = \relative c {
   \globalB
   % Music follows here.
-  
+  \partial 8
+  g8 |
+  c4.
 }
 
 scoreBRight = \relative c'' {
@@ -228,9 +259,9 @@ scoreBPianoPart = \new PianoStaff \with {
 
 \bookpart {
 \header {
-  subtitle = "Minuet in C"
+  subtitle = "The Happy Farmer"
   subsubtitle = "NN"
-  composer = "Johann Sebastian Bach"
+  composer = "Robert Schumann"
   meter = "NN"
   piece = "NN"
   opus = "NN"
@@ -256,45 +287,106 @@ scoreCCelloA = \relative c {
   % Music follows here.
   g'4-4\downbow g--\upbow( g--\upbow)
   g c8 b c4
-  e, d8-0( f-2)
+  e, d8-0( f-2) e d |
+  e4 d8 e c4 |
+  a' a a |
+  a g8 f e d
+  g4 f8 e d e |
+  c2.
 }
 
 scoreCCelloB = \relative c {
   % Music follows here.
-  d d d
+  d4 d d |
+  d g8 fs g4 |
+  d e f |
+  e d8 e c4 |
+  c' c c |
+  c8 b a g fs e |
+  d4 g fs |
+  g2 r4 |
+  c f, f |
+  f a8 g f4 |
+  d' f, f |
+  e8 g f e d4 |
+  g g g |
+  g a8 b c4 |
+  e,8 g f e d e |
+  c2.
+  
 }
 
 scoreCRightA = \relative c'' {
   \globalC
   % Music follows here.
   <e, g>2 <d f>4
-  r2. r r r r r r r r r
+  <c e>2. |
+  <c g>2 <d g>4 |
+  <e g>2. |
+  <c a'>2. |
+  <c a'>2 <d b'>4 |
+  <g c>a <f b> |
+  <e c'>2.
 }
 
 scoreCRightB = \relative c'' {
   % Music follows here.
-  <b d>2
-  
+  <b, d>2<c d>4 |
+  d2. |
+  d4 e <b f'> |
+  <c e> d c |
+  <c a'>2. |
+  <<{a'2.}\\{c,4 d fs}>> |
+  <<{g2 fs4}\\{d4 e c}>> |
+  <b g'>2. |
+  <c f>2 c'4 |
+  <f, d'>2. |
+  <d g>2 d'4|
+  <g, e'>2 <f d'>4 |
+  <g c>2 <f b>4 |
+  <e c'> <g e'>8 <f d'> <e c'>4~ |
+  <e c'> <f a> <d b'> |
+  <e c'>2.
 }
 
 scoreCLeftA = \relative c' {
   \globalC
   % Music follows here.
   c,2 b4
-  c
-  r2. r r r r r r r r r
+  c c8 d e f |
+  e2 b4 |
+  c d e |
+  f2. |
+  f, |
+  e4 f g |
+  c8 g e g c,4
 }
 
 scoreCLeftB = \relative c' {
   % Music follows here.
-  g,2
+  g,2 a4 |
+  b2. |
+  b4 c g |
+  c, d e |
+  a2. |
+  fs2 d4 |
+  b' c d |
+  g8 d b d g,4 |
+  a2. |
+  a'8 d f, a d,4 |
+  b2. |
+  c2 d4 |
+  e2 d4 |
+  c2. |
+  g'2 g,4 |
+  c,2.
 }
 
 scoreCCelloPart = \new Staff \with {
   instrumentName = "Cello"
   shortInstrumentName = "Cl."
   midiInstrument = "cello"
-} { \clef bass {\repeat volta 2 {\scoreCCelloA} \scoreCCelloB} }
+} { \clef bass {\repeat volta 2 {\scoreCCelloA} \repeat volta 2 {\scoreCCelloB}} }
 
 scoreCPianoPart = \new PianoStaff \with {
   instrumentName = "Klavier"
@@ -302,28 +394,10 @@ scoreCPianoPart = \new PianoStaff \with {
 } <<
   \new Staff = "right" \with {
     midiInstrument = "acoustic grand"
-} {\repeat volta 2 {\scoreCRightA} \scoreCRightB }
+} {\repeat volta 2 {\scoreCRightA} \repeat volta 2 {\scoreCRightB} }
   \new Staff = "left" \with {
     midiInstrument = "acoustic grand"
-  } { \clef bass {\repeat volta 2 {\scoreCLeftA} \scoreCLeftB} }
->>
-
-scoreCCelloPartMidi = \new Staff \with {
-  instrumentName = "Cello"
-  shortInstrumentName = "Cl."
-  midiInstrument = "cello"
-} { \clef bass {\repeat unfold 2 {\scoreCCelloA} \scoreCCelloB} }
-
-scoreCPianoPartMidi = \new PianoStaff \with {
-  instrumentName = "Klavier"
-  shortInstrumentName = "Kl."
-} <<
-  \new Staff = "right" \with {
-    midiInstrument = "acoustic grand"
-} {\repeat unfold 2 {\scoreCRightA} \scoreCRightB }
-  \new Staff = "left" \with {
-    midiInstrument = "acoustic grand"
-  } { \clef bass {\repeat unfold 2 {\scoreCLeftA} \scoreCLeftB} }
+  } { \clef bass {\repeat volta 2 {\scoreCLeftA} \repeat volta 2 {\scoreCLeftB}} }
 >>
 
 \bookpart {
@@ -336,20 +410,24 @@ scoreCPianoPartMidi = \new PianoStaff \with {
   opus = "NN"
 }
   \score {
+%    \unfoldRepeats {
     <<
       \scoreCCelloPart
       \scoreCPianoPart
     >>
+%    }
     \layout { }
 %    \midi { }
   }
   \score {
+    \unfoldRepeats {
     \articulate <<
     <<
-      \scoreCCelloPartMidi
-      \scoreCPianoPartMidi
+      \scoreCCelloPart
+      \scoreCPianoPart
     >>
     >>
+    }
 %    \layout { }
     \midi { }
   }
