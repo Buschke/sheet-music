@@ -238,116 +238,41 @@ scoreARehearsalMidi = #
    >>
  #})
 
-scoreABcMusic = \relative c {
-  \globalA
-  % Music follows here.
-  c4 g' a c8. e,16
-  f8 g a b
+claveA = {\new DrumStaff <<
+  \drummode {\globalA
+    << {
+         hh8 cl hh cl hh cl hh cl
+    } \\ {
+      bd4 sn4 sn4 sn4
+    } >>
+  }
+>>
 }
-
-scoreABcFigures = \figuremode {
-  \globalA
-  \override Staff.BassFigureAlignmentPositioning #'direction = #DOWN
-  % Figures follow here.
-  <6 4>
-}
-
-scoreAFigBass = \figuremode {
-  \globalA
-  % Figures follow here.
-
-}
-
-scoreATrumpetBbPart = \new Staff \with {
-  instrumentName = "Trompete in B"
-  midiInstrument = "trumpet"
-} \scoreATrumpetBb
-
-scoreATimpaniPart = \new Staff \with {
-  instrumentName = "Pauken"
-  midiInstrument = "timpani"
-} { \clef bass \scoreATimpani }
-
-scoreATromboneIPart = \new Staff \with {
-  instrumentName = "Posaune I"
-  midiInstrument = "trombone"
-} { \clef bass \scoreATromboneI }
-
-scoreATromboneIIPart = \new Staff \with {
-  instrumentName = "Posaune II"
-  midiInstrument = "trombone"
-} { \clef bass \scoreATromboneII }
-
-scoreATromboneIIIPart = \new Staff \with {
-  instrumentName = "Posaune III"
-  midiInstrument = "trombone"
-} { \clef bass \scoreATromboneIII }
-
-scoreAViolinIPart = \new Staff \with {
-  instrumentName = "Violine I"
-  midiInstrument = "violin"
-} \scoreAViolinI
-
-scoreAViolinIIPart = \new Staff \with {
-  instrumentName = "Violine II"
-  midiInstrument = "violin"
-} \scoreAViolinII
 
 scoreAChoirPart = <<
-%   \new ChoirStaff <<
- %    \new Staff \with {
-%       midiInstrument = "choir aahs"
-%       instrumentName = "Sopran"
-%       \consists "Ambitus_engraver"
-%     } { \scoreASoprano }
-%     \addlyrics { \scoreASopranoVerse }
-%     \new Staff \with {
-%       midiInstrument = "choir aahs"
-%       instrumentName = "Alt"
-%       \consists "Ambitus_engraver"
-%     } { \scoreAAlto }
-%     \addlyrics { \scoreAAltoVerse }
     \new Staff \with {
       midiInstrument = "choir aahs"
       instrumentName = "Tenor"
       \consists "Ambitus_engraver"
     } { \clef "treble_8" \scoreATenor }
     \addlyrics { \scoreATenorVerse }
-%     \new Staff \with {
-%       midiInstrument = "choir aahs"
-%       instrumentName = "Bass"
-%       \consists "Ambitus_engraver"
-%     } { \clef bass \scoreABass }
-%     \addlyrics { \scoreABassVerse }
-%   >>
-%  \scoreAPianoReduction
 >>
-
-scoreABassoContinuoPart = <<
-  \new Staff \with {
-    instrumentName = "Basso Continuo"
-    midiInstrument = "cello"
-  } { \clef bass \scoreABcMusic }
-  \new FiguredBass \scoreABcFigures
->>
-
-scoreABassFiguresPart = \new FiguredBass \scoreAFigBass
 
 \bookpart {
   \score {
-    <<
-%       \scoreATrumpetBbPart
-%       \scoreATimpaniPart
-%       \scoreATromboneIPart
-%       \scoreATromboneIIPart
-%       \scoreATromboneIIIPart
-%       \scoreAViolinIPart
-%       \scoreAViolinIIPart
+%    {
+%      \claveA
       \scoreAChoirPart
-%       \scoreABassoContinuoPart
-%       \scoreABassFiguresPart
-    >>
+%    }
     \layout { }
+%    \midi { }
+  }
+  \score {
+    {
+      \claveA
+      \scoreAChoirPart
+    }
+%    \layout { }
     \midi { }
   }
 }
@@ -731,12 +656,25 @@ scoreBBassoContinuoPart = <<
 
 scoreBBassFiguresPart = \new FiguredBass \scoreBFigBass
 
+claveB = {\new DrumStaff <<
+  \drummode {\globalB
+    << {
+         hh8 cl hh cl hh cl
+    } \\ {
+      bd4 sn4 sn4 
+    } >>
+  }
+>>
+}
+
 \bookpart {
 \header {
   subtitle = "Gloria"
   meter = "ABC"
 }
   \score {
+%    {
+%      \claveB
     <<
 %       \scoreBTrumpetBbPart
 %       \scoreBTimpaniPart
@@ -749,7 +687,27 @@ scoreBBassFiguresPart = \new FiguredBass \scoreBFigBass
 %       \scoreBBassoContinuoPart
 %       \scoreBBassFiguresPart
     >>
+%    }
     \layout { }
+%    \midi { }
+  }
+  \score {
+    {
+      \claveB
+    <<
+%       \scoreBTrumpetBbPart
+%       \scoreBTimpaniPart
+%       \scoreBTromboneIPart
+%       \scoreBTromboneIIPart
+%       \scoreBTromboneIIIPart
+%       \scoreBViolinIPart
+%       \scoreBViolinIIPart
+      \scoreBChoirPart
+%       \scoreBBassoContinuoPart
+%       \scoreBBassFiguresPart
+    >>
+    }
+%    \layout { }
     \midi { }
   }
 }
@@ -1145,12 +1103,25 @@ scoreCBassoContinuoPart = <<
 
 scoreCBassFiguresPart = \new FiguredBass \scoreCFigBass
 
+claveC = {\new DrumStaff <<
+  \drummode {\globalC
+    << {
+         hh8 cl hh cl hh cl hh cl
+    } \\ {
+      bd4 sn4 sn4 sn
+    } >>
+  }
+>>
+}
+
 \bookpart {
 \header {
   subtitle = "Credo"
   meter = "ABC"
 }
   \score {
+%    {
+%      \claveC
     <<
 %       \scoreCTrumpetBbPart
 %       \scoreCTimpaniPart
@@ -1163,7 +1134,27 @@ scoreCBassFiguresPart = \new FiguredBass \scoreCFigBass
 %       \scoreCBassoContinuoPart
 %       \scoreCBassFiguresPart
     >>
+%    }
     \layout { }
+%    \midi { }
+  }
+  \score {
+    {
+      \claveC
+    <<
+%       \scoreCTrumpetBbPart
+%       \scoreCTimpaniPart
+%       \scoreCTromboneIPart
+%       \scoreCTromboneIIPart
+%       \scoreCTromboneIIIPart
+%       \scoreCViolinIPart
+%       \scoreCViolinIIPart
+      \scoreCChoirPart
+%       \scoreCBassoContinuoPart
+%       \scoreCBassFiguresPart
+    >>
+    }
+%    \layout { }
     \midi { }
   }
 }
@@ -1481,12 +1472,25 @@ scoreDBassoContinuoPart = <<
 
 scoreDBassFiguresPart = \new FiguredBass \scoreDFigBass
 
+claveD = {\new DrumStaff <<
+  \drummode {\globalD
+    << {
+         hh8 cl hh cl hh cl
+    } \\ {
+      bd4 sn4 sn4 
+    } >>
+  }
+>>
+}
+
 \bookpart {
 \header {
   subtitle = "Sanctus"
   meter = "ABC"
 }
 \score {
+%  {
+%    \claveD
     <<
 %       \scoreDTrumpetBbPart
 %       \scoreDTimpaniPart
@@ -1499,7 +1503,27 @@ scoreDBassFiguresPart = \new FiguredBass \scoreDFigBass
 %       \scoreDBassoContinuoPart
 %       \scoreDBassFiguresPart
     >>
+%  }
     \layout { }
+%    \midi { }
+  }
+\score {
+  {
+    \claveD
+    <<
+%       \scoreDTrumpetBbPart
+%       \scoreDTimpaniPart
+%       \scoreDTromboneIPart
+%       \scoreDTromboneIIPart
+%       \scoreDTromboneIIIPart
+%       \scoreDViolinIPart
+%       \scoreDViolinIIPart
+      \scoreDChoirPart
+%       \scoreDBassoContinuoPart
+%       \scoreDBassFiguresPart
+    >>
+  }
+%    \layout { }
     \midi { }
   }
 }
@@ -1806,12 +1830,25 @@ scoreEBassoContinuoPart = <<
 
 scoreEBassFiguresPart = \new FiguredBass \scoreEFigBass
 
+claveE = {\new DrumStaff <<
+  \drummode {\globalE
+    << {
+         hh8 cl hh cl hh cl hh cl
+    } \\ {
+      bd4 sn4 sn4 sn
+    } >>
+  }
+>>
+}
+
 \bookpart {
 \header {
   subtitle = "Benedictus"
   meter = "ABC"
 }
 \score {
+%  {
+%    \claveE
     <<
 %       \scoreETrumpetBbPart
 %       \scoreETimpaniPart
@@ -1824,7 +1861,27 @@ scoreEBassFiguresPart = \new FiguredBass \scoreEFigBass
 %       \scoreEBassoContinuoPart
 %       \scoreEBassFiguresPart
     >>
+%  }
     \layout { }
+%    \midi { }
+  }
+\score {
+  {
+    \claveE
+    <<
+%       \scoreETrumpetBbPart
+%       \scoreETimpaniPart
+%       \scoreETromboneIPart
+%       \scoreETromboneIIPart
+%       \scoreETromboneIIIPart
+%       \scoreEViolinIPart
+%       \scoreEViolinIIPart
+      \scoreEChoirPart
+%       \scoreEBassoContinuoPart
+%       \scoreEBassFiguresPart
+    >>
+  }
+%    \layout { }
     \midi { }
   }
 }
@@ -2200,12 +2257,25 @@ scoreFBassoContinuoPart = <<
 
 scoreFBassFiguresPart = \new FiguredBass \scoreFFigBass
 
+claveF = {\new DrumStaff <<
+  \drummode {\globalF
+    << {
+         hh8 cl hh cl hh cl
+    } \\ {
+      bd4 sn4 sn4 
+    } >>
+  }
+>>
+}
+
 \bookpart {
 \header {
   subtitle = "Agnus Dei"
   meter = "ABC"
 }
 \score {
+%  {
+%    \claveF
     <<
 %       \scoreFTrumpetBbPart
 %       \scoreFTimpaniPart
@@ -2218,7 +2288,27 @@ scoreFBassFiguresPart = \new FiguredBass \scoreFFigBass
 %       \scoreFBassoContinuoPart
 %       \scoreFBassFiguresPart
     >>
+%  }
     \layout { }
+%    \midi { }
+  }
+\score {
+  {
+    \claveF
+    <<
+%       \scoreFTrumpetBbPart
+%       \scoreFTimpaniPart
+%       \scoreFTromboneIPart
+%       \scoreFTromboneIIPart
+%       \scoreFTromboneIIIPart
+%       \scoreFViolinIPart
+%       \scoreFViolinIIPart
+      \scoreFChoirPart
+%       \scoreFBassoContinuoPart
+%       \scoreFBassFiguresPart
+    >>
+  }
+%    \layout { }
     \midi { }
   }
 }
