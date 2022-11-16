@@ -888,50 +888,90 @@ im Himmel und auf Erden preist."
 
 globalE = {
   \key f \major
-  \time 4/4
+  \time 6/4
   \tempo "Andante" 4=100
 }
 
 scoreESoprano = \relative c'' {
-  \global
+  \globalE
   % Music follows here.
-  
+  \partial 4
+  f,4|
+  a2 bf4 c2 bf4|
+  a2 g4 a2\breathe a4|
+  a2 g4 bf( a) g|
+  f2( e4) f2
+}
+
+scoreESopranoB = \relative c'' {
+  % Music follows here.
+  \partial 4
+  f,4|
+  f2 g4 bf bf a|
+  g2 f4 g2\breathe g4|
+  a2 bf4 c2 bf4|
+  a2 g4 a2\breathe f4|
+  g2 bf4 a2 g4|
+  f2( e4) f2
+  \bar "|."
 }
 
 scoreEAlto = \relative c' {
-  \global
+  \globalE
   % Music follows here.
   
 }
 
 scoreETenor = \relative c' {
-  \global
+  \globalE
   % Music follows here.
   
 }
 
 scoreEBass = \relative c {
-  \global
+  \globalE
   % Music follows here.
-  
+  \partial 4
+  f,4|
+  f' d2 e4 f2|
+  a,4 bf c f,2 d'4|
+  cs d bf g a c|
+  d2 c4 f,2|
+}
+
+scoreEBassB = \relative c {
+  % Music follows here.
+  \partial 4
+  f4|
+  d bf2 g a4|
+  c2 d4 e2\breathe c4|
+  f d2 e4 f2|
+  d4 c bf a2 4|
+  g2 4 a bf c|
+  d2 c4 f,2|
+  \bar "|."
 }
 
 scoreEVerseOne = \lyricmode {
-  \set stanza = "1."
+%  \set stanza = "1."
   % Lyrics follow here.
-  
+  Al -- lein Gott in der Höh sei Ehr
+  und Dank für sei -- ne Gna -- de, 
 }
 
 scoreEVerseTwo = \lyricmode {
-  \set stanza = "2."
+%  \set stanza = "2."
   % Lyrics follow here.
-  
+  dar -- um dass nun und nim -- mer -- mehr
+  uns rüh -- ren kann kein Scha -- de.  
 }
 
 scoreEVerseThree = \lyricmode {
-  \set stanza = "3."
+%  \set stanza = "3."
   % Lyrics follow here.
-  
+  Ein Wohl -- ge -- fall -- en Gott an uns hat;
+  nun ist groß Fried ohn Un -- ter -- lass,
+  all Fehd hat nun ein En -- de.   
 }
 
 scoreEVerseFour = \lyricmode {
@@ -946,9 +986,22 @@ scoreEVerseFive = \lyricmode {
   
 }
 
-\bookpart {
-  \score {
-    \new ChoirStaff <<
+claveE = {\new DrumStaff <<
+  \drummode {\globalE
+   % bd4 sn4
+    << {
+%      \repeat unfold 16 cl16
+%      \repeat unfold 16 hh16
+         hh4 cl cl hh cl 
+%        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
+    } \\ {
+      bd4 sn sn sn sn
+    } >>
+  }
+>>
+}
+
+scoreE = \new ChoirStaff <<
       \new Staff \with {
         midiInstrument = "choir aahs"
         instrumentName = \markup \center-column { "Sopran" "Alt" }
@@ -956,7 +1009,7 @@ scoreEVerseFive = \lyricmode {
       } <<
         \new Voice = "soprano" \with {
           \consists "Ambitus_engraver"
-        } { \voiceOne \scoreESoprano }
+        } { \voiceOne \repeat vota 2 {\scoreESoprano} \new Voice = "sopranoB" {\scoreESopranoB} }
         \new Voice = "alto" \with {
           \consists "Ambitus_engraver"
           \override Ambitus #'X-offset = #2.0
@@ -970,7 +1023,7 @@ scoreEVerseFive = \lyricmode {
       } \lyricsto "soprano" \scoreEVerseTwo
       \new Lyrics \with {
         \override VerticalAxisGroup #'staff-affinity = #CENTER
-      } \lyricsto "soprano" \scoreEVerseThree
+      } \lyricsto "sopranoB" \scoreEVerseThree
       \new Lyrics \with {
         \override VerticalAxisGroup #'staff-affinity = #CENTER
       } \lyricsto "soprano" \scoreEVerseFour
@@ -989,10 +1042,65 @@ scoreEVerseFive = \lyricmode {
         \new Voice = "bass" \with {
           \consists "Ambitus_engraver"
           \override Ambitus #'X-offset = #2.0
-        } { \voiceTwo \scoreEBass }
+        } { \voiceTwo \repeat volta 2 {\scoreEBass} \scoreEBassB }
       >>
     >>
+
+\bookpart {
+\header {
+  subtitle = "Allein Gott in der Höh sei Ehr"
+  subsubtitle = "NN"
+  instrument = "NN"
+  composer = "NN"
+  arranger = "NN"
+  poet = "NN"
+  meter = "NN"
+  piece = "NN"
+  opus = "GL 170"
+}
+  \score {
+%    {
+%      \claveE
+      \scoreE
+%    }
     \layout { }
+%    \midi { }
+  }
+  \markup {
+  \wordwrap-string "
+2) Wir loben, preisn, anbeten dich;
+für deine Ehr wir danken,
+dass du, Gott Vater, ewiglich
+regierst ohn alles Wanken.
+Ganz ungemessn ist deine Macht,
+allzeit geschieht, was du bedacht.
+Wohl uns solch eines Herren!
+
+3) O Jesu Christ, Sohn eingeborn
+des allerhöchsten Vaters,
+Versöhner derer, die verlorn,
+du Stiller unsers Haders,
+Lamm Gottes, heilger Herr und Gott:
+nimm an die Bitt aus unsrer Not,
+erbarm dich unser aller.
+
+4) O Heilger Geist, du höchstes Gut,
+du allerheilsamst' Tröster:
+vor Teufels G'walt fortan behüt,
+die Jesus Christ erlöset
+durch große Mart'r und bittern Tod;
+abwend all unsern Jamm'r und Not!
+Darauf wir uns verlassen.
+"
+}
+  \score {
+    \unfoldRepeats {
+    {
+      \claveE
+      \scoreE
+    }
+    }
+%    \layout { }
     \midi { }
   }
 }
@@ -1002,39 +1110,82 @@ scoreEVerseFive = \lyricmode {
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 globalF = {
-  \key f \major
-  \time 4/4
+  \key d \major
+  \time 3/2
   \tempo "Andante" 4=100
 }
 
 scoreFSoprano = \relative c'' {
-  \global
+  \globalF
   % Music follows here.
-  
+  \partial 2
+  fs,2|
+  b b a4 fs|
+  g2 fs e|
+  fs4 d b( cs) d2|
+  e1\breathe fs2|
+  b b a4 fs|
+  g2 fs e|
+  fs4 d b( cs) d2|
+  \time 2/2 e2 r4 e|
+  \time 3/2 e fs g2 fs|
+  \time 2/2 e e4 b'|
+  \time 3/2 cs d cs2 b4( a)|
+  b1\breathe fs2|
+  b a g4 fs|
+  \time 2/2 e( d) e fs|
+  \time 3/2 d2 b e4 e|
+  fs1|
+  \bar "|."
 }
 
 scoreFAlto = \relative c' {
-  \global
+  \globalF
   % Music follows here.
   
 }
 
 scoreFTenor = \relative c' {
-  \global
+  \globalF
   % Music follows here.
   
 }
 
 scoreFBass = \relative c {
-  \global
+  \globalF
   % Music follows here.
-  
+  \partial 2
+  fs2|
+  b, d fs4 g|
+  b,2 b e|
+  d4 b g2 b|
+  e1\breathe d2|
+  g, b fs'|
+  g, d' e|
+  d4 b e2 d|
+  a r4 a|
+  e' d c2 d|
+  e a,4 gs|
+  a d e2 fs|
+  b,1\breathe a2|
+  g fs g4 d'|
+  a2 4 fs|
+  b2. a4 g2|
+  fs1|
+  \bar "|."
 }
 
 scoreFVerseOne = \lyricmode {
-  \set stanza = "1."
+%  \set stanza = "1."
   % Lyrics follow here.
-  
+  Die Nacht ist vor -- ge -- drun -- gen,
+  der Tag ist nicht mehr fern!
+  So sei nun Lob ge -- sun -- gen
+  dem hel -- len Mor -- gen -- stern!
+  Auch wer zur Nacht ge -- wei -- net,
+  der stim -- me froh mit ein.
+  Der Mor -- gen -- stern be -- schei -- net
+  auch dei -- ne Angst und Pein.
 }
 
 scoreFVerseTwo = \lyricmode {
@@ -1061,9 +1212,22 @@ scoreFVerseFive = \lyricmode {
   
 }
 
-\bookpart {
-  \score {
-    \new ChoirStaff <<
+claveF = {\new DrumStaff <<
+  \drummode {\globalF
+   % bd4 sn4
+    << {
+%      \repeat unfold 16 cl16
+%      \repeat unfold 16 hh16
+         hh4 cl hh cl
+%        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
+    } \\ {
+      bd4 sn sn sn
+    } >>
+  }
+>>
+}
+
+scoreF = \new ChoirStaff <<
       \new Staff \with {
         midiInstrument = "choir aahs"
         instrumentName = \markup \center-column { "Sopran" "Alt" }
@@ -1107,7 +1271,71 @@ scoreFVerseFive = \lyricmode {
         } { \voiceTwo \scoreFBass }
       >>
     >>
+
+\bookpart {
+\header {
+  subtitle = "Die Nacht ist vorgedrungen"
+  subsubtitle = "NN"
+  instrument = "NN"
+  composer = "NN"
+  arranger = "NN"
+  poet = "NN"
+  meter = "NN"
+  piece = "NN"
+  opus = "GL 220"
+}
+  \score {
+%    {
+%      \claveF
+      \scoreF
+%    }
     \layout { }
+%    \midi { }
+  }
+  \markup {
+    \wordwrap-string "
+2) Dem alle Engel dienen,
+wird nun ein Kind und Knecht.
+Gott selber ist erschienen
+zur Sühne für sein Recht.
+Wer schuldig ist auf Erden,
+verhüll nicht mehr sein Haupt.
+Er soll errettet werden,
+wenn er dem Kinde glaubt.
+
+3) Die Nacht ist schon im Schwinden,
+macht euch zum Stalle auf!
+Ihr sollt das Heil dort finden,
+das aller Zeiten Lauf
+von Anfang an verkündet,
+seit eure Schuld geschah.
+Nun hat sich euch verbündet,
+den Gott selbst ausersah.
+
+4) Noch manche Nacht wird fallen
+auf Menschenleid und -schuld.
+Doch wandert nun mit allen
+der Stern der Gotteshuld.
+Beglänzt von seinem Lichte,
+hält euch kein Dunkel mehr,
+von Gottes Angesichte
+kam euch die Rettung her.
+
+5) Gott will im Dunkel wohnen
+und hat es doch erhellt.
+Als wollte er belohnen,
+so richtet er die Welt.
+Der sich den Erdkreis baute,
+der lässt den Sünder nicht.
+Wer hier dem Sohn vertraute,
+kommt dort aus dem Gericht."
+  }
+  \score {
+    {
+      \claveF
+      \scoreF
+    }
+%    \layout { }
     \midi { }
   }
 }
@@ -1117,39 +1345,51 @@ scoreFVerseFive = \lyricmode {
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 globalG = {
-  \key f \major
-  \time 4/4
+  \key c \major
+  \time 3/1
   \tempo "Andante" 4=100
 }
 
 scoreGSoprano = \relative c'' {
-  \global
+  \globalG
   % Music follows here.
-  
+  \partial 4
+  d,4|
+  d2 d4 e2 e4 f( g a) a2\breathe a4 g2 g4 d2 e4|
+  \time 2/1 f2 r4 f|
+  \time 3/1 a c d d c8( bf a g) f4\breathe g a g f e d2.
+  \bar "|."
 }
 
 scoreGAlto = \relative c' {
-  \global
+  \globalG
   % Music follows here.
   
 }
 
 scoreGTenor = \relative c' {
-  \global
+  \globalG
   % Music follows here.
   
 }
 
 scoreGBass = \relative c {
-  \global
+  \globalG
   % Music follows here.
-  
+  d4|
+  d2. c bf a2\breathe d4 bf2 c4 bf a g|
+  f2 r4
+  f'
+  d a bf b c cs d c f, g a2 b2.
 }
 
 scoreGVerseOne = \lyricmode {
-  \set stanza = "1."
+%  \set stanza = "1."
   % Lyrics follow here.
-  
+  Es kommt ein Schiff, ge -- la -- den
+  bis an sein' höchs -- ten Bord,
+  trägt Got -- tes Sohn voll Gna -- den,
+  des Va -- ters e -- wigs Wort. 
 }
 
 scoreGVerseTwo = \lyricmode {
@@ -1176,9 +1416,22 @@ scoreGVerseFive = \lyricmode {
   
 }
 
-\bookpart {
-  \score {
-    \new ChoirStaff <<
+claveG = {\new DrumStaff <<
+  \drummode {\globalG
+   % bd4 sn4
+    << {
+%      \repeat unfold 16 cl16
+%      \repeat unfold 16 hh16
+         hh4 cl hh cl hh cl hh cl hh cl hh
+%        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
+    } \\ {
+      bd4 sn sn sn sn sn sn sn sn sn sn
+    } >>
+  }
+>>
+}
+
+scoreG = \new ChoirStaff <<
       \new Staff \with {
         midiInstrument = "choir aahs"
         instrumentName = \markup \center-column { "Sopran" "Alt" }
@@ -1222,43 +1475,126 @@ scoreGVerseFive = \lyricmode {
         } { \voiceTwo \scoreGBass }
       >>
     >>
+
+\bookpart {
+\header {
+  subtitle = "Es kommt ein Schiff geladen"
+  subsubtitle = "NN"
+  instrument = "NN"
+  composer = "NN"
+  arranger = "NN"
+  poet = "NN"
+  meter = "NN"
+  piece = "NN"
+  opus = "GL 236"
+}
+  \score {
+%    {
+%      \claveG
+      \scoreG
+%    }
     \layout { }
+%    \midi { }
+  }
+  \markup {
+    \wordwrap-string "
+2) Das Schiff geht still im Triebe,
+es trägt ein teure Last;
+das Segel ist die Liebe,
+der Heilig Geist der Mast.
+
+3) Der Anker haft' auf Erden,
+da ist das Schiff am Land.
+Das Wort will Fleisch uns werden,
+der Sohn ist uns gesandt.
+
+4) Zu Bethlehem geboren
+im Stall ein Kindelein,
+gibt sich für uns verloren;
+gelobet muss es sein.
+
+5) Und wer dies Kind mit Freuden
+umfangen, küssen will,
+muss vorher mit ihm leiden
+groß Pein und Marter viel,
+
+6) danach mit ihm auch sterben
+und geistlich auferstehn,
+das ewig Leben erben,
+wie an ihm ist geschehn."
+  }
+  \score {
+    {
+      \claveG
+      \scoreG
+    }
+%    \layout { }
     \midi { }
   }
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+globalH = {
+  \key c \major
+  \time 2/1
+  \tempo "Andante" 4=100
+}
+
 scoreHSoprano = \relative c'' {
-  \global
+  \globalH
   % Music follows here.
-  
+  c4 b a b g a b c\breathe c c g g e g f e e a a g b c a g\breathe
+  c b a g g f8 e d4 c2
+  \bar "|."
 }
 
 scoreHAlto = \relative c' {
-  \global
+  \globalH
   % Music follows here.
   
 }
 
 scoreHTenor = \relative c' {
-  \global
+  \globalH
   % Music follows here.
   
 }
 
 scoreHBass = \relative c {
-  \global
+  \globalH
   % Music follows here.
-  
+  c4 g' fs g e fs d c\breathe
+  c e g b, a e f c' a f fs g gs a d g,\breathe
+  e g a b cs d8 e g4 c,2
 }
 
 scoreHVerse = \lyricmode {
   % Lyrics follow here.
-  
+  Vom Him -- mel hoch da komm ich her,
+  ich bring euch gu -- te neu -- e Mär;
+  der gu -- ten Mär bring ich so viel,
+  da -- von ich sin -- gen und sa -- gen will.
 }
 
-\bookpart {
-  \score {
-    \new ChoirStaff <<
+claveH = {\new DrumStaff <<
+  \drummode {\globalH
+   % bd4 sn4
+    << {
+%      \repeat unfold 16 cl16
+%      \repeat unfold 16 hh16
+         hh4 cl hh cl hh cl hh cl
+%        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
+    } \\ {
+      bd4 sn sn sn sn sn sn sn
+    } >>
+  }
+>>
+}
+
+scoreH = \new ChoirStaff <<
       \new Staff \with {
         midiInstrument = "choir aahs"
         instrumentName = \markup \center-column { "Sopran" "Alt" }
@@ -1290,43 +1626,198 @@ scoreHVerse = \lyricmode {
         } { \voiceTwo \scoreHBass }
       >>
     >>
+
+\bookpart {
+\header {
+  subtitle = "Vom Himmel hoch"
+  subsubtitle = "NN"
+  instrument = "NN"
+  composer = "NN"
+  arranger = "NN"
+  poet = "NN"
+  meter = "NN"
+  piece = "NN"
+  opus = "GL 237"
+}
+  \score {
+%    {
+%      \claveH
+      \scoreH
+%    }
     \layout { }
+%    \midi { }
+  }
+    \markup {
+      \wordwrap-string "
+2) Euch ist ein Kindlein heut geborn
+von einer Jungfrau auserkorn,
+ein Kindelein so zart und fein,
+das soll eu'r Freud und Wonne sein.
+
+3) Es ist der Herr Christ, unser Gott,
+der will euch führn aus aller Not,
+er will euer Heiland selber sein,
+von allen Sünden machen rein.
+
+4) Er bringt euch alle Seligkeit,
+die Gott der Vater hat bereit',
+dass ihr mit uns im Himmelreich
+sollt leben nun und ewiglich.
+
+5) So merket nun das Zeichen recht:
+die Krippe, Windelein so schlecht,
+da findet ihr das Kind gelegt,
+das alle Welt erhält und trägt.
+
+6) Des lasst uns alle fröhlich sein
+und mit den Hirten gehn hinein,
+zu sehn, was Gott uns hat beschert,
+mit seinem lieben Sohn verehrt.
+
+7) Merk auf, mein Herz, und sieh dorthin;
+was liegt doch in dem Krippelein?
+Wes ist das schöne Kindelein?
+Es ist das liebe Jesulein.
+
+8) Sei mir willkommen, edler Gast!
+Den Sünder nicht verschmähet hast
+und kommst ins Elend her zu mir:
+wie soll ich immer danken dir?
+
+9) Ach Herr, du Schöpfer aller Ding,
+wie bist du worden so gering,
+dass du da liegst auf dürrem Gras,
+davon ein Rind und Esel aß!
+
+10) Und wär die Welt vielmal so weit,
+von Edelstein und Gold bereit',
+so wär sie doch dir viel zu klein,
+zu sein ein enges Wiegelein.
+
+11) Der Sammet und die Seiden dein,
+das ist grob Heu und Windelein,
+darauf du König groß und reich
+herprangst, als wär's dein Himmelreich.
+
+12) Das hat also gefallen dir,
+die Wahrheit anzuzeigen mir,
+wie aller Welt Macht, Ehr und Gut
+vor dir nichts gilt, nichts hilft noch tut.
+
+13) Ach mein herzliebes Jesulein,
+mach dir ein rein sanft Bettelein,
+zu ruhen in meins Herzens Schrein,
+dass ich nimmer vergesse dein.
+
+14) Davon ich allzeit fröhlich sei,
+zu springen, singen immer frei
+das rechte Susaninne schön,
+mit Herzenslust den süßen Ton.
+
+15) Lob, Ehr sei Gott im höchsten Thron,
+der uns schenkt seinen ein'gen Sohn.
+Des freuet sich der Engel Schar
+und singet uns solch neues Jahr."
+    }
+  \score {
+    {
+      \claveH
+      \scoreH
+    }
+%    \layout { }
     \midi { }
   }
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+globalI = {
+  \key d \major
+  \time 4/4
+  \tempo "Andante" 4=100
+}
+
 scoreISoprano = \relative c'' {
-  \global
+  \globalI
   % Music follows here.
-  
+  a2 b|
+  a4. g8 fs4( g)|
+  a2 b|
+  a4. g8 fs4( g)\breathe
+  a2 a|
+  b cs4 d|
+  cs2 b|
+  a1\breathe
+  e4.( fs8) e4 fs|
+  g4.( a8) g2|
+  fs4.( g8) fs4 g|
+  a4.( b8) a2|\breathe
+  d4( c) b( a)|
+  d b a g|
+  fs2 e|
+  d1
+  \bar "|."
 }
 
 scoreIAlto = \relative c' {
-  \global
+  \globalI
   % Music follows here.
   
 }
 
 scoreITenor = \relative c' {
-  \global
+  \globalI
   % Music follows here.
   
 }
 
 scoreIBass = \relative c {
-  \global
+  \globalI
   % Music follows here.
-  
+  d2 g,|
+  d' d,|
+  d' g,|
+  d' d,|\breathe
+  d' c|
+  e a,4 d|
+  e2 e,2|
+  a1\breathe|
+  a'2 a,|
+  a'2. e4|
+  d2 d,|
+  d'2. d,4|\breathe
+  b' fs g2|
+  fs4 g ds' e|
+  fs g a a,|
+  d1
 }
 
 scoreIVerse = \lyricmode {
   % Lyrics follow here.
-  
+  Oh du fröh -- li -- che, o du se -- li -- ge,
+  gna -- den -- brin -- gen -- de Weih -- nachts -- zeit!
+  Welt ging ver -- lo -- ren, Christ ist ge -- bo -- ren:
+  Freu -- e, freu -- e dich, o Chris -- ten -- heit!
 }
 
-\bookpart {
-  \score {
-    \new ChoirStaff <<
+claveI = {\new DrumStaff <<
+  \drummode {\globalI
+   % bd4 sn4
+    << {
+%      \repeat unfold 16 cl16
+%      \repeat unfold 16 hh16
+         hh8 cl hh cl hh cl hh cl
+%        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
+    } \\ {
+      bd4 sn sn sn
+    } >>
+  }
+>>
+}
+
+scoreI = \new ChoirStaff <<
       \new Staff \with {
         midiInstrument = "choir aahs"
         instrumentName = \markup \center-column { "Sopran" "Alt" }
@@ -1358,43 +1849,156 @@ scoreIVerse = \lyricmode {
         } { \voiceTwo \scoreIBass }
       >>
     >>
+
+\bookpart {
+\header {
+  subtitle = "O du fröhliche"
+  subsubtitle = "NN"
+  instrument = "NN"
+  composer = "NN"
+  arranger = "NN"
+  poet = "NN"
+  meter = "NN"
+  piece = "NN"
+  opus = "GL 238"
+}
+  \score {
+%    {
+%      \claveI
+      \scoreI
+%    }
     \layout { }
+%    \midi { }
+  }
+  \markup {
+    \wordwrap-string "
+2) Oh du fröhliche, o du selige,
+gnadenbringende Weihnachtszeit!
+Christ ist erschienen, uns zu versühnen:
+Freue, freue dich, o Christenheit!
+
+3) Oh du fröhliche, o du selige,
+gnadenbringende Weihnachtszeit!
+Himmlische Heere jauchzen dir Ehre:
+Freue, freue dich, o Christenheit!
+"
+  }
+  \score {
+    {
+      \claveI
+      \scoreI
+    }
+%    \layout { }
     \midi { }
   }
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+globalJ = {
+  \key f \major
+  \time 2/2
+  \tempo "Andante" 4=100
+}
+
 scoreJSoprano = \relative c'' {
-  \global
+  \globalJ
   % Music follows here.
-  
+  \partial 4
+  f,4|
+  f2 c4 f|
+  g2 c,|
+  a'4 g a bf|
+  a2 g4\breathe f|
+  f2 e4 d|
+  e( f) g a8( f)|
+  e2( d4.) c8|
+  c2. r4|
+  c'2 bf4 a|
+  bf2 a|
+  g4 a f g|
+  e( d) c\breathe f|
+  f e f g|
+  f2 c4 a'|
+  a g a b|
+  a2 g4\breathe c|
+  b a g f|
+  e2 f4( b)|
+  a2( g4.) f8|
+  f2 r4|
+  \bar "|."
 }
 
 scoreJAlto = \relative c' {
-  \global
+  \globalJ
   % Music follows here.
   
 }
 
 scoreJTenor = \relative c' {
-  \global
+  \globalJ
   % Music follows here.
   
 }
 
 scoreJBass = \relative c {
-  \global
+  \globalJ
   % Music follows here.
-  
+  f4|
+  f, g a f|
+  c'2 e,|
+  f4 e f g|
+  a b c\breathe a|
+  d2 c4 b|
+  c d e f|
+  g2 g,|
+  c2. r4|
+  a2 d|
+  bf f'|
+  e4 a, d b|
+  c2.\breathe f,8 g|
+  a4 bf a e|
+  f2. f'8 e|
+  f4 e d2|
+  c4 b c fs,|
+  g a bf b|
+  c cs d g,|
+  a4. bf8 c4 c,|
+  f2 r4
 }
 
 scoreJVerse = \lyricmode {
   % Lyrics follow here.
-  
+  A -- des -- te fi -- de -- les
+  lae -- ti tri -- um -- phan -- tes,
+  Ve -- ni -- te, ve -- ni -- te
+  in Beth -- le -- hem.
+  Na -- tum vi -- de -- te
+  Re -- gem an -- ge -- lo -- rum.
+  Ve -- ni -- te ad -- o -- re -- mus,
+  ve -- ni -- te ad -- o -- re -- mus,
+  ve -- ni -- te ad -- o -- re -- mus
+  Do -- mi -- num.
 }
 
-\bookpart {
-  \score {
-    \new ChoirStaff <<
+claveJ = {\new DrumStaff <<
+  \drummode {\globalJ
+   % bd4 sn4
+    << {
+%      \repeat unfold 16 cl16
+%      \repeat unfold 16 hh16
+         hh8 cl hh cl hh cl
+%        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
+    } \\ {
+      bd4 sn sn
+    } >>
+  }
+>>
+}
+
+scoreJ = \new ChoirStaff <<
       \new Staff \with {
         midiInstrument = "choir aahs"
         instrumentName = \markup \center-column { "Sopran" "Alt" }
@@ -1426,43 +2030,137 @@ scoreJVerse = \lyricmode {
         } { \voiceTwo \scoreJBass }
       >>
     >>
+
+\bookpart {
+\header {
+  subtitle = "Adeste fideles"
+  subsubtitle = "NN"
+  instrument = "NN"
+  composer = "NN"
+  arranger = "NN"
+  poet = "NN"
+  meter = "NN"
+  piece = "NN"
+  opus = "GL 242"
+}
+  \score {
+%    {
+%      \claveJ
+      \scoreJ
+%    }
     \layout { }
+%    \midi { }
+  }
+  \markup {
+    \wordwrap-string "
+2. Deum de Deo,
+lumen de lumine,
+Gestant
+puellae viscera.
+Deum verum,
+genitum non factum.
+Venite adoremus
+Dominum.
+
+Cantet nunc 'Io'
+chorus angelorum;
+Cantet nunc
+aula caelestium,
+Gloria!
+Soli Deo Gloria!
+Venite adoremus
+Dominum.
+
+Ergo qui natus
+die hodierna,
+Jesu,
+tibi sit gloria,
+Patris aeterni
+Verbum caro factum.
+Venite adoremus
+Dominum."
+  }
+  \score {
+    {
+      \claveJ
+      \scoreJ
+    }
+%    \layout { }
     \midi { }
   }
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+globalK = {
+  \key ef \major
+  \time 2/2
+  \tempo "Andante" 4=100
+}
+
 scoreKSoprano = \relative c'' {
-  \global
+  \globalK
   % Music follows here.
-  
+  bf2 4 4 c bf bf2 g\breathe 
+  af g4 f2 ef d4 ef2 r
+  bf' bf4 bf c bf bf2 g\breathe
+  af g4 f2 ef d4 ef2 r4 g f d ef c bf2
+  r4 bf' bf bf c bf bf2 g\breathe
+  af g4 f2 ef2 d4  ef1
+  \bar "|."
 }
 
 scoreKAlto = \relative c' {
-  \global
+  \globalK
   % Music follows here.
   
 }
 
 scoreKTenor = \relative c' {
-  \global
+  \globalK
   % Music follows here.
+}  
   
-}
-
 scoreKBass = \relative c {
-  \global
+  \globalK
   % Music follows here.
-  
+  ef2 4 4 af, ef' bf2 c\breathe
+  af ef'4 bf c af bf2 ef, r2 ef' ef4 ef
+  af, ef' bf2 c\breathe af ef'4 bf c af bf2 ef, r4
+  ef' f g ef f bf,2 r4
+  bf d ef af, ef' bf2 c\breathe
+  f, g4 af bf2 bf ef,1
 }
 
 scoreKVerse = \lyricmode {
   % Lyrics follow here.
-  
+  Es ist ein Ros/Reis ent -- sprun -- gen
+  aus ei -- ner Wur -- zel zart,
+  wie uns die Al -- ten sun -- gen,
+  von Jes -- se kam die Art
+  und hat ein Blüm -- lein bracht
+  mit -- ten im kal -- ten Win -- ter
+  wohl zu der hal -- ben Nacht.
 }
 
-\bookpart {
-  \score {
-    \new ChoirStaff <<
+claveK = {\new DrumStaff <<
+  \drummode {\globalK
+   % bd4 sn4
+    << {
+%      \repeat unfold 16 cl16
+%      \repeat unfold 16 hh16
+         hh8 cl cl cl hh cl cl cl
+%        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
+    } \\ {
+      bd4 sn sn sn
+    } >>
+  }
+>>
+}
+
+scoreK = \new ChoirStaff <<
       \new Staff \with {
         midiInstrument = "choir aahs"
         instrumentName = \markup \center-column { "Sopran" "Alt" }
@@ -1494,43 +2192,155 @@ scoreKVerse = \lyricmode {
         } { \voiceTwo \scoreKBass }
       >>
     >>
+
+\bookpart {
+\header {
+  subtitle = "Es ist ein Ros entsprungen"
+  subsubtitle = "NN"
+  instrument = "NN"
+  composer = "NN"
+  arranger = "NN"
+  poet = "NN"
+  meter = "NN"
+  piece = "NN"
+  opus = "GL 243"
+}
+  \score {
+%    {
+%      \claveK
+      \scoreK
+%    }
     \layout { }
+%    \midi { }
+  }
+  \markup {
+    \wordwrap-string "
+2) Das Blümlein, das ich meine,
+davon Jesaja sagt,
+hat uns gebracht alleine
+Marie, die reine Magd;
+aus Gottes ewgem Rat
+hat sie ein Kind geboren,
+welches uns selig macht.
+
+2) Strophe (katholische Fassung):
+Das Röslein, das ich meine,
+davon Jesaja sagt,
+ist Maria, die Reine,
+die uns das Blümlein bracht.
+Aus Gottes ewgem Rat
+hat sie ein Kind geboren
+und bleibt doch reine Magd.
+
+3) Das Blümelein so kleine,
+das duftet uns so süß;
+mit seinem hellen Scheine
+vertreibt's die Finsternis.
+Wahr' Mensch und wahrer Gott,
+hilft uns aus allem Leide,
+rettet von Sünd und Tod.
+
+4) O Jesu, bis zum Scheiden
+aus diesem Jammertal
+lass dein Hilf uns geleiten
+hin in den Freudensaal,
+in deines Vaters Reich,
+da wir dich ewig loben;
+o Gott, uns das verleih!
+"
+  }
+  \score {
+    {
+      \claveK
+      \scoreK
+    }
+%    \layout { }
     \midi { }
   }
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+globalL = {
+  \key ef \major
+  \time 4/4
+  \tempo "Andante" 4=100
+}
+
 scoreLSoprano = \relative c'' {
-  \global
+  \globalL
   % Music follows here.
-  
+  \partial 4
+  ef,4|
+  bf' bf bf bf|
+  c bf8( af) g4 g|
+  af bf c c|
+  bf2 r4 bf|
+  bf bf bf g|
+  bf af8( g) f4 bf|
+  g f8( ef) f4 f|
+  ef2\breathe g|
+  bf4 af8( g) f4 f|
+  ef2.|
+  \bar "|."
 }
 
 scoreLAlto = \relative c' {
-  \global
+  \globalL
   % Music follows here.
   
 }
 
 scoreLTenor = \relative c' {
-  \global
+  \globalL
   % Music follows here.
   
 }
 
 scoreLBass = \relative c {
-  \global
+  \globalL
   % Music follows here.
+  ef4|
+  d bf ef g,|
+  af bf ef c|
+  f g ef f|
+  bf,2 r4 d|
+  ef bf ef ef,|
+  g af bf d|
+  ef c af bf|
+  c2\breathe c|
+  g4 af bf2|
+  ef,2.
   
 }
 
 scoreLVerse = \lyricmode {
   % Lyrics follow here.
-  
+  Lobt Gott, ihr Chris -- ten al -- le gleich,
+  in sei -- nem höchs -- ten Thron,
+  der heut schließt auf sein Him -- mel -- reich
+  und schenkt uns sei -- nen Sohn,
+  und schenkt uns sei -- nen Sohn.  
 }
 
-\bookpart {
-  \score {
-    \new ChoirStaff <<
+claveL = {\new DrumStaff <<
+  \drummode {\globalL
+   % bd4 sn4
+    << {
+%      \repeat unfold 16 cl16
+%      \repeat unfold 16 hh16
+         hh8 cl hh cl hh cl
+%        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
+    } \\ {
+      bd4 sn sn
+    } >>
+  }
+>>
+}
+
+scoreL = \new ChoirStaff <<
       \new Staff \with {
         midiInstrument = "choir aahs"
         instrumentName = \markup \center-column { "Sopran" "Alt" }
@@ -1562,7 +2372,66 @@ scoreLVerse = \lyricmode {
         } { \voiceTwo \scoreLBass }
       >>
     >>
+
+
+\bookpart {
+\header {
+  subtitle = "Lobt Gott, ihr Christen alle gleich"
+  subsubtitle = "NN"
+  instrument = "NN"
+  composer = "NN"
+  arranger = "NN"
+  poet = "NN"
+  meter = "NN"
+  piece = "NN"
+  opus = "GL 247"
+}
+  \score {
+%    {
+%      \claveL
+      \scoreL
+%    }
     \layout { }
+%    \midi { }
+  }
+  \markup {
+    \wordwrap-string "
+2) Er kommt aus seines Vaters Schoß
+und wird ein Kindlein klein,
+er liegt dort elend, nackt und bloß
+in einem Krippelein,
+in einem Krippelein.
+
+3) Er entäußert sich all seiner G'walt,
+wird niedrig und gering
+und nimmt an eines Knechts Gestalt,
+der Schöpfer aller Ding,
+der Schöpfer aller Ding.
+
+4) Er wechselt mit uns wunderlich:
+Fleisch und Blut nimmt er an
+und gibt uns in seins Vaters Reich
+die klare Gottheit dran,
+die klare Gottheit dran.
+
+5) Er wird ein Knecht und ich ein Herr;
+das mag ein Wechsel sein!
+Wie könnt es doch sein freundlicher,
+das herze Jesulein,
+das herze Jesulein!
+
+6) Heut schließt er wieder auf die Tür
+zum schönen Paradeis;
+der Cherub steht nicht mehr dafür.
+Gott sei Lob, Ehr und Preis,
+Gott sei Lob, Ehr und Preis!"
+  }
+  \score {
+    {
+      \claveL
+      \scoreL
+    }
+%    \layout { }
     \midi { }
   }
 }
