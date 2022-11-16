@@ -109,7 +109,9 @@ scoreAAlto = \relative c' {
 scoreATenor = \relative c' {
   \globalA
   % Music follows here.
+
   R1*5|
+
   c4 b8.( d16) c4 r8 e|
   c4.( d8) c4 r8 c|
   c4.( d8) c4 r8 e|
@@ -830,7 +832,7 @@ scoreCTenor = \relative c' {
   b 8 8 8. 16 c4 8 8|
   4 8 8 8 8 4|
   4 r r2|
-  R1*2s
+  R1*2
   r2 r4 r8 c|
   4 a8 8 c8. 16 e8 8|
   a, d8 4 c8 e c4|
@@ -1634,7 +1636,9 @@ scoreEAlto = \relative c' {
 scoreETenor = \relative c' {
   \globalE
   % Music follows here.
+  
   R1*32
+  
   \tempo "Allegro" 4=100
   r4 r4 r4 r8 b\f|
   e8. 16 8 8 8 d r b|
