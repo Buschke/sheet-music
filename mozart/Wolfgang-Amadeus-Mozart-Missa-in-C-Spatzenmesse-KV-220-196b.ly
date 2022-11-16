@@ -30,133 +30,162 @@
 }
 
 global = {
+  \compressEmptyMeasures
+  \key c \major
+  \time 4/4
+  \tempo "Allegro" 4=100
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                      1. Kyrie
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+globalA = {
+  \compressEmptyMeasures
   \key c \major
   \time 4/4
   \tempo "Allegro" 4=100
 }
 
 scoreATrumpetBb = \relative c'' {
-  \global
+  \globalA
   \transposition bf
   % Music follows here.
-  
+
 }
 
 scoreATimpani = \relative c {
-  \global
+  \globalA
   % Music follows here.
-  
+
 }
 
 scoreATromboneI = \relative c {
-  \global
+  \globalA
   % Music follows here.
-  
+
 }
 
 scoreATromboneII = \relative c {
-  \global
+  \globalA
   % Music follows here.
-  
+
 }
 
 scoreATromboneIII = \relative c {
-  \global
+  \globalA
   % Music follows here.
-  
+
 }
 
 scoreAViolinI = \relative c'' {
-  \global
+  \globalA
   % Music follows here.
-  
+
 }
 
 scoreAViolinII = \relative c'' {
-  \global
+  \globalA
   % Music follows here.
-  
+
 }
 
 scoreASoprano = \relative c'' {
-  \global
+  \globalA
   % Music follows here.
-  
+
 }
 
 scoreAAlto = \relative c' {
-  \global
+  \globalA
   % Music follows here.
-  
+
 }
 
 scoreATenor = \relative c' {
-  \global
+  \globalA
   % Music follows here.
-  R1*5
-  c4 b8.( d16) c4 r8 e
-  c4.( d8) c4 r8 c
-  c4.( d8) c4 r8 e
-  e d r d c4 f8 d
-  c4( e) d r8 d16( b)
-  e4 c r8 c b a
-  g d' e e d d r4
-  r1
-  r4 r8 b a g e'( d)
-  d4 r r2
-  r1
-  r4 r8 c a a a( b)
-  a bf4 a8 r d4 e8
-  r d c4 b r
-  c b8.( d16) c4 r8 e
-  c4.( d8) c4 r8 c
-  c4.( d8) c4 r8 e
-  e d r d c4 f8 d
-  c4 g r8 g d'16( c b d)
-  c4 r r8 e,8 b'16( a g b)
-  a4 r r8 c c16( d) c( b)
-  c8. b32 c a8 c c b r4
-  r e2( d4)
-  c r8 c c4.( d8)
-  c4 e2(d4)
-  c4 r8 c c4.( d8)
-  c e4 d8 r d4 c8
-  r c c4 b r8s d16 d
-  d8 c c( b) c4 r
-  c4 b8.( d16) c4 r8 c
-  c4.( d8) c4 r
-  c d c r8 c16 c
-  c8 c b4 c r
+  R1*5|
+  c4 b8.( d16) c4 r8 e|
+  c4.( d8) c4 r8 c|
+  c4.( d8) c4 r8 e|
+  e d r d c4 f8 d|
+  c4( e) d r8 d16( b)|
+  e4 c r8 c b a|
+  g d' e e d d r4|
+  r1|
+  r4 r8 b a g e'( d)|
+  d4 r r2|
+  r1|
+  r4 r8 c a a a( b)|
+  a bf4 a8 r d4 e8|
+  r d c4 b r|
+  c b8.( d16) c4 r8 e|
+  c4.( d8) c4 r8 c|
+  c4.( d8) c4 r8 e|
+  e d r d c4 f8 d|
+  c4 g r8 g d'16( c b d)|
+  c4 r r8 e,8 b'16( a g b)|
+  a4 r r8 c c16( d) c( b)|
+  c8. b32( c) a8 c c b r4|
+  r e2( d4)|
+  c r8 c c4.( d8)|
+  c4 e2(d4)|
+  c4 r8 c c4.( d8)|
+  c e4 d8 r d4 c8|
+  r8 c c4 b r8 d16 d|
+  d8 c c( b) c4 r|
+  c4 b8.( d16) c4 r8 c|
+  c4.( d8) c4 r|
+  c d c r8 c16 c|
+  c8 c b4 c r|
   \bar "|."
 }
 
 scoreABass = \relative c {
-  \global
+  \globalA
   % Music follows here.
-  
+
 }
 
 scoreASopranoVerse = \lyricmode {
   % Lyrics follow here.
-  
+
 }
 
 scoreAAltoVerse = \lyricmode {
   % Lyrics follow here.
-  
+
 }
 
 scoreATenorVerse = \lyricmode {
   % Lyrics follow here.
+  Ky -- ri -- e e -- lei -- son,
+  e -- lei -- son, e -- lei -- son,
+  e -- lei -- son, e -- lei -- son,
+  e -- lei -- son, e -- lei -- son
   Ky -- ri -- e e -- lei -- son.
-  Ky -- ri -- e e -- lei -- son,  e -- lei -- son.
-  Chri -- ste e -- lei -- son, e -- lei -- son.
-  Ky -- ri -- e e -- lei -- son.  
+  Chri -- ste e -- lei -- son, Chri -- ste e -- lei -- son, 
+  Chri -- ste, Chri -- ste e -- lei -- son, 
+  Ky -- ri -- e e -- lei -- son, e -- lei -- son, e -- lei -- son, e -- lei -- son, e -- lei -- son,
+  e -- lei -- son, e -- lei -- son,
+  e -- lei -- son.
+  Ky -- ri -- e e -- lei -- son.
+  Chri -- ste e -- lei -- son.
+  Chri -- ste e -- lei -- son.
+  Chri -- ste, Chri -- ste e -- lei -- son.
+  Ky -- ri -- e e -- lei -- son.
+  Ky -- ri -- e e -- lei -- son.
+  Ky -- ri -- e, Ky -- ri -- e e -- lei -- son.
 }
 
 scoreABassVerse = \lyricmode {
   % Lyrics follow here.
-  
+
 }
 
 scoreAPianoReduction = \new PianoStaff \with {
@@ -210,23 +239,23 @@ scoreARehearsalMidi = #
  #})
 
 scoreABcMusic = \relative c {
-  \global
+  \globalA
   % Music follows here.
   c4 g' a c8. e,16
   f8 g a b
 }
 
 scoreABcFigures = \figuremode {
-  \global
+  \globalA
   \override Staff.BassFigureAlignmentPositioning #'direction = #DOWN
   % Figures follow here.
   <6 4>
 }
 
 scoreAFigBass = \figuremode {
-  \global
+  \globalA
   % Figures follow here.
-  
+
 }
 
 scoreATrumpetBbPart = \new Staff \with {
@@ -356,92 +385,206 @@ scoreABassFiguresPart = \new FiguredBass \scoreAFigBass
   }
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                      2. Gloria
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+globalB = {
+  \compressEmptyMeasures
+  \key c \major
+  \time 3/4
+  \tempo "Allegro" 4=100
+}
+
 
 scoreBTrumpetBb = \relative c'' {
-  \global
+  \globalB
   \transposition bf
   % Music follows here.
-  
+
 }
 
 scoreBTimpani = \relative c {
-  \global
+  \globalB
   % Music follows here.
-  
+
 }
 
 scoreBTromboneI = \relative c {
-  \global
+  \globalB
   % Music follows here.
-  
+
 }
 
 scoreBTromboneII = \relative c {
-  \global
+  \globalB
   % Music follows here.
-  
+
 }
 
 scoreBTromboneIII = \relative c {
-  \global
+  \globalB
   % Music follows here.
-  
+
 }
 
 scoreBViolinI = \relative c'' {
-  \global
+  \globalB
   % Music follows here.
-  
+
 }
 
 scoreBViolinII = \relative c'' {
-  \global
+  \globalB
   % Music follows here.
-  
+
 }
 
 scoreBSoprano = \relative c'' {
-  \global
+  \globalB
   % Music follows here.
-  
+
 }
 
 scoreBAlto = \relative c' {
-  \global
+  \globalB
   % Music follows here.
-  
+
 }
 
 scoreBTenor = \relative c' {
-  \global
+  \globalB
   % Music follows here.
-  r4
+  e2 e4|
+  b2 f'4|
+  e r r|
+  a,( b) b|
+  c8. b16 c4 r|
+  c2 c4|
+  c4.( g8) c( e)|
+  e2( d4)|
+  c r r
+  R2.*8
+  a4. 8 4|
+  d4. 8 4|
+  d b r|
+  c2 b4|
+  a d d|
+  g,8 b e4( d)|
+  d r r|
+  R2.*14
+  r4 r e
+  a,2.|
+  g4 r e'|
+  c2.|
+  b4 r r|
+  b ds e|
+  e ds r|
+  r b\p fs|
+  g fs r|
+  r a e|
+  f e r|
+  r d g|
+  e2 b'4~|
+  b a2|
+  a4 r d\f|
+  g,2.|
+  f4 r d'|
+  g,2.|
+  g4 r r|
+  b c d|
+  c c r|
+  r2.|
+  a4. 8 4|
+  r2.|
+  b4. 8 4|
+  r c4.\p g8|
+  4. bf8 4~|
+  8 8 a2|
+  g4 r d'\f|
+  bf2.|
+  4 r bf|
+  b2~ 8. 16|
+  c4 r r|
+  c4 8. 16 4|
+  4 b r|
+  r g\p d|
+  ef d r|
+  r c' g|
+  af g r|
+  bf2 4|
+  af2 c4|
+  ef2.|
+  d4 r r|
+  R2.*12
+  e4\f 4 4|
+  b4. f'8 8 8|
+  e4. c8 4|
+  2 4|
+  4.(g8) c(e)|
+  2(d4)|
+  c r b|
+  c r g|
+  a r e'|
+  d e(d)|
+  c r r|
+  r2.|
+  r4 c c8( f)|
+  e( d c b c d)|
+  e4 r r|
+  d b r|
+  b b r|
+  b b r|
+  c8 8 4( b)|
+  c r r
+  \bar "|."
 }
 
 scoreBBass = \relative c {
-  \global
+  \globalB
   % Music follows here.
-  
+
 }
 
 scoreBSopranoVerse = \lyricmode {
   % Lyrics follow here.
-  
+
 }
 
 scoreBAltoVerse = \lyricmode {
   % Lyrics follow here.
-  
+
 }
 
 scoreBTenorVerse = \lyricmode {
   % Lyrics follow here.
-  
+  Et in ter -- ra pax, pax ho -- mi -- ni -- bus bo -- nae vo -- lun -- ta -- tis.
+  Gra -- ti -- as a -- gi -- mus ti -- bi pro -- pter ma -- gnam glo -- ri -- am tu -- am.
+  Qui tol -- lis pec -- ca -- ta, pec -- ca -- ta, mun -- di, mi -- se -- re -- re, mi -- se -- re -- re, mi -- se -- re -- re no -- bis.
+  Qui tol -- lis pec -- ca -- ta, pec -- ca -- ta  mun -- di,
+  sus -- ci -- pe, sus -- ci -- pe de -- pre -- ca -- ti -- o -- nem no -- stram.
+  Qui se -- des ad dex -- te -- ram, ad dex -- te -- ram Pa -- tris, mi -- se -- re, mi -- se -- re -- re -- re,
+  mi -- se -- re -- re no -- bis.  
+  Cum Sanc -- to Spi -- ri -- tu:
+  in glo -- ri -- a De -- i Pa -- tris. A -- men,
+  a -- men, a -- men, a -- men,
+  a -- men,
+  a -- men,
+  a -- men,
+  a -- men,
+  a -- men,
+  a -- men,
+  a -- men,
+  a -- men.
 }
 
 scoreBBassVerse = \lyricmode {
   % Lyrics follow here.
-  
+
 }
 
 scoreBPianoReduction = \new PianoStaff \with {
@@ -495,22 +638,22 @@ scoreBRehearsalMidi = #
  #})
 
 scoreBBcMusic = \relative c {
-  \global
+  \globalB
   % Music follows here.
-  
+
 }
 
 scoreBBcFigures = \figuremode {
-  \global
+  \globalB
   \override Staff.BassFigureAlignmentPositioning #'direction = #DOWN
   % Figures follow here.
-  
+
 }
 
 scoreBFigBass = \figuremode {
-  \global
+  \globalB
   % Figures follow here.
-  
+
 }
 
 scoreBTrumpetBbPart = \new Staff \with {
@@ -644,92 +787,218 @@ scoreBBassFiguresPart = \new FiguredBass \scoreBFigBass
   }
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                      3. Credo
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+globalC = {
+  \compressEmptyMeasures
+  \key c \major
+  \time 4/4
+  \tempo "Allegro" 4=100
+}
 
 scoreCTrumpetBb = \relative c'' {
-  \global
+  \globalC
   \transposition bf
   % Music follows here.
-  
+
 }
 
 scoreCTimpani = \relative c {
-  \global
+  \globalC
   % Music follows here.
-  
+
 }
 
 scoreCTromboneI = \relative c {
-  \global
+  \globalC
   % Music follows here.
-  
+
 }
 
 scoreCTromboneII = \relative c {
-  \global
+  \globalC
   % Music follows here.
-  
+
 }
 
 scoreCTromboneIII = \relative c {
-  \global
+  \globalC
   % Music follows here.
-  
+
 }
 
 scoreCViolinI = \relative c'' {
-  \global
+  \globalC
   % Music follows here.
-  
+
 }
 
 scoreCViolinII = \relative c'' {
-  \global
+  \globalC
   % Music follows here.
-  
+
 }
 
 scoreCSoprano = \relative c'' {
-  \global
+  \globalC
   % Music follows here.
-  
+
 }
 
 scoreCAlto = \relative c' {
-  \global
+  \globalC
   % Music follows here.
-  
+
 }
 
 scoreCTenor = \relative c' {
-  \global
+  \globalC
   % Music follows here.
-  r4
+  R1*2
+  e4\f 8 8 c4 4|
+  c4 e8 8 d d b4|
+  c8 e c4 d r|
+  r8 c4 8 d8 16 16 8. 16|
+  8 4 8 8 8 8. 16|
+  4 r r r|
+  R1*4
+  d4\f 8 8 a4 8 8|
+  b 8 8 8. 16 c4 8 8|
+  4 8 8 8 8 4|
+  4 r r2|
+  R1*2s
+  r2 r4 r8 c|
+  4 a8 8 c8. 16 e8 8|
+  a, d8 4 c8 e c4|
+  d r8 b c4 b8 8|
+  a4 c8 8 a f r e'|
+  c a r d c4( b)|
+  c r r2|
+  R1*3
+  r2 r4 b8\f 8|
+  bf4 g c8. 16 d8 d|
+  e4 e r8 d d8. 16|
+  8 8 b b a4\p fs|
+  e4 c' fs, g8( a)|
+  b4. a8 g4 r|
+  \bar "||"
+  \tempo "Allegro" 4=100
+  r8 e'8 8 8 c4 c|
+  8 16 16 e4 d8 8 b4|
+  c8 e c4 d b8 8|
+  c4 e8 c d d8 4|
+  4 r8 d8 8 16 16 4|
+  4 r4 r8 e d8. 16|
+  c8 8 8 8 b4 r8 ds|
+  e8 16 16 8 b8 8 8 r4|
+  e2 b4 r|
+  r2 r4 as\p|
+  b4. 8 4 8\f 8|
+  4 8 8 c c b4|
+  c r c r|
+  d r8 b c c b4|
+  c4 r4 r2|
+  R1*7
+  r4 r8 d8 4 a|
+  gs b r8 b d d|
+  c8. 16 4 r8 c c c|
+  8. a16 8 8 b8. e16 4|
+  r8 e8 8. 16 4 r8 e|
+  d8 8 4 4 r|
+  r8 c4 8 8 d e d|
+  c e c4 d r|
+  r8 c4 8 d4 4|
+  8. 16 8 8 8 b8 r4|
+  d2\p c|
+  c b4 r|
+  r8 g\f e'4 c 8 8 8 8|
+  8. 16 g4 d' d|
+  c8 e c4 d r8 b|
+  c4 r8 b a4 r8 c(|
+  a) f r e'( c )a d4|
+  c b c d8 d|
+  c4(b) c b|
+  c d e r
+  \bar "|."
 }
 
 scoreCBass = \relative c {
-  \global
+  \globalC
   % Music follows here.
-  
+
 }
 
 scoreCSopranoVerse = \lyricmode {
   % Lyrics follow here.
-  
+
 }
 
 scoreCAltoVerse = \lyricmode {
   % Lyrics follow here.
-  
+
 }
 
 scoreCTenorVerse = \lyricmode {
   % Lyrics follow here.
+  Pa -- trem om -- ni -- po -- ten -- tem, fac -- to -- rem cae -- li et ter -- rae,
+  vi -- si -- bi -- li -- um om -- ni -- um et in -- vi -- si -- bi -- li -- um.
+    
+  De -- um de De -- o, Lu -- men de Lu -- mi -- ne,
+  De -- um ver -- um de De -- o ve -- ro,
   
+  Qui prop -- ter nos ho -- mi -- nes et pro -- pter no -- stram sa -- lu -- tem
+  de -- scen -- dit
+  de -- scen -- dit 
+  de -- scen -- dit 
+  de -- scen -- dit 
+  de cae -- lis.
+  
+  Cru -- ci -- fi -- xus et -- i -- am pro no -- bis, sub Pon -- ti -- o Pi -- la -- to pas -- sus,
+  pas -- sus 
+  et se -- pul -- tus est.
+
+  Et re -- sur -- re -- xit ter -- ti -- a di -- e, se -- cun -- dum Scrip -- tu -- ras.
+
+  Et a -- scen -- dit in cae -- lum,
+  se -- det ad dex -- te -- ram Pa -- tris.
+  
+  Et i -- te -- rum ven -- tu -- rus est cum glo -- ri -- a, iu -- di -- ca -- re vi -- vos et mor -- tu -- os,
+  cu -- ius reg -- ni non e -- rit fi -- nis,
+  non, non, non e -- rit fi -- nis.
+  
+  Et un -- am, san -- ctam,
+  san -- ctam
+  ca -- tho -- li -- cam et a -- po -- sto -- li -- cam Ec -- cle -- si -- am.
+  
+  Con -- fi -- te -- or un -- um bap -- ti -- sma in re -- mis -- si -- o -- nem pec -- ca -- to -- rum.
+  Et ex -- spec -- to re -- sur -- rec -- ti -- o -- nem mor -- tu -- o -- rum.
+
+  Et vit -- am ven -- tu -- ri sae -- cu -- li.
+  
+  A -- men,
+  a -- men,
+  a -- men,
+  a -- men,
+  a -- men,
+  a -- men,
+  a -- men,
+  a -- men,
+  a -- men,
+  a -- men,
+  a -- men,
+  a -- men,
+  a -- men.
 }
 
 scoreCBassVerse = \lyricmode {
   % Lyrics follow here.
-  
+
 }
 
 scoreCPianoReduction = \new PianoStaff \with {
@@ -785,20 +1054,20 @@ scoreCRehearsalMidi = #
 scoreCBcMusic = \relative c {
   \global
   % Music follows here.
-  
+
 }
 
 scoreCBcFigures = \figuremode {
-  \global
+  \globalC
   \override Staff.BassFigureAlignmentPositioning #'direction = #DOWN
   % Figures follow here.
-  
+
 }
 
 scoreCFigBass = \figuremode {
-  \global
+  \globalC
   % Figures follow here.
-  
+
 }
 
 scoreCTrumpetBbPart = \new Staff \with {
@@ -932,106 +1201,140 @@ scoreCBassFiguresPart = \new FiguredBass \scoreCFigBass
   }
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                      4. Sanctus
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+globalD = {
+  \compressEmptyMeasures
+  \key c \major
+  \time 3/4
+  \tempo "Andante" 4=60
+}
+
 
 scoreDTrumpetBb = \relative c'' {
-  \global
+  \globalD
   \transposition bf
   % Music follows here.
-  
+
 }
 
 scoreDTimpani = \relative c {
-  \global
+  \globalD
   % Music follows here.
-  
+
 }
 
 scoreDTromboneI = \relative c {
-  \global
+  \globalD
   % Music follows here.
-  
+
 }
 
 scoreDTromboneII = \relative c {
-  \global
+  \globalD
   % Music follows here.
-  
+
 }
 
 scoreDTromboneIII = \relative c {
-  \global
+  \globalD
   % Music follows here.
-  
+
 }
 
 scoreDViolinI = \relative c'' {
-  \global
+  \globalD
   % Music follows here.
-  
+
 }
 
 scoreDViolinII = \relative c'' {
-  \global
+  \globalD
   % Music follows here.
-  
+
 }
 
 scoreDSoprano = \relative c'' {
-  \global
+  \globalD
   % Music follows here.
-  
+
 }
 
 scoreDAlto = \relative c' {
-  \global
+  \globalD
   % Music follows here.
-  
+
 }
 
 scoreDTenor = \relative c' {
-  \global
+  \globalD
   % Music follows here.
-  r1 r r r r r r
-  r2 c4 d8 b
-  c4 f8 e16 d e8 c r4
-  r2 r8 c d b
-  c8. c16 f4 e8 d r4
-  r4 r8 b d4 c8 r
-  r4 b8 b d4 c8 c
-  c8. c16 c8 c c4 c
-  d8 c c( b) c4 r8 g
-  a a r a g g r g\f
-  g a a r a g g r4
-  d'8 c c( b) c4 r
-  r r8 b d4 d
+  r4 c b|
+  r d c|
+  r c c|
+  g4. 8 4|
+  4. e'8 c4|
+  d2 c4|
+  8. 16 b4 r\fermata
+  \bar "||"
+  \time 4/4
+  \tempo "Allegro" 4=100
+  r2 c4 d8 b|
+  c4 f8 e16( d) e8 c r4|
+  r2 r8 c d b|
+  c8. 16 f4
+  e8 d r4|
+  r4 r8 b d4 c8 r|
+  r4 b8 b d4 c8 8|
+  8. 16 8 8 4 4|
+  d8 c c( b) c4 r8 g\p|
+  a a r a g g r g\f|
+  a a r a g g r4|
+  d'8 c c(b) c4 r|
+  r4 r8 b d4 d|
   c8 c b4 c r
   \bar "|."
 }
 
 scoreDBass = \relative c {
-  \global
+  \globalD
   % Music follows here.
-  
+
 }
 
 scoreDSopranoVerse = \lyricmode {
   % Lyrics follow here.
-  
+
 }
 
 scoreDAltoVerse = \lyricmode {
   % Lyrics follow here.
-  
+
 }
 
 scoreDTenorVerse = \lyricmode {
   % Lyrics follow here.
-  
+  Sanc -- tus, sanc -- tus, sanc -- tus Do -- mi -- nus, Do -- mi -- nus De -- us Sa -- ba -- oth.
+  Ple -- ni sunt cae -- li et ter -- ra,
+  ple -- ni sunt
+  glo -- ri -- a tu -- a.
+  Ho -- san -- na in ex -- cel -- sis.
+  Ho -- san -- na in ex -- cel -- sis,
+  in ex -- cel -- sis,
+  Ho -- san -- na, ho -- san -- na, ho -- san -- na
+  ho -- san -- na in ex -- cel -- sis.
+  Ho -- san -- na in ex -- cel -- sis.
 }
 
 scoreDBassVerse = \lyricmode {
   % Lyrics follow here.
-  
+
 }
 
 scoreDPianoReduction = \new PianoStaff \with {
@@ -1085,22 +1388,22 @@ scoreDRehearsalMidi = #
  #})
 
 scoreDBcMusic = \relative c {
-  \global
+  \globalD
   % Music follows here.
-  
+
 }
 
 scoreDBcFigures = \figuremode {
-  \global
+  \globalD
   \override Staff.BassFigureAlignmentPositioning #'direction = #DOWN
   % Figures follow here.
-  
+
 }
 
 scoreDFigBass = \figuremode {
-  \global
+  \globalD
   % Figures follow here.
-  
+
 }
 
 scoreDTrumpetBbPart = \new Staff \with {
@@ -1234,92 +1537,129 @@ scoreDBassFiguresPart = \new FiguredBass \scoreDFigBass
   }
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                      5. Benedictus
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+globalE = {
+  \compressEmptyMeasures
+  \key g \major
+  \time 4/4
+  \tempo "Andante" 4=62
+}
 
 scoreETrumpetBb = \relative c'' {
-  \global
+  \globalE
   \transposition bf
   % Music follows here.
-  
+
 }
 
 scoreETimpani = \relative c {
-  \global
+  \globalE
   % Music follows here.
-  
+
 }
 
 scoreETromboneI = \relative c {
-  \global
+  \globalE
   % Music follows here.
-  
+
 }
 
 scoreETromboneII = \relative c {
-  \global
+  \globalE
   % Music follows here.
-  
+
 }
 
 scoreETromboneIII = \relative c {
-  \global
+  \globalE
   % Music follows here.
-  
+
 }
 
 scoreEViolinI = \relative c'' {
-  \global
+  \globalE
   % Music follows here.
-  
+
 }
 
 scoreEViolinII = \relative c'' {
-  \global
+  \globalE
   % Music follows here.
-  
+
 }
 
 scoreESoprano = \relative c'' {
-  \global
+  \globalE
   % Music follows here.
-  
+
 }
 
 scoreEAlto = \relative c' {
-  \global
+  \globalE
   % Music follows here.
-  
+
 }
 
 scoreETenor = \relative c' {
-  \global
+  \globalE
   % Music follows here.
-  r4
+  R1*32
+  \tempo "Allegro" 4=100
+  r4 r4 r4 r8 b\f|
+  e8. 16 8 8 8 d r b|
+  c8. 16 8 8 8 b r4|
+  r4 r8 b d4 c8 r|
+  r4 b8 b d4 c8 8|
+  8. 16 8 8 4 4|
+  d8 c c(b) c4 r8 g\p|
+  a a r a g g r g\f|
+  a a r a g g r4|
+  d'8 c c(b) c4 r|
+  r4 r8 b d4 d|
+  c8 c b4 c r
+  \bar "|."
 }
 
 scoreEBass = \relative c {
-  \global
+  \globalE
   % Music follows here.
-  
+
 }
 
 scoreESopranoVerse = \lyricmode {
   % Lyrics follow here.
-  
+
 }
 
 scoreEAltoVerse = \lyricmode {
   % Lyrics follow here.
-  
+
 }
 
 scoreETenorVerse = \lyricmode {
   % Lyrics follow here.
-  
+  Ho -- san -- na in ex -- cel -- sis,
+  Ho -- san -- na in ex -- cel -- sis,
+  Ho -- san -- na in ex -- cel -- sis,
+  Ho -- san -- na in ex -- cel -- sis,
+  in ex -- cel -- sis
+  Ho -- san -- na,
+  ho -- san -- na,
+  ho -- san -- na,
+  ho -- san -- na in ex -- cel -- sis,
+  Ho -- san -- na in ex -- cel -- sis!
 }
 
 scoreEBassVerse = \lyricmode {
   % Lyrics follow here.
-  
+
 }
 
 scoreEPianoReduction = \new PianoStaff \with {
@@ -1373,22 +1713,22 @@ scoreERehearsalMidi = #
  #})
 
 scoreEBcMusic = \relative c {
-  \global
+  \globalE
   % Music follows here.
-  
+
 }
 
 scoreEBcFigures = \figuremode {
-  \global
+  \globalE
   \override Staff.BassFigureAlignmentPositioning #'direction = #DOWN
   % Figures follow here.
-  
+
 }
 
 scoreEFigBass = \figuremode {
   \global
   % Figures follow here.
-  
+
 }
 
 scoreETrumpetBbPart = \new Staff \with {
@@ -1522,92 +1862,198 @@ scoreEBassFiguresPart = \new FiguredBass \scoreEFigBass
   }
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                      6. Agnus Dei
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+globalF = {
+  \compressEmptyMeasures
+  \key c \major
+  \time 3/4
+  \tempo "Adagio" 4=50
+}
 
 scoreFTrumpetBb = \relative c'' {
-  \global
+  \globalF
   \transposition bf
   % Music follows here.
-  
+
 }
 
 scoreFTimpani = \relative c {
-  \global
+  \globalF
   % Music follows here.
-  
+
 }
 
 scoreFTromboneI = \relative c {
-  \global
+  \globalF
   % Music follows here.
-  
+
 }
 
 scoreFTromboneII = \relative c {
-  \global
+  \globalF
   % Music follows here.
-  
+
 }
 
 scoreFTromboneIII = \relative c {
-  \global
+  \globalF
   % Music follows here.
-  
+
 }
 
 scoreFViolinI = \relative c'' {
-  \global
+  \globalF
   % Music follows here.
-  
+
 }
 
 scoreFViolinII = \relative c'' {
-  \global
+  \globalF
   % Music follows here.
-  
+
 }
 
 scoreFSoprano = \relative c'' {
-  \global
+  \globalF
   % Music follows here.
-  
+
 }
 
 scoreFAlto = \relative c' {
-  \global
+  \globalF
   % Music follows here.
-  
+
 }
 
 scoreFTenor = \relative c' {
-  \global
+  \globalF
   % Music follows here.
-  r4
+  e2\f c4|
+  f e e8(d)|
+  f4 e r8 g,|
+  4 4 r|
+  r8 b8 4 d4|
+  b b b|
+  g g r8 e'|
+  a, f' r a, c b|
+  c4 g r|
+  R2.*5
+  r8 d'4\f(c) b8|
+  8(a4 g) fs8|
+  g4(b2)|
+  c4 r8 d4 8|
+  8. c16 b4(c)|
+  b r r|
+  r2.|
+  b2\p 4|
+  8(c8) 4 r8 8|
+  8(d8)d4 r8 8|
+  d(c)4 r|
+  b\f d c|
+  c b r|
+  R2.*4
+  r4 g\f 4|
+  2 4|
+  8(c4 b c8)|
+  4 r8 b(c) b-!|
+  c8. f16 e4(d\trill)|
+  c r r|
+  r2.|
+  r4 bf\p 4|
+  a a r|
+  r8 af8 4 4|
+  r8 c8 4 g|
+  e'\f 4 4|
+  2.|
+  d4 r r\fermata
+  \bar "||"
+  \time 4/4
+  \tempo "Allegro" 4=100
+  r4 e2(d4)|
+  c4 8 8 8 8 8(d)|
+  c4 e2(d4)|
+  c4 8 8 8 8 8(d)|
+  c8 4 8 8 b r4|
+  r2 b4 c|
+  d8 b r4 c d|
+  e8 c r4 b c|
+  d8 b r4 e8 c r4|
+  d8 b r4 r2|
+  r1|
+  c4 b8.(d16) c4. 8|
+  4.(d8) c4 b|
+  c r g a|
+  r c2 g4|
+  r2 a~|
+  a g| 
+  r b4\f c|
+  d8 b r4 c d|
+  e8 c r4 d8 b r4|
+  c4 b8.( d16) c4. 8|
+  4.(d8) c4 r|
+  c d c8 e r c16 c|
+  8 8 b4 c b|
+  c d e r
+  \bar "|."
 }
 
 scoreFBass = \relative c {
-  \global
+  \globalF
   % Music follows here.
-  
+
 }
 
 scoreFSopranoVerse = \lyricmode {
   % Lyrics follow here.
-  
+
 }
 
 scoreFAltoVerse = \lyricmode {
   % Lyrics follow here.
-  
 }
 
 scoreFTenorVerse = \lyricmode {
   % Lyrics follow here.
-  
+  A -- gnus De -- i, qui tol -- lis pec -- ca -- ta,
+  qui tol -- lis pec -- ca -- ta mun -- di, 
+  pec -- ca -- ta, pec -- ca -- ta mun -- di,
+  mi -- se -- re -- re no -- bis,
+  mi -- se -- re -- re no -- bis.
+  A -- gnus De -- i, qui tol -- lis pec -- ca -- ta,
+  pec -- ca -- ta mun -- di,
+  mi -- se -- re -- re no -- bis,
+  mi -- se -- re -- re no -- bis.
+  A -- gnus De -- i, qui tol -- lis pec -- ca -- ta,
+  pec -- ca -- ta mun -- di,
+  do -- na, do -- na no -- bis pa -- cem.
+  do -- na,
+  do -- na no -- bis pa -- cem,
+  do -- na pa -- cem,
+  do -- na no -- bis, no -- bis pa -- cem,
+  do -- na pa -- cem,
+  do -- na pa -- cem,
+  do -- na no -- bis pa -- cem,
+  pa -- cem,
+  do -- na no -- bis pa -- cem,
+  do -- na no -- bis, no -- bis pa -- cem,
+  pa -- cem,
+  do -- na no -- bis pa -- cem,
+  do -- na no -- bis,
+  do -- na no -- bis pa -- cem,
+  pa -- cem,
+  pa -- cem.
 }
 
 scoreFBassVerse = \lyricmode {
   % Lyrics follow here.
-  
+
 }
 
 scoreFPianoReduction = \new PianoStaff \with {
@@ -1661,22 +2107,22 @@ scoreFRehearsalMidi = #
  #})
 
 scoreFBcMusic = \relative c {
-  \global
+  \globalF
   % Music follows here.
-  
+
 }
 
 scoreFBcFigures = \figuremode {
-  \global
+  \globalF
   \override Staff.BassFigureAlignmentPositioning #'direction = #DOWN
   % Figures follow here.
-  
+
 }
 
 scoreFFigBass = \figuremode {
-  \global
+  \globalF
   % Figures follow here.
-  
+
 }
 
 scoreFTrumpetBbPart = \new Staff \with {
