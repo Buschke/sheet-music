@@ -447,9 +447,20 @@ bass = \relative c {
     
 }
 
-
+clave = {\new DrumStaff <<
+  \drummode {\global
+    << {
+         hh8 cl hh cl hh cl hh cl hh cl hh cl
+    } \\ {
+      bd4 sn4 sn4 sn4 sn sn
+    } >>
+  }
+>>
+}
 
 \score {
+%  {
+%    \clave
   \new PianoStaff <<
     %\set PianoStaff.instrumentName = #"Piano  "
     \new Staff = "upper" \relative c' {\preambleUp
@@ -467,10 +478,13 @@ bass = \relative c {
   >>
 }
   >>
+%  }
   \layout { }
 }
 
 \score {
+  {
+    \clave
   \new PianoStaff <<
    \new Staff = "upper" \relative c' {\preambleUp
   <<
@@ -487,5 +501,6 @@ bass = \relative c {
   >>
 }
   >>
+  }
   \midi { }
 }
