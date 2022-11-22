@@ -53,7 +53,7 @@ scoreASopranoA = \relative c' {
 }
 
 scoreASopranoB = \relative c' {
-  c4 c b g |
+  c'4 c b g |
   a a g2 |
   g4 g a a |
   g( f) e2 \breathe |
@@ -63,28 +63,64 @@ scoreASopranoB = \relative c' {
   d2 c
 }
 
-scoreASoprano = \relative c'' {
+scoreAAltoA = \relative c' {
   \globalA
   % Music follows here.
-  c4
+  c4 b g c|
+  c c c2|
+  d4 e c c|
+  b b g2|
 }
 
-scoreAAlto = \relative c' {
-  \global
-  % Music follows here.
-  
+scoreAAltoB = \relative c' {
+  e4 e d e|
+  f f e2|
+  d4 e f f|
+  e( c) g2|
+  g4 c c e|
+  f f e2|
+  c4 e c b8( g)|
+  b2 g|
 }
 
-scoreATenor = \relative c' {
-  \global
+scoreATenorA = \relative c' {
+  \globalA
   % Music follows here.
-  
+  g4 g e g|
+  e a g2|
+  b4 g a g|
+  g g e2|
 }
 
-scoreABass = \relative c {
-  \global
+scoreATenorB = \relative c' {
+  g4 g g g|
+  a a c2|
+  b4 c c c|
+  c( a) c2|
+  e,4 g a g|
+  c c c2|
+  a4 c g g8( e)|
+  g2 e|
+}
+
+scoreABassA = \relative c {
+  \globalA
   % Music follows here.
-  
+  c4 g c c|
+  c f c2|
+  g4 c f c|
+  g g c2|
+}
+
+scoreABassB = \relative c {
+  c4 c g c|
+  f f c2|
+  g4 c f f|
+  c( f) c2\breathe|
+  c4 c f c|
+  f f c2|
+  f4 c c g8( c)|
+  g2 c|
 }
 
 scoreAVerse = \lyricmode {
@@ -111,6 +147,52 @@ scoreAVerseC = \lyricmode {
   E -- wig sei dem Got -- tes -- sohn Ehr und Dank er -- wie -- sen.
 }
 
+claveA = \new DrumStaff <<
+  \drummode {
+    \globalA
+    <<{\repeat unfold 4 {hh8 cl}}\\{bd4 sn sn sn}>>
+  }
+>>
+
+
+% } <<\new Voice = "A" { \clef "treble_8" \scoreATenorVoiceA \repeat volta 2 {\scoreATenorVoiceB}} 
+% %\addlyrics { \scoreAVerseA } 
+% \new Lyrics \lyricsto "A" { \scoreAVerseA << {\scoreAVerseB} \new Lyrics {\set associatedVoice ="A" {\scoreAVerseC}} >>}
+% >>
+
+scoreA = \new ChoirStaff <<
+      \new Staff \with {
+        midiInstrument = "choir aahs"
+        instrumentName = \markup \center-column { "Sopran" "Alt" }
+        shortInstrumentName = \markup \center-column { "S." "A." }
+      } <<
+        \new Voice = "soprano" \with {
+          \consists "Ambitus_engraver"
+        } { \voiceOne \scoreASopranoA \repeat volta 2 { \scoreASopranoB } }
+        \new Voice = "alto" \with {
+          \consists "Ambitus_engraver"
+          \override Ambitus #'X-offset = #2.0
+        } { \voiceTwo \scoreAAltoA \repeat volta 2 { \scoreAAltoB } }
+      >>
+      \new Lyrics \with {
+        \override VerticalAxisGroup #'staff-affinity = #CENTER
+      } \lyricsto "soprano" {\scoreAVerseA << {\scoreAVerseB} \new Lyrics {\set associatedVoice = "soprano" {\scoreAVerseC}} >>}
+      \new Staff \with {
+        midiInstrument = "choir aahs"
+        instrumentName = \markup \center-column { "Tenor" "Bass" }
+        shortInstrumentName = \markup \center-column { "T." "B." }
+      } <<
+        \clef bass
+        \new Voice = "tenor" \with {
+          \consists "Ambitus_engraver"
+        } { \voiceOne \scoreATenorA \repeat volta 2 { \scoreATenorB } }
+        \new Voice = "bass" \with {
+          \consists "Ambitus_engraver"
+          \override Ambitus #'X-offset = #2.0
+        } { \voiceTwo \scoreABassA \repeat volta 2 { \scoreABassB } }
+      >>
+    >>
+
 \bookpart {
 \header {
   title = "Kirchenmusiker C-Ausbildung"
@@ -123,39 +205,19 @@ scoreAVerseC = \lyricmode {
   opus = "GL 198"
 }
   \score {
-    \new ChoirStaff <<
-      \new Staff \with {
-        midiInstrument = "choir aahs"
-        instrumentName = \markup \center-column { "Sopran" "Alt" }
-        shortInstrumentName = \markup \center-column { "S." "A." }
-      } <<
-        \new Voice = "soprano" \with {
-          \consists "Ambitus_engraver"
-        } { \voiceOne \scoreASopranoA }
-        \new Voice = "alto" \with {
-          \consists "Ambitus_engraver"
-          \override Ambitus #'X-offset = #2.0
-        } { \voiceTwo \scoreAAlto }
-      >>
-      \new Lyrics \with {
-        \override VerticalAxisGroup #'staff-affinity = #CENTER
-      } \lyricsto "soprano" \scoreAVerseA
-      \new Staff \with {
-        midiInstrument = "choir aahs"
-        instrumentName = \markup \center-column { "Tenor" "Bass" }
-        shortInstrumentName = \markup \center-column { "T." "B." }
-      } <<
-        \clef bass
-        \new Voice = "tenor" \with {
-          \consists "Ambitus_engraver"
-        } { \voiceOne \scoreATenor }
-        \new Voice = "bass" \with {
-          \consists "Ambitus_engraver"
-          \override Ambitus #'X-offset = #2.0
-        } { \voiceTwo \scoreABass }
-      >>
-    >>
+%    {
+%      \claveA
+      \scoreA
+%    }
     \layout { }
+%    \midi { }
+  }
+  \score {
+    {
+      \claveA
+      \scoreA
+    }
+%    \layout { }
     \midi { }
   }
 }
