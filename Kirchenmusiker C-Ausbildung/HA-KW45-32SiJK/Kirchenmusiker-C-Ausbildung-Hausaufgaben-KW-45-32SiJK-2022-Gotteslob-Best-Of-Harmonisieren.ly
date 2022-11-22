@@ -8,7 +8,7 @@
   subsubtitle = "NN"
   instrument = "NN"
   composer = "NN"
-  arranger = "NN"
+  arranger = "Satz: Sven Buschke"
   poet = "NN"
   meter = "NN"
   piece = "NN"
