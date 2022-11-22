@@ -38,8 +38,10 @@ global = {
 globalA = {
   \key f \major
   \time 4/4
-  \tempo "Andante" 4=100
+%  \tempo "Andante" 4=100
+  \tempo "Andante" 4=80
 }
+
 
 scoreASoprano = \relative c'' {
   \globalA
@@ -66,7 +68,7 @@ scoreAAlto = \relative c' {
   % Music follows here.
   \partial 4
   c|
-  c a
+  c a 
 }
 
 scoreATenor = \relative c' {
@@ -81,19 +83,22 @@ scoreABass = \relative c {
   \globalA
   % Music follows here.
   \partial 4
-  f|
-  c d g, a|
-  bf c f \breathe e|
-  d c bf a|
-  g c f \breathe e|
-  d c bf f|
-  c'2 r4 f|
-  e d g, a|
-  bf c d \breathe e|
-  f f, bf a|
-  g c f \breathe e|
-  d c bf b|
-  c2 f,4
+  f,|
+  c f g f|
+  c2 f4\breathe
+  
+%   c f|
+%   bf,2 c4 f \breathe e|
+%   bf c bf f|
+%   g c f \breathe e|
+%   bf c bf f|
+%   c'2 r4 f|
+%   c bf c f|
+%   bf, c bf \breathe e|
+%   f f, bf a|
+%   c c f \breathe e|
+%   bf c bf f|
+%   c2 f4
   \bar "|."
 }  
 
@@ -108,75 +113,19 @@ scoreAVerseOne = \lyricmode {
   Der wei -- ße Ne -- bel wun -- der -- bar.
 }
 
-scoreAVerseTwo = \lyricmode {
-  \set stanza = "2."
-  % Lyrics follow here.
-  Wie ist die Welt so Stille
-  Als in einer Dämmrung, Dämmrung Hülle
-  So traulich und so hold
-  Als eine Stille Kammer
-  Wo ihr des Tages, des Tages jammer
-  Verschlafen, verschlafen und vergessen sold
-}
-
-scoreAVerseThree = \lyricmode {
-  \set stanza = "3."
-  % Lyrics follow here.
-  Sehr ihr den Mond dort stehen
-  Er ist bloß halb, bloß halb zu sehen
-  Und ist doch rund und schön
-  So sind gar manche Sachen
-  Die wir getrost, getrost belachen
-  Weil unsere Augen sie nicht sehen
-}
-
-scoreAVerseFour = \lyricmode {
-  \set stanza = "4."
-  % Lyrics follow here.
-  So legt euch, so legt euch denn, ihr Brüder
-  In Gottes Namen nieder
-  Kalt ist der Abendhauch
-  Verschon uns Gott mit Strafen
-  Und lass uns ruhig, ruhig schlafen
-  Und unseren kranken Nachbarn auch.  
-}
-
-scoreAVerseFive = \lyricmode {
-  \set stanza = "5."
-  % Lyrics follow here.
-  
-}
 
 claveA = {\new DrumStaff <<
   \drummode {\globalA
-   % bd4 sn4
     << {
-%      \repeat unfold 16 cl16
-%      \repeat unfold 16 hh16
-         hh8 cl hh cl hh cl hh cl
-%        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
+         hh8 cl hh cl hh cl
     } \\ {
-      bd4 sn4 sn4 sn4
+      bd4 sn4 sn4
     } >>
   }
 >>
 }
 
-\bookpart {
-\header {
-  dedication = "NN"
-  subtitle = "Der Mond ist aufgegangen"
-  subsubtitle = "NN"
-  instrument = "NN"
-  composer = "NN"
-  arranger = "NN"
-  poet = "NN"
-  meter = "NN"
-  piece = "NN"
-  opus = "GL 93"
-}
-  \score {
-    \new ChoirStaff <<
+scoreA =     \new ChoirStaff <<
       \new Staff \with {
         midiInstrument = "choir aahs"
         instrumentName = \markup \center-column { "Sopran" "Alt" }
@@ -193,18 +142,6 @@ claveA = {\new DrumStaff <<
       \new Lyrics \with {
         \override VerticalAxisGroup #'staff-affinity = #CENTER
       } \lyricsto "soprano" \scoreAVerseOne
-%       \new Lyrics \with {
-%         \override VerticalAxisGroup #'staff-affinity = #CENTER
-%       } \lyricsto "soprano" \scoreAVerseTwo
-%       \new Lyrics \with {
-%         \override VerticalAxisGroup #'staff-affinity = #CENTER
-%       } \lyricsto "soprano" \scoreAVerseThree
-%       \new Lyrics \with {
-%         \override VerticalAxisGroup #'staff-affinity = #CENTER
-%       } \lyricsto "soprano" \scoreAVerseFour
-%       \new Lyrics \with {
-%         \override VerticalAxisGroup #'staff-affinity = #CENTER
-%       } \lyricsto "soprano" \scoreAVerseFive
       \new Staff \with {
         midiInstrument = "choir aahs"
         instrumentName = \markup \center-column { "Tenor" "Bass" }
@@ -220,9 +157,60 @@ claveA = {\new DrumStaff <<
         } { \voiceTwo \scoreABass }
       >>
     >>
+
+
+\bookpart {
+\header {
+  subtitle = "Der Mond ist aufgegangen"
+  subsubtitle = "NN"
+  instrument = "Orgel"
+  composer = "NN"
+  poet = "NN"
+  meter = "NN"
+  piece = "NN"
+  opus = "GL 93"
+}
+  \score {
+%    {
+%      \claveA
+      \scoreA
+%    }
     \layout { }
+%    \midi { }
+  }
+  \score {
+    {
+      \claveA
+      \scoreA
+    }
+%    \layout { }
     \midi { }
   }
+
+\markup { \wordwrap-string "
+  2. Wie ist die Welt so Stille
+  Als in einer Dämmrung, Dämmrung Hülle
+  So traulich und so hold
+  Als eine Stille Kammer
+  Wo ihr des Tages, des Tages jammer
+  Verschlafen, verschlafen und vergessen sold
+
+
+  3. Sehr ihr den Mond dort stehen
+  Er ist bloß halb, bloß halb zu sehen
+  Und ist doch rund und schön
+  So sind gar manche Sachen
+  Die wir getrost, getrost belachen
+  Weil unsere Augen sie nicht sehen
+
+  4. So legt euch, so legt euch denn, ihr Brüder
+  In Gottes Namen nieder
+  Kalt ist der Abendhauch
+  Verschon uns Gott mit Strafen
+  Und lass uns ruhig, ruhig schlafen
+  Und unseren kranken Nachbarn auch.
+"
+}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -285,7 +273,19 @@ scoreBTenor = \relative c' {
 scoreBBass = \relative c {
   \globalB
   % Music follows here.
-  
+  f,|
+  f c f c|
+  bf'2 f4\breathe f|
+  c c c f|
+  bf2 c4\breathe c|
+  f c f f|
+  c2.\breathe f,4|
+  f c f c|
+  bf'2 f4\breathe f|
+  c c c f|
+  f2 c4\breathe c|
+  f c f bf|
+  f c c|
 }
 
 scoreBVerseOne = \lyricmode {
@@ -298,61 +298,7 @@ scoreBVerseOne = \lyricmode {
   auf, auf, ihr sollt be -- gin -- nen,
   was eu -- rem Schöp -- fer wohl -- ge -- fällt.
   
-%   2) Wo bist du, Sonne, blieben?
-%   Die Nacht hat dich vertrieben,
-%   die Nacht, des Tages Feind.
-%   Fahr hin; ein andre Sonne,
-%   mein Jesus, meine Wonne,
-%   gar hell in meinem Herzen scheint.
-%   
-%   3) Der Tag ist nun vergangen,
-%   die güldnen Sternlein prangen
-%   am blauen Himmelssaal;
-%   also werd ich auch stehen,
-%   wenn mich wird heißen gehen
-%   mein Gott aus diesem Jammertal.
-%   
-%   4) Der Leib eilt nun zur Ruhe,
-%   legt ab das Kleid und Schuhe,
-%   das Bild der Sterblichkeit;
-%   die zieh ich aus, dagegen
-%   wird Christus mir anlegen
-%   den Rock der Ehr und Herrlichkeit.
-%   
-%   5) Das Haupt, die Füß und Hände
-%   sind froh, dass nun zum Ende
-%   die Arbeit kommen sei.
-%   Herz, freu dich, du sollst werden
-%   vom Elend dieser Erden
-%   und von der Sünden Arbeit frei.
-%   
-%   6) Nun geht, ihr matten Glieder,
-%   geht hin und legt euch nieder,
-%   der Betten ihr begehrt.
-%   Es kommen Stund und Zeiten,
-%   da man euch wird bereiten
-%   zur Ruh ein Bettlein in der Erd.
-%   
-%   7) Mein Augen stehn verdrossen,
-%   im Nu sind sie geschlossen.
-%   Wo bleibt dann Leib und Seel?
-%   Nimm sie zu deinen Gnaden,
-%   sei gut für allen Schaden,
-%   du Aug und Wächter Israel'.
-%   
-%   8) Breit aus die Flügel beide,
-%   o Jesu, meine Freude,
-%   und nimm dein Küchlein ein.
-%   Will Satan mich verschlingen,
-%   so lass die Englein singen:
-%   'Dies Kind soll unverletzet sein.'
-%   
-%   9) Auch euch, ihr meine Lieben,
-%   soll heute nicht betrüben
-%   kein Unfall noch Gefahr.
-%   Gott lass euch selig schlafen,
-%   stell euch die güldnen Waffen
-%   ums Bett und seiner Engel Schar.  
+  
 }
 
 scoreBVerseTwo = \lyricmode {
@@ -380,35 +326,17 @@ scoreBVerseFive = \lyricmode {
 }
 
 claveB = {\new DrumStaff <<
-  \drummode {\globalA
-   % bd4 sn4
+  \drummode {\globalB
     << {
-%      \repeat unfold 16 cl16
-%      \repeat unfold 16 hh16
-         hh8 cl hh cl hh cl hh cl
-%        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
+         hh8 cl hh cl hh cl
     } \\ {
-      bd4 sn4 sn4 sn4
+      bd4 sn4 sn4
     } >>
   }
 >>
 }
 
-\bookpart {
-\header {
-  dedication = "NN"
-  subtitle = "Nun ruhen alle Wälder"
-  subsubtitle = "NN"
-  instrument = "NN"
-  composer = "NN"
-  arranger = "NN"
-  poet = "NN"
-  meter = "NN"
-  piece = "NN"
-  opus = "GL 101"
-}
-  \score {
-    \new ChoirStaff <<
+scoreB =     \new ChoirStaff <<
       \new Staff \with {
         midiInstrument = "choir aahs"
         instrumentName = \markup \center-column { "Sopran" "Alt" }
@@ -425,18 +353,6 @@ claveB = {\new DrumStaff <<
       \new Lyrics \with {
         \override VerticalAxisGroup #'staff-affinity = #CENTER
       } \lyricsto "soprano" \scoreBVerseOne
-      \new Lyrics \with {
-        \override VerticalAxisGroup #'staff-affinity = #CENTER
-      } \lyricsto "soprano" \scoreBVerseTwo
-      \new Lyrics \with {
-        \override VerticalAxisGroup #'staff-affinity = #CENTER
-      } \lyricsto "soprano" \scoreBVerseThree
-      \new Lyrics \with {
-        \override VerticalAxisGroup #'staff-affinity = #CENTER
-      } \lyricsto "soprano" \scoreBVerseFour
-      \new Lyrics \with {
-        \override VerticalAxisGroup #'staff-affinity = #CENTER
-      } \lyricsto "soprano" \scoreBVerseFive
       \new Staff \with {
         midiInstrument = "choir aahs"
         instrumentName = \markup \center-column { "Tenor" "Bass" }
@@ -452,9 +368,93 @@ claveB = {\new DrumStaff <<
         } { \voiceTwo \scoreBBass }
       >>
     >>
+
+\bookpart {
+\header {
+  dedication = "NN"
+  subtitle = "Nun ruhen alle Wälder"
+  subsubtitle = "NN"
+  instrument = "NN"
+  composer = "NN"
+  poet = "NN"
+  meter = "NN"
+  piece = "NN"
+  opus = "GL 101"
+}
+  \score {
+%    {
+%      \claveB
+      \scoreB
+%    }
     \layout { }
+%    \midi { }
+  }
+  \score {
+    {
+      \claveB
+      \scoreB
+    }
+%    \layout { }
     \midi { }
   }
+\markup { \wordwrap-string "
+  2) Wo bist du, Sonne, blieben?
+  Die Nacht hat dich vertrieben,
+  die Nacht, des Tages Feind.
+  Fahr hin; ein andre Sonne,
+  mein Jesus, meine Wonne,
+  gar hell in meinem Herzen scheint.
+  
+  3) Der Tag ist nun vergangen,
+  die güldnen Sternlein prangen
+  am blauen Himmelssaal;
+  also werd ich auch stehen,
+  wenn mich wird heißen gehen
+  mein Gott aus diesem Jammertal.
+  
+  4) Der Leib eilt nun zur Ruhe,
+  legt ab das Kleid und Schuhe,
+  das Bild der Sterblichkeit;
+  die zieh ich aus, dagegen
+  wird Christus mir anlegen
+  den Rock der Ehr und Herrlichkeit.
+  
+  5) Das Haupt, die Füß und Hände
+  sind froh, dass nun zum Ende
+  die Arbeit kommen sei.
+  Herz, freu dich, du sollst werden
+  vom Elend dieser Erden
+  und von der Sünden Arbeit frei.
+  
+  6) Nun geht, ihr matten Glieder,
+  geht hin und legt euch nieder,
+  der Betten ihr begehrt.
+  Es kommen Stund und Zeiten,
+  da man euch wird bereiten
+  zur Ruh ein Bettlein in der Erd.
+  
+  7) Mein Augen stehn verdrossen,
+  im Nu sind sie geschlossen.
+  Wo bleibt dann Leib und Seel?
+  Nimm sie zu deinen Gnaden,
+  sei gut für allen Schaden,
+  du Aug und Wächter Israel'.
+  
+  8) Breit aus die Flügel beide,
+  o Jesu, meine Freude,
+  und nimm dein Küchlein ein.
+  Will Satan mich verschlingen,
+  so lass die Englein singen:
+  'Dies Kind soll unverletzet sein.'
+  
+  9) Auch euch, ihr meine Lieben,
+  soll heute nicht betrüben
+  kein Unfall noch Gefahr.
+  Gott lass euch selig schlafen,
+  stell euch die güldnen Waffen
+  ums Bett und seiner Engel Schar.
+"
+}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -503,9 +503,9 @@ scoreCTenor = \relative c' {
 scoreCBass = \relative c {
   \globalC
   % Music follows here.
-  c,2 c'|
-  b a b4 c d2|
-  g, c f,4 g a2 g|
+  c,2 c'4 f|
+  c2 f g4 c f,2|
+  g, c f,4 g c2 g|
   f g c, r2 c' a g
   a b4 c d2 g,\breathe c f,4 g
   a2 g f g c r2 a
@@ -525,71 +525,9 @@ scoreCVerseOne = \lyricmode {
   und will in dei -- nem Hei -- lig -- tum, Herr, dir zum Ruhm mein Op -- fer brin -- gen.
   Dein Na -- me strahlt an al -- lem Ort, und durch dein Wort wird hell das Le -- ben.
   An -- be -- tung, Ehr und Herr -- lich -- keit bin ich be -- reit, dir, Gott, zu ge -- ben.
-
-% 2) Dein Name, Herr, ist unser Hort; du hast dein Wort an mir erfüllet.
-% Du hast auf mein Gebet gemerkt und mich gestärkt, mein Herz gestillet.
-% Die Völker werden preisen dich und Mächtge sich zu dir hin kehren,
-% wenn sie das Wort vom ewgen Bund aus deinem Mund verkünden hören.
-% 
-% 3) Herr, ob den Himmeln thronst du hoch und siehest doch die Tiefgebeugten.
-% In Angst und Widerwärtigkeit wird mir allzeit dein Antlitz leuchten.
-% Mach mich von allem Elend frei; denn deine Treu wird niemals enden.
-% Du wirst nach deinem ewgen Rat, Herr, groß an Tat, dein Werk vollenden.
 }
 
-scoreCVerseTwo = \lyricmode {
-  \set stanza = "2."
-  % Lyrics follow here.
-  
-}
-
-scoreCVerseThree = \lyricmode {
-  \set stanza = "3."
-  % Lyrics follow here.
-  
-}
-
-scoreCVerseFour = \lyricmode {
-  \set stanza = "4."
-  % Lyrics follow here.
-  
-}
-
-scoreCVerseFive = \lyricmode {
-  \set stanza = "5."
-  % Lyrics follow here.
-  
-}
-
-claveB = {\new DrumStaff <<
-  \drummode {\globalA
-   % bd4 sn4
-    << {
-%      \repeat unfold 16 cl16
-%      \repeat unfold 16 hh16
-         hh8 cl hh cl hh cl hh cl
-%        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
-    } \\ {
-      bd4 sn4 sn4 sn4
-    } >>
-  }
->>
-}
-
-\bookpart {
-\header {
-  subtitle = "Mein ganzes Herz erhebet dich"
-  subsubtitle = "NN"
-  instrument = "NN"
-  composer = "NN"
-  arranger = "NN"
-  poet = "NN"
-  meter = "NN"
-  piece = "NN"
-  opus = "GL 143"
-}
-  \score {
-    \new ChoirStaff <<
+scoreC =     \new ChoirStaff <<
       \new Staff \with {
         midiInstrument = "choir aahs"
         instrumentName = \markup \center-column { "Sopran" "Alt" }
@@ -606,18 +544,6 @@ claveB = {\new DrumStaff <<
       \new Lyrics \with {
         \override VerticalAxisGroup #'staff-affinity = #CENTER
       } \lyricsto "soprano" \scoreCVerseOne
-      \new Lyrics \with {
-        \override VerticalAxisGroup #'staff-affinity = #CENTER
-      } \lyricsto "soprano" \scoreCVerseTwo
-      \new Lyrics \with {
-        \override VerticalAxisGroup #'staff-affinity = #CENTER
-      } \lyricsto "soprano" \scoreCVerseThree
-      \new Lyrics \with {
-        \override VerticalAxisGroup #'staff-affinity = #CENTER
-      } \lyricsto "soprano" \scoreCVerseFour
-      \new Lyrics \with {
-        \override VerticalAxisGroup #'staff-affinity = #CENTER
-      } \lyricsto "soprano" \scoreCVerseFive
       \new Staff \with {
         midiInstrument = "choir aahs"
         instrumentName = \markup \center-column { "Tenor" "Bass" }
@@ -633,9 +559,57 @@ claveB = {\new DrumStaff <<
         } { \voiceTwo \scoreCBass }
       >>
     >>
+
+claveC = {\new DrumStaff <<
+  \drummode {\globalC
+    << {
+         hh8 cl hh cl hh cl hh cl hh8 cl hh cl hh cl hh cl
+    } \\ {
+      bd4 sn4 sn4 sn4 bd4 sn4 sn4 sn4 
+    } >>
+  }
+>>
+}
+
+\bookpart {
+\header {
+  subtitle = "Mein ganzes Herz erhebet dich"
+  subsubtitle = "NN"
+  instrument = "NN"
+  composer = "NN"
+  poet = "NN"
+  meter = "NN"
+  piece = "NN"
+  opus = "GL 143"
+}
+  \score {
+%    {
+%      \claveC
+      \scoreC
+%    }
     \layout { }
+%    \midi { }
+  }
+  \score {
+    {
+      \claveC
+      \scoreC
+    }
+%    \layout { }
     \midi { }
   }
+\markup { \wordwrap-string "
+2) Dein Name, Herr, ist unser Hort; du hast dein Wort an mir erfüllet.
+Du hast auf mein Gebet gemerkt und mich gestärkt, mein Herz gestillet.
+Die Völker werden preisen dich und Mächtge sich zu dir hin kehren,
+wenn sie das Wort vom ewgen Bund aus deinem Mund verkünden hören.
+
+3) Herr, ob den Himmeln thronst du hoch und siehest doch die Tiefgebeugten.
+In Angst und Widerwärtigkeit wird mir allzeit dein Antlitz leuchten.
+Mach mich von allem Elend frei; denn deine Treu wird niemals enden.
+Du wirst nach deinem ewgen Rat, Herr, groß an Tat, dein Werk vollenden.
+"
+}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
