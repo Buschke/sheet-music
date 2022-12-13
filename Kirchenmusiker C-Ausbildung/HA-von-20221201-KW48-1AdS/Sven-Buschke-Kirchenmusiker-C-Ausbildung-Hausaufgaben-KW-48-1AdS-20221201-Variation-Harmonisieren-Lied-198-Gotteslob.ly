@@ -393,7 +393,7 @@ scoreBBassFiguresPart = \new FiguredBass \scoreBFigBass
 \header {
   title = "Kirchenmusiker C-Ausbildung"
   subtitle = "Variante 2: Heilig bist du großer Gott"
-  subsubtitle = "Hausaufgaben KW 50-2022: Variation Harmonisieren Lieder Gotteslob"
+  subsubtitle = "Hausaufgaben KW 48-2022: Variation Harmonisieren Lieder Gotteslob"
   instrument = "Orgel"
   poet = "T: Aachen M: Joseph Mohr, Franz Braun"
   meter = "NN"
