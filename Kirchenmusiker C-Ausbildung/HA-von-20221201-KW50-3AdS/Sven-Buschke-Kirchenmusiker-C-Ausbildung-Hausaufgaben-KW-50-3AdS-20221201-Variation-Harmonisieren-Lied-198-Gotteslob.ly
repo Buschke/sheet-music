@@ -196,7 +196,7 @@ scoreA = \new ChoirStaff <<
 \bookpart {
 \header {
   title = "Kirchenmusiker C-Ausbildung"
-  subtitle = "Korrektur: Heilig bist du großer Gott"
+  subtitle = "Variante 1: Heilig bist du großer Gott"
   subsubtitle = "Hausaufgaben KW 45-2022, Teil 2: Harmonisieren Lieder Gotteslob"
   instrument = "Orgel"
   poet = "T: Aachen M: Joseph Mohr, Franz Braun"
@@ -222,28 +222,96 @@ scoreA = \new ChoirStaff <<
   }
 }
 
-scoreBSoprano = \relative c'' {
-  \global
-  % Music follows here.
-  
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Variante 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+globalB = {
+  \key c \major
+  \time 4/4
+  \tempo 4=100
 }
 
-scoreBAlto = \relative c' {
-  \global
+scoreBSopranoA = \relative c' {
+  \globalB
+  \dynamicUp
   % Music follows here.
-  
+  e4 d c e |
+  g f e2 |
+  g4 g f e |
+  d d c2 |
 }
 
-scoreBTenor = \relative c' {
-  \global
-  % Music follows here.
-  
+scoreBSopranoB = \relative c' {
+  c'4 c b g |
+  a a g2 |
+  g4 g a a |
+  g( f) e2 \breathe |
+  c4 e f g |
+  a a g2 |
+  f4 g e d8( c) |
+  d2 c
 }
 
-scoreBBass = \relative c {
-  \global
+scoreBAltoA = \relative c' {
+  \globalB
   % Music follows here.
-  
+  c4 b g c|
+  c c c2|
+  d4 e c c|
+  c b g2|
+}
+
+scoreBAltoB = \relative c' {
+  e4 e d g,|
+  c c e2|
+  d4 e f f|
+  e( c) c2|
+  g4 c c e|
+  f f e2|
+  c4 e c b8( g)|
+  b2 g|
+}
+
+scoreBTenorA = \relative c' {
+  \globalB
+  % Music follows here.
+  g4 g e g|
+  c a g2|
+  b4 g a g|
+  g g e2|
+}
+
+scoreBTenorB = \relative c' {
+  g4 g g e|
+  f f c2|
+  b4 c c c|
+  c( a) g2|
+  e4 g a g|
+  c c c2|
+  a4 c g g'8( e)|
+  g2 e|
+}
+
+scoreBBassA = \relative c {
+  \globalB
+  % Music follows here.
+  c4 b c c|
+  e f c2|
+  b4 c f c|
+  g g c2|
+}
+
+scoreBBassB = \relative c {
+  c4 c g c,|
+  f f c2|
+  g'4 c, f f|
+  c( f) c2\breathe|
+  c4 c f c|
+  f f c2|
+  f4 c c g'8( c)|
+  g2 c|
 }
 
 scoreBVerse = \lyricmode {
@@ -251,9 +319,42 @@ scoreBVerse = \lyricmode {
   
 }
 
-\bookpart {
-  \score {
-    \new ChoirStaff <<
+scoreBVerseA = \lyricmode {
+  % Lyrics follow here.
+  Hei -- lig bist du, gro -- ßer Gott, hei -- lig, Herr, Gott Ze -- ba -- ot.
+}
+
+scoreBVerseB = \lyricmode {
+  \set stanza = "1."
+  % Lyrics follow here.
+  Zeu -- gen dei -- ner Herr -- lich -- keit Him -- mel sind und Er -- de.
+  Lob und Preis durch al -- le Zeit, dir o Höchs -- ter, wer -- de.
+}
+
+scoreBVerseC = \lyricmode {
+  \set stanza = "2."
+  % Lyrics follow here.
+  Der da kommt vom ew -- gen Thron, er sei hoch ge -- prie -- sen.
+  E -- wig sei dem Got -- tes -- sohn Ehr und Dank er -- wie -- sen.
+}
+
+scoreBFigBass = \figuremode {
+  \globalB
+  % Figures follow here.
+  r4 <6> r r
+  <6> r4 r2
+  <6>2 r4 r4
+  <43>4
+}
+
+claveB = \new DrumStaff <<
+  \drummode {
+    \globalB
+    <<{\repeat unfold 4 {hh8 cl}}\\{bd4 sn sn sn}>>
+  }
+>>
+
+scoreB = \new ChoirStaff <<
       \new Staff \with {
         midiInstrument = "choir aahs"
         instrumentName = \markup \center-column { "Sopran" "Alt" }
@@ -261,15 +362,15 @@ scoreBVerse = \lyricmode {
       } <<
         \new Voice = "soprano" \with {
           \consists "Ambitus_engraver"
-        } { \voiceOne \scoreBSoprano }
+        } { \voiceOne \scoreBSopranoA \repeat volta 2 { \scoreBSopranoB } }
         \new Voice = "alto" \with {
           \consists "Ambitus_engraver"
           \override Ambitus #'X-offset = #2.0
-        } { \voiceTwo \scoreBAlto }
+        } { \voiceTwo \scoreBAltoA \repeat volta 2 { \scoreBAltoB } }
       >>
       \new Lyrics \with {
         \override VerticalAxisGroup #'staff-affinity = #CENTER
-      } \lyricsto "soprano" \scoreBVerse
+      } \lyricsto "soprano" {\scoreBVerseA << {\scoreBVerseB} \new Lyrics {\set associatedVoice = "soprano" {\scoreBVerseC}} >>}
       \new Staff \with {
         midiInstrument = "choir aahs"
         instrumentName = \markup \center-column { "Tenor" "Bass" }
@@ -278,14 +379,44 @@ scoreBVerse = \lyricmode {
         \clef bass
         \new Voice = "tenor" \with {
           \consists "Ambitus_engraver"
-        } { \voiceOne \scoreBTenor }
+        } { \voiceOne \scoreBTenorA \repeat volta 2 { \scoreBTenorB } }
         \new Voice = "bass" \with {
           \consists "Ambitus_engraver"
           \override Ambitus #'X-offset = #2.0
-        } { \voiceTwo \scoreBBass }
+        } { \voiceTwo \scoreBBassA \repeat volta 2 { \scoreBBassB } }
       >>
     >>
+
+scoreBBassFiguresPart = \new FiguredBass \scoreBFigBass
+
+\bookpart {
+\header {
+  title = "Kirchenmusiker C-Ausbildung"
+  subtitle = "Variante 2: Heilig bist du großer Gott"
+  subsubtitle = "Hausaufgaben KW 50-2022: Variation Harmonisieren Lieder Gotteslob"
+  instrument = "Orgel"
+  poet = "T: Aachen M: Joseph Mohr, Franz Braun"
+  meter = "NN"
+  piece = "T: 1867, M: 1877/1891, 1675"
+  opus = "GL 198"
+}
+  \score {
+%    {
+%      \claveA
+<<
+      \scoreB
+      \scoreBBassFiguresPart
+>>
+%    }
     \layout { }
+%    \midi { }
+  }
+  \score {
+    {
+      \claveB
+      \scoreB
+    }
+%    \layout { }
     \midi { }
   }
 }
