@@ -10,7 +10,7 @@
   subsubtitle = ""
   instrument = "Piano"
   composer = "Wolfgang Amadeus Mozart"
-  arranger = "Sven Buschke"
+  arranger = "Fingering: Sven Buschke"
   poet = ""
   meter = ""
   piece = ""
