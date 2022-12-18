@@ -142,7 +142,9 @@ scoreCRightB = \relative c'' {
   \set fingeringOrientations = #'(up)
   % Music follows here.
   \partial 4
-  <c-1 e-3>8-.\mp <d f>-.
+  <c-1 e-3>8-.\mp <d f>-.|
+  <e-1 g-3>-. <e g>-. a16-4( g f e)|
+
 }
 
 scoreCRightC = \relative c'' {
@@ -204,7 +206,9 @@ scoreCLeftA = \relative c' {
 scoreCLeftB = \relative c' {
   \set fingeringOrientations = #'(up)
   % Music follows here.
-  r4
+  \partial 4
+  r4|
+  c,8-. c'-. e,-. e'-.|
 }
 
 scoreCLeftC = \relative c' {
