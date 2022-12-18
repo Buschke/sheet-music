@@ -219,7 +219,7 @@ scoreA = \new ChoirStaff <<
     \layout { }
 %    \midi { }
   }
-  \score {
+  \score {    \unfoldRepeats
     {
       \claveA
       \scoreA
@@ -430,7 +430,7 @@ scoreBBassFiguresPart = \new FiguredBass \scoreBFigBass
     \layout { }
 %    \midi { }
   }
-  \score {
+  \score {    \unfoldRepeats
     {
       \claveB
       \scoreB
@@ -694,7 +694,7 @@ scoreCBassFiguresPart = \new FiguredBass \scoreCFigBass
     \layout { }
 %    \midi { }
   }
-  \score {
+  \score {    \unfoldRepeats
     {
       \claveC
       \scoreC
@@ -952,7 +952,7 @@ scoreDBassFiguresPart = \new FiguredBass \scoreDFigBass
     \layout { }
 %    \midi { }
   }
-  \score {
+  \score {    \unfoldRepeats
     {
       \claveD
       <<
@@ -1200,7 +1200,7 @@ scoreEBassFiguresPart = \new FiguredBass \scoreEFigBass
     \layout { }
 %    \midi { }
   }
-  \score {
+  \score {    \unfoldRepeats
     {
       \claveE
       <<
@@ -1448,7 +1448,7 @@ scoreFBassFiguresPart = \new FiguredBass \scoreFFigBass
     \layout { }
 %    \midi { }
   }
-  \score {
+  \score {    \unfoldRepeats
     {
       \claveF
       <<
