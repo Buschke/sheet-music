@@ -132,7 +132,7 @@ scoreABassB = \relative c {
 
 scoreAVerse = \lyricmode {
   % Lyrics follow here.
-  
+
 }
 
 scoreAVerseA = \lyricmode {
@@ -162,8 +162,8 @@ claveA = \new DrumStaff <<
 >>
 
 
-% } <<\new Voice = "A" { \clef "treble_8" \scoreATenorVoiceA \repeat volta 2 {\scoreATenorVoiceB}} 
-% %\addlyrics { \scoreAVerseA } 
+% } <<\new Voice = "A" { \clef "treble_8" \scoreATenorVoiceA \repeat volta 2 {\scoreATenorVoiceB}}
+% %\addlyrics { \scoreAVerseA }
 % \new Lyrics \lyricsto "A" { \scoreAVerseA << {\scoreAVerseB} \new Lyrics {\set associatedVoice ="A" {\scoreAVerseC}} >>}
 % >>
 
@@ -323,7 +323,7 @@ scoreBBassB = \relative c {
 
 scoreBVerse = \lyricmode {
   % Lyrics follow here.
-  
+
 }
 
 scoreBVerseA = \lyricmode {
@@ -350,7 +350,7 @@ scoreBFigBass = \figuremode {
   % Figures follow here.
 %      \set figuredBassAlterationDirection = #RIGHT
 %      \set figuredBassPlusDirection = #RIGHT
-%      \override BassFigureAlignment.stacking-dir = #DOWN  
+%      \override BassFigureAlignment.stacking-dir = #DOWN
 %      s8 |
 %      s4 <6>4 <_+>4 <6>4 |
 %      <6 4\+ 2>8 <6>8 <_+> s8 s2 |
@@ -359,7 +359,7 @@ scoreBFigBass = \figuremode {
 %      <6>8 <_+>8 <6>8 <6 5>8 <5 4>8 \extendOn <5 _!>8 \extendOff s4 |
 %      <6>4 <6->8 <6 5->8 <5 4->8 \extendOn <5 3>4 \extendOff <5 _+>8 |
 %      <7>8 <6>8 <5>4 <9 4>8 <8 3>8 s4 |
-      
+
   r4 <6> r r
   <6> r4 r2
   <6>2 r4 r4
@@ -461,17 +461,17 @@ scoreCRitSoprano = \relative c' {
 
 scoreCRitAlto = \relative c' {
   s1 s s s
-  
+
 }
 
 scoreCRitTenor = \relative c' {
   s1 s s s
-  
+
 }
 
 scoreCRitBass = \relative c {
   s1 s s s
-  
+
 }
 
 scoreCCFSopranoA = \relative c' {
@@ -602,7 +602,7 @@ scoreCFigBass = \figuremode {
   \globalC
   % Pause for ritornell
   s1 s s s
-  % Figures follow here.   
+  % Figures follow here.
   r4 <6> r r
   <6> r4 r2
   <6>2 r4 r4
@@ -745,21 +745,21 @@ scoreDSopranoA = \relative c' {
   % Ritornell
   s1^"Ritornell" s s s\fermata \bar "||"
   % Music follows here.
-  e4 d c e |
-  g f e2 |
-  g4 g f e |
-  d d c2 |
+  g'4 g e g |
+  c a g2 |
+  g4 c a g |
+  g g e2 |
 }
 
 scoreDSopranoB = \relative c' {
-  c'4 c b g |
-  a a g2 |
-  g4 g a a |
-  g( f) e2 \breathe |
-  c4 e f g |
-  a a g2 |
-  f4 g e d8( c) |
-  d2 c
+  g'4 g g e |
+  f f e2 |
+  d4 e f f |
+  e( a) g2 \breathe |
+  g4 g a c |
+  c c c2 |
+  a4 g g g8( g) |
+  g2 g
 }
 
 scoreDAltoA = \relative c' {
@@ -776,12 +776,12 @@ scoreDAltoA = \relative c' {
 scoreDAltoB = \relative c' {
   e4 e d c|
   c c c2|
-  d4 e f f|
-  e( c) c2|
-  g4 c c e|
+  b4 c c c|
+  c( c) c2|
+  e4 c c e|
   f f e2|
-  c4 e c b8( g)|
-  b2 g|
+  c4 c c b8( e)|
+  b2 e|
 }
 
 scoreDTenorA = \relative c' {
@@ -832,7 +832,7 @@ scoreDBassA = \relative c {
 scoreDBassB = \relative c {
   c4 c g c|
   f, f c'2|
-  g'4 c, f f|
+  g4 c f f|
   c( f) c2\breathe|
   c4 c f c|
   f f c2|
@@ -864,7 +864,7 @@ scoreDFigBass = \figuremode {
   % Ritornell
   s1 s s s
   % Figures follow here.
-      
+
   r4 <6> r r
   <6> r4 r2
   <6>2 r4 r4
@@ -1001,30 +1001,30 @@ scoreESopranoA = \relative c' {
   \globalE
   \dynamicUp
   % Music follows here.
-  e4 d c e |
-  g f e2 |
-  g4 g f e |
-  d d c2 |
+  g'4 g c c |
+  g f g2 |
+  g4 c f c |
+  d d g,2 |
 }
 
 scoreESopranoB = \relative c' {
-  c'4 c b g |
-  a a g2 |
-  g4 g a a |
-  g( f) e2 \breathe |
-  c4 e f g |
-  a a g2 |
-  f4 g e d8( c) |
-  d2 c
+  c'4 c g c |
+  f f c2 |
+  g4 c f f |
+  c( f) c2 \breathe |
+  c4 c f c |
+  f f c2 |
+  f4 c c g8( c) |
+  g2 c
 }
 
 scoreEAltoA = \relative c' {
   \globalE
   % Music follows here.
-  c4 g g c|
-  c c c2|
+  c4 d g g|
+  c, c c2|
   d4 e c c|
-  c b g2|
+  c b c2|
 }
 
 scoreEAltoB = \relative c' {
@@ -1041,9 +1041,9 @@ scoreEAltoB = \relative c' {
 scoreETenorA = \relative c' {
   \globalE
   % Music follows here.
-  g4 g e g|
-  c a g2|
-  g4 c a g|
+  c4 g e e|
+  c a c2|
+  b4 c a g|
   g g e2|
 }
 
@@ -1112,7 +1112,7 @@ scoreEVerseC = \lyricmode {
 scoreEFigBass = \figuremode {
   \globalE
   % Figures follow here.
-      
+
   r4 <6> r r
   <6> r4 r2
   <6>2 r4 r4
@@ -1360,7 +1360,7 @@ scoreFVerseC = \lyricmode {
 scoreFFigBass = \figuremode {
   \globalF
   % Figures follow here.
-      
+
   r4 <6> r r
   <6> r4 r2
   <6>2 r4 r4
