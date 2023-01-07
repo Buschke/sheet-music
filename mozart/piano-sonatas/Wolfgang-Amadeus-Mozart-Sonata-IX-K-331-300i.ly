@@ -144,7 +144,21 @@ scoreCRightB = \relative c'' {
   \partial 4
   <c-1 e-3>8-.\mp <d f>-.|
   <e-1 g-3>-. <e g>-. a16-4( g f e)|
-
+  <<{d4->-4}\\{b8-2( g)}>>  <c-1 e-3>8-.\mp <d f>-.|
+  <e-1 g-3>-. <e g>-. a16-4( g f e)|
+  <b-2 d-4>4-> <a-1 c-.-3>8 <b d-.>|
+  <c-1 e-3-.> <c e-.> f16-4( e d c)|
+  <<{b4->-4}\\{gs8-2( e)}>> <a-1 c-.-3>8 <b d-.>|
+  <c-1 e-3-.> <c e-.> f16-4( e d c)|
+  <gs---2 b->-4>4 b16-4\p( a gs a-1|
+  c8-.-3) r d16-3( c b c|
+  e8-.-4) r f16-4( e ds e-1|
+  b'\cresc-4 a gs a b a gs a|
+  c4\sfz) a8-.-2\p b-.|
+  c->-. b-. a-.-1 gs-.-2|
+  a-. e-. f-.-4 d-.-2|
+  c4-- b8.\trill-2( a32 b|
+  a4--)
 }
 
 scoreCRightC = \relative c'' {
@@ -209,6 +223,21 @@ scoreCLeftB = \relative c' {
   \partial 4
   r4|
   c,8-. c'-. e,-. e'-.|
+  g,4 r|
+  c,8-. c'-. e,-. e'-.|
+  g,4 r|
+  a,8-. a'-. c,-. c'-.|
+  e,4 r|
+  a,8-. a'-. c,-. c'-.|
+  e,4 r|
+  a8-5( <c e>8-.) 8-. 8-.|
+  a( <c e>8-.) 8-. 8-.|
+  a-. <c e>8-. a-. <c e>-.|
+  f,( <a ds-.>\p) <a ds-.> <a ds-.>|
+  e-. <a e'-.> d,-. <f b-.>|
+  c-. <e a-.> d-. <f b-.>
+  <e-4 a-.-1> <e a-.> <e-4 gs-.-2> <e gs-.>|
+  <a, a'-->4
 }
 
 scoreCLeftC = \relative c' {
