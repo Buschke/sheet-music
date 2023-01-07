@@ -157,8 +157,7 @@ scoreCRightB = \relative c'' {
   c4\sfz) a8-.-2\p b-.|
   c->-. b-. a-.-1 gs-.-2|
   a-. e-. f-.-4 d-.-2|
-  c4-- <<{b8.\trill-2( a32 b}\\{\magnifyMusic 0.63 {b32 c b c \tuplet 3/2 { b c b } a32 b}}>>|
-  a4--)
+  c4-- <<{b8.\trill-2( a32 b| a4--)}\\{\magnifyMusic 0.63 {b32 c b c \tuplet 3/2 { b c b } a32 b|s4}}>>|
 }
 
 scoreCRightC = \relative c'' {
