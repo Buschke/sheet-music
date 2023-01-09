@@ -163,6 +163,17 @@ scoreCRightB = \relative c'' {
 scoreCRightC = \relative c'' {
   \set fingeringOrientations = #'(up)
   % Music follows here.
+  \key a \major
+  \partial 4
+  <a a'>8-.\f <b b'>-.|
+  <cs cs'>4->^\markup {\italic ten.} <a a'>8-. <b b'>-.|
+  <cs cs'>->-. <b b'>-. <a a'>-. <gs gs'>-.|
+  <fs fs'>-. <gs gs'>-. <a a'>-. <b b'>-.|
+  <gs gs'>-. <e e'>-. <a a'>-. <b b'>-.|
+  <cs cs'>4->^\markup {\italic ten.} <a a'>8-. <b b'>-.|
+  <cs cs'>-. <b b'>-. <a a'>-. <gs gs'>-.|
+  <fs fs'>-. <b b'>-. <gs gs'>-. <e e'>-.|
+  <a a'>4^\markup {\italic ten.}
 }
 
 scoreCRightD = \relative c'' {
@@ -242,6 +253,17 @@ scoreCLeftB = \relative c' {
 scoreCLeftC = \relative c' {
   \set fingeringOrientations = #'(up)
   % Music follows here.
+  \key a \major
+  \partial 4
+  r4|
+  \appoggiatura {a,32 cs e} a8-.-> a-.-3 a-.-2 a-.-1
+  \appoggiatura {a,32 cs e} a8-.-> a-.-3 a-.-2 a-.-1
+  \appoggiatura {d,,32-5 fs-3 a} d8->-.-1 d-.-2 \appoggiatura {ds,32-5 fs-4 a} ds8->-.-1 ds-.-2
+  \appoggiatura {e,32-5 gs-3 b} e8->-.-1 e-.-2 e-.-1 e-.-2
+  \appoggiatura {a,32 cs e} a8-.-> a-.-3 a-.-2 a-.-1
+  \appoggiatura {a,32 cs e} a8-.-> a-.-3 a-.-2 a-.-1
+  \appoggiatura {d,,32 fs a} d8-.-> d-. \appoggiatura {e,32 gs b} e8-. e-.
+  a,4^\markup {\italic ten.}
 }
 
 scoreCLeftD = \relative c' {
