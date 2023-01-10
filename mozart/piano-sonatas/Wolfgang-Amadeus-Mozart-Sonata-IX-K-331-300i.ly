@@ -187,7 +187,7 @@ scoreCRightD = \relative c'' {
   cs\> bs cs bs cs d cs b)|
   a\!( b a gs-3 fs a gs fs|
   e fs gs e cs-2 ds e cs|
-  ds-3 e fs ds bs-1 cs d bs|
+  ds-3 e fs ds bs-1 cs ds bs|
   cs4--)
 }
 
