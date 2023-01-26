@@ -5,8 +5,9 @@
   title = "Étude Ocean"
   subtitle = "c-Moll"
   composer = "Frédéric Chopin"
+  arranger = "Fingering: Sven Buschke"
   opus = "op. 25 Nr. 12"
-  copyright = "public domain"
+  copyright = "© Fingering: Sven Buschke, 27.01.2023"
   tagline = ""
 }
 
