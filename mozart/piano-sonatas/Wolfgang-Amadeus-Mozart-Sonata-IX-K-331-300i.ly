@@ -194,6 +194,23 @@ scoreCRightD = \relative c'' {
 scoreCRightE = \relative c'' {
   \set fingeringOrientations = #'(up)
   % Music follows here.
+  e16-5\f( d cs b|
+  a b cs d-1 e fs gs a)|
+  a->-4( gs fs e) e-5( d cs b|
+  a-1 b cs d-1 e fs gs a)|
+  as8->-3( b-.-4) e,16-5( d cs b|
+  a b cs d-1 e fs gs a)|
+  a->-4( gs fs e) e-4( d cs b|
+  c-3 e a,-1 cs-4 b d gs,-2 b-4|
+  a4--) cs'16\p( d cs b|
+  a b a gs fs a g fs|
+  es fs gs es cs ds es cs|
+  fs\<)(es fs gs a gs a b|
+  cs-3\! bs cs bs cs\cresc bs cs as-2)|
+  d-4\!\>( cs d cs d cs d cs|
+  d cs b a gs-2 a b gs|
+  a\p b cs fs,-2 es fs gs es|
+  fs4--)
 }
 
 scoreCRightF = \relative c'' {
@@ -294,6 +311,23 @@ scoreCLeftD = \relative c' {
 scoreCLeftE = \relative c' {
   \set fingeringOrientations = #'(up)
   % Music follows here.
+  r4|
+  a8( <cs e>-.) <cs e>-. <cs e>-.|
+  b-. <d e>-. <d e>-. <d e>-. |
+  a( <cs e>-.) <cs e>-. <cs e>-.|
+  e,( <gs d'>-.) <gs d'>-. <gs d'>-.|
+  a( <cs e>-.) <cs e>-. <cs e>-.|
+  b-. <d e>-. <d e>-. <d e>-.|
+  a-.-1 fs-.-2 d-. e-.|
+  a,-. a'-. r4|
+  fs8( <a cs>-.) <a cs>-. <a cs>-.|
+  gs( <b cs>-.) <b cs>-. <b cs>-.|
+  fs( <a cs>-.) <a cs>-. <a cs>-.|
+  cs,( <gs' cs>-.) <g cs>-. <fs cs'>-.|
+  b,->( <fs' b>-.) <fs b>-. <fs b>-.|
+  b,( <gs' b>-.) <gs b>-. <gs b>-.|
+  cs,-. <fs a>-. cs-. <gs' b>-. |
+  <fs a>4--
 }
 
 scoreCLeftF = \relative c' {
