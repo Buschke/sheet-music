@@ -201,9 +201,9 @@ scoreCRightE = \relative c'' {
   as8->-3( b-.-4) e,16-5( d cs b|
   a b cs d-1 e fs gs a)|
   a->-4( gs fs e) e-4( d cs b|
-  c-3 e a,-1 cs-4 b d gs,-2 b-4|
+  cs-3 e a,-1 cs-4 b d gs,-2 b-4|
   a4--) cs'16\p( d cs b|
-  a b a gs fs a g fs|
+  a b a gs fs a gs fs|
   es fs gs es cs ds es cs|
   fs\<)(es fs gs a gs a b|
   cs-3\! bs cs bs cs\cresc bs cs as-2)|
@@ -216,21 +216,69 @@ scoreCRightE = \relative c'' {
 scoreCRightF = \relative c'' {
   \set fingeringOrientations = #'(up)
   % Music follows here.
+  \partial 4
+  <a a'>8-.\f <b b'>-.|
+  <cs cs'>4->^\markup {\italic ten.} <a a'>8-. <b b'>-.|
+  <cs cs'>->-. <b b'>-. <a a'>-. <gs gs'>-.|
+  <fs fs'>-. <gs gs'>-. <a a'>-. <b b'>-.|
+  <gs gs'>-. <e e'>-. <a a'>-. <b b'>-.|
+  <cs cs'>4->^\markup {\italic ten.} <a a'>8-. <b b'>-.|
+  <cs cs'>-. <b b'>-. <a a'>-. <gs gs'>-.|
+  <fs fs'>-. <b b'>-. <gs gs'>-. <e e'>-.|
+  <a a'>4--^\markup {\italic ten.}
 }
 
 scoreCRightG = \relative c'' {
   \set fingeringOrientations = #'(up)
   % Music follows here.
+  \key a \minor
+  \partial 4
+  b16-4\p( a gs a-1|
+  c8-.-3) r d16-3( c b c|
+  e8-.-4) r f16-4( e ds e-1|
+  b'-4 a gs a b a gs a|
+  c4->) a8-.-2 c-4|
+  \appoggiatura {g32-2 a} b8-.-> <fs-2 a-4>-. <e g>-. <fs a>-.|
+  \appoggiatura {g32-2 a} b8-.-> <fs-2 a-4>-. <e g>-. <fs a>-.|
+  \appoggiatura {g32-2 a} b8-.-> <fs-2 a-4>-. <e g>-. <ds-2 fs-4>-.|
+  e4--
 }
 
 scoreCRightH = \relative c'' {
   \set fingeringOrientations = #'(up)
   % Music follows here.
+  \partial 4
+  <c-1 e-3>8-.\mp <d f>-.|
+  <e-1 g-3>-. <e g>-. a16-4( g f e)|
+  <<{d4->-4}\\{b8-2( g)}>>  <c-1 e-3>8-.\mp <d f>-.|
+  <e-1 g-3>-. <e g>-. a16-4( g f e)|
+  <b-2 d-4>4-> <a-1 c-.-3>8 <b d-.>|
+  <c-1 e-3-.> <c e-.> f16-4( e d c)|
+  <<{b4->-4}\\{gs8-2( e)}>> <a-1 c-.-3>8 <b d-.>|
+  <c-1 e-3-.> <c e-.> f16-4( e d c)|
+  <gs---2 b->-4>4 b16-4\p( a gs a-1|
+  c8-.-3) r d16-3( c b c|
+  e8-.-4) r f16-4( e ds e-1|
+  b'\cresc-4 a gs a b a gs a|
+  c4\sfz) a8-.-2\p b-.|
+  c->-. b-. a-.-1 gs-.-2|
+  a-. e-. f-.-4 d-.-2|
+  c4-- <<{b8.\trill-2( a32 b| a4--)}\\{\magnifyMusic 0.63 {b32 c b c \tuplet 3/2 { b c b } a32 b|s4}}>>|
 }
 
 scoreCRightI = \relative c'' {
   \set fingeringOrientations = #'(up)
   % Music follows here.
+  \partial 4
+  a16\f( a' b, b'|
+  <cs cs'>4->^\markup {\italic ten.} <a a'>8-. <b b'>-.|
+  <cs cs'>->-. <b b'>-. <a a'>-. <gs gs'>-.|
+  <fs fs'>-. <gs gs'>-. <a a'>-. <b b'>-.|
+  <gs gs'>-. <e e'>-. <a a'>-. <b b'>-.|
+  <cs cs'>4->^\markup {\italic ten.} <a a'>8-. <b b'>-.|
+  <cs cs'>-. <b b'>-. <a a'>-. <gs gs'>-.|
+  <fs fs'>-. <b b'>-. <gs gs'>-. <e e'>-.|
+  <a a'>4--^\markup {\italic ten.}
 }
 
 scoreCRightJ = \relative c'' {
@@ -333,21 +381,70 @@ scoreCLeftE = \relative c' {
 scoreCLeftF = \relative c' {
   \set fingeringOrientations = #'(up)
   % Music follows here.
+  \partial 4
+  r4|
+  \appoggiatura {a,32 cs e} a8-.-> a-.-3 a-.-2 a-.-1
+  \appoggiatura {a,32 cs e} a8-.-> a-.-3 a-.-2 a-.-1
+  \appoggiatura {d,,32-5 fs-3 a} d8->-.-1 d-.-2 \appoggiatura {ds,32-5 fs-4 a} ds8->-.-1 ds-.-2
+  \appoggiatura {e,32-5 gs-3 b} e8->-.-1 e-.-2 e-.-1 e-.-2
+  \appoggiatura {a,32 cs e} a8-.-> a-.-3 a-.-2 a-.-1
+  \appoggiatura {a,32 cs e} a8-.-> a-.-3 a-.-2 a-.-1
+  \appoggiatura {d,,32 fs a} d8-.-> d-. \appoggiatura {e,32 gs b} e8-. e-.
+  a,4--^\markup {\italic ten.}
 }
 
 scoreCLeftG = \relative c' {
   \set fingeringOrientations = #'(up)
   % Music follows here.
+  \key a \minor
+  r4|
+  a8-5( <c e>8-.) 8-. 8-.
+  a( <c e>8-.) 8-. 8-.
+  a-. <c e>8-. a-. <c e>-.
+  a( <c e>8-.) 8-. 8-.
+  e,-.-> <b' e>8-. 8-. 8-.
+  e,-.-> <b' e>8-. 8-. 8-.
+  e,-.-> <b' e>8-. b,-. b'8-.
+  e,4--
 }
 
 scoreCLeftH = \relative c' {
   \set fingeringOrientations = #'(up)
   % Music follows here.
+  \partial 4
+  r4|
+  c,8-. c'-. e,-. e'-.|
+  g,4 r|
+  c,8-. c'-. e,-. e'-.|
+  g,4 r|
+  a,8-. a'-. c,-. c'-.|
+  e,4 r|
+  a,8-. a'-. c,-. c'-.|
+  e,4 r|
+  a8-5( <c e>8-.) 8-. 8-.|
+  a( <c e>8-.) 8-. 8-.|
+  a-. <c e>8-. a-. <c e>-.|
+  f,( <a ds-.>\p) <a ds-.> <a ds-.>|
+  e-. <a e'-.> d,-. <f b-.>|
+  c-. <e a-.> d-. <f b-.>
+  <e-4 a-.-1> <e a-.> <e-4 gs-.-2> <e gs-.>|
+  <a, a'-->4
 }
 
 scoreCLeftI = \relative c' {
   \set fingeringOrientations = #'(up)
   % Music follows here.
+  \partial 4
+  \key a \major
+  r4|
+  \appoggiatura {a,32 cs e} a8-.-> a-.-3 a-.-2 a-.-1
+  \appoggiatura {a,32 cs e} a8-.-> a-.-3 a-.-2 a-.-1
+  \appoggiatura {d,,32-5 fs-3 a} d8->-.-1 d-.-2 \appoggiatura {ds,32-5 fs-4 a} ds8->-.-1 ds-.-2
+  \appoggiatura {e,32-5 gs-3 b} e8->-.-1 e-.-2 e-.-1 e-.-2
+  \appoggiatura {a,32 cs e} a8-.-> a-.-3 a-.-2 a-.-1
+  \appoggiatura {a,32 cs e} a8-.-> a-.-3 a-.-2 a-.-1
+  \appoggiatura {d,,32 fs a} d8-.-> d-. \appoggiatura {e,32 gs b} e8-. e-.
+  a,4--^\markup {\italic ten.}
 }
 
 scoreCLeftJ = \relative c' {
