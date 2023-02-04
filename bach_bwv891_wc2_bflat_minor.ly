@@ -14,7 +14,8 @@
       \clef "treble" \key b \minor \time 3/2
       <<
         \relative c' {
-          r1. | r1. | r1. | r1. |  | f2-1 g r4 as | 
+          r1. | r1. | r1. | r1. |  | f2-1 g r4 as |
+
         }
         \\
         \relative c' {
@@ -26,11 +27,11 @@
       \clef "bass" \key b \minor
       <<
         \relative c' {
-          r1. | r1. | r1. | r1. | r1. | 
+          r1. | r1. | r1. | r1. | r1. |
         }
         \\
         \relative c' {
-          r1. | r1. | r1. | r1. | r1. | 
+          r1. | r1. | r1. | r1. | r1. |
         }
       >>
     }
