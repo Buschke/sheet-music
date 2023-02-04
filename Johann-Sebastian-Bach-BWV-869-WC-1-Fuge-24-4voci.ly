@@ -13,7 +13,9 @@
 global = {
   \key b \minor
   \time 4/4
-  \tempo 8 = 120}
+%  \tempo 8 = 120
+  \tempo 8 = 80
+}
 
 
 preambleUp = {\clef treble \global}
@@ -205,7 +207,7 @@ tenor = \relative c' {
   e8 cis ais fis d'2 | % m. 16
   cis2~ cis8 b16 a gis a b8~ | % m. 17
   b8 a16 gis fis gis a8~ a gis16 fis eis fis gis8 | % m. 18
-  fis16 \clef treble b' cis8~ cis b16 a g a b8~ b a16 g | % m. 19
+  fis16 b' cis8~ cis b16 a g a b8~ b a16 g | % m. 19
   fis16 g a8~ a g16 fis e fis g8~ g fis16 e | % m. 20
   d4 r r2 | % m. 21
   R1 | % m. 22
@@ -234,7 +236,7 @@ tenor = \relative c' {
   g8 fis es' d a gis f'! e! | % m. 45
   dis8 e cis! a b2~ | % m. 46
   b8 a4 g8~ g fis e cis | % m. 47
-  \clef treble r16 g''' fis e d c! b c d e d c b cis d b | % m. 48
+  r16 g''' fis e d c! b c d e d c b cis d b | % m. 48
   g16 bes a g f! e f d e4 r16 c'! b! a | % m. 49
   g16 fis e d \clef bass cis! b a g fis a b cis d e a, gis | % m. 50
   a2 b8 ais16 b cis8 e, | % m. 51
@@ -350,10 +352,18 @@ bass = \relative c {
   
 }
 
+clave = {\new DrumStaff <<
+  \drummode {\global
+    << {
+         hh8 cl hh cl hh cl hh cl 
+    } \\ {
+      bd4 sn4 sn4 sn4
+    } >>
+  }
+>>
+}
 
-
-\score {
-  \new PianoStaff <<
+scoreA =   \new PianoStaff <<
     %\set PianoStaff.instrumentName = #"Piano  "
     \new Staff = "upper" \relative c' {\preambleUp
   <<
@@ -370,25 +380,39 @@ bass = \relative c {
   >>
 }
   >>
-  \layout { }
-}
+
 
 \score {
-  \new PianoStaff <<
-   \new Staff = "upper" \relative c' {\preambleUp
-  <<
-  \new Voice { \voiceOne \soprano }
-  \\
-  \new Voice { \voiceTwo \alto }
-  >>
+%  {
+%    \clave
+    \scoreA
+%  }
+  \layout { }
 }
-    \new Staff = "lower" \relative c {\preambleDown
-  <<
-    \new Voice { \voiceThree \tenor }
-    \\
-    \new Voice { \voiceFour \bass }
-  >>
-}
-  >>
+\score {
+  {
+    \clave
+    \scoreA
+  }
   \midi { }
 }
+
+% \score {
+%   \new PianoStaff <<
+%    \new Staff = "upper" \relative c' {\preambleUp
+%   <<
+%   \new Voice { \voiceOne \soprano }
+%   \\
+%   \new Voice { \voiceTwo \alto }
+%   >>
+% }
+%     \new Staff = "lower" \relative c {\preambleDown
+%   <<
+%     \new Voice { \voiceThree \tenor }
+%     \\
+%     \new Voice { \voiceFour \bass }
+%   >>
+% }
+%   >>
+%   \midi { }
+% }

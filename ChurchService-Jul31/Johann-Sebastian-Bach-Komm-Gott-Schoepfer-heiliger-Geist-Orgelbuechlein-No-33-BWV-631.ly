@@ -63,8 +63,8 @@ t_in = \relative c {
 pd_in = \relative c {
   \settings
   \partial 4.
-  r8 r g'
-  r r f r r e r r d r r e
+  r8 r g'\rtoe
+  r r f\rheel r r e\ltoe r r d\lheel r r e
   r r f r r g c,4.\fermata r8 r c
   r r e r r d r r c r r b
   r r c r r c, g'4.\fermata r8 r g
