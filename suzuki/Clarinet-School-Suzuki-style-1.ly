@@ -77,7 +77,7 @@ scoreALeft = \relative c' {
   bf2.|
   c|
   d4( c bf)|
-  f'2 a,,4-|
+  f'2 a,,4-.|
 
 }
 
