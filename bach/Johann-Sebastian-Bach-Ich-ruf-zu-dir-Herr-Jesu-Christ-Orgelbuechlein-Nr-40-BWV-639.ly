@@ -74,16 +74,16 @@ leftA = \relative c' {
   \global
   % Music follows here.
   \partial 4
-  af16-4( c f e)|
-  f16( c af f) g( bf df c) f,( af c bf) af f af c|
+  af16-4( c-2 f-1 e)|
+  f16( c af f) g-4( bf df-2 c-1) f,( af c bf) af f af c-2|
   \clef treble
-  f e f af g f e f e( c g bf) af( c f af)|
-  g( ef af g) af ef f gf f( df f af) g( df c gf')|
+  f-1 e f af-2 g-1 f e f e-1( c g-5 bf-3) af-4( c-2 f-1 af-2)|
+  g-1( ef-4 af-2 g-1) af ef f gf f-4( df f af) g-1( df-4 c gf'-2)|
 }
 
 leftB = \relative c' {
   % Music follows here.
-  f16( bf, df f) bf( af g af) g c, e bf|
+  f16-1( bf, df f) bf-2( af g af) g-1 c,-3 e-1 bf-3|
 }
 
 leftC = \relative c' {
