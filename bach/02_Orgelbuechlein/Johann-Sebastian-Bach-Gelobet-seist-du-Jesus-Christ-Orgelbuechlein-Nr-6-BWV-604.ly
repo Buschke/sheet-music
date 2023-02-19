@@ -39,7 +39,7 @@ right = \relative c'' {
   \global
   % Music follows here.
   \partial 2
-  g2|
+  g2-2|
   g4~ g16 a f g a4 g8. a16|
   b8 c c4 c4.\fermata c16 d|
   b8.\prall c16 d4 e d8. c16|
@@ -59,8 +59,8 @@ leftOne = \relative c' {
   % Music follows here.
   \clef treble
   \partial 2
-  b8. c16 d4|
-  e4~ e16 e d8 c8. d16 r e fs8|
+  b8.-3 c16-2 d4-1|
+  e4~-2 e16-3 e d8 c8. d16 r e fs8|
   g8. a16 r a b8 r16 g8. r16 g8.|
   g4~ g8. f16 e8. g16~ g g fs8|
   g4~ 16 g  fs8 r16 d8 f16 e4~|
@@ -80,7 +80,7 @@ leftTwo = \relative c' {
   % Music follows here.
   \clef treble
   \partial 2
-  r16 g a8 b4|
+  r16 g-5 a8-4 b4-3|
   b c8. bf16 r  a b8 c4|
   r16 d e8 f8. 16~8 e16 d e4|
   d~ 16 c b8~ 16 g c e a,4|
