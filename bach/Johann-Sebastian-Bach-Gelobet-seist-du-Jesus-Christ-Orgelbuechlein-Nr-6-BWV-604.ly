@@ -3,7 +3,7 @@
 
 \header {
   dedication = ""
-  title = "Gelobet seist du, Jesus Christ"
+  title = "Gelobet sei'st du, Jesus Christ"
   subtitle = "Orgelbüchlein Nr. 6"
   subsubtitle = ""
   instrument = "Orgel"
