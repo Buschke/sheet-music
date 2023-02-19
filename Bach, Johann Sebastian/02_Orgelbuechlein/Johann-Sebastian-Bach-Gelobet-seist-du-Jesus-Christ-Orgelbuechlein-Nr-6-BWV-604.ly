@@ -3,23 +3,25 @@
 
 \header {
   dedication = ""
-  title = "Gelobet sei'st du, Jesus Christ"
-  subtitle = "Orgelbüchlein Nr. 6"
+  title = "Gelobet sei'st du, Jesus Christ, Orgelbüchlein Nr. 6"
+  subtitle = ""
   subsubtitle = ""
-  instrument = "Orgel"
+  instrument = ""
   composer = "Johann Sebastian Bach"
-  arranger = "Fingerings: Sven Buschke"
-  poet = ""
+  poet = "Fingerings: Sven Buschke"
+  arranger =  ""
   meter = ""
   piece = ""
   opus = "BWV 604"
-  copyright = "© Fingerings: 19.02.2023, Sven Buschke"
-  tagline = ""
+  %copyright = "© Fingerings: 19.02.2023, Sven Buschke"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line {    } \line { \small \line { \tiny © Fingerings: 19.02.2023, Sven Buschke   } }  } }
 }
 
 \paper {
-  #(set-paper-size "a4")
+  #(set-paper-size "a4" 'landscape)
 }
+
+ #(set-global-staff-size 19.4)
 
 \layout {
   \context {
