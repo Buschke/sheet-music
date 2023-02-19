@@ -2,19 +2,19 @@
 \language "english"
 
 \header {
-  dedication = "NN"
+  dedication = ""
   title = "Ich ruf‘ zu dir, Herr Jesu Christ"
   subtitle = "Orgelbüchlein Nr. 40"
-  subsubtitle = "NN"
+  subsubtitle = ""
   instrument = "Organ"
   composer = "Johann Sebastian Bach"
   arranger = "Fingerings: Sven Buschke"
-  poet = "NN"
-  meter = "NN"
-  piece = "NN"
+  poet = ""
+  meter = ""
+  piece = ""
   opus = "BWV 639"
   copyright = "© Fingerings: Sven Buschke, 17.02.2023"
-  tagline = "NN"
+  tagline = ""
 }
 
 \paper {
