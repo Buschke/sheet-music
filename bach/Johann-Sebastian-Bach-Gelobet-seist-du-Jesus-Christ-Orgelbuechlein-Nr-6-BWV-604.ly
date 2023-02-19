@@ -13,7 +13,7 @@
   meter = ""
   piece = ""
   opus = "BWV 604"
-  copyright = "© 19.02.2023 Sven Buschke (Fingerings)"
+  copyright = "© Fingerings: 19.02.2023, Sven Buschke"
   tagline = ""
 }
 
