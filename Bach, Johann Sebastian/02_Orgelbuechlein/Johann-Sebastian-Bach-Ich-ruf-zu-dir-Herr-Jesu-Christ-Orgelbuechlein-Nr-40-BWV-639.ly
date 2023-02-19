@@ -8,17 +8,18 @@
   subsubtitle = ""
   instrument = "Organ"
   composer = "Johann Sebastian Bach"
-  arranger = "Fingerings: Sven Buschke"
-  poet = ""
+  arranger = ""
+  poet = "Fingerings: Sven Buschke"
   meter = ""
   piece = ""
   opus = "BWV 639"
-  copyright = "© Fingerings: Sven Buschke, 17.02.2023"
-  tagline = ""
+%   copyright = "© Fingerings: Sven Buschke, 17.02.2023"
+%   tagline = ""
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line {    } \line { \small \line { \tiny © Fingerings: 19.02.2023, Sven Buschke   } }  } }
 }
 
 \paper {
-  #(set-paper-size "a4")
+  #(set-paper-size "a4" 'landscape)
 }
 
 \layout {
