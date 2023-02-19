@@ -39,7 +39,7 @@ rightA = \relative c'' {
   \global
   % Music follows here.
   \partial 4
-  c4|
+  c4-4|
   af bf af8. g16 f8. g16|
   af16 bf af bf bf8.\trill af32 bf c4\fermata c8. df16|
   ef4 \appoggiatura df16 c8. bf16 af4 bf8 c|
@@ -47,12 +47,12 @@ rightA = \relative c'' {
 
 rightB = \relative c'' {
   % Music follows here.
-  df4 ~ df16 ef32 f df16\prall c c4\fermata|
+  df4 ~ df16 ef32 f df16\prall c c4\fermata
 }
 
 rightC = \relative c'' {
   % Music follows here.
-  df4 ~ df16 ef32 f df16\prall c c4\fermata ef|
+  df4 ~ df16 ef32 f df16\prall c c4\fermata ef
 }
 
 rightD = \relative c'' {
@@ -119,12 +119,12 @@ pedalA = \relative c {
 
 pedalB = \relative c {
   % Music follows here.
-  bf' af g f e c|
+  bf' af g f e c
 }
 
 pedalC = \relative c {
   % Music follows here.
-  bf' af g f e f c c|
+  bf' af g f e f c c
 }
 
 pedalD = \relative c {
