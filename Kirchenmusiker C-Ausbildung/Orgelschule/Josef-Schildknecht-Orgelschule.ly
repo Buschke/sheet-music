@@ -20,7 +20,7 @@
 }
 
 \paper {
-  #(set-paper-size "a4" 'landscape)
+  #(set-paper-size "a4")
 }
 
 \layout {
