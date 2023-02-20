@@ -44,7 +44,7 @@ globalA = {
 scoreARight = \relative c'' {
   \globalA
   % Music follows here.
-  <<{r8 f-. a-.-2 bf-.-3}\\{r4\f f,8-1 g-1}>>|
+  <<{r8 f-. a,-.-2 bf-.-3}\\{r4\f f8-1 g-1}>>|
   <a-2 c-4>4( <bf d>)|
   <<{c8-.-3 f4 ef16 d}\\{a4 bf}\\{f2}>>|
   <<{<bf d-5>8 <a c>}\\{f4}>> r|
