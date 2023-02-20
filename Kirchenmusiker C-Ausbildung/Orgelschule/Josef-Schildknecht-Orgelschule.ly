@@ -55,6 +55,9 @@ scoreARight = \relative c'' {
   c4 d e f|
   e d c2
   \bar "|."
+  \key f \major
+  \time 3/4
+  r4^"Nr. 86" r r
 }
 
 scoreALeft = \relative c' {
@@ -65,6 +68,7 @@ scoreALeft = \relative c' {
   e g2 a4|
   g4. f8 e2
   \bar "|."
+  r4 r r
 }
 
 scoreAPedal = \relative c {
@@ -75,6 +79,7 @@ scoreAPedal = \relative c {
   c4 b c2~|
   4 b c2|
   \bar "|."
+  r4 r r
 }
 
 \bookpart {
