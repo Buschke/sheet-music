@@ -13,9 +13,14 @@
   meter = ""
   piece = ""
   opus = "BWV 639"
+  #(define licenseUrl "https://buschke.com")
+  license = "© Fingerings: Sven Buschke, 19.02.2023"
+  copyright = \markup { \rounded-box \pad-markup #0.5 \center-column { \line { \with-url #licenseUrl \license }  } }
+
 %   copyright = "© Fingerings: Sven Buschke, 17.02.2023"
 %   tagline = ""
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line {    } \line { \small \line { \tiny © Fingerings: 19.02.2023, Sven Buschke   } }  } }
+% tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line {    } \line { \small \line { \tiny © Fingerings: 19.02.2023, Sven Buschke   } }  } }
+tagline = ""
 }
 
 \paper {

@@ -5,9 +5,16 @@
   title = "WC 2 - Fuge 9"
   subtitle = "E-Dur, 4 voci, Wohltemperiertes Clavier 2"
   composer = "Johann Sebastian Bach"
+  poet = "Fingerings: Sven Buschke"
   opus = "BWV 878"
-  copyright = "Public Domain"
-  tagline = ""
+%   copyright = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line {    } \line { \small \line { \tiny © Fingerings: 19.02.2023, Sven Buschke   } }  } }
+   tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line {    } \line { \small \line { \tiny © Fingerings: 19.02.2023, Sven Buschke   } }  } }
+
+  #(define licenseUrl "https://buschke.com")
+  license = "© Fingerings: Sven Buschke, 19.02.2023"
+  copyright = \markup { \rounded-box \pad-markup #0.5 \center-column { \line { \with-url #licenseUrl \license }  } }
+%  copyright = "Public Domain"
+ % tagline = ""
 }
 
 global = {
@@ -21,7 +28,7 @@ preambleDown = {\clef bass \global}
 
 soprano = \relative c'' {
   \global
-  
+
   R\breve | % m. 1
   R\breve | % m. 2
   R\breve | % m. 3
@@ -65,12 +72,12 @@ soprano = \relative c'' {
   r2 e' dis cis | % m. 41
   b2 a gis8 fis gis a b4 a | % m. 42
   gis2 fis e1 \fermata \bar "|." | % m. 43
-   
+
 }
 
 alto = \relative c' {
   \global
-  
+
   R\breve | % m. 1
   R\breve | % m. 2
   R\breve | % m. 3
@@ -114,15 +121,15 @@ alto = \relative c' {
   b8 fis b2 a!4~ a8 dis, gis2 fis4~ | % m. 41
   fis8 b, e2 dis4 e r r e | % m. 42
   e2 dis b1 \fermata \bar "|." | % m. 43
-    
+
 }
 
 tenor = \relative c' {
   \global
-  
+
   R\breve | % m. 1
-  r1 b | % m. 2
-  cis2 e dis cis | % m. 3
+  r1 b-1 | % m. 2
+  cis2-1 e-2 dis cis | % m. 3
   b2. b4 a b cis dis | % m. 4
   e8 b e2 dis4 e2 gis,4 fis | % m. 5
   gis2 e fis1~ | % m. 6
@@ -163,14 +170,14 @@ tenor = \relative c' {
   fis4 fis gis a b dis, e fis | % m. 41
   gis2 a b4 r r cis | % m. 42
   b2. a4 gis1 \fermata \bar "|." | % m. 43
-    
+
 }
 
 bass = \relative c {
   \global
-  e1 fis2 a | % m. 1
-  gis2 fis e4 dis8 cis dis4 b | % m. 2
-  e4 fis gis ais b8 fis b2 a!4~ | % m. 3
+  e1-5 fis2-4 a-2 | % m. 1
+  gis2-1 fis-2 e4-3 dis8 cis dis4 b | % m. 2
+  e4-4 fis gis ais b8 fis b2 a!4~ | % m. 3
   a4 gis8 fis gis2~ gis fis | % m. 4
   gis2 a4 b8 a gis4 fis e dis | % m. 5
   cis1 b2 fis | % m. 6
@@ -211,13 +218,13 @@ bass = \relative c {
   dis2 cis b a | % m. 41
   gis2 fis e4 fis gis a | % m. 42
   b1 e,1 \fermata \bar "|." | % m. 43
-    
+
 }
 
 clave = {\new DrumStaff <<
   \drummode {\global
     << {
-         hh8 cl hh cl hh cl hh cl 
+         hh8 cl hh cl hh cl hh cl
     } \\ {
       bd4 sn4 sn4 sn4
     } >>
