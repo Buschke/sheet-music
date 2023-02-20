@@ -27,7 +27,7 @@
         copyright = "Creative Commons Attribution-ShareAlike 3.0"
         maintainer = "Hajo Dezelski"
         maintainerEmail = "dl1sdz (at) gmail.com"
-	
+
  footer = "Mutopia-2013/03/22-1422"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \concat { \teeny www. \normalsize MutopiaProject \teeny .org } \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \concat { \teeny www. \normalsize LilyPond \teeny .org }} by \concat { \maintainer . } \hspace #0.5 Copyright © 2013. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details \concat { see: \hspace #0.3 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } } }
 }
@@ -69,7 +69,7 @@ sopranoOne =   \relative d' {
         a'4 a b b | % 7
         \stemUp a8 [ b a g ] fis [ e ] d  % 8
     } %end of repeated section
-  
+
     \repeat volta 2 { %begin repeated section
 		\partialPickup a'8 | % Auftakta
 		fis8 [ a fis a ] d, [ e16 fis ] g8 [e ] | % 9
@@ -93,10 +93,10 @@ sopranoTwo =   \relative g' {
         a8 [ g a fis ] g4 g8 [ d ] | % 4
         g4 g a a | % 5
 	g8 [ a g fis ] e [ d ] cis\noBeam b'16 [ cis! ] | % 6
-        d8 [ e fis d ] b [ d g fis ]  | %7		
+        d8 [ e fis d ] b [ d g fis ]  | %7
         e8. [ d16 ] ~ d [ cis e8 ~ ] \shortenBeamOne \shiftStemLeftTwo e16[ \rightPartialBeam d8] \leftPartialBeam \shortenStem cis16[] \ignoreClashNote \shortenStem d8  % 8
    } %end of repeated section
-  
+
     \repeat volta 2 { %begin repeated section
 		\partialPickup r8 | % Auftakt
 		a4 a b b | % 9
@@ -106,7 +106,7 @@ sopranoTwo =   \relative g' {
 		g2\rest \stemUp g4 g4 | % 13
 		\shiftOn \alignBeamOne c8. [ \stemDown d16 ] \stemUp \shortenBeamThree \shiftOff c8 [b] \alignBeamTwo a [ \shiftOn \stemDown b] \shortenBeamFour c [ \shiftOff \ignoreClashNote d ] | % 14
 		b8 [ a16 b ]g8 g8\rest g8\rest e'16 [d c8 e ] | % 15
-		a,16 [ d c b ] c [ a d8 ~ ] d8 [ c16 d ] b8  % 16 
+		a,16 [ d c b ] c [ a d8 ~ ] d8 [ c16 d ] b8  % 16
     } %end repeated section
 }
 
@@ -131,7 +131,7 @@ sopranoThree = \relative c'' {
     	 s1 \noBreak | %13
     	 s1 | %14
     	 s1 \noBreak | %15
-    	 s2 s4.  %16    	 
+    	 s2 s4.  %16
     }
 }
 
@@ -139,7 +139,7 @@ soprano = << \sopranoOne \\ \sopranoTwo \\ \sopranoThree >>
 
 %%
 %% Bass Clef
-%% 
+%%
 
 bassOne = \relative d {
 	\repeat volta 2 { %begin repeated section
@@ -154,7 +154,7 @@ bassOne = \relative d {
         fis8 [ g a fis ] g [ fis e d ] | % 7
         cis8 [ d e cis ] d4 d8  % 8
     } %end of repeated section
-  
+
     \repeat volta 2 { %begin repeated section
 		\partialPickup  fis'8 | % Auftakt
 		d8 [ fis d fis ] g [ d d g ] | % 9
@@ -165,13 +165,13 @@ bassOne = \relative d {
 		c8\rest a'8 e [ d16 e ] fis8 g4 fis8 | % 14
 		\staffDown \stemUp d4 d e e | % 15
 		d8 [ e d c ] b [ a ] g  % 16
-  
+
     } %end repeated section
 }
 
 bassTwo = \relative g {
     \repeat volta 2 { %begin repeated section
-	\stemDown	    
+	\stemDown
 	\partialPickup r8 | % Auftakt
         g2 fis | % 1
         e2 d4. c8 | % 2
@@ -182,7 +182,7 @@ bassTwo = \relative g {
         fis4 d g g, | % 7
         a2 d,4 r8  % 8
     } %end of repeated section
-  
+
     \repeat volta 2 { %begin repeated section
 		\partialPickup r8 | % Auftakt
 		d''4 c b g | % 9
@@ -194,7 +194,7 @@ bassTwo = \relative g {
 		g,8 [ a b g ] c4. cis8 | % 15
 		d4 d,_\markup { "Aria da Capo e Fine." } g g,8  % 16
     } %end repeated section
-	
+
 }
 
 bass = << \bassOne \\ \bassTwo>>
