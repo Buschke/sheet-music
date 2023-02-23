@@ -46,14 +46,21 @@ rightA = \relative c'' {
   % Music follows here.
   \partial 4
   c4-4|
-  af bf af8. g16 f8. g16|
-  af16 bf af bf bf8.\trill af32 bf c4\fermata c8. df16|
-  ef4 \appoggiatura df16 c8. bf16 af4 bf8 c|
+  af-2 bf-3 af8.-2 g16-1 f8.-2 g16-1|
+  af16-2 bf-3 af-1 bf-2
+
+  <<{bf8.\trill-2( af32-1 bf-2| c4-3\fermata)}\\{\magnifyMusic 0.63 {\tuplet 3/2 { bf32-2 c-3 bf-2 }  \tuplet 3/2 { c-3 bf-2 c-3} \tuplet 3/2 { bf-2 c-3 bf-2 } af32-1 bf-2|s4}}>>
+%  bf8.\trill
+
+%  af32-1 bf-2 c4-3\fermata
+
+  c8.-1 df16-2|
+  ef4-3 \appoggiatura df16-2 c8.-1 bf16-3 af4-2 bf8-3 c-1|
 }
 
 rightB = \relative c'' {
   % Music follows here.
-  df4 ~ df16 ef32 f df16\prall c c4\fermata
+  df4-2 ~ df16 ef32-3 f-4 df16\prall-2 c-1 c4-1\fermata
 }
 
 rightC = \relative c'' {
@@ -81,10 +88,10 @@ leftA = \relative c' {
   % Music follows here.
   \partial 4
   af16-4( c-2 f-1 e-2)|
-  f16-1( c-2 af-3 f-5) g-4( bf-3 df-2 c-1) f,-5( af-3 c-1 bf) af f af c-1|
+  f16-1( c-2 af-3 f-5) g-4( bf-3 df-2 c-1) f,-5( af-3 c-1 bf-2) af-3 f-5 af-3 c-1|
   \clef treble
-  f-2 e-3 f-1 af-2 g-1 f e f e-1( c-2 g-5 bf-3) af-4( c-2 f-1 af-2)|
-  g-1( ef-4 af-2 g-1) af-2 ef-4 f-3 gf-2 f-1( df-5 f-1 af-2) g-1( df-4 c gf'-2)|
+  f-2 e-3 f-1 af-2 g-1 f-2 e-3 f-2 e-1( c-2 g-5 bf-3) af-4( c-2 f-1 af-2)|
+  g-1( ef-4 af-2 g-1) af-2 ef-4 f-3 gf-2 f-1( df-3 f-1 af-2) g-1( df-4 c gf'-2)|
 }
 
 leftB = \relative c' {
@@ -117,15 +124,15 @@ pedalA = \relative c {
   \global
   % Music follows here.
   \partial 4
-  f,8 f|
-  f' f f\rtoe( e\ltoe) f f f ef|
-  df8\rtoe 8 8 8 c c f f|
-  c' c c c c c bf a|
+  f,8\ltoe f|
+  f'\rtoe f f\rtoe( e\ltoe) f\rtoe f f ef\ltoe|
+  df8\rtoe 8 8 8 c\ltoe c f\rtoe f\ltoe|
+  c'\rtoe c c c c c bf\rtoe a\ltoe|
 }
 
 pedalB = \relative c {
   % Music follows here.
-  bf' af g f e c
+  bf'\rtoe af\ltoe g\rtoe f\ltoe e\rtoe c\ltoe
 }
 
 pedalC = \relative c {
