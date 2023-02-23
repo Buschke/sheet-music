@@ -47,21 +47,23 @@ rightA = \relative c'' {
   \partial 4
   c4-4|
   af-2 bf-3 af8.-2 g16-1 f8.-2 g16-1|
-  af16-2 bf-3 af-1 bf-2
+  af16-2^"Tremplement lié" bf-3 af-1 bf-2
 
-  <<{bf8.\trill-2( af32-1 bf-2| c4-3\fermata)}\\{\magnifyMusic 0.63 {\tuplet 3/2 { bf32-2 c-3 bf-2 }  \tuplet 3/2 { c-3 bf-2 c-3} \tuplet 3/2 { bf-2 c-3 bf-2 } af32-1 bf-2|s4}}>>
+  <<{bf8.\trill-2( af32-1 bf-2| c4-3\fermata)}\\{\magnifyMusic 0.63 {c32-3 bf-2 c-3 bf-2 c-3 bf-32   af32-1 bf-2|s4}}>>
 %  bf8.\trill
 
 %  af32-1 bf-2 c4-3\fermata
 
   c8.-1 df16-2|
-  ef4-3 \appoggiatura df16-2 c8.-1 bf16-3 af4-2 bf8-3 c-1|
+  ef4-3
+<< { \appoggiatura df16-2 c8.-1 bf16-3 af4-2}\\{\magnifyMusic 0.63{df32-2 c8-1 ~ c32 bf16-3 af4-2}}>>
+     bf8-3 c-1|
 }
 
 rightB = \relative c'' {
   % Music follows here.
 
-<<{s4 s16 s32 s32 {\magnifyMusic 0.63 \tuplet 3/2 {df32-2 ef-3 df32-2}}}\\{df4-2 ~ df16 ef32-3 f-4 df16\prall-2 c-1 c4-1\fermata}>>
+<<{s4 s16 s32 s32 {\magnifyMusic 0.63 {ef64-3 df-2 ef-3 df-2 r32 c-1 c4-1}}}\\{df4-2 ~ df16 ef32-3 f-4 df16\prall-2 c-1 c4-1\fermata}>>
 
 %\magnifyMusic 0.63 {\tupl 3/2 {df32-2 ef-3 df-2}
 
@@ -70,7 +72,10 @@ rightB = \relative c'' {
 
 rightC = \relative c'' {
   % Music follows here.
-  df4 ~ df16 ef32 f df16\prall c c4\fermata ef
+  <<{s4 s16 s32 s32 {\magnifyMusic 0.63 {ef64-3 df-2 ef-3 df-2 r32 c-1 c4-1}}}\\{df4-2 ~ df16 ef32-3 f-4 df16\prall-2 c-1 c4-1\fermata}>>
+
+  %df4 ~ df16 ef32 f df16\prall c c4\fermata
+  ef
 }
 
 rightD = \relative c'' {
@@ -129,15 +134,15 @@ pedalA = \relative c {
   \global
   % Music follows here.
   \partial 4
-  f,8\ltoe f|
-  f'\rtoe f f\rtoe( e\ltoe) f\rtoe f f ef\ltoe|
-  df8\rtoe 8 8 8 c\ltoe c f\rtoe f\ltoe|
-  c'\rtoe c c c c c bf\rtoe a\ltoe|
+  f,8\ltoe f\ltoe|
+  f'\rtoe f\rtoe f\rtoe( e\ltoe) f\rtoe f\rtoe f\rtoe ef\rtoe|
+  df8\rtoe 8\rtoe 8\rtoe 8\rtoe c\ltoe c\ltoe f\rtoe f\rtoe|
+  c'\rtoe c\rtoe c\rtoe c\rtoe c\rtoe c\rtoe bf\rtoe a\rtoe|
 }
 
 pedalB = \relative c {
   % Music follows here.
-  bf'\rtoe af\ltoe g\rtoe f\ltoe e\rtoe c\ltoe
+  bf'\rtoe af\rtoe g\rtoe f\rtoe e\rtoe c\ltoe
 }
 
 pedalC = \relative c {

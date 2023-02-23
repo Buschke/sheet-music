@@ -47,8 +47,8 @@ right = \relative c'' {
   % Music follows here.
   \partial 2
   g2-2|
-  g4~ g16 a f g a4 g8. a16|
-  b8 c c4 c4.\fermata c16 d|
+  g4-2~ g16 a-3 f-1 g-2 a4-3 g8.-2 a16-3|
+  b8-4 c-5 c4-2 c4.-2\fermata c16-2 d-3|
   b8.\prall c16 d4 e d8. c16|
   b4 a g\fermata g|
   c4 b8. c16 d4 a|
@@ -67,8 +67,8 @@ leftOne = \relative c' {
   \clef treble
   \partial 2
   b8.-3 c16-2 d4-1|
-  e4~-2 e16-3 e d8 c8. d16 r e fs8|
-  g8. a16 r a b8 r16 g8. r16 g8.|
+  e4~-1 e16 e-1 d8-2 c8.-1 d16-2 r e-1 fs8-2|
+  g8.-1 a16-2 r a-2 b8-1 r16 g8.-2 r16 g8.-1|
   g4~ g8. f16 e8. g16~ g g fs8|
   g4~ 16 g  fs8 r16 d8 f16 e4~|
   e16 e fs8 g4~ 16 fs g8~ g fs|
@@ -88,8 +88,8 @@ leftTwo = \relative c' {
   \clef treble
   \partial 2
   r16 g-5 a8-4 b4-3|
-  b c8. bf16 r  a b8 c4|
-  r16 d e8 f8. 16~8 e16 d e4|
+  b-4 c8.-3 bf16-4 r  a-5 b8-4 c4-3|
+  r16 d-5 e8-4 f8.-3 16-3~8 e16-4 d-5 e4-4|
   d~ 16 c b8~ 16 g c e a,4|
   g8 b e d16 c~8 b c g|
   a8. ds16 e g, a8 b8. c16 d4|
@@ -107,9 +107,9 @@ pedal = \relative c {
   \global
   % Music follows here.
   \partial 2
-  r4 r16 g' g, f'|
-  e e e, d' c4 f,8 f' e c|
-  g' fs g g, c2|
+  r4 r16 g'\rtoe g,\ltoe f'\rtoe|
+  e\rtoe e\rtoe e,\ltoe d'\rtoe c4\rtoe f,8\ltoe f'\rtoe e\rtoe c\ltoe|
+  g'\rtoe fs\rtoe g\rtoe g,\ltoe c2\rtoe|
   r16 g g' a, b8 g c a d d,|
   r16 e e' b c a d8 g,4 r16 c c, b'|
   a8 a' e4 d4 r16 d d, c'|
