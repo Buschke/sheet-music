@@ -60,7 +60,12 @@ rightA = \relative c'' {
 
 rightB = \relative c'' {
   % Music follows here.
-  df4-2 ~ df16 ef32-3 f-4 df16\prall-2 c-1 c4-1\fermata
+
+<<{s4 s16 s32 s32 {\magnifyMusic 0.63 \tuplet 3/2 {df32-2 ef-3 df32-2}}}\\{df4-2 ~ df16 ef32-3 f-4 df16\prall-2 c-1 c4-1\fermata}>>
+
+%\magnifyMusic 0.63 {\tupl 3/2 {df32-2 ef-3 df-2}
+
+%  df16\prall-2 c-1 c4-1\fermata
 }
 
 rightC = \relative c'' {
