@@ -3,8 +3,8 @@
 
 \header {
   dedication = ""
-  title = "Gelobet sei'st du, Jesus Christ, Orgelbüchlein Nr. 6"
-  subtitle = ""
+  title = "Gelobet sei'st du, Jesus Christ"
+  subtitle = "Orgelbüchlein Nr. 6"
   subsubtitle = ""
   instrument = ""
   composer = "Johann Sebastian Bach"
@@ -13,12 +13,17 @@
   meter = ""
   piece = ""
   opus = "BWV 604"
+  #(define licenseUrl "https://buschke.com")
+  license = "© Fingerings: Sven Buschke, 19.02.2023"
+  copyright = \markup { \rounded-box \pad-markup #0.5 \center-column { \line { \with-url #licenseUrl \license }  } }
+
   %copyright = "© Fingerings: 19.02.2023, Sven Buschke"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line {    } \line { \small \line { \tiny © Fingerings: 19.02.2023, Sven Buschke   } }  } }
+%  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line {    } \line { \small \line { \tiny © Fingerings: 19.02.2023, Sven Buschke   } }  } }
+  tagline = ""
 }
 
 \paper {
-  #(set-paper-size "a4" 'landscape)
+  #(set-paper-size "a4")
 }
 
  #(set-global-staff-size 19.4)

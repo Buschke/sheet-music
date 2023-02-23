@@ -7,7 +7,7 @@ rightMvtI = \relative c''
 
   <<
     {
-      r8 f a, bes |
+      r8 f a,-2 bes-3 |
       c4 d |
       c8 f4 es16 d |
       <bes d>8 <a c> r4
