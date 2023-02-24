@@ -110,8 +110,8 @@ pedal = \relative c {
   r4 r16 g'\rtoe g,\ltoe f'\rtoe|
   e\rtoe e\rtoe e,\ltoe d'\rtoe c4\rtoe f,8\ltoe f'\rtoe e\rtoe c\ltoe|
   g'\rtoe fs\rtoe g\rtoe g,\ltoe c2\rtoe|
-  r16 g g' a, b8 g c a d d,|
-  r16 e e' b c a d8 g,4 r16 c c, b'|
+  r16 g g'\rtoe a, b8\rtoe g c\rtoe a d\rtoe d,|
+  r16 e e'\rtoe b c a d8 g,4 r16 c c, b'|
   a8 a' e4 d4 r16 d d, c'|
   b b' b, a' g8 a d,4 d,|
   d' a8 cs d4 r16 g g, f'|
