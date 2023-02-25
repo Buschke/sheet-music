@@ -38,27 +38,46 @@ global = {
 soprano = \relative c'' {
   \global
   % Music follows here.
-  c4^"Kadenz I IV V I 8^ - Enge Lage" c b c
+  c4^"I IV V 8^-EL" c b c
+  \bar "||"
+  e^"3^" f d e
+  \bar "||"
+  g^"5^" f d e
+  \bar "||"
+  c4^"8^-WL" c b c
+  \bar "||"
+  e^"3^" f d e
+  \bar "||"
+  g^"5^" f d e
   \bar "|.|"
   c^"Kadenz - Weite Lage"
+  \bar "|.|"
+  c^"Sequenz"
+  \bar "|.|"
+  c^"Quintpendel"
+  \bar "|."
 }
 
 alto = \relative c' {
   \global
   % Music follows here.
-  g'
+  g' a g g
 }
 
 tenor = \relative c' {
   \global
   % Music follows here.
-  e
+  e f d e
 }
 
 bass = \relative c {
   \global
   % Music follows here.
-  c f g c,
+  c f g c,|
+  c f g c,|
+  c f g c,|
+  c f g c,|
+  c f g c,|
 }
 
 verse = \lyricmode {
