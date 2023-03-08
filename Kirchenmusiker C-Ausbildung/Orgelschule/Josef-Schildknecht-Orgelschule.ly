@@ -419,31 +419,52 @@ scoreCLeft = \relative c' {
 scoreCPedal = \relative c {
   \global
   % Music follows here.
-
+  c1\ltoe^"80. a." d\rtoe c2 d c2. d4 c d c d c1
+  \bar "||"
+  cs2\ltoe^"b." d\rtoe
+  cs4 d cs4. d8 cs d cs d cs2 d1
+  \bar "||"
+  df\rtoe^"c." c\ltoe
+  \bar "||"
+  c^"d."
+  \bar "||"
+  c^"e."
+  \bar "||"
+  c^"f."
+  \bar "||"
+  c^"g."
+  \bar "|.|"
+  c,2\ltoe^"93. a., alle Tonarten" c\rtoe d f e g f a g b a c b d c e e c d f c a b g a f g e f d e c
+  \bar "||"
+  \bar "|.|"
+  \bar "|.|"
+  \bar "|.|"
+  \bar "|.|"
+  \bar "|."
 }
 
 \bookpart {
   \header {
-  title = "Duos ab Nr. 81"
-  opus = "Nr. 81 ff."
+  title = "Pedal Solo ab Nr. 80. a."
+  opus = "Nr. 80. a. ff."
   }
   \score {
-    <<
-      \new PianoStaff \with {
-        instrumentName = "Organ"
-        shortInstrumentName = "Org."
-      } <<
-        \new Staff = "right" \with {
-          midiInstrument = "church organ"
-        } \scoreCRight
-        \new Staff = "left" \with {
-          midiInstrument = "church organ"
-        } { \clef bass \scoreCLeft }
-      >>
+%     <<
+%       \new PianoStaff \with {
+%         instrumentName = "Organ"
+%         shortInstrumentName = "Org."
+%       } <<
+%         \new Staff = "right" \with {
+%           midiInstrument = "church organ"
+%         } \scoreCRight
+%         \new Staff = "left" \with {
+%           midiInstrument = "church organ"
+%         } { \clef bass \scoreCLeft }
+%       >>
       \new Staff = "pedal" \with {
         midiInstrument = "church organ"
       } { \clef bass \scoreCPedal }
-    >>
+%     >>
     \layout { }
     \midi { }
   }
