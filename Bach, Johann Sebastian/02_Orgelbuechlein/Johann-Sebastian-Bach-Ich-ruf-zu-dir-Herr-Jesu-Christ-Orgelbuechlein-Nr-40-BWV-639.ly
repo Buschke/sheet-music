@@ -76,21 +76,21 @@ rightC = \relative c'' {
   <<{s4 s16 s32 s32 {\magnifyMusic 0.63 {ef64-3 df-2 ef-3 df-2 r32 c-1 c4-1}}}\\{df4-2 ~ df16 ef32-3 f-4 df16\prall-2 c-1 c4-1\fermata}>>
 
   %df4 ~ df16 ef32 f df16\prall c c4\fermata
-  ef
+  ef-2
 }
 
 rightD = \relative c'' {
   % Music follows here.
-  f4 ef8 <<{}||{df32\prall c df16}>> c8 bf af bf|
-  c4 bf af\fermata c|
-  c c bf af|
-  g2 f|
-  af4 g f2|
-  ef2. ef4
-  af af bf bf|
-  c2. df4|
-  c bf af f8. g16|
-  af4 g f\fermata
+  f4-3 ef8-2 <<{{\magnifyMusic 0.63 {\tuplet 3/2 {ef64-3 df-2 ef-3} df-2 c-1 df16-2}}}\\{df32\prall c df16}>> c8-1 bf-3 af-2 bf-3|
+  c4-4 bf-3 af-2\fermata c-3|
+  c-3 c-3 bf-2 af-1|
+  g2-2 f-1|
+  af4-3 g-2 f2-1|
+  ef2.-2 ef4-1
+  af-3 af-3 bf-4 bf-3|
+  c2.-4 df4-5|
+  c-4 bf-3 af-2 f8.-1 g16-2|
+  af4-3 g-2 f-1\fermata
   \bar "|."
 }
 
@@ -113,24 +113,24 @@ leftB = \relative c' {
 leftC = \relative c' {
   % Music follows here.
   %\key c \minor
-  f( bf, df f) bf( af g af) g( bf, af f') g,( df' af c)|
+  f-1( bf,-5 df-3 f-1) bf-2(af-3 g-4 af-2) g-1(bf,-4 af-5 f'-1) g,-5(df'-1 af-4 c-1)|
 }
 
 leftD = \relative c' {
   % Music follows here.
-  af( c bf df) bf( df af' g) af(ef df g) c,( f af g)|
-  af(ef af, gf') f( af, g df') c(af c ef) g(c, bf g')|
-  a,(c f g) a( f ef a) df,(g af g) c,(f g f)|
-  df(f g f) e( bf df c) af(c f e) f( c af f)|
-  bf(f' g f) bf,(ef f ef) c ef f ef d g, b d|
+  af-4(c-2 bf-3 df-1) bf-5(df-3 af'-1 g-2) af-1(ef-3 df-4 g-1) c,-5(f-3 af-1 g-2)|
+  af-1(ef-3 af,-5 gf'-2) f-1(af,-4 g-5 df'-1) c-2(af-4 c-1 ef-2) g-1(c,-3 bf-5 g'-1)|
+  a,-5(c-3 f-1 g-2) a-1(f-3 ef-4 a-1) df,-5(g-1 af-2 g-1) c,-5(f-1 g-2 f-1)|
+  df-5(f-1 g-2 f-1) e-2(bf-5 df-2 c-3) af-5(c-3 f-1 e-2) f-1(c-2 af-3 f-5)|
+  bf-3(f'-1 g-2 f-1) bf,-5(ef-1 f-2 ef-1) c-3 ef-1 f-2 ef-1 d-2 g,-5 b-2 d-1|
   \clef bass
-  g, c ef df g, bf df c ef, af c bf df bf ef, df'|
-  f, af df c f, af c bf f af bf af g bf df c|
+  g,-5 c-1 ef-2 df-3 g,-5 bf-1 df-2 c-1 ef,-5 af-3 c-1 bf-2 df-1 bf-2 ef,-5 df'-1|
+  f,-5 af df-1 c f,-5 af-3 c-1 bf-2 f-5 af-2 bf-1 af-2 g-5 bf-3 df-2 c-1|
   \clef treble
-  af c ef af ef bf' c bf a ef gf a, bf g' af, f'|
+  af-5 c-4 ef-3 af-2 ef-5 bf'-2 c-1 bf-2 a-1 ef-4 gf-1 a,-5 bf-4 g'-1 af,-5 f'-1|
   \clef bass
-  g, e' f ef f, df' ef df ef, c' df c bf f' g f|
-  d f g f e df bf g a c f8
+  g,-5 e'-2 f-1 ef-2 f,-5 df'-2 ef-1 df-2 ef,-5 c'-3 df-2 c-3 bf-5 f'-2 g-1 f-2|
+  d-4 f-2 g-1 f-2 e-1 df-2 bf-3 g-5 a-4 c-2 f8-1
 }
 
 pedalA = \relative c {
@@ -151,21 +151,21 @@ pedalB = \relative c {
 pedalC = \relative c {
   % Music follows here.
   %\key c \minor
-  bf'8 af g f e f c c
+  bf'8\rtoe af\rtoe g\rtoe f\rtoe e\ltoe f\rtoe c\ltoe c\ltoe
 }
 
 pedalD = \relative c {
   % Music follows here.
-  df8 8 ef8 8 af ef f df|
-  ef c df ef af, af e e|
-  f f f' f f e f df|
-  bf g c c df df df df|
-  d d ef ef a, a b b|
-  c c bf bf af af g g|
-  f f ef ef df df ef ef|
-  af af gf gf f f bf bf|
-  bf af af g g f df' df|
-  b b c c f,4
+  df8\ltoe 8\ltoe ef8\ltoe 8\ltoe af\rtoe ef\ltoe f\rtoe df\ltoe|
+  ef\rtoe c\ltoe df\ltoe ef\rtoe af,\ltoe af\rtoe e\ltoe e\ltoe|
+  f\ltoe f\ltoe f'\rtoe f\rtoe f\rtoe e\rtoe f\rtoe df\rtoe|
+  bf\ltoe g\ltoe c\rtoe c\rtoe df\rtoe df\rtoe df\rtoe df\rtoe|
+  d\rtoe d\rtoe ef\rtoe ef\rtoe a,\ltoe a\ltoe b\ltoe b\ltoe|
+  c\ltoe c\ltoe bf\ltoe bf\ltoe af\ltoe af\ltoe g\ltoe g\ltoe|
+  f\ltoe f\ltoe ef\ltoe ef\ltoe df\ltoe df\ltoe ef\ltoe ef\ltoe|
+  af\ltoe af\ltoe gf\ltoe gf\ltoe f\ltoe f\ltoe bf\rtoe bf\rtoe|
+  bf\rtoe af\ltoe af\ltoe g\ltoe g\ltoe f\ltoe df'\rtoe df\rtoe|
+  b\rtoe b\rtoe c\rtoe c\rtoe f,4\ltoe
 %
 }
 
