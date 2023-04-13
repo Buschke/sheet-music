@@ -158,7 +158,7 @@ pedalD = \relative c {
   % Music follows here.
   df8\ltoe 8\ltoe ef8\ltoe 8\ltoe af\rtoe ef\ltoe f\rtoe df\ltoe|
   ef\rtoe c\ltoe df\ltoe ef\rtoe af,\ltoe af\rtoe e\ltoe e\ltoe|
-  f\ltoe f\ltoe f'\rtoe f\rtoe f\rtoe e\rtoe f\rtoe df\rtoe|
+  f\rtoe f\ltoe f'\rtoe f\rtoe f\rtoe e\rtoe f\rtoe df\rtoe|
   bf\ltoe g\ltoe c\rtoe c\rtoe df\rtoe df\rtoe df\rtoe df\rtoe|
   d\rtoe d\rtoe ef\rtoe ef\rtoe a,\ltoe a\ltoe b\ltoe b\ltoe|
   c\ltoe c\ltoe bf\ltoe bf\ltoe af\ltoe af\ltoe g\ltoe g\ltoe|
