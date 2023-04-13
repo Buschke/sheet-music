@@ -82,11 +82,11 @@ rightC = \relative c'' {
 rightD = \relative c'' {
   % Music follows here.
   f4-3 ef8-2 <<{{\magnifyMusic 0.63 {\tuplet 3/2 {ef64-3 df-2 ef-3} df-2 c-1 df16-2}}}\\{df32\prall c df16}>> c8-1 bf-3 af-2 bf-3|
-  c4-4 bf-3 af-2\fermata c-3|
-  c-3 c-3 bf-2 af-1|
+  c4-4 bf-3 af-2\fermata c-5|
+  c-5 c-5 bf-4 af-3|
   g2-2 f-1|
-  af4-3 g-2 f2-1|
-  ef2.-2 ef4-1
+  af4-4 g-3 f2-2|
+  ef2.-1 ef4-1
   af-3 af-3 bf-4 bf-3|
   c2.-4 df4-5|
   c-4 bf-3 af-2 f8.-1 g16-2|
