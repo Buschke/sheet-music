@@ -2,19 +2,19 @@
 \language "english"
 
 \header {
-  dedication = "NN"
-  title = "NN"
-  subtitle = "NN"
-  subsubtitle = "NN"
-  instrument = "NN"
-  composer = "NN"
-  arranger = "NN"
-  poet = "NN"
-  meter = "NN"
-  piece = "NN"
-  opus = "NN"
-  copyright = "NN"
-  tagline = "NN"
+  dedication = ""
+  title = ""
+  subtitle = ""
+  subsubtitle = ""
+  instrument = ""
+  composer = ""
+  arranger = ""
+  poet = ""
+  meter = ""
+  piece = ""
+  opus = ""
+  copyright = ""
+  tagline = ""
 }
 
 \paper {
@@ -37,6 +37,328 @@ global = {
 
 extendOn = \bassFigureExtendersOn
 extendOff = \bassFigureExtendersOff
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Variante 7
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+globalG = {
+  \key c \major
+  \time 4/4
+  \tempo 4=100
+}
+
+scoreGRitSoprano = \relative c' {
+  e8^"Ritornell" f d e c d e f |
+  g8 a f d e d c d  |
+%  g4 f e2 |
+  g4 g f e |
+  d d c2\fermata |
+  \bar "||"
+}
+
+scoreGRitAlto = \relative c' {
+  s1 s s s
+
+}
+
+scoreGRitTenor = \relative c' {
+  s1 s s s
+
+}
+
+scoreGRitBass = \relative c {
+  s1 s s s
+
+}
+
+scoreGCFSopranoA = \relative c' {
+  \globalG
+  \dynamicUp
+  % Pause for ritornell
+  s1 s s s
+
+  % Music follows here.
+  e4 d c e |
+  g f e2 |
+  g4 g f e |
+  d d c2 |
+}
+
+scoreGCFSopranoB = \relative c' {
+  c'4 c b g |
+  a a g2 |
+  g4 g a a |
+  g( f) e2 \breathe |
+  c4 e f g |
+  a a g2 |
+  f4 g e d8( c) |
+  d2 c
+}
+
+scoreGSopranoA = \relative c' {
+  \globalG
+  \dynamicUp
+  % Music follows here.
+  e8 f d4 c e |
+  g f e2 |
+  g4 g f e |
+  d d c2 |
+}
+
+scoreGSopranoB = \relative c' {
+  c'4 c b g |
+  a a g2 |
+  g4 g a a |
+  g( f) e2 \breathe |
+  c4 e f g |
+  a a g2 |
+  f4 g e d8( c) |
+  d2 c
+}
+
+scoreGAltoA = \relative c' {
+  \globalG
+  % Music follows here.
+  c4 g g c|
+  c c c2|
+  d4 e c c|
+  c b g2|
+}
+
+scoreGAltoB = \relative c' {
+  e4 e d c|
+  c c c2|
+  d4 e f f|
+  e( c) c2|
+  g4 c c e|
+  f f e2|
+  c4 e c b8( g)|
+  b2 g|
+}
+
+scoreGTenorA = \relative c' {
+  \globalG
+  % Music follows here.
+  g4 g e g|
+  c a g2|
+  g4 c a g|
+  g g e2|
+}
+
+scoreGTenorB = \relative c' {
+  g4 g g e|
+  f f e2|
+  b'4 c c c|
+  c( a) g2|
+  e4 g a c|
+  c c c2|
+  a4 c g g8( e)|
+  g2 e|
+}
+
+scoreGBassA = \relative c {
+  \globalG
+  % Music follows here.
+  c4 b c c|
+  e f c2|
+  b4 c f c|
+  g g c2|
+}
+
+scoreGBassB = \relative c {
+  c4 c g c|
+  f, f c'2|
+  g'4 c, f f|
+  c( f) c2\breathe|
+  c4 c f c|
+  f f c2|
+  f4 c c g8( c)|
+  g2 c|
+}
+
+scoreGVerseA = \lyricmode {
+  % Lyrics follow here.
+Vom Himmel hoch, da komm’ ich her.
+Ich bring’ euch gute neue Mär,
+Der guten Mär bring’ ich so viel,
+Davon ich sing’n und sagen will.
+  Vom Himmel hoch da komm ich her
+  Hei -- lig bist du, gro -- ßer Gott, hei -- lig, Herr, Gott Ze -- ba -- ot.
+From heaven above I come.
+I bring you good new tidings,
+Of glad tidings I bring so many,
+Whereof I want to sing and say:
+}
+
+
+
+Euch ist ein Kindlein heut’ gebor’n
+Von einer Jungfrau auserkor’n,
+Ein Kindelein, so zart und fein,
+Das soll eur’ Freud’ und Wonne sein.
+
+To you a small child is born today
+of a chosen Virgin;
+A little child so tender and fine,
+should be your joy and bliss.
+
+Es ist der Herr Christ, unser Gott,
+Der will euch führ’n aus aller Not,
+Er will eu’r Heiland selber sein,
+Von allen Sünden machen rein.
+
+It is the Lord Christ, our God,
+Who wants to lead you out of all adversity,
+He Himself wants to be your Savior,
+to purify you of all sins.
+
+Er bringt euch alle Seligkeit,
+Die Gott der Vater hat bereit,
+Dass ihr mit uns im Himmelreich
+Sollt leben nun und ewiglich.
+
+He brings you all blessings,
+that God the Father has ready,
+(so) that you with us in heaven
+should live, now and forever.
+So merket nun das Zeichen recht,
+Die Krippe, Windelein so schlecht,
+Da findet ihr das Kind gelegt,
+Das alle Welt erhält und trägt.
+
+So note now the sign right,
+the manger, swaddling-clothes so bad,
+There you’ll find the Child laid,
+who all the world maintains and bears.
+
+Des laßt uns alle fröhlich sein
+Und mit den Hirten gehn hinein,
+Zu sehn, was Gott uns hat beschert,
+Mit seinem lieben Sohn verehrt.
+
+scoreGVerseB = \lyricmode {
+  \set stanza = "1."
+  % Lyrics follow here.
+  Zeu -- gen dei -- ner Herr -- lich -- keit Him -- mel sind und Er -- de.
+  Lob und Preis durch al -- le Zeit, dir o Höchs -- ter, wer -- de.
+}
+
+scoreGVerseC = \lyricmode {
+  \set stanza = "2."
+  % Lyrics follow here.
+  Der da kommt vom ew -- gen Thron, er sei hoch ge -- prie -- sen.
+  E -- wig sei dem Got -- tes -- sohn Ehr und Dank er -- wie -- sen.
+}
+
+scoreGFigBass = \figuremode {
+  \globalG
+  % Pause for ritornell
+  s1 s s s
+  % Figures follow here.
+  r4 <6> r r
+  <6> r4 r2
+  <6>2 r4 r4
+  <5 4>4 \extendOn <5 3> \extendOff
+}
+
+claveG = \new DrumStaff <<
+  \drummode {
+    \globalG
+    <<{\repeat unfold 4 {hh8 cl}}\\{bd4 sn sn sn}>>
+  }
+>>
+
+scoreGRit = <<
+  \scoreGRitSoprano
+>>
+
+scoreGCF = {<<
+        \new Staff = "cff" \with {
+        midiInstrument = "choir aahs"
+        instrumentName = \markup \center-column { "Cantus" "Firmus" }
+        shortInstrumentName = \markup \center-column { "C." "F." }
+      } <<
+        \new Voice = "cf" \with {
+          \consists "Ambitus_engraver"
+        } { \voiceOne \scoreGCFSopranoA \repeat volta 2 { \scoreGCFSopranoB } }
+      >>
+      \new Lyrics \with {
+        \override VerticalAxisGroup #'staff-affinity = #CENTER
+      } \lyricsto "cf" {\scoreGVerseA << {\scoreGVerseB} \new Lyrics {\set associatedVoice = "cf" {\scoreGVerseC}} >>}>>
+}
+
+scoreG = \new ChoirStaff <<
+      \new Staff \with {
+        midiInstrument = "choir aahs"
+        instrumentName = \markup \center-column { "Sopran" "Alt" }
+        shortInstrumentName = \markup \center-column { "S." "A." }
+      } <<
+        \new Voice = "soprano" \with {
+          \consists "Ambitus_engraver"
+        } { \voiceOne \scoreGRitSoprano \scoreGSopranoA \repeat volta 2 { \scoreGSopranoB } }
+        \new Voice = "alto" \with {
+          \consists "Ambitus_engraver"
+          \override Ambitus #'X-offset = #2.0
+        } { \voiceTwo \scoreGRitAlto \scoreGAltoA \repeat volta 2 { \scoreGAltoB } }
+      >>
+%      \new Lyrics \with {
+%        \override VerticalAxisGroup #'staff-affinity = #CENTER
+%      } \lyricsto "soprano" {\scoreCVerseA << {\scoreCVerseB} \new Lyrics {\set associatedVoice = "soprano" {\scoreCVerseC}} >>}
+      \new Staff \with {
+        midiInstrument = "choir aahs"
+        instrumentName = \markup \center-column { "Tenor" "Bass" }
+        shortInstrumentName = \markup \center-column { "T." "B." }
+      } <<
+        \clef bass
+        \new Voice = "tenor" \with {
+          \consists "Ambitus_engraver"
+        } { \voiceOne \scoreGRitTenor \scoreGTenorA \repeat volta 2 { \scoreGTenorB } }
+        \new Voice = "bass" \with {
+          \consists "Ambitus_engraver"
+          \override Ambitus #'X-offset = #2.0
+        } { \voiceTwo \scoreGRitBass \scoreGBassA \repeat volta 2 { \scoreGBassB } }
+      >>
+>>
+
+scoreGBassFiguresPart = \new FiguredBass \scoreGFigBass
+
+
+\bookpart {
+\header {
+  title = "Vom Himmel hoch"
+  subtitle = "Harmonisieren"
+  subsubtitle = "Variante 1: C.F. im Sopran, mit Nebenstufen und Ausschmücken, mit Ritornell"
+  arranger = "Satz: Sven Buschke"
+  instrument = "Chor"
+  poet = "T: Aachen M: Joseph Mohr, Franz Braun"
+  meter = "Datum 03.03.23 (HA KW 2023)"
+  piece = "T: 1867, M: 1877/1891, 1675"
+  opus = "GL 198"
+}
+  \score {
+%    {
+%      \claveA
+<<
+      \scoreGCF
+      \scoreG
+      \scoreGBassFiguresPart
+>>
+%    }
+    \layout { }
+%    \midi { }
+  }
+  \score {    \unfoldRepeats
+    {
+      \claveG
+      \scoreG
+    }
+%    \layout { }
+    \midi { }
+  }
+}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Variante 1
