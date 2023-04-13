@@ -72,6 +72,7 @@ rightB = \relative c'' {
 
 rightC = \relative c'' {
   % Music follows here.
+  %\key c \minor
   <<{s4 s16 s32 s32 {\magnifyMusic 0.63 {ef64-3 df-2 ef-3 df-2 r32 c-1 c4-1}}}\\{df4-2 ~ df16 ef32-3 f-4 df16\prall-2 c-1 c4-1\fermata}>>
 
   %df4 ~ df16 ef32 f df16\prall c c4\fermata
@@ -80,16 +81,16 @@ rightC = \relative c'' {
 
 rightD = \relative c'' {
   % Music follows here.
-  f4 ef c af|
-  c bf af c|
+  f4 ef8 <<{}||{df32\prall c df16}>> c8 bf af bf|
+  c4 bf af\fermata c|
   c c bf af|
   g2 f|
   af4 g f2|
   ef2. ef4
   af af bf bf|
-  c2~ c4 df|
+  c2. df4|
   c bf af f8. g16|
-  af4 g f
+  af4 g f\fermata
   \bar "|."
 }
 
@@ -111,23 +112,25 @@ leftB = \relative c' {
 
 leftC = \relative c' {
   % Music follows here.
+  %\key c \minor
   f( bf, df f) bf( af g af) g( bf, af f') g,( df' af c)|
 }
 
 leftD = \relative c' {
   % Music follows here.
-  af4 bf4 af'4 c,4|%af bf af' c,|
-  af'1| % f' f c g'|
-  a,|% df c|
-  df|% df e af, f'|
-  bf|
+  af( c bf df) bf( df af' g) af(ef df g) c,( f af g)|
+  af(ef af, gf') f( af, g df') c(af c ef) g(c, bf g')|
+  a,(c f g) a( f ef a) df,(g af g) c,(f g f)|
+  df(f g f) e( bf df c) af(c f e) f( c af f)|
+  bf(f' g f) bf,(ef f ef) c ef f ef d g, b d|
   \clef bass
-  g|
-  f|
+  g, c ef df g, bf df c ef, af c bf df bf ef, df'|
+  f, af df c f, af c bf f af bf af g bf df c|
   \clef treble
-  af|
-  g|
-  d'4 e a
+  af c ef af ef bf' c bf a ef gf a, bf g' af, f'|
+  \clef bass
+  g, e' f ef f, df' ef df ef, c' df c bf f' g f|
+  d f g f e df bf g a c f8
 }
 
 pedalA = \relative c {
@@ -147,21 +150,23 @@ pedalB = \relative c {
 
 pedalC = \relative c {
   % Music follows here.
-  bf' af g f e f c c
+  %\key c \minor
+  bf'8 af g f e f c c
 }
 
 pedalD = \relative c {
   % Music follows here.
   df8 8 ef8 8 af ef f df|
-  ef4 df af e|
-  f f' f f|
-  bf,1|
-  d|
-  c|
-  f,|
-  af|
-  bf|
-  b4 c f
+  ef c df ef af, af e e|
+  f f f' f f e f df|
+  bf g c c df df df df|
+  d d ef ef a, a b b|
+  c c bf bf af af g g|
+  f f ef ef df df ef ef|
+  af af gf gf f f bf bf|
+  bf af af g g f df' df|
+  b b c c f,4
+%
 }
 
 \score {
@@ -175,11 +180,11 @@ pedalD = \relative c {
       } {\repeat volta 2 {\rightA}  \alternative {{\rightB} {\rightC}} \rightD }
       \new Staff = "left" \with {
         midiInstrument = "church organ"
-      } { \clef bass {\repeat volta 2 {\leftA} \alternative {{\leftB}{\leftC}} \leftD} }
+      } { \clef bass {\repeat volta 2 {\leftA} \alternative {{\leftB} {\leftC}} \leftD} }
     >>
     \new Staff = "pedal" \with {
       midiInstrument = "church organ"
-    } { \clef bass {\repeat volta 2 {\pedalA} \alternative {{\pedalB}{\pedalC}} \pedalD} }
+    } { \clef bass {\repeat volta 2 {\pedalA} \alternative {{\pedalB} {\pedalC}} \pedalD} }
   >>
   \layout { }
   \midi { }
