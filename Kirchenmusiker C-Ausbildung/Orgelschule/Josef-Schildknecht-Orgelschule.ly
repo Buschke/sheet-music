@@ -3,7 +3,7 @@
 
 \header {
   dedication = ""
-  title = "Ab Nr. 84"
+  title = "Trios ab Nr. 85"
   subtitle = "Orgelschule"
   subsubtitle = "2. Pedalspiel"
   instrument = "Orgel"
@@ -38,7 +38,7 @@ global = {
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Nr. 85
+% Trios
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 globalA = {
@@ -52,9 +52,9 @@ scoreARight = \relative c'' {
   % Music follows here.
   % Nr. 84
   r2^"84." e,-4|
-  f e~|
-  e d4 c|
-  b c a b|
+  f-5 e-4~|
+  e d4-3 c-2|
+  b-1 c-2 a-1 b-3|
   c1
   \bar "|.|"
   % Nr. 85
@@ -100,32 +100,46 @@ scoreARight = \relative c'' {
   % Nr. 91
   \key g \major
   \time 4/4
-  <<{d1'-5^"91." b4 c d2-5 a4-3 b c2 g4-2 a b-4 d-5 a1-4 g}\\{b2-3 a b fs4-2 g-1 fs2-2 e4 fs d2-1 g-21~ 4 fs-2 e-1 fs-2 g1}>>
+  <<{d'1-5^"91." b4 c d2-5 a4-3 b c2 g4-2 a b-4 d-5 a1-4 g}\\{b2-3 a b fs4-2 g-1 fs2-2 e4 fs d2-1 g-21~ 4 fs-2 e-1 fs-2 g1}>>
   \bar "|.|"
   % Nr. 92
   \key a \major
   \time 4/4
   <<{a'2-5^"92." e-34 fs1 e-5~ 2-21 a,-3 b-5 fs-4 gs-5 a-5~4-1 fs gs a a1}\\{cs4-2 d-1 e a, d-3 cs-2 b-12 a gs-2 fs gs e a gs-3 fs-2 e-12 d-1 cs -2 b-1 as-2 b-1 fs'-4 e-3 cs-2 d1 cs}>>
+  \bar "|.|"
+  \key af \major
+  ef'4-5(^"97. Trio II" c-4 af-3 g f1) bf'4-5(g-4 ef-3 df c2.-1) bf4-4( af f d-1 c-2 b2 g'-3( c4 bf g e-1 f1-21) f'4-5( df-4 bf-3 af g bf ef-5 df-4 c-3) af2-2( g4 af1)
+  \bar "|.|"
+  \key c \major
+  <<{c,2-1^"98." f e a-5 g-32 c-5 b e d c-35 c-2 b c1~ c-1 b2-32 e d-2 g-5~ g-1 f-45~ f-2 e-45 d1-45 c-4}\\{r1 c,2 f-32 e-1 a-32 g1~ g f e2 a-3 g2. fs4 g1-1~ g2 r2 c1 b2 g-1 a-2 g4-1 f-2 e1-1}>>
+  \bar "|.|"
+  \bar "|.|"
+  \bar "|.|"
+  \bar "|.|"
+  \bar "|.|"
+  \bar "|.|"
+  \bar "|.|"
   \bar "|."
 }
 
 scoreALeft = \relative c' {
   \globalA
   % Music follows here.
+  %
   % Nr. 84
   r2 g-2|
-  a g~|
-  g f~|
+  a-1 g-2~|
+  g f-3~|
   f1|
-  e
+  e-4
   % Nr. 85
-  g4-2 e a g|
-  f a g f|
-  e g2 a4|
+  g4-2 e-4 a-1 g-2|
+  f-3 a-1 g-2 f-3|
+  e-1 g2 a4|
   g4. f8 e2
   % Nr. 86
   \key e \minor
-  g2-3 f|
+  g2-3 fs|
   g2. d4|
   g2 a|
   g4 e b' a|
@@ -150,6 +164,57 @@ scoreALeft = \relative c' {
   % Nr. 92
   \key a \major
   r1 r1 b2-1 e,-4~ e fs-1~ fs d~d cs b e~ e1
+  % Nr. 97
+  \key af \major
+  c'1-3^"I" f4-1( df-2 bf-3 af  g1) bf4-2( g-1 e df c2) af'-2( g4-1 f d b e2-35)  bf'-2( a4-5 ef'-2 c a bf1) df4-1( bf g-3 f ef c'-1 bf df c1)
+  % Nr. 98
+  \key c \major
+  r1 r r g2-5 c b e d1 c1~ c d2 c b-5 e-2~ e f d c~ c b c1
+  % Nr. 99
+  % Nr. 100
+  % Nr. 101
+  % Nr. 102
+  % Nr. 103
+  % Nr. 104
+  % Nr. 105
+  % Nr. 109
+  % Nr. 110
+  % Nr. 111
+  % Nr. 115
+  % Nr. 116
+  % Nr. 117
+  % Nr. 118
+  % Nr. 127
+  % Nr. 128
+  % Nr. 129
+  % Nr. 130
+  % Nr. 131
+  % Nr. 133
+  % Nr. 134
+  % Nr. 135
+  % Nr. 136
+  % Nr. 142
+  % Nr. 143
+  % Nr. 165
+  % Nr. 166
+  % Nr. 167
+  % Nr. 168
+  % Nr. 169
+  % Nr. 170
+  % Nr. 171
+  % Nr. 172
+  % Nr. 173
+  % Nr. 174
+  % Nr. 175
+  % Nr. 176
+  % Nr. 177
+  % Nr. 178
+  % Nr. 179
+  % Nr. 180
+  % Nr. 181
+  % Nr. 182
+  % Nr. 183
+  % Nr. 184
 }
 
 scoreAPedal = \relative c {
@@ -160,7 +225,7 @@ scoreAPedal = \relative c {
   c|
   d\rtoe~|
   d|
-  c
+  c\ltoe
   % Nr. 85
   c1\rtoe~|
   c2 b\ltoe|
@@ -193,11 +258,62 @@ scoreAPedal = \relative c {
   % Nr. 92
   \key a \major
   a2\ltoe cs b d~ 1 cs2 fs b,1 e~ e a,
+  % Nr. 97
+  \key af \major
+  af1 df ef, c' f, d' c f df ef~ ef af,
+  % Nr. 98
+  \key c \major
+  r1 r r r r r c2\ltoe f e a g1~ g2 r a\ltoe d g, c f, g c,1
+  % Nr. 99
+  % Nr. 100
+  % Nr. 101
+  % Nr. 102
+  % Nr. 103
+  % Nr. 104
+  % Nr. 105
+  % Nr. 109
+  % Nr. 110
+  % Nr. 111
+  % Nr. 115
+  % Nr. 116
+  % Nr. 117
+  % Nr. 118
+  % Nr. 127
+  % Nr. 128
+  % Nr. 129
+  % Nr. 130
+  % Nr. 131
+  % Nr. 133
+  % Nr. 134
+  % Nr. 135
+  % Nr. 136
+  % Nr. 142
+  % Nr. 143
+  % Nr. 165
+  % Nr. 166
+  % Nr. 167
+  % Nr. 168
+  % Nr. 169
+  % Nr. 170
+  % Nr. 171
+  % Nr. 172
+  % Nr. 173
+  % Nr. 174
+  % Nr. 175
+  % Nr. 176
+  % Nr. 177
+  % Nr. 178
+  % Nr. 179
+  % Nr. 180
+  % Nr. 181
+  % Nr. 182
+  % Nr. 183
+  % Nr. 184
 }
 
 \bookpart {
 \header {
-  title = "Ab Nr. 84"
+  title = "Trios ab Nr. 84"
   opus = "Nr. 84 ff."
 %   tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line {    } \line { \small \line { \tiny © Fingerings: 19.02.2023, Sven Buschke   } }  } }
 
@@ -225,37 +341,52 @@ scoreAPedal = \relative c {
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Nr. 86
+% Duos
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 scoreBRight = \relative c'' {
   \global
   % Music follows here.
-
 }
 
 scoreBLeft = \relative c' {
   \global
   % Music follows here.
-
+  c2^"81." b c g4-4 a f4. g8 a g a b c1~ c2 r2
+  \bar "|.|"
+  r4^"82." e,-4 a-1 g f e d f r d-4 g-1 f e d c e r e-5 c'-1 b a-1 g f e d a'-1 g f e8-4 f-1 d e c2
+  \bar "|.|"
+  e4-5^"83." c'-1 b gs-4 a b c a f-5 d'-1 b-3 c b a gs d'-1 c b a cs-2 d-1 e-2 f d e2 d c1
+  \bar "|.|"
 }
 
 scoreBPedal = \relative c {
   \global
   % Music follows here.
-
+  % Nr. 81
+  c2\ltoe d\rtoe c1 d c4. d8 c d c d c2 r
+  % Nr. 82
+  c1\ltoe d\rtoe b c a c b c
+  % Nr. 83
+  c2\ltoe d\rtoe c e d2. e4 d f e f e2 g f a g4 a f g e8 f d e c2
 }
 
 \bookpart {
+\header {
+  title = "Duos ab Nr. 81"
+  opus = "Nr. 81 ff."
+%   tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line {    } \line { \small \line { \tiny © Fingerings: 19.02.2023, Sven Buschke   } }  } }
+
+}
   \score {
     <<
       \new PianoStaff \with {
         instrumentName = "Organ"
         shortInstrumentName = "Org."
       } <<
-        \new Staff = "right" \with {
-          midiInstrument = "church organ"
-        } \scoreBRight
+%         \new Staff = "right" \with {
+%           midiInstrument = "church organ"
+%         } \scoreBRight
         \new Staff = "left" \with {
           midiInstrument = "church organ"
         } { \clef bass \scoreBLeft }
@@ -268,6 +399,10 @@ scoreBPedal = \relative c {
     \midi { }
   }
 }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Nr. 86
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 scoreCRight = \relative c'' {
   \global
@@ -284,27 +419,52 @@ scoreCLeft = \relative c' {
 scoreCPedal = \relative c {
   \global
   % Music follows here.
-
+  c1\ltoe^"80. a." d\rtoe c2 d c2. d4 c d c d c1
+  \bar "||"
+  cs2\ltoe^"b." d\rtoe
+  cs4 d cs4. d8 cs d cs d cs2 d1
+  \bar "||"
+  df\rtoe^"c." c\ltoe
+  \bar "||"
+  c^"d."
+  \bar "||"
+  c^"e."
+  \bar "||"
+  c^"f."
+  \bar "||"
+  c^"g."
+  \bar "|.|"
+  c,2\ltoe^"93. a., alle Tonarten" c\rtoe d f e g f a g b a c b d c e e c d f c a b g a f g e f d e c
+  \bar "||"
+  \bar "|.|"
+  \bar "|.|"
+  \bar "|.|"
+  \bar "|.|"
+  \bar "|."
 }
 
 \bookpart {
+  \header {
+  title = "Pedal Solo ab Nr. 80. a."
+  opus = "Nr. 80. a. ff."
+  }
   \score {
-    <<
-      \new PianoStaff \with {
-        instrumentName = "Organ"
-        shortInstrumentName = "Org."
-      } <<
-        \new Staff = "right" \with {
-          midiInstrument = "church organ"
-        } \scoreCRight
-        \new Staff = "left" \with {
-          midiInstrument = "church organ"
-        } { \clef bass \scoreCLeft }
-      >>
+%     <<
+%       \new PianoStaff \with {
+%         instrumentName = "Organ"
+%         shortInstrumentName = "Org."
+%       } <<
+%         \new Staff = "right" \with {
+%           midiInstrument = "church organ"
+%         } \scoreCRight
+%         \new Staff = "left" \with {
+%           midiInstrument = "church organ"
+%         } { \clef bass \scoreCLeft }
+%       >>
       \new Staff = "pedal" \with {
         midiInstrument = "church organ"
       } { \clef bass \scoreCPedal }
-    >>
+%     >>
     \layout { }
     \midi { }
   }
