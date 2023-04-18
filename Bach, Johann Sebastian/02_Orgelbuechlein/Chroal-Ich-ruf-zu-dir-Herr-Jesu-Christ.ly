@@ -52,14 +52,20 @@ scoreASoprano = \relative c' {
 scoreAAlto = \relative c' {
   \global
   % Music follows here.
-  \repeat volta 2 { af2  }
+  \repeat volta 2 { af2  bf4 c bf f bf c df2\breathe df af4 df bf c ef2 c  }
+  c bf4 c df bf c c bf2\breathe
+  c c4 c c bf g2 bf\breathe
+  bf4 g f2 f r4 f4 bf bf  c c  c2 r4
+  df c4. c8 bf4 f bf( g) bf2
 }
 
 scoreATenor = \relative c' {
   \global
   % Music follows here.
-  \repeat volta 2 { c2  }
-
+  \repeat volta 2 { c2  f,4 g f df f g bf2 bf\breathe f4 bf f g c2 af }
+  f2 f4 f bf f af g f2\breathe
+  af af4 af4 g f ef2 f\breathe
+  f4 ef df2 c r4 f4 f f g g af2 r4 bf af4. g8 f4 df f( ef) f2
 }
 
 scoreABass = \relative c, {
@@ -67,11 +73,11 @@ scoreABass = \relative c, {
   % Music follows here.
   \repeat volta 2 { f2 bf4 c bf bf bf c bf2 bf2\breathe
   f4 bf bf c c2 f,}
-  f2 bf4 f bf bf f c bf'2\breathe
-  f f4 f c bf'c2 df\breathe
-  bf4 ef df2 c r4
-  c4 bf bf c c f2 r4
-  ef4 f4. c8 bf4 bf bf( c) df2
+  f2 bf4 f bf bf f c' bf2\breathe
+  f f4 f c' bf c2 df\breathe
+  bf4 c bf2 f r4
+  c'4 bf bf c c f,2 r4
+  gf4 f4. c'8 bf4 bf bf( c) df2
 }
 
 scoreAVerse = \lyricmode {
