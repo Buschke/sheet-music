@@ -13,7 +13,7 @@
   meter = ""
   piece = ""
   opus = "EG 343"
-  copyright = Sven Buschke"© Satz:"
+  copyright = \markup {"© Satz, 18.04.2023: " \with-url "https://buschke.com" "Sven Buschke"}
   tagline = "NN"
 }
 
