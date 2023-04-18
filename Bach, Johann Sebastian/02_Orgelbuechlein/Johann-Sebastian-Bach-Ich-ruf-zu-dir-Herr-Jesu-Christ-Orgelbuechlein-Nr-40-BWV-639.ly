@@ -9,10 +9,10 @@
   instrument = "Organ"
   composer = "Johann Sebastian Bach"
   arranger = ""
-  poet = "Fingerings: Sven Buschke"
+  poet = \markup {\with-url "https://buschke.com" "Fingerings: Sven Buschke"}
   meter = ""
   piece = ""
-  opus = "BWV 639"
+  opus = \markup {\with-url "https://imslp.hk/files/imglnks/euimg/f/fb/IMSLP609454-PMLP08213-bach-orgelbuechlein-barenreiter.pdf#page=68" "BMW 639"}
   #(define licenseUrl "https://buschke.com")
   license = "© Fingerings: Sven Buschke, 19.02.2023"
   copyright = \markup { \rounded-box \pad-markup #0.5 \center-column { \line { \with-url #licenseUrl \license }  } }
