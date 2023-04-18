@@ -36,7 +36,7 @@ tagline = ""
 }
 
 global = {
-  \key c \minor
+  \key f \minor
   \time 4/4
   \tempo "Andante" 4=100
 }
