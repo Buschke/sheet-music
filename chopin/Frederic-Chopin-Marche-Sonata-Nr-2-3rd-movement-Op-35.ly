@@ -38,8 +38,8 @@ global = {
 scoreARight = \relative c'' {
   \global
   % Music follows here.
-  <<{bf,4-5(bf8.-5 16-5 bf2-5}\\{f4-1(gf f gf}>>
-  <<{bf4 bf8. 16 bf2})\\{f4 gf f gf)}>>
+  <<{bf,4-5(bf8.-5 16-5 bf2-5}\\{f4-1(gf-2 f-1 gf-2}>>
+  <<{bf4-5(bf8.-5 16-5 bf2-5}\\{f4-1(gf-2 f-1 gf-2}>>
 }
 
 scoreALeft = \relative c' {
