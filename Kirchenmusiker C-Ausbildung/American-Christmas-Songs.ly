@@ -39,9 +39,9 @@ scoreASoprano = \relative c'' {
   \global
   % Music follows here.
 g4. f8 e4 d c d e c d8 e f d e4. d8 c4 b c2
-g4.' f8 e4 d c d e c d8 e f d e4. d8 c4 b c2
+g'4. f8 e4 d c d e c d8 e f d e4. d8 c4 b c2
 d4. e8 f4 d e4. f8 g4 d e8 f g 4 a8 b c4 b a g2
-g4. f8 e4 d c d e c a8' a a a g4. f8 e4 d c2
+g4. f8 e4 d c d e c a'8 a a a g4. f8 e4 d c2
 \bar "|."
 }
 
