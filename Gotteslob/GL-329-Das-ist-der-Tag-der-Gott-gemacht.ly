@@ -404,74 +404,74 @@ scoreDVerse = \lyricmode {
 scoreESoprano = \relative c'' {
   \global
   % Music follows here.
-  c4 b a g e a a g~g r
-  c4 b a g e a a g~g r
-  c4 b a g e a a g~g r
-  c4 b a g e a a g~g r
-  \bar "||"
-  g c g a g f8(e) d4 c2 r4
-  g' c g a g f8(e) d4 c2 r4
-  g' c g a g f8(e) d4 c2 r4
-  g' c g a g f8(e) d4 c2 r4
-  \bar "||"
-  c g' g f d e8(d) e(f) g4~g r
-  c, g' g f d e8(d) e(f) g4~g r
-  c, g' g f d e8(d) e(f) g4~g r
-  c, g' g f d e8(d) e(f) g4~g r
-  \bar "||"
-  c b a g a c b c2.
-  c4 b a g a c b c2.
-  c4 b a g a c b c2.
-  c4 b a g a c b c2.
+  c4^"C.F. Dux" b a g e a a g~g r2.
+  g4^"Bicinium" g c b g e fs g~g r2.
+  c4 g a e c' a d b~b r2.
+  c4^"C.F. Dux Pachebel" b a g e a a g~g r4
+  \breathe
+  g4^"C.F. Dux" c g a g f8(e) d4 c2 r4 r2
+  d4^"Bicinium" d d b b e8(d) d4 b2 r4 r2
+  b'4 c b a c a8(c) g4 c2 r4 r2
+  g4^"C.F. Dux Pachebel" c g a g f8(e) d4 c2 r4
+  \breathe
+  c4 g' g f d e8(d) e(f) g4~g r r2
+  e4^"Bicinium" g b a g g8(e)g(a) e4~e r r2
+  g4 d' e c b b8(b) c(c) c4~c r4 r2
+  c,4^"C.F. Dux Pachebel" g' g f d e8(d) e(f) g4~g r
+  \breathe
+  c4^"C.F. Dux" b a g a c b c2.
+  r2 d4^"Bicinium" d g b, g d' d d2.
+  r2 e4 d f c f c d e2.
+  r2 c4^"C.F. Dux Pachebel" b a g a c b c2.
   \bar "|."
 }
 
 scoreEAlto = \relative c' {
   \global
   % Music follows here.
+  s4 s s s s s s s s s2.
+  s4 s s s s s s s s s2.
+  s4 s s s s s s s s s2.
   e4 d e e c c c d~d r4
-  e4 d e e c c c d~d r4
-  e4 d e e c c c d~d r4
-  e4 d e e c c c d~d r4
-  \bar "||"
-  d e d c c c8(c) b4 g2 r4
-  d' e d c c c8(c) b4 g2 r4
-  d' e d c c c8(c) b4 g2 r4
-  d' e d c c c8(c) b4 g2 r4
-  \bar "||"
-  g d' e c b b8(b) c(c) c4~c r4
-  g d' e c b b8(b) c(c) c4~c r4
-  g d' e c b b8(b) c(c) c4~c r4
-  g d' e c b b8(b) c(c) c4~c r4
-  \bar "||"
-  e d f c f c d e2.
-  e4 d f c f c d e2.
-  e4 d f c f c d e2.
-  e4 d f c f c d e2.
+  \breathe
+  s s s s s s8(s) s4 s2 s4 s2
+  s4 s s s s s8(s) s4 s2 s4 s2
+  s4 s s s s s8(s) s4 s2 s4 s2
+  d4 e d c c c8(c) b4 g2 r4
+  \breathe
+  s4 s s s s s8 s s s s4 s s s2
+  s4 s s s s s8 s s s s4 s s s2
+  s4 s s s s s8 s s s s4 s s s2
+  g4 d' e c b b8(b) c(c) c4~c r4
+  \breathe
+  s4 s s s s s s s2.
+  s2 s4 s s s s s s s2.
+  s2 s4 s s s s s s s2.
+  r2 e4 d f c f c d e2.
   \bar "|."
 }
 
 scoreETenor = \relative c' {
   \global
   % Music follows here.
+  s4 s s s s s s s s s2.
+  g4^"C.F. Comes" fs e d b e e d~d r2.
+  g4 g c b g e fs g~g r2.
   g4 g c b g e fs g~g r4
-  g4 g c b g e fs g~g r4
-  g4 g c b g e fs g~g r4
-  g4 g c b g e fs g~g r4
-  \bar "||"
-  g g g e e a8(g) g4 e2 r4
-  g g g e e a8(g) g4 e2 r4
-  g g g e e a8(g) g4 e2 r4
-  g g g e e a8(g) g4 e2 r4
-  \bar "||"
-  e g b a g g8(e)g(a) e4~e r
-  e g b a g g8(e)g(a) e4~e r
-  e g b a g g8(e)g(a) e4~e r
-  e g b a g g8(e)g(a) e4~e r
-  \bar "||"
-  g g c e, c g' g g2.
-  g4 g c e, c g' g g2.
-  g4 g c e, c g' g g2.
+  \breathe
+  s s s s s s8(s) s4 s2 s4
+  r2 d4^"C.F. Comes" g d e d c8(b) a4 g2 r4
+  r2 g'4 g g e e a8(g) g4 e2 r4
+  r2 g4 g g e e a8(g) g4 e2 r4
+  \breathe
+  s4 s s s s s8 s s s s4 s s s2
+  g4^"C.F. Comes" d' d c a b8(a) b(c) d4~d r r2
+  e4 g b a g g8(e)g(a) e4~e r r2
+  e4 g b a g g8(e)g(a) e4~e r
+  \breathe
+  s4 s s s s s s s2.
+  r2 g,4^"C.F. Comes" fs e d e g fs g2. r2
+  g4 g c e, c g' g g2. r2
   g4 g c e, c g' g g2.
   \bar "|."
 }
@@ -479,24 +479,24 @@ scoreETenor = \relative c' {
 scoreEBass = \relative c {
   \global
   % Music follows here.
+  s4 s s s s s s s s s2.
+  s4 s s s s s s s s s2.
+  c4_"C.F. Dux" b a g e a a g~g r2.
   c4 g a e c' a d b~b r4
-  c4 g a e c' a d b~b r4
-  c4 g a e c' a d b~b r4
-  c4 g a e c' a d b~b r4
-  \bar "||"
-  b c b a c a8(c) g4 c2 r4
-  b c b a c a8(c) g4 c2 r4
-  b c b a c a8(c) g4 c2 r4
-  b c b a c a8(c) g4 c2 r4
-  \bar "||"
-  c b  e f, g e8(g) c(f,) c'4~c r
-  c b  e f, g e8(g) c(f,) c'4~c r
-  c b  e f, g e8(g) c(f,) c'4~c r
-  c b  e f, g e8(g) c(f,) c'4~c r
-  \bar "||"
-  c g f c' f, c' g c2.
-  c4 g f c' f, c' g c2.
-  c4 g f c' f, c' g c2.
+  \breathe
+  s s s s s s8(s) s4 s2 s4 s2
+  s4 s s s s s8(s) s4 s2 s4
+  r2 g4_"C.F. Dux" c g a g f8(e) d4 c2 r4
+  r2 b'4 c b a c a8(c) g4 c2 r4
+  \breathe
+  s4 s s s s s8 s s s s4 s s s2
+  s4 s s s s s8 s s s s4 s s s2
+  c4_"C.F. Dux" g' g f d e8(d) e(f) g4~g r r2
+  c,4 b e f, g e8(g) c(f,) c'4~c r
+  \breathe
+  s4 s s s s s s s2.
+  s2 s4 s s s s s s s2.
+  r2 c4_"C.F. Dux" b a g a c b c2. r2
   c4 g f c' f, c' g c2.
   \bar "|."
 }
