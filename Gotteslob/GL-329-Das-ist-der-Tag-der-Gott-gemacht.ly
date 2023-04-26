@@ -3,8 +3,8 @@
 
 \header {
   title = "Das ist der Tag, der Gott gemacht"
-  subtitle = "Gotteslob 329"
-  subsubtitle = "Cantus Firmus: Sopran"
+  subtitle = "Cantus Firmus: Sopran"
+  subsubtitle = "Gotteslob 329"
   instrument = "Organ"
   composer = "M: nach Johann Leisentrit 1567"
   arranger = \markup {"Satz: " \with-url "https:buschke.com" "Sven Buschke"}
@@ -34,12 +34,19 @@ global = {
   \tempo "Andante" 4=100
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%
+%%%% CF Soprano
+%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 scoreASoprano = \relative c'' {
   \global
   % Music follows here.
-  c4 b a g e a a g2 r4
-  g c g a g f8( e) d4 c2 r4
-  c g' g f d e8( d) e( f) g2 r4
+  c4 b a g e a a g~g r
+  g c g a g f8(e) d4 c2 r4
+  c g' g f d e8(d) e(f) g4~g r
   c b a g a c b c2.
   \bar "|."
 }
@@ -47,28 +54,28 @@ scoreASoprano = \relative c'' {
 scoreAAlto = \relative c' {
   \global
   % Music follows here.
-  e4 d c b c c c c2 r4
-  c e c f e c8(c) b4 g2 r4
-  g d' e c b b8(b) c( c) c2 r4
+  e4 d e e c c c d~d r4
+  d e d c c c8(c) b4 g2 r4
+  g d' e c b b8(b) c(c) c4~c r4
   e d f c f c d e2.
 }
 
 scoreATenor = \relative c' {
   \global
   % Music follows here.
-  g4 g f e g f f e2 r4
-  e a e c c a8(g') g4 e2 r4
-  e b' b a g g8(e)g(a) e2 r4
-  g g c e c g g g2.
+  g4 g c b g e fs g~g r4
+  g g g e e a8(g) g4 e2 r4
+  e g b a g g8(e)g(a) e4~e r
+  g g c e, c g' g g2.
 }
 
 scoreABass = \relative c {
   \global
   % Music follows here.
-  c,4 g' f e c f f c2 r4
-  c a' c, f c f8(c') g4 c2 r4
-  c g  e f g e8(g) c(f,) c2 r4
-  c g' f c f c g' c2.
+  c4 g a e c' a d b~b r4
+  b c b a c a8(c) g4 c2 r4
+  c b  e f, g e8(g) c(f,) c'4~c r
+  c g f c' f, c' g c2.
 }
 
 scoreAVerse = \lyricmode {
@@ -118,24 +125,36 @@ denn Wun -- der hat der Herr ge -- tan.
   }
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%
+%%%% CF Tenor
+%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 scoreBSoprano = \relative c'' {
   \global
   % Music follows here.
-
+  g4 g c b g e fs g~g r4
+  g g g e e a8(g) g4 e2 r4
+  e g b a g g8(e)g(a) e4~e r
+  g g c e, c g' g g2.
 }
 
 scoreBAlto = \relative c' {
   \global
   % Music follows here.
-
+  e4 d e e c c c d~d r4
+  d e d c c c8(c) b4 g2 r4
+  g d' e c b b8(b) c(c) c4~c r4
+  e d f c f c d e2.
 }
 
 scoreBTenor = \relative c' {
   \global
   % Music follows here.
-  c4 b a g e a a g2 r4
-  g c g a g f8( e) d4 c2 r4
-  c g' g f d e8( d) e( f) g2 r4
+  c4 b a g e a a g~g r
+  g c g a g f8(e) d4 c2 r4
+  c g' g f d e8(d) e(f) g4~g r
   c b a g a c b c2.
   \bar "|."
 }
@@ -143,10 +162,10 @@ scoreBTenor = \relative c' {
 scoreBBass = \relative c {
   \global
   % Music follows here.
-  c,4 g' f e c f f c2 r4
-  c a c f c f8(c') g4 c2 r4
-  c g  e f g e8(g) c(f,) c2 r4
-  c g' f c f c g' c2.
+  c4 g a e c' a d b~b r4
+  b c b a c a8(c) g4 c2 r4
+  c b  e f, g e8(g) c(f,) c'4~c r
+  c g f c' f, c' g c2.
 }
 
 scoreBVerse = \lyricmode {
@@ -156,7 +175,7 @@ scoreBVerse = \lyricmode {
 
 \bookpart {
 \header{
-    subsubtitle = "Cantus Firmus: Tenor"
+    subtitle = "Cantus Firmus: Tenor"
 }
   \score {
     \new ChoirStaff <<
@@ -196,30 +215,45 @@ scoreBVerse = \lyricmode {
   }
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%
+%%%% CF Bass
+%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 scoreCSoprano = \relative c'' {
   \global
   % Music follows here.
-
+  c4 g a e c' a d b~b r4
+  b c b a c a8(c) g4 c2 r4
+  c b  e f, g e8(g) c(f,) c'4~c r
+  c g f c' f, c' g c2.
 }
 
 scoreCAlto = \relative c' {
   \global
   % Music follows here.
-
+  e4 d e e c c c d~d r4
+  d e d c c c8(c) b4 g2 r4
+  g d' e c b b8(b) c(c) c4~c r4
+  e d f c f c d e2.
 }
 
 scoreCTenor = \relative c' {
   \global
   % Music follows here.
-
+  g4 g c b g e fs g~g r4
+  g g g e e a8(g) g4 e2 r4
+  e g b a g g8(e)g(a) e4~e r
+  g g c e, c g' g g2.
 }
 
 scoreCBass = \relative c {
   \global
   % Music follows here.
-  c4 b a g e a a g2 r4
-  g c g a g f8( e) d4 c2 r4
-  c g' g f d e8( d) e( f) g2 r4
+  c4 b a g e a a g~g r
+  g c g a g f8(e) d4 c2 r4
+  c g' g f d e8(d) e(f) g4~g r
   c b a g a c b c2.
   \bar "|."
 }
@@ -231,7 +265,7 @@ scoreCVerse = \lyricmode {
 
 \bookpart {
 \header{
-    subsubtitle = "Cantus Firmus: Bass"
+    subtitle = "Cantus Firmus: Bass"
 }
   \score {
     \new ChoirStaff <<
@@ -271,18 +305,27 @@ scoreCVerse = \lyricmode {
   }
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%
+%%%% CF Altus
+%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 scoreDSoprano = \relative c'' {
   \global
   % Music follows here.
-
+  e4 d e e c c c d~d r4
+  d e d c c c8(c) b4 g2 r4
+  g d' e c b b8(b) c(c) c4~c r4
+  e d f c f c d e2.
 }
 
 scoreDAlto = \relative c' {
   \global
   % Music follows here.
-  c'4 b a g e a a g2 r4
-  g c g a g f8( e) d4 c2 r4
-  c g' g f d e8( d) e( f) g2 r4
+  c'4 b a g e a a g~g r
+  g c g a g f8(e) d4 c2 r4
+  c g' g f d e8(d) e(f) g4~g r
   c b a g a c b c2.
   \bar "|."
 }
@@ -290,16 +333,19 @@ scoreDAlto = \relative c' {
 scoreDTenor = \relative c' {
   \global
   % Music follows here.
-
+  g4 g c b g e fs g~g r4
+  g g g e e a8(g) g4 e2 r4
+  e g b a g g8(e)g(a) e4~e r
+  g g c e, c g' g g2.
 }
 
 scoreDBass = \relative c {
   \global
   % Music follows here.
-  c,4 g' f e c f f c2 r4
-  c a c f c f8(c') g4 c2 r4
-  c g  e f g e8(g) c(f,) c2 r4
-  c g' f c f c g' c2.
+  c4 g a e c' a d b~b r4
+  b c b a c a8(c) g4 c2 r4
+  c b  e f, g e8(g) c(f,) c'4~c r
+  c g f c' f, c' g c2.
 }
 
 scoreDVerse = \lyricmode {
@@ -309,7 +355,7 @@ scoreDVerse = \lyricmode {
 
 \bookpart {
 \header{
-    subsubtitle = "Cantus Firmus: Altus"
+    subtitle = "Cantus Firmus: Altus"
 }
   \score {
     \new ChoirStaff <<
@@ -349,42 +395,135 @@ scoreDVerse = \lyricmode {
   }
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%
+%%%% Dux Comes
+%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 scoreESoprano = \relative c'' {
   \global
   % Music follows here.
-  c4 b a g e a a g2 r4
-  g c g a g f8( e) d4 c2 r4
-  c g' g f d e8( d) e( f) g2 r4
+  c4 b a g e a a g~g r
+  c4 b a g e a a g~g r
+  c4 b a g e a a g~g r
+  c4 b a g e a a g~g r
+  \bar "||"
+  g c g a g f8(e) d4 c2 r4
+  g' c g a g f8(e) d4 c2 r4
+  g' c g a g f8(e) d4 c2 r4
+  g' c g a g f8(e) d4 c2 r4
+  \bar "||"
+  c g' g f d e8(d) e(f) g4~g r
+  c, g' g f d e8(d) e(f) g4~g r
+  c, g' g f d e8(d) e(f) g4~g r
+  c, g' g f d e8(d) e(f) g4~g r
+  \bar "||"
   c b a g a c b c2.
+  c4 b a g a c b c2.
+  c4 b a g a c b c2.
+  c4 b a g a c b c2.
   \bar "|."
 }
 
 scoreEAlto = \relative c' {
   \global
   % Music follows here.
-
+  e4 d e e c c c d~d r4
+  e4 d e e c c c d~d r4
+  e4 d e e c c c d~d r4
+  e4 d e e c c c d~d r4
+  \bar "||"
+  d e d c c c8(c) b4 g2 r4
+  d' e d c c c8(c) b4 g2 r4
+  d' e d c c c8(c) b4 g2 r4
+  d' e d c c c8(c) b4 g2 r4
+  \bar "||"
+  g d' e c b b8(b) c(c) c4~c r4
+  g d' e c b b8(b) c(c) c4~c r4
+  g d' e c b b8(b) c(c) c4~c r4
+  g d' e c b b8(b) c(c) c4~c r4
+  \bar "||"
+  e d f c f c d e2.
+  e4 d f c f c d e2.
+  e4 d f c f c d e2.
+  e4 d f c f c d e2.
+  \bar "|."
 }
 
 scoreETenor = \relative c' {
   \global
   % Music follows here.
-
+  g4 g c b g e fs g~g r4
+  g4 g c b g e fs g~g r4
+  g4 g c b g e fs g~g r4
+  g4 g c b g e fs g~g r4
+  \bar "||"
+  g g g e e a8(g) g4 e2 r4
+  g g g e e a8(g) g4 e2 r4
+  g g g e e a8(g) g4 e2 r4
+  g g g e e a8(g) g4 e2 r4
+  \bar "||"
+  e g b a g g8(e)g(a) e4~e r
+  e g b a g g8(e)g(a) e4~e r
+  e g b a g g8(e)g(a) e4~e r
+  e g b a g g8(e)g(a) e4~e r
+  \bar "||"
+  g g c e, c g' g g2.
+  g4 g c e, c g' g g2.
+  g4 g c e, c g' g g2.
+  g4 g c e, c g' g g2.
+  \bar "|."
 }
 
 scoreEBass = \relative c {
   \global
   % Music follows here.
-
+  c4 g a e c' a d b~b r4
+  c4 g a e c' a d b~b r4
+  c4 g a e c' a d b~b r4
+  c4 g a e c' a d b~b r4
+  \bar "||"
+  b c b a c a8(c) g4 c2 r4
+  b c b a c a8(c) g4 c2 r4
+  b c b a c a8(c) g4 c2 r4
+  b c b a c a8(c) g4 c2 r4
+  \bar "||"
+  c b  e f, g e8(g) c(f,) c'4~c r
+  c b  e f, g e8(g) c(f,) c'4~c r
+  c b  e f, g e8(g) c(f,) c'4~c r
+  c b  e f, g e8(g) c(f,) c'4~c r
+  \bar "||"
+  c g f c' f, c' g c2.
+  c4 g f c' f, c' g c2.
+  c4 g f c' f, c' g c2.
+  c4 g f c' f, c' g c2.
+  \bar "|."
 }
 
-scoreEVerse = \lyricmode {
+scoreEVerseA = \lyricmode {
   % Lyrics follow here.
+Das ist der Tag, den Gott ge -- macht,
+}
 
+scoreEVerseB = \lyricmode {
+  % Lyrics follow here.
+der Freud in al -- le Welt ge -- bracht.
+}
+
+scoreEVerseC = \lyricmode {
+  % Lyrics follow here.
+Es freut sich, was sich freu -- en kann,
+}
+
+scoreEVerseD = \lyricmode {
+  % Lyrics follow here.
+denn Wun -- der hat der Herr ge -- tan.
 }
 
 \bookpart {
 \header{
-    subsubtitle = "Cantus Firmus: S, A, T, B, Dux Comes, Pachelbel"
+    subtitle = "Cantus Firmus: S, A, T, B, Dux Comes, Pachelbel"
 }
   \score {
     \new ChoirStaff <<
@@ -403,7 +542,7 @@ scoreEVerse = \lyricmode {
       >>
       \new Lyrics \with {
         \override VerticalAxisGroup #'staff-affinity = #CENTER
-      } \lyricsto "soprano" \scoreAVerse
+      } \lyricsto "soprano" {\scoreEVerseA \scoreEVerseA \scoreEVerseA \scoreEVerseA \scoreEVerseB \scoreEVerseB \scoreEVerseB \scoreEVerseB \scoreEVerseC \scoreEVerseC \scoreEVerseC \scoreEVerseC \scoreEVerseD \scoreEVerseD \scoreEVerseD \scoreEVerseD}
       \new Staff \with {
         midiInstrument = "choir aahs"
         instrumentName = \markup \center-column { "Tenor" "Bass" }
