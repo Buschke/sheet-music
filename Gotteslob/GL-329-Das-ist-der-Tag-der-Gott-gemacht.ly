@@ -137,7 +137,7 @@ scoreBSoprano = \relative c'' {
   g4 g c b g e fs g~g r4
   g g g e e a8(g) g4 e2 r4
   e g b a g g8(e)g(a) e4~e r
-  g g c e, c g' g g2.
+  g g c e, f g g g2.
 }
 
 scoreBAlto = \relative c' {
@@ -146,7 +146,7 @@ scoreBAlto = \relative c' {
   e4 d e e c c c d~d r4
   d e d c c c8(c) b4 g2 r4
   g d' e c b b8(b) c(c) c4~c r4
-  e d f c f c d e2.
+  e d f c c c d e2.
 }
 
 scoreBTenor = \relative c' {
@@ -163,9 +163,9 @@ scoreBBass = \relative c {
   \global
   % Music follows here.
   c4 g a e c' a d b~b r4
-  b c b a c a8(c) g4 c2 r4
-  c b  e f, g e8(g) c(f,) c'4~c r
-  c g f c' f, c' g c2.
+  b c b a c a8(c) g4 c,2 r4
+  c b'  e f, g e8(g) c(f,) c'4~c r
+  c g f c' f e g, c2.
 }
 
 scoreBVerse = \lyricmode {
@@ -224,10 +224,10 @@ scoreBVerse = \lyricmode {
 scoreCSoprano = \relative c'' {
   \global
   % Music follows here.
-  c4 g a e c' a d b~b r4
+  c4 g a g c a a b~b r4
   b c b a c a8(c) g4 c2 r4
   c b  e f, g e8(g) c(f,) c'4~c r
-  c g f c' f, c' g c2.
+  c g a c a e g c2.
 }
 
 scoreCAlto = \relative c' {
@@ -242,7 +242,7 @@ scoreCAlto = \relative c' {
 scoreCTenor = \relative c' {
   \global
   % Music follows here.
-  g4 g c b g e fs g~g r4
+  g4 g c b g e e g~g r4
   g g g e e a8(g) g4 e2 r4
   e g b a g g8(e)g(a) e4~e r
   g g c e, c g' g g2.
@@ -316,8 +316,8 @@ scoreDSoprano = \relative c'' {
   % Music follows here.
   e4 d e e c c c d~d r4
   d e d c c c8(c) b4 g2 r4
-  g d' e c b b8(b) c(c) c4~c r4
-  e d f c f c d e2.
+  e' d e c b b8(b) c(c) c4~c r4
+  e d f c f e d e2.
 }
 
 scoreDAlto = \relative c' {
@@ -335,7 +335,7 @@ scoreDTenor = \relative c' {
   % Music follows here.
   g4 g c b g e fs g~g r4
   g g g e e a8(g) g4 e2 r4
-  e g b a g g8(e)g(a) e4~e r
+  g g b a g g8(e)g(a) e4~e r
   g g c e, c g' g g2.
 }
 
