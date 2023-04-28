@@ -54,28 +54,28 @@ scoreASoprano = \relative c'' {
 scoreAAlto = \relative c' {
   \global
   % Music follows here.
-  e4 d e e c c c d~d r4
+  e4 d e e c e d b~b r4
   d e d c c c8(c) b4 g2 r4
-  g d' e c b b8(b) c(c) c4~c r4
-  e d f c f c d e2.
+  a d c c b b8(b) c(c) c4~c r4
+  e d e e f e d e2.
 }
 
 scoreATenor = \relative c' {
   \global
   % Music follows here.
-  g4 g c b g e fs g~g r4
+  g4 g c b g c, d d~d r4
   g g g e e a8(g) g4 e2 r4
-  e g b a g g8(e)g(a) e4~e r
-  g g c e, c g' g g2.
+  e g e a g g8(e)g(a) e4~e r
+  g g c c c g g g2.
 }
 
 scoreABass = \relative c {
   \global
   % Music follows here.
-  c4 g a e c' a d b~b r4
+  c4 g a e c' a fs g~g r4
   b c b a c a8(c) g4 c2 r4
-  c b  e f, g e8(g) c(f,) c'4~c r
-  c g f c' f, c' g c2.
+  a b  c f, g e8(g) c(f,) c'4~c r
+  c g a c f, c' g c2.
 }
 
 scoreAVerse = \lyricmode {
@@ -136,17 +136,17 @@ scoreBSoprano = \relative c'' {
   % Music follows here.
   g4 g c b g e fs g~g r4
   g g g e e a8(g) g4 e2 r4
-  e g b a g g8(e)g(a) e4~e r
-  g g c e, f g g g2.
+  e g b a g g8(d)g(a) e4~e r
+  g g c e, c' c g g2.
 }
 
 scoreBAlto = \relative c' {
   \global
   % Music follows here.
-  e4 d e e c c c d~d r4
+  e4 d e e c c d d~d r4
   d e d c c c8(c) b4 g2 r4
   g d' e c b b8(b) c(c) c4~c r4
-  e d f c c c d e2.
+  e d f c f g d e2.
 }
 
 scoreBTenor = \relative c' {
@@ -165,7 +165,7 @@ scoreBBass = \relative c {
   c4 g a e c' a d b~b r4
   b c b a c a8(c) g4 c,2 r4
   c b'  e f, g e8(g) c(f,) c'4~c r
-  c g f c' f e g, c2.
+  c g f c' f e g c,2.
 }
 
 scoreBVerse = \lyricmode {
@@ -225,26 +225,26 @@ scoreCSoprano = \relative c'' {
   \global
   % Music follows here.
   c4 g a g c a a b~b r4
-  b c b a c a8(c) g4 c2 r4
-  c b  e f, g e8(g) c(f,) c'4~c r
-  c g a c a e g c2.
+  b c b a c a8(c) g4 g2 r4
+  c b  e f, g e8(g) c(f,) g4~g r
+  c g a b a e g c2.
 }
 
 scoreCAlto = \relative c' {
   \global
   % Music follows here.
-  e4 d e e c c c d~d r4
-  d e d c c c8(c) b4 g2 r4
-  g d' e c b b8(b) c(c) c4~c r4
-  e d f c f c d e2.
+  e4 d e e g e fs g~g r4
+  d e d c c c8(c) b4 c2 r4
+  e d e c b c8(b) c(c) d4~d r4
+  e d e e e c d e2.
 }
 
 scoreCTenor = \relative c' {
   \global
   % Music follows here.
-  g4 g c b g e e g~g r4
+  g4 g c, b c c c d~d r4
   g g g e e a8(g) g4 e2 r4
-  e g b a g g8(e)g(a) e4~e r
+  g g b a g g8(e)g(a) b4~b r
   g g c e, c g' g g2.
 }
 
@@ -405,22 +405,22 @@ scoreESoprano = \relative c'' {
   \global
   % Music follows here.
   c4^"C.F. Dux" b a g e a a g~g r2.
-  g4^"Bicinium" g c b g e fs g~g r2.
+  g4^"Bicinium" g c b g c c b~b r2.
   c4 g a e c' a d b~b r2.
   c4^"C.F. Dux Pachebel" b a g e a a g~g r4
   \breathe
   g4^"C.F. Dux" c g a g f8(e) d4 c2 r4 r2
-  d4^"Bicinium" d d b b e8(d) d4 b2 r4 r2
-  b'4 c b a c a8(c) g4 c2 r4 r2
+  e4^"Bicinium" d f g f g8(g) fs4 g2 r4 r2
+  b4 c b a c a8(c) g4 c2 r4 r2
   g4^"C.F. Dux Pachebel" c g a g f8(e) d4 c2 r4
   \breathe
   c4 g' g f d e8(d) e(f) g4~g r r2
-  e4^"Bicinium" g b a g g8(e)g(a) e4~e r r2
-  g4 d' e c b b8(b) c(c) c4~c r4 r2
+  g4^"Bicinium" e e e fs g8(fs)g(a) b4~b r r2
+  g4 b c c b b8(b) c(c) b4~b r4 r2
   c,4^"C.F. Dux Pachebel" g' g f d e8(d) e(f) g4~g r
   \breathe
   c4^"C.F. Dux" b a g a c b c2.
-  r2 d4^"Bicinium" d g b, g d' d d2.
+  r2 d4^"Bicinium" d g b, g d' d c2.
   r2 e4 d f c f c d e2.
   r2 c4^"C.F. Dux Pachebel" b a g a c b c2.
   \bar "|."
@@ -460,17 +460,17 @@ scoreETenor = \relative c' {
   g4 g c b g e fs g~g r4
   \breathe
   s s s s s s8(s) s4 s2 s4
-  r2 d4^"C.F. Comes" g d e d c8(b) a4 g2 r4
+  r2 c,4^"C.F. Comes" g' c, e d c8(b) a4 g2 r4
   r2 g'4 g g e e a8(g) g4 e2 r4
   r2 g4 g g e e a8(g) g4 e2 r4
   \breathe
   s4 s s s s s8 s s s s4 s s s2
-  g4^"C.F. Comes" d' d c a b8(a) b(c) d4~d r r2
-  e4 g b a g g8(e)g(a) e4~e r r2
-  e4 g b a g g8(e)g(a) e4~e r
+  g4^"C.F. Comes" c c c a b8(a) b(c) d4~d r r2
+  e,4 g e a g g8(e)g(a) d4~d r r2
+  e,4 g b a g g8(e)g(a) e4~e r
   \breathe
   s4 s s s s s s s2.
-  r2 g,4^"C.F. Comes" fs e d e g fs g2. r2
+  r2 g4^"C.F. Comes" fs e d e g fs g2. r2
   g4 g c e, c g' g g2. r2
   g4 g c e, c g' g g2.
   \bar "|."
@@ -491,8 +491,8 @@ scoreEBass = \relative c {
   \breathe
   s4 s s s s s8 s s s s4 s s s2
   s4 s s s s s8 s s s s4 s s s2
-  c4_"C.F. Dux" g' g f d e8(d) e(f) g4~g r r2
-  c,4 b e f, g e8(g) c(f,) c'4~c r
+  c,4_"C.F. Dux" g' g f d e8(d) e(f) g4~g r r2
+  c4 b e f g, e8(g) c(f,) c'4~c r
   \breathe
   s4 s s s s s s s2.
   s2 s4 s s s s s s s2.
