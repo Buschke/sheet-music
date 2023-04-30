@@ -1,18 +1,22 @@
 \version "2.24.1"
 \language "english"
 
+\include "predefined-guitar-fretboards.ly"
+
 \header {
+  dedication = ""
   title = "Das ist der Tag, der Gott gemacht"
   subtitle = "Cantus Firmus: Sopran"
   subsubtitle = "Gotteslob 329"
-  instrument = "Organ"
+  instrument = "Orgel"
   composer = "M: nach Johann Leisentrit 1567"
-  arranger = \markup {"Satz: " \with-url "https:buschke.com" "Sven Buschke"}
+  arranger = "Satz:  https:buschke.com Sven Buschke"
   poet = "T: nach Heinrich Bone 1847/ EGB 1975"
+  meter = ""
+  piece = ""
   opus = "GL 329"
-  copyright = \markup {"© 25.04.2023 " \with-url "https:buschke.com" "Sven Buschke"}
-  % Remove default LilyPond tagline
-  tagline = ##f
+  copyright = "© 29.04.2023  https:buschke.com Sven Buschke"
+  tagline = ""
 }
 
 \paper {
@@ -39,7 +43,6 @@ global = {
 %%%% CF Soprano
 %%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 
 scoreASoprano = \relative c'' {
   \global
@@ -86,39 +89,73 @@ Es freut sich, was sich freu -- en kann,
 denn Wun -- der hat der Herr ge -- tan.
 }
 
+scoreAFigBass = \figuremode {
+  \global
+  % Figures follow here.
+  s4 s s s s s s s s s
+  <6> s s s s s8 s s4 s2 s4
+  s s s s s s8 s s s s4 s s
+  s s s s s s s2.
+}
+
+scoreAChordNames = \chordmode {
+  \global
+  \germanChords
+  % Chords follow here.
+  c4 g f e:m c a:m d g2 s4
+  g c g a:m g f8(e:m) g4 c2 s4
+  c g e:m f d e8:m b:dim c f c2 s4
+  c g a:m c f c g c2.
+}
+
+scoreAChoirPart = \new ChoirStaff <<
+  \new Staff \with {
+    midiInstrument = "choir aahs"
+    instrumentName = \markup \center-column { "Sopran" "Alt" }
+    shortInstrumentName = \markup \center-column { "S." "A." }
+  } <<
+    \new Voice = "soprano" \with {
+      \consists "Ambitus_engraver"
+    } { \voiceOne \scoreASoprano }
+    \new Voice = "alto" \with {
+      \consists "Ambitus_engraver"
+      \override Ambitus #'X-offset = #2.0
+    } { \voiceTwo \scoreAAlto }
+  >>
+  \new Lyrics \with {
+    \override VerticalAxisGroup #'staff-affinity = #CENTER
+  } \lyricsto "soprano" \scoreAVerse
+  \new Staff \with {
+    midiInstrument = "choir aahs"
+    instrumentName = \markup \center-column { "Tenor" "Bass" }
+    shortInstrumentName = \markup \center-column { "T." "B." }
+  } <<
+    \clef bass
+    \new Voice = "tenor" \with {
+      \consists "Ambitus_engraver"
+    } { \voiceOne \scoreATenor }
+    \new Voice = "bass" \with {
+      \consists "Ambitus_engraver"
+      \override Ambitus #'X-offset = #2.0
+    } { \voiceTwo \scoreABass }
+  >>
+>>
+
+scoreABassFiguresPart = \new FiguredBass \with {
+  useBassFigureExtenders = ##t
+} \scoreAFigBass
+
+scoreAChordsPart = <<
+  <<\new ChordNames {\scoreAChordNames}{\scoreAChordNames}>>
+%  \new FretBoards \scoreAChordNames
+>>
+
 \bookpart {
   \score {
-    \new ChoirStaff <<
-      \new Staff \with {
-        midiInstrument = "choir aahs"
-        instrumentName = \markup \center-column { "Soprano" "Alto" }
-        shortInstrumentName = \markup \center-column { "S." "A." }
-      } <<
-        \new Voice = "soprano" \with {
-          \consists "Ambitus_engraver"
-        } { \voiceOne \scoreASoprano }
-        \new Voice = "alto" \with {
-          \consists "Ambitus_engraver"
-          \override Ambitus #'X-offset = #2.0
-        } { \voiceTwo \scoreAAlto }
-      >>
-      \new Lyrics \with {
-        \override VerticalAxisGroup #'staff-affinity = #CENTER
-      } \lyricsto "soprano" \scoreAVerse
-      \new Staff \with {
-        midiInstrument = "choir aahs"
-        instrumentName = \markup \center-column { "Tenor" "Bass" }
-        shortInstrumentName = \markup \center-column { "T." "B." }
-      } <<
-        \clef bass
-        \new Voice = "tenor" \with {
-          \consists "Ambitus_engraver"
-        } { \voiceOne \scoreATenor }
-        \new Voice = "bass" \with {
-          \consists "Ambitus_engraver"
-          \override Ambitus #'X-offset = #2.0
-        } { \voiceTwo \scoreABass }
-      >>
+    <<
+      \scoreAChoirPart
+      \scoreABassFiguresPart
+      \scoreAChordsPart
     >>
     \layout { }
     \midi { }
@@ -173,42 +210,76 @@ scoreBVerse = \lyricmode {
 
 }
 
+scoreBFigBass = \figuremode {
+  \global
+  % Figures follow here.
+  s4 s s s s s s s s s
+  <6> s s s s s8 s s4 s2 s4
+  s s s s s s8 s s s s4 s s
+  s s s s s s s2.
+}
+
+scoreBChordNames = \chordmode {
+  \global
+  \germanChords
+  % Chords follow here.
+  c4 g f e:m c a:m d g2 s4
+  g c g a:m g f8(e:m) g4 c2 s4
+  c g e:m f d e8:m b c f c2 s4
+  c g a:m c f c g c2.
+}
+
+scoreBChoirPart = \new ChoirStaff <<
+  \new Staff \with {
+    midiInstrument = "choir aahs"
+    instrumentName = \markup \center-column { "Sopran" "Alt" }
+    shortInstrumentName = \markup \center-column { "S." "A." }
+  } <<
+    \new Voice = "soprano" \with {
+      \consists "Ambitus_engraver"
+    } { \voiceOne \scoreBSoprano }
+    \new Voice = "alto" \with {
+      \consists "Ambitus_engraver"
+      \override Ambitus #'X-offset = #2.0
+    } { \voiceTwo \scoreBAlto }
+  >>
+  \new Lyrics \with {
+    \override VerticalAxisGroup #'staff-affinity = #CENTER
+  } \lyricsto "soprano" \scoreAVerse
+  \new Staff \with {
+    midiInstrument = "choir aahs"
+    instrumentName = \markup \center-column { "Tenor" "Bass" }
+    shortInstrumentName = \markup \center-column { "T." "B." }
+  } <<
+    \clef bass
+    \new Voice = "tenor" \with {
+      \consists "Ambitus_engraver"
+    } { \voiceOne \scoreBTenor }
+    \new Voice = "bass" \with {
+      \consists "Ambitus_engraver"
+      \override Ambitus #'X-offset = #2.0
+    } { \voiceTwo \scoreBBass }
+  >>
+>>
+
+scoreBBassFiguresPart = \new FiguredBass \with {
+  useBassFigureExtenders = ##t
+} \scoreBFigBass
+
+scoreBChordsPart = <<
+  <<\new ChordNames {\scoreBChordNames}{\scoreBChordNames}>>
+%  \new FretBoards \scoreBChordNames
+>>
+
 \bookpart {
 \header{
     subtitle = "Cantus Firmus: Tenor"
 }
   \score {
-    \new ChoirStaff <<
-      \new Staff \with {
-        midiInstrument = "choir aahs"
-        instrumentName = \markup \center-column { "Soprano" "Alto" }
-        shortInstrumentName = \markup \center-column { "S." "A." }
-      } <<
-        \new Voice = "soprano" \with {
-          \consists "Ambitus_engraver"
-        } { \voiceOne \scoreBSoprano }
-        \new Voice = "alto" \with {
-          \consists "Ambitus_engraver"
-          \override Ambitus #'X-offset = #2.0
-        } { \voiceTwo \scoreBAlto }
-      >>
-      \new Lyrics \with {
-        \override VerticalAxisGroup #'staff-affinity = #CENTER
-      } \lyricsto "soprano" \scoreAVerse
-      \new Staff \with {
-        midiInstrument = "choir aahs"
-        instrumentName = \markup \center-column { "Tenor" "Bass" }
-        shortInstrumentName = \markup \center-column { "T." "B." }
-      } <<
-        \clef bass
-        \new Voice = "tenor" \with {
-          \consists "Ambitus_engraver"
-        } { \voiceOne \scoreBTenor }
-        \new Voice = "bass" \with {
-          \consists "Ambitus_engraver"
-          \override Ambitus #'X-offset = #2.0
-        } { \voiceTwo \scoreBBass }
-      >>
+    <<
+      \scoreBChoirPart
+      \scoreBBassFiguresPart
+      \scoreBChordsPart
     >>
     \layout { }
     \midi { }
@@ -263,42 +334,76 @@ scoreCVerse = \lyricmode {
 
 }
 
+scoreCFigBass = \figuremode {
+  \global
+  % Figures follow here.
+  s4 s s s s s s s s s
+  <6> s s s s s8 s s4 s2 s4
+  s s s s s s8 s s s s4 s s
+  s s s s s s s2.
+}
+
+scoreCChordNames = \chordmode {
+  \global
+  \germanChords
+  % Chords follow here.
+  c4 g f e:m c a:m d g2 s4
+  g c g a:m g f8(e:m) g4 c2 s4
+  c g e:m f d e8:m b c f c2 s4
+  c g a:m c f c g c2.
+}
+
+scoreCChoirPart = \new ChoirStaff <<
+  \new Staff \with {
+    midiInstrument = "choir aahs"
+    instrumentName = \markup \center-column { "Sopran" "Alt" }
+    shortInstrumentName = \markup \center-column { "S." "A." }
+  } <<
+    \new Voice = "soprano" \with {
+      \consists "Ambitus_engraver"
+    } { \voiceOne \scoreCSoprano }
+    \new Voice = "alto" \with {
+      \consists "Ambitus_engraver"
+      \override Ambitus #'X-offset = #2.0
+    } { \voiceTwo \scoreCAlto }
+  >>
+  \new Lyrics \with {
+    \override VerticalAxisGroup #'staff-affinity = #CENTER
+  } \lyricsto "soprano" \scoreAVerse
+  \new Staff \with {
+    midiInstrument = "choir aahs"
+    instrumentName = \markup \center-column { "Tenor" "Bass" }
+    shortInstrumentName = \markup \center-column { "T." "B." }
+  } <<
+    \clef bass
+    \new Voice = "tenor" \with {
+      \consists "Ambitus_engraver"
+    } { \voiceOne \scoreCTenor }
+    \new Voice = "bass" \with {
+      \consists "Ambitus_engraver"
+      \override Ambitus #'X-offset = #2.0
+    } { \voiceTwo \scoreCBass }
+  >>
+>>
+
+scoreCBassFiguresPart = \new FiguredBass \with {
+  useBassFigureExtenders = ##t
+} \scoreCFigBass
+
+scoreCChordsPart = <<
+  <<\new ChordNames {\scoreCChordNames}{\scoreCChordNames}>>
+%  \new FretBoards \scoreCChordNames
+>>
+
 \bookpart {
 \header{
     subtitle = "Cantus Firmus: Bass"
 }
   \score {
-    \new ChoirStaff <<
-      \new Staff \with {
-        midiInstrument = "choir aahs"
-        instrumentName = \markup \center-column { "Soprano" "Alto" }
-        shortInstrumentName = \markup \center-column { "S." "A." }
-      } <<
-        \new Voice = "soprano" \with {
-          \consists "Ambitus_engraver"
-        } { \voiceOne \scoreCSoprano }
-        \new Voice = "alto" \with {
-          \consists "Ambitus_engraver"
-          \override Ambitus #'X-offset = #2.0
-        } { \voiceTwo \scoreCAlto }
-      >>
-      \new Lyrics \with {
-        \override VerticalAxisGroup #'staff-affinity = #CENTER
-      } \lyricsto "soprano" \scoreAVerse
-      \new Staff \with {
-        midiInstrument = "choir aahs"
-        instrumentName = \markup \center-column { "Tenor" "Bass" }
-        shortInstrumentName = \markup \center-column { "T." "B." }
-      } <<
-        \clef bass
-        \new Voice = "tenor" \with {
-          \consists "Ambitus_engraver"
-        } { \voiceOne \scoreCTenor }
-        \new Voice = "bass" \with {
-          \consists "Ambitus_engraver"
-          \override Ambitus #'X-offset = #2.0
-        } { \voiceTwo \scoreCBass }
-      >>
+    <<
+      \scoreCChoirPart
+      \scoreCBassFiguresPart
+      \scoreCChordsPart
     >>
     \layout { }
     \midi { }
@@ -353,42 +458,76 @@ scoreDVerse = \lyricmode {
 
 }
 
+scoreDFigBass = \figuremode {
+  \global
+  % Figures follow here.
+  s4 s s s s s s s s s
+  <6> s s s s s8 s s4 s2 s4
+  s s s s s s8 s s s s4 s s
+  s s s s s s s2.
+}
+
+scoreDChordNames = \chordmode {
+  \global
+  \germanChords
+  % Chords follow here.
+  c4 g f e:m c a:m d g2 s4
+  g c g a:m g f8(e:m) g4 c2 s4
+  c g e:m f d e8:m b c f c2 s4
+  c g a:m c f c g c2.
+}
+
+scoreDChoirPart = \new ChoirStaff <<
+  \new Staff \with {
+    midiInstrument = "choir aahs"
+    instrumentName = \markup \center-column { "Sopran" "Alt" }
+    shortInstrumentName = \markup \center-column { "S." "A." }
+  } <<
+    \new Voice = "soprano" \with {
+      \consists "Ambitus_engraver"
+    } { \voiceOne \scoreDSoprano }
+    \new Voice = "alto" \with {
+      \consists "Ambitus_engraver"
+      \override Ambitus #'X-offset = #2.0
+    } { \voiceTwo \scoreDAlto }
+  >>
+  \new Lyrics \with {
+    \override VerticalAxisGroup #'staff-affinity = #CENTER
+  } \lyricsto "soprano" \scoreAVerse
+  \new Staff \with {
+    midiInstrument = "choir aahs"
+    instrumentName = \markup \center-column { "Tenor" "Bass" }
+    shortInstrumentName = \markup \center-column { "T." "B." }
+  } <<
+    \clef bass
+    \new Voice = "tenor" \with {
+      \consists "Ambitus_engraver"
+    } { \voiceOne \scoreDTenor }
+    \new Voice = "bass" \with {
+      \consists "Ambitus_engraver"
+      \override Ambitus #'X-offset = #2.0
+    } { \voiceTwo \scoreDBass }
+  >>
+>>
+
+scoreDBassFiguresPart = \new FiguredBass \with {
+  useBassFigureExtenders = ##t
+} \scoreDFigBass
+
+scoreDChordsPart = <<
+  <<\new ChordNames {\scoreDChordNames}{\scoreDChordNames}>>
+%  \new FretBoards \scoreDChordNames
+>>
+
 \bookpart {
 \header{
     subtitle = "Cantus Firmus: Altus"
 }
   \score {
-    \new ChoirStaff <<
-      \new Staff \with {
-        midiInstrument = "choir aahs"
-        instrumentName = \markup \center-column { "Soprano" "Alto" }
-        shortInstrumentName = \markup \center-column { "S." "A." }
-      } <<
-        \new Voice = "soprano" \with {
-          \consists "Ambitus_engraver"
-        } { \voiceOne \scoreDSoprano }
-        \new Voice = "alto" \with {
-          \consists "Ambitus_engraver"
-          \override Ambitus #'X-offset = #2.0
-        } { \voiceTwo \scoreDAlto }
-      >>
-      \new Lyrics \with {
-        \override VerticalAxisGroup #'staff-affinity = #CENTER
-      } \lyricsto "alto" \scoreAVerse
-      \new Staff \with {
-        midiInstrument = "choir aahs"
-        instrumentName = \markup \center-column { "Tenor" "Bass" }
-        shortInstrumentName = \markup \center-column { "T." "B." }
-      } <<
-        \clef bass
-        \new Voice = "tenor" \with {
-          \consists "Ambitus_engraver"
-        } { \voiceOne \scoreDTenor }
-        \new Voice = "bass" \with {
-          \consists "Ambitus_engraver"
-          \override Ambitus #'X-offset = #2.0
-        } { \voiceTwo \scoreDBass }
-      >>
+    <<
+      \scoreDChoirPart
+      \scoreDBassFiguresPart
+      \scoreDChordsPart
     >>
     \layout { }
     \midi { }
@@ -521,42 +660,88 @@ scoreEVerseD = \lyricmode {
 denn Wun -- der hat der Herr ge -- tan.
 }
 
+scoreEFigBass = \figuremode {
+  \global
+  % Figures follow here.
+  s4 s s s s s s s s s
+  s4 s s s s s s s s s
+  s4 s s s s s s s s s
+  s4 s s s s s s s s s
+  <6> s s s s s8 s s4 s2 s4
+  <6> s s s s s8 s s4 s2 s4
+  <6> s s s s s8 s s4 s2 s4
+  <6> s s s s s8 s s4 s2 s4
+  s s s s s s8 s s s s4 s s
+  s s s s s s8 s s s s4 s s
+  s s s s s s8 s s s s4 s s
+  s s s s s s8 s s s s4 s s
+  s s s s s s s2.
+  s s s s s s s2.
+  s s s s s s s2.
+  s s s s s s s2.
+}
+
+scoreEChordNames = \chordmode {
+  \global
+  \germanChords
+  % Chords follow here.
+  c4 g f e:m c a:m d g2 s4
+  g c g a:m g f8(e:m) g4 c2 s4
+  c g e:m f d e8:m b c f c2 s4
+  c g a:m c f c g c2.
+}
+
+scoreEChoirPart = \new ChoirStaff <<
+  \new Staff \with {
+    midiInstrument = "choir aahs"
+    instrumentName = \markup \center-column { "Sopran" "Alt" }
+    shortInstrumentName = \markup \center-column { "S." "A." }
+  } <<
+    \new Voice = "soprano" \with {
+      \consists "Ambitus_engraver"
+    } { \voiceOne \scoreESoprano }
+    \new Voice = "alto" \with {
+      \consists "Ambitus_engraver"
+      \override Ambitus #'X-offset = #2.0
+    } { \voiceTwo \scoreEAlto }
+  >>
+  \new Lyrics \with {
+    \override VerticalAxisGroup #'staff-affinity = #CENTER
+  } \lyricsto "soprano" {\scoreEVerseA \scoreEVerseA \scoreEVerseA \scoreEVerseA \scoreEVerseB \scoreEVerseB \scoreEVerseB \scoreEVerseB \scoreEVerseC \scoreEVerseC \scoreEVerseC \scoreEVerseC \scoreEVerseD \scoreEVerseD \scoreEVerseD \scoreEVerseD}
+  \new Staff \with {
+    midiInstrument = "choir aahs"
+    instrumentName = \markup \center-column { "Tenor" "Bass" }
+    shortInstrumentName = \markup \center-column { "T." "B." }
+  } <<
+    \clef bass
+    \new Voice = "tenor" \with {
+      \consists "Ambitus_engraver"
+    } { \voiceOne \scoreETenor }
+    \new Voice = "bass" \with {
+      \consists "Ambitus_engraver"
+      \override Ambitus #'X-offset = #2.0
+    } { \voiceTwo \scoreEBass }
+  >>
+>>
+
+scoreEBassFiguresPart = \new FiguredBass \with {
+  useBassFigureExtenders = ##t
+} \scoreEFigBass
+
+scoreEChordsPart = <<
+  <<\new ChordNames {\scoreEChordNames}{\scoreEChordNames}>>
+%  \new FretBoards \scoreEChordNames
+>>
+
 \bookpart {
 \header{
     subtitle = "Cantus Firmus: S, A, T, B, Dux Comes, Pachelbel"
 }
   \score {
-    \new ChoirStaff <<
-      \new Staff \with {
-        midiInstrument = "choir aahs"
-        instrumentName = \markup \center-column { "Soprano" "Alto" }
-        shortInstrumentName = \markup \center-column { "S." "A." }
-      } <<
-        \new Voice = "soprano" \with {
-          \consists "Ambitus_engraver"
-        } { \voiceOne \scoreESoprano }
-        \new Voice = "alto" \with {
-          \consists "Ambitus_engraver"
-          \override Ambitus #'X-offset = #2.0
-        } { \voiceTwo \scoreEAlto }
-      >>
-      \new Lyrics \with {
-        \override VerticalAxisGroup #'staff-affinity = #CENTER
-      } \lyricsto "soprano" {\scoreEVerseA \scoreEVerseA \scoreEVerseA \scoreEVerseA \scoreEVerseB \scoreEVerseB \scoreEVerseB \scoreEVerseB \scoreEVerseC \scoreEVerseC \scoreEVerseC \scoreEVerseC \scoreEVerseD \scoreEVerseD \scoreEVerseD \scoreEVerseD}
-      \new Staff \with {
-        midiInstrument = "choir aahs"
-        instrumentName = \markup \center-column { "Tenor" "Bass" }
-        shortInstrumentName = \markup \center-column { "T." "B." }
-      } <<
-        \clef bass
-        \new Voice = "tenor" \with {
-          \consists "Ambitus_engraver"
-        } { \voiceOne \scoreETenor }
-        \new Voice = "bass" \with {
-          \consists "Ambitus_engraver"
-          \override Ambitus #'X-offset = #2.0
-        } { \voiceTwo \scoreEBass }
-      >>
+    <<
+      \scoreEChoirPart
+      \scoreEBassFiguresPart
+      \scoreEChordsPart
     >>
     \layout { }
     \midi { }
