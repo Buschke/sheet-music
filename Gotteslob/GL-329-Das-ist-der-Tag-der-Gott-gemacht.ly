@@ -102,7 +102,7 @@ scoreAChordNames = \chordmode {
   \global
   \germanChords
   % Chords follow here.
-  c4 g f e:m c a:m d g2 s4
+  c4 g/b f e:m c a:m d g2 s4
   g c g a:m g f8(e:m) g4 c2 s4
   c g e:m f d e8:m b:dim c f c2 s4
   c g a:m c f c g c2.
