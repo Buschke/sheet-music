@@ -158,6 +158,13 @@ scoreAChordsPart = <<
       \scoreAChordsPart
     >>
     \layout { }
+  }
+  \score {
+    <<
+      \scoreAChoirPart
+%      \scoreABassFiguresPart
+%      \scoreAChordsPart
+    >>
     \midi { }
   }
 }
