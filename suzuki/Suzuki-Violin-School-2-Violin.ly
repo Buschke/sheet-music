@@ -45,13 +45,19 @@ globalA = {
   \defaultTimeSignature
 %  \numericTimeSignature
   \time 4/4
-  \tempo "Andante" 4=100
+  \tempo "Maestoso" 4=100
 }
 
 scoreAViolin = \relative c'' {
   \globalA
   % Music follows here.
-  d2\downbow
+  d2\downbow\f b4.(c8) d2 g, a8(b c d) c4--(b--) a2. r4
+  b8\downbow\<(c d e) d4--(d--) g2\> d c4\! b a4.(g8) g2. r4
+  b8\mf(a b c) b4--(b--) a2 g c4 b a g f2. r4
+  e'8\downbow(ds e fs) e4--(fs--) g2 e fs4 e8 d cs4.(d8) d2. r4
+  d2\downbow\f b4.(c8) d2 g, a8(b c d) c4--(b--) a2.r4
+  b8\downbow\<( c d e) d4--(d--) \!g2\> d c4\!_"rall." b a4.(g8) g2. r4\fermata
+  \bar "|."
 }
 
 \bookpart {

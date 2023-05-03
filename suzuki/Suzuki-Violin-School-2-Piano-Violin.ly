@@ -43,35 +43,53 @@ global = {
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 globalA = {
-  \key c \major
+  \key g \major
   \defaultTimeSignature
 %  \numericTimeSignature
   \time 4/4
-  \tempo "Andante" 4=100
+  \tempo "Maestoso" 4=100
 }
 
 scoreAViolin = \relative c'' {
   \globalA
   % Music follows here.
-  d2\downbow
+  d2\downbow\f b4.(c8) d2 g, a8(b c d) c4--(b--) a2. r4
+  b8\downbow\<(c d e) d4--(d--) g2\> d c4\! b a4.(g8) g2. r4
+  b8\mf(a b c) b4--(b--) a2 g c4 b a g f2. r4
+  e'8\downbow(ds e fs) e4--(fs--) g2 e fs4 e8 d cs4.(d8) d2. r4
+  d2\downbow\f b4.(c8) d2 g, a8(b c d) c4--(b--) a2.r4
+  b8\downbow\<( c d e) d4--(d--) \!g2\> d c4\!_"rall." b a4.(g8) g2. r4\fermata
+  \bar "|."
 }
 
 scoreARight = \relative c'' {
   \globalA
   % Music follows here.
-
+  <b d>2\f <g b>4.(<a c>8) <b d>2 <d, g> fs8(g a b) a4-.(g-.) fs2(4) r4
+  g8\<(a b c) b4-.(b-.) \!d2\>(b4) r\! fs(g) g(fs) g2(4) r4
+  g8\mf(fs g a) g4-.(g-.) fs2(e4) r a(g fs e) ds2(4) r
+  g8(fs g a) g4-.(b-.) e2(cs4) r a(g8 fs) e4.(fs8) fs2(4) r
+  <b d>2\f <g b>4.(<a c>8) <b d>2(<d, g>4) r fs8(g a b) a4-.(g-.) fs2(4) r
+  g8\<(a b c) b4-.(4-.)\! d2\>(b4) r\! fs->_"rall."(g->) g->(fs->) <b, d g>2~4 r\fermata
 }
 
 scoreALeft = \relative c' {
   \globalA
   % Music follows here.
-
+  <g, g'>2 <b b'>4.(<a a'>8) <g g'>2 <b b'> a'4.(g8) fs4(g) d'8(cs d e d c b a)
+  <g d'>2 4 4 <b d>2(<g d'>4) r a(b8 c) d4(d,) <g b>2(4) r
+  g4.(fs8 g4 e) fs(ds e c) a2 r4 a' b(a g fs)
+  e r e'-.(d-.) cs2(a4) r d(g, a2) d,2~4 r
+  <g, g'>2 <b b'>4.(<a a'>8) <g g'>2(<b b'
+  >4) r a'4.(g8) fs4 g) d'8(cs d e d c b a)
+  g2\< <a, a'>4 4 <b b'>2(<g g'>4) r <a a'>-> <b b'>8-> <a a'>-> <d d'>4-> <d, d'>-> <g g'>2~4 r\fermata
 }
 
 scoreAViolinPart = \new Staff \with {
   instrumentName = "Violine"
   shortInstrumentName = "Vl."
   midiInstrument = "violin"
+  \magnifyStaff #5/8
 } \scoreAViolin
 
 scoreAPianoPart = \new PianoStaff \with {
