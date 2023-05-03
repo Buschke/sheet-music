@@ -13,7 +13,7 @@
   meter = ""
   piece = ""
   opus = "No. 1"
-  copyright = "© Fingering Sven Buschke"
+  copyright = \markup {"© Fingering, 03.05.2023: " \with-url "https://buschke.com" "Sven Buschke"}
   tagline = ""
 }
 
@@ -785,7 +785,6 @@ scoreOPianoPart = \new PianoStaff \with {
   meter = ""
   piece = ""
   opus = "Suzuki No. 15/1"
-  copyright = "© Sven Buschke"
   tagline = ""
 }
   \score {
