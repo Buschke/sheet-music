@@ -43,7 +43,7 @@ scoreACello = \relative c {
   d2. d4
   e e fs d
   g2 d
-  g4 g fs e 
+  g4 g fs e
   d2. d4
   e e fs d
   g2. r4
@@ -63,7 +63,7 @@ scoreACello = \relative c {
   b4 a g b
   e,2 fs
   g2. r4
-  g g fs e 
+  g g fs e
   d2. d4
   e e fs d
   g2 d
@@ -105,7 +105,7 @@ scoreARight = \relative c'' {
   d2.( <b d>4)
   <c e>2 <b d>
   <b d>1
-  b2 c 
+  b2 c
   d1
   <c e>2 <b d>
   <b d>2. r4
@@ -127,7 +127,7 @@ scoreALeft = \relative c' {
   b a
   g4 g b d
   g fs e d
-  c2 d 
+  c2 d
   c4 a d d,
   g d' g r
   d d' d, d'
@@ -230,13 +230,13 @@ scoreBCello = \relative c {
 scoreBRight = \relative c'' {
   \globalB
   % Music follows here.
-  
+
 }
 
 scoreBLeft = \relative c' {
   \globalB
   % Music follows here.
-  
+
 }
 
 scoreBCelloPart = \new Staff \with {
@@ -313,7 +313,7 @@ scoreCCelloB = \relative c {
   g a8 b c4 |
   e,8 g f e d e |
   c2.
-  
+
 }
 
 scoreCRightA = \relative c'' {
@@ -448,7 +448,7 @@ scoreDCelloA = \relative c {
   c4 c, c
   a' a a8 c
   g4 g g8 c
-  f,4 g8 f e f 
+  f,4 g8 f e f
   d2.
   c8 e g c d, b'
   c4 c, c
@@ -505,7 +505,7 @@ scoreDLeftA = \relative c' {
 scoreDCelloB = \relative c {
   % Music follows here.
   c8 d e d c b
-  c4 a a 
+  c4 a a
   c'8 b a c b a
   b4 e, e
   c'8 b a c b a
@@ -524,8 +524,8 @@ scoreDCelloB = \relative c {
   c4 c, c
   c8 e g c d, b'
   c4 c, c
-  a' g8 f e d 
-  g4 f8 e d c 
+  a' g8 f e d
+  g4 f8 e d c
   \tuplet 3/2 {d8 e f} e,4 g
   c2.
 }
@@ -533,7 +533,7 @@ scoreDCelloB = \relative c {
 scoreDRightB = \relative c'' {
   % Music follows here.
   c,4 b e
-  c a a 
+  c a a
   <c e a>2 <d f>4
   <<{e2.}\\{e8 gs b e b gs}>>
   <c, e a>2<d f>4
@@ -545,7 +545,7 @@ scoreDRightB = \relative c'' {
   <f a d>2<f a d>4
   <f b>2.
   b8 g b g b g
-  c g c g c g 
+  c g c g c g
   <f d'>2<e c'>4
   <d b'>2.
   <e c'>2<d b'>4
