@@ -38,7 +38,7 @@ tagline = ""
 global = {
   \key f \minor
   \time 4/4
-  \tempo "Andante" 4=100
+  \tempo "Andante" 4=40
 }
 
 rightA = \relative c'' {
@@ -76,12 +76,12 @@ rightC = \relative c'' {
   <<{s4 s16 s32 s32 {\magnifyMusic 0.63 {ef64-3 df-2 ef-3 df-2 r32 c-1 c4-1}}}\\{df4-2 ~ df16 ef32-3 f-4 df16\prall-2 c-1 c4-1\fermata}>>
 
   %df4 ~ df16 ef32 f df16\prall c c4\fermata
-  ef-2
+  ef-3
 }
 
 rightD = \relative c'' {
   % Music follows here.
-  f4-3 ef8-2 <<{{\magnifyMusic 0.63 {\tuplet 3/2 {ef64-3 df-2 ef-3} df-2 c-1 df16-2}}}\\{df32\prall c df16}>> c8-1 bf-3 af-2 bf-3|
+  f4-4 ef8-3 <<{{\magnifyMusic 0.63 {\tuplet 3/2 {ef64-3 df-2 ef-3} df-2 c-1 df16-2}}}\\{df32\prall c df16}>> c8-1 bf-3 af-2 bf-3|
   c4-4 bf-3 af-2\fermata c-5|
   c-5 c-5 bf-4 af-3|
   g2-2 f-1|
@@ -118,18 +118,18 @@ leftC = \relative c' {
 
 leftD = \relative c' {
   % Music follows here.
-  af-4(c-2 bf-3 df-1) bf-5(df-3 af'-1 g-2) af-1(ef-3 df-4 g-1) c,-5(f-3 af-1 g-2)|
-  af-1(ef-3 af,-5 gf'-2) f-1(af,-4 g-5 df'-1) c-2(af-4 c-1 ef-2) g-1(c,-3 bf-5 g'-1)|
+  af-4(c-2 bf-3 df-2) bf-5(df-3 af'-1 g-2) af-1(ef-3 df-4 g-1) c,-5(f-3 af-1 g-2)|
+  af-1(ef-2 af,-5 gf'-2) f-1(af,-4 g-5 df'-2) c-1(af-4 c-1 ef-2) g-1(c,-4 bf-5 g'-1)|
   a,-5(c-3 f-1 g-2) a-1(f-3 ef-4 a-1) df,-5(g-1 af-2 g-1) c,-5(f-1 g-2 f-1)|
-  df-5(f-1 g-2 f-1) e-2(bf-5 df-2 c-3) af-5(c-3 f-1 e-2) f-1(c-2 af-3 f-5)|
-  bf-3(f'-1 g-2 f-1) bf,-5(ef-1 f-2 ef-1) c-3 ef-1 f-2 ef-1 d-2 g,-5 b-2 d-1|
+  df-5(f-2 g-1 f-2) e-1(bf-4 df-2 c-3) af-5(c-3 f-1 e-2) f-1(c-2 af-4 f-5)|
+  bf-3(f'-1 g-2 f-1) bf,-5(ef-2 f-1 ef-2) c-4 ef-2 f-1 ef-2 d-1 g,-5 b-3 d-1|
   \clef bass
-  g,-5 c-1 ef-2 df-3 g,-5 bf-1 df-2 c-1 ef,-5 af-3 c-1 bf-2 df-1 bf-2 ef,-5 df'-1|
-  f,-5 af df-1 c f,-5 af-3 c-1 bf-2 f-5 af-2 bf-1 af-2 g-5 bf-3 df-2 c-1|
+  g,-5 c-1 ef-2 df-1 g,-5 bf-3 df-2 c-1 ef,-5 af-3 c-1 bf-2 df-1 bf-2 ef,-5 df'-1|
+  f,-5 af-3 df-2 c-1 f,-5 af-3 c-1 bf-2 f-5 af-4 bf-3 af-4 g-5 bf-3 df-2 c-1|
   \clef treble
   af-5 c-4 ef-3 af-2 ef-5 bf'-2 c-1 bf-2 a-1 ef-4 gf-1 a,-5 bf-4 g'-1 af,-5 f'-1|
   \clef bass
-  g,-5 e'-2 f-1 ef-2 f,-5 df'-2 ef-1 df-2 ef,-5 c'-3 df-2 c-3 bf-5 f'-2 g-1 f-2|
+  g,-5 e'-2 f-1 ef-2 f,-5 df'-2 ef-1 df-2 ef,-5 c'-1 df-2 c-1 bf-4 f'-1 g-2 f-1|
   d-4 f-2 g-1 f-2 e-1 df-2 bf-3 g-5 a-4 c-2 f8-1
 }
 
@@ -157,8 +157,8 @@ pedalC = \relative c {
 pedalD = \relative c {
   % Music follows here.
   df8\ltoe 8\ltoe ef8\ltoe 8\ltoe af\rtoe ef\ltoe f\rtoe df\ltoe|
-  ef\rtoe c\ltoe df\ltoe ef\rtoe af,\ltoe af\rtoe e\ltoe e\ltoe|
-  f\rtoe f\ltoe f'\rtoe f\rtoe f\rtoe e\rtoe f\rtoe df\rtoe|
+  ef\rtoe c\ltoe df\ltoe ef\rtoe af,\ltoe af\ltoe e\ltoe e\ltoe|
+  f\ltoe f\ltoe f'\rtoe f\rtoe f\rtoe e\rtoe f\rtoe df\ltoe|
   bf\ltoe g\ltoe c\rtoe c\rtoe df\rtoe df\rtoe df\rtoe df\rtoe|
   d\rtoe d\rtoe ef\rtoe ef\rtoe a,\ltoe a\ltoe b\ltoe b\ltoe|
   c\ltoe c\ltoe bf\ltoe bf\ltoe af\ltoe af\ltoe g\ltoe g\ltoe|
@@ -187,5 +187,25 @@ pedalD = \relative c {
     } { \clef bass {\repeat volta 2 {\pedalA} \alternative {{\pedalB} {\pedalC}} \pedalD} }
   >>
   \layout { }
+}
+
+\score {\unfoldRepeats {
+  <<
+    \new PianoStaff \with {
+      instrumentName = "Orgel"
+      shortInstrumentName = "Org."
+    } <<
+      \new Staff = "right" \with {
+        midiInstrument = "church organ"
+      } {\repeat volta 2 {\rightA}  \alternative {{\rightB} {\rightC}} \rightD }
+      \new Staff = "left" \with {
+        midiInstrument = "church organ"
+      } { \clef bass {\repeat volta 2 {\leftA} \alternative {{\leftB} {\leftC}} \leftD} }
+    >>
+    \new Staff = "pedal" \with {
+      midiInstrument = "church organ"
+    } { \clef bass {\repeat volta 2 {\pedalA} \alternative {{\pedalB} {\pedalC}} \pedalD} }
+  >>
+        }
   \midi { }
 }
