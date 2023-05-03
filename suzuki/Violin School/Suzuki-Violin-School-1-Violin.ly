@@ -496,16 +496,25 @@ scoreLViolin = \relative c'' {
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 globalM = {
-  \key c \major
-  \numericTimeSignature
-  \time 4/4
-  \tempo "Andante" 4=100
+  \key g \major
+%  \numericTimeSignature
+  \time 3/4
+  \tempo "Allegretto" 2.=66
 }
 
 scoreMViolin = \relative c'' {
-  \global
+  \globalM
   % Music follows here.
-c
+  \repeat volta 2 {
+  d4\mf-.\downbow d-.(d-.) b a8 b g4 a d-.(c-.) b2 a4
+  d c8 b a g e'4 c8 b a g f4 e8 d f4
+  } \alternative { { g2. } { g2. } }
+  \repeat volta 2 {
+  b4\p\downbow e2 cs4 b8 c a4 d e fs e8 d cs b a4
+  a'\downbow\mf g8 fs e d b'4\upbow g8 fs e d cs4 a cs d2.
+  d4\p c8 b a4 b a8 b g4 c2 8 b a2.
+  d4 c8 b a g e'4 c8 b a g f4 e8 d f4 g2.
+  }
 }
 
 \bookpart {
@@ -534,16 +543,31 @@ c
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 globalN = {
-  \key c \major
-  \numericTimeSignature
-  \time 4/4
-  \tempo "Andante" 4=100
+  \key g \major
+  %\numericTimeSignature
+  \time 3/4
+  \tempo "Andantino" 2.=50
 }
 
 scoreNViolin = \relative c'' {
-  \global
+  \globalN
   % Music follows here.
-c
+  \repeat volta 2 {
+  g8--\f\downbow b-- d-- g-- a,-- fs'-- g4-.-- g,-.(g-.)
+  g8-- b-- d-- g-- a,-- fs'-- g4-.-- g,-.(g-.)
+  e'-.-5 e-.-4 e8-3(g d4-.) d-. d8 g c,4 d8-4 c b c a2.
+  g8--\f\downbow b-- d-- g-- a,-- fs'-- g4-.-- g,-.(g-.)
+  g8-- b-- d-- g-- a,-- fs'-- g4-.-- g,-.(g-.)
+  e'---5 d8 c b a d4---5 c8 b a g \tuplet 3/2 {a8(b c)} d,4-.(fs-.) g2.
+  }
+  \repeat volta 2 {
+    g8-3\p\downbow a b a g fs g4 e-.(e-.)
+    g'8 fs e g fs e fs4 b,-.(b-.) g'8 fs e g fs e fs4 b,-.(e-.) \tuplet 3/2 {fs8(g a)} b,4-.(ds-.) e ds8 e fs4
+  g g8 fs e d e4 e8 d c b c4 c8 b a g fs4 e8 fs d4 a'\downbow(d,) d-. b'(d,) d-. c' d8 c b c a2.
+  g8--\f\downbow b-- d-- g-- a,-- fs'-- g4-.-- g,-.(g-.)
+  g8-- b-- d-- g-- a,-- fs'-- g4-.-- g,-.(g-.)
+  e' d8 c b a d4 c8 b a g \tuplet 3/2 {a(b c)} d,4-.( fs-.) g2.
+  }
 }
 
 \bookpart {

@@ -49,7 +49,7 @@ globalA = {
 scoreAViolin = \relative c'' {
   \global
   % Music follows here.
-c
+
 }
 
 scoreARight = \relative c'' {
@@ -117,7 +117,7 @@ globalB = {
 scoreBViolin = \relative c'' {
   \global
   % Music follows here.
-c
+
 }
 
 scoreBRight = \relative c'' {
@@ -185,7 +185,7 @@ globalC = {
 scoreCViolin = \relative c'' {
   \global
   % Music follows here.
-c
+
 }
 
 scoreCRight = \relative c'' {
@@ -253,7 +253,7 @@ globalD = {
 scoreDViolin = \relative c'' {
   \global
   % Music follows here.
-c
+
 }
 
 scoreDRight = \relative c'' {
@@ -321,7 +321,7 @@ globalE = {
 scoreEViolin = \relative c'' {
   \global
   % Music follows here.
-c
+
 }
 
 scoreERight = \relative c'' {
@@ -389,7 +389,7 @@ globalF = {
 scoreFViolin = \relative c'' {
   \global
   % Music follows here.
-c
+
 }
 
 scoreFRight = \relative c'' {
@@ -457,7 +457,7 @@ globalG = {
 scoreGViolin = \relative c'' {
   \global
   % Music follows here.
-c
+
 }
 
 scoreGRight = \relative c'' {
@@ -525,7 +525,7 @@ globalH = {
 scoreHViolin = \relative c'' {
   \global
   % Music follows here.
-c
+
 }
 
 scoreHRight = \relative c'' {
@@ -593,7 +593,7 @@ globalI = {
 scoreIViolin = \relative c'' {
   \global
   % Music follows here.
-c
+
 }
 
 scoreIRight = \relative c'' {
@@ -661,7 +661,7 @@ globalJ = {
 scoreJViolin = \relative c'' {
   \global
   % Music follows here.
-c
+
 }
 
 scoreJRight = \relative c'' {
@@ -729,7 +729,7 @@ globalK = {
 scoreKViolin = \relative c'' {
   \global
   % Music follows here.
-c
+
 }
 
 scoreKRight = \relative c'' {
@@ -797,7 +797,7 @@ globalL = {
 scoreLViolin = \relative c'' {
   \global
   % Music follows here.
-c
+
 }
 
 scoreLRight = \relative c'' {
@@ -856,28 +856,57 @@ scoreLPianoPart = \new PianoStaff \with {
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 globalM = {
-  \key c \major
-  \numericTimeSignature
-  \time 4/4
-  \tempo "Andante" 4=100
+  \key g \major
+%  \numericTimeSignature
+  \defaultTimeSignature
+  \time 3/4
+  \tempo "Allegretto" 2.=66
 }
 
 scoreMViolin = \relative c'' {
-  \global
+  \globalM
   % Music follows here.
-c
+  \repeat volta 2 {
+  d4\mf-.\downbow d-.(d-.) b a8 b g4 a d-.(c-.) b2 a4
+  d c8 b a g e'4 c8 b a g f4 e8 d f4
+  } \alternative { { g2. } { g2. } }
+  \repeat volta 2 {
+  b4\p\downbow e2 cs4 b8 c a4 d e fs e8 d cs b a4
+  a'\downbow\mf g8 fs e d b'4\upbow g8 fs e d cs4 a cs d2.
+  d4\p c8 b a4 b a8 b g4 c2 8 b a2.
+  d4 c8 b a g e'4 c8 b a g f4 e8 d f4 g2.
+  }
 }
 
 scoreMRight = \relative c'' {
-  \global
+  \globalM
   % Music follows here.
+  \repeat volta 2 {
+  d4\mf-.\downbow d-.(d-.) b a8 b g4 a d-.(c-.) b2 a4
+  d c8 b a g e'4 c8 b a g f4 e8 d f4
+  } \alternative { { g2. } { g2. } }
+  \repeat volta 2 {
+  b4\p\downbow e2 cs4 b8 c a4 d e fs e8 d cs b a4
+  a'\downbow\mf g8 fs e d b'4\upbow g8 fs e d cs4 a cs d2.
+  d4\p c8 b a4 b a8 b g4 c2 8 b a2.
+  d4 c8 b a g e'4 c8 b a g f4 e8 d f4 g2.
+  }
 
 }
 
 scoreMLeft = \relative c' {
-  \global
+  \globalM
   % Music follows here.
-
+  \repeat volta 2 {
+    g4 fs d <<{g2.}\\{r4 d g,}>> g'4 fs8 e fs d g4 g, d'8-2 c
+    b4 r r c r r d2.(
+  } \alternative {
+  { g,4) b8 a d4 } {g,2.)}
+  }
+  g'2-1 e4 <<{a2.-1}\\{r4 e a,}>> fs'-2 e-1 d-2 <<{r4 e-2 a8-1 g}\\{a2.-5}>>
+  fs4 r r g r r a2(a,4 d-.) d'8-1 c b a-4
+  g2-1\p fs4 <<{g2.}\\{r4 d g,}>> a'4-1 fs-3 g-2 d-1 d, d'8 c
+  b4 r r c r r d2^"rit. 2da volta" d,4 g2.
 }
 
 scoreMViolinPart = \new Staff \with {
@@ -924,28 +953,64 @@ scoreMPianoPart = \new PianoStaff \with {
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 globalN = {
-  \key c \major
-  \numericTimeSignature
-  \time 4/4
-  \tempo "Andante" 4=100
+  \key g \major
+  %\numericTimeSignature
+  \time 3/4
+  \tempo "Andantino" 4=100
 }
 
 scoreNViolin = \relative c'' {
-  \global
+  \globalN
   % Music follows here.
-c
+  \repeat volta 2 {
+  g8--\f\downbow b-- d-- g-- a,-- fs'-- g4-.-- g,-.(g-.)
+  g8-- b-- d-- g-- a,-- fs'-- g4-.-- g,-.(g-.)
+  e'-.-5 e-.-4 e8-3(g d4-.) d-. d8 g c,4 d8-4 c b c a2.
+  g8--\f\downbow b-- d-- g-- a,-- fs'-- g4-.-- g,-.(g-.)
+  g8-- b-- d-- g-- a,-- fs'-- g4-.-- g,-.(g-.)
+  e'---5 d8 c b a d4---5 c8 b a g \tuplet 3/2 {a8(b c)} d,4-.(fs-.) g2.
+  }
+  \repeat volta 2 {
+    g8-3\p\downbow a b a g fs g4 e-.(e-.)
+    g'8 fs e g fs e fs4 b,-.(b-.) g'8 fs e g fs e fs4 b,-.(e-.) \tuplet 3/2 {fs8(g a)} b,4-.(ds-.) e ds8 e fs4
+  g g8 fs e d e4 e8 d c b c4 c8 b a g fs4 e8 fs d4 a'\downbow(d,) d-. b'(d,) d-. c' d8 c b c a2.
+  g8--\f\downbow b-- d-- g-- a,-- fs'-- g4-.-- g,-.(g-.)
+  g8-- b-- d-- g-- a,-- fs'-- g4-.-- g,-.(g-.)
+  e' d8 c b a d4 c8 b a g \tuplet 3/2 {a(b c)} d,4-.( fs-.) g2.
+  }
 }
 
 scoreNRight = \relative c'' {
-  \global
+  \globalN
   % Music follows here.
-
+  \repeat volta 2 {
+  g8--\f\downbow b-- d-- g-- a,-- fs'-- g4-.-- g,-.(g-.)
+  g8-- b-- d-- g-- a,-- fs'-- g4-.-- g,-.(g-.)
+  e'-.-5 e-.-4 e8-3(g d4-.) d-. d8 g c,4 d8-4 c b c a2.
+  g8--\f\downbow b-- d-- g-- a,-- fs'-- g4-.-- g,-.(g-.)
+  g8-- b-- d-- g-- a,-- fs'-- g4-.-- g,-.(g-.)
+  e'---5 d8 c b a d4---5 c8 b a g \tuplet 3/2 {a8(b c)} d,4-.(fs-.) g2.
+  }
+  \repeat volta 2 {
+    g8-3\p\downbow a b a g fs g4 e-.(e-.)
+    g'8 fs e g fs e fs4 b,-.(b-.) g'8 fs e g fs e fs4 b,-.(e-.) \tuplet 3/2 {fs8(g a)} b,4-.(ds-.) e ds8 e fs4
+  g g8 fs e d e4 e8 d c b c4 c8 b a g fs4 e8 fs d4 a'\downbow(d,) d-. b'(d,) d-. c' d8 c b c a2.
+  g8--\f\downbow b-- d-- g-- a,-- fs'-- g4-.-- g,-.(g-.)
+  g8-- b-- d-- g-- a,-- fs'-- g4-.-- g,-.(g-.)
+  e' d8 c b a d4 c8 b a g \tuplet 3/2 {a(b c)} d,4-.(fs-.) g2.
+  }
 }
 
 scoreNLeft = \relative c' {
-  \global
+  \globalN
   % Music follows here.
-
+  \repeat volta 2 {
+  g2-1 d4-2 g,8(b-4 d g d b g2) d'4 g,8(b-4 d g d b c4-3-.) g'-. c,-.-3(b-.) g' b,-4(a fs'-2 g d8-4 e fs d e fs g2)\f d4 g,8(b-4 d g d b g2) d'4 g,8(b-4 d g d b) c4-3(e-2 g b,-5 d-3 g c,2-4) d4-. g d-2 g,
+  }
+  \repeat volta 2 {
+  e'-1(ds b e-.) b-.-2 e,-. e'-1(g-2 b-1 b,8 ds-3 fs b fs ds-4) e4-3( g-2 b-1 b,-.) a'-. g-.-3 a(b) b,-. e2.-2 b4 d g c,-4 d-3 e-1 a,-5 b-3 c d a-2 d, fs'8-3 d fs d fs d
+  g-2 d g d g d fs4 d g d8-5(e fs d e fs
+  g2-21)\f d4-2 g,8(b-4 d g d b g2) d'4 g,8(b-4 d g d b) c4-3(e g' b,-5 d g c,2-4) d4-. g d g,}
 }
 
 scoreNViolinPart = \new Staff \with {
@@ -1173,7 +1238,7 @@ globalQ = {
 scoreQViolin = \relative c'' {
   \global
   % Music follows here.
-c
+
 }
 
 scoreQRight = \relative c'' {
