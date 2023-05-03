@@ -66,8 +66,8 @@ leftOne = \relative c' {
   % Music follows here.
   \clef treble
   \partial 2
-  b8.-3 c16-2 d4-1|
-  e4~-1 e16 e-1 d8-2 c8.-1 d16-2 r e-1 fs8-2|
+  b8.-3 c16-2 d4-12|
+  e4~-1 e16 e-1 d8-2 c8.-1 d16-2 r e-2 fs8-1|
   g8.-1 a16-2 r a-2 b8-1 r16 g8.-2 r16 g8.-1|
   g4~ g8. f16 e8. g16~ g g fs8|
   g4~ 16 g  fs8 r16 d8 f16 e4~|
@@ -87,7 +87,7 @@ leftTwo = \relative c' {
   % Music follows here.
   \clef treble
   \partial 2
-  r16 g-5 a8-4 b4-3|
+  r16 g-5 a8-4 b4-34|
   b-4 c8.-3 bf16-4 r  a-5 b8-4 c4-3|
   r16 d-5 e8-4 f8.-3 16-3~8 e16-4 d-5 e4-4|
   d~ 16 c b8~ 16 g c e a,4|
