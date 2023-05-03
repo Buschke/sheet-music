@@ -847,6 +847,14 @@ scoreLPianoPart = \new PianoStaff \with {
       \scoreLPianoPart
     >>
     \layout { }
+  }
+
+  \score {\unfoldRepeats {
+    <<
+      \scoreLViolinPart
+      \scoreLPianoPart
+    >>
+          }
     \midi { }
   }
 }
@@ -868,13 +876,13 @@ scoreMViolin = \relative c'' {
   % Music follows here.
   \repeat volta 2 {
   d4\mf-.\downbow d-.(d-.) b a8 b g4 a d-.(c-.) b2 a4
-  d c8 b a g e'4 c8 b a g f4 e8 d f4
+  d c8 b a g e'4 c8 b a g fs4 e8 d fs4
   } \alternative { { g2. } { g2. } }
   \repeat volta 2 {
-  b4\p\downbow e2 cs4 b8 c a4 d e fs e8 d cs b a4
+  b4\p\downbow e2 cs4 b8 cs a4 d e fs e8 d cs b a4
   a'\downbow\mf g8 fs e d b'4\upbow g8 fs e d cs4 a cs d2.
   d4\p c8 b a4 b a8 b g4 c2 8 b a2.
-  d4 c8 b a g e'4 c8 b a g f4 e8 d f4 g2.
+  d4 c8 b a g e'4 c8 b a g fs4 e8 d fs4 g2.
   }
 }
 
@@ -883,13 +891,13 @@ scoreMRight = \relative c'' {
   % Music follows here.
   \repeat volta 2 {
   d4\mf-.\downbow d-.(d-.) b a8 b g4 a d-.(c-.) b2 a4
-  d c8 b a g e'4 c8 b a g f4 e8 d f4
+  d c8 b a g e'4 c8 b a g fs4 e8 d fs4
   } \alternative { { g2. } { g2. } }
   \repeat volta 2 {
-  b4\p\downbow e2 cs4 b8 c a4 d e fs e8 d cs b a4
+  b4\p\downbow e2 cs4 b8 cs a4 d e fs e8 d cs b a4
   a'\downbow\mf g8 fs e d b'4\upbow g8 fs e d cs4 a cs d2.
   d4\p c8 b a4 b a8 b g4 c2 8 b a2.
-  d4 c8 b a g e'4 c8 b a g f4 e8 d f4 g2.
+  d4 c8 b a g e'4 c8 b a g fs4 e8 d fs4 g2.
   }
 
 }
@@ -903,10 +911,12 @@ scoreMLeft = \relative c' {
   } \alternative {
   { g,4) b8 a d4 } {g,2.)}
   }
+  \repeat volta 2 {
   g'2-1 e4 <<{a2.-1}\\{r4 e a,}>> fs'-2 e-1 d-2 <<{r4 e-2 a8-1 g}\\{a2.-5}>>
   fs4 r r g r r a2(a,4 d-.) d'8-1 c b a-4
   g2-1\p fs4 <<{g2.}\\{r4 d g,}>> a'4-1 fs-3 g-2 d-1 d, d'8 c
   b4 r r c r r d2^"rit. 2da volta" d,4 g2.
+  }
 }
 
 scoreMViolinPart = \new Staff \with {
@@ -944,6 +954,13 @@ scoreMPianoPart = \new PianoStaff \with {
       \scoreMPianoPart
     >>
     \layout { }
+  }
+  \score {\unfoldRepeats {
+    <<
+      \scoreMViolinPart
+      \scoreMPianoPart
+    >>
+          }
     \midi { }
   }
 }
