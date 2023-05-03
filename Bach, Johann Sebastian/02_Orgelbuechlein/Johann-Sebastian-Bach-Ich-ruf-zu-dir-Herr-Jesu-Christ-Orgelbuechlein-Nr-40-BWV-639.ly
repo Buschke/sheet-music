@@ -113,7 +113,7 @@ leftB = \relative c' {
 leftC = \relative c' {
   % Music follows here.
   %\key c \minor
-  f-1( bf,-5 df-3 f-1) bf-2(af-3 g-4 af-2) g-1(bf,-4 af-5 f'-1) g,-5(df'-1 af-4 c-1)|
+  f-1( bf,-5 df-3 f-1) bf-2(af-3 g-4 af-2) g-1(bf,-4 af-5 f'-1) g,-5(df'-1 af-4 c-2)|
 }
 
 leftD = \relative c' {
