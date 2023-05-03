@@ -5,7 +5,7 @@
   dedication = ""
   title = ""
   subtitle = "Suzuki Violin School"
-  subsubtitle = "Volume 1"
+  subsubtitle = "Volume 2"
   instrument = "Violine und Piano"
   composer = ""
   arranger = \markup {"Fingering: " \with-url "https://buschke.com" "Sven Buschke"}
@@ -14,7 +14,9 @@
   piece = ""
   opus = "No. 1"
   copyright = \markup {"© Fingering, 03.05.2023: " \with-url "https://buschke.com" "Sven Buschke"}
-  tagline = ""
+%  tagline = ""
+  % Remove default LilyPond tagline
+  tagline = ##f
 }
 
 \paper {
@@ -31,32 +33,63 @@
 
 global = {
   \key c \major
+  \numericTimeSignature
   \time 4/4
   \tempo "Andante" 4=100
 }
 
-scoreAViolin = \relative c'' {
-  \global
-  % Music follows here.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Nummer 1 / A
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+globalA = {
+  \key g \major
+  \defaultTimeSignature
+%  \numericTimeSignature
+  \time 4/4
+  \tempo "Maestoso" 4=100
+}
+
+scoreAViolin = \relative c'' {
+  \globalA
+  % Music follows here.
+  d2\downbow\f b4.(c8) d2 g, a8(b c d) c4--(b--) a2. r4
+  b8\downbow\<(c d e) d4--(d--) g2\> d c4\! b a4.(g8) g2. r4
+  b8\mf(a b c) b4--(b--) a2 g c4 b a g f2. r4
+  e'8\downbow(ds e fs) e4--(fs--) g2 e fs4 e8 d cs4.(d8) d2. r4
+  d2\downbow\f b4.(c8) d2 g, a8(b c d) c4--(b--) a2.r4
+  b8\downbow\<( c d e) d4--(d--) \!g2\> d c4\!_"rall." b a4.(g8) g2. r4\fermata
+  \bar "|."
 }
 
 scoreARight = \relative c'' {
-  \global
+  \globalA
   % Music follows here.
-
+  <b d>2\f <g b>4.(<a c>8) <b d>2 <d, g> fs8(g a b) a4-.(g-.) fs2(4) r4
+  g8\<(a b c) b4-.(b-.) \!d2\>(b4) r\! fs(g) g(fs) g2(4) r4
+  g8\mf(fs g a) g4-.(g-.) fs2(e4) r a(g fs e) ds2(4) r
+  g8(fs g a) g4-.(b-.) e2(cs4) r a(g8 fs) e4.(fs8) fs2(4) r
+  <b d>2\f <g b>4.(<a c>8) <b d>2(<d, g>4) r fs8(g a b) a4-.(g-.) fs2(4) r
+  g8\<(a b c) b4-.(4-.)\! d2\>(b4) r\! fs->_"rall."(g->) g->(fs->) <b, d g>2~4 r\fermata
 }
 
 scoreALeft = \relative c' {
-  \global
+  \globalA
   % Music follows here.
-
+  <g, g'>2 <b b'>4.(<a a'>8) <g g'>2 <b b'> a'4.(g8) fs4(g) d'8(cs d e d c b a)
+  <g d'>2 4 4 <b d>2(<g d'>4) r a(b8 c) d4(d,) <g b>2(4) r
+  g4.(fs8 g4 e) fs(ds e c) a2 r4 a' b(a g fs)
+  e r e'-.(d-.) cs2(a4) r d(g, a2) d,2~4 r
+  <g, g'>2 <b b'>4.(<a a'>8) <g g'>2(<b b'
+  >4) r a'4.(g8) fs4 g) d'8(cs d e d c b a)
+  g2\< <a, a'>4 4 <b b'>2(<g g'>4) r <a a'>-> <b b'>8-> <a a'>-> <d d'>4-> <d, d'>-> <g g'>2~4 r\fermata
 }
 
 scoreAViolinPart = \new Staff \with {
   instrumentName = "Violine"
   shortInstrumentName = "Vl."
   midiInstrument = "violin"
+  \magnifyStaff #5/7
 } \scoreAViolin
 
 scoreAPianoPart = \new PianoStaff \with {
@@ -72,6 +105,15 @@ scoreAPianoPart = \new PianoStaff \with {
 >>
 
 \bookpart {
+\header {
+  title = "Chrous 'Judas Maccabaeus'"
+  composer = "Georg Friedrich Händel"
+  poet = ""
+  meter = ""
+  piece = ""
+  opus = "Suzuki No. 1, Vol. 2"
+  tagline = ""
+}
   \score {
     <<
       \scoreAViolinPart
@@ -82,10 +124,21 @@ scoreAPianoPart = \new PianoStaff \with {
   }
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Nummer 2 / B
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+globalB = {
+  \key c \major
+  \numericTimeSignature
+  \time 4/4
+  \tempo "Andante" 4=100
+}
+
 scoreBViolin = \relative c'' {
   \global
   % Music follows here.
-
+  c
 }
 
 scoreBRight = \relative c'' {
@@ -104,6 +157,7 @@ scoreBViolinPart = \new Staff \with {
   instrumentName = "Violine"
   shortInstrumentName = "Vl."
   midiInstrument = "violin"
+  \magnifyStaff #5/7
 } \scoreBViolin
 
 scoreBPianoPart = \new PianoStaff \with {
@@ -119,6 +173,15 @@ scoreBPianoPart = \new PianoStaff \with {
 >>
 
 \bookpart {
+\header {
+  title = "Musette"
+  composer = "Johann Sebastian Bach"
+  poet = ""
+  meter = ""
+  piece = ""
+  opus = "Suzuki No. 2, Vol. 2"
+  tagline = ""
+}
   \score {
     <<
       \scoreBViolinPart
@@ -129,10 +192,21 @@ scoreBPianoPart = \new PianoStaff \with {
   }
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Nummer 3 / C
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+globalC = {
+  \key c \major
+  \numericTimeSignature
+  \time 4/4
+  \tempo "Andante" 4=100
+}
+
 scoreCViolin = \relative c'' {
   \global
   % Music follows here.
-
+c
 }
 
 scoreCRight = \relative c'' {
@@ -151,6 +225,7 @@ scoreCViolinPart = \new Staff \with {
   instrumentName = "Violine"
   shortInstrumentName = "Vl."
   midiInstrument = "violin"
+  \magnifyStaff #5/7
 } \scoreCViolin
 
 scoreCPianoPart = \new PianoStaff \with {
@@ -166,6 +241,15 @@ scoreCPianoPart = \new PianoStaff \with {
 >>
 
 \bookpart {
+\header {
+  title = "Hunter's Chorus"
+  composer = "Carl Maria von Weber"
+  poet = ""
+  meter = ""
+  piece = ""
+  opus = "Suzuki No. 3, Vol. 2"
+  tagline = ""
+}
   \score {
     <<
       \scoreCViolinPart
@@ -176,10 +260,21 @@ scoreCPianoPart = \new PianoStaff \with {
   }
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Nummer 4 / D
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+globalD = {
+  \key c \major
+  \numericTimeSignature
+  \time 4/4
+  \tempo "Andante" 4=100
+}
+
 scoreDViolin = \relative c'' {
   \global
   % Music follows here.
-
+c
 }
 
 scoreDRight = \relative c'' {
@@ -198,6 +293,7 @@ scoreDViolinPart = \new Staff \with {
   instrumentName = "Violine"
   shortInstrumentName = "Vl."
   midiInstrument = "violin"
+  \magnifyStaff #5/7
 } \scoreDViolin
 
 scoreDPianoPart = \new PianoStaff \with {
@@ -213,6 +309,15 @@ scoreDPianoPart = \new PianoStaff \with {
 >>
 
 \bookpart {
+\header {
+  title = "Long, Long Ago"
+  composer = "T.H. Bayly"
+  poet = ""
+  meter = ""
+  piece = ""
+  opus = "Suzuki No. 4, Vol. 2"
+  tagline = ""
+}
   \score {
     <<
       \scoreDViolinPart
@@ -223,10 +328,21 @@ scoreDPianoPart = \new PianoStaff \with {
   }
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Nummer 5 / E
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+globalE = {
+  \key c \major
+  \numericTimeSignature
+  \time 4/4
+  \tempo "Andante" 4=100
+}
+
 scoreEViolin = \relative c'' {
   \global
   % Music follows here.
-
+  c
 }
 
 scoreERight = \relative c'' {
@@ -245,6 +361,7 @@ scoreEViolinPart = \new Staff \with {
   instrumentName = "Violine"
   shortInstrumentName = "Vl."
   midiInstrument = "violin"
+  \magnifyStaff #5/7
 } \scoreEViolin
 
 scoreEPianoPart = \new PianoStaff \with {
@@ -260,6 +377,15 @@ scoreEPianoPart = \new PianoStaff \with {
 >>
 
 \bookpart {
+\header {
+  title = "Waltz"
+  composer = "Johannes Brahms"
+  poet = ""
+  meter = ""
+  piece = ""
+  opus = "Suzuki No. 5, Vol. 2"
+  tagline = ""
+}
   \score {
     <<
       \scoreEViolinPart
@@ -270,10 +396,21 @@ scoreEPianoPart = \new PianoStaff \with {
   }
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Nummer 6 / F
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+globalF = {
+  \key c \major
+  \numericTimeSignature
+  \time 4/4
+  \tempo "Andante" 4=100
+}
+
 scoreFViolin = \relative c'' {
   \global
   % Music follows here.
-
+c
 }
 
 scoreFRight = \relative c'' {
@@ -292,6 +429,7 @@ scoreFViolinPart = \new Staff \with {
   instrumentName = "Violine"
   shortInstrumentName = "Vl."
   midiInstrument = "violin"
+  \magnifyStaff #5/7
 } \scoreFViolin
 
 scoreFPianoPart = \new PianoStaff \with {
@@ -307,6 +445,15 @@ scoreFPianoPart = \new PianoStaff \with {
 >>
 
 \bookpart {
+\header {
+  title = "Bourrée"
+  composer = "Georg Friedrich Händel"
+  poet = ""
+  meter = ""
+  piece = ""
+  opus = "Suzuki No. 6, Vol. 2"
+  tagline = ""
+}
   \score {
     <<
       \scoreFViolinPart
@@ -317,10 +464,21 @@ scoreFPianoPart = \new PianoStaff \with {
   }
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Nummer 7 / G
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+globalG = {
+  \key c \major
+  \numericTimeSignature
+  \time 4/4
+  \tempo "Andante" 4=100
+}
+
 scoreGViolin = \relative c'' {
   \global
   % Music follows here.
-
+c
 }
 
 scoreGRight = \relative c'' {
@@ -339,6 +497,7 @@ scoreGViolinPart = \new Staff \with {
   instrumentName = "Violine"
   shortInstrumentName = "Vl."
   midiInstrument = "violin"
+  \magnifyStaff #5/7
 } \scoreGViolin
 
 scoreGPianoPart = \new PianoStaff \with {
@@ -354,6 +513,15 @@ scoreGPianoPart = \new PianoStaff \with {
 >>
 
 \bookpart {
+\header {
+  title = "The Two Grenadiers"
+  composer = "Robert Schumann"
+  poet = ""
+  meter = ""
+  piece = ""
+  opus = "Suzuki No. 7, Vol. 2"
+  tagline = ""
+}
   \score {
     <<
       \scoreGViolinPart
@@ -364,10 +532,21 @@ scoreGPianoPart = \new PianoStaff \with {
   }
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Nummer 8 / H
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+globalH = {
+  \key c \major
+  \numericTimeSignature
+  \time 4/4
+  \tempo "Andante" 4=100
+}
+
 scoreHViolin = \relative c'' {
   \global
   % Music follows here.
-
+c
 }
 
 scoreHRight = \relative c'' {
@@ -386,6 +565,7 @@ scoreHViolinPart = \new Staff \with {
   instrumentName = "Violine"
   shortInstrumentName = "Vl."
   midiInstrument = "violin"
+  \magnifyStaff #5/7
 } \scoreHViolin
 
 scoreHPianoPart = \new PianoStaff \with {
@@ -401,6 +581,15 @@ scoreHPianoPart = \new PianoStaff \with {
 >>
 
 \bookpart {
+\header {
+  title = "Theme from 'Witche's Dance'"
+  composer = "Nicolai Paganini"
+  poet = ""
+  meter = ""
+  piece = ""
+  opus = "Suzuki No. 8, Vol. 2"
+  tagline = ""
+}
   \score {
     <<
       \scoreHViolinPart
@@ -411,10 +600,21 @@ scoreHPianoPart = \new PianoStaff \with {
   }
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Nummer 9 / I
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+globalI = {
+  \key c \major
+  \numericTimeSignature
+  \time 4/4
+  \tempo "Andante" 4=100
+}
+
 scoreIViolin = \relative c'' {
   \global
   % Music follows here.
-
+c
 }
 
 scoreIRight = \relative c'' {
@@ -433,6 +633,7 @@ scoreIViolinPart = \new Staff \with {
   instrumentName = "Violine"
   shortInstrumentName = "Vl."
   midiInstrument = "violin"
+  \magnifyStaff #5/7
 } \scoreIViolin
 
 scoreIPianoPart = \new PianoStaff \with {
@@ -448,6 +649,15 @@ scoreIPianoPart = \new PianoStaff \with {
 >>
 
 \bookpart {
+\header {
+  title = "Gavotte"
+  composer = "A. Thomas"
+  poet = ""
+  meter = ""
+  piece = ""
+  opus = "Suzuki No. 9, Vol. 2"
+  tagline = ""
+}
   \score {
     <<
       \scoreIViolinPart
@@ -458,16 +668,27 @@ scoreIPianoPart = \new PianoStaff \with {
   }
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Nummer 10 / J
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+globalJ = {
+  \key c \major
+  \numericTimeSignature
+  \time 4/4
+  \tempo "Andante" 4=100
+}
+
 scoreJViolin = \relative c'' {
   \global
   % Music follows here.
-
+  c
 }
 
 scoreJRight = \relative c'' {
   \global
   % Music follows here.
-
+c
 }
 
 scoreJLeft = \relative c' {
@@ -480,6 +701,7 @@ scoreJViolinPart = \new Staff \with {
   instrumentName = "Violine"
   shortInstrumentName = "Vl."
   midiInstrument = "violin"
+  \magnifyStaff #5/7
 } \scoreJViolin
 
 scoreJPianoPart = \new PianoStaff \with {
@@ -495,6 +717,15 @@ scoreJPianoPart = \new PianoStaff \with {
 >>
 
 \bookpart {
+\header {
+  title = "Gavotte from 'Mignon'"
+  composer = "J.B. Lully"
+  poet = ""
+  meter = ""
+  piece = ""
+  opus = "Suzuki No. 10, Vol. 2"
+  tagline = ""
+}
   \score {
     <<
       \scoreJViolinPart
@@ -505,10 +736,21 @@ scoreJPianoPart = \new PianoStaff \with {
   }
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Nummer 11 / K
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+globalK = {
+  \key c \major
+  \numericTimeSignature
+  \time 4/4
+  \tempo "Andante" 4=100
+}
+
 scoreKViolin = \relative c'' {
   \global
   % Music follows here.
-
+c
 }
 
 scoreKRight = \relative c'' {
@@ -527,6 +769,7 @@ scoreKViolinPart = \new Staff \with {
   instrumentName = "Violine"
   shortInstrumentName = "Vl."
   midiInstrument = "violin"
+  \magnifyStaff #5/7
 } \scoreKViolin
 
 scoreKPianoPart = \new PianoStaff \with {
@@ -542,6 +785,15 @@ scoreKPianoPart = \new PianoStaff \with {
 >>
 
 \bookpart {
+\header {
+  title = "Minuet in G"
+  composer = "Ludwig van Beethoven"
+  poet = ""
+  meter = ""
+  piece = ""
+  opus = "Suzuki No. 11/2"
+  tagline = ""
+}
   \score {
     <<
       \scoreKViolinPart
@@ -552,10 +804,21 @@ scoreKPianoPart = \new PianoStaff \with {
   }
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Nummer 12 / L
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+globalL = {
+  \key c \major
+  \numericTimeSignature
+  \time 4/4
+  \tempo "Andante" 4=100
+}
+
 scoreLViolin = \relative c'' {
   \global
   % Music follows here.
-
+c
 }
 
 scoreLRight = \relative c'' {
@@ -574,6 +837,7 @@ scoreLViolinPart = \new Staff \with {
   instrumentName = "Violine"
   shortInstrumentName = "Vl."
   midiInstrument = "violin"
+  \magnifyStaff #5/7
 } \scoreLViolin
 
 scoreLPianoPart = \new PianoStaff \with {
@@ -589,302 +853,19 @@ scoreLPianoPart = \new PianoStaff \with {
 >>
 
 \bookpart {
-  \score {
-    <<
-      \scoreLViolinPart
-      \scoreLPianoPart
-    >>
-    \layout { }
-    \midi { }
-  }
-}
-
-scoreMViolin = \relative c'' {
-  \global
-  % Music follows here.
-
-}
-
-scoreMRight = \relative c'' {
-  \global
-  % Music follows here.
-
-}
-
-scoreMLeft = \relative c' {
-  \global
-  % Music follows here.
-
-}
-
-scoreMViolinPart = \new Staff \with {
-  instrumentName = "Violine"
-  shortInstrumentName = "Vl."
-  midiInstrument = "violin"
-} \scoreMViolin
-
-scoreMPianoPart = \new PianoStaff \with {
-  instrumentName = "Klavier"
-  shortInstrumentName = "Kl."
-} <<
-  \new Staff = "right" \with {
-    midiInstrument = "acoustic grand"
-  } \scoreMRight
-  \new Staff = "left" \with {
-    midiInstrument = "acoustic grand"
-  } { \clef bass \scoreMLeft }
->>
-
-\bookpart {
-  \score {
-    <<
-      \scoreMViolinPart
-      \scoreMPianoPart
-    >>
-    \layout { }
-    \midi { }
-  }
-}
-
-scoreNViolin = \relative c'' {
-  \global
-  % Music follows here.
-
-}
-
-scoreNRight = \relative c'' {
-  \global
-  % Music follows here.
-
-}
-
-scoreNLeft = \relative c' {
-  \global
-  % Music follows here.
-
-}
-
-scoreNViolinPart = \new Staff \with {
-  instrumentName = "Violine"
-  shortInstrumentName = "Vl."
-  midiInstrument = "violin"
-} \scoreNViolin
-
-scoreNPianoPart = \new PianoStaff \with {
-  instrumentName = "Klavier"
-  shortInstrumentName = "Kl."
-} <<
-  \new Staff = "right" \with {
-    midiInstrument = "acoustic grand"
-  } \scoreNRight
-  \new Staff = "left" \with {
-    midiInstrument = "acoustic grand"
-  } { \clef bass \scoreNLeft }
->>
-
-\bookpart {
-  \score {
-    <<
-      \scoreNViolinPart
-      \scoreNPianoPart
-    >>
-    \layout { }
-    \midi { }
-  }
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Nummer 15 / O
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-globalO = {
-  \key g \major
-  \time 3/4
-  \tempo "Allegretto" 2. = 66
-%  \key c \major
-%  \time 4/4
-%  \tempo "Andante" 4=100
-}
-
-scoreOViolin = \relative c'' {
-  \globalO
-  % Music follows here.
-        \repeat volta 2 {
-        d4-3( g,8-3 a-4 b-1 c-2 d4-.-3) g,-.-3 g-.-3
-        e'-4( c8-2 d-3 e-4 fs-1 g4-.-2) g,-.-3 g-.-3 c-2( d8-3 c-2 b-1 a-4 b4-1 c8-2 b-1 a-4 g-3
-        fs4-2 g8-3 a-4 b-1 g-3 \acciaccatura b-1 a2.-4)
-        d4-3( g,8-3 a-4 b-1 c-2 d4-.-3) g,-.-3 g-.-3 e'-4( c8-2 d-3 e-4 fs-1 g4-.-2) g,-.-3 g-.-3
-        c-2\( d8-3 c-2 b-1 a-4 b4-1 c8-2 b-1 a-4 g-3 a4-4 b8-1 a-4 g-3 fs-3 g2.-3\)
-        }
-        \repeat volta 2 {
-        b'4 g8 a b g a4 d,8 e fs d g4 e8 fs g d
-        cs4 b8 cs a4 a8 b cs d e fs g4 fs e fs a, cs d2. d4 g,8 fs g4 e'4 g,8 fs g4 d' c b a8 g fs g a4 d,8 e fs g a b c4 b a b8 d g,4 fs <b, d g>2.
-
-        }
-
-}
-
-scoreORight = \relative c'' {
-  \globalO
-  % Music follows here.
-  \repeat volta 2 {
-    d4( g,8 a b c d4-.) g,-. g-.
-    e'( c8 d e fs g4-.) g,-. g-. c( d8 c b a b4 c8 b a g
-    fs4 g8 a b g \acciaccatura b a2.)
-    d4( g,8 a b c d4-.) g,-. g-. e'( c8 d e fs g4-.) g,-. g-.
-    c\( d8 c b a b4 c8 b a g a4 b8 a g fs g2.\)
-  }
-  \repeat volta 2 {
-  b'4 g8 a b g a4 d,8 e fs d g4 e8 fs g d
-  cs4 b8 cs a4 a8 b cs d e fs g4 fs e fs a, cs d2. d4 g,8 fs g4 e'4 g,8 fs g4 d' c b a8 g fs g a4 d,8 e fs g a b c4 b a b8 d g,4 fs <b, d g>2.
-  }
-
-}
-
-scoreOLeft = \relative c' {
-  \globalO
-  % Music follows here.
-      <<\relative c {
-        <b' d>2.
-      }
-      \\
-      \relative c {
-        g'2 a4 b2. c b a g d'4 b g d' d,8 c' b a b2 a4 g b g c2. b4 c8 b a g
-        a2 fs4 g2 b4 c d d, g2 g,4
-        g'2. fs e4 g e a2 a,4 a'2. b4 d cs d fs, a d d, c'
-        b2 b4 c2 c4
-        b a g d'2r4 d,2. e4 g fs g b, d g d g,
-      }
-      >>
-}
-
-scoreOViolinPart = \new Staff \with {
-  instrumentName = "Violine"
-  shortInstrumentName = "Vl."
-  midiInstrument = "violin"
-  \magnifyStaff #5/7
-} \scoreOViolin
-
-scoreOPianoPart = \new PianoStaff \with {
-  instrumentName = "Klavier"
-  shortInstrumentName = "Kl."
-} <<
-  \new Staff = "right" \with {
-    midiInstrument = "acoustic grand"
-  } \scoreORight
-  \new Staff = "left" \with {
-    midiInstrument = "acoustic grand"
-  } { \clef bass \scoreOLeft }
->>
-
-\bookpart {
 \header {
-  title = "Minuet 3"
-  composer = "Johann Sebastian Bach"
+  title = "Minuet"
+  composer = "L. Boccherini"
   poet = ""
   meter = ""
   piece = ""
-  opus = "Suzuki No. 15/1"
+  opus = "Suzuki No. 12, Vol. 2"
   tagline = ""
 }
   \score {
     <<
-      \scoreOViolinPart
-      \scoreOPianoPart
-    >>
-    \layout { }
-    \midi { }
-  }
-}
-
-scorePViolin = \relative c'' {
-  \global
-  % Music follows here.
-
-}
-
-scorePRight = \relative c'' {
-  \global
-  % Music follows here.
-
-}
-
-scorePLeft = \relative c' {
-  \global
-  % Music follows here.
-
-}
-
-scorePViolinPart = \new Staff \with {
-  instrumentName = "Violine"
-  shortInstrumentName = "Vl."
-  midiInstrument = "violin"
-} \scorePViolin
-
-scorePPianoPart = \new PianoStaff \with {
-  instrumentName = "Klavier"
-  shortInstrumentName = "Kl."
-} <<
-  \new Staff = "right" \with {
-    midiInstrument = "acoustic grand"
-  } \scorePRight
-  \new Staff = "left" \with {
-    midiInstrument = "acoustic grand"
-  } { \clef bass \scorePLeft }
->>
-
-\bookpart {
-  \score {
-    <<
-      \scorePViolinPart
-      \scorePPianoPart
-    >>
-    \layout { }
-    \midi { }
-  }
-}
-
-scoreQViolin = \relative c'' {
-  \global
-  % Music follows here.
-
-}
-
-scoreQRight = \relative c'' {
-  \global
-  % Music follows here.
-
-}
-
-scoreQLeft = \relative c' {
-  \global
-  % Music follows here.
-
-}
-
-scoreQViolinPart = \new Staff \with {
-  instrumentName = "Violine"
-  shortInstrumentName = "Vl."
-  midiInstrument = "violin"
-} \scoreQViolin
-
-scoreQPianoPart = \new PianoStaff \with {
-  instrumentName = "Klavier"
-  shortInstrumentName = "Kl."
-} <<
-  \new Staff = "right" \with {
-    midiInstrument = "acoustic grand"
-  } \scoreQRight
-  \new Staff = "left" \with {
-    midiInstrument = "acoustic grand"
-  } { \clef bass \scoreQLeft }
->>
-
-\bookpart {
-  \score {
-    <<
-      \scoreQViolinPart
-      \scoreQPianoPart
+      \scoreLViolinPart
+      \scoreLPianoPart
     >>
     \layout { }
     \midi { }

@@ -5,7 +5,7 @@
   dedication = ""
   title = ""
   subtitle = "Suzuki Violin School"
-  subsubtitle = "Volume 1"
+  subsubtitle = "Volume 3"
   instrument = "Violine"
   composer = ""
   arranger = \markup {"Fingering: " \with-url "https://buschke.com" "Sven Buschke"}
@@ -14,7 +14,9 @@
   piece = ""
   opus = "No. 1"
   copyright = \markup {"© Fingering, 03.05.2023: " \with-url "https://buschke.com" "Sven Buschke"}
-  tagline = ""
+%  tagline = ""
+  % Remove default LilyPond tagline
+  tagline = ##f
 }
 
 \paper {
@@ -31,8 +33,21 @@
 
 global = {
   \key c \major
+  \numericTimeSignature
   \time 4/4
   \tempo "Andante" 4=100
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Nummer 1 / A
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+globalA = {
+  \key g \major
+  \defaultTimeSignature
+%  \numericTimeSignature
+  \time 4/4
+  \tempo "Maestoso" 4=100
 }
 
 scoreAViolin = \relative c'' {
@@ -53,6 +68,18 @@ scoreAViolin = \relative c'' {
   }
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Nummer 2 / B
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+globalB = {
+  \key g \major
+  \defaultTimeSignature
+%  \numericTimeSignature
+  \time 4/4
+  \tempo "Maestoso" 4=100
+}
+
 scoreBViolin = \relative c'' {
   \global
   % Music follows here.
@@ -69,6 +96,18 @@ scoreBViolin = \relative c'' {
     \layout { }
     \midi { }
   }
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Nummer 3 / C
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+globalC = {
+  \key g \major
+  \defaultTimeSignature
+%  \numericTimeSignature
+  \time 4/4
+  \tempo "Maestoso" 4=100
 }
 
 scoreCViolin = \relative c'' {
@@ -89,6 +128,18 @@ scoreCViolin = \relative c'' {
   }
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Nummer 4 / D
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+globalD = {
+  \key g \major
+  \defaultTimeSignature
+%  \numericTimeSignature
+  \time 4/4
+  \tempo "Maestoso" 4=100
+}
+
 scoreDViolin = \relative c'' {
   \global
   % Music follows here.
@@ -105,6 +156,18 @@ scoreDViolin = \relative c'' {
     \layout { }
     \midi { }
   }
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Nummer 5 / E
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+globalE = {
+  \key g \major
+  \defaultTimeSignature
+%  \numericTimeSignature
+  \time 4/4
+  \tempo "Maestoso" 4=100
 }
 
 scoreEViolin = \relative c'' {
@@ -125,6 +188,18 @@ scoreEViolin = \relative c'' {
   }
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Nummer 6 / F
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+globalF = {
+  \key g \major
+  \defaultTimeSignature
+%  \numericTimeSignature
+  \time 4/4
+  \tempo "Maestoso" 4=100
+}
+
 scoreFViolin = \relative c'' {
   \global
   % Music follows here.
@@ -141,6 +216,18 @@ scoreFViolin = \relative c'' {
     \layout { }
     \midi { }
   }
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Nummer 7 / G
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+globalG = {
+  \key g \major
+  \defaultTimeSignature
+%  \numericTimeSignature
+  \time 4/4
+  \tempo "Maestoso" 4=100
 }
 
 scoreGViolin = \relative c'' {
@@ -161,6 +248,18 @@ scoreGViolin = \relative c'' {
   }
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Nummer 8 / H
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+globalH = {
+  \key g \major
+  \defaultTimeSignature
+%  \numericTimeSignature
+  \time 4/4
+  \tempo "Maestoso" 4=100
+}
+
 scoreHViolin = \relative c'' {
   \global
   % Music follows here.
@@ -177,6 +276,18 @@ scoreHViolin = \relative c'' {
     \layout { }
     \midi { }
   }
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Nummer 9 / I
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+globalI = {
+  \key g \major
+  \defaultTimeSignature
+%  \numericTimeSignature
+  \time 4/4
+  \tempo "Maestoso" 4=100
 }
 
 scoreIViolin = \relative c'' {
@@ -197,6 +308,18 @@ scoreIViolin = \relative c'' {
   }
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Nummer 10 / J
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+globalJ = {
+  \key g \major
+  \defaultTimeSignature
+%  \numericTimeSignature
+  \time 4/4
+  \tempo "Maestoso" 4=100
+}
+
 scoreJViolin = \relative c'' {
   \global
   % Music follows here.
@@ -213,6 +336,18 @@ scoreJViolin = \relative c'' {
     \layout { }
     \midi { }
   }
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Nummer 11 / K
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+globalK = {
+  \key g \major
+  \defaultTimeSignature
+%  \numericTimeSignature
+  \time 4/4
+  \tempo "Maestoso" 4=100
 }
 
 scoreKViolin = \relative c'' {
@@ -233,6 +368,18 @@ scoreKViolin = \relative c'' {
   }
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Nummer 12 / L
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+globalL = {
+  \key g \major
+  \defaultTimeSignature
+%  \numericTimeSignature
+  \time 4/4
+  \tempo "Maestoso" 4=100
+}
+
 scoreLViolin = \relative c'' {
   \global
   % Music follows here.
@@ -240,91 +387,13 @@ scoreLViolin = \relative c'' {
 }
 
 \bookpart {
-  \score {
-    \new Staff \with {
-      instrumentName = "Violine"
-      shortInstrumentName = "Vl."
-      midiInstrument = "violin"
-    } \scoreLViolin
-    \layout { }
-    \midi { }
-  }
-}
-
-scoreMViolin = \relative c'' {
-  \global
-  % Music follows here.
-
-}
-
-\bookpart {
-  \score {
-    \new Staff \with {
-      instrumentName = "Violine"
-      shortInstrumentName = "Vl."
-      midiInstrument = "violin"
-    } \scoreMViolin
-    \layout { }
-    \midi { }
-  }
-}
-
-scoreNViolin = \relative c'' {
-  \global
-  % Music follows here.
-
-}
-
-\bookpart {
-  \score {
-    \new Staff \with {
-      instrumentName = "Violine"
-      shortInstrumentName = "Vl."
-      midiInstrument = "violin"
-    } \scoreNViolin
-    \layout { }
-    \midi { }
-  }
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Nummer 15 / O
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-globalO = {
-  \key g \major
-  \time 3/4
-  \tempo "Allegretto" 2. = 66
-%  \key c \major
-%  \time 4/4
-%  \tempo "Andante" 4=100
-}
-
-scoreOViolin = \relative c'' {
-  \global
-  % Music follows here.
-        \repeat volta 2 {
-        d4-3( g,8-3 a-4 b-1 c-2 d4-.-3) g,-.-3 g-.-3
-        e'-4( c8-2 d-3 e-4 fs-1 g4-.-2) g,-.-3 g-.-3 c-2( d8-3 c-2 b-1 a-4 b4-1 c8-2 b-1 a-4 g-3
-        fs4-2 g8-3 a-4 b-1 g-3 \acciaccatura b-1 a2.-4)
-        d4-3( g,8-3 a-4 b-1 c-2 d4-.-3) g,-.-3 g-.-3 e'-4( c8-2 d-3 e-4 fs-1 g4-.-2) g,-.-3 g-.-3
-        c-2\( d8-3 c-2 b-1 a-4 b4-1 c8-2 b-1 a-4 g-3 a4-4 b8-1 a-4 g-3 fs-3 g2.-3\)
-        }
-        \repeat volta 2 {
-        b'4 g8 a b g a4 d,8 e fs d g4 e8 fs g d
-        cs4 b8 cs a4 a8 b cs d e fs g4 fs e fs a, cs d2. d4 g,8 fs g4 e'4 g,8 fs g4 d' c b a8 g fs g a4 d,8 e fs g a b c4 b a b8 d g,4 fs <b, d g>2.
-        }
-}
-
-\bookpart {
 \header {
-  title = "Minuet 3"
-  composer = "Johann Sebastian Bach"
+  title = ""
+  composer = ""
   poet = ""
   meter = ""
   piece = ""
-  opus = "Suzuki No. 15/1"
-  copyright = "© Sven Buschke"
+  opus = "Suzuki No. , Vol. 3"
   tagline = ""
 }
   \score {
@@ -332,47 +401,7 @@ scoreOViolin = \relative c'' {
       instrumentName = "Violine"
       shortInstrumentName = "Vl."
       midiInstrument = "violin"
-    } \scoreOViolin
-    \layout { }
-    \midi { }
-  }
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Nummer 16 / P
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-scorePViolin = \relative c'' {
-  \global
-  % Music follows here.
-
-}
-
-\bookpart {
-  \score {
-    \new Staff \with {
-      instrumentName = "Violine"
-      shortInstrumentName = "Vl."
-      midiInstrument = "violin"
-    } \scorePViolin
-    \layout { }
-    \midi { }
-  }
-}
-
-scoreQViolin = \relative c'' {
-  \global
-  % Music follows here.
-
-}
-
-\bookpart {
-  \score {
-    \new Staff \with {
-      instrumentName = "Violine"
-      shortInstrumentName = "Vl."
-      midiInstrument = "violin"
-    } \scoreQViolin
+    } \scoreLViolin
     \layout { }
     \midi { }
   }
