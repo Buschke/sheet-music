@@ -226,30 +226,32 @@ scoreEViolin = \relative c'' {
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Nummer  /
+% Nummer 6 / F
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-global = {
-  \key c \major
-  \numericTimeSignature
+globalF = {
+  \key a \major
+%  \numericTimeSignature
   \time 4/4
-  \tempo "Andante" 4=100
+  \tempo "Allegro moderato" 4=100
 }
 
 scoreFViolin = \relative c'' {
-  \global
+  \globalF
   % Music follows here.
-
+    a4.\f\downbow cs8\upbow e4 a fs a8 fs e2 d4. e8 cs4 a b2 a
+    e'4\mf e d d cs e8 cs b2\> e4\p e d d cs e8 cs b2
+    a4.\f cs8  e4 a fs a8 fs e2 d4. e8 cs4 a b2 a
 }
 
 \bookpart {
 \header {
-  title = ""
-  composer = ""
+  title = "May Song"
+  composer = "Folk Song"
   poet = ""
   meter = ""
   piece = ""
-  opus = "Suzuki No. , Vol. 1"
+  opus = "Suzuki No. 6, Vol. 1"
   tagline = ""
 }
   \score {
@@ -264,30 +266,34 @@ scoreFViolin = \relative c'' {
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Nummer  /
+% Nummer 7 / G
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-global = {
-  \key c \major
-  \numericTimeSignature
+globalG = {
+  \key a \major
+  %\numericTimeSignature
   \time 4/4
   \tempo "Andante" 4=100
 }
 
 scoreGViolin = \relative c'' {
-  \global
+  \globalG
   % Music follows here.
-
+  a4\mf a8 b cs4 8 d e4 fs8 e cs2 e4\> d8 cs b2\! d4\> cs8 b a2\!
+  4 8 b cs4 8 d e4 fs8 e cs2 e4\> d8 cs b4 cs8 b a2\! r
+  e'4\downbow\f\> d8 cs\! b4 e,8 8 d'4\> cs8 b a2\! e'4\mp\> d8 cs b4\! e,8 8 d'4\> cs8 b a2\!
+  4\f 8 b cs4 8 d e4 fs8 e cs2 e4\> d8 cs b4\! cs8 b a2 r
+  \bar "|."
 }
 
 \bookpart {
 \header {
-  title = ""
-  composer = ""
-  poet = ""
+  title = "Long, Long Ago"
+  composer = "Thomas Haynes Bayly"
+  poet = "Bayly: 13.10.1797-22.04.1839"
   meter = ""
   piece = ""
-  opus = "Suzuki No. , Vol. 1"
+  opus = "Suzuki No. 7, Vol. 1"
   tagline = ""
 }
   \score {
@@ -521,7 +527,7 @@ scoreMViolin = \relative c'' {
 \header {
   title = "Minuet 1"
   composer = "Johann Sebastian Bach"
-  poet = ""
+  poet = "Bach: 21.03.1685-28.07.1750"
   meter = ""
   piece = ""
   opus = "Suzuki No. 13, Vol. 1"
@@ -574,7 +580,7 @@ scoreNViolin = \relative c'' {
 \header {
   title = "Minuet 2"
   composer = "Johann Sebastian Bach"
-  poet = ""
+  poet = "Bach: 21.03.1685-28.07.1750"
   meter = ""
   piece = ""
   opus = "Suzuki No. 14, Vol. 1"
@@ -624,7 +630,7 @@ scoreOViolin = \relative c'' {
 \header {
   title = "Minuet 3"
   composer = "Johann Sebastian Bach"
-  poet = ""
+  poet = "Bach: 21.03.1685-28.07.1750"
   meter = ""
   piece = ""
   opus = "Suzuki No. 15, Vol. 1"
@@ -645,23 +651,34 @@ scoreOViolin = \relative c'' {
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 globalP = {
-  \key c \major
-  \numericTimeSignature
+  \key g \major
+  %\numericTimeSignature
   \time 4/4
-  \tempo "Andante" 4=100
+  \tempo "Allegro giocoso" 4=100
 }
 
 scorePViolin = \relative c'' {
   \globalP
   % Music follows here.
-c
+  \partial 8
+  d,8\upbow
+  g4.\downbow\f(b8) d4.(g,8) c e g e d4. b8\upbow c a d, c' b g d b' fs4 e d r8 d\upbow g4.\f( b8) d4.(g,8)
+  c e g e d4. b8\upbow c a d, c' b g d b' fs4 e d r8 d\upbow
+  c'4.--( b8-.) a4.( d,8-.) c'-> b a g a4. d,8\upbow
+  g4.\downbow\f(b8) d4.(g,8) c e g e d4. b8\upbow c a d, c' b g d b' a4 fs g r8
+  d\upbow
+  c'4.--( b8-.) a4.( d,8-.) c'-> b a g a4.
+  d,8\upbow g4.\f( b8) d4.(g,8)
+  c8 e g e d4. b8\upbow c a d, c' b g d b'
+  a4 fs g r8
+  \bar "|."
 }
 
 \bookpart {
 \header {
   title = "The Happy Farmer"
   composer = "Robert Schumann"
-  poet = ""
+  poet = "Schumann: 08.06.1810-29.07.1856"
   meter = ""
   piece = ""
   opus = "Suzuki No. 16, Vol. 1"
@@ -683,23 +700,33 @@ c
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 globalQ = {
-  \key c \major
-  \numericTimeSignature
-  \time 4/4
-  \tempo "Andante" 4=100
+  \key g \major
+%  \numericTimeSignature
+  \time 2/2
+  \tempo "Allegretto" 4=100
 }
 
 scoreQViolin = \relative c'' {
-  \global
+  \globalQ
   % Music follows here.
-c
+  \repeat volta 2 {
+  d8-.\downbow\mf e-. d-. b-. c-. d-. c-. a-. g4-_ \acciaccatura fs'8 g4-_ g,-_ r
+  c8-.\downbow d-. c-. a-. b-. c-. b-. g-. a4-_ \acciaccatura cs8 d4-_ d,-_ r
+  d'8-.\downbow e-. d-. b-. c-. d-. c-. a-. g4-_ \acciaccatura fs'8 g4-_ g,-_ r
+  b\downbow g8 e g 4 e8 cs d4-_ \acciaccatura cs'8 d4-_ d,-_ r
+  }
+  a'8-.\downbow c-. b-. d-. c-. b-. a-. g-. fs4 a c r
+  b8-.\downbow d-. c-. e-. d-. c-. b-. a-. g4 b d r
+  e8-.\downbow\mf d-. d-. c-. c-. b-. b-. a-. a4_\markup{\italic rit.} c e r
+  d8-.\downbow\p_\markup{\italic "a tempo"} b-. fs-. g-. c-. a-. e-. fs-. g4 \acciaccatura fs'8 g4 g, r
+  \bar "|."
 }
 
 \bookpart {
 \header {
   title = "Gavotte"
-  composer = "F.J. Gossec"
-  poet = ""
+  composer = "François-Joseph Gossec"
+  poet = "Gossec: 17.011734-16.02.1829"
   meter = ""
   piece = ""
   opus = "Suzuki No. 17, Vol. 1"

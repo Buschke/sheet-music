@@ -380,28 +380,40 @@ scoreEPianoPart = \new PianoStaff \with {
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 globalF = {
-  \key c \major
-  \numericTimeSignature
+  \key a \major
+  %\numericTimeSignature
   \time 4/4
   \tempo "Andante" 4=100
 }
 
 scoreFViolin = \relative c'' {
-  \global
+  \globalF
   % Music follows here.
-
+  \repeat volta 2 {
+    a4.\f\downbow cs8\upbow e4 a fs a8 fs e2 d4. e8 cs4 a b2 a
+    e'4\mf e d d cs e8 cs b2\> e4\p e d d cs e8 cs b2
+    a4.\f cs8  e4 a fs a8 fs e2 d4. e8 cs4 a b2 a
+  }
 }
 
 scoreFRight = \relative c'' {
-  \global
+  \globalF
   % Music follows here.
-
+  \repeat volta 2 {
+    a4.\mf cs8 e4 a fs a8 fs e2 d4. e8 cs4 a b2 a
+    e'4\f e d d cs e8 cs b2\> e4\p e d d cs e8 cs b2
+    a4.\f cs8  e4 a fs a8 fs e2 d4. e8 cs4 a b2_"2da volta poco rit." a
+  }
 }
 
 scoreFLeft = \relative c' {
-  \global
+  \globalF
   % Music follows here.
-
+  \repeat volta 2 {
+    <a cs e>4 4 4 4 <a d fs>4 4 <a cs e>4 4 <e gs e'>4 4 <a cs e>4 4 <e d' e>4 4 <a cs e>4 4
+    a8 e' cs e a, fs' d fs a, e' cs e e, e' gs, e' a, e' cs e a, fs' d fs a, e' cs e e, e' gs, e'
+  <a, cs e>4 4 4 4 <a d fs>4 4 <a cs e>4 4 <e gs d' e>4 4 <a cs e>4 4 <e gs d' e>4 4 <a cs e>4 r
+  }
 }
 
 scoreFViolinPart = \new Staff \with {
@@ -426,7 +438,7 @@ scoreFPianoPart = \new PianoStaff \with {
 \bookpart {
 \header {
   title = "May Song"
-  composer = ""
+  composer = "Folk Song"
   poet = ""
   meter = ""
   piece = ""
@@ -439,6 +451,13 @@ scoreFPianoPart = \new PianoStaff \with {
       \scoreFPianoPart
     >>
     \layout { }
+  }
+  \score {\unfoldRepeats {
+    <<
+      \scoreFViolinPart
+      \scoreFPianoPart
+    >>
+          }
     \midi { }
   }
 }
@@ -448,28 +467,45 @@ scoreFPianoPart = \new PianoStaff \with {
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 globalG = {
-  \key c \major
-  \numericTimeSignature
+  \key a \major
+%  \numericTimeSignature
   \time 4/4
-  \tempo "Andante" 4=100
+  \tempo "Moderato" 4=100
 }
 
 scoreGViolin = \relative c'' {
-  \global
+  \globalG
   % Music follows here.
-
+  a4\mf a8 b cs4 8 d e4 fs8 e cs2 e4\> d8 cs b2\! d4\> cs8 b a2\!
+  4 8 b cs4 8 d e4 fs8 e cs2 e4\> d8 cs b4 cs8 b a2\! r
+  e'4\downbow\f\> d8 cs\! b4 e,8 8 d'4\> cs8 b a2\! e'4\mp\> d8 cs b4\! e,8 8 d'4\> cs8 b a2\!
+  4\f 8 b cs4 8 d e4 fs8 e cs2 e4\> d8 cs b4\! cs8 b a2 r
+  \bar "|."
 }
 
 scoreGRight = \relative c'' {
-  \global
+  \globalG
   % Music follows here.
-
+  <cs, e>2 <e a> <a cs> <e a> <e gs>2 2 <e a> <cs e>
+  <cs e> <e a> <a cs> <e a> <e gs> <d gs> <cs a'> r
+  <<{e\f e e <cs e> e e e <cs e>2 2 <e a> <a cs> <e a>}\\{e4(d8 cs) b4 b e(cs8 b) cs2 e4\p(d8 cs) b4 b e( cs8(b) cs2}>>
+  g'4( fs8 e) d4 <d gs> <cs a'>2 r
+  \bar "|."
 }
 
 scoreGLeft = \relative c' {
-  \global
+  \globalG
   % Music follows here.
-
+  <<{a,2 2 2 2}\\{a8( e' a e) a,8(e' a e) a,8( e' a e) a,8(e' a e)}>>
+  e,8( e' gs e) e,( e' gs e)
+  <<{a,2 2 2 2}\\{a8( e' a e) a,8(e' a e) a,8( e' a e) a,8(e' a e)}>>
+  <<{a,2 2}\\{a8( e' a e) a,8(e' a e)}>>
+  e,8( e' gs e) e,( e' gs e)
+  <<{a,2 cs8\<(e a cs\!)}\\{a,8( e' a e) r2}>>
+  cs'8\f( e, b' a gs e gs e) b'(e, a e a, cs e a)
+  cs8\p( e, b' a gs e gs e) b'(e, a e a, cs e a)
+  <<{a,2 2 2 2}\\{a8( e' a e) a,8(e' a e) a,8( e' a e) a,8(e' a e)}>>
+  as,(cs fs as) <b, b'>4 e <<{a,2}\\{a8( e' a e a,4) r}>>
 }
 
 scoreGViolinPart = \new Staff \with {
@@ -494,8 +530,8 @@ scoreGPianoPart = \new PianoStaff \with {
 \bookpart {
 \header {
   title = "Long, Long Ago"
-  composer = ""
-  poet = ""
+  composer = "Thomas Haynes Bayly"
+  poet = "Bayly: 13.10.1797-22.04.1839"
   meter = ""
   piece = ""
   opus = "Suzuki No. 7, Vol. 1"
@@ -942,7 +978,7 @@ scoreMPianoPart = \new PianoStaff \with {
 \header {
   title = "Minuet 1"
   composer = "Johann Sebastian Bach"
-  poet = ""
+  poet = "Bach: 21.03.1685-28.07.1750"
   meter = ""
   piece = ""
   opus = "Suzuki No. 13, Vol. 1"
@@ -1053,7 +1089,7 @@ scoreNPianoPart = \new PianoStaff \with {
 \header {
   title = "Minuet 2"
   composer = "Johann Sebastian Bach"
-  poet = ""
+  poet = "Bach: 21.03.1685-28.07.1750"
   meter = ""
   piece = ""
   opus = "Suzuki No. 14, Vol. 1"
@@ -1157,7 +1193,7 @@ scoreOPianoPart = \new PianoStaff \with {
 \header {
   title = "Minuet 3"
   composer = "Johann Sebastian Bach"
-  poet = ""
+  poet = "Bach: 21.03.1685-28.07.1750"
   meter = ""
   piece = ""
   opus = "Suzuki No. 15, Vol. 1"
@@ -1178,28 +1214,57 @@ scoreOPianoPart = \new PianoStaff \with {
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 globalP = {
-  \key c \major
-  \numericTimeSignature
+  \key g \major
+  %\numericTimeSignature
   \time 4/4
-  \tempo "Andante" 4=100
+  \tempo "Allegro giocoso" 4=100
 }
 
 scorePViolin = \relative c'' {
-  \global
+  \globalP
   % Music follows here.
-c
+  \partial 8
+  d,8\upbow
+  g4.\downbow\f(b8) d4.(g,8) c e g e d4. b8\upbow c a d, c' b g d b' fs4 e d r8 d\upbow g4.\f( b8) d4.(g,8)
+  c e g e d4. b8\upbow c a d, c' b g d b' fs4 e d r8 d\upbow
+  c'4.--( b8-.) a4.( d,8-.) c'-> b a g a4. d,8\upbow
+  g4.\downbow\f(b8) d4.(g,8) c e g e d4. b8\upbow c a d, c' b g d b' a4 fs g r8
+  d\upbow
+  c'4.--( b8-.) a4.( d,8-.) c'-> b a g a4.
+  d,8\upbow g4.\f( b8) d4.(g,8)
+  c8 e g e d4. b8\upbow c a d, c' b g d b'
+  a4 fs g r8
+  \bar "|."
 }
 
 scorePRight = \relative c'' {
-  \global
+  \globalP
   % Music follows here.
-
+  \partial 8
+  r8
+  r <d, g b>8 8 r r <g b d>8 8 r
+  r <g c e>8 <c e> r r <g b d>8 8 r
+  r <fs c' d>8 4 r8 <d g b>8 4
+  r8 <d a'> r <g a cs> r <fs a d>8 4
+  r8 <d g b>8 8 r r <g b d>8 8 r
+  r <g c e>8 <c e> r r <g b d>8 8 r
+  r <fs c' d>8 4 r8 <d g b>8 4
+  r8 <d a'> r <g a cs> r <fs a d>8 4
+  r8 <d fs>8 8 r r <c d>8 8 r r d d cs r d d r r\f <b d>8 8 r r <g' b>8 8 r
+  r <g c> r <g c> r <g b>8 8 r r <fs c' d>8 4 r8 <d g b>8 8 8 r <e a> r <c d> r <b d g>8 4
+  r8 <d fs>8 8 r r <c d>8 8 r r d d cs r d d r r\f <b d>8 8 r r <g' b>8 8 r
+  r <g c> r <g c> r <g b>8 8 r r <fs c' d>8 4 r8 <d g b>8 8 8 r <e a>-. r <c d>-. r <b d g>-. 8-.
 }
 
 scorePLeft = \relative c' {
-  \global
+  \globalP
   % Music follows here.
-
+  \partial 8
+  d,8\(g4.\f\< b8 d4.\!\> g,8\! c(\<\( e g\!\> e d4.\!)\) b8( c a d, c' b g d b' fs4-- e-- d--) r8 d( g4. b8 d4. g,8 c\< e g\!\> e d4.\!)
+  b8( c a d, c' b g d b' fs4-- e-- d--) r8 d(a'4.-> g8 fs4.) d8(a'g fs e fs4.)
+  d8\(g4.\f\< b8 d4.\!\> g,8\! c(\<\( e g\!\> e d4.\!)\) b8( c a d, c' b g d b' c,4-- d-- g--)
+  r8 d(a'4.-> g8 fs4.) d8(a'g fs e fs4.)
+  d8\(g4.\f\< b8 d4.\!\> g,8\! c(\<\( e g\!\> e d4.\!)\) b8( c a d, c' b g d b' c,4-- d-- g--) r8
 }
 
 scorePViolinPart = \new Staff \with {
@@ -1225,7 +1290,7 @@ scorePPianoPart = \new PianoStaff \with {
 \header {
   title = "The Happy Farmer"
   composer = "Robert Schumann"
-  poet = ""
+  poet = "Schumann: 08.06.1810-29.07.1856"
   meter = ""
   piece = ""
   opus = "Suzuki No. 16, Vol. 1"
@@ -1246,28 +1311,55 @@ scorePPianoPart = \new PianoStaff \with {
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 globalQ = {
-  \key c \major
-  \numericTimeSignature
-  \time 4/4
-  \tempo "Andante" 4=100
+  \key g \major
+%  \numericTimeSignature
+  \time 2/2
+  \tempo "Allegretto" 4=100
 }
 
 scoreQViolin = \relative c'' {
-  \global
+  \globalQ
   % Music follows here.
-
+  \repeat volta 2 {
+  d8-.\downbow\mf e-. d-. b-. c-. d-. c-. a-. g4-_ \acciaccatura fs'8 g4-_ g,-_ r
+  c8-.\downbow d-. c-. a-. b-. c-. b-. g-. a4-_ \acciaccatura cs8 d4-_ d,-_ r
+  d'8-.\downbow e-. d-. b-. c-. d-. c-. a-. g4-_ \acciaccatura fs'8 g4-_ g,-_ r
+  b\downbow g8 e g 4 e8 cs d4-_ \acciaccatura cs'8 d4-_ d,-_ r
+  }
+  a'8-.\downbow c-. b-. d-. c-. b-. a-. g-. fs4 a c r
+  b8-.\downbow d-. c-. e-. d-. c-. b-. a-. g4 b d r
+  e8-.\downbow\mf d-. d-. c-. c-. b-. b-. a-. a4_\markup{\italic rit.} c e r
+  d8-.\downbow\p_\markup{\italic "a tempo"} b-. fs-. g-. c-. a-. e-. fs-. g4 \acciaccatura fs'8 g4 g, r
 }
 
 scoreQRight = \relative c'' {
-  \global
+  \globalQ
   % Music follows here.
-
+  \repeat volta 2 {
+  r4 <g, b d> r <fs c' d>
+  r <g b d> r <g b d> r <c fs a> r <g b d>
+  r <a d fs> r <a d fs> r <g b d> r <fs c' d>
+  r <g b d> r <g b d> r <b e> r <g cs>
+  r <a d fs> r <c d fs>
+  }
+  r <c d fs> r <c d fs> r <a c fs> r <a c fs>
+  r <g b d> r <g b d> r <g b d> r <g b d>
+  r\p <c e> r <c e> r <c e> r <c e a>
+  d2 d r4 <b d g > r <b' g'>
 }
 
-scoreQLeft = \relative c' {
-  \global
-  % Music follows here.
 
+scoreQLeft = \relative c' {
+  \globalQ
+  % Music follows here.
+  \repeat volta 2 {
+  g, r b r g r g r a r g r b r b r g r a r b r g r <e e'> r <a a'> r <d, d'> r <d d'> r
+  }
+  <d d'> r <fs fs'> r <a a'> r <d, d'> r <g g'> r <b b'> r <g g'> r d' r
+  c\p g' e g a^\markup{\small \italic rit.} r c, r
+  <<{r <g' b> r <fs c'>}\\{d2^\markup{\small \italic "a tempo"} 2}>>
+  g,4 r g' r
+  \bar "|."
 }
 
 scoreQViolinPart = \new Staff \with {
@@ -1292,8 +1384,8 @@ scoreQPianoPart = \new PianoStaff \with {
 \bookpart {
 \header {
   title = "Gavotte"
-  composer = "F.J. Gossec"
-  poet = ""
+  composer = "François-Joseph Gossec"
+  poet = "Gossec: 17.011734-16.02.1829"
   meter = ""
   piece = ""
   opus = "Suzuki No. 17, Vol. 1"

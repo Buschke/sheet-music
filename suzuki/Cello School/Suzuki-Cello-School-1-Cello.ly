@@ -659,12 +659,12 @@ scoreQCello = \relative c {
 
 \bookpart {
 \header {
-  title = ""
-  composer = ""
+  title = "Minuet No. 2"
+  composer = "Johann Sebastian Bach"
   poet = ""
   meter = ""
   piece = ""
-  opus = "Suzuki No. , Vol. 1"
+  opus = "Suzuki No. 17, Vol. 1"
   tagline = ""
 }
   \score {

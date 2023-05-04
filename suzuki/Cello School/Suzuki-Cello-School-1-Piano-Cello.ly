@@ -1466,7 +1466,7 @@ scoreQPianoPart = \new PianoStaff \with {
   poet = ""
   meter = ""
   piece = ""
-  opus = "Suzuki No. , Vol. 1"
+  opus = "Suzuki No. 17, Vol. 1"
   tagline = ""
 }
 \score {
