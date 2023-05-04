@@ -52,6 +52,7 @@ globalA = {
 scoreACello = \relative c {
   \globalA
   % Music follows here.
+  c
 }
 
 scoreARight = \relative c'' {
