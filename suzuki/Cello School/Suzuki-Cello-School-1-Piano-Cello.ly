@@ -427,7 +427,8 @@ scoreFPianoPart = \new PianoStaff \with {
   piece = ""
   opus = "Suzuki No. , Vol. 1"
   tagline = ""
-}  \score {
+}
+\score {
     <<
       \scoreFCelloPart
       \scoreFPianoPart
@@ -442,28 +443,40 @@ scoreFPianoPart = \new PianoStaff \with {
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 globalG = {
-  \key c \major
-  \numericTimeSignature
+  \key d \major
+%  \numericTimeSignature
   \time 4/4
-  \tempo "Andante" 4=100
+  \tempo "Allegro moderato" 4=100
 }
 
 scoreGCello = \relative c {
-  \global
+  \globalG
   % Music follows here.
-
+  \repeat volta 2 {
+    d4.\f\downbow fs8\upbow a4 d b d8 b a2 g4. a8 fs4 d e2 d
+    a'4\mf a g g fs a8 fs e2\> a4\p a g g fs a8 fs e2
+    d4.\f fs8  a4 d b d8 b a2 g4. a8 fs4 d e2 d
+  }
 }
 
 scoreGRight = \relative c'' {
-  \global
+  \globalG
   % Music follows here.
-
+  \repeat volta 2 {
+    d,4.\mf fs8 a4 d b d8 b a2 g4. a8 fs4 d e2 d
+    a'4\f a g g fs a8 fs e2\> a4\p a g g fs a8 fs e2
+    d4.\f fs8  a4 d b d8 b a2 g4. a8 fs4 d e2_\markup{\small \italic "2da volta poco rit."} d
+  }
 }
 
 scoreGLeft = \relative c' {
-  \global
+  \globalG
   % Music follows here.
-
+  \repeat volta 2 {
+    <d, fs a>4 4 4 4 <d g b>4 4 <d fs a>4 4 <a cs a'>4 4 <d fs a>4 4 <a g' a>4 4 <d fs a>4 4
+    d8 a' fs a d, b' g b d, a' fs a a, a' cs, a' d, a' fs a d, b' g b d, a' fs a a, a' cs, a'
+  <d, fs a>4 4 4 4 <d g b>4 4 <d fs a>4 4 <a cs g' a>4 4 <d fs a>4 4 <a cs g' a>4 4 <d fs a>4 r
+  }
 }
 
 scoreGCelloPart = \new Staff \with {
@@ -487,14 +500,15 @@ scoreGPianoPart = \new PianoStaff \with {
 
 \bookpart {
 \header {
-  title = ""
-  composer = ""
+  title = "May Song"
+  composer = "Folk Song"
   poet = ""
   meter = ""
   piece = ""
-  opus = "Suzuki No. , Vol. 1"
+  opus = "Suzuki No. 7, Vol. 1"
   tagline = ""
-}  \score {
+}
+\score {
     <<
       \scoreGCelloPart
       \scoreGPianoPart
@@ -1267,7 +1281,7 @@ scorePPianoPart = \new PianoStaff \with {
 \header {
   title = "Minuet in C"
   composer = "Johann Sebastian Bach"
-  poet = ""
+  poet = "Bach: 21.03.1685-28.07.1750"
   meter = ""
   piece = ""
   opus = "Suzuki No. 16, Vol. 1"
@@ -1463,7 +1477,7 @@ scoreQPianoPart = \new PianoStaff \with {
 \header {
   title = "Minuet No. 2"
   composer = "Johann Sebastian Bach"
-  poet = ""
+  poet = "Bach: 21.03.1685-28.07.1750"
   meter = ""
   piece = ""
   opus = "Suzuki No. 17, Vol. 1"
