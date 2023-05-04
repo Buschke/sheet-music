@@ -5,16 +5,18 @@
   dedication = ""
   title = ""
   subtitle = "Suzuki Cello School"
-  subsubtitle = "Volume 2"
-  instrument = "Cello"
-  composer = "n"
-  arranger = "Fingering:  https://buschke.com Sven Buschke"
-  poet = "n"
-  meter = "n"
-  piece = "n"
+  subsubtitle = "Volume 1"
+  instrument = "Cello und Piano"
+  composer = ""
+  arranger = \markup {"Fingering: " \with-url "https://buschke.com" "Sven Buschke"}
+  poet = ""
+  meter = ""
+  piece = ""
   opus = "No. 1"
-  copyright = "© Fingering Sven Buschke"
-  tagline = "n"
+  copyright = \markup {"© Fingering, 03.05.2023: " \with-url "https://buschke.com" "Sven Buschke"}
+%  tagline = ""
+  % Remove default LilyPond tagline
+  tagline = ##f
 }
 
 \paper {
@@ -404,18 +406,59 @@ globalM = {
   \key g \major
   \defaultTimeSignature
 %  \numericTimeSignature
-  \time 4/4
-  \tempo "Maestoso" 4=100
+  \time 2/2
+  \tempo "Allegro" 2=100
 }
 
 scoreMCello = \relative c {
-  \global
+  \globalM
   % Music follows here.
-
+  g'4\downbow-4 g fs-3 e-1
+  d2.-0 d4
+  e-1 e fs d
+  g2 d
+  g4 g fs e
+  d2. d4
+  e e fs d
+  g2. r4
+  b8 c d4 b8 c d4
+  c b a d,
+  g2 a
+  b2. r4
+  b8 c d4 b8 c d4
+  c b a d,
+  e2 fs
+  g2. r4
+  a8 b c4 c2
+  b4 a g2
+  a8 b c4 b a
+  b2 d
+  a8 b c4 c2
+  b4 a g b
+  e,2 fs
+  g2. r4
+  g g fs e
+  d2. d4
+  e e fs d
+  g2 d
+  g4 g fs e
+  d2. d4
+  e e fs d
+  g2. r4
+  \bar "|."
 }
 
 \bookpart {
-  \score {
+\header {
+  title = "Rigadoon"
+  composer = "Henry Purcell"
+  poet = ""
+  meter = ""
+  piece = ""
+  opus = "Suzuki No. 13, Vol. 1"
+  tagline = ""
+}
+\score {
     \new Staff \with {
       instrumentName = "Cello"
       shortInstrumentName = "Cl."
@@ -494,18 +537,55 @@ globalP = {
   \key g \major
   \defaultTimeSignature
 %  \numericTimeSignature
-  \time 4/4
-  \tempo "Maestoso" 4=100
+  \time 3/4
+  \tempo "Grazioso" 4=100
 }
 
 scorePCello = \relative c {
-  \global
+  \globalP
   % Music follows here.
+  \repeat volta 2 {
+  g'4-4\downbow g--\upbow( g--\upbow)
+  g c8 b c4
+  e, d8-0( f-2) e d |
+  e4 d8 e c4 |
+  a' a a |
+  a g8 f e d
+  g4 f8 e d e |
+  c2.
+  }
+  \repeat volta 2 {
+  d4 d d |
+  d g8 fs g4 |
+  d e f |
+  e d8 e c4 |
+  c' c c |
+  c8 b a g fs e |
+  d4 g fs |
+  g2 r4 |
+  c f, f |
+  f a8 g f4 |
+  d' f, f |
+  e8 g f e d4 |
+  g g g |
+  g a8 b c4 |
+  e,8 g f e d e |
+  c2.
+  }
 
 }
 
 \bookpart {
-  \score {
+\header {
+  title = "Minuet in C"
+  composer = "Johann Sebastian Bach"
+  poet = ""
+  meter = ""
+  piece = ""
+  opus = "Suzuki No. 16, Vol. 1"
+  tagline = ""
+}
+\score {
     \new Staff \with {
       instrumentName = "Cello"
       shortInstrumentName = "Cl."
@@ -521,17 +601,60 @@ scorePCello = \relative c {
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 globalQ = {
-  \key g \major
+  \key c \major
   \defaultTimeSignature
 %  \numericTimeSignature
-  \time 4/4
-  \tempo "Maestoso" 4=100
+  \time 3/4
+  \tempo "Allegro" 4=100
 }
 
 scoreQCello = \relative c {
-  \global
+  \globalQ
   % Music follows here.
-
+  \repeat volta 2 {
+  c8---4\f e---1 g---4 c---2 d,---0 b'---1
+  c4 c,\upbow c\upbow
+  c8 e g c d, b'
+  c4 c, c
+  a' a a8 c
+  g4 g g8 c
+  f,4 g8 f e f
+  d2.
+  c8 e g c d, b'
+  c4 c, c
+  c8 e g c d, b'
+  c4 c, c
+  a' g8 f e d
+  g4 f8 e d c
+  \tuplet 3/2 {d8( e f)} g,4 b
+  c2.
+ }
+ \repeat volta 2 {
+  c8 d e d c b
+  c4 a a
+  c'8 b a c b a
+  b4 e, e
+  c'8 b a c b a
+  b4 e, a
+  \tuplet 3/2 {b8 c d} e,4 gs
+  a gs8 a b4
+  c c8 b a g
+  a4 a8 g f e
+  f4 f8 e d c
+  b4 a8 b g4
+  d g, g
+  e' g g
+  f' g8 f e f
+  d2.
+  c8 e g c d, b'
+  c4 c, c
+  c8 e g c d, b'
+  c4 c, c
+  a' g8 f e d
+  g4 f8 e d c
+  \tuplet 3/2 {d8 e f} e,4 g
+  c2.
+ }
 }
 
 \bookpart {
