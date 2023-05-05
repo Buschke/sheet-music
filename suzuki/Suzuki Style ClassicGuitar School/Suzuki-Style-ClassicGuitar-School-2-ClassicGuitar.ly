@@ -38,10 +38,10 @@ global = {
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Nummer  /
+% Nummer 1 / A
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-global = {
+globalA = {
   \key c \major
   \numericTimeSignature
   \time 4/4
@@ -67,10 +67,10 @@ scoreAClassicalGuitar = \relative c' {
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Nummer  /
+% Nummer 2 / B
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-global = {
+globalB = {
   \key c \major
   \numericTimeSignature
   \time 4/4
@@ -96,10 +96,10 @@ scoreBClassicalGuitar = \relative c' {
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Nummer  /
+% Nummer 3 / C
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-global = {
+globalC = {
   \key c \major
   \numericTimeSignature
   \time 4/4
@@ -125,10 +125,10 @@ scoreCClassicalGuitar = \relative c' {
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Nummer  /
+% Nummer 4 / D
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-global = {
+globalD = {
   \key c \major
   \numericTimeSignature
   \time 4/4
@@ -154,10 +154,10 @@ scoreDClassicalGuitar = \relative c' {
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Nummer  /
+% Nummer 5 / E
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-global = {
+globalE = {
   \key c \major
   \numericTimeSignature
   \time 4/4
@@ -183,10 +183,10 @@ scoreEClassicalGuitar = \relative c' {
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Nummer  /
+% Nummer 6 / F
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-global = {
+globalF = {
   \key c \major
   \numericTimeSignature
   \time 4/4
@@ -212,10 +212,10 @@ scoreFClassicalGuitar = \relative c' {
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Nummer  /
+% Nummer 7 / G
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-global = {
+globalG = {
   \key c \major
   \numericTimeSignature
   \time 4/4
@@ -241,10 +241,10 @@ scoreGClassicalGuitar = \relative c' {
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Nummer  /
+% Nummer 8 / H
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-global = {
+globalH = {
   \key c \major
   \numericTimeSignature
   \time 4/4
@@ -270,10 +270,10 @@ scoreHClassicalGuitar = \relative c' {
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Nummer  /
+% Nummer 9 / I
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-global = {
+globalI = {
   \key c \major
   \numericTimeSignature
   \time 4/4
@@ -299,10 +299,10 @@ scoreIClassicalGuitar = \relative c' {
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Nummer  /
+% Nummer 10 / J
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-global = {
+globalJ = {
   \key c \major
   \numericTimeSignature
   \time 4/4
@@ -328,10 +328,10 @@ scoreJClassicalGuitar = \relative c' {
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Nummer  /
+% Nummer 11 / K
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-global = {
+globalK = {
   \key c \major
   \numericTimeSignature
   \time 4/4
@@ -357,10 +357,10 @@ scoreKClassicalGuitar = \relative c' {
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Nummer  /
+% Nummer 12 / L
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-global = {
+globalL = {
   \key c \major
   \numericTimeSignature
   \time 4/4
@@ -386,10 +386,10 @@ scoreLClassicalGuitar = \relative c' {
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Nummer  /
+% Nummer 13 / M
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-global = {
+globalM = {
   \key c \major
   \numericTimeSignature
   \time 4/4
@@ -415,10 +415,10 @@ scoreMClassicalGuitar = \relative c' {
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Nummer  /
+% Nummer 14 / N
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-global = {
+globalN = {
   \key c \major
   \numericTimeSignature
   \time 4/4
@@ -444,10 +444,10 @@ scoreNClassicalGuitar = \relative c' {
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Nummer  /
+% Nummer 15 / O
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-global = {
+globalO = {
   \key c \major
   \numericTimeSignature
   \time 4/4
@@ -473,10 +473,10 @@ scoreOClassicalGuitar = \relative c' {
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Nummer  /
+% Nummer 16 / P
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-global = {
+globalP = {
   \key c \major
   \numericTimeSignature
   \time 4/4
@@ -502,10 +502,10 @@ scorePClassicalGuitar = \relative c' {
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Nummer  /
+% Nummer 17 / Q
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-global = {
+globalQ = {
   \key c \major
   \numericTimeSignature
   \time 4/4
@@ -531,10 +531,10 @@ scoreQClassicalGuitar = \relative c' {
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Nummer  /
+% Nummer 18 / R
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-global = {
+globalR = {
   \key c \major
   \numericTimeSignature
   \time 4/4
