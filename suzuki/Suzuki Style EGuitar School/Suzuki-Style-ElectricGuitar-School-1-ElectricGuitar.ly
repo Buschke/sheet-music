@@ -2,19 +2,21 @@
 \language "english"
 
 \header {
-  dedication = "n"
-  title = "n"
-  subtitle = "n"
-  subsubtitle = "n"
-  instrument = "n"
-  composer = "n"
-  arranger = "n"
-  poet = "n"
-  meter = "n"
-  piece = "n"
-  opus = "n"
-  copyright = "n"
-  tagline = "n"
+  dedication = ""
+  title = ""
+  subtitle = "Suzuki Style Electric Guitar School"
+  subsubtitle = "Volume 1"
+  instrument = "E-Gitarre"
+  composer = ""
+  arranger = \markup {"Fingering: " \with-url "https://buschke.com" "Sven Buschke"}
+  poet = ""
+  meter = ""
+  piece = ""
+  opus = "No. 1"
+  copyright = \markup {"© Fingering, 03.05.2023: " \with-url "https://buschke.com" "Sven Buschke"}
+%  tagline = ""
+  % Remove default LilyPond tagline
+  tagline = ##f
 }
 
 \paper {
@@ -35,6 +37,17 @@ global = {
   \tempo "Allegro" 4=100
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Nummer 1 / A
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+globalA = {
+  \key c \major
+  \numericTimeSignature
+  \time 4/4
+  \tempo "Andante" 4=100
+}
+
 scoreAElectricGuitar = \relative c' {
   \global
   % Music follows here.
@@ -51,6 +64,17 @@ scoreAElectricGuitar = \relative c' {
     \layout { }
     \midi { }
   }
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Nummer 2 / B
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+globalB = {
+  \key c \major
+  \numericTimeSignature
+  \time 4/4
+  \tempo "Andante" 4=100
 }
 
 scoreBElectricGuitar = \relative c' {
@@ -71,6 +95,17 @@ scoreBElectricGuitar = \relative c' {
   }
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Nummer 3 / C
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+globalC = {
+  \key c \major
+  \numericTimeSignature
+  \time 4/4
+  \tempo "Andante" 4=100
+}
+
 scoreCElectricGuitar = \relative c' {
   \global
   % Music follows here.
@@ -87,6 +122,17 @@ scoreCElectricGuitar = \relative c' {
     \layout { }
     \midi { }
   }
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Nummer 4 / D
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+globalD = {
+  \key c \major
+  \numericTimeSignature
+  \time 4/4
+  \tempo "Andante" 4=100
 }
 
 scoreDElectricGuitar = \relative c' {
@@ -107,6 +153,17 @@ scoreDElectricGuitar = \relative c' {
   }
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Nummer 5 / E
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+globalE = {
+  \key c \major
+  \numericTimeSignature
+  \time 4/4
+  \tempo "Andante" 4=100
+}
+
 scoreEElectricGuitar = \relative c' {
   \global
   % Music follows here.
@@ -123,6 +180,17 @@ scoreEElectricGuitar = \relative c' {
     \layout { }
     \midi { }
   }
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Nummer 6 / F
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+globalF = {
+  \key c \major
+  \numericTimeSignature
+  \time 4/4
+  \tempo "Andante" 4=100
 }
 
 scoreFElectricGuitar = \relative c' {
@@ -143,6 +211,17 @@ scoreFElectricGuitar = \relative c' {
   }
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Nummer 7 / G
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+globalG = {
+  \key c \major
+  \numericTimeSignature
+  \time 4/4
+  \tempo "Andante" 4=100
+}
+
 scoreGElectricGuitar = \relative c' {
   \global
   % Music follows here.
@@ -159,6 +238,17 @@ scoreGElectricGuitar = \relative c' {
     \layout { }
     \midi { }
   }
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Nummer 8 / H
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+globalH = {
+  \key c \major
+  \numericTimeSignature
+  \time 4/4
+  \tempo "Andante" 4=100
 }
 
 scoreHElectricGuitar = \relative c' {
@@ -179,6 +269,17 @@ scoreHElectricGuitar = \relative c' {
   }
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Nummer 9 / J
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+globalJ = {
+  \key c \major
+  \numericTimeSignature
+  \time 4/4
+  \tempo "Andante" 4=100
+}
+
 scoreIElectricGuitar = \relative c' {
   \global
   % Music follows here.
@@ -195,6 +296,17 @@ scoreIElectricGuitar = \relative c' {
     \layout { }
     \midi { }
   }
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Nummer 10 / J
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+globalJ = {
+  \key c \major
+  \numericTimeSignature
+  \time 4/4
+  \tempo "Andante" 4=100
 }
 
 scoreJElectricGuitar = \relative c' {
@@ -215,6 +327,17 @@ scoreJElectricGuitar = \relative c' {
   }
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Nummer 11 / K
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+globalK = {
+  \key c \major
+  \numericTimeSignature
+  \time 4/4
+  \tempo "Andante" 4=100
+}
+
 scoreKElectricGuitar = \relative c' {
   \global
   % Music follows here.
@@ -231,6 +354,17 @@ scoreKElectricGuitar = \relative c' {
     \layout { }
     \midi { }
   }
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Nummer 12 / L
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+globalL = {
+  \key c \major
+  \numericTimeSignature
+  \time 4/4
+  \tempo "Andante" 4=100
 }
 
 scoreLElectricGuitar = \relative c' {
@@ -251,6 +385,17 @@ scoreLElectricGuitar = \relative c' {
   }
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Nummer 13 / M
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+globalM = {
+  \key c \major
+  \numericTimeSignature
+  \time 4/4
+  \tempo "Andante" 4=100
+}
+
 scoreMElectricGuitar = \relative c' {
   \global
   % Music follows here.
@@ -267,6 +412,17 @@ scoreMElectricGuitar = \relative c' {
     \layout { }
     \midi { }
   }
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Nummer 14 / N
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+globalN = {
+  \key c \major
+  \numericTimeSignature
+  \time 4/4
+  \tempo "Andante" 4=100
 }
 
 scoreNElectricGuitar = \relative c' {
@@ -287,6 +443,17 @@ scoreNElectricGuitar = \relative c' {
   }
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Nummer 15 / O
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+globalO = {
+  \key c \major
+  \numericTimeSignature
+  \time 4/4
+  \tempo "Andante" 4=100
+}
+
 scoreOElectricGuitar = \relative c' {
   \global
   % Music follows here.
@@ -303,6 +470,17 @@ scoreOElectricGuitar = \relative c' {
     \layout { }
     \midi { }
   }
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Nummer 16 / P
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+globalP = {
+  \key c \major
+  \numericTimeSignature
+  \time 4/4
+  \tempo "Andante" 4=100
 }
 
 scorePElectricGuitar = \relative c' {
@@ -323,6 +501,17 @@ scorePElectricGuitar = \relative c' {
   }
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Nummer 17 / Q
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+globalQ = {
+  \key c \major
+  \numericTimeSignature
+  \time 4/4
+  \tempo "Andante" 4=100
+}
+
 scoreQElectricGuitar = \relative c' {
   \global
   % Music follows here.
@@ -341,6 +530,17 @@ scoreQElectricGuitar = \relative c' {
   }
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Nummer 18 / R
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+globalR = {
+  \key c \major
+  \numericTimeSignature
+  \time 4/4
+  \tempo "Andante" 4=100
+}
+
 scoreRElectricGuitar = \relative c' {
   \global
   % Music follows here.
@@ -348,6 +548,15 @@ scoreRElectricGuitar = \relative c' {
 }
 
 \bookpart {
+\header {
+  title = ""
+  composer = ""
+  poet = ""
+  meter = ""
+  piece = ""
+  opus = "Suzuki No. , Vol. 1"
+  tagline = ""
+}
   \score {
     \new Staff \with {
       midiInstrument = "electric guitar (clean)"
