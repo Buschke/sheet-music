@@ -2,19 +2,21 @@
 \language "english"
 
 \header {
-  dedication = "n"
-  title = "n"
-  subtitle = "Suzuki Violin School"
-  subsubtitle = "Volume 2"
-  instrument = "Violine und Piano"
-  composer = "n"
-  arranger = "Fingering:  https://buschke.com Sven Buschke"
-  poet = "n"
-  meter = "n"
-  piece = "n"
+  dedication = ""
+  title = ""
+  subtitle = "Suzuki Flute School"
+  subsubtitle = "Volume 1"
+  instrument = "Flute und Piano"
+  composer = ""
+  arranger = \markup {"Fingering: " \with-url "https://buschke.com" "Sven Buschke"}
+  poet = ""
+  meter = ""
+  piece = ""
   opus = "No. 1"
-  copyright = "© Fingering Sven Buschke"
-  tagline = "n"
+  copyright = \markup {"© Fingering, 03.05.2023: " \with-url "https://buschke.com" "Sven Buschke"}
+%  tagline = ""
+  % Remove default LilyPond tagline
+  tagline = ##f
 }
 
 \paper {
@@ -632,27 +634,44 @@ scoreJPianoPart = \new PianoStaff \with {
 
 globalK = {
   \key c \major
-  \numericTimeSignature
+%  \numericTimeSignature
   \time 4/4
-  \tempo "Andante" 4=100
+  \tempo "Moderato" 4=100
 }
 
 scoreKFlute = \relative c'' {
-  \global
+  \globalK
   % Music follows here.
-
+  c,4\mf c8 d e4 8 f g4 a8 g e2 g4\> f8 e d2\! f4\> e8 d c2\!
+  4 8 d e4 8 f g4 a8 g e2 g4\> f8 e d4 e8 d c2\! r
+  g'4\downbow\f\> f8 e\! d4 g,8 8 f'4\> e8 d c2\! g'4\mp\> f8 e d4\! g,8 8 f'4\> e8 d c2\!
+  4\f 8 d e4 8 f g4 a8 g e2 g4\> f8 e d4\! e8 d c2 r
+  \bar "|."
 }
 
 scoreKRight = \relative c'' {
-  \global
+  \globalK
   % Music follows here.
-
+  <e, g>2 <g c> <c e> <g c> <g b>2 2 <g c> <e g>
+  <e g> <g c> <c e> <g c> <g b> <f b> <e c'> r
+  <<{g\f g g <e g> g g g <e g>2 2 <g c> <c e> <g c>}\\{g4(f8 e) d4 d g(e8 d) e2 g4\p(f8 e) d4 d g( e8(d) e2}>>
+  bf'4( a8 g) f4 <f b> <e c'>2 r
+  \bar "|."
 }
 
 scoreKLeft = \relative c' {
-  \global
+  \globalK
   % Music follows here.
-
+  <<{c	,2 2 2 2}\\{c8( g' c g) c,8(g' c g) c,8( g' c g) c,8(g' c g)}>>
+  g,8( g' b g) g,( g' b g)
+  <<{c,2 2 2 2}\\{c8( g' c g) c,8(g' c g) c,8( g' c g) c,8(g' c g)}>>
+  <<{c,2 2}\\{c8( g' c g) c,8(g' c g)}>>
+  g,8( g' b g) g,( g' b g)
+  <<{c,2 e8\<(g c e\!)}\\{c,8( g' c g) r2}>>
+  e'8\f( g, d' c b g b g) d'(g, c g c, e g c)
+  e8\p( g, d' c b g b g) d'(g, c g c, e g c)
+  <<{c,2 2 2 2}\\{c8( g' c g) c,8(g' c g) c,8( g' c g) c,8(g' c g)}>>
+  cs,(e a cs) <d, d'>4 g <<{c,2}\\{c8( g' c g c,4) r}>>
 }
 
 scoreKFlutePart = \new Staff \with {
@@ -675,6 +694,15 @@ scoreKPianoPart = \new PianoStaff \with {
 >>
 
 \bookpart {
+\header {
+  title = "Long, Long Ago"
+  composer = "Thomas Haynes Bayly"
+  poet = "Bayly: 13.10.1797-22.04.1839"
+  meter = ""
+  piece = ""
+  opus = "Suzuki No. 11, Vol. 1"
+  tagline = ""
+}
   \score {
     <<
       \scoreKFlutePart

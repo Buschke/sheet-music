@@ -223,20 +223,32 @@ scoreFCello = \relative c {
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 globalG = {
-  \key g \major
-  \defaultTimeSignature
+  \key d \major
 %  \numericTimeSignature
   \time 4/4
-  \tempo "Maestoso" 4=100
+  \tempo "Allegro moderato" 4=100
 }
 
 scoreGCello = \relative c {
-  \global
+  \globalG
   % Music follows here.
-
+  \repeat volta 2 {
+    d4.\f\downbow fs8\upbow a4 d b d8 b a2 g4. a8 fs4 d e2 d
+    a'4\mf a g g fs a8 fs e2\> a4\p a g g fs a8 fs e2
+    d4.\f fs8  a4 d b d8 b a2 g4. a8 fs4 d e2 d
+  }
 }
 
 \bookpart {
+\header {
+  title = "May Song"
+  composer = "Folk Song"
+  poet = ""
+  meter = ""
+  piece = ""
+  opus = "Suzuki No. 7, Vol. 1"
+  tagline = ""
+}
   \score {
     \new Staff \with {
       instrumentName = "Cello"
@@ -579,7 +591,7 @@ scorePCello = \relative c {
 \header {
   title = "Minuet in C"
   composer = "Johann Sebastian Bach"
-  poet = ""
+  poet = "Bach: 21.03.1685-28.07.1750"
   meter = ""
   piece = ""
   opus = "Suzuki No. 16, Vol. 1"
@@ -661,7 +673,7 @@ scoreQCello = \relative c {
 \header {
   title = "Minuet No. 2"
   composer = "Johann Sebastian Bach"
-  poet = ""
+  poet = "Bach: 21.03.1685-28.07.1750"
   meter = ""
   piece = ""
   opus = "Suzuki No. 17, Vol. 1"
