@@ -75,15 +75,15 @@ scoreASopranoCMajor = \relative c'' {
   \bar "||"
   e^\markup{\column{\line{KD\super{3}\sub{WL}}\line{I-IV-V-I}}} f d e
   \bar "|.|"
-  g,^\markup{\column{\line{QFS\super{5}\sub{EL}}\line{I-IV-VII-III-VI-II-V-I}}} a f g e f d g
+  g,^\markup{\column{\line{QFS\super{5}\sub{EL}}\line{I-IV-VII-III-VI-II-V-I}}} a f g e f d e
   \bar "||"
-  c^\markup{\column{\line{QFS\super{8}\sub{EL}}\line{I-IV-VII-III-VI-II-V-I}}} c b b a a g g
+  c'^\markup{\column{\line{QFS\super{8}\sub{EL}}\line{I-IV-VII-III-VI-II-V-I}}} c b b a a g g
   \bar "||"
   e'^\markup{\column{\line{QFS\super{3}\sub{EL}}\line{I-IV-VII-III-VI-II-V-I}}} f d e c d b c
   \bar "||"
-  g^\markup{\column{\line{QFS\super{5}\sub{WL}}\line{I-IV-VII-III-VI-II-V-I}}} a f g e f d e
+  g'^\markup{\column{\line{QFS\super{5}\sub{WL}}\line{I-IV-VII-III-VI-II-V-I}}} a f g e f d e
   \bar "||"
-  c'^\markup{\column{\line{QFS\super{8}\sub{WL}}\line{I-IV-VII-III-VI-II-V-I}}} c b b a a g g
+  c^\markup{\column{\line{QFS\super{8}\sub{WL}}\line{I-IV-VII-III-VI-II-V-I}}} c b b a a g g
   \bar "||"
   e'^\markup{\column{\line{QFS\super{3}\sub{WL}}\line{I-IV-VII-III-VI-II-V-I}}} f d e c d b c
   \bar "|."
@@ -93,11 +93,11 @@ scoreASopranoGMajor = \relative c'' {
   \key g \major
     \time 3/4
   % Music follows here.
-  d^\markup{\column{\line{G: QP\super{5}\sub{EL}}\line{I-V-I}}} d d
+  d,^\markup{\column{\line{G: QP\super{5}\sub{EL}}\line{I-V-I}}} d d
   d^\markup{\column{\line{QP\super{5}\sub{EL}}\line{I-IV-I}}} e d
   d^\markup{\column{\line{QP\super{5}\sub{EL}}\line{I-VII-I}}} c d
   \bar "||"
-  g,^\markup{\column{\line{QP\super{8}\sub{EL}}\line{I-V-I}}} fs g
+  g^\markup{\column{\line{QP\super{8}\sub{EL}}\line{I-V-I}}} fs g
   g^\markup{\column{\line{QP\super{8}\sub{EL}}\line{I-IV-I}}} g g
   g^\markup{\column{\line{QP\super{8}\sub{EL}}\line{I-VII-I}}} fs g
   \bar "||"
@@ -130,17 +130,17 @@ scoreASopranoGMajor = \relative c'' {
   \bar "||"
   b^\markup{\column{\line{KD\super{3}\sub{WL}}\line{I-IV-V-I}}} c a b
   \bar "|.|"
-  d^\markup{\column{\line{QFS\super{5}\sub{EL}}\line{I-IV-VII-III-VI-II-V-I}}} e c d b c a d
+  d^\markup{\column{\line{QFS\super{5}\sub{EL}}\line{I-IV-VII-III-VI-II-V-I}}} e c d b c a b
   \bar "||"
-  g,^\markup{\column{\line{QFS\super{8}\sub{EL}}\line{I-IV-VII-III-VI-II-V-I}}} g fs fs e e d d
+  g^\markup{\column{\line{QFS\super{8}\sub{EL}}\line{I-IV-VII-III-VI-II-V-I}}} g fs fs e e d d
   \bar "||"
   b'^\markup{\column{\line{QFS\super{3}\sub{EL}}\line{I-IV-VII-III-VI-II-V-I}}} c a b g a fs g
   \bar "||"
   d'^\markup{\column{\line{QFS\super{5}\sub{WL}}\line{I-IV-VII-III-VI-II-V-I}}} e c d b c a b
   \bar "||"
-  g'^\markup{\column{\line{QFS\super{8}\sub{WL}}\line{I-IV-VII-III-VI-II-V-I}}} g fs fs e e d d
+  g^\markup{\column{\line{QFS\super{8}\sub{WL}}\line{I-IV-VII-III-VI-II-V-I}}} g fs fs e e d d
   \bar "||"
-  b^\markup{\column{\line{QFS\super{3}\sub{WL}}\line{I-IV-VII-III-VI-II-V-I}}} c a b g a fs g
+  b'^\markup{\column{\line{QFS\super{3}\sub{WL}}\line{I-IV-VII-III-VI-II-V-I}}} c a b g a fs g
   \bar "|."
 }
 
@@ -191,9 +191,9 @@ scoreAAltoCMajor = \relative c' {
   % QFS^3_EL-I-IV-VII-III-VI-II-V-I
   c' c b b a a g g
   % QFS^5_WL-I-IV-VII-III-VI-II-V-I
-  c, c b b a a g g
+  c c b b a a g g
   % QFS^8_WL-I-IV-VII-III-VI-II-V-I
-  e' f d e c d b c
+  e f d e c d b c
   % QFS^3_WL-I-IV-VII-III-VI-II-V-I
   g' a f g e f d e
   \bar "|."
@@ -204,11 +204,11 @@ scoreAAltoGMajor = \relative c' {
   \time 3/4
   % Music follows here.
   % QP^5_EL
-  b' a b
+  b a b
   b c b
   b a b
   % QP^8_EL
-  d, d d
+  d d d
   d e d
   d c d
   % QP^3_EL
@@ -249,9 +249,9 @@ scoreAAltoGMajor = \relative c' {
   % QFS^5_WL-I-IV-VII-III-VI-II-V-I
   g g fs fs e e d d
   % QFS^8_WL-I-IV-VII-III-VI-II-V-I
-  b' c a b g a fs g
+  b c a b g a fs g
   % QFS^3_WL-I-IV-VII-III-VI-II-V-I
-  d e c d b c a b
+  d' e c d b c a b
   \bar "|."
 }
 
@@ -303,9 +303,9 @@ scoreATenorCMajor = \relative c' {
   % QFS^3_EL-I-IV-VII-III-VI-II-V-I
   g' a f g e f d e
   % QFS^5_WL-I-IV-VII-III-VI-II-V-I
-  e, f d e c d b c
+  e f d e c d b c
   % QFS^8_WL-I-IV-VII-III-VI-II-V-I
-  g' a f g e f d e
+  g a f g e f d e
   % QFS^3_WL-I-IV-VII-III-VI-II-V-I
   c' c b b a a g g
   \bar "|."
@@ -316,11 +316,11 @@ scoreATenorGMajor = \relative c' {
   \time 3/4
   % Music follows here.
   % QP^5_EL
-  g' fs g
+  g fs g
   g g g
   g fs g
   % QP^8_EL
-  b, a b
+  b a b
   b c b
   b a b
   % QP^3_EL
@@ -361,9 +361,9 @@ scoreATenorGMajor = \relative c' {
   % QFS^5_WL-I-IV-VII-III-VI-II-V-I
   b c a b g a fs g
   % QFS^8_WL-I-IV-VII-III-VI-II-V-I
-  d' e c d b c a b
+  d e c d b c a b
   % QFS^3_WL-I-IV-VII-III-VI-II-V-I
-  g g fs fs e e d d
+  g' g fs fs e e d d
   \bar "|."
 }
 
@@ -428,11 +428,11 @@ scoreABassGMajor = \relative c {
   \time 3/4
   % Music follows here.
   % QP^5_EL
-  g' d g
+  g d g
   g c g
   g a g
   % QP^8_EL
-  g d g
+  g' d g
   g c, g'
   g a g
   % QP^3_EL
@@ -465,9 +465,9 @@ scoreABassGMajor = \relative c {
   % KD^3_WL-I-IV-V-I
   g c d g,|
   % QFS^5_EL-I-IV-VII-III-VI-II-V-I
-  g c fs, b e, a d, g
+  g' c fs, b e, a d, g
   % QFS^8_EL-I-IV-VII-III-VI-II-V-I
-  g c fs, b e, a d, g
+  g, c fs, b e, a d, g
   % QFS^3_EL-I-IV-VII-III-VI-II-V-I
   g c fs, b e, a d, g
   % QFS^5_WL-I-IV-VII-III-VI-II-V-I
