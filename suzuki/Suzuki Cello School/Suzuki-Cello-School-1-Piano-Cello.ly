@@ -93,7 +93,8 @@ scoreAPianoPart = \new PianoStaff \with {
   piece = ""
   opus = "Suzuki No. 1, Vol. 1"
   tagline = ""
-}  \score {
+}
+\score {
     <<
       \scoreACelloPart
       \scoreAPianoPart
