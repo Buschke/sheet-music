@@ -383,7 +383,7 @@ globalF = {
   \key a \major
   %\numericTimeSignature
   \time 4/4
-  \tempo "Andante" 4=100
+  \tempo "Andante" 4=50
 }
 
 scoreFViolin = \relative c'' {
@@ -435,6 +435,21 @@ scoreFPianoPart = \new PianoStaff \with {
   } { \clef bass \scoreFLeft }
 >>
 
+claveF = {\new DrumStaff <<
+  \drummode {\globalF
+   % bd4 sn4
+    << {
+%      \repeat unfold 16 cl16
+%      \repeat unfold 16 hh16
+         hh8 cl hh cl hh cl hh cl
+%        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
+    } \\ {
+      bd4 sn4 sn4 sn4
+    } >>
+  }
+>>
+}
+
 \bookpart {
 \header {
   title = "May Song"
@@ -452,11 +467,14 @@ scoreFPianoPart = \new PianoStaff \with {
     >>
     \layout { }
   }
-  \score {\unfoldRepeats {
+  \score {
+    {\claveF
+    \unfoldRepeats {
     <<
       \scoreFViolinPart
       \scoreFPianoPart
     >>
+    }
           }
     \midi { }
   }
