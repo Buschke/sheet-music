@@ -14,7 +14,7 @@
   piece = ""
   opus = "No. 1"
   copyright = \markup {"© Fingering, 03.05.2023: " \with-url "https://buschke.com" "Sven Buschke"}
-%  tagline = ""
+  %  tagline = ""
   % Remove default LilyPond tagline
   tagline = ##f
 }
@@ -52,7 +52,7 @@ globalA = {
 scoreACello = \relative c {
   \globalA
   % Music follows here.
-  c
+
 }
 
 scoreARight = \relative c'' {
@@ -84,17 +84,36 @@ scoreAPianoPart = \new PianoStaff \with {
   } { \clef bass \scoreALeft }
 >>
 
-\bookpart {
-\header {
-  title = ""
-  composer = ""
-  poet = ""
-  meter = ""
-  piece = ""
-  opus = "Suzuki No. 1, Vol. 1"
-  tagline = ""
+clave = {
+  \new DrumStaff <<
+    \drummode {
+      \global
+      % bd4 sn4
+      <<
+        {
+          %      \repeat unfold 16 cl16
+          %      \repeat unfold 16 hh16
+          hh8 cl hh cl hh cl hh cl
+          %        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
+        } \\ {
+          bd4 sn4 sn4 sn4
+        }
+      >>
+    }
+  >>
 }
-\score {
+
+\bookpart {
+  \header {
+    title = ""
+    composer = ""
+    poet = ""
+    meter = ""
+    piece = ""
+    opus = "Suzuki No. 1, Vol. 1"
+    tagline = ""
+  }
+  \score {
     <<
       \scoreACelloPart
       \scoreAPianoPart
@@ -152,16 +171,35 @@ scoreBPianoPart = \new PianoStaff \with {
   } { \clef bass \scoreBLeft }
 >>
 
+clave = {
+  \new DrumStaff <<
+    \drummode {
+      \global
+      % bd4 sn4
+      <<
+        {
+          %      \repeat unfold 16 cl16
+          %      \repeat unfold 16 hh16
+          hh8 cl hh cl hh cl hh cl
+          %        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
+        } \\ {
+          bd4 sn4 sn4 sn4
+        }
+      >>
+    }
+  >>
+}
+
 \bookpart {
-\header {
-  title = ""
-  composer = ""
-  poet = ""
-  meter = ""
-  piece = ""
-  opus = "Suzuki No. , Vol. 1"
-  tagline = ""
-}  \score {
+  \header {
+    title = ""
+    composer = ""
+    poet = ""
+    meter = ""
+    piece = ""
+    opus = "Suzuki No. , Vol. 1"
+    tagline = ""
+  }  \score {
     <<
       \scoreBCelloPart
       \scoreBPianoPart
@@ -219,16 +257,35 @@ scoreCPianoPart = \new PianoStaff \with {
   } { \clef bass \scoreCLeft }
 >>
 
+clave = {
+  \new DrumStaff <<
+    \drummode {
+      \global
+      % bd4 sn4
+      <<
+        {
+          %      \repeat unfold 16 cl16
+          %      \repeat unfold 16 hh16
+          hh8 cl hh cl hh cl hh cl
+          %        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
+        } \\ {
+          bd4 sn4 sn4 sn4
+        }
+      >>
+    }
+  >>
+}
+
 \bookpart {
-\header {
-  title = ""
-  composer = ""
-  poet = ""
-  meter = ""
-  piece = ""
-  opus = "Suzuki No. , Vol. 1"
-  tagline = ""
-}  \score {
+  \header {
+    title = ""
+    composer = ""
+    poet = ""
+    meter = ""
+    piece = ""
+    opus = "Suzuki No. , Vol. 1"
+    tagline = ""
+  }  \score {
     <<
       \scoreCCelloPart
       \scoreCPianoPart
@@ -286,16 +343,35 @@ scoreDPianoPart = \new PianoStaff \with {
   } { \clef bass \scoreDLeft }
 >>
 
+clave = {
+  \new DrumStaff <<
+    \drummode {
+      \global
+      % bd4 sn4
+      <<
+        {
+          %      \repeat unfold 16 cl16
+          %      \repeat unfold 16 hh16
+          hh8 cl hh cl hh cl hh cl
+          %        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
+        } \\ {
+          bd4 sn4 sn4 sn4
+        }
+      >>
+    }
+  >>
+}
+
 \bookpart {
-\header {
-  title = ""
-  composer = ""
-  poet = ""
-  meter = ""
-  piece = ""
-  opus = "Suzuki No. , Vol. 1"
-  tagline = ""
-}  \score {
+  \header {
+    title = ""
+    composer = ""
+    poet = ""
+    meter = ""
+    piece = ""
+    opus = "Suzuki No. , Vol. 1"
+    tagline = ""
+  }  \score {
     <<
       \scoreDCelloPart
       \scoreDPianoPart
@@ -353,16 +429,35 @@ scoreEPianoPart = \new PianoStaff \with {
   } { \clef bass \scoreELeft }
 >>
 
+clave = {
+  \new DrumStaff <<
+    \drummode {
+      \global
+      % bd4 sn4
+      <<
+        {
+          %      \repeat unfold 16 cl16
+          %      \repeat unfold 16 hh16
+          hh8 cl hh cl hh cl hh cl
+          %        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
+        } \\ {
+          bd4 sn4 sn4 sn4
+        }
+      >>
+    }
+  >>
+}
+
 \bookpart {
-\header {
-  title = ""
-  composer = ""
-  poet = ""
-  meter = ""
-  piece = ""
-  opus = "Suzuki No. , Vol. 1"
-  tagline = ""
-}  \score {
+  \header {
+    title = ""
+    composer = ""
+    poet = ""
+    meter = ""
+    piece = ""
+    opus = "Suzuki No. , Vol. 1"
+    tagline = ""
+  }  \score {
     <<
       \scoreECelloPart
       \scoreEPianoPart
@@ -420,17 +515,36 @@ scoreFPianoPart = \new PianoStaff \with {
   } { \clef bass \scoreFLeft }
 >>
 
-\bookpart {
-\header {
-  title = ""
-  composer = ""
-  poet = ""
-  meter = ""
-  piece = ""
-  opus = "Suzuki No. , Vol. 1"
-  tagline = ""
+clave = {
+  \new DrumStaff <<
+    \drummode {
+      \global
+      % bd4 sn4
+      <<
+        {
+          %      \repeat unfold 16 cl16
+          %      \repeat unfold 16 hh16
+          hh8 cl hh cl hh cl hh cl
+          %        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
+        } \\ {
+          bd4 sn4 sn4 sn4
+        }
+      >>
+    }
+  >>
 }
-\score {
+
+\bookpart {
+  \header {
+    title = ""
+    composer = ""
+    poet = ""
+    meter = ""
+    piece = ""
+    opus = "Suzuki No. , Vol. 1"
+    tagline = ""
+  }
+  \score {
     <<
       \scoreFCelloPart
       \scoreFPianoPart
@@ -446,7 +560,7 @@ scoreFPianoPart = \new PianoStaff \with {
 
 globalG = {
   \key d \major
-%  \numericTimeSignature
+  %  \numericTimeSignature
   \time 4/4
   \tempo "Allegro moderato" 4=100
 }
@@ -477,7 +591,7 @@ scoreGLeft = \relative c' {
   \repeat volta 2 {
     <d, fs a>4 4 4 4 <d g b>4 4 <d fs a>4 4 <a cs a'>4 4 <d fs a>4 4 <a g' a>4 4 <d fs a>4 4
     d8 a' fs a d, b' g b d, a' fs a a, a' cs, a' d, a' fs a d, b' g b d, a' fs a a, a' cs, a'
-  <d, fs a>4 4 4 4 <d g b>4 4 <d fs a>4 4 <a cs g' a>4 4 <d fs a>4 4 <a cs g' a>4 4 <d fs a>4 r
+    <d, fs a>4 4 4 4 <d g b>4 4 <d fs a>4 4 <a cs g' a>4 4 <d fs a>4 4 <a cs g' a>4 4 <d fs a>4 r
   }
 }
 
@@ -500,22 +614,52 @@ scoreGPianoPart = \new PianoStaff \with {
   } { \clef bass \scoreGLeft }
 >>
 
-\bookpart {
-\header {
-  title = "May Song"
-  composer = "Folk Song"
-  poet = ""
-  meter = ""
-  piece = ""
-  opus = "Suzuki No. 7, Vol. 1"
-  tagline = ""
+claveG = {
+  \new DrumStaff <<
+    \drummode {
+      \globalG
+      % bd4 sn4
+      <<
+        {
+          %      \repeat unfold 16 cl16
+          %      \repeat unfold 16 hh16
+          hh8 cl hh cl hh cl hh cl
+          %        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
+        } \\ {
+          bd4 sn4 sn4 sn4
+        }
+      >>
+    }
+  >>
 }
-\score {
+
+\bookpart {
+  \header {
+    title = "May Song"
+    composer = "Folk Song"
+    poet = ""
+    meter = ""
+    piece = ""
+    opus = "Suzuki No. 7, Vol. 1"
+    tagline = ""
+  }
+  \score {
     <<
       \scoreGCelloPart
       \scoreGPianoPart
     >>
     \layout { }
+  }
+  \score {
+    {
+      \claveG
+      \unfoldRepeats {
+        <<
+          \scoreGCelloPart
+          \scoreGPianoPart
+        >>
+      }
+    }
     \midi { }
   }
 }
@@ -568,16 +712,35 @@ scoreHPianoPart = \new PianoStaff \with {
   } { \clef bass \scoreHLeft }
 >>
 
+clave = {
+  \new DrumStaff <<
+    \drummode {
+      \global
+      % bd4 sn4
+      <<
+        {
+          %      \repeat unfold 16 cl16
+          %      \repeat unfold 16 hh16
+          hh8 cl hh cl hh cl hh cl
+          %        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
+        } \\ {
+          bd4 sn4 sn4 sn4
+        }
+      >>
+    }
+  >>
+}
+
 \bookpart {
-\header {
-  title = ""
-  composer = ""
-  poet = ""
-  meter = ""
-  piece = ""
-  opus = "Suzuki No. , Vol. 1"
-  tagline = ""
-}  \score {
+  \header {
+    title = ""
+    composer = ""
+    poet = ""
+    meter = ""
+    piece = ""
+    opus = "Suzuki No. , Vol. 1"
+    tagline = ""
+  }  \score {
     <<
       \scoreHCelloPart
       \scoreHPianoPart
@@ -635,16 +798,35 @@ scoreIPianoPart = \new PianoStaff \with {
   } { \clef bass \scoreILeft }
 >>
 
+clave = {
+  \new DrumStaff <<
+    \drummode {
+      \global
+      % bd4 sn4
+      <<
+        {
+          %      \repeat unfold 16 cl16
+          %      \repeat unfold 16 hh16
+          hh8 cl hh cl hh cl hh cl
+          %        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
+        } \\ {
+          bd4 sn4 sn4 sn4
+        }
+      >>
+    }
+  >>
+}
+
 \bookpart {
-\header {
-  title = ""
-  composer = ""
-  poet = ""
-  meter = ""
-  piece = ""
-  opus = "Suzuki No. , Vol. 1"
-  tagline = ""
-}  \score {
+  \header {
+    title = ""
+    composer = ""
+    poet = ""
+    meter = ""
+    piece = ""
+    opus = "Suzuki No. , Vol. 1"
+    tagline = ""
+  }  \score {
     <<
       \scoreICelloPart
       \scoreIPianoPart
@@ -702,16 +884,35 @@ scoreJPianoPart = \new PianoStaff \with {
   } { \clef bass \scoreJLeft }
 >>
 
+clave = {
+  \new DrumStaff <<
+    \drummode {
+      \global
+      % bd4 sn4
+      <<
+        {
+          %      \repeat unfold 16 cl16
+          %      \repeat unfold 16 hh16
+          hh8 cl hh cl hh cl hh cl
+          %        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
+        } \\ {
+          bd4 sn4 sn4 sn4
+        }
+      >>
+    }
+  >>
+}
+
 \bookpart {
-\header {
-  title = ""
-  composer = ""
-  poet = ""
-  meter = ""
-  piece = ""
-  opus = "Suzuki No. , Vol. 1"
-  tagline = ""
-}  \score {
+  \header {
+    title = ""
+    composer = ""
+    poet = ""
+    meter = ""
+    piece = ""
+    opus = "Suzuki No. , Vol. 1"
+    tagline = ""
+  }  \score {
     <<
       \scoreJCelloPart
       \scoreJPianoPart
@@ -769,16 +970,35 @@ scoreKPianoPart = \new PianoStaff \with {
   } { \clef bass \scoreKLeft }
 >>
 
+clave = {
+  \new DrumStaff <<
+    \drummode {
+      \global
+      % bd4 sn4
+      <<
+        {
+          %      \repeat unfold 16 cl16
+          %      \repeat unfold 16 hh16
+          hh8 cl hh cl hh cl hh cl
+          %        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
+        } \\ {
+          bd4 sn4 sn4 sn4
+        }
+      >>
+    }
+  >>
+}
+
 \bookpart {
-\header {
-  title = ""
-  composer = ""
-  poet = ""
-  meter = ""
-  piece = ""
-  opus = "Suzuki No. , Vol. 1"
-  tagline = ""
-}  \score {
+  \header {
+    title = ""
+    composer = ""
+    poet = ""
+    meter = ""
+    piece = ""
+    opus = "Suzuki No. , Vol. 1"
+    tagline = ""
+  }  \score {
     <<
       \scoreKCelloPart
       \scoreKPianoPart
@@ -836,16 +1056,35 @@ scoreLPianoPart = \new PianoStaff \with {
   } { \clef bass \scoreLLeft }
 >>
 
+clave = {
+  \new DrumStaff <<
+    \drummode {
+      \global
+      % bd4 sn4
+      <<
+        {
+          %      \repeat unfold 16 cl16
+          %      \repeat unfold 16 hh16
+          hh8 cl hh cl hh cl hh cl
+          %        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
+        } \\ {
+          bd4 sn4 sn4 sn4
+        }
+      >>
+    }
+  >>
+}
+
 \bookpart {
-\header {
-  title = ""
-  composer = ""
-  poet = ""
-  meter = ""
-  piece = ""
-  opus = "Suzuki No. , Vol. 1"
-  tagline = ""
-}  \score {
+  \header {
+    title = ""
+    composer = ""
+    poet = ""
+    meter = ""
+    piece = ""
+    opus = "Suzuki No. , Vol. 1"
+    tagline = ""
+  }  \score {
     <<
       \scoreLCelloPart
       \scoreLPianoPart
@@ -861,7 +1100,7 @@ scoreLPianoPart = \new PianoStaff \with {
 
 globalM = {
   \key g \major
-%  \numericTimeSignature
+  %  \numericTimeSignature
   \time 2/2
   \tempo "Allegro" 2=100
 }
@@ -996,21 +1235,52 @@ scoreMPianoPart = \new PianoStaff \with {
   } { \clef bass \scoreMLeft }
 >>
 
+claveM = {
+  \new DrumStaff <<
+    \drummode {
+      \globalM
+      % bd4 sn4
+      <<
+        {
+          %      \repeat unfold 16 cl16
+          %      \repeat unfold 16 hh16
+          hh8 cl hh cl hh cl hh cl
+          %        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
+        } \\ {
+          bd4 sn4 sn4 sn4
+        }
+      >>
+    }
+  >>
+}
+
 \bookpart {
-\header {
-  title = "Rigadoon"
-  composer = "Henry Purcell"
-  poet = ""
-  meter = ""
-  piece = ""
-  opus = "Suzuki No. 13, Vol. 1"
-  tagline = ""
-}  \score {
+  \header {
+    title = "Rigadoon"
+    composer = "Henry Purcell"
+    poet = ""
+    meter = ""
+    piece = ""
+    opus = "Suzuki No. 13, Vol. 1"
+    tagline = ""
+  }
+  \score {
     <<
       \scoreMCelloPart
       \scoreMPianoPart
     >>
     \layout { }
+  }
+  \score {
+    {
+      \claveM
+      \unfoldRepeats {
+        <<
+          \scoreMCelloPart
+          \scoreMPianoPart
+        >>
+      }
+    }
     \midi { }
   }
 }
@@ -1063,16 +1333,35 @@ scoreNPianoPart = \new PianoStaff \with {
   } { \clef bass \scoreNLeft }
 >>
 
+clave = {
+  \new DrumStaff <<
+    \drummode {
+      \global
+      % bd4 sn4
+      <<
+        {
+          %      \repeat unfold 16 cl16
+          %      \repeat unfold 16 hh16
+          hh8 cl hh cl hh cl hh cl
+          %        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
+        } \\ {
+          bd4 sn4 sn4 sn4
+        }
+      >>
+    }
+  >>
+}
+
 \bookpart {
-\header {
-  title = ""
-  composer = ""
-  poet = ""
-  meter = ""
-  piece = ""
-  opus = "Suzuki No. 15, Vol. 1"
-  tagline = ""
-}  \score {
+  \header {
+    title = ""
+    composer = ""
+    poet = ""
+    meter = ""
+    piece = ""
+    opus = "Suzuki No. 15, Vol. 1"
+    tagline = ""
+  }  \score {
     <<
       \scoreNCelloPart
       \scoreNPianoPart
@@ -1130,16 +1419,35 @@ scoreOPianoPart = \new PianoStaff \with {
   } { \clef bass \scoreOLeft }
 >>
 
+clave = {
+  \new DrumStaff <<
+    \drummode {
+      \global
+      % bd4 sn4
+      <<
+        {
+          %      \repeat unfold 16 cl16
+          %      \repeat unfold 16 hh16
+          hh8 cl hh cl hh cl hh cl
+          %        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
+        } \\ {
+          bd4 sn4 sn4 sn4
+        }
+      >>
+    }
+  >>
+}
+
 \bookpart {
-\header {
-  title = "The Happy Farmer"
-  composer = "Robert Schumann"
-  poet = ""
-  meter = ""
-  piece = ""
-  opus = "Suzuki No. 15, Vol. 1"
-  tagline = ""
-}  \score {
+  \header {
+    title = "The Happy Farmer"
+    composer = "Robert Schumann"
+    poet = ""
+    meter = ""
+    piece = ""
+    opus = "Suzuki No. 15, Vol. 1"
+    tagline = ""
+  }  \score {
     <<
       \scoreOCelloPart
       \scoreOPianoPart
@@ -1164,32 +1472,32 @@ scorePCello = \relative c {
   \globalP
   % Music follows here.
   \repeat volta 2 {
-  g'4-4\downbow g--\upbow( g--\upbow)
-  g c8 b c4
-  e, d8-0( f-2) e d |
-  e4 d8 e c4 |
-  a' a a |
-  a g8 f e d
-  g4 f8 e d e |
-  c2.
+    g'4-4\downbow g--\upbow( g--\upbow)
+    g c8 b c4
+    e, d8-0( f-2) e d |
+    e4 d8 e c4 |
+    a' a a |
+    a g8 f e d
+    g4 f8 e d e |
+    c2.
   }
   \repeat volta 2 {
-  d4 d d |
-  d g8 fs g4 |
-  d e f |
-  e d8 e c4 |
-  c' c c |
-  c8 b a g fs e |
-  d4 g fs |
-  g2 r4 |
-  c f, f |
-  f a8 g f4 |
-  d' f, f |
-  e8 g f e d4 |
-  g g g |
-  g a8 b c4 |
-  e,8 g f e d e |
-  c2.
+    d4 d d |
+    d g8 fs g4 |
+    d e f |
+    e d8 e c4 |
+    c' c c |
+    c8 b a g fs e |
+    d4 g fs |
+    g2 r4 |
+    c f, f |
+    f a8 g f4 |
+    d' f, f |
+    e8 g f e d4 |
+    g g g |
+    g a8 b c4 |
+    e,8 g f e d e |
+    c2.
   }
 }
 
@@ -1197,32 +1505,32 @@ scorePRight = \relative c'' {
   \globalP
   % Music follows here.
   \repeat volta 2 {
-  <e, g>2 <d f>4
-  <c e>2. |
-  <c g>2 <d g>4 |
-  <e g>2. |
-  <c a'>2. |
-  <c a'>2 <d b'>4 |
-  <g c>a <f b> |
-  <e c'>2.
+    <e, g>2 <d f>4
+    <c e>2. |
+    <c g>2 <d g>4 |
+    <e g>2. |
+    <c a'>2. |
+    <c a'>2 <d b'>4 |
+    <g c>a <f b> |
+    <e c'>2.
   }
   \repeat volta 2 {
-  <b d>2<c d>4 |
-  d2. |
-  d4 e <b f'> |
-  <c e> d c |
-  <c a'>2. |
-  <<{a'2.}\\{c,4 d fs}>> |
-  <<{g2 fs4}\\{d4 e c}>> |
-  <b g'>2. |
-  <c f>2 c'4 |
-  <f, d'>2. |
-  <d g>2 d'4|
-  <g, e'>2 <f d'>4 |
-  <g c>2 <f b>4 |
-  <e c'> <g e'>8 <f d'> <e c'>4~ |
-  <e c'> <f a> <d b'> |
-  <e c'>2.
+    <b d>2<c d>4 |
+    d2. |
+    d4 e <b f'> |
+    <c e> d c |
+    <c a'>2. |
+    <<{a'2.}\\{c,4 d fs}>> |
+    <<{g2 fs4}\\{d4 e c}>> |
+    <b g'>2. |
+    <c f>2 c'4 |
+    <f, d'>2. |
+    <d g>2 d'4|
+    <g, e'>2 <f d'>4 |
+    <g c>2 <f b>4 |
+    <e c'> <g e'>8 <f d'> <e c'>4~ |
+    <e c'> <f a> <d b'> |
+    <e c'>2.
   }
 }
 
@@ -1231,31 +1539,31 @@ scorePLeft = \relative c' {
   % Music follows here.
   \repeat volta 2 {
     c,2 b4
-  c c8 d e f |
-  e2 b4 |
-  c d e |
-  f2. |
-  f, |
-  e4 f g |
-  c8 g e g c,4
+    c c8 d e f |
+    e2 b4 |
+    c d e |
+    f2. |
+    f, |
+    e4 f g |
+    c8 g e g c,4
   }
   \repeat volta 2 {
-  g'2 a4 |
-  b2. |
-  b4 c g |
-  c, d e |
-  a2. |
-  fs2 d4 |
-  b' c d |
-  g8 d b d g,4 |
-  a2. |
-  a'8 d f, a d,4 |
-  b2. |
-  c2 d4 |
-  e2 d4 |
-  c2. |
-  g'2 g,4 |
-  c,2.
+    g'2 a4 |
+    b2. |
+    b4 c g |
+    c, d e |
+    a2. |
+    fs2 d4 |
+    b' c d |
+    g8 d b d g,4 |
+    a2. |
+    a'8 d f, a d,4 |
+    b2. |
+    c2 d4 |
+    e2 d4 |
+    c2. |
+    g'2 g,4 |
+    c,2.
 
   }
 }
@@ -1279,21 +1587,53 @@ scorePPianoPart = \new PianoStaff \with {
   } { \clef bass \scorePLeft }
 >>
 
+claveP = {
+  \new DrumStaff <<
+    \drummode {
+      \globalP
+      % bd4 sn4
+      <<
+        {
+          %      \repeat unfold 16 cl16
+          %      \repeat unfold 16 hh16
+          hh8 cl hh cl hh cl
+          %        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
+        } \\ {
+          bd4 sn4 sn4
+        }
+      >>
+    }
+  >>
+}
+
 \bookpart {
-\header {
-  title = "Minuet in C"
-  composer = "Johann Sebastian Bach"
-  poet = "Bach: 21.03.1685-28.07.1750"
-  meter = ""
-  piece = ""
-  opus = "Suzuki No. 16, Vol. 1"
-  tagline = ""
-}  \score {
+  \header {
+    title = "Minuet in C"
+    composer = "Johann Sebastian Bach"
+    poet = "Bach: 21.03.1685-28.07.1750"
+    meter = ""
+    piece = ""
+    opus = "Suzuki No. 16, Vol. 1"
+    tagline = ""
+  }
+  \score {
     <<
       \scorePCelloPart
       \scorePPianoPart
     >>
     \layout { }
+  }
+  \score {
+    {
+      \claveP
+      \unfoldRepeats
+      {
+        <<
+          \scorePCelloPart
+          \scorePPianoPart
+        >>
+      }
+    }
     \midi { }
   }
 }
@@ -1313,97 +1653,97 @@ scoreQCello = \relative c {
   \globalQ
   % Music follows here.
   \repeat volta 2 {
-  c8---4\f e---1 g---4 c---2 d,---0 b'---1
-  c4 c,\upbow c\upbow
-  c8 e g c d, b'
-  c4 c, c
-  a' a a8 c
-  g4 g g8 c
-  f,4 g8 f e f
-  d2.
-  c8 e g c d, b'
-  c4 c, c
-  c8 e g c d, b'
-  c4 c, c
-  a' g8 f e d
-  g4 f8 e d c
-  \tuplet 3/2 {d8( e f)} g,4 b
-  c2.
- }
- \repeat volta 2 {
-  c8 d e d c b
-  c4 a a
-  c'8 b a c b a
-  b4 e, e
-  c'8 b a c b a
-  b4 e, a
-  \tuplet 3/2 {b8 c d} e,4 gs
-  a gs8 a b4
-  c c8 b a g
-  a4 a8 g f e
-  f4 f8 e d c
-  b4 a8 b g4
-  d g, g
-  e' g g
-  f' g8 f e f
-  d2.
-  c8 e g c d, b'
-  c4 c, c
-  c8 e g c d, b'
-  c4 c, c
-  a' g8 f e d
-  g4 f8 e d c
-  \tuplet 3/2 {d8 e f} e,4 g
-  c2.
- }
+    c8---4\f e---1 g---4 c---2 d,---0 b'---1
+    c4 c,\upbow c\upbow
+    c8 e g c d, b'
+    c4 c, c
+    a' a a8 c
+    g4 g g8 c
+    f,4 g8 f e f
+    d2.
+    c8 e g c d, b'
+    c4 c, c
+    c8 e g c d, b'
+    c4 c, c
+    a' g8 f e d
+    g4 f8 e d c
+    \tuplet 3/2 {d8( e f)} g,4 b
+    c2.
+  }
+  \repeat volta 2 {
+    c8 d e d c b
+    c4 a a
+    c'8 b a c b a
+    b4 e, e
+    c'8 b a c b a
+    b4 e, a
+    \tuplet 3/2 {b8 c d} e,4 gs
+    a gs8 a b4
+    c c8 b a g
+    a4 a8 g f e
+    f4 f8 e d c
+    b4 a8 b g4
+    d g, g
+    e' g g
+    f' g8 f e f
+    d2.
+    c8 e g c d, b'
+    c4 c, c
+    c8 e g c d, b'
+    c4 c, c
+    a' g8 f e d
+    g4 f8 e d c
+    \tuplet 3/2 {d8 e f} e,4 g
+    c2.
+  }
 }
 
 scoreQRight = \relative c'' {
   \globalQ
   % Music follows here.
   \repeat volta 2 {
-  <e, c'>2\f <d b'>4
-  <<{c'2.}\\{c,8 e g c g e}>>
-  <e c>2 <d b>4
-  <<{c'2.}\\{c,8 e g c g e}>>
-  <f a>2<f a>4
-  <e g>2<e g>4
-  <<{f g8 f e f}\\{d4 b c}>>
-  d2.
-  <e c'>2<d b'>4
-  <<{c'2.}\\{c,8 e g c g e}>>
-  <e c'>2<d b'>4
-  <<{c'2.}\\{c,8 e g c g e}>>
-  <f a c>2.
-  <e g c>
-  <f a d>4 g <f b>
-  <e c'>2.
+    <e, c'>2\f <d b'>4
+    <<{c'2.}\\{c,8 e g c g e}>>
+    <e c>2 <d b>4
+    <<{c'2.}\\{c,8 e g c g e}>>
+    <f a>2<f a>4
+    <e g>2<e g>4
+    <<{f g8 f e f}\\{d4 b c}>>
+    d2.
+    <e c'>2<d b'>4
+    <<{c'2.}\\{c,8 e g c g e}>>
+    <e c'>2<d b'>4
+    <<{c'2.}\\{c,8 e g c g e}>>
+    <f a c>2.
+    <e g c>
+    <f a d>4 g <f b>
+    <e c'>2.
   }
   \repeat volta 2 {
-  c4 b e
-  c a a
-  <c e a>2 <d f>4
-  <<{e2.}\\{e8 gs b e b gs}>>
-  <c, e a>2<d f>4
-  <e gs>2<e a>4
-  <<{a2 gs4}\\{f4 e2}>>
-  <c e a>2.
-  <e g c>
-  <f a c>
-  <f a d>2<f a d>4
-  <f b>2.
-  b8 g b g b g
-  c g c g c g
-  <f d'>2<e c'>4
-  <d b'>2.
-  <e c'>2<d b'>4
-  <<{c'2.}\\{c,8 e g c g e}>>
-  <e c'>2<d b'>4
-  <<{c'2.}\\{c,8 e g c g e}>>
-  <f a c>2.
-  <e g c>
-  <f a d>4 g <f g b>4
-  <e g c>2.
+    c4 b e
+    c a a
+    <c e a>2 <d f>4
+    <<{e2.}\\{e8 gs b e b gs}>>
+    <c, e a>2<d f>4
+    <e gs>2<e a>4
+    <<{a2 gs4}\\{f4 e2}>>
+    <c e a>2.
+    <e g c>
+    <f a c>
+    <f a d>2<f a d>4
+    <f b>2.
+    b8 g b g b g
+    c g c g c g
+    <f d'>2<e c'>4
+    <d b'>2.
+    <e c'>2<d b'>4
+    <<{c'2.}\\{c,8 e g c g e}>>
+    <e c'>2<d b'>4
+    <<{c'2.}\\{c,8 e g c g e}>>
+    <f a c>2.
+    <e g c>
+    <f a d>4 g <f g b>4
+    <e g c>2.
   }
 }
 
@@ -1411,48 +1751,48 @@ scoreQLeft = \relative c' {
   \globalQ
   % Music follows here.
   \repeat volta 2 {
-  c,2 g4
-  c,2.
-  c'2 g4
-  c,2.
-  f4 c' f,
-  e c' e,
-  d g c,
-  g'8 a b g a b
-  c2 g4
-  c,2.
-  c'2 g4
-  c,2.
-  f4 a c
-  e, g c
-  f,2 g4
-  c g c,
+    c,2 g4
+    c,2.
+    c'2 g4
+    c,2.
+    f4 c' f,
+    e c' e,
+    d g c,
+    g'8 a b g a b
+    c2 g4
+    c,2.
+    c'2 g4
+    c,2.
+    f4 a c
+    e, g c
+    f,2 g4
+    c g c,
   }
   \repeat volta 2 {
-  a'4 gs e
-  a e a,
-  c'2 d4
-  e e, e
-  c'2 d4
-  e d c
-  d e2
-  a,2.
-  e4 g c
-  f, g a
-  d, e f
-  g d g,
-  g'2 d'4
-  g,2 c4
-  b g c
-  g8 a b g a b
-  c2 g4
-  c,2.
-  c'2 g4
-  c,2.
-  f4 a c
-  e, g c
-  f, g g
-  c g c,
+    a'4 gs e
+    a e a,
+    c'2 d4
+    e e, e
+    c'2 d4
+    e d c
+    d e2
+    a,2.
+    e4 g c
+    f, g a
+    d, e f
+    g d g,
+    g'2 d'4
+    g,2 c4
+    b g c
+    g8 a b g a b
+    c2 g4
+    c,2.
+    c'2 g4
+    c,2.
+    f4 a c
+    e, g c
+    f, g g
+    c g c,
   }
 }
 
@@ -1475,22 +1815,54 @@ scoreQPianoPart = \new PianoStaff \with {
   } { \clef bass \scoreQLeft }
 >>
 
-\bookpart {
-\header {
-  title = "Minuet No. 2"
-  composer = "Johann Sebastian Bach"
-  poet = "Bach: 21.03.1685-28.07.1750"
-  meter = ""
-  piece = ""
-  opus = "Suzuki No. 17, Vol. 1"
-  tagline = ""
+claveQ = {
+  \new DrumStaff <<
+    \drummode {
+      \globalQ
+      % bd4 sn4
+      <<
+        {
+          %      \repeat unfold 16 cl16
+          %      \repeat unfold 16 hh16
+          \repeat unfold 3 {hh8 cl}
+          %          hh8 cl hh cl hh cl
+          %        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
+        } \\ {
+          bd4 sn4 sn4
+        }
+      >>
+    }
+  >>
 }
-\score {
+
+\bookpart {
+  \header {
+    title = "Minuet No. 2"
+    composer = "Johann Sebastian Bach"
+    poet = "Bach: 21.03.1685-28.07.1750"
+    meter = ""
+    piece = ""
+    opus = "Suzuki No. 17, Vol. 1"
+    tagline = ""
+  }
+  \score {
     <<
       \scoreQCelloPart
       \scoreQPianoPart
     >>
     \layout { }
+  }
+  \score {
+    {
+      \claveQ
+      \unfoldRepeats
+      {
+        <<
+          \scoreQCelloPart
+          \scoreQPianoPart
+        >>
+      }
+    }
     \midi { }
   }
 }

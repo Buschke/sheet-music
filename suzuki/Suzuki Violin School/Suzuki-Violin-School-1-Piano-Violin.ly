@@ -83,6 +83,21 @@ scoreAPianoPart = \new PianoStaff \with {
   } { \clef bass \scoreALeft }
 >>
 
+claveA = {\new DrumStaff <<
+  \drummode {\globalA
+   % bd4 sn4
+    << {
+%      \repeat unfold 16 cl16
+%      \repeat unfold 16 hh16
+         hh8 cl hh cl hh cl hh cl
+%        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
+    } \\ {
+      bd4 sn4 sn4 sn4
+    } >>
+  }
+>>
+}
+
 \bookpart {
 \header {
   title = "Twinkle, Twinkle"
@@ -99,6 +114,12 @@ scoreAPianoPart = \new PianoStaff \with {
       \scoreAPianoPart
     >>
     \layout { }
+  }
+  \score {
+    <<
+      \scoreAViolinPart
+      \scoreAPianoPart
+    >>
     \midi { }
   }
 }
@@ -150,6 +171,21 @@ scoreBPianoPart = \new PianoStaff \with {
     midiInstrument = "acoustic grand"
   } { \clef bass \scoreBLeft }
 >>
+
+claveB = {\new DrumStaff <<
+  \drummode {\globalB
+   % bd4 sn4
+    << {
+%      \repeat unfold 16 cl16
+%      \repeat unfold 16 hh16
+         hh8 cl hh cl hh cl hh cl
+%        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
+    } \\ {
+      bd4 sn4 sn4 sn4
+    } >>
+  }
+>>
+}
 
 \bookpart {
 \header {
@@ -219,6 +255,21 @@ scoreCPianoPart = \new PianoStaff \with {
   } { \clef bass \scoreCLeft }
 >>
 
+claveC = {\new DrumStaff <<
+  \drummode {\globalC
+   % bd4 sn4
+    << {
+%      \repeat unfold 16 cl16
+%      \repeat unfold 16 hh16
+         hh8 cl hh cl hh cl hh cl
+%        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
+    } \\ {
+      bd4 sn4 sn4 sn4
+    } >>
+  }
+>>
+}
+
 \bookpart {
 \header {
   title = "Song of the Wind"
@@ -287,6 +338,21 @@ scoreDPianoPart = \new PianoStaff \with {
   } { \clef bass \scoreDLeft }
 >>
 
+claveD = {\new DrumStaff <<
+  \drummode {\globalD
+   % bd4 sn4
+    << {
+%      \repeat unfold 16 cl16
+%      \repeat unfold 16 hh16
+         hh8 cl hh cl hh cl hh cl
+%        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
+    } \\ {
+      bd4 sn4 sn4 sn4
+    } >>
+  }
+>>
+}
+
 \bookpart {
 \header {
   title = "Go Tell Aunt Rhody"
@@ -354,6 +420,21 @@ scoreEPianoPart = \new PianoStaff \with {
     midiInstrument = "acoustic grand"
   } { \clef bass \scoreELeft }
 >>
+
+claveE = {\new DrumStaff <<
+  \drummode {\globalE
+   % bd4 sn4
+    << {
+%      \repeat unfold 16 cl16
+%      \repeat unfold 16 hh16
+         hh8 cl hh cl hh cl hh cl
+%        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
+    } \\ {
+      bd4 sn4 sn4 sn4
+    } >>
+  }
+>>
+}
 
 \bookpart {
 \header {
@@ -468,7 +549,8 @@ claveF = {\new DrumStaff <<
     \layout { }
   }
   \score {
-    {\claveF
+    {
+    \claveF
     \unfoldRepeats {
     <<
       \scoreFViolinPart
@@ -545,6 +627,21 @@ scoreGPianoPart = \new PianoStaff \with {
   } { \clef bass \scoreGLeft }
 >>
 
+claveG = {\new DrumStaff <<
+  \drummode {\globalG
+   % bd4 sn4
+    << {
+%      \repeat unfold 16 cl16
+%      \repeat unfold 16 hh16
+         hh8 cl hh cl hh cl hh cl
+%        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
+    } \\ {
+      bd4 sn4 sn4 sn4
+    } >>
+  }
+>>
+}
+
 \bookpart {
 \header {
   title = "Long, Long Ago"
@@ -561,6 +658,15 @@ scoreGPianoPart = \new PianoStaff \with {
       \scoreGPianoPart
     >>
     \layout { }
+  }
+  \score {
+    {
+    \claveG
+    <<
+      \scoreGViolinPart
+      \scoreGPianoPart
+    >>
+    }
     \midi { }
   }
 }
@@ -613,6 +719,21 @@ scoreHPianoPart = \new PianoStaff \with {
   } { \clef bass \scoreHLeft }
 >>
 
+claveH = {\new DrumStaff <<
+  \drummode {\globalH
+   % bd4 sn4
+    << {
+%      \repeat unfold 16 cl16
+%      \repeat unfold 16 hh16
+         hh8 cl hh cl hh cl
+%        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
+    } \\ {
+      bd4 sn4 sn4
+    } >>
+  }
+>>
+}
+
 \bookpart {
 \header {
   title = "Allegro"
@@ -629,6 +750,15 @@ scoreHPianoPart = \new PianoStaff \with {
       \scoreHPianoPart
     >>
     \layout { }
+  }
+  \score {
+    {
+      \claveH
+      <<
+        \scoreHViolinPart
+        \scoreHPianoPart
+      >>
+    }
     \midi { }
   }
 }
@@ -680,6 +810,21 @@ scoreIPianoPart = \new PianoStaff \with {
     midiInstrument = "acoustic grand"
   } { \clef bass \scoreILeft }
 >>
+
+claveI = {\new DrumStaff <<
+  \drummode {\globalI
+   % bd4 sn4
+    << {
+%      \repeat unfold 16 cl16
+%      \repeat unfold 16 hh16
+         hh8 cl hh cl hh cl hh cl
+%        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
+    } \\ {
+      bd4 sn4 sn4 sn4
+    } >>
+  }
+>>
+}
 
 \bookpart {
 \header {
@@ -749,6 +894,21 @@ scoreJPianoPart = \new PianoStaff \with {
   } { \clef bass \scoreJLeft }
 >>
 
+claveJ = {\new DrumStaff <<
+  \drummode {\globalJ
+   % bd4 sn4
+    << {
+%      \repeat unfold 16 cl16
+%      \repeat unfold 16 hh16
+         hh8 cl hh cl hh cl hh cl
+%        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
+    } \\ {
+      bd4 sn4 sn4 sn4
+    } >>
+  }
+>>
+}
+
 \bookpart {
 \header {
   title = "Allegretto"
@@ -817,6 +977,21 @@ scoreKPianoPart = \new PianoStaff \with {
   } { \clef bass \scoreKLeft }
 >>
 
+claveK = {\new DrumStaff <<
+  \drummode {\globalK
+   % bd4 sn4
+    << {
+%      \repeat unfold 16 cl16
+%      \repeat unfold 16 hh16
+         hh8 cl hh cl hh cl hh cl
+%        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
+    } \\ {
+      bd4 sn4 sn4 sn4
+    } >>
+  }
+>>
+}
+
 \bookpart {
 \header {
   title = "Andantino"
@@ -884,6 +1059,21 @@ scoreLPianoPart = \new PianoStaff \with {
     midiInstrument = "acoustic grand"
   } { \clef bass \scoreLLeft }
 >>
+
+claveL = {\new DrumStaff <<
+  \drummode {\globalL
+   % bd4 sn4
+    << {
+%      \repeat unfold 16 cl16
+%      \repeat unfold 16 hh16
+         hh8 cl hh cl hh cl hh cl
+%        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
+    } \\ {
+      bd4 sn4 sn4 sn4
+    } >>
+  }
+>>
+}
 
 \bookpart {
 \header {
@@ -991,6 +1181,21 @@ scoreMPianoPart = \new PianoStaff \with {
     midiInstrument = "acoustic grand"
   } { \clef bass \scoreMLeft }
 >>
+
+claveM = {\new DrumStaff <<
+  \drummode {\globalM
+   % bd4 sn4
+    << {
+%      \repeat unfold 16 cl16
+%      \repeat unfold 16 hh16
+         hh8 cl hh cl hh cl hh cl
+%        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
+    } \\ {
+      bd4 sn4 sn4 sn4
+    } >>
+  }
+>>
+}
 
 \bookpart {
 \header {
@@ -1103,6 +1308,21 @@ scoreNPianoPart = \new PianoStaff \with {
   } { \clef bass \scoreNLeft }
 >>
 
+claveN = {\new DrumStaff <<
+  \drummode {\globalN
+   % bd4 sn4
+    << {
+%      \repeat unfold 16 cl16
+%      \repeat unfold 16 hh16
+         hh8 cl hh cl hh cl hh cl
+%        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
+    } \\ {
+      bd4 sn4 sn4 sn4
+    } >>
+  }
+>>
+}
+
 \bookpart {
 \header {
   title = "Minuet 2"
@@ -1207,6 +1427,21 @@ scoreOPianoPart = \new PianoStaff \with {
   } { \clef bass \scoreOLeft }
 >>
 
+claveO = {\new DrumStaff <<
+  \drummode {\globalO
+   % bd4 sn4
+    << {
+%      \repeat unfold 16 cl16
+%      \repeat unfold 16 hh16
+         hh8 cl hh cl hh cl hh cl
+%        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
+    } \\ {
+      bd4 sn4 sn4 sn4
+    } >>
+  }
+>>
+}
+
 \bookpart {
 \header {
   title = "Minuet 3"
@@ -1304,6 +1539,21 @@ scorePPianoPart = \new PianoStaff \with {
   } { \clef bass \scorePLeft }
 >>
 
+claveP = {\new DrumStaff <<
+  \drummode {\globalP
+   % bd4 sn4
+    << {
+%      \repeat unfold 16 cl16
+%      \repeat unfold 16 hh16
+         hh8 cl hh cl hh cl hh cl
+%        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
+    } \\ {
+      bd4 sn4 sn4 sn4
+    } >>
+  }
+>>
+}
+
 \bookpart {
 \header {
   title = "The Happy Farmer"
@@ -1398,6 +1648,21 @@ scoreQPianoPart = \new PianoStaff \with {
     midiInstrument = "acoustic grand"
   } { \clef bass \scoreQLeft }
 >>
+
+claveQ = {\new DrumStaff <<
+  \drummode {\globalQ
+   % bd4 sn4
+    << {
+%      \repeat unfold 16 cl16
+%      \repeat unfold 16 hh16
+         hh8 cl hh cl hh cl hh cl
+%        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
+    } \\ {
+      bd4 sn4 sn4 sn4
+    } >>
+  }
+>>
+}
 
 \bookpart {
 \header {
