@@ -6,7 +6,7 @@
   title = ""
   subtitle = "Suzuki Cello School"
   subsubtitle = "Volume 1"
-  instrument = "Cello und Piano"
+  instrument = "Cello"
   composer = ""
   arranger = \markup {"Fingering: " \with-url "https://buschke.com" "Sven Buschke"}
   poet = ""

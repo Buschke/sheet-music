@@ -605,7 +605,7 @@ globalG = {
   \key a \major
   %  \numericTimeSignature
   \time 4/4
-  \tempo "Moderato" 4=100
+  \tempo "Moderato" 4=50
 }
 
 scoreGViolin = \relative c'' {

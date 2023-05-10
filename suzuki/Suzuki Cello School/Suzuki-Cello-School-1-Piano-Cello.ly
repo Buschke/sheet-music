@@ -112,8 +112,8 @@ claveA = {
 
 \bookpart {
   \header {
-    title = ""
-    composer = ""
+    title = "Twinkle, Twinkle, Little Star"
+    composer = "Traditional"
     poet = ""
     meter = ""
     piece = ""
