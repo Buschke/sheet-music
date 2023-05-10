@@ -49,7 +49,7 @@ globalA = {
 scoreAViolin = \relative c'' {
   \globalA
   % Music follows here.
-  a4-.\downbow\f a-.\upbow e'-. e-. fs-. fs-. e2-- d4-. d-. cs-. cs-. b-. b-. a2
+  a4-.-0\downbow\f a-.\upbow e'-.-0 e-. fs-.-1 fs-. e2---0 d4-.-3 d-. cs-.-2 cs-. b-.-1 b-. a2---0
   e'4-. e-. d-. d-. cs-. cs-. b2-- e4-. e-. d-. d-. cs-. cs-. b2--
   a4-. a-. e'-. e-. fs-. fs-. e2-- d4-. d-. cs-. cs-. b-. b-. a2--
   \bar "|."
