@@ -58,7 +58,7 @@ scoreAViolin = \relative c'' {
 scoreARight = \relative c'' {
   \globalA
   % Music follows here.
-  a4\f a <cs e> <cs e> <fs a> <fs a> <cs e>2 <b d>4 <b d> <a cs> <a cs> <gs b> <gs b> a2
+  a4\f a <cs e> <cs e> <d fs>4 4 <cs e>2 <b d>4 <b d> <a cs> <a cs> <gs b> <gs b> a2
   <cs e>4 <cs e> <b d> <b d> <a cs>4 4 <gs b>2 <cs e>4 4 <b d>4 4 <a cs>4 4 <gs b>2
   a4 a <cs e>4 4 <d fs>4 4 <cs e>2 <b d>4 4 <a cs>4 4 <gs b>4 4 a8 r <a cs e a>4
   \bar "|."
