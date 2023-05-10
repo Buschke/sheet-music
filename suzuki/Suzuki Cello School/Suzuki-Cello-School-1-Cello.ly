@@ -14,7 +14,7 @@
   piece = ""
   opus = "No. 1"
   copyright = \markup {"© Fingering, 03.05.2023: " \with-url "https://buschke.com" "Sven Buschke"}
-%  tagline = ""
+  %  tagline = ""
   % Remove default LilyPond tagline
   tagline = ##f
 }
@@ -43,20 +43,32 @@ global = {
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 globalA = {
-  \key g \major
+  \key d \major
   \defaultTimeSignature
-%  \numericTimeSignature
+  %  \numericTimeSignature
   \time 4/4
   \tempo "Maestoso" 4=100
 }
 
 scoreACello = \relative c {
-  \global
+  \globalA
   % Music follows here.
-
+  d4-.\downbow\f_\markup{\italic marcato} d-.\upbow a'-. a-. b-. b-. a2-- g4-. g-. fs-. fs-. e-. e-. d2
+  a'4-. a-. g-. g-. fs-. fs-. e2-- a4-. a-. g-. g-. fs-. fs-. e2--
+  d4-. d-. a'-. a-. b-. b-. a2-- g4-. g-. fs-. fs-. e-. e-. d2--
+  \bar "|."
 }
 
 \bookpart {
+  \header {
+    title = "Twinkle, Twinkle, Little Star"
+    composer = "Traditional"
+    poet = ""
+    meter = ""
+    piece = ""
+    opus = "Suzuki No. 1, Vol. 1"
+    tagline = ""
+  }
   \score {
     \new Staff \with {
       instrumentName = "Cello"
@@ -75,7 +87,7 @@ scoreACello = \relative c {
 globalB = {
   \key g \major
   \defaultTimeSignature
-%  \numericTimeSignature
+  %  \numericTimeSignature
   \time 4/4
   \tempo "Maestoso" 4=100
 }
@@ -105,7 +117,7 @@ scoreBCello = \relative c {
 globalC = {
   \key g \major
   \defaultTimeSignature
-%  \numericTimeSignature
+  %  \numericTimeSignature
   \time 4/4
   \tempo "Maestoso" 4=100
 }
@@ -135,7 +147,7 @@ scoreCCello = \relative c {
 globalD = {
   \key g \major
   \defaultTimeSignature
-%  \numericTimeSignature
+  %  \numericTimeSignature
   \time 4/4
   \tempo "Maestoso" 4=100
 }
@@ -165,7 +177,7 @@ scoreDCello = \relative c {
 globalE = {
   \key g \major
   \defaultTimeSignature
-%  \numericTimeSignature
+  %  \numericTimeSignature
   \time 4/4
   \tempo "Maestoso" 4=100
 }
@@ -195,7 +207,7 @@ scoreECello = \relative c {
 globalF = {
   \key g \major
   \defaultTimeSignature
-%  \numericTimeSignature
+  %  \numericTimeSignature
   \time 4/4
   \tempo "Maestoso" 4=100
 }
@@ -224,7 +236,7 @@ scoreFCello = \relative c {
 
 globalG = {
   \key d \major
-%  \numericTimeSignature
+  %  \numericTimeSignature
   \time 4/4
   \tempo "Allegro moderato" 4=100
 }
@@ -240,15 +252,15 @@ scoreGCello = \relative c {
 }
 
 \bookpart {
-\header {
-  title = "May Song"
-  composer = "Folk Song"
-  poet = ""
-  meter = ""
-  piece = ""
-  opus = "Suzuki No. 7, Vol. 1"
-  tagline = ""
-}
+  \header {
+    title = "May Song"
+    composer = "Folk Song"
+    poet = ""
+    meter = ""
+    piece = ""
+    opus = "Suzuki No. 7, Vol. 1"
+    tagline = ""
+  }
   \score {
     \new Staff \with {
       instrumentName = "Cello"
@@ -267,7 +279,7 @@ scoreGCello = \relative c {
 globalH = {
   \key g \major
   \defaultTimeSignature
-%  \numericTimeSignature
+  %  \numericTimeSignature
   \time 4/4
   \tempo "Maestoso" 4=100
 }
@@ -297,7 +309,7 @@ scoreHCello = \relative c {
 globalI = {
   \key g \major
   \defaultTimeSignature
-%  \numericTimeSignature
+  %  \numericTimeSignature
   \time 4/4
   \tempo "Maestoso" 4=100
 }
@@ -327,7 +339,7 @@ scoreICello = \relative c {
 globalJ = {
   \key g \major
   \defaultTimeSignature
-%  \numericTimeSignature
+  %  \numericTimeSignature
   \time 4/4
   \tempo "Maestoso" 4=100
 }
@@ -357,7 +369,7 @@ scoreJCello = \relative c {
 globalK = {
   \key g \major
   \defaultTimeSignature
-%  \numericTimeSignature
+  %  \numericTimeSignature
   \time 4/4
   \tempo "Maestoso" 4=100
 }
@@ -387,7 +399,7 @@ scoreKCello = \relative c {
 globalL = {
   \key g \major
   \defaultTimeSignature
-%  \numericTimeSignature
+  %  \numericTimeSignature
   \time 4/4
   \tempo "Maestoso" 4=100
 }
@@ -417,7 +429,7 @@ scoreLCello = \relative c {
 globalM = {
   \key g \major
   \defaultTimeSignature
-%  \numericTimeSignature
+  %  \numericTimeSignature
   \time 2/2
   \tempo "Allegro" 2=100
 }
@@ -461,16 +473,16 @@ scoreMCello = \relative c {
 }
 
 \bookpart {
-\header {
-  title = "Rigadoon"
-  composer = "Henry Purcell"
-  poet = ""
-  meter = ""
-  piece = ""
-  opus = "Suzuki No. 13, Vol. 1"
-  tagline = ""
-}
-\score {
+  \header {
+    title = "Rigadoon"
+    composer = "Henry Purcell"
+    poet = ""
+    meter = ""
+    piece = ""
+    opus = "Suzuki No. 13, Vol. 1"
+    tagline = ""
+  }
+  \score {
     \new Staff \with {
       instrumentName = "Cello"
       shortInstrumentName = "Cl."
@@ -488,7 +500,7 @@ scoreMCello = \relative c {
 globalN = {
   \key g \major
   \defaultTimeSignature
-%  \numericTimeSignature
+  %  \numericTimeSignature
   \time 4/4
   \tempo "Maestoso" 4=100
 }
@@ -518,7 +530,7 @@ scoreNCello = \relative c {
 globalO = {
   \key g \major
   \defaultTimeSignature
-%  \numericTimeSignature
+  %  \numericTimeSignature
   \time 4/4
   \tempo "Maestoso" 4=100
 }
@@ -548,7 +560,7 @@ scoreOCello = \relative c {
 globalP = {
   \key g \major
   \defaultTimeSignature
-%  \numericTimeSignature
+  %  \numericTimeSignature
   \time 3/4
   \tempo "Grazioso" 4=100
 }
@@ -557,47 +569,47 @@ scorePCello = \relative c {
   \globalP
   % Music follows here.
   \repeat volta 2 {
-  g'4-4\downbow g--\upbow( g--\upbow)
-  g c8 b c4
-  e, d8-0( f-2) e d |
-  e4 d8 e c4 |
-  a' a a |
-  a g8 f e d
-  g4 f8 e d e |
-  c2.
+    g'4-4\downbow g--\upbow( g--\upbow)
+    g c8 b c4
+    e, d8-0( f-2) e d |
+    e4 d8 e c4 |
+    a' a a |
+    a g8 f e d
+    g4 f8 e d e |
+    c2.
   }
   \repeat volta 2 {
-  d4 d d |
-  d g8 fs g4 |
-  d e f |
-  e d8 e c4 |
-  c' c c |
-  c8 b a g fs e |
-  d4 g fs |
-  g2 r4 |
-  c f, f |
-  f a8 g f4 |
-  d' f, f |
-  e8 g f e d4 |
-  g g g |
-  g a8 b c4 |
-  e,8 g f e d e |
-  c2.
+    d4 d d |
+    d g8 fs g4 |
+    d e f |
+    e d8 e c4 |
+    c' c c |
+    c8 b a g fs e |
+    d4 g fs |
+    g2 r4 |
+    c f, f |
+    f a8 g f4 |
+    d' f, f |
+    e8 g f e d4 |
+    g g g |
+    g a8 b c4 |
+    e,8 g f e d e |
+    c2.
   }
 
 }
 
 \bookpart {
-\header {
-  title = "Minuet in C"
-  composer = "Johann Sebastian Bach"
-  poet = "Bach: 21.03.1685-28.07.1750"
-  meter = ""
-  piece = ""
-  opus = "Suzuki No. 16, Vol. 1"
-  tagline = ""
-}
-\score {
+  \header {
+    title = "Minuet in C"
+    composer = "Johann Sebastian Bach"
+    poet = "Bach: 21.03.1685-28.07.1750"
+    meter = ""
+    piece = ""
+    opus = "Suzuki No. 16, Vol. 1"
+    tagline = ""
+  }
+  \score {
     \new Staff \with {
       instrumentName = "Cello"
       shortInstrumentName = "Cl."
@@ -615,7 +627,7 @@ scorePCello = \relative c {
 globalQ = {
   \key c \major
   \defaultTimeSignature
-%  \numericTimeSignature
+  %  \numericTimeSignature
   \time 3/4
   \tempo "Allegro" 4=100
 }
@@ -624,61 +636,61 @@ scoreQCello = \relative c {
   \globalQ
   % Music follows here.
   \repeat volta 2 {
-  c8---4\f e---1 g---4 c---2 d,---0 b'---1
-  c4 c,\upbow c\upbow
-  c8 e g c d, b'
-  c4 c, c
-  a' a a8 c
-  g4 g g8 c
-  f,4 g8 f e f
-  d2.
-  c8 e g c d, b'
-  c4 c, c
-  c8 e g c d, b'
-  c4 c, c
-  a' g8 f e d
-  g4 f8 e d c
-  \tuplet 3/2 {d8( e f)} g,4 b
-  c2.
- }
- \repeat volta 2 {
-  c8 d e d c b
-  c4 a a
-  c'8 b a c b a
-  b4 e, e
-  c'8 b a c b a
-  b4 e, a
-  \tuplet 3/2 {b8 c d} e,4 gs
-  a gs8 a b4
-  c c8 b a g
-  a4 a8 g f e
-  f4 f8 e d c
-  b4 a8 b g4
-  d g, g
-  e' g g
-  f' g8 f e f
-  d2.
-  c8 e g c d, b'
-  c4 c, c
-  c8 e g c d, b'
-  c4 c, c
-  a' g8 f e d
-  g4 f8 e d c
-  \tuplet 3/2 {d8 e f} e,4 g
-  c2.
- }
+    c8---4\f e---1 g---4 c---2 d,---0 b'---1
+    c4 c,\upbow c\upbow
+    c8 e g c d, b'
+    c4 c, c
+    a' a a8 c
+    g4 g g8 c
+    f,4 g8 f e f
+    d2.
+    c8 e g c d, b'
+    c4 c, c
+    c8 e g c d, b'
+    c4 c, c
+    a' g8 f e d
+    g4 f8 e d c
+    \tuplet 3/2 {d8( e f)} g,4 b
+    c2.
+  }
+  \repeat volta 2 {
+    c8 d e d c b
+    c4 a a
+    c'8 b a c b a
+    b4 e, e
+    c'8 b a c b a
+    b4 e, a
+    \tuplet 3/2 {b8 c d} e,4 gs
+    a gs8 a b4
+    c c8 b a g
+    a4 a8 g f e
+    f4 f8 e d c
+    b4 a8 b g4
+    d g, g
+    e' g g
+    f' g8 f e f
+    d2.
+    c8 e g c d, b'
+    c4 c, c
+    c8 e g c d, b'
+    c4 c, c
+    a' g8 f e d
+    g4 f8 e d c
+    \tuplet 3/2 {d8 e f} e,4 g
+    c2.
+  }
 }
 
 \bookpart {
-\header {
-  title = "Minuet No. 2"
-  composer = "Johann Sebastian Bach"
-  poet = "Bach: 21.03.1685-28.07.1750"
-  meter = ""
-  piece = ""
-  opus = "Suzuki No. 17, Vol. 1"
-  tagline = ""
-}
+  \header {
+    title = "Minuet No. 2"
+    composer = "Johann Sebastian Bach"
+    poet = "Bach: 21.03.1685-28.07.1750"
+    meter = ""
+    piece = ""
+    opus = "Suzuki No. 17, Vol. 1"
+    tagline = ""
+  }
   \score {
     \new Staff \with {
       instrumentName = "Cello"

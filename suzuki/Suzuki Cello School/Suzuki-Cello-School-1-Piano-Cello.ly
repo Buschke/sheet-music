@@ -43,26 +43,37 @@ global = {
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 globalA = {
-  \key c \major
-  \numericTimeSignature
+  \key d \major
+  %  \numericTimeSignature
   \time 4/4
   \tempo "Andante" 4=100
 }
 
-scoreACello = \relative c {
+scoreACello = \relative c, {
   \globalA
   % Music follows here.
-
+  d'4-.\downbow\f d-.\upbow a'-. a-. b-. b-. a2-- g4-. g-. fs-. fs-. e-. e-. d2
+  a'4-. a-. g-. g-. fs-. fs-. e2-- a4-. a-. g-. g-. fs-. fs-. e2--
+  d4-. d-. a'-. a-. b-. b-. a2-- g4-. g-. fs-. fs-. e-. e-. d2--
+  \bar "|."
 }
 
-scoreARight = \relative c'' {
+scoreARight = \relative c' {
   \globalA
   % Music follows here.
+  d4\f d <fs a> <fs a> <b d> <b d> <fs a>2 <e g>4 <e g> <d fs> <d fs> <cs e> <cs e> d2
+  <fs a>4 <fs a> <e g> <e g> <d fs>4 4 <cs e>2 <fs a>4 4 <e g>4 4 <d fs>4 4 <cs e>2
+  d4 d <fs a>4 4 <g b>4 4 <fs a>2 <e g>4 4 <d fs>4 4 <cs e>4 4 d8 r <d fs a d>4
+  \bar "|."
 }
 
-scoreALeft = \relative c' {
+scoreALeft = \relative c {
   \globalA
   % Music follows here.
+  d8\f a' fs a d,8 a' fs a d, b' g b d, a' fs a cs, a' e a d, a' fs a a, a' cs, a' d, a' fs a
+  d, a' fs a cs, a' e a d, a' fs a a, a' e a d, a' fs a d, b' g b d, a' fs a a, a' cs, a'
+  d, a' fs a d, a' fs a d, b' g b d, a' fs a cs, a' e a d, a' fs a a, a' cs, a' <d, fs a>8 r <d, d'>4
+  \bar "|."
 }
 
 scoreACelloPart = \new Staff \with {
@@ -84,19 +95,15 @@ scoreAPianoPart = \new PianoStaff \with {
   } { \clef bass \scoreALeft }
 >>
 
-clave = {
+claveA = {
   \new DrumStaff <<
     \drummode {
-      \global
-      % bd4 sn4
+      \globalA
       <<
         {
-          %      \repeat unfold 16 cl16
-          %      \repeat unfold 16 hh16
-          hh8 cl hh cl hh cl hh cl
-          %        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
+          \repeat unfold 4 {hh8 cl}
         } \\ {
-          bd4 sn4 sn4 sn4
+          bd4 sn4 4 4
         }
       >>
     }
@@ -119,6 +126,19 @@ clave = {
       \scoreAPianoPart
     >>
     \layout { }
+  }
+  \score {
+    {
+      \claveA
+      \unfoldRepeats
+      {
+        <<
+          \scoreACelloPart
+          \scoreAPianoPart
+        >>
+      }
+    }
+
     \midi { }
   }
 }
