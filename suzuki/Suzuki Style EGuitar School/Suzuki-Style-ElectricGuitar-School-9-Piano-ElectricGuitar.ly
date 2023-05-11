@@ -14,7 +14,7 @@
   piece = ""
   opus = "No. 1"
   copyright = \markup {"© Fingering, 03.05.2023: " \with-url "https://buschke.com" "Sven Buschke"}
-%  tagline = ""
+  %  tagline = ""
   % Remove default LilyPond tagline
   tagline = ##f
 }
@@ -34,7 +34,7 @@
 global = {
   \key c \major
   \time 4/4
-  \tempo "Allegro" 4=100
+  \tempo "Andante" 4=100
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -43,7 +43,6 @@ global = {
 
 globalA = {
   \key c \major
-  \numericTimeSignature
   \time 4/4
   \tempo "Andante" 4=100
 }
@@ -66,11 +65,20 @@ scoreALeft = \relative c' {
 
 }
 
-scoreAElectricGuitarPart = \new Staff \with {
-  midiInstrument = "electric guitar (clean)"
+scoreAElectricGuitarPart = \new StaffGroup \with {
+  \consists "Instrument_name_engraver"
   instrumentName = "Electric guitar"
   shortInstrumentName = "E.Gt."
-} { \clef "treble_8" \scoreAElectricGuitar }
+} <<
+  \new Staff \with {
+    midiInstrument = "electric guitar (clean)"
+    \magnifyStaff #5/7
+  } { \clef "treble_8" \scoreAElectricGuitar }
+  \new TabStaff \with {
+    stringTunings = #guitar-tuning
+    \magnifyStaff #5/7
+  } \scoreAElectricGuitar
+>>
 
 scoreAPianoPart = \new PianoStaff \with {
   instrumentName = "Klavier"
@@ -101,7 +109,6 @@ scoreAPianoPart = \new PianoStaff \with {
 
 globalB = {
   \key c \major
-  \numericTimeSignature
   \time 4/4
   \tempo "Andante" 4=100
 }
@@ -124,11 +131,20 @@ scoreBLeft = \relative c' {
 
 }
 
-scoreBElectricGuitarPart = \new Staff \with {
-  midiInstrument = "electric guitar (clean)"
+scoreBElectricGuitarPart = \new StaffGroup \with {
+  \consists "Instrument_name_engraver"
   instrumentName = "Electric guitar"
   shortInstrumentName = "E.Gt."
-} { \clef "treble_8" \scoreBElectricGuitar }
+} <<
+  \new Staff \with {
+    midiInstrument = "electric guitar (clean)"
+    \magnifyStaff #5/7
+  } { \clef "treble_8" \scoreBElectricGuitar }
+  \new TabStaff \with {
+    stringTunings = #guitar-tuning
+    \magnifyStaff #5/7
+  } \scoreBElectricGuitar
+>>
 
 scoreBPianoPart = \new PianoStaff \with {
   instrumentName = "Klavier"
@@ -159,7 +175,6 @@ scoreBPianoPart = \new PianoStaff \with {
 
 globalC = {
   \key c \major
-  \numericTimeSignature
   \time 4/4
   \tempo "Andante" 4=100
 }
@@ -182,11 +197,20 @@ scoreCLeft = \relative c' {
 
 }
 
-scoreCElectricGuitarPart = \new Staff \with {
-  midiInstrument = "electric guitar (clean)"
+scoreCElectricGuitarPart = \new StaffGroup \with {
+  \consists "Instrument_name_engraver"
   instrumentName = "Electric guitar"
   shortInstrumentName = "E.Gt."
-} { \clef "treble_8" \scoreCElectricGuitar }
+} <<
+  \new Staff \with {
+    midiInstrument = "electric guitar (clean)"
+    \magnifyStaff #5/7
+  } { \clef "treble_8" \scoreCElectricGuitar }
+  \new TabStaff \with {
+    stringTunings = #guitar-tuning
+    \magnifyStaff #5/7
+  } \scoreCElectricGuitar
+>>
 
 scoreCPianoPart = \new PianoStaff \with {
   instrumentName = "Klavier"
@@ -217,7 +241,6 @@ scoreCPianoPart = \new PianoStaff \with {
 
 globalD = {
   \key c \major
-  \numericTimeSignature
   \time 4/4
   \tempo "Andante" 4=100
 }
@@ -240,11 +263,20 @@ scoreDLeft = \relative c' {
 
 }
 
-scoreDElectricGuitarPart = \new Staff \with {
-  midiInstrument = "electric guitar (clean)"
+scoreDElectricGuitarPart = \new StaffGroup \with {
+  \consists "Instrument_name_engraver"
   instrumentName = "Electric guitar"
   shortInstrumentName = "E.Gt."
-} { \clef "treble_8" \scoreDElectricGuitar }
+} <<
+  \new Staff \with {
+    midiInstrument = "electric guitar (clean)"
+    \magnifyStaff #5/7
+  } { \clef "treble_8" \scoreDElectricGuitar }
+  \new TabStaff \with {
+    stringTunings = #guitar-tuning
+    \magnifyStaff #5/7
+  } \scoreDElectricGuitar
+>>
 
 scoreDPianoPart = \new PianoStaff \with {
   instrumentName = "Klavier"
@@ -275,7 +307,6 @@ scoreDPianoPart = \new PianoStaff \with {
 
 globalE = {
   \key c \major
-  \numericTimeSignature
   \time 4/4
   \tempo "Andante" 4=100
 }
@@ -298,11 +329,20 @@ scoreELeft = \relative c' {
 
 }
 
-scoreEElectricGuitarPart = \new Staff \with {
-  midiInstrument = "electric guitar (clean)"
+scoreEElectricGuitarPart = \new StaffGroup \with {
+  \consists "Instrument_name_engraver"
   instrumentName = "Electric guitar"
   shortInstrumentName = "E.Gt."
-} { \clef "treble_8" \scoreEElectricGuitar }
+} <<
+  \new Staff \with {
+    midiInstrument = "electric guitar (clean)"
+    \magnifyStaff #5/7
+  } { \clef "treble_8" \scoreEElectricGuitar }
+  \new TabStaff \with {
+    stringTunings = #guitar-tuning
+    \magnifyStaff #5/7
+  } \scoreEElectricGuitar
+>>
 
 scoreEPianoPart = \new PianoStaff \with {
   instrumentName = "Klavier"
@@ -333,7 +373,6 @@ scoreEPianoPart = \new PianoStaff \with {
 
 globalF = {
   \key c \major
-  \numericTimeSignature
   \time 4/4
   \tempo "Andante" 4=100
 }
@@ -356,11 +395,20 @@ scoreFLeft = \relative c' {
 
 }
 
-scoreFElectricGuitarPart = \new Staff \with {
-  midiInstrument = "electric guitar (clean)"
+scoreFElectricGuitarPart = \new StaffGroup \with {
+  \consists "Instrument_name_engraver"
   instrumentName = "Electric guitar"
   shortInstrumentName = "E.Gt."
-} { \clef "treble_8" \scoreFElectricGuitar }
+} <<
+  \new Staff \with {
+    midiInstrument = "electric guitar (clean)"
+    \magnifyStaff #5/7
+  } { \clef "treble_8" \scoreFElectricGuitar }
+  \new TabStaff \with {
+    stringTunings = #guitar-tuning
+    \magnifyStaff #5/7
+  } \scoreFElectricGuitar
+>>
 
 scoreFPianoPart = \new PianoStaff \with {
   instrumentName = "Klavier"
@@ -391,7 +439,6 @@ scoreFPianoPart = \new PianoStaff \with {
 
 globalG = {
   \key c \major
-  \numericTimeSignature
   \time 4/4
   \tempo "Andante" 4=100
 }
@@ -414,11 +461,20 @@ scoreGLeft = \relative c' {
 
 }
 
-scoreGElectricGuitarPart = \new Staff \with {
-  midiInstrument = "electric guitar (clean)"
+scoreGElectricGuitarPart = \new StaffGroup \with {
+  \consists "Instrument_name_engraver"
   instrumentName = "Electric guitar"
   shortInstrumentName = "E.Gt."
-} { \clef "treble_8" \scoreGElectricGuitar }
+} <<
+  \new Staff \with {
+    midiInstrument = "electric guitar (clean)"
+    \magnifyStaff #5/7
+  } { \clef "treble_8" \scoreGElectricGuitar }
+  \new TabStaff \with {
+    stringTunings = #guitar-tuning
+    \magnifyStaff #5/7
+  } \scoreGElectricGuitar
+>>
 
 scoreGPianoPart = \new PianoStaff \with {
   instrumentName = "Klavier"
@@ -449,7 +505,6 @@ scoreGPianoPart = \new PianoStaff \with {
 
 globalH = {
   \key c \major
-  \numericTimeSignature
   \time 4/4
   \tempo "Andante" 4=100
 }
@@ -472,11 +527,20 @@ scoreHLeft = \relative c' {
 
 }
 
-scoreHElectricGuitarPart = \new Staff \with {
-  midiInstrument = "electric guitar (clean)"
+scoreHElectricGuitarPart = \new StaffGroup \with {
+  \consists "Instrument_name_engraver"
   instrumentName = "Electric guitar"
   shortInstrumentName = "E.Gt."
-} { \clef "treble_8" \scoreHElectricGuitar }
+} <<
+  \new Staff \with {
+    midiInstrument = "electric guitar (clean)"
+    \magnifyStaff #5/7
+  } { \clef "treble_8" \scoreHElectricGuitar }
+  \new TabStaff \with {
+    stringTunings = #guitar-tuning
+    \magnifyStaff #5/7
+  } \scoreHElectricGuitar
+>>
 
 scoreHPianoPart = \new PianoStaff \with {
   instrumentName = "Klavier"
@@ -507,7 +571,6 @@ scoreHPianoPart = \new PianoStaff \with {
 
 globalI = {
   \key c \major
-  \numericTimeSignature
   \time 4/4
   \tempo "Andante" 4=100
 }
@@ -530,11 +593,20 @@ scoreILeft = \relative c' {
 
 }
 
-scoreIElectricGuitarPart = \new Staff \with {
-  midiInstrument = "electric guitar (clean)"
+scoreIElectricGuitarPart = \new StaffGroup \with {
+  \consists "Instrument_name_engraver"
   instrumentName = "Electric guitar"
   shortInstrumentName = "E.Gt."
-} { \clef "treble_8" \scoreIElectricGuitar }
+} <<
+  \new Staff \with {
+    midiInstrument = "electric guitar (clean)"
+    \magnifyStaff #5/7
+  } { \clef "treble_8" \scoreIElectricGuitar }
+  \new TabStaff \with {
+    stringTunings = #guitar-tuning
+    \magnifyStaff #5/7
+  } \scoreIElectricGuitar
+>>
 
 scoreIPianoPart = \new PianoStaff \with {
   instrumentName = "Klavier"
@@ -565,7 +637,6 @@ scoreIPianoPart = \new PianoStaff \with {
 
 globalJ = {
   \key c \major
-  \numericTimeSignature
   \time 4/4
   \tempo "Andante" 4=100
 }
@@ -588,11 +659,20 @@ scoreJLeft = \relative c' {
 
 }
 
-scoreJElectricGuitarPart = \new Staff \with {
-  midiInstrument = "electric guitar (clean)"
+scoreJElectricGuitarPart = \new StaffGroup \with {
+  \consists "Instrument_name_engraver"
   instrumentName = "Electric guitar"
   shortInstrumentName = "E.Gt."
-} { \clef "treble_8" \scoreJElectricGuitar }
+} <<
+  \new Staff \with {
+    midiInstrument = "electric guitar (clean)"
+    \magnifyStaff #5/7
+  } { \clef "treble_8" \scoreJElectricGuitar }
+  \new TabStaff \with {
+    stringTunings = #guitar-tuning
+    \magnifyStaff #5/7
+  } \scoreJElectricGuitar
+>>
 
 scoreJPianoPart = \new PianoStaff \with {
   instrumentName = "Klavier"
@@ -623,7 +703,6 @@ scoreJPianoPart = \new PianoStaff \with {
 
 globalK = {
   \key c \major
-  \numericTimeSignature
   \time 4/4
   \tempo "Andante" 4=100
 }
@@ -646,11 +725,20 @@ scoreKLeft = \relative c' {
 
 }
 
-scoreKElectricGuitarPart = \new Staff \with {
-  midiInstrument = "electric guitar (clean)"
+scoreKElectricGuitarPart = \new StaffGroup \with {
+  \consists "Instrument_name_engraver"
   instrumentName = "Electric guitar"
   shortInstrumentName = "E.Gt."
-} { \clef "treble_8" \scoreKElectricGuitar }
+} <<
+  \new Staff \with {
+    midiInstrument = "electric guitar (clean)"
+    \magnifyStaff #5/7
+  } { \clef "treble_8" \scoreKElectricGuitar }
+  \new TabStaff \with {
+    stringTunings = #guitar-tuning
+    \magnifyStaff #5/7
+  } \scoreKElectricGuitar
+>>
 
 scoreKPianoPart = \new PianoStaff \with {
   instrumentName = "Klavier"
@@ -681,7 +769,6 @@ scoreKPianoPart = \new PianoStaff \with {
 
 globalL = {
   \key c \major
-  \numericTimeSignature
   \time 4/4
   \tempo "Andante" 4=100
 }
@@ -704,11 +791,20 @@ scoreLLeft = \relative c' {
 
 }
 
-scoreLElectricGuitarPart = \new Staff \with {
-  midiInstrument = "electric guitar (clean)"
+scoreLElectricGuitarPart = \new StaffGroup \with {
+  \consists "Instrument_name_engraver"
   instrumentName = "Electric guitar"
   shortInstrumentName = "E.Gt."
-} { \clef "treble_8" \scoreLElectricGuitar }
+} <<
+  \new Staff \with {
+    midiInstrument = "electric guitar (clean)"
+    \magnifyStaff #5/7
+  } { \clef "treble_8" \scoreLElectricGuitar }
+  \new TabStaff \with {
+    stringTunings = #guitar-tuning
+    \magnifyStaff #5/7
+  } \scoreLElectricGuitar
+>>
 
 scoreLPianoPart = \new PianoStaff \with {
   instrumentName = "Klavier"
@@ -739,7 +835,6 @@ scoreLPianoPart = \new PianoStaff \with {
 
 globalM = {
   \key c \major
-  \numericTimeSignature
   \time 4/4
   \tempo "Andante" 4=100
 }
@@ -762,11 +857,20 @@ scoreMLeft = \relative c' {
 
 }
 
-scoreMElectricGuitarPart = \new Staff \with {
-  midiInstrument = "electric guitar (clean)"
+scoreMElectricGuitarPart = \new StaffGroup \with {
+  \consists "Instrument_name_engraver"
   instrumentName = "Electric guitar"
   shortInstrumentName = "E.Gt."
-} { \clef "treble_8" \scoreMElectricGuitar }
+} <<
+  \new Staff \with {
+    midiInstrument = "electric guitar (clean)"
+    \magnifyStaff #5/7
+  } { \clef "treble_8" \scoreMElectricGuitar }
+  \new TabStaff \with {
+    stringTunings = #guitar-tuning
+    \magnifyStaff #5/7
+  } \scoreMElectricGuitar
+>>
 
 scoreMPianoPart = \new PianoStaff \with {
   instrumentName = "Klavier"
@@ -797,7 +901,6 @@ scoreMPianoPart = \new PianoStaff \with {
 
 globalN = {
   \key c \major
-  \numericTimeSignature
   \time 4/4
   \tempo "Andante" 4=100
 }
@@ -820,11 +923,20 @@ scoreNLeft = \relative c' {
 
 }
 
-scoreNElectricGuitarPart = \new Staff \with {
-  midiInstrument = "electric guitar (clean)"
+scoreNElectricGuitarPart = \new StaffGroup \with {
+  \consists "Instrument_name_engraver"
   instrumentName = "Electric guitar"
   shortInstrumentName = "E.Gt."
-} { \clef "treble_8" \scoreNElectricGuitar }
+} <<
+  \new Staff \with {
+    midiInstrument = "electric guitar (clean)"
+    \magnifyStaff #5/7
+  } { \clef "treble_8" \scoreNElectricGuitar }
+  \new TabStaff \with {
+    stringTunings = #guitar-tuning
+    \magnifyStaff #5/7
+  } \scoreNElectricGuitar
+>>
 
 scoreNPianoPart = \new PianoStaff \with {
   instrumentName = "Klavier"
@@ -855,7 +967,6 @@ scoreNPianoPart = \new PianoStaff \with {
 
 globalO = {
   \key c \major
-  \numericTimeSignature
   \time 4/4
   \tempo "Andante" 4=100
 }
@@ -878,11 +989,20 @@ scoreOLeft = \relative c' {
 
 }
 
-scoreOElectricGuitarPart = \new Staff \with {
-  midiInstrument = "electric guitar (clean)"
+scoreOElectricGuitarPart = \new StaffGroup \with {
+  \consists "Instrument_name_engraver"
   instrumentName = "Electric guitar"
   shortInstrumentName = "E.Gt."
-} { \clef "treble_8" \scoreOElectricGuitar }
+} <<
+  \new Staff \with {
+    midiInstrument = "electric guitar (clean)"
+    \magnifyStaff #5/7
+  } { \clef "treble_8" \scoreOElectricGuitar }
+  \new TabStaff \with {
+    stringTunings = #guitar-tuning
+    \magnifyStaff #5/7
+  } \scoreOElectricGuitar
+>>
 
 scoreOPianoPart = \new PianoStaff \with {
   instrumentName = "Klavier"
@@ -913,7 +1033,6 @@ scoreOPianoPart = \new PianoStaff \with {
 
 globalP = {
   \key c \major
-  \numericTimeSignature
   \time 4/4
   \tempo "Andante" 4=100
 }
@@ -936,11 +1055,20 @@ scorePLeft = \relative c' {
 
 }
 
-scorePElectricGuitarPart = \new Staff \with {
-  midiInstrument = "electric guitar (clean)"
+scorePElectricGuitarPart = \new StaffGroup \with {
+  \consists "Instrument_name_engraver"
   instrumentName = "Electric guitar"
   shortInstrumentName = "E.Gt."
-} { \clef "treble_8" \scorePElectricGuitar }
+} <<
+  \new Staff \with {
+    midiInstrument = "electric guitar (clean)"
+    \magnifyStaff #5/7
+  } { \clef "treble_8" \scorePElectricGuitar }
+  \new TabStaff \with {
+    stringTunings = #guitar-tuning
+    \magnifyStaff #5/7
+  } \scorePElectricGuitar
+>>
 
 scorePPianoPart = \new PianoStaff \with {
   instrumentName = "Klavier"
@@ -948,9 +1076,11 @@ scorePPianoPart = \new PianoStaff \with {
 } <<
   \new Staff = "right" \with {
     midiInstrument = "acoustic grand"
+    \magnifyStaff #5/7
   } \scorePRight
   \new Staff = "left" \with {
     midiInstrument = "acoustic grand"
+    \magnifyStaff #5/7
   } { \clef bass \scorePLeft }
 >>
 
@@ -971,7 +1101,6 @@ scorePPianoPart = \new PianoStaff \with {
 
 globalQ = {
   \key c \major
-  \numericTimeSignature
   \time 4/4
   \tempo "Andante" 4=100
 }
@@ -994,11 +1123,20 @@ scoreQLeft = \relative c' {
 
 }
 
-scoreQElectricGuitarPart = \new Staff \with {
-  midiInstrument = "electric guitar (clean)"
+scoreQElectricGuitarPart = \new StaffGroup \with {
+  \consists "Instrument_name_engraver"
   instrumentName = "Electric guitar"
   shortInstrumentName = "E.Gt."
-} { \clef "treble_8" \scoreQElectricGuitar }
+} <<
+  \new Staff \with {
+    midiInstrument = "electric guitar (clean)"
+    \magnifyStaff #5/7
+  } { \clef "treble_8" \scoreQElectricGuitar }
+  \new TabStaff \with {
+    stringTunings = #guitar-tuning
+    \magnifyStaff #5/7
+  } \scoreQElectricGuitar
+>>
 
 scoreQPianoPart = \new PianoStaff \with {
   instrumentName = "Klavier"
@@ -1029,7 +1167,6 @@ scoreQPianoPart = \new PianoStaff \with {
 
 globalR = {
   \key c \major
-  \numericTimeSignature
   \time 4/4
   \tempo "Andante" 4=100
 }
@@ -1049,14 +1186,22 @@ scoreRRight = \relative c'' {
 scoreRLeft = \relative c' {
   \global
   % Music follows here.
-
 }
 
-scoreRElectricGuitarPart = \new Staff \with {
-  midiInstrument = "electric guitar (clean)"
+scoreRElectricGuitarPart = \new StaffGroup \with {
+  \consists "Instrument_name_engraver"
   instrumentName = "Electric guitar"
   shortInstrumentName = "E.Gt."
-} { \clef "treble_8" \scoreRElectricGuitar }
+} <<
+  \new Staff \with {
+    midiInstrument = "electric guitar (clean)"
+    \magnifyStaff #5/7
+  } { \clef "treble_8" \scoreRElectricGuitar }
+  \new TabStaff \with {
+    stringTunings = #guitar-tuning
+    \magnifyStaff #5/7
+  } \scoreRElectricGuitar
+>>
 
 scoreRPianoPart = \new PianoStaff \with {
   instrumentName = "Klavier"
@@ -1071,15 +1216,15 @@ scoreRPianoPart = \new PianoStaff \with {
 >>
 
 \bookpart {
-\header {
-  title = ""
-  composer = ""
-  poet = ""
-  meter = ""
-  piece = ""
-  opus = "Suzuki No. , Vol. 1"
-  tagline = ""
-}
+  \header {
+    title = ""
+    composer = ""
+    poet = ""
+    meter = ""
+    piece = ""
+    opus = "Suzuki No. , Vol. 1"
+    tagline = ""
+  }
   \score {
     <<
       \scoreRElectricGuitarPart
