@@ -1439,9 +1439,7 @@ scoreOViolin = \relative c'' {
   \repeat volta 2 {
     b'4 g8 a b g a4 d,8 e fs d g4 e8 fs g d
     cs4 b8 cs a4 a8 b cs d e fs g4 fs e fs a, cs d2. d4 g,8 fs g4 e'4 g,8 fs g4 d' c b a8 g fs g a4 d,8 e fs g a b c4 b a b8 d g,4 fs <b, d g>2.
-
   }
-
 }
 
 scoreORight = \relative c'' {
@@ -1458,25 +1456,21 @@ scoreORight = \relative c'' {
     b'4 g8 a b g a4 d,8 e fs d g4 e8 fs g d
     cs4 b8 cs a4 a8 b cs d e fs g4 fs e fs a, cs d2. d4 g,8 fs g4 e'4 g,8 fs g4 d' c b a8 g fs g a4 d,8 e fs g a b c4 b a b8 d g,4 fs <b, d g>2.
   }
-
 }
 
 scoreOLeft = \relative c' {
   \globalO
   % Music follows here.
-  <<
-    \relative c {
-      <b' d>2.
-    }
-    \\
-    \relative c {
-      g'2 a4 b2. c b a g d'4 b g d' d,8 c' b a b2 a4 g b g c2. b4 c8 b a g
-      a2 fs4 g2 b4 c d d, g2 g,4
-      g'2. fs e4 g e a2 a,4 a'2. b4 d cs d fs, a d d, c'
-      b2 b4 c2 c4
-      b a g d'2r4 d,2. e4 g fs g b, d g d g,
-    }
-  >>
+  \repeat volta 2 {
+    <<{<b d>2.}\\{g2 a4}>>
+    b2. c b a g d'4 b g d' d,8 c' b a b2 a4 g b g c2. b4 c8 b a g
+    a2 fs4 g2 b4 c d d, g2 g,4
+  }
+  \repeat volta 2 {
+    g'2. fs e4 g e a2 a,4 a'2. b4 d cs d fs, a d d, c'
+    b2 b4 c2 c4
+    b a g d'2r4 d,2. e4 g fs g b, d g d g,
+  }
 }
 
 scoreOViolinPart = \new Staff \with {
@@ -1502,15 +1496,11 @@ claveO = {
   \new DrumStaff <<
     \drummode {
       \globalO
-      % bd4 sn4
       <<
         {
-          %      \repeat unfold 16 cl16
-          %      \repeat unfold 16 hh16
-          hh8 cl hh cl hh cl hh cl
-          %        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
+          \repeat unfold 3 {hh8 cl}
         } \\ {
-          bd4 sn4 sn4 sn4
+          bd4 sn4 sn4
         }
       >>
     }

@@ -14,7 +14,7 @@
   piece = ""
   opus = "No. 1"
   copyright = \markup {"© Fingering, 03.05.2023: " \with-url "https://buschke.com" "Sven Buschke"}
-%  tagline = ""
+  %  tagline = ""
   % Remove default LilyPond tagline
   tagline = ##f
 }
@@ -42,35 +42,65 @@ global = {
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 globalA = {
-  \key d \major
-%  \numericTimeSignature
   \time 4/4
-  \tempo "Allegro moderato" 4=100
+  \tempo "Andante" 4=100
+}
+
+globalAC = {
+  \globalA
+  \key a \major
+}
+
+globalAP = {
+  \globalA
+  \key g \major
 }
 
 scoreAClarinet = \relative c'' {
-  \global
+  \globalAC
   \transposition bf
   % Music follows here.
-
+  a4-.\f a-. e'-. e-. fs-. fs-. e2-- d4-. d-. cs-. cs-. b-. b-. a2--
+  e'4-. e-. d-. d-. cs-. cs-. b2-- e4-. e-. d-. d-. cs-. cs-. b2--
+  a4-. a-. e'-. e-. fs-. fs-. e2-- d4-. d-. cs-. cs-. b-. b-. a2--
+  \bar "|."
 }
 
 scoreARight = \relative c'' {
-  \global
+  \globalAP
   % Music follows here.
-
+  g4\f g <b d> <b d> <c e>4 4 <b d>2 <a c>4 <a c> <g b> <g b> <fs a> <fs a> g2
+  <b d>4 <b d> <a c> <a c> <g b>4 4 <fs a>2 <b d>4 4 <a c>4 4 <g b>4 4 <fs a>2
+  g4 g <b d>4 4 <c e>4 4 <b d>2 <a c>4 4 <g b>4 4 <fs a>4 4 g8 r <g b d g>4
+  \bar "|."
 }
 
 scoreALeft = \relative c' {
-  \global
+  \globalAP
   % Music follows here.
+  g8\f d' b d g,8 d' b d g, e' c e g, d' b d fs, d' a d g, d' b d d, d' fs, d' g, d' b d
+  g, d' b d fs, d' a d g, d' b d d, d' a d g, d' b d g, e' c e g, d' b d d, d' fs, d'
+  g, d' b d g, d' b d g, e' c e g, d' b d fs, d' a d g, d' b d d, d' fs, d' <g, b d>8 r <g, g'>4
+  \bar "|."
+}
 
+claveA = {
+  \new DrumStaff <<
+    \drummode {
+      \globalA
+      <<
+        {\repeat unfold 4 {hh8 cl}}\\
+        {bd4 sn4 sn4 sn4}
+      >>
+    }
+  >>
 }
 
 scoreAClarinetPart = \new Staff \with {
   instrumentName = "Klarinette"
   shortInstrumentName = "Kl."
   midiInstrument = "clarinet"
+  \magnifyStaff #5/7
 } \scoreAClarinet
 
 scoreAPianoPart = \new PianoStaff \with {
@@ -86,12 +116,33 @@ scoreAPianoPart = \new PianoStaff \with {
 >>
 
 \bookpart {
+  \header {
+    title = "Twinkle, Twinkle, Little Star"
+    composer = "Traditional"
+    poet = ""
+    meter = ""
+    piece = ""
+    opus = "Suzuki No. 1, Vol. 1"
+    tagline = ""
+  }
   \score {
     <<
       \scoreAClarinetPart
       \scoreAPianoPart
     >>
     \layout { }
+  }
+  \score {
+    {
+      \claveA
+      \unfoldRepeats
+      {
+        <<
+          \scoreAClarinetPart
+          \scoreAPianoPart
+        >>
+      }
+    }
     \midi { }
   }
 }
@@ -102,7 +153,7 @@ scoreAPianoPart = \new PianoStaff \with {
 
 globalB = {
   \key d \major
-%  \numericTimeSignature
+  %  \numericTimeSignature
   \time 4/4
   \tempo "Allegro moderato" 4=100
 }
@@ -145,6 +196,15 @@ scoreBPianoPart = \new PianoStaff \with {
 >>
 
 \bookpart {
+  \header {
+    title = ""
+    composer = ""
+    poet = ""
+    meter = ""
+    piece = ""
+    opus = "Suzuki No. , Vol. 1"
+    tagline = ""
+  }
   \score {
     <<
       \scoreBClarinetPart
@@ -161,7 +221,7 @@ scoreBPianoPart = \new PianoStaff \with {
 
 globalC = {
   \key d \major
-%  \numericTimeSignature
+  %  \numericTimeSignature
   \time 4/4
   \tempo "Allegro moderato" 4=100
 }
@@ -204,6 +264,15 @@ scoreCPianoPart = \new PianoStaff \with {
 >>
 
 \bookpart {
+  \header {
+    title = ""
+    composer = ""
+    poet = ""
+    meter = ""
+    piece = ""
+    opus = "Suzuki No. , Vol. 1"
+    tagline = ""
+  }
   \score {
     <<
       \scoreCClarinetPart
@@ -220,7 +289,7 @@ scoreCPianoPart = \new PianoStaff \with {
 
 globalD = {
   \key d \major
-%  \numericTimeSignature
+  %  \numericTimeSignature
   \time 4/4
   \tempo "Allegro moderato" 4=100
 }
@@ -263,6 +332,15 @@ scoreDPianoPart = \new PianoStaff \with {
 >>
 
 \bookpart {
+  \header {
+    title = ""
+    composer = ""
+    poet = ""
+    meter = ""
+    piece = ""
+    opus = "Suzuki No. , Vol. 1"
+    tagline = ""
+  }
   \score {
     <<
       \scoreDClarinetPart
@@ -279,7 +357,7 @@ scoreDPianoPart = \new PianoStaff \with {
 
 globalE = {
   \key d \major
-%  \numericTimeSignature
+  %  \numericTimeSignature
   \time 4/4
   \tempo "Allegro moderato" 4=100
 }
@@ -322,6 +400,15 @@ scoreEPianoPart = \new PianoStaff \with {
 >>
 
 \bookpart {
+  \header {
+    title = ""
+    composer = ""
+    poet = ""
+    meter = ""
+    piece = ""
+    opus = "Suzuki No. , Vol. 1"
+    tagline = ""
+  }
   \score {
     <<
       \scoreEClarinetPart
@@ -338,7 +425,7 @@ scoreEPianoPart = \new PianoStaff \with {
 
 globalF = {
   \key d \major
-%  \numericTimeSignature
+  %  \numericTimeSignature
   \time 4/4
   \tempo "Allegro moderato" 4=100
 }
@@ -381,6 +468,15 @@ scoreFPianoPart = \new PianoStaff \with {
 >>
 
 \bookpart {
+  \header {
+    title = ""
+    composer = ""
+    poet = ""
+    meter = ""
+    piece = ""
+    opus = "Suzuki No. , Vol. 1"
+    tagline = ""
+  }
   \score {
     <<
       \scoreFClarinetPart
@@ -397,7 +493,7 @@ scoreFPianoPart = \new PianoStaff \with {
 
 globalG = {
   \key d \major
-%  \numericTimeSignature
+  %  \numericTimeSignature
   \time 4/4
   \tempo "Allegro moderato" 4=100
 }
@@ -440,6 +536,15 @@ scoreGPianoPart = \new PianoStaff \with {
 >>
 
 \bookpart {
+  \header {
+    title = ""
+    composer = ""
+    poet = ""
+    meter = ""
+    piece = ""
+    opus = "Suzuki No. , Vol. 1"
+    tagline = ""
+  }
   \score {
     <<
       \scoreGClarinetPart
@@ -456,7 +561,7 @@ scoreGPianoPart = \new PianoStaff \with {
 
 globalH = {
   \key d \major
-%  \numericTimeSignature
+  %  \numericTimeSignature
   \time 4/4
   \tempo "Allegro moderato" 4=100
 }
@@ -499,6 +604,15 @@ scoreHPianoPart = \new PianoStaff \with {
 >>
 
 \bookpart {
+  \header {
+    title = ""
+    composer = ""
+    poet = ""
+    meter = ""
+    piece = ""
+    opus = "Suzuki No. , Vol. 1"
+    tagline = ""
+  }
   \score {
     <<
       \scoreHClarinetPart
@@ -515,7 +629,7 @@ scoreHPianoPart = \new PianoStaff \with {
 
 globalI = {
   \key d \major
-%  \numericTimeSignature
+  %  \numericTimeSignature
   \time 4/4
   \tempo "Allegro moderato" 4=100
 }
@@ -558,6 +672,15 @@ scoreIPianoPart = \new PianoStaff \with {
 >>
 
 \bookpart {
+  \header {
+    title = ""
+    composer = ""
+    poet = ""
+    meter = ""
+    piece = ""
+    opus = "Suzuki No. , Vol. 1"
+    tagline = ""
+  }
   \score {
     <<
       \scoreIClarinetPart
@@ -574,7 +697,7 @@ scoreIPianoPart = \new PianoStaff \with {
 
 globalJ = {
   \key d \major
-%  \numericTimeSignature
+  %  \numericTimeSignature
   \time 4/4
   \tempo "Allegro moderato" 4=100
 }
@@ -617,6 +740,15 @@ scoreJPianoPart = \new PianoStaff \with {
 >>
 
 \bookpart {
+  \header {
+    title = ""
+    composer = ""
+    poet = ""
+    meter = ""
+    piece = ""
+    opus = "Suzuki No. , Vol. 1"
+    tagline = ""
+  }
   \score {
     <<
       \scoreJClarinetPart
@@ -633,7 +765,7 @@ scoreJPianoPart = \new PianoStaff \with {
 
 globalK = {
   \key d \major
-%  \numericTimeSignature
+  %  \numericTimeSignature
   \time 4/4
   \tempo "Allegro moderato" 4=100
 }
@@ -676,6 +808,15 @@ scoreKPianoPart = \new PianoStaff \with {
 >>
 
 \bookpart {
+  \header {
+    title = ""
+    composer = ""
+    poet = ""
+    meter = ""
+    piece = ""
+    opus = "Suzuki No. , Vol. 1"
+    tagline = ""
+  }
   \score {
     <<
       \scoreKClarinetPart
@@ -692,7 +833,7 @@ scoreKPianoPart = \new PianoStaff \with {
 
 globalL = {
   \key d \major
-%  \numericTimeSignature
+  %  \numericTimeSignature
   \time 4/4
   \tempo "Allegro moderato" 4=100
 }
@@ -735,6 +876,15 @@ scoreLPianoPart = \new PianoStaff \with {
 >>
 
 \bookpart {
+  \header {
+    title = ""
+    composer = ""
+    poet = ""
+    meter = ""
+    piece = ""
+    opus = "Suzuki No. , Vol. 1"
+    tagline = ""
+  }
   \score {
     <<
       \scoreLClarinetPart
@@ -751,7 +901,7 @@ scoreLPianoPart = \new PianoStaff \with {
 
 globalM = {
   \key d \major
-%  \numericTimeSignature
+  %  \numericTimeSignature
   \time 4/4
   \tempo "Allegro moderato" 4=100
 }
@@ -794,6 +944,15 @@ scoreMPianoPart = \new PianoStaff \with {
 >>
 
 \bookpart {
+  \header {
+    title = ""
+    composer = ""
+    poet = ""
+    meter = ""
+    piece = ""
+    opus = "Suzuki No. , Vol. 1"
+    tagline = ""
+  }
   \score {
     <<
       \scoreMClarinetPart
@@ -810,7 +969,7 @@ scoreMPianoPart = \new PianoStaff \with {
 
 globalN = {
   \key d \major
-%  \numericTimeSignature
+  %  \numericTimeSignature
   \time 4/4
   \tempo "Allegro moderato" 4=100
 }
@@ -853,6 +1012,15 @@ scoreNPianoPart = \new PianoStaff \with {
 >>
 
 \bookpart {
+  \header {
+    title = ""
+    composer = ""
+    poet = ""
+    meter = ""
+    piece = ""
+    opus = "Suzuki No. , Vol. 1"
+    tagline = ""
+  }
   \score {
     <<
       \scoreNClarinetPart
@@ -868,35 +1036,88 @@ scoreNPianoPart = \new PianoStaff \with {
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 globalO = {
-  \key d \major
-%  \numericTimeSignature
-  \time 4/4
+  \time 3/4
   \tempo "Allegro moderato" 4=100
 }
 
+globalOC = {
+  \globalO
+  \key g \major
+}
+
+globalOP = {
+  \globalO
+  \key f \major
+}
+
 scoreOClarinet = \relative c'' {
-  \global
+  \globalOC
   \transposition bf
   % Music follows here.
-
+  \repeat volta 2 {
+    d4(g,8 a b c d4-.) g,-. g-.
+    e'( c8 d e fs g4-.) g,-. g-. c( d8 c b a b4 c8 b a g
+    fs4 g8 a b g \acciaccatura b a2.)
+    d4( g,8 a b c d4-.) g,-. g-. e'( c8 d e fs g4-.) g,-. g-.
+    c\( d8 c b a b4 c8 b a g a4 b8 a g fs g2.\)
+  }
+  \repeat volta 2 {
+    b'4 g8 a b g a4 d,8 e fs d g4 e8 fs g d
+    cs4 b8 cs a4 a8 b cs d e fs g4 fs e fs a, cs d2. d4 g,8 fs g4 e'4 g,8 fs g4 d' c b a8 g fs g a4 d,8 e fs g a b c4 b a b8 d g,4 fs <b, d g>2.
+  }
 }
 
 scoreORight = \relative c'' {
-  \global
+  \globalOP
   % Music follows here.
-
+  \repeat volta 2 {
+    c4( f,8 g a bf c4-.) f,-. f-.
+    d'( bf8 c d e f4-.) f,-. f-. bf( c8 bf a g a4 bf8 a g f
+    e4 f8 g a f \acciaccatura a g2.)
+    c4( f,8 g a bf c4-.) f,-. f-. d'( bf8 c d e f4-.) f,-. f-.
+    bf\( c8 bf a g a4 bf8 a g f g4 a8 g f e f2.\)
+  }
+  \repeat volta 2 {
+    a'4 f8 g a f g4 c,8 d e c f4 d8 e f c
+    b4 a8 b g4 g8 a b c d e f4 e d e g, b c2. c4 f,8 e f4 d'4 f,8 e f4 c' bf a g8 f e f g4 c,8 d e f g a bf4 a g a8 c f,4 e <a, c f>2.
+  }
 }
 
 scoreOLeft = \relative c' {
-  \global
+  \globalOP
   % Music follows here.
+  \repeat volta 2 {
+    <<{<a c>2.}\\{f2 g4}>>
+    a2. bf a g f c'4 a f c' c,8 bf' a g a2 g4 f a f bf2. a4 bf8 a g f
+    g2 e4 f2 a4 bf c c, f2 f,4
+  }
+  \repeat volta 2 {
+    f'2. e d4 f d g2 g,4 g'2. a4 c b c e, g c c, bf'
+    a2 a4 bf2 bf4
+    a g f c'2r4 c,2. d4 f e f a, c f c f,
+  }
+}
 
+claveO = {
+  \new DrumStaff <<
+    \drummode {
+      \globalO
+      <<
+        {
+          \repeat unfold 3 {hh8 cl}
+        } \\ {
+          bd4 sn4 sn4
+        }
+      >>
+    }
+  >>
 }
 
 scoreOClarinetPart = \new Staff \with {
   instrumentName = "Klarinette"
   shortInstrumentName = "Kl."
   midiInstrument = "clarinet"
+  \magnifyStaff #5/7
 } \scoreOClarinet
 
 scoreOPianoPart = \new PianoStaff \with {
@@ -912,12 +1133,32 @@ scoreOPianoPart = \new PianoStaff \with {
 >>
 
 \bookpart {
+  \header {
+    title = "Minuet 3"
+    composer = "Johann Sebastian Bach"
+    poet = "Bach: 21.03.1685-28.07.1750"
+    meter = ""
+    piece = ""
+    opus = "Suzuki No. 15, Vol. 1"
+    tagline = ""
+  }
   \score {
     <<
       \scoreOClarinetPart
       \scoreOPianoPart
     >>
     \layout { }
+  }
+  \score {
+    {
+      \claveO
+      \unfoldRepeats {
+        <<
+          \scoreOClarinetPart
+          \scoreOPianoPart
+        >>
+      }
+    }
     \midi { }
   }
 }
@@ -928,7 +1169,7 @@ scoreOPianoPart = \new PianoStaff \with {
 
 globalP = {
   \key d \major
-%  \numericTimeSignature
+  %  \numericTimeSignature
   \time 4/4
   \tempo "Allegro moderato" 4=100
 }
@@ -971,6 +1212,15 @@ scorePPianoPart = \new PianoStaff \with {
 >>
 
 \bookpart {
+  \header {
+    title = ""
+    composer = ""
+    poet = ""
+    meter = ""
+    piece = ""
+    opus = "Suzuki No. , Vol. 1"
+    tagline = ""
+  }
   \score {
     <<
       \scorePClarinetPart
@@ -987,7 +1237,7 @@ scorePPianoPart = \new PianoStaff \with {
 
 globalQ = {
   \key d \major
-%  \numericTimeSignature
+  %  \numericTimeSignature
   \time 4/4
   \tempo "Allegro moderato" 4=100
 }
@@ -1030,6 +1280,15 @@ scoreQPianoPart = \new PianoStaff \with {
 >>
 
 \bookpart {
+  \header {
+    title = ""
+    composer = ""
+    poet = ""
+    meter = ""
+    piece = ""
+    opus = "Suzuki No. , Vol. 1"
+    tagline = ""
+  }
   \score {
     <<
       \scoreQClarinetPart
@@ -1046,7 +1305,7 @@ scoreQPianoPart = \new PianoStaff \with {
 
 globalR = {
   \key d \major
-%  \numericTimeSignature
+  %  \numericTimeSignature
   \time 4/4
   \tempo "Allegro moderato" 4=100
 }
@@ -1089,15 +1348,15 @@ scoreRPianoPart = \new PianoStaff \with {
 >>
 
 \bookpart {
-\header {
-  title = ""
-  composer = ""
-  poet = ""
-  meter = ""
-  piece = ""
-  opus = "Suzuki No. , Vol. 1"
-  tagline = ""
-}
+  \header {
+    title = ""
+    composer = ""
+    poet = ""
+    meter = ""
+    piece = ""
+    opus = "Suzuki No. , Vol. 1"
+    tagline = ""
+  }
   \score {
     <<
       \scoreRClarinetPart

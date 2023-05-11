@@ -46,7 +46,7 @@ globalA = {
   \key d \major
   %  \numericTimeSignature
   \time 4/4
-  \tempo "Andante" 4=100
+  \tempo "Andante" 4=50
 }
 
 scoreACello = \relative c, {
@@ -151,7 +151,7 @@ globalB = {
   \key c \major
   \numericTimeSignature
   \time 4/4
-  \tempo "Andante" 4=100
+  \tempo "Andante" 4=50
 }
 
 scoreBCello = \relative c {
@@ -582,7 +582,7 @@ globalG = {
   \key d \major
   %  \numericTimeSignature
   \time 4/4
-  \tempo "Allegro moderato" 4=100
+  \tempo "Allegro moderato" 4=50
 }
 
 scoreGCello = \relative c {
@@ -1122,7 +1122,7 @@ globalM = {
   \key g \major
   %  \numericTimeSignature
   \time 2/2
-  \tempo "Allegro" 2=100
+  \tempo "Allegro" 2=301
 }
 
 scoreMCello = \relative c {

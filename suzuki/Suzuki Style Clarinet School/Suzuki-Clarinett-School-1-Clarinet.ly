@@ -42,20 +42,31 @@ global = {
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 globalA = {
-  \key d \major
-%  \numericTimeSignature
+  \key a \major
   \time 4/4
   \tempo "Allegro moderato" 4=100
 }
 
 scoreAClarinet = \relative c'' {
-  \global
+  \globalA
   \transposition bf
   % Music follows here.
-
+  a4-.\f a-. e'-. e-. fs-. fs-. e2-- d4-. d-. cs-. cs-. b-. b-. a2--
+  e'4-. e-. d-. d-. cs-. cs-. b2-- e4-. e-. d-. d-. cs-. cs-. b2--
+  a4-. a-. e'-. e-. fs-. fs-. e2-- d4-. d-. cs-. cs-. b-. b-. a2--
+  \bar "|."
 }
 
 \bookpart {
+  \header {
+    title = "Twinkle, Twinkle, Little Star"
+    composer = "Traditional"
+    poet = ""
+    meter = ""
+    piece = ""
+    opus = "Suzuki No. 1, Vol. 1"
+    tagline = ""
+  }
   \score {
     \new Staff \with {
       instrumentName = "Klarinette"
@@ -86,6 +97,15 @@ scoreBClarinet = \relative c'' {
 }
 
 \bookpart {
+\header {
+  title = ""
+  composer = ""
+  poet = ""
+  meter = ""
+  piece = ""
+  opus = "Suzuki No. , Vol. 1"
+  tagline = ""
+}
   \score {
     \new Staff \with {
       instrumentName = "Klarinette"
@@ -116,6 +136,15 @@ scoreCClarinet = \relative c'' {
 }
 
 \bookpart {
+\header {
+  title = ""
+  composer = ""
+  poet = ""
+  meter = ""
+  piece = ""
+  opus = "Suzuki No. , Vol. 1"
+  tagline = ""
+}
   \score {
     \new Staff \with {
       instrumentName = "Klarinette"
@@ -146,6 +175,15 @@ scoreDClarinet = \relative c'' {
 }
 
 \bookpart {
+\header {
+  title = ""
+  composer = ""
+  poet = ""
+  meter = ""
+  piece = ""
+  opus = "Suzuki No. , Vol. 1"
+  tagline = ""
+}
   \score {
     \new Staff \with {
       instrumentName = "Klarinette"
@@ -176,6 +214,15 @@ scoreEClarinet = \relative c'' {
 }
 
 \bookpart {
+\header {
+  title = ""
+  composer = ""
+  poet = ""
+  meter = ""
+  piece = ""
+  opus = "Suzuki No. , Vol. 1"
+  tagline = ""
+}
   \score {
     \new Staff \with {
       instrumentName = "Klarinette"
@@ -206,6 +253,15 @@ scoreFClarinet = \relative c'' {
 }
 
 \bookpart {
+\header {
+  title = ""
+  composer = ""
+  poet = ""
+  meter = ""
+  piece = ""
+  opus = "Suzuki No. , Vol. 1"
+  tagline = ""
+}
   \score {
     \new Staff \with {
       instrumentName = "Klarinette"
@@ -236,6 +292,15 @@ scoreGClarinet = \relative c'' {
 }
 
 \bookpart {
+\header {
+  title = ""
+  composer = ""
+  poet = ""
+  meter = ""
+  piece = ""
+  opus = "Suzuki No. , Vol. 1"
+  tagline = ""
+}
   \score {
     \new Staff \with {
       instrumentName = "Klarinette"
@@ -266,6 +331,15 @@ scoreHClarinet = \relative c'' {
 }
 
 \bookpart {
+\header {
+  title = ""
+  composer = ""
+  poet = ""
+  meter = ""
+  piece = ""
+  opus = "Suzuki No. , Vol. 1"
+  tagline = ""
+}
   \score {
     \new Staff \with {
       instrumentName = "Klarinette"
@@ -296,6 +370,15 @@ scoreIClarinet = \relative c'' {
 }
 
 \bookpart {
+\header {
+  title = ""
+  composer = ""
+  poet = ""
+  meter = ""
+  piece = ""
+  opus = "Suzuki No. , Vol. 1"
+  tagline = ""
+}
   \score {
     \new Staff \with {
       instrumentName = "Klarinette"
@@ -326,6 +409,15 @@ scoreJClarinet = \relative c'' {
 }
 
 \bookpart {
+\header {
+  title = ""
+  composer = ""
+  poet = ""
+  meter = ""
+  piece = ""
+  opus = "Suzuki No. , Vol. 1"
+  tagline = ""
+}
   \score {
     \new Staff \with {
       instrumentName = "Klarinette"
@@ -356,6 +448,15 @@ scoreKClarinet = \relative c'' {
 }
 
 \bookpart {
+\header {
+  title = ""
+  composer = ""
+  poet = ""
+  meter = ""
+  piece = ""
+  opus = "Suzuki No. , Vol. 1"
+  tagline = ""
+}
   \score {
     \new Staff \with {
       instrumentName = "Klarinette"
@@ -386,6 +487,15 @@ scoreLClarinet = \relative c'' {
 }
 
 \bookpart {
+\header {
+  title = ""
+  composer = ""
+  poet = ""
+  meter = ""
+  piece = ""
+  opus = "Suzuki No. , Vol. 1"
+  tagline = ""
+}
   \score {
     \new Staff \with {
       instrumentName = "Klarinette"
@@ -416,6 +526,15 @@ scoreMClarinet = \relative c'' {
 }
 
 \bookpart {
+\header {
+  title = ""
+  composer = ""
+  poet = ""
+  meter = ""
+  piece = ""
+  opus = "Suzuki No. , Vol. 1"
+  tagline = ""
+}
   \score {
     \new Staff \with {
       instrumentName = "Klarinette"
@@ -446,6 +565,15 @@ scoreNClarinet = \relative c'' {
 }
 
 \bookpart {
+\header {
+  title = ""
+  composer = ""
+  poet = ""
+  meter = ""
+  piece = ""
+  opus = "Suzuki No. , Vol. 1"
+  tagline = ""
+}
   \score {
     \new Staff \with {
       instrumentName = "Klarinette"
@@ -462,9 +590,9 @@ scoreNClarinet = \relative c'' {
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 globalO = {
-  \key d \major
+  \key g \major
 %  \numericTimeSignature
-  \time 4/4
+  \time 3/4
   \tempo "Allegro moderato" 4=100
 }
 
@@ -472,10 +600,29 @@ scoreOClarinet = \relative c'' {
   \global
   \transposition bf
   % Music follows here.
-
+  \repeat volta 2 {
+    d4(g,8 a b c d4-.) g,-. g-.
+    e'( c8 d e fs g4-.) g,-. g-. c( d8 c b a b4 c8 b a g
+    fs4 g8 a b g \acciaccatura b a2.)
+    d4( g,8 a b c d4-.) g,-. g-. e'( c8 d e fs g4-.) g,-. g-.
+    c\( d8 c b a b4 c8 b a g a4 b8 a g fs g2.\)
+  }
+  \repeat volta 2 {
+    b'4 g8 a b g a4 d,8 e fs d g4 e8 fs g d
+    cs4 b8 cs a4 a8 b cs d e fs g4 fs e fs a, cs d2. d4 g,8 fs g4 e'4 g,8 fs g4 d' c b a8 g fs g a4 d,8 e fs g a b c4 b a b8 d g,4 fs <b, d g>2.
+  }
 }
 
 \bookpart {
+  \header {
+    title = "Minuet 3"
+    composer = "Johann Sebastian Bach"
+    poet = "Bach: 21.03.1685-28.07.1750"
+    meter = ""
+    piece = ""
+    opus = "Suzuki No. 15, Vol. 1"
+    tagline = ""
+  }
   \score {
     \new Staff \with {
       instrumentName = "Klarinette"
@@ -506,6 +653,15 @@ scorePClarinet = \relative c'' {
 }
 
 \bookpart {
+\header {
+  title = ""
+  composer = ""
+  poet = ""
+  meter = ""
+  piece = ""
+  opus = "Suzuki No. , Vol. 1"
+  tagline = ""
+}
   \score {
     \new Staff \with {
       instrumentName = "Klarinette"
@@ -536,6 +692,15 @@ scoreQClarinet = \relative c'' {
 }
 
 \bookpart {
+\header {
+  title = ""
+  composer = ""
+  poet = ""
+  meter = ""
+  piece = ""
+  opus = "Suzuki No. , Vol. 1"
+  tagline = ""
+}
   \score {
     \new Staff \with {
       instrumentName = "Klarinette"

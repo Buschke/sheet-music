@@ -85,6 +85,7 @@ scoreAClarinetPart = \new Staff \with {
   instrumentName = "Klarinette"
   shortInstrumentName = "Kl."
   midiInstrument = "clarinet"
+  \magnifyStaff #5/7
 } \scoreAClarinet
 
 scoreAPianoPart = \new PianoStaff \with {
