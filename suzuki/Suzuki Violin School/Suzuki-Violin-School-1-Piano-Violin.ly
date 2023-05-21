@@ -1172,7 +1172,7 @@ globalM = {
   %  \numericTimeSignature
   \defaultTimeSignature
   \time 3/4
-  \tempo "Allegretto" 2.=66
+  \tempo "Allegretto" 4=60
 }
 
 scoreMViolin = \relative c'' {
@@ -1248,14 +1248,7 @@ claveM = {
       \globalM
       % bd4 sn4
       <<
-        {
-          %      \repeat unfold 16 cl16
-          %      \repeat unfold 16 hh16
-          hh8 cl hh cl hh cl hh cl
-          %        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
-        } \\ {
-          bd4 sn4 sn4 sn4
-        }
+        { \repeat unfold 3 {hh8 cl} } \\ { bd4 sn4 sn4 }
       >>
     }
   >>
@@ -1279,11 +1272,14 @@ claveM = {
     \layout { }
   }
   \score {
-    \unfoldRepeats {
-      <<
-        \scoreMViolinPart
-        \scoreMPianoPart
-      >>
+    {
+      \claveM
+      \unfoldRepeats {
+        <<
+          \scoreMViolinPart
+          \scoreMPianoPart
+        >>
+      }
     }
     \midi { }
   }
