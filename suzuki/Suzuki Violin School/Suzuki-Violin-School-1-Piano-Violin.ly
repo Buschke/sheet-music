@@ -92,20 +92,7 @@ scoreAPianoPart = \new PianoStaff \with {
   } { \clef bass \scoreALeft }
 >>
 
-claveA = {
-  \new DrumStaff <<
-    \drummode {
-      \globalA
-      <<
-        {
-          \repeat unfold 4 {hh8 cl}
-        } \\ {
-          bd4 sn4 4 4
-        }
-      >>
-    }
-  >>
-}
+claveA = { \new DrumStaff { \drummode { \globalA << { \repeat unfold 4 {hh8 cl} } \\ { bd4 sn sn sn } >> }}}
 
 \bookpart {
   \header {
@@ -187,24 +174,7 @@ scoreBPianoPart = \new PianoStaff \with {
   } { \clef bass \scoreBLeft }
 >>
 
-claveB = {
-  \new DrumStaff <<
-    \drummode {
-      \globalB
-      % bd4 sn4
-      <<
-        {
-          %      \repeat unfold 16 cl16
-          %      \repeat unfold 16 hh16
-          hh8 cl hh cl hh cl hh cl
-          %        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
-        } \\ {
-          bd4 sn4 sn4 sn4
-        }
-      >>
-    }
-  >>
-}
+claveB = { \new DrumStaff { \drummode { \globalB << { \repeat unfold 4 {hh8 cl} } \\ { bd4 sn sn sn } >> }}}
 
 \bookpart {
   \header {
@@ -274,24 +244,7 @@ scoreCPianoPart = \new PianoStaff \with {
   } { \clef bass \scoreCLeft }
 >>
 
-claveC = {
-  \new DrumStaff <<
-    \drummode {
-      \globalC
-      % bd4 sn4
-      <<
-        {
-          %      \repeat unfold 16 cl16
-          %      \repeat unfold 16 hh16
-          hh8 cl hh cl hh cl hh cl
-          %        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
-        } \\ {
-          bd4 sn4 sn4 sn4
-        }
-      >>
-    }
-  >>
-}
+claveC = { \new DrumStaff { \drummode { \globalC << { \repeat unfold 4 {hh8 cl} } \\ { bd4 sn sn sn } >> }}}
 
 \bookpart {
   \header {
@@ -361,24 +314,7 @@ scoreDPianoPart = \new PianoStaff \with {
   } { \clef bass \scoreDLeft }
 >>
 
-claveD = {
-  \new DrumStaff <<
-    \drummode {
-      \globalD
-      % bd4 sn4
-      <<
-        {
-          %      \repeat unfold 16 cl16
-          %      \repeat unfold 16 hh16
-          hh8 cl hh cl hh cl hh cl
-          %        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
-        } \\ {
-          bd4 sn4 sn4 sn4
-        }
-      >>
-    }
-  >>
-}
+claveD = { \new DrumStaff { \drummode { \globalD << { \repeat unfold 4 {hh8 cl} } \\ { bd4 sn sn sn } >> }}}
 
 \bookpart {
   \header {
@@ -448,24 +384,7 @@ scoreEPianoPart = \new PianoStaff \with {
   } { \clef bass \scoreELeft }
 >>
 
-claveE = {
-  \new DrumStaff <<
-    \drummode {
-      \globalE
-      % bd4 sn4
-      <<
-        {
-          %      \repeat unfold 16 cl16
-          %      \repeat unfold 16 hh16
-          hh8 cl hh cl hh cl hh cl
-          %        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
-        } \\ {
-          bd4 sn4 sn4 sn4
-        }
-      >>
-    }
-  >>
-}
+claveE = { \new DrumStaff { \drummode { \globalE << { \repeat unfold 4 {hh8 cl} } \\ { bd4 sn sn sn } >> }}}
 
 \bookpart {
   \header {
@@ -547,24 +466,7 @@ scoreFPianoPart = \new PianoStaff \with {
   } { \clef bass \scoreFLeft }
 >>
 
-claveF = {
-  \new DrumStaff <<
-    \drummode {
-      \globalF
-      % bd4 sn4
-      <<
-        {
-          %      \repeat unfold 16 cl16
-          %      \repeat unfold 16 hh16
-          hh8 cl hh cl hh cl hh cl
-          %        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
-        } \\ {
-          bd4 sn4 sn4 sn4
-        }
-      >>
-    }
-  >>
-}
+claveF = { \new DrumStaff { \drummode { \globalF << { \repeat unfold 4 {hh8 cl} } \\ { bd4 sn sn sn } >> }}}
 
 \bookpart {
   \header {
@@ -662,24 +564,7 @@ scoreGPianoPart = \new PianoStaff \with {
   } { \clef bass \scoreGLeft }
 >>
 
-claveG = {
-  \new DrumStaff <<
-    \drummode {
-      \globalG
-      % bd4 sn4
-      <<
-        {
-          %      \repeat unfold 16 cl16
-          %      \repeat unfold 16 hh16
-          hh8 cl hh cl hh cl hh cl
-          %        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
-        } \\ {
-          bd4 sn4 sn4 sn4
-        }
-      >>
-    }
-  >>
-}
+claveG = { \new DrumStaff { \drummode { \globalG << { \repeat unfold 4 {hh8 cl} } \\ { bd4 sn sn sn } >> }}}
 
 \bookpart {
   \header {
@@ -758,24 +643,7 @@ scoreHPianoPart = \new PianoStaff \with {
   } { \clef bass \scoreHLeft }
 >>
 
-claveH = {
-  \new DrumStaff <<
-    \drummode {
-      \globalH
-      % bd4 sn4
-      <<
-        {
-          %      \repeat unfold 16 cl16
-          %      \repeat unfold 16 hh16
-          hh8 cl hh cl hh cl
-          %        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
-        } \\ {
-          bd4 sn4 sn4
-        }
-      >>
-    }
-  >>
-}
+claveH = { \new DrumStaff { \drummode { \globalH << { \repeat unfold 3 {hh8 cl} } \\ { bd4 sn4 sn4 } >> }}}
 
 \bookpart {
   \header {
@@ -796,7 +664,7 @@ claveH = {
   }
   \score {
     {
-      \claveH
+%      \claveH
       <<
         \scoreHViolinPart
         \scoreHPianoPart
@@ -854,24 +722,7 @@ scoreIPianoPart = \new PianoStaff \with {
   } { \clef bass \scoreILeft }
 >>
 
-claveI = {
-  \new DrumStaff <<
-    \drummode {
-      \globalI
-      % bd4 sn4
-      <<
-        {
-          %      \repeat unfold 16 cl16
-          %      \repeat unfold 16 hh16
-          hh8 cl hh cl hh cl hh cl
-          %        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
-        } \\ {
-          bd4 sn4 sn4 sn4
-        }
-      >>
-    }
-  >>
-}
+claveI = { \new DrumStaff { \drummode { \globalI << { \repeat unfold 3 {hh8 cl} } \\ { bd4 sn4 sn4 } >> }}}
 
 \bookpart {
   \header {
@@ -941,24 +792,7 @@ scoreJPianoPart = \new PianoStaff \with {
   } { \clef bass \scoreJLeft }
 >>
 
-claveJ = {
-  \new DrumStaff <<
-    \drummode {
-      \globalJ
-      % bd4 sn4
-      <<
-        {
-          %      \repeat unfold 16 cl16
-          %      \repeat unfold 16 hh16
-          hh8 cl hh cl hh cl hh cl
-          %        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
-        } \\ {
-          bd4 sn4 sn4 sn4
-        }
-      >>
-    }
-  >>
-}
+claveJ = { \new DrumStaff { \drummode { \globalJ << { \repeat unfold 4 {hh8 cl} } \\ { bd4 sn sn sn } >> }}}
 
 \bookpart {
   \header {
@@ -1028,24 +862,7 @@ scoreKPianoPart = \new PianoStaff \with {
   } { \clef bass \scoreKLeft }
 >>
 
-claveK = {
-  \new DrumStaff <<
-    \drummode {
-      \globalK
-      % bd4 sn4
-      <<
-        {
-          %      \repeat unfold 16 cl16
-          %      \repeat unfold 16 hh16
-          hh8 cl hh cl hh cl hh cl
-          %        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
-        } \\ {
-          bd4 sn4 sn4 sn4
-        }
-      >>
-    }
-  >>
-}
+claveK = { \new DrumStaff { \drummode { \globalK << { \repeat unfold 4 {hh8 cl} } \\ { bd4 sn sn sn } >> }}}
 
 \bookpart {
   \header {
@@ -1115,24 +932,7 @@ scoreLPianoPart = \new PianoStaff \with {
   } { \clef bass \scoreLLeft }
 >>
 
-claveL = {
-  \new DrumStaff <<
-    \drummode {
-      \globalL
-      % bd4 sn4
-      <<
-        {
-          %      \repeat unfold 16 cl16
-          %      \repeat unfold 16 hh16
-          hh8 cl hh cl hh cl hh cl
-          %        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
-        } \\ {
-          bd4 sn4 sn4 sn4
-        }
-      >>
-    }
-  >>
-}
+claveL = { \new DrumStaff { \drummode { \globalL << { \repeat unfold 4 {hh8 cl} } \\ { bd4 sn sn sn } >> }}}
 
 \bookpart {
   \header {
@@ -1242,17 +1042,7 @@ scoreMPianoPart = \new PianoStaff \with {
   } { \clef bass \scoreMLeft }
 >>
 
-claveM = {
-  \new DrumStaff <<
-    \drummode {
-      \globalM
-      % bd4 sn4
-      <<
-        { \repeat unfold 3 {hh8 cl} } \\ { bd4 sn4 sn4 }
-      >>
-    }
-  >>
-}
+claveM = { \new DrumStaff { \drummode { \globalM << { \repeat unfold 3 {hh8 cl} } \\ { bd4 sn sn } >> }}}
 
 \bookpart {
   \header {
@@ -1370,24 +1160,7 @@ scoreNPianoPart = \new PianoStaff \with {
   } { \clef bass \scoreNLeft }
 >>
 
-claveN = {
-  \new DrumStaff <<
-    \drummode {
-      \globalN
-      % bd4 sn4
-      <<
-        {
-          %      \repeat unfold 16 cl16
-          %      \repeat unfold 16 hh16
-          hh8 cl hh cl hh cl hh cl
-          %        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
-        } \\ {
-          bd4 sn4 sn4 sn4
-        }
-      >>
-    }
-  >>
-}
+claveN = { \new DrumStaff { \drummode { \globalN << { \repeat unfold 4 {hh8 cl} } \\ { bd4 sn sn sn } >> }}}
 
 \bookpart {
   \header {
@@ -1488,20 +1261,7 @@ scoreOPianoPart = \new PianoStaff \with {
   } { \clef bass \scoreOLeft }
 >>
 
-claveO = {
-  \new DrumStaff <<
-    \drummode {
-      \globalO
-      <<
-        {
-          \repeat unfold 3 {hh8 cl}
-        } \\ {
-          bd4 sn4 sn4
-        }
-      >>
-    }
-  >>
-}
+claveO = { \new DrumStaff { \drummode { \globalO << { \repeat unfold 3 {hh8 cl} } \\ { bd4 sn sn } >> }}}
 
 \bookpart {
   \header {
@@ -1600,24 +1360,7 @@ scorePPianoPart = \new PianoStaff \with {
   } { \clef bass \scorePLeft }
 >>
 
-claveP = {
-  \new DrumStaff <<
-    \drummode {
-      \globalP
-      % bd4 sn4
-      <<
-        {
-          %      \repeat unfold 16 cl16
-          %      \repeat unfold 16 hh16
-          hh8 cl hh cl hh cl hh cl
-          %        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
-        } \\ {
-          bd4 sn4 sn4 sn4
-        }
-      >>
-    }
-  >>
-}
+claveP = { \new DrumStaff { \drummode { \globalP << { \repeat unfold 4 {hh8 cl} } \\ { bd4 sn sn sn } >> }}}
 
 \bookpart {
   \header {
@@ -1714,24 +1457,7 @@ scoreQPianoPart = \new PianoStaff \with {
   } { \clef bass \scoreQLeft }
 >>
 
-claveQ = {
-  \new DrumStaff <<
-    \drummode {
-      \globalQ
-      % bd4 sn4
-      <<
-        {
-          %      \repeat unfold 16 cl16
-          %      \repeat unfold 16 hh16
-          hh8 cl hh cl hh cl hh cl
-          %        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
-        } \\ {
-          bd4 sn4 sn4 sn4
-        }
-      >>
-    }
-  >>
-}
+claveQ = { \new DrumStaff { \drummode { \globalQ << { \repeat unfold 4 {hh8 cl} } \\ { bd4 sn sn sn } >> }}}
 
 \bookpart {
   \header {
