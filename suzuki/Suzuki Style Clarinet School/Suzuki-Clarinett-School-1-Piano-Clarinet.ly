@@ -143,29 +143,49 @@ scoreAPianoPart = \new PianoStaff \with {
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 globalB = {
-  \key d \major
-  %  \numericTimeSignature
-  \time 4/4
-  \tempo "Allegro moderato" 4=100
+  \time 2/2
+  \tempo "Moderato" 4=100
+}
+
+globalBC = {
+  \globalB
+  \key g \major
+}
+
+globalBP = {
+  \globalB
+  \key a \major
 }
 
 scoreBClarinet = \relative c'' {
-  \global
+  \globalBC
   \transposition bf
   % Music follows here.
-
+  d,4\mf\downbow b b2 c4 a a2 g4 a b c d d d2
+  d4 b4 4 4 c a a a g b d d b4 4 2
+  a4 a a a a b c2 b4 4 4 4 4 c d2
+  d4 b4 4 4 c a a a g b d d b4 4 2
+  \bar "|."
 }
 
 scoreBRight = \relative c'' {
-  \global
+  \globalBP
   % Music follows here.
-
+  e4\mf cs cs2 d4 b b2 a4 b cs d e e e2
+  e4 <a, cs>4 4 4 d <gs, b>4 4 4 a cs <cs e>4 4 <a cs>4 4 2
+  <gs b>4 4 4 4 4 <a cs> <b d>2 <a cs>4 4 4 4 4 <b d> <cs e>2
+  <cs e>4 <a cs>4 4 4 <b d> <gs b>4 4 4 a cs <cs e>4 4 <a cs>4 4 2
+  \bar "|."
 }
 
 scoreBLeft = \relative c' {
-  \global
+  \globalBP
   % Music follows here.
-
+  a4\mf e' cs e gs, e' b e a, e' cs e a, e' cs e
+  a, e' cs e gs, e' d e a, e' cs e a, e' cs e
+  e, e' d e e, e' d e a, e' cs e a, e' cs e
+  a, e' cs e gs, e' b e a, e' cs e a, e' a,2
+  \bar "|."
 }
 
 claveB = { \new DrumStaff { \drummode { \globalB << { \repeat unfold 4 {hh8 cl} } \\ { bd4 sn sn sn } >> }}}
@@ -190,12 +210,12 @@ scoreBPianoPart = \new PianoStaff \with {
 
 \bookpart {
   \header {
-    title = ""
-    composer = ""
+    title = "Lightly Row"
+    composer = "Folk Song"
     poet = ""
     meter = ""
     piece = ""
-    opus = "Suzuki No. , Vol. 1"
+    opus = "Suzuki No. 2, Vol. 1"
     tagline = ""
   }
   \score {

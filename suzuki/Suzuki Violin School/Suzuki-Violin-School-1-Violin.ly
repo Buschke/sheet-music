@@ -77,20 +77,23 @@ scoreAViolin = \relative c'' {
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Nummer  /
+% Nummer 2 / B
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-global = {
-  \key c \major
-  \numericTimeSignature
-  \time 4/4
-  \tempo "Andante" 4=100
+globalB = {
+  \key a \major
+  \time 2/2
+  \tempo "Moderato" 4=100
 }
 
 scoreBViolin = \relative c'' {
-  \global
+  \globalB
   % Music follows here.
-
+  e4\mf\downbow cs cs2 d4 b b2 a4 b cs d e e e2
+  e4 cs4 4 4 d b b b a cs e e cs4 4 2
+  b4 b b b b cs d2 cs4 4 4 4 4 d e2
+  e4 cs4 4 4 d b b b a cs e e cs4 4 2
+  \bar "|."
 }
 
 \bookpart {

@@ -131,28 +131,38 @@ claveA = { \new DrumStaff { \drummode { \globalA << { \repeat unfold 4 {hh8 cl} 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 globalB = {
-  \key c \major
-  \numericTimeSignature
-  \time 4/4
-  \tempo "Andante" 4=100
+  \key a \major
+  \time 2/2
+  \tempo "Moderato" 4=100
 }
 
 scoreBViolin = \relative c'' {
-  \global
+  \globalB
   % Music follows here.
-
+  e4\mf\downbow cs cs2 d4 b b2 a4 b cs d e e e2
+  e4 cs4 4 4 d b b b a cs e e cs4 4 2
+  b4 b b b b cs d2 cs4 4 4 4 4 d e2
+  e4 cs4 4 4 d b b b a cs e e cs4 4 2
+  \bar "|."
 }
 
 scoreBRight = \relative c'' {
-  \global
+  \globalB
   % Music follows here.
-
+  e4\mf cs cs2 d4 b b2 a4 b cs d e e e2
+  e4 <a, cs>4 4 4 d <gs, b>4 4 4 a cs <cs e>4 4 <a cs>4 4 2
+  <gs b>4 4 4 4 4 <a cs> <b d>2 <a cs>4 4 4 4 4 <b d> <cs e>2
+  <cs e>4 <a cs>4 4 4 <b d> <gs b>4 4 4 a cs <cs e>4 4 <a cs>4 4 2
+  \bar "|."
 }
 
 scoreBLeft = \relative c' {
-  \global
+  \globalB
   % Music follows here.
-
+  a4\mf e' cs e g, e' b e a, e' cs e a, e' cs e
+  a, e' cs e gs, e' d e a, e' cs e a, e' cs e
+  e, e' d e e, e' d e a, e' cs e a, e' cs e
+  a, e' cs e gs, e' b e a, e' cs e a, e' a,2
 }
 
 scoreBViolinPart = \new Staff \with {

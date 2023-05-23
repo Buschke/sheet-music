@@ -83,29 +83,32 @@ scoreAClarinet = \relative c'' {
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 globalB = {
-  \key d \major
-%  \numericTimeSignature
-  \time 4/4
-  \tempo "Allegro moderato" 4=100
+  \key g \major
+  \time 2/2
+  \tempo "Moderato" 4=100
 }
 
 scoreBClarinet = \relative c'' {
-  \global
+  \globalB
   \transposition bf
   % Music follows here.
-
+  d,4\mf\downbow b b2 c4 a a2 g4 a b c d d d2
+  d4 b4 4 4 c a a a g b d d b4 4 2
+  a4 a a a a b c2 b4 4 4 4 4 c d2
+  d4 b4 4 4 c a a a g b d d b4 4 2
+  \bar "|."
 }
 
 \bookpart {
-\header {
-  title = ""
-  composer = ""
-  poet = ""
-  meter = ""
-  piece = ""
-  opus = "Suzuki No. , Vol. 1"
-  tagline = ""
-}
+  \header {
+    title = "Lightly Row"
+    composer = "Folk Song"
+    poet = ""
+    meter = ""
+    piece = ""
+    opus = "Suzuki No. 2, Vol. 1"
+    tagline = ""
+  }
   \score {
     \new Staff \with {
       instrumentName = "Klarinette"
