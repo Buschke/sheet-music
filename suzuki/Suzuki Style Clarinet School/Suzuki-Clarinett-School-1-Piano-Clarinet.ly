@@ -84,17 +84,7 @@ scoreALeft = \relative c' {
   \bar "|."
 }
 
-claveA = {
-  \new DrumStaff <<
-    \drummode {
-      \globalA
-      <<
-        {\repeat unfold 4 {hh8 cl}}\\
-        {bd4 sn4 sn4 sn4}
-      >>
-    }
-  >>
-}
+claveA = { \new DrumStaff { \drummode { \globalA << { \repeat unfold 4 {hh8 cl} } \\ { bd4 sn sn sn } >> }}}
 
 scoreAClarinetPart = \new Staff \with {
   instrumentName = "Klarinette"
@@ -178,6 +168,8 @@ scoreBLeft = \relative c' {
 
 }
 
+claveB = { \new DrumStaff { \drummode { \globalB << { \repeat unfold 4 {hh8 cl} } \\ { bd4 sn sn sn } >> }}}
+
 scoreBClarinetPart = \new Staff \with {
   instrumentName = "Klarinette"
   shortInstrumentName = "Kl."
@@ -245,6 +237,8 @@ scoreCLeft = \relative c' {
   % Music follows here.
 
 }
+
+claveC = { \new DrumStaff { \drummode { \globalC << { \repeat unfold 4 {hh8 cl} } \\ { bd4 sn sn sn } >> }}}
 
 scoreCClarinetPart = \new Staff \with {
   instrumentName = "Klarinette"
@@ -424,18 +418,19 @@ scoreEPianoPart = \new PianoStaff \with {
 % Nummer 6 / F
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-globalFC = {
-  \key g \major
-  %\numericTimeSignature
+globalF = {
   \time 4/4
   \tempo "Andante" 4=50
 }
 
+globalFC = {
+  \globalF
+  \key g \major
+}
+
 globalFP = {
+  \globalF
   \key f \major
-  %\numericTimeSignature
-  \time 4/4
-  \tempo "Andante" 4=50
 }
 
 scoreFClarinet = \relative c'' {
@@ -443,7 +438,7 @@ scoreFClarinet = \relative c'' {
   \transposition bf
   % Music follows here.
   \repeat volta 2 {
-    g,4.\f\downbow b8\upbow d4 g e g8 e d2 c4. d8 b4 g a2 g
+    g,4.\f b8 d4 g e g8 e d2 c4. d8 b4 g a2 g
     d'4\mf d c c b d8 b a2\> d4\p d c c b d8 b a2
     g4.\f b8  d4 g e g8 e d2 c4. d8 b4 g a2 g
   }
@@ -469,17 +464,7 @@ scoreFLeft = \relative c {
   }
 }
 
-claveF = {
-  \new DrumStaff <<
-    \drummode {
-      \globalFP
-      <<
-        {\repeat unfold 4 {hh8 cl}}\\
-        {bd4 sn4 sn4 sn4}
-      >>
-    }
-  >>
-}
+claveF = { \new DrumStaff { \drummode { \globalF << { \repeat unfold 4 {hh8 cl} } \\ { bd4 sn sn sn } >> }}}
 
 scoreFClarinetPart = \new Staff \with {
   instrumentName = "Klarinette"
@@ -538,35 +523,64 @@ scoreFPianoPart = \new PianoStaff \with {
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 globalG = {
-  \key d \major
-  %  \numericTimeSignature
   \time 4/4
-  \tempo "Allegro moderato" 4=100
+  \tempo "Andante" 4=50
 }
 
-scoreGClarinet = \relative c'' {
-  \global
+globalGC = {
+  \globalG
+  \key c \major
+}
+
+globalGP = {
+  \globalG
+  \key bf \major
+}
+
+scoreGClarinet = \relative c' {
+  \globalGC
   \transposition bf
   % Music follows here.
-
+  c4\mf c8 d e4 8 f g4 a8 g e2 g4\> f8 e d2\! f4\> e8 d c2\!
+  4 8 d e4 8 f g4 a8 g e2 g4\> f8 e d4 e8 d c2\! r
+  g'4\downbow\f\> f8 e\! d4 g,8 8 f'4\> e8 d c2\! g'4\mp\> f8 e d4\! g,8 8 f'4\> e8 d c2\!
+  4\f 8 d e4 8 f g4 a8 g e2 g4\> f8 e d4\! e8 d c2 r
+  \bar "|."
 }
 
-scoreGRight = \relative c'' {
-  \global
+scoreGRight = \relative c {
+  \globalGP
   % Music follows here.
-
+  <d' f>2 <f bf> <bf d> <f bf> <f a>2 2 <f bf> <d f>
+  <d f> <f bf> <bf d> <f bf> <f a> <ef a> <d bf'> r
+  <<{f\f f f <d f> f f f <d f>2 2 <f bf> <bf d> <f bf>}\\{f4(ef8 d) c4 c f(d8 c) d2 f4\p(ef8 d) c4 c f( d8(c) d2}>>
+  af'4( g8 f) ef4 <ef a> <d bf'>2 r
+  \bar "|."
 }
 
-scoreGLeft = \relative c' {
-  \global
+scoreGLeft = \relative c, {
+  \globalGP
   % Music follows here.
-
+  <<{bf'2 2 2 2}\\{bf8( f' bf f) bf,8(f' bf f) bf,8( f' bf f) bf,8(f' bf f)}>>
+  f,8( f' a f) f,( f' a f)
+  <<{bf,2 2 2 2}\\{bf8( f' bf f) bf,8(f' bf f) bf,8( f' bf f) bf,8(f' bf f)}>>
+  <<{bf,2 2}\\{bf8( f' bf f) bf,8(f' bf f)}>>
+  f,8( f' a f) f,( f' a f)
+  <<{bf,2 d8\<(f bf d\!)}\\{bf,8( f' bf f) r2}>>
+  d'8\f( f, c' bf a f a f) c'(f, bf f bf, d f bf)
+  d8\p( f, c' bf a f a f) c'(f, bf f bf, d f bf)
+  <<{bf,2 2 2 2}\\{bf8( f' bf f) bf,8(f' bf f) bf,8( f' bf f) bf,8(f' bf f)}>>
+  b,(d g b) <c, c'>4 f <<{bf,2}\\{bf8( f' bf f bf,4) r}>>
 }
+
+claveG = { \new DrumStaff { \drummode { \globalG << { \repeat unfold 4 {hh8 cl} } \\ { bd4 sn sn sn } >> }}}
 
 scoreGClarinetPart = \new Staff \with {
   instrumentName = "Klarinette"
   shortInstrumentName = "Kl."
   midiInstrument = "clarinet"
+  \consists "Ambitus_engraver"
+  \magnifyStaff #5/7
 } \scoreGClarinet
 
 scoreGPianoPart = \new PianoStaff \with {
@@ -583,12 +597,12 @@ scoreGPianoPart = \new PianoStaff \with {
 
 \bookpart {
   \header {
-    title = ""
-    composer = ""
-    poet = ""
+    title = "Long, Long Ago"
+    composer = "Thomas Haynes Bayly"
+    poet = "Bayly: 13.10.1797-22.04.1839"
     meter = ""
     piece = ""
-    opus = "Suzuki No. , Vol. 1"
+    opus = "Suzuki No. 7, Vol. 1"
     tagline = ""
   }
   \score {
@@ -597,6 +611,15 @@ scoreGPianoPart = \new PianoStaff \with {
       \scoreGPianoPart
     >>
     \layout { }
+  }
+  \score {
+    { \claveG
+      \unfoldRepeats {
+    <<
+      \scoreGClarinetPart
+      \scoreGPianoPart
+    >>
+    }}
     \midi { }
   }
 }

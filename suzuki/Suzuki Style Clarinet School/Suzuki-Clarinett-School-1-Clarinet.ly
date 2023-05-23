@@ -42,7 +42,7 @@ global = {
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 globalA = {
-  \key a \major
+  \key c \major
   \time 4/4
   \tempo "Allegro moderato" 4=100
 }
@@ -51,11 +51,11 @@ scoreAClarinet = \relative c'' {
   \globalA
   \transposition bf
   % Music follows here.
-  a4-.\f a-. e'-. e-. fs-. fs-. e2-- d4-. d-. cs-. cs-. b-. b-. a2--
-  e'4-. e-. d-. d-. cs-. cs-. b2-- e4-. e-. d-. d-. cs-. cs-. b2--
-  a4-. a-. e'-. e-. fs-. fs-. e2-- d4-. d-. cs-. cs-. b-. b-. a2--
+  c,4-.\f c-. g'-. g-. a-. a-. g2-- f4-. f-. e-. e-. d-. d-. c2--
+  g'4-. g-. f-. f-. e-. e-. d2-- g4-. g-. f-. f-. e-. e-. d2--
+  c4-. c-. g'-. g-. a-. a-. g2-- f4-. f-. e-. e-. d-. d-. c2--
   \bar "|."
-}
+}}
 
 \bookpart {
   \header {
@@ -239,29 +239,33 @@ scoreEClarinet = \relative c'' {
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 globalF = {
-  \key d \major
+  \key g \major
 %  \numericTimeSignature
   \time 4/4
   \tempo "Allegro moderato" 4=100
 }
 
 scoreFClarinet = \relative c'' {
-  \global
+  \globalF
   \transposition bf
   % Music follows here.
-
+  \repeat volta 2 {
+    g,4.\f b8 d4 g e g8 e d2 c4. d8 b4 g a2 g
+    d'4\mf d c c b d8 b a2\> d4\p d c c b d8 b a2
+    g4.\f b8  d4 g e g8 e d2 c4. d8 b4 g a2 g
+  }
 }
 
 \bookpart {
-\header {
-  title = ""
-  composer = ""
-  poet = ""
-  meter = ""
-  piece = ""
-  opus = "Suzuki No. , Vol. 1"
-  tagline = ""
-}
+  \header {
+    title = "May Song"
+    composer = "Folk Song"
+    poet = ""
+    meter = ""
+    piece = ""
+    opus = "Suzuki No. 6, Vol. 1"
+    tagline = ""
+  }
   \score {
     \new Staff \with {
       instrumentName = "Klarinette"
@@ -278,7 +282,7 @@ scoreFClarinet = \relative c'' {
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 globalG = {
-  \key d \major
+  \key c \major
 %  \numericTimeSignature
   \time 4/4
   \tempo "Allegro moderato" 4=100
@@ -288,24 +292,29 @@ scoreGClarinet = \relative c'' {
   \global
   \transposition bf
   % Music follows here.
-
+  c,4\mf c8 d e4 8 f g4 a8 g e2 g4\> f8 e d2\! f4\> e8 d c2\!
+  4 8 d e4 8 f g4 a8 g e2 g4\> f8 e d4 e8 d c2\! r
+  g'4\downbow\f\> f8 e\! d4 g,8 8 f'4\> e8 d c2\! g'4\mp\> f8 e d4\! g,8 8 f'4\> e8 d c2\!
+  4\f 8 d e4 8 f g4 a8 g e2 g4\> f8 e d4\! e8 d c2 r
+  \bar "|."
 }
 
 \bookpart {
-\header {
-  title = ""
-  composer = ""
-  poet = ""
-  meter = ""
-  piece = ""
-  opus = "Suzuki No. , Vol. 1"
-  tagline = ""
-}
+  \header {
+    title = "Long, Long Ago"
+    composer = "Thomas Haynes Bayly"
+    poet = "Bayly: 13.10.1797-22.04.1839"
+    meter = ""
+    piece = ""
+    opus = "Suzuki No. 7, Vol. 1"
+    tagline = ""
+  }
   \score {
     \new Staff \with {
       instrumentName = "Klarinette"
       shortInstrumentName = "Kl."
       midiInstrument = "clarinet"
+      \consists "Ambitus_engraver"
     } \scoreGClarinet
     \layout { }
     \midi { }
