@@ -159,10 +159,11 @@ scoreBRight = \relative c'' {
 scoreBLeft = \relative c' {
   \globalB
   % Music follows here.
-  a4\mf e' cs e g, e' b e a, e' cs e a, e' cs e
+  a4\mf e' cs e gs, e' b e a, e' cs e a, e' cs e
   a, e' cs e gs, e' d e a, e' cs e a, e' cs e
   e, e' d e e, e' d e a, e' cs e a, e' cs e
   a, e' cs e gs, e' b e a, e' cs e a, e' a,2
+  \bar "|."
 }
 
 scoreBViolinPart = \new Staff \with {
@@ -1093,7 +1094,7 @@ globalN = {
   \key g \major
   %\numericTimeSignature
   \time 3/4
-  \tempo "Andantino" 4=100
+  \tempo "Andantino" 4=46
 }
 
 scoreNViolin = \relative c'' {
@@ -1151,6 +1152,8 @@ scoreNLeft = \relative c' {
   }
 }
 
+claveN = \new DrumStaff { \drummode {\globalN <<{\repeat unfold 3 {cl8 hh}}\\{bd4 sn sn}>> }}
+
 scoreNViolinPart = \new Staff \with {
   instrumentName = "Violine"
   shortInstrumentName = "Vl."
@@ -1170,7 +1173,7 @@ scoreNPianoPart = \new PianoStaff \with {
   } { \clef bass \scoreNLeft }
 >>
 
-claveN = { \new DrumStaff { \drummode { \globalN << { \repeat unfold 4 {hh8 cl} } \\ { bd4 sn sn sn } >> }}}
+%claveN = \new DrumStaff { \drummode { \globalN << { \repeat unfold 3 {hh8 cl} } \\ { bd4 sn sn sn } >> }}
 
 \bookpart {
   \header {
@@ -1188,6 +1191,17 @@ claveN = { \new DrumStaff { \drummode { \globalN << { \repeat unfold 4 {hh8 cl} 
       \scoreNPianoPart
     >>
     \layout { }
+  }
+  \score {
+    {
+      \claveN
+      \unfoldRepeats {
+    <<
+      \scoreNViolinPart
+      \scoreNPianoPart
+    >>
+      }
+    }
     \midi { }
   }
 }
