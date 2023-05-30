@@ -43,7 +43,7 @@ global = {
 
 globalA = {
   \time 4/4
-  \tempo "Andante" 4=100
+  \tempo "Andante" 4=64
 }
 
 globalAC = {
