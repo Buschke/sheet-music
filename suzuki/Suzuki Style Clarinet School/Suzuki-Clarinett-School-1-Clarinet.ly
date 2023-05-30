@@ -42,7 +42,7 @@ global = {
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 globalA = {
-  \key c \major
+  \key bf \major
   \time 4/4
   \tempo "Allegro moderato" 4=100
 }
@@ -51,9 +51,9 @@ scoreAClarinet = \relative c'' {
   \globalA
   \transposition bf
   % Music follows here.
-  c,4-.\f c-. g'-. g-. a-. a-. g2-- f4-. f-. e-. e-. d-. d-. c2--
-  g'4-. g-. f-. f-. e-. e-. d2-- g4-. g-. f-. f-. e-. e-. d2--
-  c4-. c-. g'-. g-. a-. a-. g2-- f4-. f-. e-. e-. d-. d-. c2--
+  bf,4-.\f bf-. f'-. f-. g-. g-. f2-- ef4-. ef-. d-. d-. c-. c-. bf2--
+  f'4-. f-. ef-. ef-. d-. d-. c2-- f4-. f-. ef-. ef-. d-. d-. c2--
+  bf4-. bf-. f'-. f-. g-. g-. f2-- ef4-. ef-. d-. d-. c-. c-. bf2--
   \bar "|."
 }
 
