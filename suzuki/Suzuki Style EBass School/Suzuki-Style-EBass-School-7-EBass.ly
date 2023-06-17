@@ -34,14 +34,14 @@
 global = {
   \key c \major
   \time 4/4
-  \tempo "Allegro" 4=100
+  \tempo "Andante" 4=100
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Nummer 1 / A
+% Nummer  /
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-globalA = {
+global = {
   \key c \major
   \numericTimeSignature
   \time 4/4
@@ -51,26 +51,33 @@ globalA = {
 scoreAElectricBass = \relative c, {
   \global
   % Music follows here.
-
+  c
 }
 
 \bookpart {
   \score {
-    \new Staff \with {
-      midiInstrument = "electric bass (finger)"
-      instrumentName = "Elektrischer Bass"
+    \new StaffGroup \with {
+      \consists "Instrument_name_engraver"
+      instrumentName = "E-Bass"
       shortInstrumentName = "E.Bs."
-    } { \clef "bass_8" \scoreAElectricBass }
+    } <<
+      \new Staff \with {
+        midiInstrument = "electric bass (finger)"
+      } { \clef "bass_8" \scoreAElectricBass }
+      \new TabStaff \with {
+        stringTunings = #bass-tuning
+      } \scoreAElectricBass
+    >>
     \layout { }
     \midi { }
   }
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Nummer 2 / B
+% Nummer  /
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-globalB = {
+global = {
   \key c \major
   \numericTimeSignature
   \time 4/4
@@ -85,21 +92,28 @@ scoreBElectricBass = \relative c, {
 
 \bookpart {
   \score {
-    \new Staff \with {
-      midiInstrument = "electric bass (finger)"
+    \new StaffGroup \with {
+      \consists "Instrument_name_engraver"
       instrumentName = "Elektrischer Bass"
       shortInstrumentName = "E.Bs."
-    } { \clef "bass_8" \scoreBElectricBass }
+    } <<
+      \new Staff \with {
+        midiInstrument = "electric bass (finger)"
+      } { \clef "bass_8" \scoreBElectricBass }
+      \new TabStaff \with {
+        stringTunings = #bass-tuning
+      } \scoreBElectricBass
+    >>
     \layout { }
     \midi { }
   }
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Nummer 3 / C
+% Nummer  /
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-globalC = {
+global = {
   \key c \major
   \numericTimeSignature
   \time 4/4
@@ -114,21 +128,28 @@ scoreCElectricBass = \relative c, {
 
 \bookpart {
   \score {
-    \new Staff \with {
-      midiInstrument = "electric bass (finger)"
+    \new StaffGroup \with {
+      \consists "Instrument_name_engraver"
       instrumentName = "Elektrischer Bass"
       shortInstrumentName = "E.Bs."
-    } { \clef "bass_8" \scoreCElectricBass }
+    } <<
+      \new Staff \with {
+        midiInstrument = "electric bass (finger)"
+      } { \clef "bass_8" \scoreCElectricBass }
+      \new TabStaff \with {
+        stringTunings = #bass-tuning
+      } \scoreCElectricBass
+    >>
     \layout { }
     \midi { }
   }
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Nummer 4 / D
+% Nummer  /
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-globalD = {
+global = {
   \key c \major
   \numericTimeSignature
   \time 4/4
@@ -143,21 +164,28 @@ scoreDElectricBass = \relative c, {
 
 \bookpart {
   \score {
-    \new Staff \with {
-      midiInstrument = "electric bass (finger)"
+    \new StaffGroup \with {
+      \consists "Instrument_name_engraver"
       instrumentName = "Elektrischer Bass"
       shortInstrumentName = "E.Bs."
-    } { \clef "bass_8" \scoreDElectricBass }
+    } <<
+      \new Staff \with {
+        midiInstrument = "electric bass (finger)"
+      } { \clef "bass_8" \scoreDElectricBass }
+      \new TabStaff \with {
+        stringTunings = #bass-tuning
+      } \scoreDElectricBass
+    >>
     \layout { }
     \midi { }
   }
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Nummer 5 / E
+% Nummer  /
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-globalE = {
+global = {
   \key c \major
   \numericTimeSignature
   \time 4/4
@@ -172,21 +200,28 @@ scoreEElectricBass = \relative c, {
 
 \bookpart {
   \score {
-    \new Staff \with {
-      midiInstrument = "electric bass (finger)"
+    \new StaffGroup \with {
+      \consists "Instrument_name_engraver"
       instrumentName = "Elektrischer Bass"
       shortInstrumentName = "E.Bs."
-    } { \clef "bass_8" \scoreEElectricBass }
+    } <<
+      \new Staff \with {
+        midiInstrument = "electric bass (finger)"
+      } { \clef "bass_8" \scoreEElectricBass }
+      \new TabStaff \with {
+        stringTunings = #bass-tuning
+      } \scoreEElectricBass
+    >>
     \layout { }
     \midi { }
   }
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Nummer 6 / F
+% Nummer  /
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-globalF = {
+global = {
   \key c \major
   \numericTimeSignature
   \time 4/4
@@ -201,21 +236,28 @@ scoreFElectricBass = \relative c, {
 
 \bookpart {
   \score {
-    \new Staff \with {
-      midiInstrument = "electric bass (finger)"
+    \new StaffGroup \with {
+      \consists "Instrument_name_engraver"
       instrumentName = "Elektrischer Bass"
       shortInstrumentName = "E.Bs."
-    } { \clef "bass_8" \scoreFElectricBass }
+    } <<
+      \new Staff \with {
+        midiInstrument = "electric bass (finger)"
+      } { \clef "bass_8" \scoreFElectricBass }
+      \new TabStaff \with {
+        stringTunings = #bass-tuning
+      } \scoreFElectricBass
+    >>
     \layout { }
     \midi { }
   }
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Nummer 7 / G
+% Nummer  /
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-globalG = {
+global = {
   \key c \major
   \numericTimeSignature
   \time 4/4
@@ -230,21 +272,28 @@ scoreGElectricBass = \relative c, {
 
 \bookpart {
   \score {
-    \new Staff \with {
-      midiInstrument = "electric bass (finger)"
+    \new StaffGroup \with {
+      \consists "Instrument_name_engraver"
       instrumentName = "Elektrischer Bass"
       shortInstrumentName = "E.Bs."
-    } { \clef "bass_8" \scoreGElectricBass }
+    } <<
+      \new Staff \with {
+        midiInstrument = "electric bass (finger)"
+      } { \clef "bass_8" \scoreGElectricBass }
+      \new TabStaff \with {
+        stringTunings = #bass-tuning
+      } \scoreGElectricBass
+    >>
     \layout { }
     \midi { }
   }
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Nummer 8 / H
+% Nummer  /
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-globalH = {
+global = {
   \key c \major
   \numericTimeSignature
   \time 4/4
@@ -259,21 +308,28 @@ scoreHElectricBass = \relative c, {
 
 \bookpart {
   \score {
-    \new Staff \with {
-      midiInstrument = "electric bass (finger)"
+    \new StaffGroup \with {
+      \consists "Instrument_name_engraver"
       instrumentName = "Elektrischer Bass"
       shortInstrumentName = "E.Bs."
-    } { \clef "bass_8" \scoreHElectricBass }
+    } <<
+      \new Staff \with {
+        midiInstrument = "electric bass (finger)"
+      } { \clef "bass_8" \scoreHElectricBass }
+      \new TabStaff \with {
+        stringTunings = #bass-tuning
+      } \scoreHElectricBass
+    >>
     \layout { }
     \midi { }
   }
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Nummer 9 / I
+% Nummer  /
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-globalI = {
+global = {
   \key c \major
   \numericTimeSignature
   \time 4/4
@@ -288,21 +344,28 @@ scoreIElectricBass = \relative c, {
 
 \bookpart {
   \score {
-    \new Staff \with {
-      midiInstrument = "electric bass (finger)"
+    \new StaffGroup \with {
+      \consists "Instrument_name_engraver"
       instrumentName = "Elektrischer Bass"
       shortInstrumentName = "E.Bs."
-    } { \clef "bass_8" \scoreIElectricBass }
+    } <<
+      \new Staff \with {
+        midiInstrument = "electric bass (finger)"
+      } { \clef "bass_8" \scoreIElectricBass }
+      \new TabStaff \with {
+        stringTunings = #bass-tuning
+      } \scoreIElectricBass
+    >>
     \layout { }
     \midi { }
   }
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Nummer 10 / J
+% Nummer  /
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-globalJ = {
+global = {
   \key c \major
   \numericTimeSignature
   \time 4/4
@@ -317,21 +380,28 @@ scoreJElectricBass = \relative c, {
 
 \bookpart {
   \score {
-    \new Staff \with {
-      midiInstrument = "electric bass (finger)"
+    \new StaffGroup \with {
+      \consists "Instrument_name_engraver"
       instrumentName = "Elektrischer Bass"
       shortInstrumentName = "E.Bs."
-    } { \clef "bass_8" \scoreJElectricBass }
+    } <<
+      \new Staff \with {
+        midiInstrument = "electric bass (finger)"
+      } { \clef "bass_8" \scoreJElectricBass }
+      \new TabStaff \with {
+        stringTunings = #bass-tuning
+      } \scoreJElectricBass
+    >>
     \layout { }
     \midi { }
   }
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Nummer 11 / K
+% Nummer  /
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-globalK = {
+global = {
   \key c \major
   \numericTimeSignature
   \time 4/4
@@ -346,21 +416,28 @@ scoreKElectricBass = \relative c, {
 
 \bookpart {
   \score {
-    \new Staff \with {
-      midiInstrument = "electric bass (finger)"
+    \new StaffGroup \with {
+      \consists "Instrument_name_engraver"
       instrumentName = "Elektrischer Bass"
       shortInstrumentName = "E.Bs."
-    } { \clef "bass_8" \scoreKElectricBass }
+    } <<
+      \new Staff \with {
+        midiInstrument = "electric bass (finger)"
+      } { \clef "bass_8" \scoreKElectricBass }
+      \new TabStaff \with {
+        stringTunings = #bass-tuning
+      } \scoreKElectricBass
+    >>
     \layout { }
     \midi { }
   }
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Nummer 12 / L
+% Nummer  /
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-globalL = {
+global = {
   \key c \major
   \numericTimeSignature
   \time 4/4
@@ -375,21 +452,28 @@ scoreLElectricBass = \relative c, {
 
 \bookpart {
   \score {
-    \new Staff \with {
-      midiInstrument = "electric bass (finger)"
+    \new StaffGroup \with {
+      \consists "Instrument_name_engraver"
       instrumentName = "Elektrischer Bass"
       shortInstrumentName = "E.Bs."
-    } { \clef "bass_8" \scoreLElectricBass }
+    } <<
+      \new Staff \with {
+        midiInstrument = "electric bass (finger)"
+      } { \clef "bass_8" \scoreLElectricBass }
+      \new TabStaff \with {
+        stringTunings = #bass-tuning
+      } \scoreLElectricBass
+    >>
     \layout { }
     \midi { }
   }
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Nummer 13 / M
+% Nummer  /
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-globalM = {
+global = {
   \key c \major
   \numericTimeSignature
   \time 4/4
@@ -404,21 +488,28 @@ scoreMElectricBass = \relative c, {
 
 \bookpart {
   \score {
-    \new Staff \with {
-      midiInstrument = "electric bass (finger)"
+    \new StaffGroup \with {
+      \consists "Instrument_name_engraver"
       instrumentName = "Elektrischer Bass"
       shortInstrumentName = "E.Bs."
-    } { \clef "bass_8" \scoreMElectricBass }
+    } <<
+      \new Staff \with {
+        midiInstrument = "electric bass (finger)"
+      } { \clef "bass_8" \scoreMElectricBass }
+      \new TabStaff \with {
+        stringTunings = #bass-tuning
+      } \scoreMElectricBass
+    >>
     \layout { }
     \midi { }
   }
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Nummer 14 / N
+% Nummer  /
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-globalN = {
+global = {
   \key c \major
   \numericTimeSignature
   \time 4/4
@@ -433,21 +524,28 @@ scoreNElectricBass = \relative c, {
 
 \bookpart {
   \score {
-    \new Staff \with {
-      midiInstrument = "electric bass (finger)"
+    \new StaffGroup \with {
+      \consists "Instrument_name_engraver"
       instrumentName = "Elektrischer Bass"
       shortInstrumentName = "E.Bs."
-    } { \clef "bass_8" \scoreNElectricBass }
+    } <<
+      \new Staff \with {
+        midiInstrument = "electric bass (finger)"
+      } { \clef "bass_8" \scoreNElectricBass }
+      \new TabStaff \with {
+        stringTunings = #bass-tuning
+      } \scoreNElectricBass
+    >>
     \layout { }
     \midi { }
   }
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Nummer 15 / O
+% Nummer  /
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-globalO = {
+global = {
   \key c \major
   \numericTimeSignature
   \time 4/4
@@ -462,21 +560,28 @@ scoreOElectricBass = \relative c, {
 
 \bookpart {
   \score {
-    \new Staff \with {
-      midiInstrument = "electric bass (finger)"
+    \new StaffGroup \with {
+      \consists "Instrument_name_engraver"
       instrumentName = "Elektrischer Bass"
       shortInstrumentName = "E.Bs."
-    } { \clef "bass_8" \scoreOElectricBass }
+    } <<
+      \new Staff \with {
+        midiInstrument = "electric bass (finger)"
+      } { \clef "bass_8" \scoreOElectricBass }
+      \new TabStaff \with {
+        stringTunings = #bass-tuning
+      } \scoreOElectricBass
+    >>
     \layout { }
     \midi { }
   }
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Nummer 16 / P
+% Nummer  /
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-globalP = {
+global = {
   \key c \major
   \numericTimeSignature
   \time 4/4
@@ -491,21 +596,28 @@ scorePElectricBass = \relative c, {
 
 \bookpart {
   \score {
-    \new Staff \with {
-      midiInstrument = "electric bass (finger)"
+    \new StaffGroup \with {
+      \consists "Instrument_name_engraver"
       instrumentName = "Elektrischer Bass"
       shortInstrumentName = "E.Bs."
-    } { \clef "bass_8" \scorePElectricBass }
+    } <<
+      \new Staff \with {
+        midiInstrument = "electric bass (finger)"
+      } { \clef "bass_8" \scorePElectricBass }
+      \new TabStaff \with {
+        stringTunings = #bass-tuning
+      } \scorePElectricBass
+    >>
     \layout { }
     \midi { }
   }
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Nummer 17 / Q
+% Nummer  /
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-globalQ = {
+global = {
   \key c \major
   \numericTimeSignature
   \time 4/4
@@ -520,21 +632,28 @@ scoreQElectricBass = \relative c, {
 
 \bookpart {
   \score {
-    \new Staff \with {
-      midiInstrument = "electric bass (finger)"
+    \new StaffGroup \with {
+      \consists "Instrument_name_engraver"
       instrumentName = "Elektrischer Bass"
       shortInstrumentName = "E.Bs."
-    } { \clef "bass_8" \scoreQElectricBass }
+    } <<
+      \new Staff \with {
+        midiInstrument = "electric bass (finger)"
+      } { \clef "bass_8" \scoreQElectricBass }
+      \new TabStaff \with {
+        stringTunings = #bass-tuning
+      } \scoreQElectricBass
+    >>
     \layout { }
     \midi { }
   }
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Nummer 18 / R
+% Nummer  /
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-globalR = {
+global = {
   \key c \major
   \numericTimeSignature
   \time 4/4
@@ -558,11 +677,18 @@ scoreRElectricBass = \relative c, {
   tagline = ""
 }
   \score {
-    \new Staff \with {
-      midiInstrument = "electric bass (finger)"
+    \new StaffGroup \with {
+      \consists "Instrument_name_engraver"
       instrumentName = "Elektrischer Bass"
       shortInstrumentName = "E.Bs."
-    } { \clef "bass_8" \scoreRElectricBass }
+    } <<
+      \new Staff \with {
+        midiInstrument = "electric bass (finger)"
+      } { \clef "bass_8" \scoreRElectricBass }
+      \new TabStaff \with {
+        stringTunings = #bass-tuning
+      } \scoreRElectricBass
+    >>
     \layout { }
     \midi { }
   }

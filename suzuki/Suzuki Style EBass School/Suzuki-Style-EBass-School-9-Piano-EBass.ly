@@ -34,7 +34,7 @@
 global = {
   \key c \major
   \time 4/4
-  \tempo "Allegro" 4=100
+  \tempo "Andante" 4=100
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -66,11 +66,18 @@ scoreALeft = \relative c' {
 
 }
 
-scoreAElectricBassPart = \new Staff \with {
-  midiInstrument = "electric bass (finger)"
-  instrumentName = "Elektrischer Bass"
+scoreAElectricBassPart = \new StaffGroup \with {
+  \consists "Instrument_name_engraver"
+  instrumentName = "E-Bass"
   shortInstrumentName = "E.Bs."
-} { \clef "bass_8" \scoreAElectricBass }
+} <<
+  \new Staff \with {
+    midiInstrument = "electric bass (finger)"
+  } { \clef "bass_8" \scoreAElectricBass }
+  \new TabStaff \with {
+    stringTunings = #bass-tuning
+  } \scoreAElectricBass
+>>
 
 scoreAPianoPart = \new PianoStaff \with {
   instrumentName = "Klavier"
@@ -124,11 +131,18 @@ scoreBLeft = \relative c' {
 
 }
 
-scoreBElectricBassPart = \new Staff \with {
-  midiInstrument = "electric bass (finger)"
-  instrumentName = "Elektrischer Bass"
+scoreBElectricBassPart = \new StaffGroup \with {
+  \consists "Instrument_name_engraver"
+  instrumentName = "E-Bass"
   shortInstrumentName = "E.Bs."
-} { \clef "bass_8" \scoreBElectricBass }
+} <<
+  \new Staff \with {
+    midiInstrument = "electric bass (finger)"
+  } { \clef "bass_8" \scoreBElectricBass }
+  \new TabStaff \with {
+    stringTunings = #bass-tuning
+  } \scoreBElectricBass
+>>
 
 scoreBPianoPart = \new PianoStaff \with {
   instrumentName = "Klavier"
@@ -182,11 +196,18 @@ scoreCLeft = \relative c' {
 
 }
 
-scoreCElectricBassPart = \new Staff \with {
-  midiInstrument = "electric bass (finger)"
-  instrumentName = "Elektrischer Bass"
+scoreCElectricBassPart = \new StaffGroup \with {
+  \consists "Instrument_name_engraver"
+  instrumentName = "E-Bass"
   shortInstrumentName = "E.Bs."
-} { \clef "bass_8" \scoreCElectricBass }
+} <<
+  \new Staff \with {
+    midiInstrument = "electric bass (finger)"
+  } { \clef "bass_8" \scoreCElectricBass }
+  \new TabStaff \with {
+    stringTunings = #bass-tuning
+  } \scoreCElectricBass
+>>
 
 scoreCPianoPart = \new PianoStaff \with {
   instrumentName = "Klavier"
@@ -240,11 +261,18 @@ scoreDLeft = \relative c' {
 
 }
 
-scoreDElectricBassPart = \new Staff \with {
-  midiInstrument = "electric bass (finger)"
-  instrumentName = "Elektrischer Bass"
+scoreDElectricBassPart = \new StaffGroup \with {
+  \consists "Instrument_name_engraver"
+  instrumentName = "E-Bass"
   shortInstrumentName = "E.Bs."
-} { \clef "bass_8" \scoreDElectricBass }
+} <<
+  \new Staff \with {
+    midiInstrument = "electric bass (finger)"
+  } { \clef "bass_8" \scoreDElectricBass }
+  \new TabStaff \with {
+    stringTunings = #bass-tuning
+  } \scoreDElectricBass
+>>
 
 scoreDPianoPart = \new PianoStaff \with {
   instrumentName = "Klavier"
@@ -298,11 +326,18 @@ scoreELeft = \relative c' {
 
 }
 
-scoreEElectricBassPart = \new Staff \with {
-  midiInstrument = "electric bass (finger)"
-  instrumentName = "Elektrischer Bass"
+scoreEElectricBassPart = \new StaffGroup \with {
+  \consists "Instrument_name_engraver"
+  instrumentName = "E-Bass"
   shortInstrumentName = "E.Bs."
-} { \clef "bass_8" \scoreEElectricBass }
+} <<
+  \new Staff \with {
+    midiInstrument = "electric bass (finger)"
+  } { \clef "bass_8" \scoreEElectricBass }
+  \new TabStaff \with {
+    stringTunings = #bass-tuning
+  } \scoreEElectricBass
+>>
 
 scoreEPianoPart = \new PianoStaff \with {
   instrumentName = "Klavier"
@@ -356,11 +391,18 @@ scoreFLeft = \relative c' {
 
 }
 
-scoreFElectricBassPart = \new Staff \with {
-  midiInstrument = "electric bass (finger)"
-  instrumentName = "Elektrischer Bass"
+scoreFElectricBassPart = \new StaffGroup \with {
+  \consists "Instrument_name_engraver"
+  instrumentName = "E-Bass"
   shortInstrumentName = "E.Bs."
-} { \clef "bass_8" \scoreFElectricBass }
+} <<
+  \new Staff \with {
+    midiInstrument = "electric bass (finger)"
+  } { \clef "bass_8" \scoreFElectricBass }
+  \new TabStaff \with {
+    stringTunings = #bass-tuning
+  } \scoreFElectricBass
+>>
 
 scoreFPianoPart = \new PianoStaff \with {
   instrumentName = "Klavier"
@@ -414,11 +456,18 @@ scoreGLeft = \relative c' {
 
 }
 
-scoreGElectricBassPart = \new Staff \with {
-  midiInstrument = "electric bass (finger)"
-  instrumentName = "Elektrischer Bass"
+scoreGElectricBassPart = \new StaffGroup \with {
+  \consists "Instrument_name_engraver"
+  instrumentName = "E-Bass"
   shortInstrumentName = "E.Bs."
-} { \clef "bass_8" \scoreGElectricBass }
+} <<
+  \new Staff \with {
+    midiInstrument = "electric bass (finger)"
+  } { \clef "bass_8" \scoreGElectricBass }
+  \new TabStaff \with {
+    stringTunings = #bass-tuning
+  } \scoreGElectricBass
+>>
 
 scoreGPianoPart = \new PianoStaff \with {
   instrumentName = "Klavier"
@@ -472,11 +521,18 @@ scoreHLeft = \relative c' {
 
 }
 
-scoreHElectricBassPart = \new Staff \with {
-  midiInstrument = "electric bass (finger)"
-  instrumentName = "Elektrischer Bass"
+scoreHElectricBassPart = \new StaffGroup \with {
+  \consists "Instrument_name_engraver"
+  instrumentName = "E-Bass"
   shortInstrumentName = "E.Bs."
-} { \clef "bass_8" \scoreHElectricBass }
+} <<
+  \new Staff \with {
+    midiInstrument = "electric bass (finger)"
+  } { \clef "bass_8" \scoreHElectricBass }
+  \new TabStaff \with {
+    stringTunings = #bass-tuning
+  } \scoreHElectricBass
+>>
 
 scoreHPianoPart = \new PianoStaff \with {
   instrumentName = "Klavier"
@@ -530,11 +586,18 @@ scoreILeft = \relative c' {
 
 }
 
-scoreIElectricBassPart = \new Staff \with {
-  midiInstrument = "electric bass (finger)"
-  instrumentName = "Elektrischer Bass"
+scoreIElectricBassPart = \new StaffGroup \with {
+  \consists "Instrument_name_engraver"
+  instrumentName = "E-Bass"
   shortInstrumentName = "E.Bs."
-} { \clef "bass_8" \scoreIElectricBass }
+} <<
+  \new Staff \with {
+    midiInstrument = "electric bass (finger)"
+  } { \clef "bass_8" \scoreIElectricBass }
+  \new TabStaff \with {
+    stringTunings = #bass-tuning
+  } \scoreIElectricBass
+>>
 
 scoreIPianoPart = \new PianoStaff \with {
   instrumentName = "Klavier"
@@ -588,11 +651,18 @@ scoreJLeft = \relative c' {
 
 }
 
-scoreJElectricBassPart = \new Staff \with {
-  midiInstrument = "electric bass (finger)"
-  instrumentName = "Elektrischer Bass"
+scoreJElectricBassPart = \new StaffGroup \with {
+  \consists "Instrument_name_engraver"
+  instrumentName = "E-Bass"
   shortInstrumentName = "E.Bs."
-} { \clef "bass_8" \scoreJElectricBass }
+} <<
+  \new Staff \with {
+    midiInstrument = "electric bass (finger)"
+  } { \clef "bass_8" \scoreJElectricBass }
+  \new TabStaff \with {
+    stringTunings = #bass-tuning
+  } \scoreJElectricBass
+>>
 
 scoreJPianoPart = \new PianoStaff \with {
   instrumentName = "Klavier"
@@ -646,11 +716,18 @@ scoreKLeft = \relative c' {
 
 }
 
-scoreKElectricBassPart = \new Staff \with {
-  midiInstrument = "electric bass (finger)"
-  instrumentName = "Elektrischer Bass"
+scoreKElectricBassPart = \new StaffGroup \with {
+  \consists "Instrument_name_engraver"
+  instrumentName = "E-Bass"
   shortInstrumentName = "E.Bs."
-} { \clef "bass_8" \scoreKElectricBass }
+} <<
+  \new Staff \with {
+    midiInstrument = "electric bass (finger)"
+  } { \clef "bass_8" \scoreKElectricBass }
+  \new TabStaff \with {
+    stringTunings = #bass-tuning
+  } \scoreKElectricBass
+>>
 
 scoreKPianoPart = \new PianoStaff \with {
   instrumentName = "Klavier"
@@ -704,11 +781,18 @@ scoreLLeft = \relative c' {
 
 }
 
-scoreLElectricBassPart = \new Staff \with {
-  midiInstrument = "electric bass (finger)"
-  instrumentName = "Elektrischer Bass"
+scoreLElectricBassPart = \new StaffGroup \with {
+  \consists "Instrument_name_engraver"
+  instrumentName = "E-Bass"
   shortInstrumentName = "E.Bs."
-} { \clef "bass_8" \scoreLElectricBass }
+} <<
+  \new Staff \with {
+    midiInstrument = "electric bass (finger)"
+  } { \clef "bass_8" \scoreLElectricBass }
+  \new TabStaff \with {
+    stringTunings = #bass-tuning
+  } \scoreLElectricBass
+>>
 
 scoreLPianoPart = \new PianoStaff \with {
   instrumentName = "Klavier"
@@ -762,11 +846,18 @@ scoreMLeft = \relative c' {
 
 }
 
-scoreMElectricBassPart = \new Staff \with {
-  midiInstrument = "electric bass (finger)"
-  instrumentName = "Elektrischer Bass"
+scoreMElectricBassPart = \new StaffGroup \with {
+  \consists "Instrument_name_engraver"
+  instrumentName = "E-Bass"
   shortInstrumentName = "E.Bs."
-} { \clef "bass_8" \scoreMElectricBass }
+} <<
+  \new Staff \with {
+    midiInstrument = "electric bass (finger)"
+  } { \clef "bass_8" \scoreMElectricBass }
+  \new TabStaff \with {
+    stringTunings = #bass-tuning
+  } \scoreMElectricBass
+>>
 
 scoreMPianoPart = \new PianoStaff \with {
   instrumentName = "Klavier"
@@ -820,11 +911,18 @@ scoreNLeft = \relative c' {
 
 }
 
-scoreNElectricBassPart = \new Staff \with {
-  midiInstrument = "electric bass (finger)"
-  instrumentName = "Elektrischer Bass"
+scoreNElectricBassPart = \new StaffGroup \with {
+  \consists "Instrument_name_engraver"
+  instrumentName = "E-Bass"
   shortInstrumentName = "E.Bs."
-} { \clef "bass_8" \scoreNElectricBass }
+} <<
+  \new Staff \with {
+    midiInstrument = "electric bass (finger)"
+  } { \clef "bass_8" \scoreNElectricBass }
+  \new TabStaff \with {
+    stringTunings = #bass-tuning
+  } \scoreNElectricBass
+>>
 
 scoreNPianoPart = \new PianoStaff \with {
   instrumentName = "Klavier"
@@ -878,11 +976,18 @@ scoreOLeft = \relative c' {
 
 }
 
-scoreOElectricBassPart = \new Staff \with {
-  midiInstrument = "electric bass (finger)"
-  instrumentName = "Elektrischer Bass"
+scoreOElectricBassPart = \new StaffGroup \with {
+  \consists "Instrument_name_engraver"
+  instrumentName = "E-Bass"
   shortInstrumentName = "E.Bs."
-} { \clef "bass_8" \scoreOElectricBass }
+} <<
+  \new Staff \with {
+    midiInstrument = "electric bass (finger)"
+  } { \clef "bass_8" \scoreOElectricBass }
+  \new TabStaff \with {
+    stringTunings = #bass-tuning
+  } \scoreOElectricBass
+>>
 
 scoreOPianoPart = \new PianoStaff \with {
   instrumentName = "Klavier"
@@ -936,11 +1041,18 @@ scorePLeft = \relative c' {
 
 }
 
-scorePElectricBassPart = \new Staff \with {
-  midiInstrument = "electric bass (finger)"
-  instrumentName = "Elektrischer Bass"
+scorePElectricBassPart = \new StaffGroup \with {
+  \consists "Instrument_name_engraver"
+  instrumentName = "E-Bass"
   shortInstrumentName = "E.Bs."
-} { \clef "bass_8" \scorePElectricBass }
+} <<
+  \new Staff \with {
+    midiInstrument = "electric bass (finger)"
+  } { \clef "bass_8" \scorePElectricBass }
+  \new TabStaff \with {
+    stringTunings = #bass-tuning
+  } \scorePElectricBass
+>>
 
 scorePPianoPart = \new PianoStaff \with {
   instrumentName = "Klavier"
@@ -994,11 +1106,18 @@ scoreQLeft = \relative c' {
 
 }
 
-scoreQElectricBassPart = \new Staff \with {
-  midiInstrument = "electric bass (finger)"
-  instrumentName = "Elektrischer Bass"
+scoreQElectricBassPart = \new StaffGroup \with {
+  \consists "Instrument_name_engraver"
+  instrumentName = "E-Bass"
   shortInstrumentName = "E.Bs."
-} { \clef "bass_8" \scoreQElectricBass }
+} <<
+  \new Staff \with {
+    midiInstrument = "electric bass (finger)"
+  } { \clef "bass_8" \scoreQElectricBass }
+  \new TabStaff \with {
+    stringTunings = #bass-tuning
+  } \scoreQElectricBass
+>>
 
 scoreQPianoPart = \new PianoStaff \with {
   instrumentName = "Klavier"
@@ -1052,11 +1171,18 @@ scoreRLeft = \relative c' {
 
 }
 
-scoreRElectricBassPart = \new Staff \with {
-  midiInstrument = "electric bass (finger)"
-  instrumentName = "Elektrischer Bass"
+scoreRElectricBassPart = \new StaffGroup \with {
+  \consists "Instrument_name_engraver"
+  instrumentName = "E-Bass"
   shortInstrumentName = "E.Bs."
-} { \clef "bass_8" \scoreRElectricBass }
+} <<
+  \new Staff \with {
+    midiInstrument = "electric bass (finger)"
+  } { \clef "bass_8" \scoreRElectricBass }
+  \new TabStaff \with {
+    stringTunings = #bass-tuning
+  } \scoreRElectricBass
+>>
 
 scoreRPianoPart = \new PianoStaff \with {
   instrumentName = "Klavier"

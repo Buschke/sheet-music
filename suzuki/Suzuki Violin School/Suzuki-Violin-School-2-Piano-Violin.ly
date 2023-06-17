@@ -104,6 +104,21 @@ scoreAPianoPart = \new PianoStaff \with {
   } { \clef bass \scoreALeft }
 >>
 
+clave = {\new DrumStaff <<
+  \drummode {\global
+   % bd4 sn4
+    << {
+%      \repeat unfold 16 cl16
+%      \repeat unfold 16 hh16
+         hh8 cl hh cl hh cl hh cl
+%        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
+    } \\ {
+      bd4 sn4 sn4 sn4
+    } >>
+  }
+>>
+}
+
 \bookpart {
 \header {
   title = "Chrous 'Judas Maccabaeus'"
@@ -171,6 +186,21 @@ scoreBPianoPart = \new PianoStaff \with {
     midiInstrument = "acoustic grand"
   } { \clef bass \scoreBLeft }
 >>
+
+clave = {\new DrumStaff <<
+  \drummode {\global
+   % bd4 sn4
+    << {
+%      \repeat unfold 16 cl16
+%      \repeat unfold 16 hh16
+         hh8 cl hh cl hh cl hh cl
+%        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
+    } \\ {
+      bd4 sn4 sn4 sn4
+    } >>
+  }
+>>
+}
 
 \bookpart {
 \header {
@@ -240,6 +270,21 @@ scoreCPianoPart = \new PianoStaff \with {
   } { \clef bass \scoreCLeft }
 >>
 
+clave = {\new DrumStaff <<
+  \drummode {\global
+   % bd4 sn4
+    << {
+%      \repeat unfold 16 cl16
+%      \repeat unfold 16 hh16
+         hh8 cl hh cl hh cl hh cl
+%        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
+    } \\ {
+      bd4 sn4 sn4 sn4
+    } >>
+  }
+>>
+}
+
 \bookpart {
 \header {
   title = "Hunter's Chorus"
@@ -307,6 +352,21 @@ scoreDPianoPart = \new PianoStaff \with {
     midiInstrument = "acoustic grand"
   } { \clef bass \scoreDLeft }
 >>
+
+clave = {\new DrumStaff <<
+  \drummode {\global
+   % bd4 sn4
+    << {
+%      \repeat unfold 16 cl16
+%      \repeat unfold 16 hh16
+         hh8 cl hh cl hh cl hh cl
+%        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
+    } \\ {
+      bd4 sn4 sn4 sn4
+    } >>
+  }
+>>
+}
 
 \bookpart {
 \header {
@@ -376,6 +436,21 @@ scoreEPianoPart = \new PianoStaff \with {
   } { \clef bass \scoreELeft }
 >>
 
+clave = {\new DrumStaff <<
+  \drummode {\global
+   % bd4 sn4
+    << {
+%      \repeat unfold 16 cl16
+%      \repeat unfold 16 hh16
+         hh8 cl hh cl hh cl hh cl
+%        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
+    } \\ {
+      bd4 sn4 sn4 sn4
+    } >>
+  }
+>>
+}
+
 \bookpart {
 \header {
   title = "Waltz"
@@ -443,6 +518,21 @@ scoreFPianoPart = \new PianoStaff \with {
     midiInstrument = "acoustic grand"
   } { \clef bass \scoreFLeft }
 >>
+
+clave = {\new DrumStaff <<
+  \drummode {\global
+   % bd4 sn4
+    << {
+%      \repeat unfold 16 cl16
+%      \repeat unfold 16 hh16
+         hh8 cl hh cl hh cl hh cl
+%        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
+    } \\ {
+      bd4 sn4 sn4 sn4
+    } >>
+  }
+>>
+}
 
 \bookpart {
 \header {
@@ -512,6 +602,21 @@ scoreGPianoPart = \new PianoStaff \with {
   } { \clef bass \scoreGLeft }
 >>
 
+clave = {\new DrumStaff <<
+  \drummode {\global
+   % bd4 sn4
+    << {
+%      \repeat unfold 16 cl16
+%      \repeat unfold 16 hh16
+         hh8 cl hh cl hh cl hh cl
+%        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
+    } \\ {
+      bd4 sn4 sn4 sn4
+    } >>
+  }
+>>
+}
+
 \bookpart {
 \header {
   title = "The Two Grenadiers"
@@ -579,6 +684,21 @@ scoreHPianoPart = \new PianoStaff \with {
     midiInstrument = "acoustic grand"
   } { \clef bass \scoreHLeft }
 >>
+
+clave = {\new DrumStaff <<
+  \drummode {\global
+   % bd4 sn4
+    << {
+%      \repeat unfold 16 cl16
+%      \repeat unfold 16 hh16
+         hh8 cl hh cl hh cl hh cl
+%        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
+    } \\ {
+      bd4 sn4 sn4 sn4
+    } >>
+  }
+>>
+}
 
 \bookpart {
 \header {
@@ -648,6 +768,21 @@ scoreIPianoPart = \new PianoStaff \with {
   } { \clef bass \scoreILeft }
 >>
 
+clave = {\new DrumStaff <<
+  \drummode {\global
+   % bd4 sn4
+    << {
+%      \repeat unfold 16 cl16
+%      \repeat unfold 16 hh16
+         hh8 cl hh cl hh cl hh cl
+%        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
+    } \\ {
+      bd4 sn4 sn4 sn4
+    } >>
+  }
+>>
+}
+
 \bookpart {
 \header {
   title = "Gavotte"
@@ -715,6 +850,21 @@ scoreJPianoPart = \new PianoStaff \with {
     midiInstrument = "acoustic grand"
   } { \clef bass \scoreJLeft }
 >>
+
+clave = {\new DrumStaff <<
+  \drummode {\global
+   % bd4 sn4
+    << {
+%      \repeat unfold 16 cl16
+%      \repeat unfold 16 hh16
+         hh8 cl hh cl hh cl hh cl
+%        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
+    } \\ {
+      bd4 sn4 sn4 sn4
+    } >>
+  }
+>>
+}
 
 \bookpart {
 \header {
@@ -784,6 +934,21 @@ scoreKPianoPart = \new PianoStaff \with {
   } { \clef bass \scoreKLeft }
 >>
 
+clave = {\new DrumStaff <<
+  \drummode {\global
+   % bd4 sn4
+    << {
+%      \repeat unfold 16 cl16
+%      \repeat unfold 16 hh16
+         hh8 cl hh cl hh cl hh cl
+%        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
+    } \\ {
+      bd4 sn4 sn4 sn4
+    } >>
+  }
+>>
+}
+
 \bookpart {
 \header {
   title = "Minuet in G"
@@ -851,6 +1016,21 @@ scoreLPianoPart = \new PianoStaff \with {
     midiInstrument = "acoustic grand"
   } { \clef bass \scoreLLeft }
 >>
+
+clave = {\new DrumStaff <<
+  \drummode {\global
+   % bd4 sn4
+    << {
+%      \repeat unfold 16 cl16
+%      \repeat unfold 16 hh16
+         hh8 cl hh cl hh cl hh cl
+%        \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl } \tuplet 3/2 { hh8 cl cl }
+    } \\ {
+      bd4 sn4 sn4 sn4
+    } >>
+  }
+>>
+}
 
 \bookpart {
 \header {

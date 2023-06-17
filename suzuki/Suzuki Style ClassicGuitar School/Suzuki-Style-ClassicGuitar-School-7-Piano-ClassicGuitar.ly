@@ -34,7 +34,7 @@
 global = {
   \key c \major
   \time 4/4
-  \tempo "Allegro" 4=100
+  \tempo "Andnate" 4=100
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -66,11 +66,20 @@ scoreALeft = \relative c' {
 
 }
 
-scoreAClassicalGuitarPart = \new Staff \with {
-  midiInstrument = "acoustic guitar (nylon)"
+scoreAClassicalGuitarPart = \new StaffGroup \with {
+  \consists "Instrument_name_engraver"
   instrumentName = "Klassische Gitarre"
   shortInstrumentName = "Git."
-} { \clef "treble_8" \scoreAClassicalGuitar }
+} <<
+  \new Staff \with {
+    midiInstrument = "acoustic guitar (nylon)"
+    \magnifyStaff #5/7
+  } { \clef "treble_8" \scoreAClassicalGuitar }
+  \new TabStaff \with {
+    stringTunings = #guitar-tuning
+    \magnifyStaff #5/7
+  } \scoreAClassicalGuitar
+>>
 
 scoreAPianoPart = \new PianoStaff \with {
   instrumentName = "Klavier"
@@ -124,11 +133,20 @@ scoreBLeft = \relative c' {
 
 }
 
-scoreBClassicalGuitarPart = \new Staff \with {
-  midiInstrument = "acoustic guitar (nylon)"
+scoreBClassicalGuitarPart = \new StaffGroup \with {
+  \consists "Instrument_name_engraver"
   instrumentName = "Klassische Gitarre"
   shortInstrumentName = "Git."
-} { \clef "treble_8" \scoreBClassicalGuitar }
+} <<
+  \new Staff \with {
+    midiInstrument = "acoustic guitar (nylon)"
+    \magnifyStaff #5/7
+  } { \clef "treble_8" \scoreBClassicalGuitar }
+  \new TabStaff \with {
+    stringTunings = #guitar-tuning
+    \magnifyStaff #5/7
+  } \scoreBClassicalGuitar
+>>
 
 scoreBPianoPart = \new PianoStaff \with {
   instrumentName = "Klavier"
@@ -182,11 +200,20 @@ scoreCLeft = \relative c' {
 
 }
 
-scoreCClassicalGuitarPart = \new Staff \with {
-  midiInstrument = "acoustic guitar (nylon)"
+scoreCClassicalGuitarPart = \new StaffGroup \with {
+  \consists "Instrument_name_engraver"
   instrumentName = "Klassische Gitarre"
   shortInstrumentName = "Git."
-} { \clef "treble_8" \scoreCClassicalGuitar }
+} <<
+  \new Staff \with {
+    midiInstrument = "acoustic guitar (nylon)"
+    \magnifyStaff #5/7
+  } { \clef "treble_8" \scoreCClassicalGuitar }
+  \new TabStaff \with {
+    stringTunings = #guitar-tuning
+    \magnifyStaff #5/7
+  } \scoreCClassicalGuitar
+>>
 
 scoreCPianoPart = \new PianoStaff \with {
   instrumentName = "Klavier"
@@ -240,11 +267,20 @@ scoreDLeft = \relative c' {
 
 }
 
-scoreDClassicalGuitarPart = \new Staff \with {
-  midiInstrument = "acoustic guitar (nylon)"
+scoreDClassicalGuitarPart = \new StaffGroup \with {
+  \consists "Instrument_name_engraver"
   instrumentName = "Klassische Gitarre"
   shortInstrumentName = "Git."
-} { \clef "treble_8" \scoreDClassicalGuitar }
+} <<
+  \new Staff \with {
+    midiInstrument = "acoustic guitar (nylon)"
+    \magnifyStaff #5/7
+  } { \clef "treble_8" \scoreDClassicalGuitar }
+  \new TabStaff \with {
+    stringTunings = #guitar-tuning
+    \magnifyStaff #5/7
+  } \scoreDClassicalGuitar
+>>
 
 scoreDPianoPart = \new PianoStaff \with {
   instrumentName = "Klavier"
@@ -298,11 +334,20 @@ scoreELeft = \relative c' {
 
 }
 
-scoreEClassicalGuitarPart = \new Staff \with {
-  midiInstrument = "acoustic guitar (nylon)"
+scoreEClassicalGuitarPart = \new StaffGroup \with {
+  \consists "Instrument_name_engraver"
   instrumentName = "Klassische Gitarre"
   shortInstrumentName = "Git."
-} { \clef "treble_8" \scoreEClassicalGuitar }
+} <<
+  \new Staff \with {
+    midiInstrument = "acoustic guitar (nylon)"
+    \magnifyStaff #5/7
+  } { \clef "treble_8" \scoreEClassicalGuitar }
+  \new TabStaff \with {
+    stringTunings = #guitar-tuning
+    \magnifyStaff #5/7
+  } \scoreEClassicalGuitar
+>>
 
 scoreEPianoPart = \new PianoStaff \with {
   instrumentName = "Klavier"
@@ -356,11 +401,20 @@ scoreFLeft = \relative c' {
 
 }
 
-scoreFClassicalGuitarPart = \new Staff \with {
-  midiInstrument = "acoustic guitar (nylon)"
+scoreFClassicalGuitarPart = \new StaffGroup \with {
+  \consists "Instrument_name_engraver"
   instrumentName = "Klassische Gitarre"
   shortInstrumentName = "Git."
-} { \clef "treble_8" \scoreFClassicalGuitar }
+} <<
+  \new Staff \with {
+    midiInstrument = "acoustic guitar (nylon)"
+    \magnifyStaff #5/7
+  } { \clef "treble_8" \scoreFClassicalGuitar }
+  \new TabStaff \with {
+    stringTunings = #guitar-tuning
+    \magnifyStaff #5/7
+  } \scoreFClassicalGuitar
+>>
 
 scoreFPianoPart = \new PianoStaff \with {
   instrumentName = "Klavier"
@@ -414,11 +468,20 @@ scoreGLeft = \relative c' {
 
 }
 
-scoreGClassicalGuitarPart = \new Staff \with {
-  midiInstrument = "acoustic guitar (nylon)"
+scoreGClassicalGuitarPart = \new StaffGroup \with {
+  \consists "Instrument_name_engraver"
   instrumentName = "Klassische Gitarre"
   shortInstrumentName = "Git."
-} { \clef "treble_8" \scoreGClassicalGuitar }
+} <<
+  \new Staff \with {
+    midiInstrument = "acoustic guitar (nylon)"
+    \magnifyStaff #5/7
+  } { \clef "treble_8" \scoreGClassicalGuitar }
+  \new TabStaff \with {
+    stringTunings = #guitar-tuning
+    \magnifyStaff #5/7
+  } \scoreGClassicalGuitar
+>>
 
 scoreGPianoPart = \new PianoStaff \with {
   instrumentName = "Klavier"
@@ -472,11 +535,20 @@ scoreHLeft = \relative c' {
 
 }
 
-scoreHClassicalGuitarPart = \new Staff \with {
-  midiInstrument = "acoustic guitar (nylon)"
+scoreHClassicalGuitarPart = \new StaffGroup \with {
+  \consists "Instrument_name_engraver"
   instrumentName = "Klassische Gitarre"
   shortInstrumentName = "Git."
-} { \clef "treble_8" \scoreHClassicalGuitar }
+} <<
+  \new Staff \with {
+    midiInstrument = "acoustic guitar (nylon)"
+    \magnifyStaff #5/7
+  } { \clef "treble_8" \scoreHClassicalGuitar }
+  \new TabStaff \with {
+    stringTunings = #guitar-tuning
+    \magnifyStaff #5/7
+  } \scoreHClassicalGuitar
+>>
 
 scoreHPianoPart = \new PianoStaff \with {
   instrumentName = "Klavier"
@@ -530,11 +602,20 @@ scoreILeft = \relative c' {
 
 }
 
-scoreIClassicalGuitarPart = \new Staff \with {
-  midiInstrument = "acoustic guitar (nylon)"
+scoreIClassicalGuitarPart = \new StaffGroup \with {
+  \consists "Instrument_name_engraver"
   instrumentName = "Klassische Gitarre"
   shortInstrumentName = "Git."
-} { \clef "treble_8" \scoreIClassicalGuitar }
+} <<
+  \new Staff \with {
+    midiInstrument = "acoustic guitar (nylon)"
+    \magnifyStaff #5/7
+  } { \clef "treble_8" \scoreIClassicalGuitar }
+  \new TabStaff \with {
+    stringTunings = #guitar-tuning
+    \magnifyStaff #5/7
+  } \scoreIClassicalGuitar
+>>
 
 scoreIPianoPart = \new PianoStaff \with {
   instrumentName = "Klavier"
@@ -588,11 +669,20 @@ scoreJLeft = \relative c' {
 
 }
 
-scoreJClassicalGuitarPart = \new Staff \with {
-  midiInstrument = "acoustic guitar (nylon)"
+scoreJClassicalGuitarPart = \new StaffGroup \with {
+  \consists "Instrument_name_engraver"
   instrumentName = "Klassische Gitarre"
   shortInstrumentName = "Git."
-} { \clef "treble_8" \scoreJClassicalGuitar }
+} <<
+  \new Staff \with {
+    midiInstrument = "acoustic guitar (nylon)"
+    \magnifyStaff #5/7
+  } { \clef "treble_8" \scoreJClassicalGuitar }
+  \new TabStaff \with {
+    stringTunings = #guitar-tuning
+    \magnifyStaff #5/7
+  } \scoreJClassicalGuitar
+>>
 
 scoreJPianoPart = \new PianoStaff \with {
   instrumentName = "Klavier"
@@ -646,11 +736,20 @@ scoreKLeft = \relative c' {
 
 }
 
-scoreKClassicalGuitarPart = \new Staff \with {
-  midiInstrument = "acoustic guitar (nylon)"
+scoreKClassicalGuitarPart = \new StaffGroup \with {
+  \consists "Instrument_name_engraver"
   instrumentName = "Klassische Gitarre"
   shortInstrumentName = "Git."
-} { \clef "treble_8" \scoreKClassicalGuitar }
+} <<
+  \new Staff \with {
+    midiInstrument = "acoustic guitar (nylon)"
+    \magnifyStaff #5/7
+  } { \clef "treble_8" \scoreKClassicalGuitar }
+  \new TabStaff \with {
+    stringTunings = #guitar-tuning
+    \magnifyStaff #5/7
+  } \scoreKClassicalGuitar
+>>
 
 scoreKPianoPart = \new PianoStaff \with {
   instrumentName = "Klavier"
@@ -704,11 +803,20 @@ scoreLLeft = \relative c' {
 
 }
 
-scoreLClassicalGuitarPart = \new Staff \with {
-  midiInstrument = "acoustic guitar (nylon)"
+scoreLClassicalGuitarPart = \new StaffGroup \with {
+  \consists "Instrument_name_engraver"
   instrumentName = "Klassische Gitarre"
   shortInstrumentName = "Git."
-} { \clef "treble_8" \scoreLClassicalGuitar }
+} <<
+  \new Staff \with {
+    midiInstrument = "acoustic guitar (nylon)"
+    \magnifyStaff #5/7
+  } { \clef "treble_8" \scoreLClassicalGuitar }
+  \new TabStaff \with {
+    stringTunings = #guitar-tuning
+    \magnifyStaff #5/7
+  } \scoreLClassicalGuitar
+>>
 
 scoreLPianoPart = \new PianoStaff \with {
   instrumentName = "Klavier"
@@ -762,11 +870,20 @@ scoreMLeft = \relative c' {
 
 }
 
-scoreMClassicalGuitarPart = \new Staff \with {
-  midiInstrument = "acoustic guitar (nylon)"
+scoreMClassicalGuitarPart = \new StaffGroup \with {
+  \consists "Instrument_name_engraver"
   instrumentName = "Klassische Gitarre"
   shortInstrumentName = "Git."
-} { \clef "treble_8" \scoreMClassicalGuitar }
+} <<
+  \new Staff \with {
+    midiInstrument = "acoustic guitar (nylon)"
+    \magnifyStaff #5/7
+  } { \clef "treble_8" \scoreMClassicalGuitar }
+  \new TabStaff \with {
+    stringTunings = #guitar-tuning
+    \magnifyStaff #5/7
+  } \scoreMClassicalGuitar
+>>
 
 scoreMPianoPart = \new PianoStaff \with {
   instrumentName = "Klavier"
@@ -820,11 +937,20 @@ scoreNLeft = \relative c' {
 
 }
 
-scoreNClassicalGuitarPart = \new Staff \with {
-  midiInstrument = "acoustic guitar (nylon)"
+scoreNClassicalGuitarPart = \new StaffGroup \with {
+  \consists "Instrument_name_engraver"
   instrumentName = "Klassische Gitarre"
   shortInstrumentName = "Git."
-} { \clef "treble_8" \scoreNClassicalGuitar }
+} <<
+  \new Staff \with {
+    midiInstrument = "acoustic guitar (nylon)"
+    \magnifyStaff #5/7
+  } { \clef "treble_8" \scoreNClassicalGuitar }
+  \new TabStaff \with {
+    stringTunings = #guitar-tuning
+    \magnifyStaff #5/7
+  } \scoreNClassicalGuitar
+>>
 
 scoreNPianoPart = \new PianoStaff \with {
   instrumentName = "Klavier"
@@ -878,11 +1004,20 @@ scoreOLeft = \relative c' {
 
 }
 
-scoreOClassicalGuitarPart = \new Staff \with {
-  midiInstrument = "acoustic guitar (nylon)"
+scoreOClassicalGuitarPart = \new StaffGroup \with {
+  \consists "Instrument_name_engraver"
   instrumentName = "Klassische Gitarre"
   shortInstrumentName = "Git."
-} { \clef "treble_8" \scoreOClassicalGuitar }
+} <<
+  \new Staff \with {
+    midiInstrument = "acoustic guitar (nylon)"
+    \magnifyStaff #5/7
+  } { \clef "treble_8" \scoreOClassicalGuitar }
+  \new TabStaff \with {
+    stringTunings = #guitar-tuning
+    \magnifyStaff #5/7
+  } \scoreOClassicalGuitar
+>>
 
 scoreOPianoPart = \new PianoStaff \with {
   instrumentName = "Klavier"
@@ -936,11 +1071,20 @@ scorePLeft = \relative c' {
 
 }
 
-scorePClassicalGuitarPart = \new Staff \with {
-  midiInstrument = "acoustic guitar (nylon)"
+scorePClassicalGuitarPart = \new StaffGroup \with {
+  \consists "Instrument_name_engraver"
   instrumentName = "Klassische Gitarre"
   shortInstrumentName = "Git."
-} { \clef "treble_8" \scorePClassicalGuitar }
+} <<
+  \new Staff \with {
+    midiInstrument = "acoustic guitar (nylon)"
+    \magnifyStaff #5/7
+  } { \clef "treble_8" \scorePClassicalGuitar }
+  \new TabStaff \with {
+    stringTunings = #guitar-tuning
+    \magnifyStaff #5/7
+  } \scorePClassicalGuitar
+>>
 
 scorePPianoPart = \new PianoStaff \with {
   instrumentName = "Klavier"
@@ -994,11 +1138,20 @@ scoreQLeft = \relative c' {
 
 }
 
-scoreQClassicalGuitarPart = \new Staff \with {
-  midiInstrument = "acoustic guitar (nylon)"
+scoreQClassicalGuitarPart = \new StaffGroup \with {
+  \consists "Instrument_name_engraver"
   instrumentName = "Klassische Gitarre"
   shortInstrumentName = "Git."
-} { \clef "treble_8" \scoreQClassicalGuitar }
+} <<
+  \new Staff \with {
+    midiInstrument = "acoustic guitar (nylon)"
+    \magnifyStaff #5/7
+  } { \clef "treble_8" \scoreQClassicalGuitar }
+  \new TabStaff \with {
+    stringTunings = #guitar-tuning
+    \magnifyStaff #5/7
+  } \scoreQClassicalGuitar
+>>
 
 scoreQPianoPart = \new PianoStaff \with {
   instrumentName = "Klavier"
@@ -1052,11 +1205,20 @@ scoreRLeft = \relative c' {
 
 }
 
-scoreRClassicalGuitarPart = \new Staff \with {
-  midiInstrument = "acoustic guitar (nylon)"
+scoreRClassicalGuitarPart = \new StaffGroup \with {
+  \consists "Instrument_name_engraver"
   instrumentName = "Klassische Gitarre"
   shortInstrumentName = "Git."
-} { \clef "treble_8" \scoreRClassicalGuitar }
+} <<
+  \new Staff \with {
+    midiInstrument = "acoustic guitar (nylon)"
+    \magnifyStaff #5/7
+  } { \clef "treble_8" \scoreRClassicalGuitar }
+  \new TabStaff \with {
+    stringTunings = #guitar-tuning
+    \magnifyStaff #5/7
+  } \scoreRClassicalGuitar
+>>
 
 scoreRPianoPart = \new PianoStaff \with {
   instrumentName = "Klavier"
@@ -1071,7 +1233,7 @@ scoreRPianoPart = \new PianoStaff \with {
 >>
 
 \bookpart {
-\header {
+  \header {
   title = ""
   composer = ""
   poet = ""

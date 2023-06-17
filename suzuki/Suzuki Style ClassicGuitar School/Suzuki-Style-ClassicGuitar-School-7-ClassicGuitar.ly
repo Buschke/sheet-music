@@ -14,7 +14,7 @@
   piece = ""
   opus = "No. 1"
   copyright = \markup {"© Fingering, 03.05.2023: " \with-url "https://buschke.com" "Sven Buschke"}
-%  tagline = ""
+  %  tagline = ""
   % Remove default LilyPond tagline
   tagline = ##f
 }
@@ -34,7 +34,7 @@
 global = {
   \key c \major
   \time 4/4
-  \tempo "Allegro" 4=100
+  \tempo "Andnate" 4=100
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -56,11 +56,18 @@ scoreAClassicalGuitar = \relative c' {
 
 \bookpart {
   \score {
-    \new Staff \with {
-      midiInstrument = "acoustic guitar (nylon)"
+    \new StaffGroup \with {
+      \consists "Instrument_name_engraver"
       instrumentName = "Klassische Gitarre"
       shortInstrumentName = "Git."
-    } { \clef "treble_8" \scoreAClassicalGuitar }
+    } <<
+      \new Staff \with {
+        midiInstrument = "acoustic guitar (nylon)"
+      } { \clef "treble_8" \scoreAClassicalGuitar }
+      \new TabStaff \with {
+        stringTunings = #guitar-tuning
+      } \scoreAClassicalGuitar
+    >>
     \layout { }
     \midi { }
   }
@@ -85,11 +92,18 @@ scoreBClassicalGuitar = \relative c' {
 
 \bookpart {
   \score {
-    \new Staff \with {
-      midiInstrument = "acoustic guitar (nylon)"
+    \new StaffGroup \with {
+      \consists "Instrument_name_engraver"
       instrumentName = "Klassische Gitarre"
       shortInstrumentName = "Git."
-    } { \clef "treble_8" \scoreBClassicalGuitar }
+    } <<
+      \new Staff \with {
+        midiInstrument = "acoustic guitar (nylon)"
+      } { \clef "treble_8" \scoreBClassicalGuitar }
+      \new TabStaff \with {
+        stringTunings = #guitar-tuning
+      } \scoreBClassicalGuitar
+    >>
     \layout { }
     \midi { }
   }
@@ -114,11 +128,18 @@ scoreCClassicalGuitar = \relative c' {
 
 \bookpart {
   \score {
-    \new Staff \with {
-      midiInstrument = "acoustic guitar (nylon)"
+    \new StaffGroup \with {
+      \consists "Instrument_name_engraver"
       instrumentName = "Klassische Gitarre"
       shortInstrumentName = "Git."
-    } { \clef "treble_8" \scoreCClassicalGuitar }
+    } <<
+      \new Staff \with {
+        midiInstrument = "acoustic guitar (nylon)"
+      } { \clef "treble_8" \scoreCClassicalGuitar }
+      \new TabStaff \with {
+        stringTunings = #guitar-tuning
+      } \scoreCClassicalGuitar
+    >>
     \layout { }
     \midi { }
   }
@@ -143,11 +164,18 @@ scoreDClassicalGuitar = \relative c' {
 
 \bookpart {
   \score {
-    \new Staff \with {
-      midiInstrument = "acoustic guitar (nylon)"
+    \new StaffGroup \with {
+      \consists "Instrument_name_engraver"
       instrumentName = "Klassische Gitarre"
       shortInstrumentName = "Git."
-    } { \clef "treble_8" \scoreDClassicalGuitar }
+    } <<
+      \new Staff \with {
+        midiInstrument = "acoustic guitar (nylon)"
+      } { \clef "treble_8" \scoreDClassicalGuitar }
+      \new TabStaff \with {
+        stringTunings = #guitar-tuning
+      } \scoreDClassicalGuitar
+    >>
     \layout { }
     \midi { }
   }
@@ -172,11 +200,18 @@ scoreEClassicalGuitar = \relative c' {
 
 \bookpart {
   \score {
-    \new Staff \with {
-      midiInstrument = "acoustic guitar (nylon)"
+    \new StaffGroup \with {
+      \consists "Instrument_name_engraver"
       instrumentName = "Klassische Gitarre"
       shortInstrumentName = "Git."
-    } { \clef "treble_8" \scoreEClassicalGuitar }
+    } <<
+      \new Staff \with {
+        midiInstrument = "acoustic guitar (nylon)"
+      } { \clef "treble_8" \scoreEClassicalGuitar }
+      \new TabStaff \with {
+        stringTunings = #guitar-tuning
+      } \scoreEClassicalGuitar
+    >>
     \layout { }
     \midi { }
   }
@@ -201,11 +236,18 @@ scoreFClassicalGuitar = \relative c' {
 
 \bookpart {
   \score {
-    \new Staff \with {
-      midiInstrument = "acoustic guitar (nylon)"
+    \new StaffGroup \with {
+      \consists "Instrument_name_engraver"
       instrumentName = "Klassische Gitarre"
       shortInstrumentName = "Git."
-    } { \clef "treble_8" \scoreFClassicalGuitar }
+    } <<
+      \new Staff \with {
+        midiInstrument = "acoustic guitar (nylon)"
+      } { \clef "treble_8" \scoreFClassicalGuitar }
+      \new TabStaff \with {
+        stringTunings = #guitar-tuning
+      } \scoreFClassicalGuitar
+    >>
     \layout { }
     \midi { }
   }
@@ -230,11 +272,18 @@ scoreGClassicalGuitar = \relative c' {
 
 \bookpart {
   \score {
-    \new Staff \with {
-      midiInstrument = "acoustic guitar (nylon)"
+    \new StaffGroup \with {
+      \consists "Instrument_name_engraver"
       instrumentName = "Klassische Gitarre"
       shortInstrumentName = "Git."
-    } { \clef "treble_8" \scoreGClassicalGuitar }
+    } <<
+      \new Staff \with {
+        midiInstrument = "acoustic guitar (nylon)"
+      } { \clef "treble_8" \scoreGClassicalGuitar }
+      \new TabStaff \with {
+        stringTunings = #guitar-tuning
+      } \scoreGClassicalGuitar
+    >>
     \layout { }
     \midi { }
   }
@@ -259,11 +308,18 @@ scoreHClassicalGuitar = \relative c' {
 
 \bookpart {
   \score {
-    \new Staff \with {
-      midiInstrument = "acoustic guitar (nylon)"
+    \new StaffGroup \with {
+      \consists "Instrument_name_engraver"
       instrumentName = "Klassische Gitarre"
       shortInstrumentName = "Git."
-    } { \clef "treble_8" \scoreHClassicalGuitar }
+    } <<
+      \new Staff \with {
+        midiInstrument = "acoustic guitar (nylon)"
+      } { \clef "treble_8" \scoreHClassicalGuitar }
+      \new TabStaff \with {
+        stringTunings = #guitar-tuning
+      } \scoreHClassicalGuitar
+    >>
     \layout { }
     \midi { }
   }
@@ -288,11 +344,18 @@ scoreIClassicalGuitar = \relative c' {
 
 \bookpart {
   \score {
-    \new Staff \with {
-      midiInstrument = "acoustic guitar (nylon)"
+    \new StaffGroup \with {
+      \consists "Instrument_name_engraver"
       instrumentName = "Klassische Gitarre"
       shortInstrumentName = "Git."
-    } { \clef "treble_8" \scoreIClassicalGuitar }
+    } <<
+      \new Staff \with {
+        midiInstrument = "acoustic guitar (nylon)"
+      } { \clef "treble_8" \scoreIClassicalGuitar }
+      \new TabStaff \with {
+        stringTunings = #guitar-tuning
+      } \scoreIClassicalGuitar
+    >>
     \layout { }
     \midi { }
   }
@@ -317,11 +380,18 @@ scoreJClassicalGuitar = \relative c' {
 
 \bookpart {
   \score {
-    \new Staff \with {
-      midiInstrument = "acoustic guitar (nylon)"
+    \new StaffGroup \with {
+      \consists "Instrument_name_engraver"
       instrumentName = "Klassische Gitarre"
       shortInstrumentName = "Git."
-    } { \clef "treble_8" \scoreJClassicalGuitar }
+    } <<
+      \new Staff \with {
+        midiInstrument = "acoustic guitar (nylon)"
+      } { \clef "treble_8" \scoreJClassicalGuitar }
+      \new TabStaff \with {
+        stringTunings = #guitar-tuning
+      } \scoreJClassicalGuitar
+    >>
     \layout { }
     \midi { }
   }
@@ -346,11 +416,18 @@ scoreKClassicalGuitar = \relative c' {
 
 \bookpart {
   \score {
-    \new Staff \with {
-      midiInstrument = "acoustic guitar (nylon)"
+    \new StaffGroup \with {
+      \consists "Instrument_name_engraver"
       instrumentName = "Klassische Gitarre"
       shortInstrumentName = "Git."
-    } { \clef "treble_8" \scoreKClassicalGuitar }
+    } <<
+      \new Staff \with {
+        midiInstrument = "acoustic guitar (nylon)"
+      } { \clef "treble_8" \scoreKClassicalGuitar }
+      \new TabStaff \with {
+        stringTunings = #guitar-tuning
+      } \scoreKClassicalGuitar
+    >>
     \layout { }
     \midi { }
   }
@@ -375,11 +452,18 @@ scoreLClassicalGuitar = \relative c' {
 
 \bookpart {
   \score {
-    \new Staff \with {
-      midiInstrument = "acoustic guitar (nylon)"
+    \new StaffGroup \with {
+      \consists "Instrument_name_engraver"
       instrumentName = "Klassische Gitarre"
       shortInstrumentName = "Git."
-    } { \clef "treble_8" \scoreLClassicalGuitar }
+    } <<
+      \new Staff \with {
+        midiInstrument = "acoustic guitar (nylon)"
+      } { \clef "treble_8" \scoreLClassicalGuitar }
+      \new TabStaff \with {
+        stringTunings = #guitar-tuning
+      } \scoreLClassicalGuitar
+    >>
     \layout { }
     \midi { }
   }
@@ -404,11 +488,18 @@ scoreMClassicalGuitar = \relative c' {
 
 \bookpart {
   \score {
-    \new Staff \with {
-      midiInstrument = "acoustic guitar (nylon)"
+    \new StaffGroup \with {
+      \consists "Instrument_name_engraver"
       instrumentName = "Klassische Gitarre"
       shortInstrumentName = "Git."
-    } { \clef "treble_8" \scoreMClassicalGuitar }
+    } <<
+      \new Staff \with {
+        midiInstrument = "acoustic guitar (nylon)"
+      } { \clef "treble_8" \scoreMClassicalGuitar }
+      \new TabStaff \with {
+        stringTunings = #guitar-tuning
+      } \scoreMClassicalGuitar
+    >>
     \layout { }
     \midi { }
   }
@@ -433,11 +524,18 @@ scoreNClassicalGuitar = \relative c' {
 
 \bookpart {
   \score {
-    \new Staff \with {
-      midiInstrument = "acoustic guitar (nylon)"
+    \new StaffGroup \with {
+      \consists "Instrument_name_engraver"
       instrumentName = "Klassische Gitarre"
       shortInstrumentName = "Git."
-    } { \clef "treble_8" \scoreNClassicalGuitar }
+    } <<
+      \new Staff \with {
+        midiInstrument = "acoustic guitar (nylon)"
+      } { \clef "treble_8" \scoreNClassicalGuitar }
+      \new TabStaff \with {
+        stringTunings = #guitar-tuning
+      } \scoreNClassicalGuitar
+    >>
     \layout { }
     \midi { }
   }
@@ -462,11 +560,18 @@ scoreOClassicalGuitar = \relative c' {
 
 \bookpart {
   \score {
-    \new Staff \with {
-      midiInstrument = "acoustic guitar (nylon)"
+    \new StaffGroup \with {
+      \consists "Instrument_name_engraver"
       instrumentName = "Klassische Gitarre"
       shortInstrumentName = "Git."
-    } { \clef "treble_8" \scoreOClassicalGuitar }
+    } <<
+      \new Staff \with {
+        midiInstrument = "acoustic guitar (nylon)"
+      } { \clef "treble_8" \scoreOClassicalGuitar }
+      \new TabStaff \with {
+        stringTunings = #guitar-tuning
+      } \scoreOClassicalGuitar
+    >>
     \layout { }
     \midi { }
   }
@@ -491,11 +596,18 @@ scorePClassicalGuitar = \relative c' {
 
 \bookpart {
   \score {
-    \new Staff \with {
-      midiInstrument = "acoustic guitar (nylon)"
+    \new StaffGroup \with {
+      \consists "Instrument_name_engraver"
       instrumentName = "Klassische Gitarre"
       shortInstrumentName = "Git."
-    } { \clef "treble_8" \scorePClassicalGuitar }
+    } <<
+      \new Staff \with {
+        midiInstrument = "acoustic guitar (nylon)"
+      } { \clef "treble_8" \scorePClassicalGuitar }
+      \new TabStaff \with {
+        stringTunings = #guitar-tuning
+      } \scorePClassicalGuitar
+    >>
     \layout { }
     \midi { }
   }
@@ -520,11 +632,18 @@ scoreQClassicalGuitar = \relative c' {
 
 \bookpart {
   \score {
-    \new Staff \with {
-      midiInstrument = "acoustic guitar (nylon)"
+    \new StaffGroup \with {
+      \consists "Instrument_name_engraver"
       instrumentName = "Klassische Gitarre"
       shortInstrumentName = "Git."
-    } { \clef "treble_8" \scoreQClassicalGuitar }
+    } <<
+      \new Staff \with {
+        midiInstrument = "acoustic guitar (nylon)"
+      } { \clef "treble_8" \scoreQClassicalGuitar }
+      \new TabStaff \with {
+        stringTunings = #guitar-tuning
+      } \scoreQClassicalGuitar
+    >>
     \layout { }
     \midi { }
   }
@@ -548,21 +667,28 @@ scoreRClassicalGuitar = \relative c' {
 }
 
 \bookpart {
-\header {
-  title = ""
-  composer = ""
-  poet = ""
-  meter = ""
-  piece = ""
-  opus = "Suzuki No. , Vol. 1"
-  tagline = ""
-}
+  \header {
+    title = ""
+    composer = ""
+    poet = ""
+    meter = ""
+    piece = ""
+    opus = "Suzuki No. , Vol. 1"
+    tagline = ""
+  }
   \score {
-    \new Staff \with {
-      midiInstrument = "acoustic guitar (nylon)"
+    \new StaffGroup \with {
+      \consists "Instrument_name_engraver"
       instrumentName = "Klassische Gitarre"
       shortInstrumentName = "Git."
-    } { \clef "treble_8" \scoreRClassicalGuitar }
+    } <<
+      \new Staff \with {
+        midiInstrument = "acoustic guitar (nylon)"
+      } { \clef "treble_8" \scoreRClassicalGuitar }
+      \new TabStaff \with {
+        stringTunings = #guitar-tuning
+      } \scoreRClassicalGuitar
+    >>
     \layout { }
     \midi { }
   }
