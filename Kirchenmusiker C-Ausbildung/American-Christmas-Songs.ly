@@ -1,6 +1,39 @@
 \version "2.24.1"
 \language "english"
 
+% https://www.imdb.com/title/tt0632961/soundtrack/?ref_=tt_ql_dyk_6
+%     Deck the Halls
+%         Traditional tune, lyrics by Thomas Oliphant (uncredited)
+%         Lyrics first published by J.P. McCaskey (1881)
+%     O Little Town of Bethlehem
+%         Lyrics by Phillips Brooks (1867)
+%         Music by Lewis H. Redner (1868)
+%     Sweet Little Jesus Boy
+%         Lyrics by Robert MacGimsey
+%         Sung by Ketty Lester (in character)
+%     Joy to the World
+%         Lyrics by Isaac Watts (1719)
+%         Music by Lowell Mason (1836)
+%     God Rest Ye Merry, Gentlemen
+%         Traditional English carol (1833)
+%     Away in a Manger
+%         (1885)
+%         Traditional, music arranged by James Murray (as James R. Murray) (1887)
+%     The First Noel
+%         Traditional
+%         Published by William Sandys (1833)
+%     Angels We Have Heard on High / Gloria in Excelsis Deo
+%         Traditional French tune, English lyrics by James Chadwick (1862) / traditional
+%         Music arranged by Ed S. Barnes
+%     O Come, All Ye Faithful
+%         Lyrics (English translation from Latin) by Frederick Oakeley (1841)
+%         Lyrics & Music by John Francis Wade (c. 1743)
+%     Silent Night
+%         (uncredited)
+%         Lyrics (English translation) by John Freeman Young (1863)
+%         Lyrics (original German) by Joseph Mohr (c. 1816)
+%         Music by Franz Xaver Gruber (c. 1820)
+
 \header {
   dedication = "T"
   title = "Deck the Halls"
