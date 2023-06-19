@@ -26,7 +26,7 @@
   \context {
     \Voice
     \consists "Melody_engraver"
-    \override Stem #'neutral-direction = #'()
+    \override Stem.neutral-direction = #'()
   }
 }
 
@@ -49,20 +49,22 @@ scoreASoprano = \relative c'' {
 scoreAAlto = \relative c' {
   \global
   % Music follows here.
-  c2 c4 2
+  c2 c4 d2 d4 f2 b,4 c d f d(e) d f4.(d8) f4 d2.
+  e2 d4 e2. d2 f4 d2. e2 c4 2 4 b2 4 g d' c4 2 4 b2 4 g2  
 }
 
 scoreATenor = \relative c' {
   \global
   % Music follows here.
-
+  g2 a4 b2 4 c2 g4 4 b c g(g) b c4.(g8) c4 b2.
+  g2 g4 g2. 2 c4 b2. c2 a4 c2 4 g2 4 e b' a g2 4 2 4 e2  
 }
 
 scoreABass = \relative c {
   \global
   % Music follows here.
-  c2 f4 e2 g4 f2 g4 c, g' f g(c,) g' c,4.(g'8) f4 g2.
-  c,2 g'4 c,2. g'2 f4 g2. g2 f4 c2 4 g'2 4 c, g' f c2 4 g'2 4 c,2
+  c,2 f4 g2 g4 f2 g4 c, g' f g(c,) g' f4.(g8) f4 g2.
+  c,2 g'4 c,2. g'2 f4 g2. c,2 f4 c2 4 g'2 4 c, g' f c2 4 g'2 4 c,2
 }
 
 scoreAVerse = \lyricmode {
@@ -101,8 +103,8 @@ scoreAChordNames = \chordmode {
   \global
   \germanChords
   % Chords follow here.
-  c2 f4 g2/b g4 f2 g4 c g f g(c) g c4.(g8) f4 g2.
-  c2 g4 c2. g2 f4 g2. g2 f4 c2 4 g2 4 c g f c2 4 g2 4 c2
+  c2 f4 g2/b g4 f2 g4 c g f g(c) g f4.(g8) f4 g2.
+  c2 g4 c2. g2 f4 g2. c2 f4 c2 4 g2 4 c g f c2 4 g2 4 c2
 }
 
 scoreAFigBass = \figuremode {
@@ -122,11 +124,11 @@ scoreAChoirPart = \new ChoirStaff <<
     } { \voiceOne \scoreASoprano }
     \new Voice = "alto" \with {
       \consists "Ambitus_engraver"
-      \override Ambitus #'X-offset = #2.0
+      \override Ambitus.X-offset = #2.0
     } { \voiceTwo \scoreAAlto }
   >>
   \new Lyrics \with {
-    \override VerticalAxisGroup #'staff-affinity = #CENTER
+    \override VerticalAxisGroup.staff-affinity = #CENTER
   } \lyricsto "soprano" \scoreAVerse
   \new Staff \with {
     midiInstrument = "choir aahs"
@@ -139,7 +141,7 @@ scoreAChoirPart = \new ChoirStaff <<
     } { \voiceOne \scoreATenor }
     \new Voice = "bass" \with {
       \consists "Ambitus_engraver"
-      \override Ambitus #'X-offset = #2.0
+      \override Ambitus.X-offset = #2.0
     } { \voiceTwo \scoreABass }
   >>
 >>
@@ -228,7 +230,7 @@ scoreBTenor = \relative c' {
 scoreBBass = \relative c {
   \global
   % Music follows here.
-  c2 f4 g2 g4 f2 g4 c, g' f g(c,) g' c,4.(g'8) f4 g2.
+  c,2 f4 g2 g4 f2 g4 c, g' f g(c,) g' c,4.(g'8) f4 g2.
   c,2 g'4 c,2. g'2 f4 g2. g2 f4 c2 4 g'2 4 c, g' f c2 4 g'2 4 c,2
 }
 
@@ -289,7 +291,7 @@ scoreBChoirPart = \new ChoirStaff <<
     } { \voiceOne \scoreBSoprano }
     \new Voice = "alto" \with {
       \consists "Ambitus_engraver"
-      \override Ambitus #'X-offset = #2.0
+      \override Ambitus.X-offset = #2.0
     } { \voiceTwo \scoreBAlto }
   >>
   \new Staff \with {
@@ -303,11 +305,11 @@ scoreBChoirPart = \new ChoirStaff <<
     } { \voiceOne \scoreBTenor }
     \new Voice = "bass" \with {
       \consists "Ambitus_engraver"
-      \override Ambitus #'X-offset = #2.0
+      \override Ambitus.X-offset = #2.0
     } { \voiceTwo \scoreBBass }
   >>
   \new Lyrics \with {
-    \override VerticalAxisGroup #'staff-affinity = #CENTER
+    \override VerticalAxisGroup.staff-affinity = #CENTER
   } \lyricsto "tenor" \scoreBVerse
 >>
 
@@ -456,7 +458,7 @@ scoreCChoirPart = \new ChoirStaff <<
     } { \voiceOne \scoreCSoprano }
     \new Voice = "alto" \with {
       \consists "Ambitus_engraver"
-      \override Ambitus #'X-offset = #2.0
+      \override Ambitus.X-offset = #2.0
     } { \voiceTwo \scoreCAlto }
   >>
   \new Staff \with {
@@ -470,11 +472,11 @@ scoreCChoirPart = \new ChoirStaff <<
     } { \voiceOne \scoreCTenor }
     \new Voice = "bass" \with {
       \consists "Ambitus_engraver"
-      \override Ambitus #'X-offset = #2.0
+      \override Ambitus.X-offset = #2.0
     } { \voiceTwo \scoreCBass }
   >>
   \new Lyrics \with {
-    \override VerticalAxisGroup #'staff-affinity = #CENTER
+    \override VerticalAxisGroup.staff-affinity = #CENTER
   } \lyricsto "bass" \scoreCVerse
 >>
 
@@ -622,11 +624,11 @@ scoreDChoirPart = \new ChoirStaff <<
     } { \voiceOne \scoreDSoprano }
     \new Voice = "alto" \with {
       \consists "Ambitus_engraver"
-      \override Ambitus #'X-offset = #2.0
+      \override Ambitus.X-offset = #2.0
     } { \voiceTwo \scoreDAlto }
   >>
   \new Lyrics \with {
-    \override VerticalAxisGroup #'staff-affinity = #CENTER
+    \override VerticalAxisGroup.staff-affinity = #CENTER
   } \lyricsto "alto" \scoreDVerse
   \new Staff \with {
     midiInstrument = "choir aahs"
@@ -639,7 +641,7 @@ scoreDChoirPart = \new ChoirStaff <<
     } { \voiceOne \scoreDTenor }
     \new Voice = "bass" \with {
       \consists "Ambitus_engraver"
-      \override Ambitus #'X-offset = #2.0
+      % \override Ambitus #'X-offset = #2.0
     } { \voiceTwo \scoreDBass }
   >>
 >>
