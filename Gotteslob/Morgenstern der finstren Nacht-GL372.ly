@@ -49,22 +49,22 @@ scoreASoprano = \relative c'' {
 scoreAAlto = \relative c' {
   \global
   % Music follows here.
-  c2 c4 d2 d4 f2 b,4 c d f d(e) d f4.(d8) f4 d2.
-  e2 d4 e2. d2 f4 d2. e2 c4 2 4 b2 4 g d' c4 2 4 b2 4 g2  
+  c2 c4 d2 e4 f2 b,4 c d e f(g) d f4.(d8) f4 d2.
+  e2 d4 e2. d2 f4 d2. e2 c4 2 b4 b2 4 c d c4 2 b4 b2 4 g2  
 }
 
 scoreATenor = \relative c' {
   \global
   % Music follows here.
-  g2 a4 b2 4 c2 g4 4 b c g(g) b c4.(g8) c4 b2.
-  g2 g4 g2. 2 c4 b2. c2 a4 c2 4 g2 4 e b' a g2 4 2 4 e2  
+  g2 a4 b2 c4 c2 g4 4 b c d(e) b c4.(g8) c4 b2.
+  g2 g4 g2. 2 c4 b2. c2 a4 c2 g4 g2 f4 g b a g2 4 2 g4 e2  
 }
 
 scoreABass = \relative c {
   \global
   % Music follows here.
-  c,2 f4 g2 g4 f2 g4 c, g' f g(c,) g' f4.(g8) f4 g2.
-  c,2 g'4 c,2. g'2 f4 g2. c,2 f4 c2 4 g'2 4 c, g' f c2 4 g'2 4 c,2
+  c,2 f4 g2 c,4 f2 g4 c, g' a d(c) g' f4.(g8) f4 g2.
+  c,2 g'4 c,2. g'2 f4 g2. c,2 f4 c2 e4 g2 d4 e g f c2 e4 2 g,4 c2
 }
 
 scoreAVerse = \lyricmode {
@@ -103,14 +103,14 @@ scoreAChordNames = \chordmode {
   \global
   \germanChords
   % Chords follow here.
-  c2 f4 g2/b g4 f2 g4 c g f g(c) g f4.(g8) f4 g2.
-  c2 g4 c2. g2 f4 g2. c2 f4 c2 4 g2 4 c g f c2 4 g2 4 c2
+  c2 f4 g2 c4 f2 g4 c g a:m b:dim/d(c) g f4.(g8) f4 g2.
+  c2 g4 c2. g2 f4 g2. c2 f4 c2 e4:m g2 b4:dim/d c'/e g f c2 e4:m d'2:m/f g4 c2
 }
 
 scoreAFigBass = \figuremode {
   \global
   % Figures follow here.
- s2 4 2 4 2 4 4 4 4 <6>4
+ s2 4 2 4 2 4 4 4 4 4 4 4 4. 8 4 2. 2 4 2. 2 4 2. 2 4 2 4 2 <6>4 s4 s4 s4 s2 s4 s2 s4 s2
 }
 
 scoreAChoirPart = \new ChoirStaff <<
