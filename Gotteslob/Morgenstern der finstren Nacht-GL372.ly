@@ -215,7 +215,7 @@ scoreBSoprano = \relative c'' {
 scoreBAlto = \relative c' {
   \global
   % Music follows here.
-  g2 a4 g2 c4 c2 g4 4 b c d(e) b c4.(g8) c4 b2.
+  g'2 a4 g2 c4 c2 g4 4 b c d(e) b c4.(g8) c4 b2.
   g2 g4 g2. 2 c4 b2. c2 a4 c2 g4 g2 f4 g b a g2 4 2 g4 e2
 }
 
@@ -384,15 +384,15 @@ scoreCSoprano = \relative c'' {
 scoreCAlto = \relative c' {
   \global
   % Music follows here.
-  g2 a4 g2 c4 c2 g4 4 b c d(e) b c4.(g8) c4 b2.
+  g'2 a4 g2 c4 c2 g4 4 b c d(e) b c4.(g8) c4 b2.
   g2 g4 g2. 2 c4 b2. c2 a4 c2 g4 g2 f4 g b a g2 4 2 g4 e2
 }
 
 scoreCTenor = \relative c' {
   \global
   % Music follows here.
-  c,2 f4 b2 c4 f,2 g4 c, g' a d,(c) g' f4.(g8) f4 g2.
-  c,2 g'4 c,2. g'2 f4 g2. c,2 f4 c2 e4 g2 d4 e g f c2 e4 2 g4 c,2
+  c2 f,4 b2 c4 f,2 g4 c g a d(c) g f4.(g8) f4 g2.
+  c2 g4 c2. g2 f4 g2. c2 f,4 c'2 e,4 g2 d4 e g f c'2 e,4 2 g4 c2
 }
 
 scoreCBass = \relative c {
