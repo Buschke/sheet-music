@@ -4,19 +4,19 @@
 \include "predefined-guitar-fretboards.ly"
 
 \header {
-  dedication = "n"
-  title = "n"
-  subtitle = "n"
-  subsubtitle = "n"
-  instrument = "n"
-  composer = "n"
-  arranger = "n"
-  poet = "n"
-  meter = "n"
-  piece = "n"
-  opus = "n"
-  copyright = "n"
-  tagline = "n"
+  dedication = ""
+  title = "Weite Lage Übergänge"
+  subtitle = ""
+  subsubtitle = ""
+  instrument = ""
+  composer = ""
+  arranger = "Satz: Sven Buschke"
+  poet = ""
+  meter = ""
+  piece = ""
+  opus = ""
+  copyright = "Satz: Sven Buschke"
+  tagline = ""
 }
 
 \paper {
@@ -50,7 +50,7 @@ scoreASoprano = \relative c'' {
   \bar "||"
   c a' f d b' g e c' c e, g b d, f a c,
   \bar "||"
-  c b' a g f e d c c d e f g a b c,
+  c b' a g f e d c c d e f g a b c
   \bar "|."
 }
 
@@ -60,6 +60,15 @@ scoreAAlto = \relative c' {
   e g g a c c d e
   e d c c a g g e
   e g b d g, a c e
+  e c a g d' c g e
+  e a d g, c g b e
+  e b g c g d' a e
+  e b' g c g d' a e'
+  e a, d g, c g b e,
+  e c' a g d' b g e'
+  e g, b d g, a c e,
+  e d' c c a g g e
+  e g g a c c d e
 }
 
 scoreATenor = \relative c' {
@@ -68,6 +77,15 @@ scoreATenor = \relative c' {
   g b c c e f f g
   g g f e c c b g
   g c d g b, c f g
+  g f c b g' e c g
+  g c g' c, f b, d g
+  g d b f' c g' c, g
+  g d b' f' c g' c, g'
+  g c, g' c, f b, d g,
+  g f' c b g' d c g'
+  g c, d g b, c f g,
+  g g' f e c c b g
+  g b c c e f f g
 }
 
 scoreABass = \relative c {
@@ -152,7 +170,7 @@ scoreAChoirPart = \new ChoirStaff <<
 
 scoreAChordsPart = <<
   \new ChordNames \scoreAChordNames
-  \scoreAChordNames
+%  \scoreAChordNames
 %  \new FretBoards \scoreAChordNames
 >>
 
