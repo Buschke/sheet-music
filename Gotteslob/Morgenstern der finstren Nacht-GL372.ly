@@ -49,22 +49,22 @@ scoreASoprano = \relative c'' {
 scoreAAlto = \relative c' {
   \global
   % Music follows here.
-  c2 c4 d2 e4 f2 b,4 c d e f(g) d f4.(d8) f4 d2.
-  e2 d4 e2. d2 f4 d2. e2 c4 2 b4 b2 4 c d c4 2 b4 b2 4 g2
+  c2 c4 d2 e4 f2 b,4 c d e f(g) g fs4.(g8) fs4 d2.
+  e2 d4 e2. d2 f4 d2. e2 c4 2 b4 b2 4 c d d4 c2 b4 a2 b4 g2
 }
 
 scoreATenor = \relative c' {
   \global
   % Music follows here.
-  g2 a4 g2 c4 c2 g4 4 b c d(e) b c4.(g8) c4 b2.
-  g2 g4 g2. 2 c4 b2. c2 a4 c2 g4 g2 f4 g b a g2 4 2 g4 e2
+  g2 a4 g2 c4 c2 g4 4 b c d(e) b d2. b2.
+  g2 g4 g2. 2 c4 b2. c2 a4 c2 g4 g2 f4 g b a a2 g4 a2 g4 e2
 }
 
 scoreABass = \relative c {
   \global
   % Music follows here.
-  c,2 f4 b2 c4 f,2 g4 c, g' a d,(c) g' f4.(g8) f4 g2.
-  c,2 g'4 c,2. g'2 f4 g2. c,2 f4 c2 e4 g2 d4 e g f c2 e4 2 g4 c,2
+  c2 f4 b,2 c4 f2 g4 c, g' a d,(c) g' d2. g2.
+  c,2 g'4 c,2. g'2 f4 g2. c,2 f4 c2 e4 g2 d4 e g d a2 e'4 f2 g4 c,2
 }
 
 scoreAVerse = \lyricmode {
@@ -104,7 +104,7 @@ scoreAChordNames = \chordmode {
   \germanChords
   % Chords follow here.
   c2 f4 g2/b c4 f2 g4 c g a:m b:dim/d(c) g f4.(g8) f4 g2.
-  c2 g4 c2. g2 f4 g2. c2 f4 c2 e4:m g2 b4:dim/d c'/e g f c2 e4:m d'2:m/f g4 c2
+  c2 g4 c2. g2 f4 g2. c2 f4 c2 e4:m g2 b4:dim/d c'/e g d:m a2:m c4 d'2:m/f g4 c2
 }
 
 scoreAFigBass = \figuremode {
@@ -163,8 +163,8 @@ scoreABassFiguresPart = \new FiguredBass \with {
   \score {
     <<
       \scoreAChoirPart
-      \scoreAChordsPart
-      \scoreABassFiguresPart
+      %\scoreAChordsPart
+      %\scoreABassFiguresPart
     >>
     \layout { }
     \midi { }
@@ -208,15 +208,15 @@ scoreABassFiguresPart = \new FiguredBass \with {
 scoreBSoprano = \relative c'' {
   \global
   % Music follows here.
-  c2 c4 d2 e4 f2 b,4 c d e f(g) d f4.(d8) f4 d2.
+  c2 c4 d2 e4 f2 b,4 c d e f(g) d fs4.(g8) fs4 g2.
   e2 d4 e2. d2 f4 d2. e2 c4 2 b4 b2 4 c d c4 2 b4 b2 4 g2
 }
 
 scoreBAlto = \relative c' {
   \global
   % Music follows here.
-  g'2 a4 g2 c4 c2 g4 4 b c d(e) b c4.(g8) c4 b2.
-  g2 g4 g2. 2 c4 b2. c2 a4 c2 g4 g2 f4 g b a g2 4 2 g4 e2
+  g'2 a4 g2 c4 c2 g4 4 b c d(e) b d4.(d8) c4 d2.
+  g,2 g4 g2. 2 c4 b2. c2 a4 c2 g4 g2 f4 g b a g2 4 2 g4 e2
 }
 
 scoreBTenor = \relative c' {
@@ -232,7 +232,7 @@ scoreBTenor = \relative c' {
 scoreBBass = \relative c {
   \global
   % Music follows here.
-  c,2 f4 b2 c4 f,2 g4 c, g' a d,(c) g' f4.(g8) f4 g2.
+  c,2 f4 b2 c4 f,2 g4 c, g' a d,(c) g' d4.(g8) f4 b2.
   c,2 g'4 c,2. g'2 f4 g2. c,2 f4 c2 e4 g2 d4 e g f c2 e4 2 g4 c,2
 }
 
@@ -332,8 +332,8 @@ scoreBBassFiguresPart = \new FiguredBass \with {
   \score {
     <<
       \scoreBChoirPart
-      \scoreBChordsPart
-      \scoreBBassFiguresPart
+%      \scoreBChordsPart
+%      \scoreBBassFiguresPart
     >>
     \layout { }
     \midi { }
@@ -501,8 +501,8 @@ scoreCBassFiguresPart = \new FiguredBass \with {
   \score {
     <<
       \scoreCChoirPart
-      \scoreCChordsPart
-      \scoreCBassFiguresPart
+%      \scoreCChordsPart
+%      \scoreCBassFiguresPart
     >>
     \layout { }
     \midi { }
@@ -670,8 +670,8 @@ scoreDBassFiguresPart = \new FiguredBass \with {
   \score {
     <<
       \scoreDChoirPart
-      \scoreDChordsPart
-      \scoreDBassFiguresPart
+ %     \scoreDChordsPart
+ %     \scoreDBassFiguresPart
     >>
     \layout { }
     \midi { }
