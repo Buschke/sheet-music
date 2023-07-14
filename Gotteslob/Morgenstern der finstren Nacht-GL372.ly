@@ -49,7 +49,7 @@ scoreASoprano = \relative c'' {
 scoreAAlto = \relative c' {
   \global
   % Music follows here.
-  g2 a4 c2 c4 c2 g4 g b c d(e) g c,4.(e8) c4 c2.
+  g2 a4 c2 c4 c2 g4 g c c d(e) g c,4.(e8) c4 c2.
   e2 d4 e2. e2 c4 c2.
   c2 a4 g2 g4 g2 g4 e b' a g2 g4 g2 g4 e2
 }
@@ -59,7 +59,7 @@ scoreATenor = \relative c' {
   % Music follows here.
   c,2 c4 e2 e4 f2 b,4 c e f f(g) b f4.(g8) f4 e2.
   g2 f4 g2. g2 f4 e2.
-  e2 c4 c2 c4 b2 b4 4 d c c2 c4 b2 b4 g2
+  e2 c4 c2 c4 b2 b4 g4 d' c c2 c4 b2 b4 g2
 }
 
 scoreABass = \relative c {
