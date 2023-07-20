@@ -210,15 +210,21 @@ scoreABassFiguresPart = \new FiguredBass \with {
 scoreBSoprano = \relative c'' {
   \global
   % Music follows here.
-  c,2 c4 d2 e4 f2 b,4 c d f f(e) d fs4.(g8) fs4 b2.
-  e,2 d4 e2. d2 f4 d2. e2 c4 2 b4 b2 4 c d d4 c2 b4 d2 b4 g2
+  g2 a4 c2 c4 c2 g4 g c c d(e) g c,4.(e8) c4 c2.
+  e2 d4 e2. e2c4 c2.
+  c2 a4 g2 g4 g2 g4 c b a g2 g4 g2 g4 e2
+%   c,2 c4 d2 e4 f2 b,4 c d f f(e) d fs4.(g8) fs4 b2.
+%   e,2 d4 e2. d2 f4 d2. e2 c4 2 b4 b2 4 c d d4 c2 b4 d2 b4 g2
 }
 
 scoreBAlto = \relative c' {
   \global
   % Music follows here.
-  g2 a4 g2 c4 c2 g4 4 b c d(e) b d4.(d8) c4 d2.
-  g,2 g4 g2. 2 c4 b2. c2 a4 c2 g4 g2 f4 g b a a2 g4 a2 g4 e2
+  c2 c4 e2 e4 f2 b,4 c e f f(g) b f4.(g8) f4 e2.
+  g2 f4 g2. g2 f4 e2.
+  e2 c4 c2 c4 b2 b4 g4 d' c c2 c4 b2 b4 g2
+%   g2 a4 g2 c4 c2 g4 4 b c d(e) b d4.(d8) c4 d2.
+%   g,2 g4 g2. 2 c4 b2. c2 a4 c2 g4 g2 f4 g b a a2 g4 a2 g4 e2
 }
 
 scoreBTenor = \relative c' {
@@ -234,8 +240,10 @@ scoreBTenor = \relative c' {
 scoreBBass = \relative c {
   \global
   % Music follows here.
-  c,2 f4 b2 c4 f,2 g4 c, g' f d(c) g' d4.(g8) d4 g2.
-  c,2 g'4 c,2. g'2 f4 g2. c,2 f4 c2 e4 g2 d4 e g d a'2 e4 f2 g4 c,2
+  c,2 f4 c2 c4 f2 g4 c, c f d(c) g' f4.(e8) f4 c2.
+  c2 g'4 c,2. e2 f4 c2. c2 f4 c2 c4 g'2 g4 c, c f c2 e4 f2 g4 c,2
+%   c,2 f4 b2 c4 f,2 g4 c, g' f d(c) g' d4.(g8) d4 g2.
+%   c,2 g'4 c,2. g'2 f4 g2. c,2 f4 c2 e4 g2 d4 e g d a'2 e4 f2 g4 c,2
 }
 
 scoreBVerse = \lyricmode {
@@ -274,8 +282,10 @@ scoreBChordNames = \chordmode {
   \global
   \germanChords
   % Chords follow here.
-  c2 f4 g2/b c4 f2 g4 c g a:m b:dim/d(c) g f4.(g8) f4 g2.
-  c2 g4 c2. g2 f4 g2. c2 f4 c2 e4:m g2 b4:dim/d c'/e g f c2 e4:m d'2:m/f g4 c2
+  c2 f4 c2 c4 f2 g4 c c f b:dim/d(c) g f4.(e8:m) f4 c2.
+  c2 b4:dim/d c2. e2:m f4 c2. c2 f4 c2 c4 g2 g4 c' g f c2 c4 g2 g4 c2
+%   c2 f4 g2/b c4 f2 g4 c g a:m b:dim/d(c) g f4.(g8) f4 g2.
+%   c2 g4 c2. g2 f4 g2. c2 f4 c2 e4:m g2 b4:dim/d c'/e g f c2 e4:m d'2:m/f g4 c2
 }
 
 scoreBFigBass = \figuremode {
@@ -319,7 +329,7 @@ scoreBChoirPart = \new ChoirStaff <<
 
 scoreBChordsPart = <<
   \new ChordNames \scoreBChordNames
-  \scoreBChordNames
+%   \scoreBChordNames
 %  \new FretBoards \scoreBChordNames
 >>
 
@@ -329,12 +339,12 @@ scoreBBassFiguresPart = \new FiguredBass \with {
 
 \bookpart {
   \header {
-    subtitle = "Tenor CF"
+    subtitle = "Tenor CF, simple set"
   }
   \score {
     <<
       \scoreBChoirPart
-%      \scoreBChordsPart
+     \scoreBChordsPart
 %      \scoreBBassFiguresPart
     >>
     \layout { }
@@ -379,22 +389,25 @@ scoreBBassFiguresPart = \new FiguredBass \with {
 scoreCSoprano = \relative c'' {
   \global
   % Music follows here.
-  c2 c4 b2 e4 f2 b,4 c d e f(g) d f4.(d8) f4 d2.
-  e2 d4 e2. d2 f4 d2. e2 b4 c2 b4 b2 4 c d c4 2 b4 b2 4 g2
+%   c2 c4 b2 e4 f2 b,4 c d e f(g) d f4.(d8) f4 d2.
+%   e2 d4 e2. d2 f4 d2. e2 b4 c2 b4 b2 4 c d c4 2 b4 b2 4 g2
 }
 
 scoreCAlto = \relative c' {
   \global
   % Music follows here.
-  g'2 f4 g2 c4 c2 f,4 4 b c d(e) b c4.(g8) c4 b2.
-  g2 g4 g2. 2 c4 b2. c2 g4 g2 g4 g2 f4 g b a g2 4 2 g4 e2
+  g2 c4
+%   g'2 f4 g2 c4 c2 f,4 4 b c d(e) b c4.(g8) c4 b2.
+%   g2 g4 g2. 2 c4 b2. c2 g4 g2 g4 g2 f4 g b a g2 4 2 g4 e2
 }
 
 scoreCTenor = \relative c' {
   \global
   % Music follows here.
-  c2 a4 d2 e4 f,2 b4 c g a d(c) g f4.(g8) f4 g2.
-  c2 g4 c2. g2 f4 g2. d'2 f,4 c'2 e4 d2 d4 e g f c2 e4 2 g4 c,2
+  c,2 f4 c2 c4 f2 g4 c, c f d(c) g' f4.(e8) f4 c2.
+  c2 g'4 c,2. e2 f4 c2. c2 f4 c2 c4 g'2 g4 c, c f c2 e4 f2 g4 c,2
+%   c2 a4 d2 e4 f,2 b4 c g a d(c) g f4.(g8) f4 g2.
+%   c2 g4 c2. g2 f4 g2. d'2 f,4 c'2 e4 d2 d4 e g f c2 e4 2 g4 c,2
 }
 
 scoreCBass = \relative c {
@@ -443,8 +456,10 @@ scoreCChordNames = \chordmode {
   \global
   \semiGermanChords
   % Chords follow here.
-  c2 f4 g2/b c4 f2 g4 c g a:m b:dim/d(c) g f4.(g8) f4 g2.
-  c2 g4 c2. g2 f4 g2. c2 f4 c2 e4:m g2 b4:dim/d c'/e g f c2 e4:m d'2:m/f g4 c2
+  c2 f4 c2 c4 f2 g4 c c f b:dim/d(c) g f4.(e8:m) f4 c2.
+  c2 b4:dim/d c2. e2:m f4 c2. c2 f4 c2 c4 g2 g4 c' g f c2 c4 g2 g4 c2
+%   c2 f4 g2/b c4 f2 g4 c g a:m b:dim/d(c) g f4.(g8) f4 g2.
+%   c2 g4 c2. g2 f4 g2. c2 f4 c2 e4:m g2 b4:dim/d c'/e g f c2 e4:m d'2:m/f g4 c2
 }
 
 scoreCFigBass = \figuremode {
@@ -488,7 +503,7 @@ scoreCChoirPart = \new ChoirStaff <<
 
 scoreCChordsPart = <<
   \new ChordNames \scoreCChordNames
-  \scoreCChordNames
+%   \scoreCChordNames
   %\new FretBoards \scoreCChordNames
 >>
 
@@ -498,12 +513,12 @@ scoreCBassFiguresPart = \new FiguredBass \with {
 
 \bookpart {
   \header {
-    subtitle = "Bass CF"
+    subtitle = "Bass CF, simple four part harmony"
   }
   \score {
     <<
       \scoreCChoirPart
-%      \scoreCChordsPart
+     \scoreCChordsPart
 %      \scoreCBassFiguresPart
     >>
     \layout { }
@@ -882,21 +897,21 @@ scoreEBassFiguresPart = \new FiguredBass \with {
 }
 
 
-scoreBSoprano = \relative c'' {
+scoreFSoprano = \relative c'' {
   \global
   % Music follows here.
   c,2 c4 d2 e4 f2 b,4 c d f f(e) d fs4.(g8) fs4 b2.
   e,2 d4 e2. d2 f4 d2. e2 c4 2 b4 b2 4 c d d4 c2 b4 d2 b4 g2
 }
 
-scoreBAlto = \relative c' {
+scoreFAlto = \relative c' {
   \global
   % Music follows here.
   g2 a4 g2 c4 c2 g4 4 b c d(e) b d4.(d8) c4 d2.
   g,2 g4 g2. 2 c4 b2. c2 a4 c2 g4 g2 f4 g b a a2 g4 a2 g4 e2
 }
 
-scoreBTenor = \relative c' {
+scoreFTenor = \relative c' {
   \global
   % Music follows here.
   e,2 f4 g2 4 a2 d,4 e g a
@@ -906,14 +921,14 @@ scoreBTenor = \relative c' {
   \bar "|."
 }
 
-scoreBBass = \relative c {
+scoreFBass = \relative c {
   \global
   % Music follows here.
   c,2 f4 b2 c4 f,2 g4 c, g' f d(c) g' d4.(g8) d4 g2.
   c,2 g'4 c,2. g'2 f4 g2. c,2 f4 c2 e4 g2 d4 e g d a'2 e4 f2 g4 c,2
 }
 
-scoreBVerse = \lyricmode {
+scoreFVerse = \lyricmode {
   % Lyrics follow here.
   Schau, dein Him -- mel ist in mir,
   er be -- gehrt dich, sei -- ne Zier.
@@ -922,15 +937,15 @@ scoreBVerse = \lyricmode {
   komm, komm, eh der Tag an -- bricht.
 }
 
-scoreBRehearsalMidi = #
+scoreFRehearsalMidi = #
 (define-music-function
  (parser location name midiInstrument lyrics) (string? string? ly:music?)
  #{
    \unfoldRepeats <<
-     \new Staff = "soprano" \new Voice = "soprano" { \scoreBSoprano }
-     \new Staff = "alto" \new Voice = "alto" { \scoreBAlto }
-     \new Staff = "tenor" \new Voice = "tenor" { \scoreBTenor }
-     \new Staff = "bass" \new Voice = "bass" { \scoreBBass }
+     \new Staff = "soprano" \new Voice = "soprano" { \scoreFSoprano }
+     \new Staff = "alto" \new Voice = "alto" { \scoreFAlto }
+     \new Staff = "tenor" \new Voice = "tenor" { \scoreFTenor }
+     \new Staff = "bass" \new Voice = "bass" { \scoreFBass }
      \context Staff = $name {
        \set Score.midiMinimumVolume = #0.5
        \set Score.midiMaximumVolume = #0.5
@@ -953,13 +968,13 @@ scoreBChordNames = \chordmode {
   c2 g4 c2. g2 f4 g2. c2 f4 c2 e4:m g2 b4:dim/d c'/e g f c2 e4:m d'2:m/f g4 c2
 }
 
-scoreBFigBass = \figuremode {
+scoreFFigBass = \figuremode {
   \global
   % Figures follow here.
 
 }
 
-scoreBChoirPart = \new ChoirStaff <<
+scoreFChoirPart = \new ChoirStaff <<
   \new Staff \with {
     midiInstrument = "choir aahs"
     instrumentName = \markup \center-column { "Soprano" "Alto" }
@@ -967,11 +982,11 @@ scoreBChoirPart = \new ChoirStaff <<
   } <<
     \new Voice = "soprano" \with {
       \consists "Ambitus_engraver"
-    } { \voiceOne \scoreBSoprano }
+    } { \voiceOne \scoreFSoprano }
     \new Voice = "alto" \with {
       \consists "Ambitus_engraver"
       \override Ambitus.X-offset = #2.0
-    } { \voiceTwo \scoreBAlto }
+    } { \voiceTwo \scoreFAlto }
   >>
   \new Staff \with {
     midiInstrument = "choir aahs"
@@ -981,26 +996,26 @@ scoreBChoirPart = \new ChoirStaff <<
     \clef bass
     \new Voice = "tenor" \with {
       \consists "Ambitus_engraver"
-    } { \voiceOne \scoreBTenor }
+    } { \voiceOne \scoreFTenor }
     \new Voice = "bass" \with {
       \consists "Ambitus_engraver"
       \override Ambitus.X-offset = #2.0
-    } { \voiceTwo \scoreBBass }
+    } { \voiceTwo \scoreFBass }
   >>
   \new Lyrics \with {
     \override VerticalAxisGroup.staff-affinity = #CENTER
-  } \lyricsto "tenor" \scoreBVerse
+  } \lyricsto "tenor" \scoreFVerse
 >>
 
-scoreBChordsPart = <<
-  \new ChordNames \scoreBChordNames
-  \scoreBChordNames
-%  \new FretBoards \scoreBChordNames
+scoreFChordsPart = <<
+  \new ChordNames \scoreFChordNames
+  \scoreFChordNames
+%  \new FretBoards \scoreFChordNames
 >>
 
-scoreBBassFiguresPart = \new FiguredBass \with {
+scoreFBassFiguresPart = \new FiguredBass \with {
   useBassFigureExtenders = ##t
-} \scoreBFigBass
+} \scoreFFigBass
 
 \bookpart {
   \header {
@@ -1008,9 +1023,9 @@ scoreBBassFiguresPart = \new FiguredBass \with {
   }
   \score {
     <<
-      \scoreBChoirPart
-%      \scoreBChordsPart
-%      \scoreBBassFiguresPart
+      \scoreFChoirPart
+%      \scoreFChordsPart
+%      \scoreFBassFiguresPart
     >>
     \layout { }
     \midi { }
@@ -1021,7 +1036,7 @@ scoreBBassFiguresPart = \new FiguredBass \with {
 \book {
   \bookOutputSuffix "soprano"
   \score {
-    \scoreBRehearsalMidi "soprano" "soprano sax" \scoreBVerse
+    \scoreFRehearsalMidi "soprano" "soprano sax" \scoreBVerse
     \midi { }
   }
 }
@@ -1029,7 +1044,7 @@ scoreBBassFiguresPart = \new FiguredBass \with {
 \book {
   \bookOutputSuffix "alto"
   \score {
-    \scoreBRehearsalMidi "alto" "soprano sax" \scoreBVerse
+    \scoreFRehearsalMidi "alto" "soprano sax" \scoreBVerse
     \midi { }
   }
 }
@@ -1037,7 +1052,7 @@ scoreBBassFiguresPart = \new FiguredBass \with {
 \book {
   \bookOutputSuffix "tenor"
   \score {
-    \scoreBRehearsalMidi "tenor" "tenor sax" \scoreBVerse
+    \scoreFRehearsalMidi "tenor" "tenor sax" \scoreBVerse
     \midi { }
   }
 }
@@ -1045,34 +1060,34 @@ scoreBBassFiguresPart = \new FiguredBass \with {
 \book {
   \bookOutputSuffix "bass"
   \score {
-    \scoreBRehearsalMidi "bass" "tenor sax" \scoreBVerse
+    \scoreFRehearsalMidi "bass" "tenor sax" \scoreBVerse
     \midi { }
   }
 }
 
 
-scoreCSoprano = \relative c'' {
+scoreGSoprano = \relative c'' {
   \global
   % Music follows here.
   c2 c4 b2 e4 f2 b,4 c d e f(g) d f4.(d8) f4 d2.
   e2 d4 e2. d2 f4 d2. e2 b4 c2 b4 b2 4 c d c4 2 b4 b2 4 g2
 }
 
-scoreCAlto = \relative c' {
+scoreGAlto = \relative c' {
   \global
   % Music follows here.
   g'2 f4 g2 c4 c2 f,4 4 b c d(e) b c4.(g8) c4 b2.
   g2 g4 g2. 2 c4 b2. c2 g4 g2 g4 g2 f4 g b a g2 4 2 g4 e2
 }
 
-scoreCTenor = \relative c' {
+scoreGTenor = \relative c' {
   \global
   % Music follows here.
   c2 a4 d2 e4 f,2 b4 c g a d(c) g f4.(g8) f4 g2.
   c2 g4 c2. g2 f4 g2. d'2 f,4 c'2 e4 d2 d4 e g f c2 e4 2 g4 c,2
 }
 
-scoreCBass = \relative c {
+scoreGBass = \relative c {
   \global
   % Music follows here.
   e,2 f4 g2 4 a2 d,4 e g a
@@ -1082,7 +1097,7 @@ scoreCBass = \relative c {
   \bar "|."
 }
 
-scoreCVerse = \lyricmode {
+scoreGVerse = \lyricmode {
   % Lyrics follow here.
   Dei -- nes Glanz -- es Herr -- lich -- keit
   Ü -- ber -- trifft die Son -- ne weit;
@@ -1091,15 +1106,15 @@ scoreCVerse = \lyricmode {
   bist, was tau -- send Son -- nen sein.
 }
 
-scoreCRehearsalMidi = #
+scoreGRehearsalMidi = #
 (define-music-function
  (parser location name midiInstrument lyrics) (string? string? ly:music?)
  #{
    \unfoldRepeats <<
-     \new Staff = "soprano" \new Voice = "soprano" { \scoreCSoprano }
-     \new Staff = "alto" \new Voice = "alto" { \scoreCAlto }
-     \new Staff = "tenor" \new Voice = "tenor" { \scoreCTenor }
-     \new Staff = "bass" \new Voice = "bass" { \scoreCBass }
+     \new Staff = "soprano" \new Voice = "soprano" { \scoreGSoprano }
+     \new Staff = "alto" \new Voice = "alto" { \scoreGAlto }
+     \new Staff = "tenor" \new Voice = "tenor" { \scoreGTenor }
+     \new Staff = "bass" \new Voice = "bass" { \scoreGBass }
      \context Staff = $name {
        \set Score.midiMinimumVolume = #0.5
        \set Score.midiMaximumVolume = #0.5
@@ -1114,7 +1129,7 @@ scoreCRehearsalMidi = #
    >>
  #})
 
-scoreCChordNames = \chordmode {
+scoreGChordNames = \chordmode {
   \global
   \semiGermanChords
   % Chords follow here.
@@ -1122,13 +1137,13 @@ scoreCChordNames = \chordmode {
   c2 g4 c2. g2 f4 g2. c2 f4 c2 e4:m g2 b4:dim/d c'/e g f c2 e4:m d'2:m/f g4 c2
 }
 
-scoreCFigBass = \figuremode {
+scoreGFigBass = \figuremode {
   \global
   % Figures follow here.
 
 }
 
-scoreCChoirPart = \new ChoirStaff <<
+scoreGChoirPart = \new ChoirStaff <<
   \new Staff \with {
     midiInstrument = "choir aahs"
     instrumentName = \markup \center-column { "Soprano" "Alto" }
@@ -1136,11 +1151,11 @@ scoreCChoirPart = \new ChoirStaff <<
   } <<
     \new Voice = "soprano" \with {
       \consists "Ambitus_engraver"
-    } { \voiceOne \scoreCSoprano }
+    } { \voiceOne \scoreGSoprano }
     \new Voice = "alto" \with {
       \consists "Ambitus_engraver"
       \override Ambitus.X-offset = #2.0
-    } { \voiceTwo \scoreCAlto }
+    } { \voiceTwo \scoreGAlto }
   >>
   \new Staff \with {
     midiInstrument = "choir aahs"
@@ -1150,26 +1165,26 @@ scoreCChoirPart = \new ChoirStaff <<
     \clef bass
     \new Voice = "tenor" \with {
       \consists "Ambitus_engraver"
-    } { \voiceOne \scoreCTenor }
+    } { \voiceOne \scoreGTenor }
     \new Voice = "bass" \with {
       \consists "Ambitus_engraver"
       \override Ambitus.X-offset = #2.0
-    } { \voiceTwo \scoreCBass }
+    } { \voiceTwo \scoreGBass }
   >>
   \new Lyrics \with {
     \override VerticalAxisGroup.staff-affinity = #CENTER
-  } \lyricsto "bass" \scoreCVerse
+  } \lyricsto "bass" \scoreGVerse
 >>
 
-scoreCChordsPart = <<
-  \new ChordNames \scoreCChordNames
-  \scoreCChordNames
-  %\new FretBoards \scoreCChordNames
+scoreGChordsPart = <<
+  \new ChordNames \scoreGChordNames
+  \scoreGChordNames
+  %\new FretBoards \scoreGChordNames
 >>
 
-scoreCBassFiguresPart = \new FiguredBass \with {
+scoreGBassFiguresPart = \new FiguredBass \with {
   useBassFigureExtenders = ##t
-} \scoreCFigBass
+} \scoreGFigBass
 
 \bookpart {
   \header {
@@ -1177,9 +1192,9 @@ scoreCBassFiguresPart = \new FiguredBass \with {
   }
   \score {
     <<
-      \scoreCChoirPart
-%      \scoreCChordsPart
-%      \scoreCBassFiguresPart
+      \scoreGChoirPart
+%      \scoreGChordsPart
+%      \scoreGBassFiguresPart
     >>
     \layout { }
     \midi { }
@@ -1190,7 +1205,7 @@ scoreCBassFiguresPart = \new FiguredBass \with {
 \book {
   \bookOutputSuffix "soprano"
   \score {
-    \scoreCRehearsalMidi "soprano" "soprano sax" \scoreCVerse
+    \scoreGRehearsalMidi "soprano" "soprano sax" \scoreGVerse
     \midi { }
   }
 }
@@ -1198,7 +1213,7 @@ scoreCBassFiguresPart = \new FiguredBass \with {
 \book {
   \bookOutputSuffix "alto"
   \score {
-    \scoreCRehearsalMidi "alto" "soprano sax" \scoreCVerse
+    \scoreGRehearsalMidi "alto" "soprano sax" \scoreGVerse
     \midi { }
   }
 }
@@ -1206,7 +1221,7 @@ scoreCBassFiguresPart = \new FiguredBass \with {
 \book {
   \bookOutputSuffix "tenor"
   \score {
-    \scoreCRehearsalMidi "tenor" "tenor sax" \scoreCVerse
+    \scoreGRehearsalMidi "tenor" "tenor sax" \scoreGVerse
     \midi { }
   }
 }
@@ -1214,7 +1229,7 @@ scoreCBassFiguresPart = \new FiguredBass \with {
 \book {
   \bookOutputSuffix "bass"
   \score {
-    \scoreCRehearsalMidi "bass" "tenor sax" \scoreCVerse
+    \scoreGRehearsalMidi "bass" "tenor sax" \scoreGVerse
     \midi { }
   }
 }
