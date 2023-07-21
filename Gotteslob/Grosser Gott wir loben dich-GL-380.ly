@@ -8,9 +8,9 @@
   title = "Großer Gott wie loben dich"
   subsubtitle = ""
   instrument = "Organ"
-  composer = "M:  "
+  composer = "M:  Wien, 1776, Heinrich Bone 1852"
   arranger = "Satz: Sven Buschke"
-  poet = "T: "
+  poet = "T: Ignaz Franz, 1768, nach Te Deum (4. Jh)"
   meter = ""
   piece = ""
   opus = "GL 380"
@@ -84,7 +84,7 @@ scoreAVerseB =  \lyricmode {
 scoreAVerseC =  \lyricmode {
   % Lyrics follow here.
     Wie du warst vor al -- ler Zeit,
-    so bleibst du in Ewig -- keit.
+    so bleibst du in E -- wig -- keit.
 }
 
 scoreAChordNames = \chordmode {
@@ -171,55 +171,70 @@ scoreABassFiguresPart = \new FiguredBass \with {
 scoreBSoprano = \relative c'' {
   \global
   % Music follows here.
-
+  \repeat volta 2 {
+    a2 a4 a(g) a c(c) c a2 r4
+    c2  c4 c(c) a f'(d) c c c r
+  }
+  c2 c4 d2 c4 c2 d4 f2 r4
+  f2 f4 f(d) c d(c) c a2.
 }
 
 scoreBAlto = \relative c' {
   \global
   % Music follows here.
-
+  c2 c4 c(bf) c e(f) e c2 r4
+  f2 f4 f(
 }
 
 scoreBTenor = \relative c' {
   \global
   % Music follows here.
-
+  \repeat volta 2 {
+    f,2 f4 f(e) f g(a) g f2 r4
+    a2 a4 a(g) f c'(bf) a a g r4
+  }
+  g2 a4 bf2 g4 a2 bf4 c2 r4
+  d2 d4 c(bf) a bf(a) g f2.
+  \bar "|."
 }
 
 scoreBBass = \relative c {
   \global
   % Music follows here.
-
+  \repeat volta 2 {
+    f,2 f4 f(g) f c'(f,) c' f,2 s4
+    f2 f4 f(c') f, f(bf) f f c'4 s4
+  }
+  c2 f,4 bf2 c4 f,2 bf4 f2 r4 bf2 bf4 f(bf) f bf(f) c' f,2.
 }
 
-scoreBVerse = \lyricmode {
+scoreBVerseA = \lyricmode {
   % Lyrics follow here.
-Alles, was dich preisen kann,
-Kerubim und Serafinen
-stimmen dir ein Loblied an
-alle Engel, die dir dienen,
-rufen dir stets ohne Ruh
-Heilig, heilig, heilig zu
-2 Heilig, Herr Gott Zabaot
-Heilig, Herr der Himmelsheere
-Starker Helfer in der Not
-Himmel, Erde, Luft und Meere
-sind erfüllt von deinem Ruhm
-alles ist dein Eigentum.
-4. Der Apostel heilger Chor,
-der Propheten hehre Menge
-schickt zu deinem Thron empor
-neue Lob- und Dankgesänge
-der Blutzeugen lichte Schar
-lobt und preist dich immerdar.
+Al -- les, was dich prei -- sen kann,
+Ke -- ru -- bim und Se -- ra -- fi -- nen
+}
 
+scoreBVerseB = \lyricmode {
+  % Lyrics follow here.
+stim -- men dir ein Lob -- lied an
+al -- le En -- gel, die dir die -- nen,
+}
+
+scoreBVerseC = \lyricmode {
+  % Lyrics follow here.
+ru -- fen dir stets oh -- ne Ruh
+Hei -- lig, hei -- lig, hei -- lig zu
 }
 
 scoreBChordNames = \chordmode {
   \global
   \germanChords
   % Chords follow here.
-
+  \repeat volta 2 {
+    f2 f4 f(e:dim/g) f c(f) c f2 s4
+    f2 f4 f(c) f f(bf) f f c4 s4
+  }
+  c2 f4 bf2 c4 f2 bf4 f2 s4 bf2 bf4 f(bf) f bf(f) c f2.
 }
 
 scoreBFigBass = \figuremode {
@@ -243,7 +258,7 @@ scoreBChoirPart = \new ChoirStaff <<
   >>
   \new Lyrics \with {
     \override VerticalAxisGroup #'staff-affinity = #CENTER
-  } \lyricsto "soprano" \scoreBVerse
+  } \lyricsto "soprano" {<<\scoreBVerseA \new Lyrics { \set associatedVoice = "soprano" \scoreBVerseB}>> \scoreAVerseC}
   \new Staff \with {
     midiInstrument = "choir aahs"
     instrumentName = \markup \center-column { "Tenor" "Bass" }
@@ -261,7 +276,8 @@ scoreBChoirPart = \new ChoirStaff <<
 
 scoreBChordsPart = <<
   \new ChordNames \scoreBChordNames
-  \new FretBoards \scoreBChordNames
+%   \scoreBChordNames
+%   \new FretBoards \scoreBChordNames
 >>
 
 scoreBBassFiguresPart = \new FiguredBass \with {
@@ -269,6 +285,9 @@ scoreBBassFiguresPart = \new FiguredBass \with {
 } \scoreBFigBass
 
 \bookpart {
+  \header {
+      subtitle = "Cantus Firmus im Tenor"
+  }
   \score {
     <<
       \scoreBChoirPart
@@ -303,12 +322,23 @@ scoreCTenor = \relative c' {
 scoreCBass = \relative c {
   \global
   % Music follows here.
-
+  \repeat volta 2 {
+    f,2 f4 f(e) f g(a) g f2 r4
+    a2 a4 a(g) f c'(bf) a a g r4
+  }
+  g2 a4 bf2 g4 a2 bf4 c2 r4
+  d2 d4 c(bf) a bf(a) g f2.
+  \bar "|."
 }
 
 scoreCVerse = \lyricmode {
   % Lyrics follow here.
-
+Hei -- lig, Herr Gott Zaba -- ot
+Hei -- lig, Herr der Him -- mels -- hee -- re
+Star -- ker Hel -- fer in der Not
+Him -- mel, Er -- de, Luft und Mee -- re
+sind er -- füllt von dei -- nem Ruhm
+al -- les ist dein Ei -- gen -- tum.
 }
 
 scoreCChordNames = \chordmode {
@@ -365,6 +395,9 @@ scoreCBassFiguresPart = \new FiguredBass \with {
 } \scoreCFigBass
 
 \bookpart {
+  \header {
+      subtitle = "Cantus Firmus im Bass"
+  }
   \score {
     <<
       \scoreCChoirPart
@@ -387,7 +420,13 @@ scoreDSoprano = \relative c'' {
 scoreDAlto = \relative c' {
   \global
   % Music follows here.
-
+  \repeat volta 2 {
+    f2 f4 f(e) f g(a) g f2 r4
+    a2 a4 a(g) f c'(bf) a a g r4
+  }
+  g2 a4 bf2 g4 a2 bf4 c2 r4
+  d2 d4 c(bf) a bf(a) g f2.
+  \bar "|."
 }
 
 scoreDTenor = \relative c' {
@@ -399,12 +438,21 @@ scoreDTenor = \relative c' {
 scoreDBass = \relative c {
   \global
   % Music follows here.
-
+  \repeat volta 2 {
+    f,2 f4 f(g) f c'(f,) c' f,2 s4
+    f2 f4 f(c) f f(bf) f f c'4 s4
+  }
+  c2 f,4 bf2 c,4 f2 bf4 f2 r4 bf2 bf4 f(bf) f bf(f) c f2.
 }
 
 scoreDVerse = \lyricmode {
   % Lyrics follow here.
-
+Der Apo -- stel heil -- ger Chor,
+der Pro -- phe -- ten heh -- re Men -- ge
+schickt zu dei -- nem Thron em -- por
+neue Lob- und Dank -- ge -- sän -- ge
+der Blut -- zeu -- gen lich -- te Schar
+lobt und preist dich im -- mer -- dar.
 }
 
 scoreDChordNames = \chordmode {
@@ -461,6 +509,9 @@ scoreDBassFiguresPart = \new FiguredBass \with {
 } \scoreDFigBass
 
 \bookpart {
+  \header {
+      subtitle = "Cantus Firmus im Alt"
+  }
   \score {
     <<
       \scoreDChoirPart
