@@ -1,21 +1,21 @@
-  \version "2.24.1"
+\version "2.24.1"
+\language "english"
 
 \include "predefined-guitar-fretboards.ly"
 
 \header {
-  dedication = "n"
-  title = "n"
-  subtitle = "n"
-  subsubtitle = "n"
-  instrument = "n"
-  composer = "n"
-  arranger = "n"
-  poet = "n"
-  meter = "n"
-  piece = "n"
+  dedication = "Meinem Lehrer Andreas Lang gewidment, auf dass es klappt mit dem C-Schein"
+  title = "Großer Gott wie loben dich"
+  subsubtitle = ""
+  instrument = "Organ"
+  composer = "M:  "
+  arranger = "Satz: Sven Buschke"
+  poet = "T: "
+  meter = ""
+  piece = ""
   opus = "GL 380"
-  copyright = "n"
-  tagline = "n"
+  copyright = "Satz: Sven Buschke"
+  tagline = "In allen vier CF-Lagen"
 }
 
 global = {
@@ -29,7 +29,7 @@ scoreASoprano = \relative c'' {
   % Music follows here.
   \repeat volta 2 {
     f,2 f4 f(e) f g(a) g f2 r4
-    a2 a4 a(g) f c'(bf) a a g r
+    a2 a4 a(g) f c'(bf) a a g r4
   }
   g2 a4 bf2 g4 a2 bf4 c2 r4
   d2 d4 c(bf) a bf(a) g f2.
@@ -39,36 +39,63 @@ scoreASoprano = \relative c'' {
 scoreAAlto = \relative c' {
   \global
   % Music follows here.
-
+  \repeat volta 2 {
+    a2 a4 a(g) a c(c) c a2 r4
+    c2 c4 c(c) a f'(d) c c c r4
+  }
+  c2 c4 d2 c4 c2 d4 f2 r4
+  f2 f4 f(d) c d(c) c a2.
 }
 
 scoreATenor = \relative c' {
   \global
   % Music follows here.
-
+  \repeat volta 2 {
+    c,2 c4 c4(bf) c e(f) e c2 r4
+    f2 f4 f(e) c a'(f) f f e r
+  }
+  e2 f4 f2 e4 f2 f4 a2 r4
+  d2 d4 a(f) f f(f)e d2.
 }
 
 scoreABass = \relative c {
   \global
   % Music follows here.
+  \repeat volta 2 {
+    f,2 f4 f(g) f c'(f,) c' f,2 s4
+    f2 f4 f(c) f f(bf) f f c'4 s4
+  }
+  c2 f,4 bf2 c,4 f2 bf4 f2 r4 bf2 bf4 f(bf) f bf(f) c f2.
+}
+
+scoreAVerseA =  \lyricmode {
+  % Lyrics follow here.
+  Gro -- ßer Gott wir lo -- ben dich
+  Herr, wir prei -- sen dei -- ne Stär -- ke
 
 }
 
-scoreAVerse = \lyricmode {
+scoreAVerseB =  \lyricmode {
   % Lyrics follow here.
-Gro -- ßer Gott wir lo -- ben dich
-Herr, wir prei -- sen dei -- ne Stär -- ke
-Vor dir neigt die Er -- de sich
-und be -- wun -- dert dei -- ne Wer -- ke.
-Wie du warst vor al -- ler Zeit,
-so bleibst du in Ewig -- keit.
+    Vor dir neigt die Er -- de sich
+    und be -- wun -- dert dei -- ne Wer -- ke.
+}
+
+scoreAVerseC =  \lyricmode {
+  % Lyrics follow here.
+    Wie du warst vor al -- ler Zeit,
+    so bleibst du in Ewig -- keit.
 }
 
 scoreAChordNames = \chordmode {
   \global
   \germanChords
   % Chords follow here.
-  f2
+  \repeat volta 2 {
+    f2 f4 f(e:dim/g) f c(f) c f2 s4
+    f2 f4 f(c) f f(bf) f f c4 s4
+  }
+  c2 f4 bf2 c4 f2 bf4 f2 s4 bf2 bf4 f(bf) f bf(f) c f2.
 }
 
 scoreAFigBass = \figuremode {
@@ -92,7 +119,13 @@ scoreAChoirPart = \new ChoirStaff <<
   >>
   \new Lyrics \with {
     \override VerticalAxisGroup #'staff-affinity = #CENTER
-  } \lyricsto "soprano" \scoreAVerse
+  } \lyricsto "soprano" { << \scoreAVerseA
+                             \new Lyrics {
+                               \set associatedVoice = "soprano" \scoreAVerseB
+                             }
+                          >>
+                          \scoreAVerseC
+  }
   \new Staff \with {
     midiInstrument = "choir aahs"
     instrumentName = \markup \center-column { "Tenor" "Bass" }
@@ -119,6 +152,9 @@ scoreABassFiguresPart = \new FiguredBass \with {
 } \scoreAFigBass
 
 \bookpart {
+  \header {
+      subtitle = "Cantus Firmus im Sopran"
+  }
   \score {
     <<
       \scoreAChoirPart
@@ -163,8 +199,8 @@ Kerubim und Serafinen
 stimmen dir ein Loblied an
 alle Engel, die dir dienen,
 rufen dir stets ohne Ruh
-"Heilig, heilig, heilig" zu
-3. Heilig, Herr Gott Zabaot
+Heilig, heilig, heilig zu
+2 Heilig, Herr Gott Zabaot
 Heilig, Herr der Himmelsheere
 Starker Helfer in der Not
 Himmel, Erde, Luft und Meere
