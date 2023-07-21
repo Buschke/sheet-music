@@ -182,8 +182,12 @@ scoreBSoprano = \relative c'' {
 scoreBAlto = \relative c' {
   \global
   % Music follows here.
-  c2 c4 c(bf) c e(f) e c2 r4
-  f2 f4 f(
+  \repeat volta 2 {
+    c2 c4 c(bf) c e(f) e c2 r4
+    f2 f4 f(e) c a'(f) f f e r
+  }
+  e2 f4 f2 e4 f2 f4 a2 r4
+  bf2 bf4 a(f) f f(f) e c2.
 }
 
 scoreBTenor = \relative c' {
@@ -194,7 +198,7 @@ scoreBTenor = \relative c' {
     a2 a4 a(g) f c'(bf) a a g r4
   }
   g2 a4 bf2 g4 a2 bf4 c2 r4
-  d2 d4 c(bf) a bf(a) g f2.
+  f2 f4 c(bf) a bf(a) g f2.
   \bar "|."
 }
 
