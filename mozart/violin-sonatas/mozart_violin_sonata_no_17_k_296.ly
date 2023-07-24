@@ -17,11 +17,11 @@
   tagline = ""
 }
 
-global = {
-  \key c \major
-  \time 4/4
-  \tempo "Allegro vivace" 4 = 100
-}
+% global = {
+%   \key c \major
+%   \time 4/4
+%   \tempo "Allegro vivace" 4 = 100
+% }
 
 globalA = {
   \key c \major
@@ -88,15 +88,19 @@ scoreBViolin = \relative c'' {
 }
 
 scoreBRight = \relative c'' {
-  \global
+  \globalB
   % Music follows here.
-  
+  \partial 4
+  a8.\p(bf16) c8.(a16) c4
 }
 
 scoreBLeft = \relative c' {
-  \global
+  \globalB
   % Music follows here.
-  
+  \partial 4
+  r4 \tuplet 3/2 {f,8\p a c} \tuplet 3/2 {f, a c} \tuplet 3/2 {f, a c} \tuplet 3/2 {f, a c} \tuplet 3/2 {f, a c} \tuplet 3/2 {f, c' g}
+  \tuplet 3/2 {f a c} \tuplet 3/2 {f, a c} \tuplet 3/2 {f, a c}
+  \tuplet 3/2 {c, e c'} \tuplet 3/2 {c, e c'} \tuplet 3/2 {f, c' g}
 }
 
 scoreBViolinPart = \new Staff \with {
