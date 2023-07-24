@@ -1,33 +1,38 @@
 \version "2.24.1"
+\language "english"
 
 \include "predefined-guitar-fretboards.ly"
 
 \header {
-  dedication = "n"
-  title = "n"
-  subtitle = "n"
-  subsubtitle = "n"
-  instrument = "n"
-  composer = "n"
-  arranger = "n"
-  poet = "n"
-  meter = "n"
-  piece = "n"
-  opus = "GL 380"
-  copyright = "n"
-  tagline = "n"
+  dedication = "Meinem Lehrer Andreas Lang gewidment, auf dass es klappt mit dem C-Schein"
+  title = ""
+  subsubtitle = "Gotteslob Nr. 89"
+  instrument = "Orgel"
+  composer = "M: "
+  arranger = \markup { "Satz: " \with-url #"https://buschke.com" "Sven Buschke" }
+  poet = "T: "
+  meter = ""
+  piece = ""
+  opus = "GL 89"
+  copyright = \markup { "© Satz: 21.07.2023" \with-url #"mailto:sven@buschke.com" "Sven Buschke" }
+  tagline = ""
 }
 
 global = {
-  \key c \major
-  \time 4/4
-  \tempo "Andante"
+  \key ef \major
+  \time 2/2
+  \tempo "Andante" 4=50
 }
 
 scoreASoprano = \relative c'' {
   \global
   % Music follows here.
-  
+  \partial 4
+  bf
+  bf bf c(bf) bf2.\fermata
+  g4 f g af4. g8 f2 g4\fermata
+  ef8 ef d4 ef c8 d ef4 ef(d) ef\fermata
+  \bar "|."
 }
 
 scoreAAlto = \relative c' {
@@ -50,7 +55,9 @@ scoreABass = \relative c {
 
 scoreAVerse = \lyricmode {
   % Lyrics follow here.
-  
+  Herr, blei -- be bei uns,
+  denn es wird A -- bend wer -- den,
+  und der Tag hat sich _ ge -- nei -- get. 
 }
 
 scoreAChordNames = \chordmode {
@@ -99,7 +106,8 @@ scoreAChoirPart = \new ChoirStaff <<
 
 scoreAChordsPart = <<
   \new ChordNames \scoreAChordNames
-  \new FretBoards \scoreAChordNames
+%   \scoreAChordNames
+%   \new FretBoards \scoreAChordNames
 >>
 
 scoreABassFiguresPart = \new FiguredBass \with {
@@ -107,6 +115,9 @@ scoreABassFiguresPart = \new FiguredBass \with {
 } \scoreAFigBass
 
 \bookpart {
+  \header {
+      subtitle = "Cantus firmus im Sopran"
+  }
   \score {
     <<
       \scoreAChoirPart
@@ -135,7 +146,12 @@ scoreBAlto = \relative c' {
 scoreBTenor = \relative c' {
   \global
   % Music follows here.
-  
+  \partial 4
+  bf
+  bf bf c(bf) bf2.\fermata
+  g4 f g af4. g8 f2 g4\fermata
+  ef8 ef d4 ef c8 d ef4 ef(d) ef\fermata
+  \bar "|."  
 }
 
 scoreBBass = \relative c {
@@ -146,7 +162,7 @@ scoreBBass = \relative c {
 
 scoreBVerse = \lyricmode {
   % Lyrics follow here.
-  
+  \scoreAVerse  
 }
 
 scoreBChordNames = \chordmode {
@@ -195,7 +211,8 @@ scoreBChoirPart = \new ChoirStaff <<
 
 scoreBChordsPart = <<
   \new ChordNames \scoreBChordNames
-  \new FretBoards \scoreBChordNames
+%   \scoreBChordNames
+%   \new FretBoards \scoreBChordNames
 >>
 
 scoreBBassFiguresPart = \new FiguredBass \with {
@@ -203,6 +220,9 @@ scoreBBassFiguresPart = \new FiguredBass \with {
 } \scoreBFigBass
 
 \bookpart {
+  \header {
+      subtitle = "Cantus firmus im Tenor"
+  }
   \score {
     <<
       \scoreBChoirPart
@@ -237,12 +257,17 @@ scoreCTenor = \relative c' {
 scoreCBass = \relative c {
   \global
   % Music follows here.
-  
+  \partial 4
+  bf
+  bf bf c(bf) bf2.\fermata
+  g4 f g af4. g8 f2 g4\fermata
+  ef8 ef d4 ef c8 d ef4 ef(d) ef\fermata
+  \bar "|."  
 }
 
 scoreCVerse = \lyricmode {
   % Lyrics follow here.
-  
+  \scoreAVerse
 }
 
 scoreCChordNames = \chordmode {
@@ -291,7 +316,8 @@ scoreCChoirPart = \new ChoirStaff <<
 
 scoreCChordsPart = <<
   \new ChordNames \scoreCChordNames
-  \new FretBoards \scoreCChordNames
+%   \scoreCChordNames
+%   \new FretBoards \scoreCChordNames
 >>
 
 scoreCBassFiguresPart = \new FiguredBass \with {
@@ -299,6 +325,9 @@ scoreCBassFiguresPart = \new FiguredBass \with {
 } \scoreCFigBass
 
 \bookpart {
+  \header {
+      subtitle = "Cantus firmus im Bass"
+  }
   \score {
     <<
       \scoreCChoirPart
@@ -321,7 +350,12 @@ scoreDSoprano = \relative c'' {
 scoreDAlto = \relative c' {
   \global
   % Music follows here.
-  
+  \partial 4
+  bf
+  bf bf c(bf) bf2.\fermata
+  g4 f g af4. g8 f2 g4\fermata
+  ef8 ef d4 ef c8 d ef4 ef(d) ef\fermata
+  \bar "|."  
 }
 
 scoreDTenor = \relative c' {
@@ -338,7 +372,7 @@ scoreDBass = \relative c {
 
 scoreDVerse = \lyricmode {
   % Lyrics follow here.
-  
+  \scoreAVerse  
 }
 
 scoreDChordNames = \chordmode {
@@ -387,7 +421,8 @@ scoreDChoirPart = \new ChoirStaff <<
 
 scoreDChordsPart = <<
   \new ChordNames \scoreDChordNames
-  \new FretBoards \scoreDChordNames
+%   \scoreDChordNames
+%   \new FretBoards \scoreDChordNames
 >>
 
 scoreDBassFiguresPart = \new FiguredBass \with {
@@ -395,6 +430,9 @@ scoreDBassFiguresPart = \new FiguredBass \with {
 } \scoreDFigBass
 
 \bookpart {
+  \header {
+      subtitle = "Cantus firmus im Alt"
+  }
   \score {
     <<
       \scoreDChoirPart
