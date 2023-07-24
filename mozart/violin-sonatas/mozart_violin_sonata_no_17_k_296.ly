@@ -115,22 +115,30 @@ scoreBPianoPart = \new PianoStaff \with {
   } { \clef bass \scoreBLeft }
 >>
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+globalC = {
+  \key f \major
+  \time 2/2
+  \tempo "Allegro" 4 = 100
+}
+
 scoreCViolin = \relative c'' {
-  \global
+  \globalC
   % Music follows here.
-  
+  c,8\p(g c g c g c g) e'(c e c e c e c) f(c f c f c f c) e(c e c e c e c)
 }
 
 scoreCRight = \relative c'' {
-  \global
+  \globalC
   % Music follows here.
-  
+  e2.\p f4\trill
 }
 
 scoreCLeft = \relative c' {
-  \global
+  \globalC
   % Music follows here.
-  
+  r1 <c, c'>4 r r2 r1
 }
 
 scoreCViolinPart = \new Staff \with {
@@ -211,9 +219,9 @@ scoreEViolin = \relative c'' {
 }
 
 scoreFViolin = \relative c'' {
-  \global
+%   \global
   % Music follows here.
-  
+  \scoreCViolin  
 }
 
 \book {
