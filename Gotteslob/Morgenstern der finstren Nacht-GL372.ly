@@ -960,7 +960,7 @@ scoreFRehearsalMidi = #
    >>
  #})
 
-scoreBChordNames = \chordmode {
+scoreFChordNames = \chordmode {
   \global
   \germanChords
   % Chords follow here.
