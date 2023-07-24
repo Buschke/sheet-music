@@ -21,7 +21,7 @@
 global = {
   \key f \major
   \time 4/4
-  \tempo "Andante"
+  \tempo "Andante" 4=50
 }
 
 scoreASoprano = \relative c'' {
