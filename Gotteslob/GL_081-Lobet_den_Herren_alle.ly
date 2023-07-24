@@ -43,14 +43,14 @@ scoreAAlto = \relative c' {
 scoreATenor = \relative c' {
   \global
   % Music follows here.
-  d2,
+  d,2
 }
 
 scoreABass = \relative c' {
   \global
   % Music follows here.
-  bf,2 bf4 d, ef2 bf' bf4 ef, bf' bf ef2, bf'
-  bf ef4, c bf2 ef c4 bf f bf ef2 bf
+  bf,2 bf4 d, ef2 bf' bf4 ef, bf' bf ef,2 bf'
+  bf ef,4 c bf2 ef c4 bf f bf ef2 bf
   bf f4 bf bf2 bf ef4 bf d ef g(a)g
   bf2 ef4 bf f2 bf
   
