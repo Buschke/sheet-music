@@ -164,7 +164,17 @@ scoreBBass = \relative c {
 
 }
 
-scoreBVerse = \lyricmode {
+scoreBVerseA = \lyricmode {
+  % Lyrics follow here.
+
+}
+
+scoreBVerseB = \lyricmode {
+  % Lyrics follow here.
+
+}
+
+scoreBVerseC = \lyricmode {
   % Lyrics follow here.
 
 }
@@ -197,7 +207,7 @@ scoreBChoirPart = \new ChoirStaff <<
   >>
   \new Lyrics \with {
     \override VerticalAxisGroup #'staff-affinity = #CENTER
-  } \lyricsto "soprano" \scoreBVerse
+  } \lyricsto "soprano" {<<\scoreBVerseA \new Lyrics {\set associatedVoice = "soprano" \scoreBVerseB}>> \scoreBVerseC}
   \new Staff \with {
     midiInstrument = "choir aahs"
     instrumentName = \markup \center-column { "Tenor" "Bass" }
@@ -264,7 +274,17 @@ scoreCBass = \relative c {
 
 }
 
-scoreCVerse = \lyricmode {
+scoreCVerseA = \lyricmode {
+  % Lyrics follow here.
+
+}
+
+scoreCVerseB = \lyricmode {
+  % Lyrics follow here.
+
+}
+
+scoreCVerseC = \lyricmode {
   % Lyrics follow here.
 
 }
@@ -297,7 +317,7 @@ scoreCChoirPart = \new ChoirStaff <<
   >>
   \new Lyrics \with {
     \override VerticalAxisGroup #'staff-affinity = #CENTER
-  } \lyricsto "soprano" \scoreCVerse
+  } \lyricsto "soprano" {<<\scoreCVerseA \new Lyrics {\set associatedVoice = "soprano" \scoreCVerseB}>> \scoreCVerseC}
   \new Staff \with {
     midiInstrument = "choir aahs"
     instrumentName = \markup \center-column { "Tenor" "Bass" }
@@ -364,7 +384,17 @@ scoreDBass = \relative c {
 
 }
 
-scoreDVerse = \lyricmode {
+scoreDVerseA = \lyricmode {
+  % Lyrics follow here.
+
+}
+
+scoreDVerseB = \lyricmode {
+  % Lyrics follow here.
+
+}
+
+scoreDVerseC = \lyricmode {
   % Lyrics follow here.
 
 }
@@ -397,7 +427,7 @@ scoreDChoirPart = \new ChoirStaff <<
   >>
   \new Lyrics \with {
     \override VerticalAxisGroup #'staff-affinity = #CENTER
-  } \lyricsto "soprano" \scoreDVerse
+  } \lyricsto "soprano" {<<\scoreDVerseA \new Lyrics {\set associatedVoice = "soprano" \scoreDVerseB}>> \scoreAVerseC}
   \new Staff \with {
     midiInstrument = "choir aahs"
     instrumentName = \markup \center-column { "Tenor" "Bass" }
