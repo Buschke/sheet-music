@@ -28,28 +28,21 @@ scoreASoprano = \relative c'' {
   \global
   % Music follows here.
   \repeat volta 2 { c }
-
 }
 
 scoreAAlto = \relative c' {
   \global
   % Music follows here.
-  \repeat volta 2 {  }
-
 }
 
 scoreATenor = \relative c' {
   \global
   % Music follows here.
-  \repeat volta 2 {  }
-
 }
 
 scoreABass = \relative c {
   \global
   % Music follows here.
-  \repeat volta 2 {  }
-
 }
 
 scoreAVerseA = \lyricmode {
@@ -71,15 +64,11 @@ scoreAChordNames = \chordmode {
   \global
   \germanChords
   % Chords follow here.
-  \repeat volta 2 {  }
-
 }
 
 scoreAFigBass = \figuremode {
   \global
   % Figures follow here.
-  \repeat volta 2 {  }
-
 }
 
 scoreAChoirPart = \new ChoirStaff <<
@@ -427,7 +416,7 @@ scoreDChoirPart = \new ChoirStaff <<
   >>
   \new Lyrics \with {
     \override VerticalAxisGroup #'staff-affinity = #CENTER
-  } \lyricsto "soprano" {<<\scoreDVerseA \new Lyrics {\set associatedVoice = "soprano" \scoreDVerseB}>> \scoreAVerseC}
+  } \lyricsto "soprano" {<<\scoreDVerseA \new Lyrics {\set associatedVoice = "soprano" \scoreDVerseB}>> \scoreDVerseC}
   \new Staff \with {
     midiInstrument = "choir aahs"
     instrumentName = \markup \center-column { "Tenor" "Bass" }
