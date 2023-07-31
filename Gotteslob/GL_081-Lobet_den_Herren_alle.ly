@@ -37,7 +37,7 @@ scoreASoprano = \relative c'' {
 scoreAAlto = \relative c' {
   \global
   % Music follows here.
-  bf2
+  bf2 f4 d a
 }
 
 scoreATenor = \relative c' {
