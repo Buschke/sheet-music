@@ -187,7 +187,7 @@ scoreBSoprano = \relative c'' {
     \partial 4
     a4
     c a d c c2 a4
-    c c c f f d2 c4 
+    c c c f f d2 c4
     c c c d c
   } \alternative {
     {c2 r4}
