@@ -8,9 +8,9 @@
   title = "Allein Gott in der Höh sei Ehr"
   subsubtitle = "Gotteslob Nr. 170"
   instrument = "Orgel"
-  composer = "M: "
+  composer = "M: Nikolaus Decius, 1523"
   arranger = \markup { "Satz: " \with-url #"https://buschke.com" "Sven Buschke" }
-  poet = "T: "
+  poet = "T: Nikolaus Decius, 1523"
   meter = ""
   piece = ""
   opus = "GL 170"
