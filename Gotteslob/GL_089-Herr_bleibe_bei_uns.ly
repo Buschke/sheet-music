@@ -5,7 +5,7 @@
 
 \header {
   dedication = "Meinem Lehrer Andreas Lang gewidment, auf dass es klappt mit dem C-Schein"
-  title = ""
+  title = "Herr, bleibe bei uns, denn es wird Abend werden"
   subsubtitle = "Gotteslob Nr. 89"
   instrument = "Orgel"
   composer = "M: "
@@ -38,39 +38,47 @@ scoreASoprano = \relative c'' {
 scoreAAlto = \relative c' {
   \global
   % Music follows here.
-  
+
 }
 
 scoreATenor = \relative c' {
   \global
   % Music follows here.
-  
+
 }
 
-scoreABass = \relative c {
+scoreABass = \relative c, {
   \global
   % Music follows here.
-  
+  \partial 4
+  ef4
+  ef ef af(ef) ef2.
+  ef4 bf' ef, af4. ef8 bf'2 ef,4
+  ef8 ef bf'4 ef, af8 bf ef,4 ef(bf') ef,
 }
 
 scoreAVerse = \lyricmode {
   % Lyrics follow here.
   Herr, blei -- be bei uns,
   denn es wird A -- bend wer -- den,
-  und der Tag hat sich _ ge -- nei -- get. 
+  und der Tag hat sich _ ge -- nei -- get.
 }
 
 scoreAChordNames = \chordmode {
   \global
   \germanChords
   % Chords follow here.
-  
+  \partial 4
+  ef4
+  ef ef af(ef) ef2.
+  ef4 bf ef af4. ef8 bf2 ef4
+  ef8 ef bf4 ef af8 bf ef4 ef(bf) ef
 }
 
 scoreAFigBass = \figuremode {
   \global
   % Figures follow here.
-  
+
 }
 
 scoreAChoirPart = \new ChoirStaff <<
@@ -134,13 +142,13 @@ scoreABassFiguresPart = \new FiguredBass \with {
 scoreBSoprano = \relative c'' {
   \global
   % Music follows here.
-  
+
 }
 
 scoreBAlto = \relative c' {
   \global
   % Music follows here.
-  
+
 }
 
 scoreBTenor = \relative c' {
@@ -151,31 +159,39 @@ scoreBTenor = \relative c' {
   bf bf c(bf) bf2.\fermata
   g4 f g af4. g8 f2 g4\fermata
   ef8 ef d4 ef c8 d ef4 ef(d) ef\fermata
-  \bar "|."  
+  \bar "|."
 }
 
 scoreBBass = \relative c {
   \global
   % Music follows here.
-  
+  \partial 4
+  ef,4
+  ef ef af(ef) ef2.
+  ef4 bf' ef, af4. ef8 bf'2 ef,4
+  ef8 ef bf'4 ef, af8 bf ef,4 ef(bf') ef,
 }
 
 scoreBVerse = \lyricmode {
   % Lyrics follow here.
-  \scoreAVerse  
+  \scoreAVerse
 }
 
 scoreBChordNames = \chordmode {
   \global
   \germanChords
   % Chords follow here.
-  
+  \partial 4
+  ef4
+  ef ef af(ef) ef2.
+  ef4 bf ef af4. ef8 bf2 ef4
+  ef8 ef bf4 ef af8 bf ef4 ef(bf) ef
 }
 
 scoreBFigBass = \figuremode {
   \global
   % Figures follow here.
-  
+
 }
 
 scoreBChoirPart = \new ChoirStaff <<
@@ -239,19 +255,19 @@ scoreBBassFiguresPart = \new FiguredBass \with {
 scoreCSoprano = \relative c'' {
   \global
   % Music follows here.
-  
+
 }
 
 scoreCAlto = \relative c' {
   \global
   % Music follows here.
-  
+
 }
 
 scoreCTenor = \relative c' {
   \global
   % Music follows here.
-  
+
 }
 
 scoreCBass = \relative c {
@@ -262,7 +278,7 @@ scoreCBass = \relative c {
   bf bf c(bf) bf2.\fermata
   g4 f g af4. g8 f2 g4\fermata
   ef8 ef d4 ef c8 d ef4 ef(d) ef\fermata
-  \bar "|."  
+  \bar "|."
 }
 
 scoreCVerse = \lyricmode {
@@ -274,13 +290,17 @@ scoreCChordNames = \chordmode {
   \global
   \germanChords
   % Chords follow here.
-  
+  \partial 4
+  ef4
+  ef ef af(ef) ef2.
+  ef4 bf ef af4. ef8 bf2 ef4
+  ef8 ef bf4 ef af8 bf ef4 ef(bf) ef
 }
 
 scoreCFigBass = \figuremode {
   \global
   % Figures follow here.
-  
+
 }
 
 scoreCChoirPart = \new ChoirStaff <<
@@ -344,10 +364,10 @@ scoreCBassFiguresPart = \new FiguredBass \with {
 scoreDSoprano = \relative c'' {
   \global
   % Music follows here.
-  
+
 }
 
-scoreDAlto = \relative c' {
+scoreDAlto = \relative c'' {
   \global
   % Music follows here.
   \partial 4
@@ -355,37 +375,45 @@ scoreDAlto = \relative c' {
   bf bf c(bf) bf2.\fermata
   g4 f g af4. g8 f2 g4\fermata
   ef8 ef d4 ef c8 d ef4 ef(d) ef\fermata
-  \bar "|."  
+  \bar "|."
 }
 
 scoreDTenor = \relative c' {
   \global
   % Music follows here.
-  
+
 }
 
 scoreDBass = \relative c {
   \global
   % Music follows here.
-  
+  \partial 4
+  ef,4
+  ef ef af(ef) ef2.
+  ef4 bf' ef, af4. ef8 bf'2 ef,4
+  ef8 ef bf'4 ef, af8 bf ef,4 ef(bf') ef,
 }
 
 scoreDVerse = \lyricmode {
   % Lyrics follow here.
-  \scoreAVerse  
+  \scoreAVerse
 }
 
 scoreDChordNames = \chordmode {
   \global
   \germanChords
   % Chords follow here.
-  
+  \partial 4
+  ef4
+  ef ef af(ef) ef2.
+  ef4 bf ef af4. ef8 bf2 ef4
+  ef8 ef bf4 ef af8 bf ef4 ef(bf) ef
 }
 
 scoreDFigBass = \figuremode {
   \global
   % Figures follow here.
-  
+
 }
 
 scoreDChoirPart = \new ChoirStaff <<
