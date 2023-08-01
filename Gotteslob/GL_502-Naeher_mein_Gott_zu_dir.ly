@@ -1,5 +1,5 @@
-  \version "2.24.1"
-  \language "english"
+\version "2.24.1"
+\language "english"
 
 \include "predefined-guitar-fretboards.ly"
 
@@ -9,13 +9,13 @@
   subsubtitle = ""
   instrument = "Orgel"
   composer = "M:  Lowell Mason 1859"
-  arranger = "Satz: Sven Buschke"
+  arranger = \markup { "Satz: " \with-url #"https://buschke.com" "Sven Buschke" }
   poet = "T: Erhardt Friedrich Wunderlich 1875"
   meter = ""
   piece = "nach Sarah F. Adams 'Nearer, my God, to thee', London 1841"
   opus = "GL 502"
-  copyright = "Satz: Sven Buschke"
-  tagline = "In allen vier CF-Lagen"
+  copyright = \markup { "© Satz: 01.08.2023" \with-url #"mailto:sven@buschke.com" "Sven Buschke" }
+  tagline = ""
 }
 
 global = {
@@ -49,7 +49,7 @@ scoreATenor = \relative c' {
   f,2 e4  c c4. bf8 bf2 a2 c4 f e2. r4
   f2 e4 c c4. bf8 bf2 a4(c) c e c2. r4
   a'2 bf4 a a4. f8 a2 a bf4 a a4. f8 e2
-  f2 e4 c c4. b8 b2 a4(c) c e c1
+  f2 e4 c c4. bf8 bf2 a4(c) c e c1
 }
 
 scoreABass = \relative c {
@@ -118,8 +118,8 @@ scoreAChoirPart = \new ChoirStaff <<
 
 scoreAChordsPart = <<
   \new ChordNames \scoreAChordNames
-%   \scoreAChordNames
-%   \new FretBoards \scoreAChordNames
+  %   \scoreAChordNames
+  %   \new FretBoards \scoreAChordNames
 >>
 
 scoreABassFiguresPart = \new FiguredBass \with {
@@ -127,6 +127,9 @@ scoreABassFiguresPart = \new FiguredBass \with {
 } \scoreAFigBass
 
 \bookpart {
+  \header {
+    subtitle = "Cantus firmus im Sopran"
+  }
   \score {
     <<
       \scoreAChoirPart
@@ -143,50 +146,56 @@ scoreABassFiguresPart = \new FiguredBass \with {
 scoreBSoprano = \relative c'' {
   \global
   % Music follows here.
-
+  c2 c4 a a4. f8 f2 f a4 c c2. r4
+  c2 c4 a a4. f8 f2 f4(a) a c a2. r4
+  f'2 f4 f f4. c8 f2 f f4 f f4. c8 c2
+  c2 c4 a a4. f8 f2 e4(a) a c a1
 }
 
 scoreBAlto = \relative c' {
   \global
   % Music follows here.
-
+  f2 e4  c c4. bf8 bf2 a2 c4 f e2. r4
+  f2 e4 c c4. bf8 bf2 a4(c) c e c2. r4
+  a'2 bf4 a a4. f8 a2 a bf4 a a4. f8 e2
+  f2 e4 c c4. bf8 bf2 a4(c) c e c1
 }
 
 scoreBTenor = \relative c' {
   \global
   % Music follows here.
-
+  a2 g4 f f4. d8 d2 c f4 a g2. r4
+  a2 g4 f f4. d8 d2 c4(f) e g f2. r4
+  c'2 d4 c c4. a8 c2 c d4 c c4. a8 g2\breathe
+  a2 g4 f f4. d8 d2 c4(f) e g f1
+  \bar "|."
 }
 
 scoreBBass = \relative c {
   \global
   % Music follows here.
-
+  f,2 c4 f f4. bf8 bf2 f2 f4 f4 c2. s4
+  f2 c4 f f4. bf8 bf2 f4(f) a c f,2. s4
+  f2 bf4 f f4. f8 f2 f bf4 f f4. f8 c2
+  f c4 f f4. bf8 bf2 f4(f) a c f,1
 }
 
 scoreBVerse = \lyricmode {
   % Lyrics follow here.
-2) Bricht mir, wie Jakob dort, Nacht auch herein,
-find ich zum Ruheort nur einen Stein;
-ist selbst im Traume hier mein Sehnen für und für:
-Näher, mein Gott, zu dir, näher zu dir!
-
-2) Geht auch die schmale Bahn aufwärts gar steil,
-führt sie doch himmelan zu meinem Heil.
-Engel, so licht und schön, winken aus selgen Höhn:
-Näher, mein Gott, zu dir, näher zu dir.
-
-4) Ist dann die Nacht vorbei, leuchtet die Sonn,
-weih ich mich dir aufs neu vor deinem Thron;
-baue mein Bethel dir und jauchz mit Freuden hier:
-Näher, mein Gott, zu dir, näher zu dir!
+  Bricht mir, wie Ja -- kob dort, Nacht auch her -- ein,
+  find ich zum Ruheort nur einen Stein;
+  ist selbst im Trau -- me hier mein Seh -- nen für und für:
+  Nä -- her, mein Gott, zu dir, nä -- her zu dir!
 }
 
 scoreBChordNames = \chordmode {
   \global
   \germanChords
   % Chords follow here.
-
+  f2 c4 f f4. bf8 bf2 f2 f4 f4 c2. s4
+  f2 c4 f f4. bf8 bf2 f4(f) a:m c f2. s4
+  f2 bf4 f f4. f8 f2 f bf4 f f4. f8 c2
+  f c4 f f4. bf8 bf2 f4(f) a:m c f1
 }
 
 scoreBFigBass = \figuremode {
@@ -228,7 +237,8 @@ scoreBChoirPart = \new ChoirStaff <<
 
 scoreBChordsPart = <<
   \new ChordNames \scoreBChordNames
-  \new FretBoards \scoreBChordNames
+%   \scoreBChordNames
+%   \new FretBoards \scoreBChordNames
 >>
 
 scoreBBassFiguresPart = \new FiguredBass \with {
@@ -236,6 +246,9 @@ scoreBBassFiguresPart = \new FiguredBass \with {
 } \scoreBFigBass
 
 \bookpart {
+  \header {
+    subtitle = "Cantus firmus im Tenor"
+  }
   \score {
     <<
       \scoreBChoirPart
@@ -264,25 +277,38 @@ scoreCAlto = \relative c' {
 scoreCTenor = \relative c' {
   \global
   % Music follows here.
-
+  f,2 c4 f f4. bf8 bf2 f2 f4 f4 c2. s4
+  f2 c4 f f4. bf8 bf2 f4(f) a c f,2. s4
+  f2 bf4 f f4. f8 f2 f bf4 f f4. f8 c2
+  f c4 f f4. bf8 bf2 f4(f) a c f,1
 }
 
 scoreCBass = \relative c {
   \global
   % Music follows here.
-
+  a2 g4 f f4. d8 d2 c f4 a g2. r4
+  a2 g4 f f4. d8 d2 c4(f) e g f2. r4
+  c'2 d4 c c4. a8 c2 c d4 c c4. a8 g2\breathe
+  a2 g4 f f4. d8 d2 c4(f) e g f1
+  \bar "|."
 }
 
 scoreCVerse = \lyricmode {
   % Lyrics follow here.
-
+  Geht auch die schma -- le Bahn auf -- wärts gar steil,
+  führt sie doch him -- mel -- an zu mei -- nem Heil.
+  En -- gel, so licht und schön, win -- ken aus sel -- gen Höhn:
+  Nä -- her, mein Gott, zu dir, nä -- her zu dir.
 }
 
 scoreCChordNames = \chordmode {
   \global
   \germanChords
   % Chords follow here.
-
+  f2 c4 f f4. bf8 bf2 f2 f4 f4 c2. s4
+  f2 c4 f f4. bf8 bf2 f4(f) a:m c f2. s4
+  f2 bf4 f f4. f8 f2 f bf4 f f4. f8 c2
+  f c4 f f4. bf8 bf2 f4(f) a:m c f1
 }
 
 scoreCFigBass = \figuremode {
@@ -324,7 +350,8 @@ scoreCChoirPart = \new ChoirStaff <<
 
 scoreCChordsPart = <<
   \new ChordNames \scoreCChordNames
-  \new FretBoards \scoreCChordNames
+%   \scoreCChordNames
+%   \new FretBoards \scoreCChordNames
 >>
 
 scoreCBassFiguresPart = \new FiguredBass \with {
@@ -332,6 +359,9 @@ scoreCBassFiguresPart = \new FiguredBass \with {
 } \scoreCFigBass
 
 \bookpart {
+  \header {
+    subtitle = "Cantus firmus im Bass"
+  }
   \score {
     <<
       \scoreCChoirPart
@@ -348,37 +378,56 @@ scoreCBassFiguresPart = \new FiguredBass \with {
 scoreDSoprano = \relative c'' {
   \global
   % Music follows here.
-
+  f2 e4  c c4. bf8 bf2 a2 c4 f e2. r4
+  f2 e4 c c4. bf8 bf2 a4(c) c e c2. r4
+  a'2 bf4 a a4. f8 a2 a bf4 a a4. f8 e2
+  f2 e4 c c4. bf8 bf2 a4(c) c e c1
 }
 
 scoreDAlto = \relative c' {
   \global
   % Music follows here.
-
+  a'2 g4 f f4. d8 d2 c f4 a g2. r4
+  a2 g4 f f4. d8 d2 c4(f) e g f2. r4
+  c'2 d4 c c4. a8 c2 c d4 c c4. a8 g2\breathe
+  a2 g4 f f4. d8 d2 c4(f) e g f1
+  \bar "|."
 }
 
 scoreDTenor = \relative c' {
   \global
   % Music follows here.
-
+  c2 c4 a a4. f8 f2 f a4 c c2. r4
+  c2 c4 a a4. f8 f2 f4(a) a c a2. r4
+  f'2 f4 f f4. c8 f2 f f4 f f4. c8 c2
+  c2 c4 a a4. f8 f2 e4(a) a c a1
 }
 
 scoreDBass = \relative c {
   \global
   % Music follows here.
-
+  f,2 c4 f f4. bf8 bf2 f2 f4 f4 c2. s4
+  f2 c4 f f4. bf8 bf2 f4(f) a c f,2. s4
+  f2 bf4 f f4. f8 f2 f bf4 f f4. f8 c2
+  f c4 f f4. bf8 bf2 f4(f) a c f,1
 }
 
 scoreDVerse = \lyricmode {
   % Lyrics follow here.
-
+  Ist dann die Nacht vor -- bei, leuch -- tet die Sonn,
+  weih ich mich dir aufs neu vor dei -- nem Thron;
+  baue mein Be -- thel dir und jauchz mit Freu -- den hier:
+  Nä -- her, mein Gott, zu dir, nä -- her zu dir!
 }
 
 scoreDChordNames = \chordmode {
   \global
   \germanChords
   % Chords follow here.
-
+  f2 c4 f f4. bf8 bf2 f2 f4 f4 c2. s4
+  f2 c4 f f4. bf8 bf2 f4(f) a:m c f2. s4
+  f2 bf4 f f4. f8 f2 f bf4 f f4. f8 c2
+  f c4 f f4. bf8 bf2 f4(f) a:m c f1
 }
 
 scoreDFigBass = \figuremode {
@@ -420,7 +469,8 @@ scoreDChoirPart = \new ChoirStaff <<
 
 scoreDChordsPart = <<
   \new ChordNames \scoreDChordNames
-  \new FretBoards \scoreDChordNames
+%   \scoreDChordNames
+%   \new FretBoards \scoreDChordNames
 >>
 
 scoreDBassFiguresPart = \new FiguredBass \with {
@@ -428,6 +478,9 @@ scoreDBassFiguresPart = \new FiguredBass \with {
 } \scoreDFigBass
 
 \bookpart {
+  \header {
+    subtitle = "Cantus firmus im Alt"
+  }
   \score {
     <<
       \scoreDChoirPart
