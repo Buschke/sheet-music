@@ -4,7 +4,7 @@
 \include "predefined-guitar-fretboards.ly"
 
 \header {
-  dedication = "Meinem Lehrer Andreas Lang gewidment, für die Begleitung hin zum C-Schein"
+  dedication = "A. L., für die Begleitung hin zum C-Schein"
   title = ""
   subsubtitle = "Gotteslob Nr. "
   instrument = "Orgel"
@@ -13,7 +13,7 @@
   poet = "T: "
   meter = ""
   piece = ""
-  opus = "GL "
+  opus = "GL / EG "
   copyright = \markup { "© Satz: 21.07.2023" \with-url #"mailto:sven@buschke.com" "Sven Buschke" }
   tagline = ""
 }
@@ -33,37 +33,31 @@ scoreASoprano = \relative c'' {
 scoreAAlto = \relative c' {
   \global
   % Music follows here.
-  
 }
 
 scoreATenor = \relative c' {
   \global
   % Music follows here.
-  
 }
 
 scoreABass = \relative c {
   \global
   % Music follows here.
-  
 }
 
 scoreAVerse = \lyricmode {
   % Lyrics follow here.
-  
 }
 
 scoreAChordNames = \chordmode {
   \global
   \germanChords
   % Chords follow here.
-  
 }
 
 scoreAFigBass = \figuremode {
   \global
   % Figures follow here.
-  
 }
 
 scoreAChoirPart = \new ChoirStaff <<
@@ -127,43 +121,36 @@ scoreABassFiguresPart = \new FiguredBass \with {
 scoreBSoprano = \relative c'' {
   \global
   % Music follows here.
-  
 }
 
 scoreBAlto = \relative c' {
   \global
   % Music follows here.
-  
 }
 
 scoreBTenor = \relative c' {
   \global
   % Music follows here.
-  
 }
 
 scoreBBass = \relative c {
   \global
   % Music follows here.
-  
 }
 
 scoreBVerse = \lyricmode {
   % Lyrics follow here.
-  
 }
 
 scoreBChordNames = \chordmode {
   \global
   \germanChords
   % Chords follow here.
-  
 }
 
 scoreBFigBass = \figuremode {
   \global
   % Figures follow here.
-  
 }
 
 scoreBChoirPart = \new ChoirStaff <<
@@ -227,43 +214,36 @@ scoreBBassFiguresPart = \new FiguredBass \with {
 scoreCSoprano = \relative c'' {
   \global
   % Music follows here.
-  
 }
 
 scoreCAlto = \relative c' {
   \global
   % Music follows here.
-  
 }
 
 scoreCTenor = \relative c' {
   \global
   % Music follows here.
-  
 }
 
 scoreCBass = \relative c {
   \global
   % Music follows here.
-  
 }
 
 scoreCVerse = \lyricmode {
   % Lyrics follow here.
-  
 }
 
 scoreCChordNames = \chordmode {
   \global
   \germanChords
   % Chords follow here.
-  
 }
 
 scoreCFigBass = \figuremode {
   \global
   % Figures follow here.
-  
 }
 
 scoreCChoirPart = \new ChoirStaff <<
@@ -327,43 +307,36 @@ scoreCBassFiguresPart = \new FiguredBass \with {
 scoreDSoprano = \relative c'' {
   \global
   % Music follows here.
-  
 }
 
 scoreDAlto = \relative c' {
   \global
   % Music follows here.
-  
 }
 
 scoreDTenor = \relative c' {
   \global
   % Music follows here.
-  
 }
 
 scoreDBass = \relative c {
   \global
   % Music follows here.
-  
 }
 
 scoreDVerse = \lyricmode {
   % Lyrics follow here.
-  
 }
 
 scoreDChordNames = \chordmode {
   \global
   \germanChords
   % Chords follow here.
-  
 }
 
 scoreDFigBass = \figuremode {
   \global
   % Figures follow here.
-  
 }
 
 scoreDChoirPart = \new ChoirStaff <<
