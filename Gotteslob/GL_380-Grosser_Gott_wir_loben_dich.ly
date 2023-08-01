@@ -19,7 +19,7 @@
 }
 
 global = {
-  \key c \major
+  \key f \major
   \time 3/4
   \tempo "Andante" 4=50
 }
@@ -28,45 +28,45 @@ scoreASoprano = \relative c' {
   \global
   % Music follows here.
   \repeat volta 2 {
-    c2 c4 c(b) c d(e) d c2 r4
-    e2 e4 e(d) c g'(f) e e d r
+    f2 f4 f(e) f g(a) g f2 r4
+    a2 a4 a(g) f c'(bf) a a g r
   }
-  d2 e4 f2 d4 e2 f4 g2 r4
-  a2 a4 g(f) e f(e) d c2.
+  g2 a4 bf2 g4 a2 bf4 c2 r4
+  d2 d4 c(bf) a bf(a) g f2.
   \bar "|."
 }
 
-scoreAAlto = \relative c {
+scoreAAlto = \relative c' {
   \global
   % Music follows here.
   \repeat volta 2 {
-    e2 e4 e4(d) e g(g) g e2 r4
-    g2 g4 g(g) e  b'(a) g g g r
+    a2 a4 a4(g) a c(c) c a2 r4
+    c2 c4 c(c) a  e'(d) c c c r
   }
-  g2 g4 a2 g4 g2 a4 b2 r4
-  c2 c4 c(a) g a(g) g e2.
+  c2 c4 d2 c4 c2 d4 e2 r4
+  f2 f4 f(d) c d(c) c a2.
 }
 
 scoreATenor = \relative c {
   \global
   % Music follows here.
   \repeat volta 2 {
-    g2 g4 g(g) g b(c) b g2 r4
-    c2 c4 c(b) g d'(c) c c b r
+    c2 c4 c(c) c e(f) e c2 r4
+    f2 f4 f(e) c g'(f) f f e r
   }
-  b2 c4 c2 b4 c2 c4 d2 r4
-  f2 f4 e(c) c c(c) b g2.
+  e2 f4 f2 e4 f2 f4 g2 r4
+  bf2 bf4 a(f) f f(f) e c2.
 }
 
 scoreABass = \relative c, {
   \global
   % Music follows here.
   \repeat volta 2 {
-    c2 c4 c4(g) c g(c) g c2 r4
-    c2 c4 c(g) c c(f) c c g r4
+    f2 f4 f4(c) f c(f) c f2 r4
+    f2 f4 f(c) f f(bf) f f c r4
   }
-  g2 c4 f2 g4 c,2 f4 c2 r4
-  f2 f4 c(f) c f(c) g c2.
+  c2 f4 bf2 c4 f,2 bf4 f2 r4
+  bf2 bf4 f(bf) f bf(f) c f2.
 }
 
 scoreAVerseA = \lyricmode {
@@ -92,11 +92,11 @@ scoreAChordNames = \chordmode {
   \germanChords
   % Chords follow here.
   \repeat volta 2 {
-    c2 c4 c4(g) c g(c) g c2 s4
-    c2 c4 c(g) c c(f) c c g s4
+    f2 f4 f4(c) f c(f) c f2 s4
+    f2 f4 f(c) f f(bf) f f c s4
   }
-  g2 c4 f2 g4 c2 f4 c2 s4
-  f2 f4 c(f) c f(c) g c2.
+  c2 f4 bf2 c4 f2 bf4 f2 s4
+  bf2 bf4 f(bf) f bf(f) c f2.
 }
 
 scoreAFigBass = \figuremode {
@@ -164,37 +164,37 @@ scoreABassFiguresPart = \new FiguredBass \with {
   }
 }
 
-scoreBSoprano = \relative c' {
+scoreBSoprano = \relative c'' {
   \global
   % Music follows here.
   \repeat volta 2 {
-    e2 e4 e(d) e g(g) g e2 r4
-    g2 g4 g(g) e c'(a) g g g r
+    a2 a4 a(g) a c(c) c a2 r4
+    c2 c4 c(c) a f'(d) c c c r
   }
-  g2 g4 a2 g4 g2 a4 c2 r4
-  c2 c4 c(a) g a(g) g e2.
+  c2 c4 d2 c4 c2 d4 f2 r4
+  f2 f4 f(d) c d(c) c a2.
 }
 
 scoreBAlto = \relative c' {
   \global
   % Music follows here.
   \repeat volta 2 {
-    g2 g4 g(g) g b(c) b g2 r4
-    c2 c4 c(b) g e'(c) c c b r4
+    c2 c4 c(c) c e(f) e c2 r4
+    f2 f4 f(e) c a'(f) f f e r4
   }
-  b2 b4 c2 b4 c2 c4 e2 r4
-  f2 f4 e4(c) c c(c) b g2.
+  e2 e4 f2 e4 f2 f4 a2 r4
+  bf2 bf4 a4(f) f f(f) e c2.
 }
 
 scoreBTenor = \relative c {
   \global
   % Music follows here.
   \repeat volta 2 {
-    c2 c4 c(b) c d(e) d c2 r4
-    e2 e4 e(d) c g'(f) e e d r
+    f2 f4 f(e) f g(a) g f2 r4
+    a2 a4 a(g) f c'(bf) a a g r
   }
-  d2 e4 f2 d4 e2 f4 g2 r4
-  a2 a4 g(f) e f(e) d c2.
+  g2 a4 bf2 g4 a2 bf4 c2 r4
+  d2 d4 c(bf) a bf(a) g f2.
   \bar "|."
 }
 
@@ -202,11 +202,11 @@ scoreBBass = \relative c, {
   \global
   % Music follows here.
   \repeat volta 2 {
-    c2 c4 c4(g) c g(c) g c2 r4
-    c2 c4 c(g) c c(f) c c g r4
+    f2 f4 f4(c) f c(f) c f2 r4
+    f2 f4 f(c) f f(bf) f f c r4
   }
-  g2 c4 f2 g4 c,2 f4 c2 r4
-  f2 f4 c(f) c f(c) g c2.
+  c2 f4 bf2 c4 f,2 bf4 f2 r4
+  bf2 bf4 f(bf) f bf(f) c f2.
 }
 
 scoreBVerseA = \lyricmode {
@@ -232,11 +232,11 @@ scoreBChordNames = \chordmode {
   \germanChords
   % Chords follow here.
   \repeat volta 2 {
-    c2 c4 c4(g) c g(c) g c2 s4
-    c2 c4 c(g) c c(f) c c g s4
+    f2 f4 f4(c) f c(f) c f2 s4
+    f2 f4 f(c) f f(bf) f f c s4
   }
-  g2 c4 f2 g4 c2 f4 c2 s4
-  f2 f4 c(f) c f(c) g c2.
+  c2 f4 bf2 c4 f2 bf4 f2 s4
+  bf2 bf4 f(bf) f bf(f) c f2.
 }
 
 scoreBFigBass = \figuremode {
@@ -303,48 +303,48 @@ scoreBBassFiguresPart = \new FiguredBass \with {
   }
 }
 
-scoreCSoprano = \relative c' {
+scoreCSoprano = \relative c'' {
   \global
   % Music follows here.
   \repeat volta 2 {
-    c'2 c4 c(d) c d(c) d c2 r4
-    c2 c4 c(d) e e(f) c c f r
+    f2 f4 f(g) f g(f) g f2 r4
+    f2 f4 f(g) a a(bf) f f bf r
   }
-  d2 c4 f2 d4 c2 f4 c2 r4
-  f2 f4 d(f) c f(c) d e2.
+  g2 f4 bf2 g4 f2 bf4 f2 r4
+  bf2 bf4 g(bf) f bf(f) g a2.
 }
 
-scoreCAlto = \relative c' {
+scoreCAlto = \relative c'' {
   \global
   % Music follows here.
   \repeat volta 2 {
-    e2 e4 e(d) e f(g) f g2 r4
-    g2 g4 g(f) g b(a) g g a r
+    a2 a4 a(g) a bf(c) bf c2 r4
+    c2 c4 c(bf) c e(d) c c d r
   }
-  f2 g4 a2 f4 g2 a4 g2 r4
-  c2 c4 g(a) g a(g) f g2.
+  bf2 c4 d2 bf4 c2 d4 c2 r4
+  f2 f4 c(d) c d(c) bf c2.
 }
 
-scoreCTenor = \relative c {
+scoreCTenor = \relative c' {
   \global
   % Music follows here.
   \repeat volta 2 {
-    g'2 g4 g4(g) g b(c) b c2 r4
-    c2 c4 c(b) c e(c) c c d r4
+    c2 c4 c4(c) c e(f) e f2 r4
+    f2 f4 f(e) f a(f) f f g r4
   }
-  b2 c4 c2 b4 c2 c4 c2 r4
-  f2 f4 b,(c) c c(c) b c2.
+  e2 f4 f2 e4 f2 f4 f2 r4
+  bf2 bf4 e,(f) f f(f) e f2.
 }
 
-scoreCBass = \relative c, {
+scoreCBass = \relative c {
   \global
   % Music follows here.
   \repeat volta 2 {
-    c'2 c4 c(b) c d(e) d c2 r4
-    e2 e4 e(d) c g'(f) e e d r
+    f2 f4 f(e) f g(a) g f2 r4
+    a2 a4 a(g) f c'(bf) a a g r
   }
-  d2 e4 f2 d4 e2 f4 e2 r4
-  a2 a4 g(f) e f(e) d c2.
+  g2 a4 bf2 g4 a2 bf4 a2 r4
+  d2 d4 c(bf) a bf(a) g f2.
   \bar "|."
 }
 
@@ -371,11 +371,11 @@ scoreCChordNames = \chordmode {
   \germanChords
   % Chords follow here.
   \repeat volta 2 {
-    c2 c4 c4(g/b) c b:dim/d(c/e) b:dim/d c2 s4
-    c2/e c4/e c/e(b:dim/d) c e:m/g(f) c/e c/e d:m s4
+    f2 f4 f4(c/e) f e:dim/g(f/a) e:dim/g f2 s4
+    f2/a f4/a f/a(e:dim/g) f a:m/c(bf) f/a f/a g:m s4
   }
-  b2:dim/d c4/e f2 b4:dim/d c2/e f4 c2/e s4
-  f2/a f4/a g(f) c/e f(c/e) b:dim/d c2.
+  e2:dim/g f4/a bf2 e4:dim/g f2/a bf4 f2/a s4
+  bf2/d bf4/d c(bf) f/a bf(f/a) e:dim/g f2.
 }
 
 scoreCFigBass = \figuremode {
@@ -446,45 +446,45 @@ scoreDSoprano = \relative c'' {
   \global
   % Music follows here.
   \repeat volta 2 {
-    g2 g4 g(g) g b(c) b g2 r4
-    c2 c4 c(b) g e'(c) c c b r
+    c2 c4 c(c) c e(f) e c2 r4
+    f2 f4 f(e) c a'(f) f f e r
   }
-  b2 c4 c2 b4 c2 c4 e2 r4
-  a2 a4 e(c) c c(c) b g2.
+  e2 f4 f2 e4 f2 f4 a2 r4
+  d2 d4 a(f) f f(f) e c2.
 }
 
 scoreDAlto = \relative c' {
   \global
   % Music follows here.
   \repeat volta 2 {
-    c2 c4 c(b) c d(e) d c2 r4
-    e2 e4 e(d) c g'(f) e e d r
+    f2 f4 f(e) f g(a) g f2 r4
+    a2 a4 a(g) f c'(bf) a a g r
   }
-  d2 e4 f2 d4 e2 f4 g2 r4
-  a2 a4 g(f) e f(e) d c2.
+  g2 a4 bf2 g4 a2 bf4 c2 r4
+  d2 d4 c(bf) a bf(a) g f2.
   \bar "|."
 }
 
-scoreDTenor = \relative c {
+scoreDTenor = \relative c' {
   \global
   % Music follows here.
   \repeat volta 2 {
-    e2 e4 e(d) e g(g) g4 e2 r4
-    g2 g4 g(g) e c'(a) g g g r4
+    a2 a4 a(g) a c(c) c4 a2 r4
+    c2 c4 c(c) a f'(d) c c c r4
   }
-  g2 g4 a2 g4 g2 a4 c2 r4
-  f2 f4 c(a) g a(g) g e2.
+  c2 c4 d2 c4 c2 d4 f2 r4
+  bf2 bf4 f(d) c d(c) c a2.
 }
 
 scoreDBass = \relative c, {
   \global
   % Music follows here.
   \repeat volta 2 {
-    c2 c4 c4(g) c g(c) g c2 r4
-    c2 c4 c(g) c c(f) c c g r4
+    f2 f4 f4(c) f c(f) c f2 r4
+    f2 f4 f(c) f f(bf) f f c r4
   }
-  g2 c4 f2 g4 c,2 f4 c2 r4
-  f2 f4 c(f) c f(c) g c2.
+  c2 f4 bf2 c4 f,2 bf4 f2 r4
+  bf2 bf4 f(bf) f bf(f) c f2.
 }
 
 scoreDVerseA = \lyricmode {
@@ -510,11 +510,11 @@ scoreDChordNames = \chordmode {
   \germanChords
   % Chords follow here.
   \repeat volta 2 {
-    c2 c4 c4(g) c g(c) g c2 s4
-    c2 c4 c(g) c c(f) c c g s4
+    f2 f4 f4(c) f c(f) c f2 s4
+    f2 f4 f(c) f f(bf) f f c s4
   }
-  g2 c4 f2 g4 c2 f4 c2 s4
-  f2 f4 c(f) c f(c) g c2.
+  c2 f4 bf2 c4 f2 bf4 f2 s4
+  bf2 bf4 f(bf) f bf(f) c f2.
 }
 
 scoreDFigBass = \figuremode {
