@@ -41,9 +41,9 @@ scoreAAlto = \relative c' {
   % Music follows here.
   \repeat volta 2 {
     a2 a4 a4(g) a c(c) c a2 r4
-    c2 c4 c(c) a  e'(d) c c c r
+    c2 c4 c(c) a  f'(d) c c c r
   }
-  c2 c4 d2 c4 c2 d4 e2 r4
+  c2 c4 d2 c4 c2 d4 f2 r4
   f2 f4 f(d) c d(c) c a2.
 }
 
@@ -52,9 +52,9 @@ scoreATenor = \relative c {
   % Music follows here.
   \repeat volta 2 {
     c2 c4 c(c) c e(f) e c2 r4
-    f2 f4 f(e) c g'(f) f f e r
+    f2 f4 f(e) c a'(f) f f e r
   }
-  e2 f4 f2 e4 f2 f4 g2 r4
+  e2 f4 f2 e4 f2 f4 a2 r4
   bf2 bf4 a(f) f f(f) e c2.
 }
 
@@ -62,11 +62,11 @@ scoreABass = \relative c, {
   \global
   % Music follows here.
   \repeat volta 2 {
-    f2 f4 f4(c) f c(f) c f2 r4
-    f2 f4 f(c) f f(bf) f f c r4
+    f2 f4 f4(c') f, c'(f,) c' f,2 r4
+    f2 f4 f(c') f, f(bf) f f c' r4
   }
-  c2 f4 bf2 c4 f,2 bf4 f2 r4
-  bf2 bf4 f(bf) f bf(f) c f2.
+  c2 f,4 bf2 c4 f,2 bf4 f2 r4
+  bf2 bf4 f(bf) f bf(f) c' f,2.
 }
 
 scoreAVerseA = \lyricmode {
@@ -182,7 +182,7 @@ scoreBAlto = \relative c' {
     c2 c4 c(c) c e(f) e c2 r4
     f2 f4 f(e) c a'(f) f f e r4
   }
-  e2 e4 f2 e4 f2 f4 a2 r4
+  e2 f4 f2 e4 f2 f4 a2 r4
   bf2 bf4 a4(f) f f(f) e c2.
 }
 
