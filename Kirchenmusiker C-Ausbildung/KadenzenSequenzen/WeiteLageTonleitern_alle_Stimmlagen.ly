@@ -339,14 +339,19 @@ scoreCSoprano = \relative c'' {
   % Music follows here.
   % Sekundintervall
   % Grundstellung
-  e^"Grundstellung" d b a g e d c c d e g a b d e
+  e^"Grundstellung Sekunde" d b a g e d c c d e g a b d e
   % Sextakkord
   a,^"Sextakkord" b c d e f g a a g f e d c b a
   % Quartsextakkord
   f^"Quartsextakkord" g a b c d e f f e d c b a g f
+  % Terzintervall
+  % Grundstellung
+  e^"Grundstellung Terz" g b d g, a c e e c a g d' c g e
+  % Sextakkord
+  e,^"Sextakkord" g b d g, a c e e c a g d' c g e
+  % Quartsextakkord
+  e^"Quartsextakkord" g b d g, a c e e c a g d' c g e
   % weitere Intervalle
-  e g b d g, a c e
-  e c a g d' c g e
   e a d g, c g b e
   e b g c g d' a e
   e b' g c g d' a e'
@@ -410,9 +415,17 @@ scoreCBass = \relative c {
   % Quartsextakkord
   c4 d e f g a b c c b a g f e d c
   \bar "||"
-  % weitere Intervalle
+  % Terzintervall
+  % Grundstellung
   c e g b d, f a c c a f d b' g e c
   \bar "||"
+  % Sextakkord
+  c e g b d, f a c c a f d b' g e c
+  \bar "||"
+  % Quartsextakkord
+  c e g b d, f a c c a f d b' g e c
+  \bar "||"
+  % weitere Intervalle
   c f b e, a d, g c c g d a' e b' f c
   \bar "||"
   c g' d a' e b' f c' c f, b e, a d, g c,
@@ -432,8 +445,14 @@ scoreCVerse = \lyricmode {
   do re mi fa sol la si do do si la sol fa mi re do
   % Quartsextakkord
   do re mi fa sol la si do do si la sol fa mi re do
+  % Sekundintervall
+  % Grundstellung
+  do re mi fa sol la si do do si la sol fa mi re do
+  % Sextakkord
+  do re mi fa sol la si do do si la sol fa mi re do
+  % Quartsextakkord
+  do re mi fa sol la si do do si la sol fa mi re do
   % weitere Intervalle
-  do re mi fa sol la si do
   do si la sol fa mi re do
   do mi sol si re fa la do
   do la fa re si sol mi do
@@ -458,9 +477,15 @@ scoreCChordNames = \chordmode {
   a:m/c b:dim/d c/e d:m/f e:m/g f/a g/b c c g/b f/a e:m/g d:m/f c/e b:dim/d a:m/c
   % Quartsextakkord
   f/c g/d a:m/e b:dim/f c/g d:m/a e:m/b f/c f/c e:m/b d:m/a c/g b:dim/f a:m/e g/d f/c
+  % Terzintervall
+  % Grundstellung
+%  c c g g g f f c
+  c d:m e:m f g a:m b:dim c c b:dim a:m g f e:m d:m c
+  % Sextakkord
+  a:m/c b:dim/d c/e d:m/f e:m/g f/a g/b c c g/b f/a e:m/g d:m/f c/e b:dim/d a:m/c
+  % Quartsextakkord
+  f/c g/d a:m/e b:dim/f c/g d:m/a e:m/b f/c f/c e:m/b d:m/a c/g b:dim/f a:m/e g/d f/c
   % weitere Intervalle
-  c c g g g f f c
-  c f f g g c c c
   c f g c f g g c c g g f c g f c
   c g g f c g f c c f g c f g g c
   c f f g g g c c c c g g g f f c
