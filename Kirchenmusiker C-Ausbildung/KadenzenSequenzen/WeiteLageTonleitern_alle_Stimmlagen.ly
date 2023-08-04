@@ -337,8 +337,14 @@ scoreBBassFiguresPart = \new FiguredBass \with {
 scoreCSoprano = \relative c'' {
   \global
   % Music follows here.
-  e g g a c c d e
-  e d c c a g g e
+  % Sekundintervall
+  % Grundstellung
+  e^"Grundstellung" d b a g e d c c d e g a b d e
+  % Sextakkord
+  a,^"Sextakkord" b c d e f g a a g f e d c b a
+  % Quartsextakkord
+  f^"Quartsextakkord" g a b c d e f f e d c b a g f
+  % weitere Intervalle
   e g b d g, a c e
   e c a g d' c g e
   e a d g, c g b e
@@ -354,8 +360,14 @@ scoreCSoprano = \relative c'' {
 scoreCAlto = \relative c' {
   \global
   % Music follows here.
-  g b c c e f f g
-  g g f e c c b g
+  % Sekundintervall
+  % Grundstellung
+  g' f e c b a f e e f a b c e f g
+  % Sextakkord
+  e f g a b c d e e d c b a g f e
+  % Quartsextakkord
+  a, b c d e f g a a g f e d c b a
+  % weitere Intervalle
   g c d g b, c f g
   g f c b g' e c g
   g c g' c, f b, d g
@@ -371,8 +383,14 @@ scoreCAlto = \relative c' {
 scoreCTenor = \relative c' {
   \global
   % Music follows here.
-  c g c f c f d c
-  c g f' c f c g c
+  % Sekundintervall
+  % Grundstellung
+  c a g f d c b g g b c d f g a c
+  % Sextakkord
+  a b c d e f g a a g f e d c b a
+  % Quartsextakkord
+  f d a' f c' a e' c c e a, c f, a d, f
+  % weitere Intervalle
   c c g g g f' f c
   c f f g, g c c c c f g, c f g, g c c g g f' c g f' c
   c g g f' c g f c' c f g, c f g, g c
@@ -382,8 +400,17 @@ scoreCTenor = \relative c' {
 scoreCBass = \relative c {
   \global
   % Music follows here.
+  % Sekundintervall
+  % Grundstellung
+  c,4 d e f g a b c c b a g f e d c
+  \bar "||"
+  % Sextakkord
   c4 d e f g a b c c b a g f e d c
   \bar "||"
+  % Quartsextakkord
+  c4 d e f g a b c c b a g f e d c
+  \bar "||"
+  % weitere Intervalle
   c e g b d, f a c c a f d b' g e c
   \bar "||"
   c f b e, a d, g c c g d a' e b' f c
@@ -398,6 +425,14 @@ scoreCBass = \relative c {
 
 scoreCVerse = \lyricmode {
   % Lyrics follow here.
+  % Sekundintervall
+  % Grundstellung
+  do re mi fa sol la si do do si la sol fa mi re do
+  % Sextakkord
+  do re mi fa sol la si do do si la sol fa mi re do
+  % Quartsextakkord
+  do re mi fa sol la si do do si la sol fa mi re do
+  % weitere Intervalle
   do re mi fa sol la si do
   do si la sol fa mi re do
   do mi sol si re fa la do
@@ -416,8 +451,14 @@ scoreCChordNames = \chordmode {
   \global
   \germanChords
   % Chords follow here.
-  c g c f c f b:dim/d c
-  c g f c f c g c
+  % Sekundintervall
+  % Grundstellung
+  c d:m e:m f g a:m b:dim c c b:dim a:m g f e:m d:m c
+  % Sextakkord
+  a:m/c b:dim/d c/e d:m/f e:m/g f/a g/b c c g/b f/a e:m/g d:m/f c/e b:dim/d a:m/c
+  % Quartsextakkord
+  f/c g/d a:m/e b:dim/f c/g d:m/a e:m/b f/c f/c e:m/b d:m/a c/g b:dim/f a:m/e g/d f/c
+  % weitere Intervalle
   c c g g g f f c
   c f f g g c c c
   c f g c f g g c c g g f c g f c
@@ -429,6 +470,11 @@ scoreCChordNames = \chordmode {
 scoreCFigBass = \figuremode {
   \global
   % Figures follow here.
+  % Sekundintervall
+  % Grundstellung
+  % Sextakkord
+  % Quartsextakkord
+  % weitere Intervalle
 }
 
 scoreCChoirPart = \new ChoirStaff <<
