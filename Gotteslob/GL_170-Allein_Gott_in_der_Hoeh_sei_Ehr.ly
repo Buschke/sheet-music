@@ -68,10 +68,10 @@ scoreATenor = \relative c' {
   % Music follows here.
   \repeat volta 2 {
     %   \partial 4
-    c4 f2 f4 a2 f4 f2 e4 f2
+    c,4 f2 f4 a2 f4 f2 e4 f2
     f4 f2 e4 f(f) e c2(bf4) c
   }
-  c4 a2 e4 f f f e2 c4 e2
+  c4 a2 e'4 f f f e2 c4 e2
   e4 f2 f4 a2 f4 f2 e4 f2
   c4 e2 f4 f2 e4 c2(bf4) c2
 }
