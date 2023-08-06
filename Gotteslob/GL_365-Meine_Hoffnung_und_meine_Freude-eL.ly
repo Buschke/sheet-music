@@ -43,7 +43,21 @@ scoreAAlto = \relative c' {
   % Music follows here.
   \repeat volta 2 {
     \partial 4
-    a4
+    c4
+    f f e bf
+    a c f f c e2
+    c4 d d c c c
+    e f f g e e
+    a c, d c c2
+  } 
+}
+
+scoreATenor = \relative c {
+  \global
+  % Music follows here.
+  \repeat volta 2 {
+    \partial 4
+    a'4
     c c c f, f
     a c c a c2
     f,4 f f g a a
@@ -52,26 +66,12 @@ scoreAAlto = \relative c' {
   }
 }
 
-scoreATenor = \relative c {
-  \global
-  % Music follows here.
-  \repeat volta 2 {
-    \partial 4
-    c4
-    f f e bf
-    a c f f c e2
-    c4 d d c c c
-    e f f g e e
-    a c d c c2
-  } 
-}
-
 scoreABass = \relative c, {
   \global
   % Music follows here.
   \repeat volta 2 {
     \partial 4
-    f4
+    f'4
     f f c bf f'\breathe
     f f f f c2\breathe
     f4 bf, bf c f f

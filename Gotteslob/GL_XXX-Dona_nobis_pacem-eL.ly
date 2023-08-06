@@ -5,15 +5,15 @@
 
 \header {
   dedication = "A. L., für die Begleitung hin zum C-Schein und für das sonntägliche Ukraine-Friedensgebet"
-  title = "Meine Hoffnung und meine Freude"
-  subsubtitle = "Gotteslob Nr. 365"
+  title = "Dona nobis pacem"
+  subsubtitle = "Gotteslob Nr. XXX"
   instrument = "Orgel"
-  composer = "M: Jacques Bertier, 1923-1944"
+  composer = "M: Volksweise"
   arranger = \markup { "Satz: " \with-url #"https://buschke.com" "Sven Buschke" }
-  poet = "T: Taizé nach Jes 12,2"
+  poet = "T: Volkslied"
   meter = ""
   piece = ""
-  opus = "GL 365 / EL "
+  opus = "GL / EL "
   copyright = \markup { "© Satz: 21.07.2023" \with-url #"mailto:sven@buschke.com" "Sven Buschke" }
   tagline = ""
 }
@@ -28,81 +28,55 @@ scoreASoprano = \relative c' {
   \global
   % Music follows here.
   \repeat volta 2 {
-    \partial 4
-    f8 g
-    a4 a8 a g f d4 c\breathe
-    f8 g a4. a8 f4 g2\breathe
-    c,8 c d4. d8 \tuplet 3/2 {e d e} f4.\breathe
-    f8 g g a4 a8 a d bf g4.\breathe
-    g8 c a f4 f8 d f e f2
+    f8^"1. Stimme" c a'2 g8 c, bf'2 a4(g) f f e2
+    d'4(c8 bf) a g c4.(bf8) a4 a8(g f4 e) f2.\fermata
+    c'2.^"2. Stimme" c c4(bf) a a g2 d'4 d2 c4 c2 c8(bf a4) g f2.\fermata
+    f^"3. Stimme" e f4.(g8) a bf c4 c,2
+    bf'4 bf2 a4 a2 e8(g c4 e,) f2.
   }
 }
 
 scoreAAlto = \relative c' {
   \global
   % Music follows here.
-  \repeat volta 2 {
-    \partial 4
-    a4
-    c c c f, f
-    a c c a c2
-    f,4 f f g a a
-    c c c d c c
-    f a, bf g a2
-  }
+  f2. g c, c bf' a c, c
+  a' a a e bf' a e c
+  c c d g, f' f c c2.   
 }
 
 scoreATenor = \relative c {
   \global
   % Music follows here.
-  \repeat volta 2 {
-    \partial 4
-    c4
-    f f e bf
-    a c f f c e2
-    c4 d d c c c
-    e f f g e e
-    a c d c c2
-  } 
+  c'2. e a, g f' f g, a
+  f' f f c f f c a
+  a g bf e, d' c g a2. 
 }
 
 scoreABass = \relative c, {
   \global
   % Music follows here.
-  \repeat volta 2 {
-    \partial 4
-    f4
-    f f c bf f'\breathe
-    f f f f c2\breathe
-    f4 bf, bf c f f
-    c f f g c, c8~\breathe c
-    f4 f bf, c
-    f2
-  }
+  f'2. c f c bf' f c f
+  f f f c bf f' c f
+  f c bf c bf' f c f
 }
 
 scoreAVerse = \lyricmode {
   % Lyrics follow here.
-  Mei -- ne Hoff -- nung und mei -- ne Freu -- de,
-  mei -- ne Stär -- ke, mein Licht.
-  Chris -- tus mei -- ne Zu -- _ ver -- sicht, auf dich ver -- trau ich und fürcht mich nicht,
-  auf dich ver -- trau ich und fürcht mich nicht.
+  Do -- _ na no -- _ bis pa -- cem, pa -- cem;
+  do -- na _ no -- bis pa -- cem.
+  Do -- na no -- bis pa -- cem,
+  do -- na no -- bis pa -- _ cem.
+  Do -- na no -- bis _ pa -- cem,
+  do -- na no -- bis pa -- cem.
 }
 
 scoreAChordNames = \chordmode {
   \global
   \germanChords
   % Chords follow here.
-  \repeat volta 2 {
-    \partial 4
-    f4
-    f f c bf\breathe
-    f f f f f c2\breathe
-    f4 bf bf c f f
-    c f f g c c
-    f f bf c
-    f2
-  }
+  f2. c f c bf f c f
+  f f f c bf f c f
+  f c bf c bf f c f
 }
 
 scoreAFigBass = \figuremode {

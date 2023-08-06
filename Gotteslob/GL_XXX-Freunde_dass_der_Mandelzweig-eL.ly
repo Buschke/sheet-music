@@ -2,106 +2,148 @@
 \language "english"
 
 \include "predefined-guitar-fretboards.ly"
-
 \header {
   dedication = "A. L., für die Begleitung hin zum C-Schein und für das sonntägliche Ukraine-Friedensgebet"
-  title = "Meine Hoffnung und meine Freude"
-  subsubtitle = "Gotteslob Nr. 365"
+  title = "Freunde, dass der Mandelzweig"
+  subsubtitle = "Gotteslob Nr. XXX"
   instrument = "Orgel"
-  composer = "M: Jacques Bertier, 1923-1944"
+  composer = "M: Fritz Baltruweit"
   arranger = \markup { "Satz: " \with-url #"https://buschke.com" "Sven Buschke" }
-  poet = "T: Taizé nach Jes 12,2"
+  poet = "T: Schalom Ben-Chorin"
   meter = ""
   piece = ""
-  opus = "GL 365 / EL "
+  opus = "GL "
   copyright = \markup { "© Satz: 21.07.2023" \with-url #"mailto:sven@buschke.com" "Sven Buschke" }
   tagline = ""
 }
 
 global = {
-  \key f \major
-  \time 3/4
+  \key c \major
+  \time 4/4
   \tempo "Andante" 4=50
 }
 
-scoreASoprano = \relative c' {
+scoreASoprano = \relative c'' {
   \global
   % Music follows here.
-  \repeat volta 2 {
-    \partial 4
-    f8 g
-    a4 a8 a g f d4 c\breathe
-    f8 g a4. a8 f4 g2\breathe
-    c,8 c d4. d8 \tuplet 3/2 {e d e} f4.\breathe
-    f8 g g a4 a8 a d bf g4.\breathe
-    g8 c a f4 f8 d f e f2
+  \repeat segno 2 {
+    \repeat volta 2 {
+      g4 g g f e d8 c~c4 r
+      f e d c d2. r4
+      g g g f e d8 c~4 r
+      a a c d c2. r4 \volta 2 \fine
+    }
+  \volta 1
+  g' g a b c b8 a~4 r
+  a a g d e2. r4 g g a b c b8 a~4 r
+  a a g a g2. r4
   }
 }
 
 scoreAAlto = \relative c' {
   \global
   % Music follows here.
-  \repeat volta 2 {
-    \partial 4
-    a4
-    c c c f, f
-    a c c a c2
-    f,4 f f g a a
-    c c c d c c
-    f a, bf g a2
+  \repeat segno 2 {
+    \repeat volta 2 {
+      e2 e c g4 r4
+      c2 a b2. r4
+      e2 e c g f b g2. r4 \volta 2 \fine
+    }
+    \volta 1
+    e'2 g a f4 r
+    f2 b, c2. r4
+    e2 g a f4 r
+    f2 d e2. r4
   }
 }
 
-scoreATenor = \relative c {
+scoreATenor = \relative c' {
   \global
   % Music follows here.
-  \repeat volta 2 {
-    \partial 4
-    c4
-    f f e bf
-    a c f f c e2
-    c4 d d c c c
-    e f f g e e
-    a c d c c2
+  \repeat segno 2 {
+    \repeat volta 2 {
+      c2 c g e4 r4
+      a2 f g2. r4
+      c2 c g e c g' e2. r4 \volta 2 \fine
+    }
+    \volta 1
+    c'2  d f c4 r4
+    c2 g g2. r4
+    c2 d f c4 r4
+    c2 b c2. r4
   } 
 }
 
-scoreABass = \relative c, {
+scoreABass = \relative c {
   \global
   % Music follows here.
-  \repeat volta 2 {
-    \partial 4
-    f4
-    f f c bf f'\breathe
-    f f f f c2\breathe
-    f4 bf, bf c f f
-    c f f g c, c8~\breathe c
-    f4 f bf, c
-    f2
+  \repeat segno 2 {
+    \repeat volta 2 {
+      c2 c c c4 r4
+      f2 f
+      g1
+      c,2 c c c
+      f g c,2. r4 \volta 2 \fine
+    }
+    \volta 1
+    c2 g' f f4 r4
+    f2 g 
+    c,2. r4
+    c2 g' f f
+    f g c,2. r4
   }
 }
 
-scoreAVerse = \lyricmode {
+scoreAVerseA = \lyricmode {
   % Lyrics follow here.
-  Mei -- ne Hoff -- nung und mei -- ne Freu -- de,
-  mei -- ne Stär -- ke, mein Licht.
-  Chris -- tus mei -- ne Zu -- _ ver -- sicht, auf dich ver -- trau ich und fürcht mich nicht,
-  auf dich ver -- trau ich und fürcht mich nicht.
+  Freun -- de, dass der Man -- del -- zweig
+  wie -- der blüht und treibt,
+  ist das nicht ein Fin -- ger -- zeig,
+  dass die Lie -- be bleibt?
+}
+
+scoreAVerseB = \lyricmode {
+  % Lyrics follow here.
+  Dass das Le -- ben nicht ver -- ging,
+  so viel Blut auch schreit,
+  ach -- tet die -- ses nicht ge -- ring,
+  in der trübs -- ten Zeit.
+}
+
+scoreAVerseC = \lyricmode {
+  % Lyrics follow here.
+  Tau -- sen -- de zer -- stampft der Krieg,
+  ei -- ne Welt ver -- geht.
+  doch des Le -- bens Blü -- ten -- sieg
+  leicht im Win -- de weht.
+}
+
+scoreAVerseD = \lyricmode {
+  % Lyrics follow here.
+  Freun -- de, dass der Man -- del -- zweig
+  sich in Blü -- ten wiegt,
+  blei -- be uns ein Fin -- ger -- zeig
+  wie das Le -- ben siegt?
 }
 
 scoreAChordNames = \chordmode {
   \global
   \germanChords
   % Chords follow here.
-  \repeat volta 2 {
-    \partial 4
-    f4
-    f f c bf\breathe
-    f f f f f c2\breathe
-    f4 bf bf c f f
-    c f f g c c
-    f f bf c
-    f2
+  \repeat segno 2 {
+    \repeat volta 2 {
+      c2 c c c4 s4
+      f2 f
+      g2. s4
+      c2 c c c
+      f g c2. s4 \volta 2 \fine
+    }
+    \volta 1
+    c2 g f f4 s4
+    f2 g 
+    c2. s4
+    c2 g f f
+    f g c2. s4
   }
 }
 
@@ -125,7 +167,7 @@ scoreAChoirPart = \new ChoirStaff <<
   >>
   \new Lyrics \with {
     \override VerticalAxisGroup #'staff-affinity = #CENTER
-  } \lyricsto "soprano" \scoreAVerse
+  } \lyricsto "soprano" {<<\scoreAVerseA \new Lyrics {\set associatedVoice = "soprano" \scoreAVerseB} \new Lyrics {\set associatedVoice = "soprano" \scoreAVerseD}>> \scoreAVerseC}
   \new Staff \with {
     midiInstrument = "choir aahs"
     instrumentName = \markup \center-column { "Tenor" "Bass" }
@@ -171,36 +213,53 @@ scoreABassFiguresPart = \new FiguredBass \with {
 scoreBSoprano = \relative c'' {
   \global
   % Music follows here.
+
 }
 
 scoreBAlto = \relative c' {
   \global
   % Music follows here.
+
 }
 
 scoreBTenor = \relative c' {
   \global
   % Music follows here.
+
 }
 
 scoreBBass = \relative c {
   \global
   % Music follows here.
+
 }
 
-scoreBVerse = \lyricmode {
+scoreBVerseA = \lyricmode {
   % Lyrics follow here.
+
+}
+
+scoreBVerseB = \lyricmode {
+  % Lyrics follow here.
+
+}
+
+scoreBVerseC = \lyricmode {
+  % Lyrics follow here.
+
 }
 
 scoreBChordNames = \chordmode {
   \global
   \germanChords
   % Chords follow here.
+
 }
 
 scoreBFigBass = \figuremode {
   \global
   % Figures follow here.
+
 }
 
 scoreBChoirPart = \new ChoirStaff <<
@@ -218,7 +277,7 @@ scoreBChoirPart = \new ChoirStaff <<
   >>
   \new Lyrics \with {
     \override VerticalAxisGroup #'staff-affinity = #CENTER
-  } \lyricsto "soprano" \scoreBVerse
+  } \lyricsto "soprano" {<<\scoreBVerseA \new Lyrics {\set associatedVoice = "soprano" \scoreBVerseB}>> \scoreBVerseC}
   \new Staff \with {
     midiInstrument = "choir aahs"
     instrumentName = \markup \center-column { "Tenor" "Bass" }
@@ -264,36 +323,53 @@ scoreBBassFiguresPart = \new FiguredBass \with {
 scoreCSoprano = \relative c'' {
   \global
   % Music follows here.
+
 }
 
 scoreCAlto = \relative c' {
   \global
   % Music follows here.
+
 }
 
 scoreCTenor = \relative c' {
   \global
   % Music follows here.
+
 }
 
 scoreCBass = \relative c {
   \global
   % Music follows here.
+
 }
 
-scoreCVerse = \lyricmode {
+scoreCVerseA = \lyricmode {
   % Lyrics follow here.
+
+}
+
+scoreCVerseB = \lyricmode {
+  % Lyrics follow here.
+
+}
+
+scoreCVerseC = \lyricmode {
+  % Lyrics follow here.
+
 }
 
 scoreCChordNames = \chordmode {
   \global
   \germanChords
   % Chords follow here.
+
 }
 
 scoreCFigBass = \figuremode {
   \global
   % Figures follow here.
+
 }
 
 scoreCChoirPart = \new ChoirStaff <<
@@ -311,7 +387,7 @@ scoreCChoirPart = \new ChoirStaff <<
   >>
   \new Lyrics \with {
     \override VerticalAxisGroup #'staff-affinity = #CENTER
-  } \lyricsto "soprano" \scoreCVerse
+  } \lyricsto "soprano" {<<\scoreCVerseA \new Lyrics {\set associatedVoice = "soprano" \scoreCVerseB}>> \scoreCVerseC}
   \new Staff \with {
     midiInstrument = "choir aahs"
     instrumentName = \markup \center-column { "Tenor" "Bass" }
@@ -357,36 +433,53 @@ scoreCBassFiguresPart = \new FiguredBass \with {
 scoreDSoprano = \relative c'' {
   \global
   % Music follows here.
+
 }
 
 scoreDAlto = \relative c' {
   \global
   % Music follows here.
+
 }
 
 scoreDTenor = \relative c' {
   \global
   % Music follows here.
+
 }
 
 scoreDBass = \relative c {
   \global
   % Music follows here.
+
 }
 
-scoreDVerse = \lyricmode {
+scoreDVerseA = \lyricmode {
   % Lyrics follow here.
+
+}
+
+scoreDVerseB = \lyricmode {
+  % Lyrics follow here.
+
+}
+
+scoreDVerseC = \lyricmode {
+  % Lyrics follow here.
+
 }
 
 scoreDChordNames = \chordmode {
   \global
   \germanChords
   % Chords follow here.
+
 }
 
 scoreDFigBass = \figuremode {
   \global
   % Figures follow here.
+
 }
 
 scoreDChoirPart = \new ChoirStaff <<
@@ -404,7 +497,7 @@ scoreDChoirPart = \new ChoirStaff <<
   >>
   \new Lyrics \with {
     \override VerticalAxisGroup #'staff-affinity = #CENTER
-  } \lyricsto "soprano" \scoreDVerse
+  } \lyricsto "soprano" {<<\scoreDVerseA \new Lyrics {\set associatedVoice = "soprano" \scoreDVerseB}>> \scoreDVerseC}
   \new Staff \with {
     midiInstrument = "choir aahs"
     instrumentName = \markup \center-column { "Tenor" "Bass" }
