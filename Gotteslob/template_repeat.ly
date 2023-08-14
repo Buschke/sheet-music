@@ -3,7 +3,7 @@
 
 \include "predefined-guitar-fretboards.ly"
 \header {
-  dedication = "Meinem Lehrer Andreas Lang gewidment, für die Begleitung hin zum C-Schein"
+  dedication = "A. L., für die Begleitung hin zum C-Schein"
   title = ""
   subsubtitle = "Gotteslob Nr. "
   instrument = "Orgel"
