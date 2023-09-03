@@ -20,14 +20,19 @@
 
 global = {
   \key c \major
-  \time 4/4
+  \time 6/4
   \tempo "Andante" 4=50
 }
 
 scoreASoprano = \relative c'' {
   \global
   % Music follows here.
-  c
+  \partial 2.
+  e,4 e g
+  f2 d4 e2 c4 d2 d4 g g g c2 b4 a2 a4 g2.\breathe
+  g4 a b c2 g4 a2 g8 f e2 d4 e e f g2 e4 d2 d4 c2.\breathe
+  c'4 c c b2 b4 a2 a4 g2. e4 f g a4.(g8 f e d2) d4 c2.
+  \bar "|."
 }
 
 scoreAAlto = \relative c' {
@@ -47,6 +52,12 @@ scoreABass = \relative c {
 
 scoreAVerse = \lyricmode {
   % Lyrics follow here.
+  Ich will dich lie -- ben, mei -- ne Stär -- ke,
+  ich will dich lie -- ben, mei -- ne Zier,
+  ich will dich lie -- ben mit dem _  Wer -- ke
+  und im -- mer -- wäh -- ren -- der Be -- gier;
+  ich will dich lie -- ben, schöns -- tes Licht,
+  bis mir das Her -- ze bricht.
 }
 
 scoreAChordNames = \chordmode {
@@ -140,6 +151,12 @@ scoreBBass = \relative c {
 
 scoreBVerse = \lyricmode {
   % Lyrics follow here.
+    Ich will dich lie -- ben, o mein Le -- ben,
+  als mei -- nen al -- ler -- bes -- ten Freund;
+  ich will dich lie -- ben und er -- he -- ben,
+  so -- lan -- ge mich dein Glanz be -- scheint;
+  ich will dich lie -- ben, Got -- tes Lamm,
+  als mei -- nen Bräu -- ti -- gam.
 }
 
 scoreBChordNames = \chordmode {
@@ -233,6 +250,12 @@ scoreCBass = \relative c {
 
 scoreCVerse = \lyricmode {
   % Lyrics follow here.
+    Ach, dass ich dich so spät er -- kann -- te,
+  du hoch -- ge -- lob -- te Schön -- heit du,
+  dass ich nicht eher mein dich nann -- te,
+  du höchs -- tes Gut und wah -- re Ruh;
+  es ist mir leid, ich bin be -- trübt,
+  dass ich so spät ge -- liebt.
 }
 
 scoreCChordNames = \chordmode {
@@ -326,6 +349,12 @@ scoreDBass = \relative c {
 
 scoreDVerse = \lyricmode {
   % Lyrics follow here.
+  Ich lief ver -- irrt und war ver -- blen -- det,
+  ich such -- te dich und fand dich nicht;
+  ich hat -- te mich von dir ge -- wen -- det
+  und lieb -- te das ge -- schaff -- ne Licht.
+  Nun aber ist’s durch dich ge -- schehn,
+  dass ich dich hab er -- sehn.
 }
 
 scoreDChordNames = \chordmode {
