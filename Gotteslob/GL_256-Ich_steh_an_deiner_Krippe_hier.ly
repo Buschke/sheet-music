@@ -106,12 +106,12 @@ scoreAChordNames = \chordmode {
   \repeat volta 2 {
     \partial 4
     a4:min
-    a:min e:min a:min a:min e4.:min d8:min a4:min\breathe
+    a:min e:min a:min a:min e4.:min f8:min a4:min\breathe
     e:min a4.:min e8:min a4:min d:min a2:min a4:min
   }
-  e:min a:min e:min a:min e:min d4.:min e8:min a4:min\breathe
-  e:min a:min e:min a:min e:min d4.:min e8:min a4:min\breathe
-  a:min ds e a8:min a:min e a:min e2 a4:min
+  e:min a:min e:min a:min e:min f4. e8:min a4:min\breathe
+  e:min a:min e:min a:min e:min f4. e8:min a4:min\breathe
+  a:min ds g:dimx a8:min a:min e a:min e2 a4:min
 }
 
 scoreAFigBass = \figuremode {
@@ -399,13 +399,15 @@ scoreCChordNames = \chordmode {
   \global
   \germanChords
   % Chords follow here.
-
+  e:min a:min gs:dim a:min f g4.d8:min c4 g c4. gs8:dim a4:min gs:dim a2:min a4:min
+  g c g f:
 }
 
 scoreCFigBass = \figuremode {
   \global
   % Figures follow here.
-
+  <5 3>4 <5 3>4 <6> <6> <6> <5 3>4. <6>8 <6>4 <5 3>4 <5 3>4. <6>8 <6>4 <6>4 <6>2 <6>4
+  <5 3>4 <5 3>
 }
 
 scoreCChoirPart = \new ChoirStaff <<
