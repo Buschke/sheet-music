@@ -30,12 +30,22 @@
 }
 
 global = {
-  \key c \major
-  \time 4/4
+ %  \key c \major
+ %  \time 4/4
   \tempo "Andante" 4=100
 }
 
+% -----------------------------------------------
+% -----------------------------------------------
+% -----------------------------------------------
+% begin
+% -----------------------------------------------
+% -----------------------------------------------
+% -----------------------------------------------
+
 scoreASopranoCMajor = \relative c'' {
+  \global
+  \key c \major
   \time 3/4
   % Music follows here.
   g^\markup{\column{\line{C: QP\super{5}\sub{EL}}\line{I-V-I}}} g g
@@ -63,6 +73,7 @@ scoreASopranoCMajor = \relative c'' {
   e8^\markup{\column{\line{QP\super{3}\sub{WL}}\line{I-VII-I}}}[d e] e[f e]
   \bar "|.|"\break
   \time 4/4
+    % KD I IV V I
   g,4^\markup{\column{\line{KD\super{5}\sub{EL}}\line{I-IV-V-I}}} a g g
   \bar "||"
   c^\markup{\column{\line{KD\super{8}\sub{EL}}\line{I-IV-V-I}}} c b c
@@ -75,6 +86,33 @@ scoreASopranoCMajor = \relative c'' {
   \bar "||"
   e^\markup{\column{\line{KD\super{3}\sub{WL}}\line{I-IV-V-I}}} f d e
   \bar "|.|"
+      % KD I IV VII I
+  g,4^\markup{\column{\line{KD\super{5}\sub{EL}}\line{I-IV-VII-I}}} a f g
+  \bar "||"
+  c^\markup{\column{\line{KD\super{8}\sub{EL}}\line{I-IV-VII-I}}} c b c
+  \bar "||"
+  e,^\markup{\column{\line{KD\super{3}\sub{EL}}\line{I-IV-VII-I}}} f d e
+  \bar "||"
+  g^\markup{\column{\line{KD\super{5}\sub{WL}}\line{I-IV-VII-I}}} a f g
+  \bar "||"
+  c4^\markup{\column{\line{KD\super{8}\sub{WL}}\line{I-IV-VII-I}}} c b c
+  \bar "||"
+  e^\markup{\column{\line{KD\super{3}\sub{WL}}\line{I-IV-VII-I}}} f d e
+  \bar "|.|"
+% KD I II65 V I
+  g,4^\markup{\column{\line{KD\super{5}\sub{EL}}\line{I-II\super{6/5}-V-I}}} a g g
+  \bar "||"
+  c^\markup{\column{\line{KD\super{8}\sub{EL}}\line{I-II\super{6/5}-V-I}}} c b c
+  \bar "||"
+  e,^\markup{\column{\line{KD\super{3}\sub{EL}}\line{I-II\super{6/5}-V-I}}} d d e
+  \bar "||"
+  g^\markup{\column{\line{KD\super{5}\sub{WL}}\line{I-II\super{6/5}-V-I}}} a g g
+  \bar "||"
+  c4^\markup{\column{\line{KD\super{8}\sub{WL}}\line{I-II\super{6/5}-V-I}}} c b c
+  \bar "||"
+  e^\markup{\column{\line{KD\super{3}\sub{WL}}\line{I-II\super{6/5}-V-I}}} d d e
+  \bar "|.|"
+  % QFS
   g,^\markup{\column{\line{QFS\super{5}\sub{EL}}\line{I-IV-VII-III-VI-II-V-I}}} a f g e f d e
   \bar "||"
   c'^\markup{\column{\line{QFS\super{8}\sub{EL}}\line{I-IV-VII-III-VI-II-V-I}}} c b b a a g g
@@ -89,62 +127,9 @@ scoreASopranoCMajor = \relative c'' {
   \bar "|."
 }
 
-scoreASopranoGMajor = \relative c'' {
-  \key g \major
-    \time 3/4
-  % Music follows here.
-  d,^\markup{\column{\line{G: QP\super{5}\sub{EL}}\line{I-V-I}}} d d
-  d^\markup{\column{\line{QP\super{5}\sub{EL}}\line{I-IV-I}}} e d
-  d^\markup{\column{\line{QP\super{5}\sub{EL}}\line{I-VII-I}}} c d
-  \bar "||"
-  g^\markup{\column{\line{QP\super{8}\sub{EL}}\line{I-V-I}}} fs g
-  g^\markup{\column{\line{QP\super{8}\sub{EL}}\line{I-IV-I}}} g g
-  g^\markup{\column{\line{QP\super{8}\sub{EL}}\line{I-VII-I}}} fs g
-  \bar "||"
-  b^\markup{\column{\line{QP\super{3}\sub{EL}}\line{I-V-I}}} a b
-  b^\markup{\column{\line{QP\super{3}\sub{EL}}\line{I-IV-I}}} c b
-  b8^\markup{\column{\line{QP\super{3}\sub{EL}}\line{I-VII-I}}}[a b] b c b
-  \bar "||"
-  d4^\markup{\column{\line{QP\super{5}\sub{WL}}\line{I-V-I}}} d d
-  d^\markup{\column{\line{QP\super{5}\sub{WL}}\line{I-IV-I}}} e d
-  d^\markup{\column{\line{QP\super{5}\sub{WL}}\line{I-VII-I}}} r r
-  \bar "||"
-  g^\markup{\column{\line{QP\super{8}\sub{WL}}\line{I-V-I}}} fs g
-  g^\markup{\column{\line{QP\super{8}\sub{WL}}\line{I-IV-I}}} g g
-  g^\markup{\column{\line{QP\super{8}\sub{WL}}\line{I-VII-I}}} fs g
-  \bar "||"
-  b,^\markup{\column{\line{QP\super{3}\sub{WL}}\line{I-V-I}}} a b
-  b^\markup{\column{\line{QP\super{3}\sub{WL}}\line{I-IV-I}}} c b
-  b8^\markup{\column{\line{QP\super{3}\sub{WL}}\line{I-VII-I}}}[a b] b[c b]
-  \bar "|.|"\break
-  \time 4/4
-  d4^\markup{\column{\line{KD\super{5}\sub{EL}}\line{I-IV-V-I}}} e d d
-  \bar "||"
-  g^\markup{\column{\line{KD\super{8}\sub{EL}}\line{I-IV-V-I}}} g fs g
-  \bar "||"
-  b,^\markup{\column{\line{KD\super{3}\sub{EL}}\line{I-IV-V-I}}} c a b
-  \bar "||"
-  d^\markup{\column{\line{KD\super{5}\sub{WL}}\line{I-IV-V-I}}} e d d
-  \bar "||"
-  g,4^\markup{\column{\line{KD\super{8}\sub{WL}}\line{I-IV-V-I}}} g fs g
-  \bar "||"
-  b^\markup{\column{\line{KD\super{3}\sub{WL}}\line{I-IV-V-I}}} c a b
-  \bar "|.|"
-  d^\markup{\column{\line{QFS\super{5}\sub{EL}}\line{I-IV-VII-III-VI-II-V-I}}} e c d b c a b
-  \bar "||"
-  g^\markup{\column{\line{QFS\super{8}\sub{EL}}\line{I-IV-VII-III-VI-II-V-I}}} g fs fs e e d d
-  \bar "||"
-  b'^\markup{\column{\line{QFS\super{3}\sub{EL}}\line{I-IV-VII-III-VI-II-V-I}}} c a b g a fs g
-  \bar "||"
-  d'^\markup{\column{\line{QFS\super{5}\sub{WL}}\line{I-IV-VII-III-VI-II-V-I}}} e c d b c a b
-  \bar "||"
-  g^\markup{\column{\line{QFS\super{8}\sub{WL}}\line{I-IV-VII-III-VI-II-V-I}}} g fs fs e e d d
-  \bar "||"
-  b'^\markup{\column{\line{QFS\super{3}\sub{WL}}\line{I-IV-VII-III-VI-II-V-I}}} c a b g a fs g
-  \bar "|."
-}
-
 scoreAAltoCMajor = \relative c' {
+  \global
+  \key c \major
   \time 3/4
   % Music follows here.
   % QP^5_EL
@@ -172,6 +157,7 @@ scoreAAltoCMajor = \relative c' {
   g a g
   g8[f g] g[f g]
   \time 4/4
+  % KD
   % KD^5_WE-I-IV-V-I
   e4 f d e
   % KD^8_EL-I-IV-V-I
@@ -184,6 +170,31 @@ scoreAAltoCMajor = \relative c' {
   e f d e
   % KD^3_WL-I-IV-V-I
   g a g g
+    % KD^5_WE-I-IV-V-I
+  e4 f d e
+  % KD^8_EL-I-IV-V-I
+  g a f g
+  % KD^3_EL-I-IV-V-I
+  c, c b c
+  % KD^5_WL-I-IV-V-I
+  c c b c
+  % KD^8_WL-I-IV-V-I
+  e f d e
+  % KD^3_WL-I-IV-V-I
+  g a f g
+    % KD^5_WE-I-IV-V-I
+  e4 d d e
+  % KD^8_EL-I-IV-V-I
+  g a g g
+  % KD^3_EL-I-IV-V-I
+  c, c b c
+  % KD^5_WL-I-IV-V-I
+  c c b c
+  % KD^8_WL-I-IV-V-I
+  e d d e
+  % KD^3_WL-I-IV-V-I
+  g a g g
+  % QFS
   % QFS^5_EL-I-IV-VII-III-VI-II-V-I
   e f d e c d b c
   % QFS^8_EL-I-IV-VII-III-VI-II-V-I
@@ -199,64 +210,9 @@ scoreAAltoCMajor = \relative c' {
   \bar "|."
 }
 
-scoreAAltoGMajor = \relative c' {
-  \key g \major
-  \time 3/4
-  % Music follows here.
-  % QP^5_EL
-  b a b
-  b c b
-  b a b
-  % QP^8_EL
-  d d d
-  d e d
-  d c d
-  % QP^3_EL
-  g fs g
-  g g g
-  g8[fs g]g[fs g]
-  % QP^5_WL
-  g4 fs g
-  g g g
-  g r r
-  % QP^8_WL
-  b a b
-  b c b
-  b a b
-  % QP^3_WL
-  d, d d
-  d e d
-  d8[c d] d[c d]
-  \time 4/4
-  % KD^5_WE-I-IV-V-I
-  b'4 c a b
-  % KD^8_EL-I-IV-V-I
-  d e d d
-  % KD^3_EL-I-IV-V-I
-  g, g fs g
-  % KD^5_WL-I-IV-V-I
-  g g fs g
-  % KD^8_WL-I-IV-V-I
-  b, c a b
-  % KD^3_WL-I-IV-V-I
-  d e d d
-  % QFS^5_EL-I-IV-VII-III-VI-II-V-I
-  b' c a b g a fs g
-  % QFS^8_EL-I-IV-VII-III-VI-II-V-I
-  d e c d b c a b
-  % QFS^3_EL-I-IV-VII-III-VI-II-V-I
-  g' g fs fs e e d d
-  % QFS^5_WL-I-IV-VII-III-VI-II-V-I
-  g g fs fs e e d d
-  % QFS^8_WL-I-IV-VII-III-VI-II-V-I
-  b c a b g a fs g
-  % QFS^3_WL-I-IV-VII-III-VI-II-V-I
-  d' e c d b c a b
-  \bar "|."
-}
-
-
 scoreATenorCMajor = \relative c' {
+  \global
+  \key c \major
   \time 3/4
   % Music follows here.
   % QP^5_EL
@@ -284,6 +240,7 @@ scoreATenorCMajor = \relative c' {
   c c c
   c8[b c]c[b c]
   \time 4/4
+  % KD
   % KD^5_EL-I-IV-V-I
   c4 c b c
   % KD^8_EL-I-IV-V-I
@@ -291,11 +248,36 @@ scoreATenorCMajor = \relative c' {
   % KD^3_EL-I-IV-V-I
   g, a g g
   % KD^5_WL-I-IV-V-I
-  g a g g
+  e f d e
   % KD^8_WL-I-IV-V-I
   g a g g
   % KD^3_WL-I-IV-V-I
   c c b c
+    % KD^5_EL-I-IV-V-I
+  c4 c b c
+  % KD^8_EL-I-IV-V-I
+  e f d e
+  % KD^3_EL-I-IV-V-I
+  g, a f g
+  % KD^5_WL-I-IV-V-I
+  e f g e
+  % KD^8_WL-I-IV-V-I
+  g a f g
+  % KD^3_WL-I-IV-V-I
+  c c b c
+    % KD^5_EL-I-IV-V-I
+  c4 c b c
+  % KD^8_EL-I-IV-V-I
+  e d d e
+  % KD^3_EL-I-IV-V-I
+  g, a g g
+  % KD^5_WL-I-IV-V-I
+  e d d e
+  % KD^8_WL-I-IV-V-I
+  g a g g
+  % KD^3_WL-I-IV-V-I
+  c c b c
+  % QFS
   % QFS^5_EL-I-IV-VII-III-VI-II-V-I
   c c b b a a g g
   % QFS^8_EL-I-IV-VII-III-VI-II-V-I
@@ -311,64 +293,9 @@ scoreATenorCMajor = \relative c' {
   \bar "|."
 }
 
-scoreATenorGMajor = \relative c' {
-  \key g \major
-  \time 3/4
-  % Music follows here.
-  % QP^5_EL
-  g fs g
-  g g g
-  g fs g
-  % QP^8_EL
-  b a b
-  b c b
-  b a b
-  % QP^3_EL
-  d d d
-  d e d
-  d8[c d]d[c d]
-  % QP^5_WL
-  b4 a b
-  b c b
-  b r r
-  % QP^8_WL
-  d d d
-  d e d
-  d c d
-  % QP^3_WL
-  g, fs g
-  g g g
-  g8[fs g]g[fs g]
-  \time 4/4
-  % KD^5_EL-I-IV-V-I
-  g4 g fs g
-  % KD^8_EL-I-IV-V-I
-  b c a b
-  % KD^3_EL-I-IV-V-I
-  d, e d d
-  % KD^5_WL-I-IV-V-I
-  d e d d
-  % KD^8_WL-I-IV-V-I
-  d e d d
-  % KD^3_WL-I-IV-V-I
-  g g fs g
-  % QFS^5_EL-I-IV-VII-III-VI-II-V-I
-  g' g fs fs e e d d
-  % QFS^8_EL-I-IV-VII-III-VI-II-V-I
-  b c a b g a fs g
-  % QFS^3_EL-I-IV-VII-III-VI-II-V-I
-  d' e c d b c a b
-  % QFS^5_WL-I-IV-VII-III-VI-II-V-I
-  b c a b g a fs g
-  % QFS^8_WL-I-IV-VII-III-VI-II-V-I
-  d e c d b c a b
-  % QFS^3_WL-I-IV-VII-III-VI-II-V-I
-  g' g fs fs e e d d
-  \bar "|."
-}
-
 scoreABassCMajor = \relative c {
   \global
+  \key c \major
   \time 3/4
   % Music follows here.
   % QP^5_EL
@@ -396,18 +323,44 @@ scoreABassCMajor = \relative c {
   c f c
   c8[d c]c[d c]
   \time 4/4
+  % KD
   % KD^5_EL-I-IV-V-I
-  c4 f g c,|
+  c4 f, g c|
   % KD^8_EL-I-IV-V-I
-  c f g c,|
+  c f, g c|
   % KD^3_EL-I-IV-V-I
-  c f g, c|
+  c f, g c|
   % KD^5_WL-I-IV-V-I
-  c f g, c|
+  c f, g c|
   % KD^8_WL-I-IV-V-I
-  c f g, c|
+  c f, g c|
   % KD^3_WL-I-IV-V-I
-  c f g c,|
+  c f, g c|
+  % KD^5_EL-I-IV-V-I
+  c4 f, d' c|
+  % KD^8_EL-I-IV-V-I
+  c f, d' c|
+  % KD^3_EL-I-IV-V-I
+  c f, d' c|
+  % KD^5_WL-I-IV-V-I
+  c f, d' c|
+  % KD^8_WL-I-IV-V-I
+  c f, d' c|
+  % KD^3_WL-I-IV-V-I
+  c f, d' c|
+  % KD^5_EL-I-IV-V-I
+  c4 f, g c|
+  % KD^8_EL-I-IV-V-I
+  c f, g c|
+  % KD^3_EL-I-IV-V-I
+  c f, g c|
+  % KD^5_WL-I-IV-V-I
+  c f, g c|
+  % KD^8_WL-I-IV-V-I
+  c f, g c|
+  % KD^3_WL-I-IV-V-I
+  c f, g c|
+  % QFS
   % QFS^5_EL-I-IV-VII-III-VI-II-V-I
   c f b, e a, d g, c
   % QFS^8_EL-I-IV-VII-III-VI-II-V-I
@@ -423,61 +376,13 @@ scoreABassCMajor = \relative c {
   \bar "|."
 }
 
-scoreABassGMajor = \relative c {
-  \key g \major
-  \time 3/4
-  % Music follows here.
-  % QP^5_EL
-  g d g
-  g c g
-  g a g
-  % QP^8_EL
-  g' d g
-  g c, g'
-  g a g
-  % QP^3_EL
-  g d g
-  g c g
-  g8[a g]g[a g]
-  % QP^5_WL
-  g4 d g
-  g c, g'
-  g r r
-  % QP^8_WL
-  g d g
-  g c g
-  g a g
-  % QP^3_WL
-  g, d g
-  g c g
-  g8[a g]g[a g]
-  \time 4/4
-  % KD^5_EL-I-IV-V-I
-  g4 c d g,|
-  % KD^8_EL-I-IV-V-I
-  g c d g,|
-  % KD^3_EL-I-IV-V-I
-  g c d, g|
-  % KD^5_WL-I-IV-V-I
-  g c d, g|
-  % KD^8_WL-I-IV-V-I
-  g c d, g|
-  % KD^3_WL-I-IV-V-I
-  g c d g,|
-  % QFS^5_EL-I-IV-VII-III-VI-II-V-I
-  g' c fs, b e, a d, g
-  % QFS^8_EL-I-IV-VII-III-VI-II-V-I
-  g, c fs, b e, a d, g
-  % QFS^3_EL-I-IV-VII-III-VI-II-V-I
-  g c fs, b e, a d, g
-  % QFS^5_WL-I-IV-VII-III-VI-II-V-I
-  g c fs, b e, a d, g
-  % QFS^8_WL-I-IV-VII-III-VI-II-V-I
-  g c fs, b e, a d, g
-  % QFS^3_WL-I-IV-VII-III-VI-II-V-I
-  g c fs, b e, a d, g
-  \bar "|."
-}
+% -----------------------------------------------
+% -----------------------------------------------
+% -----------------------------------------------
+% end
+% -----------------------------------------------
+% -----------------------------------------------
+% -----------------------------------------------
 
 scoreAVerse = \lyricmode {
   % Lyrics follow here.
@@ -531,28 +436,28 @@ scoreASoprano = {
   \global
   \scoreASopranoCMajor
   \pageBreak
-  \scoreASopranoGMajor
+%   \scoreASopranoGMajor
 }
 
 scoreAAlto = {
   \global
   \scoreAAltoCMajor
   \pageBreak
-  \scoreAAltoGMajor
+%   \scoreAAltoGMajor
 }
 
 scoreATenor = {
   \global
   \scoreATenorCMajor
   \pageBreak
-  \scoreATenorGMajor
+%   \scoreATenorGMajor
 }
 
 scoreABass = {
   \global
   \scoreABassCMajor
   \pageBreak
-  \scoreABassGMajor
+%   \scoreABassGMajor
 }
 
 scoreAChoirPart = \new ChoirStaff <<
