@@ -357,9 +357,9 @@ scoreABassCMajor = \relative c {
   % KD^5_WL-I-IV-V-I
   c f,8 \parenthesize fs g4 c|
   % KD^8_WL-I-IV-V-I
-  c f, g c|
+  c f,8 \parenthesize fs g4 c|
   % KD^3_WL-I-IV-V-I
-  c f, g c|
+  c f,8 \parenthesize fs g4 c|
   % QFS
   % QFS^5_EL-I-IV-VII-III-VI-II-V-I
   c f b, e a, d g, c
