@@ -430,11 +430,11 @@ scoreDTenor = \relative c' {
 scoreDBass = \relative c {
   \global
   % Music follows here.
-  g2 g4 g e fs g e d2 r2
-  g2 a4 b a g a a g2 r
-  g c a b4 a g fs e2 d r
-  d' c4 b a d c2 b a r
-  c b4 a g a b c a2 g1
+  g2 g4 g c d g c g2 s
+  g d4 g d g d d g2 s
+  g c d g4 d g d c2 g s
+  g c4 g d g c2 g d s
+  c g4 d g d g c d2 g1
 }
 
 scoreDVerse = \lyricmode {
@@ -450,7 +450,7 @@ scoreDChordNames = \chordmode {
   \global
   \germanChords
   % Chords follow here.
-  g2 g4 g c d g c g2 s
+  \invertChords 1 d2 g2 g4 g c d g c g2 s
   g d4 g d g d d g2 s
   g c d g4 d g d c2 g s
   g c4 g d g c2 g d s
@@ -495,7 +495,7 @@ scoreDChoirPart = \new ChoirStaff <<
 
 scoreDChordsPart = <<
   \new ChordNames \scoreDChordNames
-%   \scoreDChordNames
+   \scoreDChordNames
 %   \new FretBoards \scoreDChordNames
 >>
 
