@@ -32,14 +32,14 @@
 global = {
   \key f \major
   \time 2/4
-  \tempo "Andante" 4=100
+  \tempo "Andante" 4=72
 }
 
 soprano = \relative c'' {
   \global
   % Music follows here.
   a8 a g g f4 r8 f bf4( a )g2 a8 a g g f2 d8 d \tuplet 3/2 { e( d) e } f2
-  \bar "||"
+%  \bar "||"
   \repeat volta 2 {
     f8\p a c c f,(g a) a d4(a) b(c)
     c8 d e e f4(d) d8 d c c a2
