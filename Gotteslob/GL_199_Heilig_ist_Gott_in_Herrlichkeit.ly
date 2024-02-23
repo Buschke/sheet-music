@@ -40,7 +40,7 @@ scoreAAlto = \relative c' {
   % Music follows here.
   b2 b4 b g a b g g2 r
   b d4 d d b d d b2 r
-  b e d d4 d b a g2 g r
+  b g' d d4 d b a a2 a r
   g' e4 d d g e2 d d r
   e d4 d b d d e d2 b1
 }
@@ -48,9 +48,9 @@ scoreAAlto = \relative c' {
 scoreATenor = \relative c' {
   \global
   % Music follows here.
-  d,2 d4 d c d d c b2 r
+  d,2 d4 d c c d c b2 r
   d fs4 g fs d fs fs d2 r
-  d g fs g4 fs d d c2 b r
+  d c' fs, g4 fs d d cs2 d r
   b' g4 g fs b g2 g fs r
   g g4 fs d fs g g fs2 d1
 }
@@ -58,9 +58,9 @@ scoreATenor = \relative c' {
 scoreABass = \relative c {
   \global
   % Music follows here.
-  g2 g4 g e fs g e d2 r2
+  g2 g4 g e a g e d2 r2
   g2 a4 b a g a a g2 r
-  g c a b4 a g fs e2 d r
+  g e a b4 a g fs a2 fs r
   d' c4 b a d c2 b a r
   c b4 a g a b c a2 g1
 }
@@ -78,9 +78,9 @@ scoreAChordNames = \chordmode {
   \global
   \germanChords
   % Chords follow here.
-  g2 g4 g c d g c g2 s
+  g2 g4 g c fs/a g c g2 s
   g d4 g d g d d g2 s
-  g c d g4 d g d c2 g s
+  g c/e d g4 d g d a2 d s
   g c4 g d g c2 g d s
   c g4 d g d g c d2 g1
 }
@@ -153,7 +153,7 @@ scoreBSoprano = \relative c'' {
   % Music follows here.
   b2 b4 b g a b g g2 r
   b d4 d d b d d b2 r
-  b e d d4 d b a g2 g r
+  b e d d4 d b a a2 g r
   g' e4 d d g e2 d d r
   e d4 d b d d e d2 b1
   \bar "|."
@@ -162,9 +162,9 @@ scoreBSoprano = \relative c'' {
 scoreBAlto = \relative c' {
   \global
   % Music follows here.
-  d2 d4 d c d d c b2 r
+  d2 d4 d c c d c b2 r
   d fs4 g fs d fs fs d2 r
-  d g fs g4 fs d d c2 b r
+  d g fs g4 fs d d cs2 d r
   b' g4 g fs b g2 g fs r
   g g4 fs d fs g g fs2 d1
 }
@@ -182,9 +182,9 @@ scoreBTenor = \relative c' {
 scoreBBass = \relative c {
   \global
   % Music follows here.
-  g2 g4 g e fs g e d2 r2
+  g2 g4 g e a g e d2 r2
   g2 a4 b a g a a g2 r
-  g c a b4 a g fs e2 d r
+  g e a b4 a g fs a2 d, r
   d' c4 b a d c2 b a r
   c b4 a g a b c a2 g1
 }
@@ -202,9 +202,9 @@ scoreBChordNames = \chordmode {
   \global
   \germanChords
   % Chords follow here.
-  g2 g4 g c d g c g2 s
+  g2 g4 g c fs/a g c g2 s
   g d4 g d g d d g2 s
-  g c d g4 d g d c2 g s
+  g c/e d g4 d g d a2 d s
   g c4 g d g c2 g d s
   c g4 d g d g c d2 g1
 }
