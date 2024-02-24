@@ -1,21 +1,21 @@
+\version "2.24.3"
+
+#(set-global-staff-size 23)
+
 \new VaticanaScore {
   <<
     \new VaticanaVoice = "cantus" {
-      \[ c'\melisma c' \flexa a \]
-      \[ a \flexa \deminutum g\melismaEnd \]
-      f \divisioMinima
-      \[ f\melisma \pes a c' c' \pes d'\melismaEnd \]
-      c' \divisioMinima \break
-      \[ c'\melisma c' \flexa a \]
-      \[ a \flexa \deminutum g\melismaEnd \] f \divisioMinima
+      \clef "vaticana-do3"
+      % Verse 1 â€” Salve, RegÃ­na
+      c\melisma \[d e f g\melismaEnd\]
     }
+
     \new VaticanaLyrics \lyricsto "cantus" {
-      San -- ctus, San -- ctus, San -- ctus
+      Sal -- ve, Re -- g
     }
   >>
 }
 
 \layout {
-  indent = 0
   ragged-last = ##t
 }
