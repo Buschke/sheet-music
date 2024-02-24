@@ -9,8 +9,8 @@
   instrument = "CF, Chor und BC"
   composer = "Johann Sebastian Bach"
   arranger = ""
-  poet = "arrangiert: Prof. Dr. Sven Buschke"
-  meter = ""
+  poet = ""
+  meter = "arrangiert: Prof. Dr. iur. Dr. med. Dr. rer.nat. Sven Buschke"
   piece = ""
   opus = "BWV 245"
   copyright = ""
@@ -28,35 +28,46 @@ global = {
   \tempo "Andante" 4=50
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Nr. 17 (6. Choral, p. 63) Ach großer König, groß zu allen Zeiten, **A-Moll
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+globalA = {
+  \key c \major
+  %   \numericTimeSignature
+  \time 4/4
+  \tempo "Andante" 4=50
+}
+
 scoreAChordNames = \chordmode {
   \global
   \germanChords
   % Chords follow here.
-  
+
 }
 
 scoreAMelody = \relative c'' {
   \global
   % Music follows here.
-  
+
 }
 
 scoreAVerse = \lyricmode {
   % Lyrics follow here.
-  
+
 }
 
 scoreABcMusic = \relative c {
   \global
   % Music follows here.
-  
+
 }
 
 scoreABcFigures = \figuremode {
   \global
   \override Staff.BassFigureAlignmentPositioning #'direction = #DOWN
   % Figures follow here.
-  
+
 }
 
 scoreALeadSheetPart = <<
@@ -90,30 +101,30 @@ scoreABassoContinuoPart = <<
 scoreBSoprano = \relative c'' {
   \global
   % Music follows here.
-  
+
 }
 
 scoreBAlto = \relative c' {
   \global
   % Music follows here.
-  
+
 }
 
 scoreBTenor = \relative c' {
   \global
   % Music follows here.
-  
+
 }
 
 scoreBBass = \relative c {
   \global
   % Music follows here.
-  
+
 }
 
 scoreBVerse = \lyricmode {
   % Lyrics follow here.
-  
+
 }
 
 scoreBPianoReduction = \new PianoStaff \with {
@@ -169,21 +180,21 @@ scoreBRehearsalMidi = #
 scoreBBcMusic = \relative c {
   \global
   % Music follows here.
-  
+
 }
 
 scoreBBcFigures = \figuremode {
   \global
   \override Staff.BassFigureAlignmentPositioning #'direction = #DOWN
   % Figures follow here.
-  
+
 }
 
 scoreBChordNames = \chordmode {
   \global
   \germanChords
   % Chords follow here.
-  
+
 }
 
 scoreBChoirPart = <<
@@ -292,31 +303,31 @@ scoreCChordNames = \chordmode {
   \global
   \germanChords
   % Chords follow here.
-  
+
 }
 
 scoreCMelody = \relative c'' {
   \global
   % Music follows here.
-  
+
 }
 
 scoreCVerse = \lyricmode {
   % Lyrics follow here.
-  
+
 }
 
 scoreCBcMusic = \relative c {
   \global
   % Music follows here.
-  
+
 }
 
 scoreCBcFigures = \figuremode {
   \global
   \override Staff.BassFigureAlignmentPositioning #'direction = #DOWN
   % Figures follow here.
-  
+
 }
 
 scoreCLeadSheetPart = <<
@@ -350,30 +361,30 @@ scoreCBassoContinuoPart = <<
 scoreDSoprano = \relative c'' {
   \global
   % Music follows here.
-  
+
 }
 
 scoreDAlto = \relative c' {
   \global
   % Music follows here.
-  
+
 }
 
 scoreDTenor = \relative c' {
   \global
   % Music follows here.
-  
+
 }
 
 scoreDBass = \relative c {
   \global
   % Music follows here.
-  
+
 }
 
 scoreDVerse = \lyricmode {
   % Lyrics follow here.
-  
+
 }
 
 scoreDPianoReduction = \new PianoStaff \with {
@@ -429,21 +440,21 @@ scoreDRehearsalMidi = #
 scoreDBcMusic = \relative c {
   \global
   % Music follows here.
-  
+
 }
 
 scoreDBcFigures = \figuremode {
   \global
   \override Staff.BassFigureAlignmentPositioning #'direction = #DOWN
   % Figures follow here.
-  
+
 }
 
 scoreDChordNames = \chordmode {
   \global
   \germanChords
   % Chords follow here.
-  
+
 }
 
 scoreDChoirPart = <<
@@ -552,31 +563,31 @@ scoreEChordNames = \chordmode {
   \global
   \germanChords
   % Chords follow here.
-  
+
 }
 
 scoreEMelody = \relative c'' {
   \global
   % Music follows here.
-  
+
 }
 
 scoreEVerse = \lyricmode {
   % Lyrics follow here.
-  
+
 }
 
 scoreEBcMusic = \relative c {
   \global
   % Music follows here.
-  
+
 }
 
 scoreEBcFigures = \figuremode {
   \global
   \override Staff.BassFigureAlignmentPositioning #'direction = #DOWN
   % Figures follow here.
-  
+
 }
 
 scoreELeadSheetPart = <<
@@ -610,30 +621,30 @@ scoreEBassoContinuoPart = <<
 scoreFSoprano = \relative c'' {
   \global
   % Music follows here.
-  
+
 }
 
 scoreFAlto = \relative c' {
   \global
   % Music follows here.
-  
+
 }
 
 scoreFTenor = \relative c' {
   \global
   % Music follows here.
-  
+
 }
 
 scoreFBass = \relative c {
   \global
   % Music follows here.
-  
+
 }
 
 scoreFVerse = \lyricmode {
   % Lyrics follow here.
-  
+
 }
 
 scoreFPianoReduction = \new PianoStaff \with {
@@ -689,21 +700,21 @@ scoreFRehearsalMidi = #
 scoreFBcMusic = \relative c {
   \global
   % Music follows here.
-  
+
 }
 
 scoreFBcFigures = \figuremode {
   \global
   \override Staff.BassFigureAlignmentPositioning #'direction = #DOWN
   % Figures follow here.
-  
+
 }
 
 scoreFChordNames = \chordmode {
   \global
   \germanChords
   % Chords follow here.
-  
+
 }
 
 scoreFChoirPart = <<
@@ -812,31 +823,31 @@ scoreGChordNames = \chordmode {
   \global
   \germanChords
   % Chords follow here.
-  
+
 }
 
 scoreGMelody = \relative c'' {
   \global
   % Music follows here.
-  
+
 }
 
 scoreGVerse = \lyricmode {
   % Lyrics follow here.
-  
+
 }
 
 scoreGBcMusic = \relative c {
   \global
   % Music follows here.
-  
+
 }
 
 scoreGBcFigures = \figuremode {
   \global
   \override Staff.BassFigureAlignmentPositioning #'direction = #DOWN
   % Figures follow here.
-  
+
 }
 
 scoreGLeadSheetPart = <<
@@ -870,30 +881,30 @@ scoreGBassoContinuoPart = <<
 scoreHSoprano = \relative c'' {
   \global
   % Music follows here.
-  
+
 }
 
 scoreHAlto = \relative c' {
   \global
   % Music follows here.
-  
+
 }
 
 scoreHTenor = \relative c' {
   \global
   % Music follows here.
-  
+
 }
 
 scoreHBass = \relative c {
   \global
   % Music follows here.
-  
+
 }
 
 scoreHVerse = \lyricmode {
   % Lyrics follow here.
-  
+
 }
 
 scoreHPianoReduction = \new PianoStaff \with {
@@ -949,21 +960,21 @@ scoreHRehearsalMidi = #
 scoreHBcMusic = \relative c {
   \global
   % Music follows here.
-  
+
 }
 
 scoreHBcFigures = \figuremode {
   \global
   \override Staff.BassFigureAlignmentPositioning #'direction = #DOWN
   % Figures follow here.
-  
+
 }
 
 scoreHChordNames = \chordmode {
   \global
   \germanChords
   % Chords follow here.
-  
+
 }
 
 scoreHChoirPart = <<
@@ -1072,31 +1083,31 @@ scoreIChordNames = \chordmode {
   \global
   \germanChords
   % Chords follow here.
-  
+
 }
 
 scoreIMelody = \relative c'' {
   \global
   % Music follows here.
-  
+
 }
 
 scoreIVerse = \lyricmode {
   % Lyrics follow here.
-  
+
 }
 
 scoreIBcMusic = \relative c {
   \global
   % Music follows here.
-  
+
 }
 
 scoreIBcFigures = \figuremode {
   \global
   \override Staff.BassFigureAlignmentPositioning #'direction = #DOWN
   % Figures follow here.
-  
+
 }
 
 scoreILeadSheetPart = <<
@@ -1130,30 +1141,30 @@ scoreIBassoContinuoPart = <<
 scoreJSoprano = \relative c'' {
   \global
   % Music follows here.
-  
+
 }
 
 scoreJAlto = \relative c' {
   \global
   % Music follows here.
-  
+
 }
 
 scoreJTenor = \relative c' {
   \global
   % Music follows here.
-  
+
 }
 
 scoreJBass = \relative c {
   \global
   % Music follows here.
-  
+
 }
 
 scoreJVerse = \lyricmode {
   % Lyrics follow here.
-  
+
 }
 
 scoreJPianoReduction = \new PianoStaff \with {
@@ -1209,21 +1220,21 @@ scoreJRehearsalMidi = #
 scoreJBcMusic = \relative c {
   \global
   % Music follows here.
-  
+
 }
 
 scoreJBcFigures = \figuremode {
   \global
   \override Staff.BassFigureAlignmentPositioning #'direction = #DOWN
   % Figures follow here.
-  
+
 }
 
 scoreJChordNames = \chordmode {
   \global
   \germanChords
   % Chords follow here.
-  
+
 }
 
 scoreJChoirPart = <<
@@ -1327,36 +1338,80 @@ scoreJChordsPart = \new ChordNames \scoreJChordNames
   }
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Nr. 17 (6. Choral, p. 63) Ach großer König, groß zu allen Zeiten, **A-Moll
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+globalK = {
+  \key a \minor
+  %   \numericTimeSignature
+  \time 4/4
+  \tempo "Andante" 4=50
+}
 
 scoreKChordNames = \chordmode {
-  \global
+  \globalK
   \germanChords
   % Chords follow here.
-  
+
 }
 
 scoreKMelody = \relative c'' {
-  \global
+  \globalK
   % Music follows here.
-  
+  \repeat volta 2 {
+    \partial 4
+    a4
+    a a gs e a b c c d(c16(b c8)) b4\fermata
+    b c d8(e16 f) e4 c f f e8(d) c(d) d2 c4\fermata
+    c b a g8(fs) e(fs) g4 g  a g f2 e4\fermata
+    e' d c8(b) b2 a2.\fermata
+  }
 }
 
 scoreKVerse = \lyricmode {
   % Lyrics follow here.
-  
+  \set stanza = "1."
+  Ach, gro -- ßer Kö -- nig, groß zu al -- len Zei -- ten,
+  wie kann ich gnug -- sam die -- se Treu aus -- brei -- ten,
+  keins Men -- schen Her -- ze mag in -- des aus -- den -- ken,
+  was dir zu schen -- ken.
+}
+
+scoreKVerseTwo = \lyricmode {
+  % Lyrics follow here.
+  \set stanza = "2."
+  Ich kann's mit mei -- nen Sin -- nen nicht er -- rei -- chen,
+  wo -- mit doch dein Er -- bar -- men zu ver -- glei -- chen,
+  wie kann ich dir denn dei -- ne Lie -- bes -- ta -- ten
+  im Werk er -- stat -- ten?
 }
 
 scoreKBcMusic = \relative c {
-  \global
+  \globalK
   % Music follows here.
-  
+  \repeat volta 2 {
+    \partial 4
+    a'4
+    a,8(b) c(d) e(f) e(d) c(d) c(b) a(b) a(g) f(e) f(d) e4\fermata
+    e' a8(g) f(g) c,(d) e(f) d(e) f(g) a(b) a(g) f(e) f(g) c,4\fermata
+    a' ds,8(e) fs(d) e(fs) g(fs) e(f) e(d) cs(a) b(cs) d(e) f(g) a4\fermata
+    a8(g) fs(gs) a(f) d(b) e4 a,2.\fermata
+  }
 }
 
 scoreKBcFigures = \figuremode {
-  \global
+  \globalK
   \override Staff.BassFigureAlignmentPositioning #'direction = #DOWN
   % Figures follow here.
-  
+  \repeat volta 2 {
+    \partial 4
+    s4
+    s <6> <_+> s <6> <7 5/> s s <6> <5> <_+>\fermata
+    s s <6 4 2> s <6> s <6> s s <6 5> <6 4 2> s\fermata
+    s <6 5> <9>8 <7 5> s4 <6> s <6/ 5-> <6> <6 4> <9> <6> <_+>\fermata
+    <_!> <6 5>8 <6 5> s <6 4 3> <6 5>4 <8 _+>8 <7> <_+>2.\fermata
+  } 
 }
 
 scoreKLeadSheetPart = <<
@@ -1364,7 +1419,7 @@ scoreKLeadSheetPart = <<
   \new Staff \with {
     \consists "Ambitus_engraver"
   } { \scoreKMelody }
-  \addlyrics { \scoreKVerse }
+  \addlyrics { <<\scoreKVerse \new Lyrics {\scoreKVerseTwo}>> }
 >>
 
 scoreKBassoContinuoPart = <<
@@ -1377,6 +1432,11 @@ scoreKBassoContinuoPart = <<
 >>
 
 \bookpart {
+  \header {
+    title = "Ach großer König, groß zu allen Zeiten"
+    subsubtitle = "Choräle, Nr. 17 (6. Choral), a-Moll"
+    instrument = "C.F. (und B.C.)"
+  }
   \score {
     <<
       \scoreKLeadSheetPart
@@ -1387,33 +1447,58 @@ scoreKBassoContinuoPart = <<
   }
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Nr. 17 (6. Choral, p. 63) Ach großer König, groß zu allen Zeiten, **A-Moll
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+globalL = \globalK
+
 scoreLSoprano = \relative c'' {
-  \global
+  \globalL
   % Music follows here.
-  
+  \scoreKMelody
 }
 
 scoreLAlto = \relative c' {
-  \global
+  \globalL
   % Music follows here.
-  
+  \repeat volta 2 {
+    \partial 4
+    c8(d)
+    e4 e e b e8(fs) gs4 a a a2 gs4\fermata
+    gs a g g f a a a e a(g) g\fermata
+    a a8(g) g(fs) e4 e e8(d) cs(d) e4 e e(d) cs\fermata
+    a' a8(b) e,(d) f4(e8 d) cs2.
+  }
 }
 
 scoreLTenor = \relative c' {
-  \global
+  \globalL
   % Music follows here.
-  
+  \repeat volta 2 {
+    \partial 4
+    a8(b)
+    c4 c b gs a d e e f(a,) e'\fermata
+    e e b c a d d c c c(b) e\fermata
+    e fs8(e) c4 b b b bf a a a2 a4\fermata
+    c c8(b) a4 a(gs) e2.\fermata
+  }
 }
 
 scoreLBass = \relative c {
-  \global
+  \globalL
   % Music follows here.
-  
+  \scoreKBcMusic
 }
 
 scoreLVerse = \lyricmode {
   % Lyrics follow here.
-  
+  \scoreKVerse
+}
+
+scoreLVerseTwo = \lyricmode {
+  % Lyrics follow here.
+  \scoreKVerseTwo
 }
 
 scoreLPianoReduction = \new PianoStaff \with {
@@ -1469,21 +1554,21 @@ scoreLRehearsalMidi = #
 scoreLBcMusic = \relative c {
   \global
   % Music follows here.
-  
+  \scoreKBcMusic
 }
 
 scoreLBcFigures = \figuremode {
   \global
   \override Staff.BassFigureAlignmentPositioning #'direction = #DOWN
   % Figures follow here.
-  
+  \scoreKBcFigures
 }
 
 scoreLChordNames = \chordmode {
   \global
   \germanChords
   % Chords follow here.
-  
+
 }
 
 scoreLChoirPart = <<
@@ -1496,7 +1581,7 @@ scoreLChoirPart = <<
     } \new Voice = "soprano" \scoreLSoprano
     \new Lyrics \with {
       \override VerticalAxisGroup #'staff-affinity = #CENTER
-    } \lyricsto "soprano" \scoreLVerse
+    } \lyricsto "soprano" {<<\scoreLVerse \new Lyrics {\scoreLVerseTwo}>>}
     \new Staff \with {
       midiInstrument = "choir aahs"
       instrumentName = "Alt"
@@ -1505,7 +1590,7 @@ scoreLChoirPart = <<
     } \new Voice = "alto" \scoreLAlto
     \new Lyrics \with {
       \override VerticalAxisGroup #'staff-affinity = #CENTER
-    } \lyricsto "alto" \scoreLVerse
+    } \lyricsto "alto" {<<\scoreLVerse \new Lyrics {\scoreLVerseTwo}>>}
     \new Staff \with {
       midiInstrument = "choir aahs"
       instrumentName = "Tenor"
@@ -1517,7 +1602,7 @@ scoreLChoirPart = <<
     }
     \new Lyrics \with {
       \override VerticalAxisGroup #'staff-affinity = #CENTER
-    } \lyricsto "tenor" \scoreLVerse
+    } \lyricsto "tenor" {<<\scoreLVerse \new Lyrics {\scoreLVerseTwo}>>}
     \new Staff \with {
       midiInstrument = "choir aahs"
       instrumentName = "Bass"
@@ -1527,6 +1612,9 @@ scoreLChoirPart = <<
       \clef bass
       \new Voice = "bass" \scoreLBass
     }
+    \new Lyrics \with {
+      \override VerticalAxisGroup #'staff-affinity = #CENTER
+    } \lyricsto "bass" {<<\scoreLVerse \new Lyrics {\scoreLVerseTwo}>>}    
   >>
   \scoreLPianoReduction
 >>
@@ -1543,6 +1631,11 @@ scoreLBassoContinuoPart = <<
 scoreLChordsPart = \new ChordNames \scoreLChordNames
 
 \bookpart {
+    \header {
+    title = "Ach großer König, groß zu allen Zeiten"
+    subsubtitle = "Choräle, Nr. 17 (6. Choral), a-Moll"
+    instrument = "Chor und B.C."
+  }
   \score {
     <<
       \scoreLChoirPart
@@ -1592,31 +1685,31 @@ scoreMChordNames = \chordmode {
   \global
   \germanChords
   % Chords follow here.
-  
+
 }
 
 scoreMMelody = \relative c'' {
   \global
   % Music follows here.
-  
+
 }
 
 scoreMVerse = \lyricmode {
   % Lyrics follow here.
-  
+
 }
 
 scoreMBcMusic = \relative c {
   \global
   % Music follows here.
-  
+
 }
 
 scoreMBcFigures = \figuremode {
   \global
   \override Staff.BassFigureAlignmentPositioning #'direction = #DOWN
   % Figures follow here.
-  
+
 }
 
 scoreMLeadSheetPart = <<
@@ -1650,30 +1743,30 @@ scoreMBassoContinuoPart = <<
 scoreNSoprano = \relative c'' {
   \global
   % Music follows here.
-  
+
 }
 
 scoreNAlto = \relative c' {
   \global
   % Music follows here.
-  
+
 }
 
 scoreNTenor = \relative c' {
   \global
   % Music follows here.
-  
+
 }
 
 scoreNBass = \relative c {
   \global
   % Music follows here.
-  
+
 }
 
 scoreNVerse = \lyricmode {
   % Lyrics follow here.
-  
+
 }
 
 scoreNPianoReduction = \new PianoStaff \with {
@@ -1729,21 +1822,21 @@ scoreNRehearsalMidi = #
 scoreNBcMusic = \relative c {
   \global
   % Music follows here.
-  
+
 }
 
 scoreNBcFigures = \figuremode {
   \global
   \override Staff.BassFigureAlignmentPositioning #'direction = #DOWN
   % Figures follow here.
-  
+
 }
 
 scoreNChordNames = \chordmode {
   \global
   \germanChords
   % Chords follow here.
-  
+
 }
 
 scoreNChoirPart = <<
@@ -1852,31 +1945,31 @@ scoreOChordNames = \chordmode {
   \global
   \germanChords
   % Chords follow here.
-  
+
 }
 
 scoreOMelody = \relative c'' {
   \global
   % Music follows here.
-  
+
 }
 
 scoreOVerse = \lyricmode {
   % Lyrics follow here.
-  
+
 }
 
 scoreOBcMusic = \relative c {
   \global
   % Music follows here.
-  
+
 }
 
 scoreOBcFigures = \figuremode {
   \global
   \override Staff.BassFigureAlignmentPositioning #'direction = #DOWN
   % Figures follow here.
-  
+
 }
 
 scoreOLeadSheetPart = <<
@@ -1910,30 +2003,30 @@ scoreOBassoContinuoPart = <<
 scorePSoprano = \relative c'' {
   \global
   % Music follows here.
-  
+
 }
 
 scorePAlto = \relative c' {
   \global
   % Music follows here.
-  
+
 }
 
 scorePTenor = \relative c' {
   \global
   % Music follows here.
-  
+
 }
 
 scorePBass = \relative c {
   \global
   % Music follows here.
-  
+
 }
 
 scorePVerse = \lyricmode {
   % Lyrics follow here.
-  
+
 }
 
 scorePPianoReduction = \new PianoStaff \with {
@@ -1989,21 +2082,21 @@ scorePRehearsalMidi = #
 scorePBcMusic = \relative c {
   \global
   % Music follows here.
-  
+
 }
 
 scorePBcFigures = \figuremode {
   \global
   \override Staff.BassFigureAlignmentPositioning #'direction = #DOWN
   % Figures follow here.
-  
+
 }
 
 scorePChordNames = \chordmode {
   \global
   \germanChords
   % Chords follow here.
-  
+
 }
 
 scorePChoirPart = <<
@@ -2112,31 +2205,31 @@ scoreQChordNames = \chordmode {
   \global
   \germanChords
   % Chords follow here.
-  
+
 }
 
 scoreQMelody = \relative c'' {
   \global
   % Music follows here.
-  
+
 }
 
 scoreQVerse = \lyricmode {
   % Lyrics follow here.
-  
+
 }
 
 scoreQBcMusic = \relative c {
   \global
   % Music follows here.
-  
+
 }
 
 scoreQBcFigures = \figuremode {
   \global
   \override Staff.BassFigureAlignmentPositioning #'direction = #DOWN
   % Figures follow here.
-  
+
 }
 
 scoreQLeadSheetPart = <<
@@ -2170,30 +2263,30 @@ scoreQBassoContinuoPart = <<
 scoreRSoprano = \relative c'' {
   \global
   % Music follows here.
-  
+
 }
 
 scoreRAlto = \relative c' {
   \global
   % Music follows here.
-  
+
 }
 
 scoreRTenor = \relative c' {
   \global
   % Music follows here.
-  
+
 }
 
 scoreRBass = \relative c {
   \global
   % Music follows here.
-  
+
 }
 
 scoreRVerse = \lyricmode {
   % Lyrics follow here.
-  
+
 }
 
 scoreRPianoReduction = \new PianoStaff \with {
@@ -2249,21 +2342,21 @@ scoreRRehearsalMidi = #
 scoreRBcMusic = \relative c {
   \global
   % Music follows here.
-  
+
 }
 
 scoreRBcFigures = \figuremode {
   \global
   \override Staff.BassFigureAlignmentPositioning #'direction = #DOWN
   % Figures follow here.
-  
+
 }
 
 scoreRChordNames = \chordmode {
   \global
   \germanChords
   % Chords follow here.
-  
+
 }
 
 scoreRChoirPart = <<
@@ -2372,31 +2465,31 @@ scoreSChordNames = \chordmode {
   \global
   \germanChords
   % Chords follow here.
-  
+
 }
 
 scoreSMelody = \relative c'' {
   \global
   % Music follows here.
-  
+
 }
 
 scoreSVerse = \lyricmode {
   % Lyrics follow here.
-  
+
 }
 
 scoreSBcMusic = \relative c {
   \global
   % Music follows here.
-  
+
 }
 
 scoreSBcFigures = \figuremode {
   \global
   \override Staff.BassFigureAlignmentPositioning #'direction = #DOWN
   % Figures follow here.
-  
+
 }
 
 scoreSLeadSheetPart = <<
@@ -2430,30 +2523,30 @@ scoreSBassoContinuoPart = <<
 scoreTSoprano = \relative c'' {
   \global
   % Music follows here.
-  
+
 }
 
 scoreTAlto = \relative c' {
   \global
   % Music follows here.
-  
+
 }
 
 scoreTTenor = \relative c' {
   \global
   % Music follows here.
-  
+
 }
 
 scoreTBass = \relative c {
   \global
   % Music follows here.
-  
+
 }
 
 scoreTVerse = \lyricmode {
   % Lyrics follow here.
-  
+
 }
 
 scoreTPianoReduction = \new PianoStaff \with {
@@ -2509,21 +2602,21 @@ scoreTRehearsalMidi = #
 scoreTBcMusic = \relative c {
   \global
   % Music follows here.
-  
+
 }
 
 scoreTBcFigures = \figuremode {
   \global
   \override Staff.BassFigureAlignmentPositioning #'direction = #DOWN
   % Figures follow here.
-  
+
 }
 
 scoreTChordNames = \chordmode {
   \global
   \germanChords
   % Chords follow here.
-  
+
 }
 
 scoreTChoirPart = <<
@@ -2642,7 +2735,7 @@ scoreUChordNames = \chordmode {
   \global
   \germanChords
   % Chords follow here.
-  
+
 }
 
 scoreUMelody = \relative c'' {
@@ -2664,7 +2757,7 @@ scoreUMelody = \relative c'' {
   g' f ef d\fermata
   g af8(g) f4 g ef ef d ef\fermata
   ef ef ef f ef ef2. d4 ef2.\fermata
-  \bar "|."  
+  \bar "|."
 }
 
 scoreUVerse = \lyricmode {
@@ -2693,20 +2786,20 @@ scoreUVerseC = \lyricmode {
 
 % scoreUVerse = \lyricmode {
 %   % Lyrics follow here.
-%   
+%
 % }
 
 scoreUBcMusic = \relative c {
   \global
   % Music follows here.
-  
+
 }
 
 scoreUBcFigures = \figuremode {
   \global
   \override Staff.BassFigureAlignmentPositioning #'direction = #DOWN
   % Figures follow here.
-  
+
 }
 
 scoreULeadSheetPart = <<
@@ -2728,13 +2821,14 @@ scoreUBassoContinuoPart = <<
 
 \bookpart {
   \header {
-    title = "Choral: Ach Herr, laß dein lieb Engelein"
+    title = "Ach Herr, laß dein lieb Engelein"
+    subsubtitle = "Choräle, Nr. 40, 11. Choral, Es-Dur"
     instrument = "C.F. (und BC)"
-  }  
+  }
   \score {
     <<
       \scoreULeadSheetPart
-%       \scoreUBassoContinuoPart
+      %       \scoreUBassoContinuoPart
     >>
     \layout { }
     \midi { }
@@ -2772,7 +2866,7 @@ scoreVAlto = \relative c' {
   af g f8(bf) g4 g g f f\fermata
   ef f8(g16 af) g8(a) b4\fermata
   c c b8(c) g4 g gf8(f) f4 g\fermata
-  g af af af g f2 f g2.\fermata   
+  g af af af g f2 f g2.\fermata
 }
 
 scoreVTenor = \relative c' {
@@ -2794,7 +2888,7 @@ scoreVTenor = \relative c' {
   bf8(c) d4 ef8(c) g'4\fermata
   c, f8(ef) d(c) d4 c c bf bf\fermata
   df c8(d) ef4 bf bf c2 bf bf2.\fermata
-  \bar "|."   
+  \bar "|."
 }
 
 scoreVBass = \relative c {
@@ -2815,12 +2909,12 @@ scoreVBass = \relative c {
   ef bf'4 c g\fermata
   e f8(g) af4 b, c a' bf ef,\fermata
   ef af8(bf) c4 d, ef a,2 bf ef,2.\fermata
-  \bar "|."   
+  \bar "|."
 }
 
 scoreVVerse = \lyricmode {
   % Lyrics follow here.
-   \scoreUVerse
+  \scoreUVerse
 }
 
 scoreVVerseB = \lyricmode {
@@ -2892,14 +2986,14 @@ scoreVBcFigures = \figuremode {
   \globalV
   \override Staff.BassFigureAlignmentPositioning #'direction = #DOWN
   % Figures follow here.
-  
+
 }
 
 scoreVChordNames = \chordmode {
   \globalV
   \germanChords
   % Chords follow here.
-  
+
 }
 
 scoreVChoirPart = <<
@@ -2945,7 +3039,7 @@ scoreVChoirPart = <<
     }
     \new Lyrics \with {
       \override VerticalAxisGroup #'staff-affinity = #CENTER
-    } \lyricsto "bass" {<<\scoreVVerse \new Lyrics {\scoreVVerseB}>> \scoreVVerseC}    
+    } \lyricsto "bass" {<<\scoreVVerse \new Lyrics {\scoreVVerseB}>> \scoreVVerseC}
   >>
   \scoreVPianoReduction
 >>
@@ -2963,7 +3057,8 @@ scoreVChordsPart = \new ChordNames \scoreVChordNames
 
 \bookpart {
   \header {
-    title = "Choral: Ach Herr, laß dein lieb Engelein"
+    title = "Ach Herr, laß dein lieb Engelein"
+    subsubtitle = "Choräle, Nr. 40, 11. Choral, Es-Dur"
     instrument = "Chor und BC"
   }
   \score {
@@ -2973,17 +3068,17 @@ scoreVChordsPart = \new ChordNames \scoreVChordNames
       \scoreVChordsPart
     >>
     \layout { }
-%     \midi { }
-  }  
+    %     \midi { }
+  }
   \score {
     \unfoldRepeats {
-    <<
-      \scoreVChoirPart
-      \scoreVBassoContinuoPart
-      \scoreVChordsPart
-    >>
+      <<
+        \scoreVChoirPart
+        \scoreVBassoContinuoPart
+        \scoreVChordsPart
+      >>
     }
-%     \layout { }
+    %     \layout { }
     \midi { }
   }
 }
@@ -3026,31 +3121,31 @@ scoreWChordNames = \chordmode {
   \global
   \germanChords
   % Chords follow here.
-  
+
 }
 
 scoreWMelody = \relative c'' {
   \global
   % Music follows here.
-  
+
 }
 
 scoreWVerse = \lyricmode {
   % Lyrics follow here.
-  
+
 }
 
 scoreWBcMusic = \relative c {
   \global
   % Music follows here.
-  
+
 }
 
 scoreWBcFigures = \figuremode {
   \global
   \override Staff.BassFigureAlignmentPositioning #'direction = #DOWN
   % Figures follow here.
-  
+
 }
 
 scoreWLeadSheetPart = <<
@@ -3084,30 +3179,30 @@ scoreWBassoContinuoPart = <<
 scoreXSoprano = \relative c'' {
   \global
   % Music follows here.
-  
+
 }
 
 scoreXAlto = \relative c' {
   \global
   % Music follows here.
-  
+
 }
 
 scoreXTenor = \relative c' {
   \global
   % Music follows here.
-  
+
 }
 
 scoreXBass = \relative c {
   \global
   % Music follows here.
-  
+
 }
 
 scoreXVerse = \lyricmode {
   % Lyrics follow here.
-  
+
 }
 
 scoreXPianoReduction = \new PianoStaff \with {
@@ -3163,21 +3258,21 @@ scoreXRehearsalMidi = #
 scoreXBcMusic = \relative c {
   \global
   % Music follows here.
-  
+
 }
 
 scoreXBcFigures = \figuremode {
   \global
   \override Staff.BassFigureAlignmentPositioning #'direction = #DOWN
   % Figures follow here.
-  
+
 }
 
 scoreXChordNames = \chordmode {
   \global
   \germanChords
   % Chords follow here.
-  
+
 }
 
 scoreXChoirPart = <<
@@ -3286,31 +3381,31 @@ scoreYChordNames = \chordmode {
   \global
   \germanChords
   % Chords follow here.
-  
+
 }
 
 scoreYMelody = \relative c'' {
   \global
   % Music follows here.
-  
+
 }
 
 scoreYVerse = \lyricmode {
   % Lyrics follow here.
-  
+
 }
 
 scoreYBcMusic = \relative c {
   \global
   % Music follows here.
-  
+
 }
 
 scoreYBcFigures = \figuremode {
   \global
   \override Staff.BassFigureAlignmentPositioning #'direction = #DOWN
   % Figures follow here.
-  
+
 }
 
 scoreYLeadSheetPart = <<
@@ -3344,30 +3439,30 @@ scoreYBassoContinuoPart = <<
 scoreZSoprano = \relative c'' {
   \global
   % Music follows here.
-  
+
 }
 
 scoreZAlto = \relative c' {
   \global
   % Music follows here.
-  
+
 }
 
 scoreZTenor = \relative c' {
   \global
   % Music follows here.
-  
+
 }
 
 scoreZBass = \relative c {
   \global
   % Music follows here.
-  
+
 }
 
 scoreZVerse = \lyricmode {
   % Lyrics follow here.
-  
+
 }
 
 scoreZPianoReduction = \new PianoStaff \with {
@@ -3423,21 +3518,21 @@ scoreZRehearsalMidi = #
 scoreZBcMusic = \relative c {
   \global
   % Music follows here.
-  
+
 }
 
 scoreZBcFigures = \figuremode {
   \global
   \override Staff.BassFigureAlignmentPositioning #'direction = #DOWN
   % Figures follow here.
-  
+
 }
 
 scoreZChordNames = \chordmode {
   \global
   \germanChords
   % Chords follow here.
-  
+
 }
 
 scoreZChoirPart = <<
