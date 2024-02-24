@@ -29,7 +29,7 @@ global = {
 }
 
 %%%%%%%%%%%%%%%%%%%%%
-% Herzliebster Jesu, CF
+% Nr. 3 (1. Choral, p.32) Herzliebster Jesu, CF
 %%%%%%%%%%%%%%%%%%%%%
 
 globalA = {
@@ -68,7 +68,12 @@ scoreAVerse = \lyricmode {
 scoreABcMusic = \relative c {
   \globalA
   % Music follows here.
-  
+  \partial 4
+  b'4
+  e,8(fs) g4 fs fs8(e) d4 fs b, b' as(b) fs\fermata
+  fs b a d, g8(a) b4 cs d8(cs) b(a) g4(a) d,\fermata
+  b e8(fs) g4 cs, d d'8(c) b(a) g(fs) e(ds) e2 as,4\fermata
+  b cs d8(e) fs2 b,2.\fermata   
 }
 
 scoreABcFigures = \figuremode {
@@ -97,7 +102,7 @@ scoreABassoContinuoPart = <<
 
 \bookpart {
   \header {
-    title = "Herzliebster Jesu, was hast du verbrochen"
+    title = "Herzliebster Jesu, was hast du verbrochen (Nr. 3 (1))"
     instrument = "C.F. (und B.C.)"
   }
   \score {
@@ -111,7 +116,7 @@ scoreABassoContinuoPart = <<
 }
 
 %%%%%%%%%%%%%%%%%%%%%
-% Herzliebster Jesu, Chor
+% Nr. 3 (1. Choral, p. 32) Herzliebster Jesu, Chor
 %%%%%%%%%%%%%%%%%%%%%
 
 globalB = \globalA
@@ -214,14 +219,14 @@ scoreBRehearsalMidi = #
 scoreBBcMusic = \relative c {
   \globalB
   % Music follows here.
-  \scoreBBass
+  \scoreABcMusic
 }
 
 scoreBBcFigures = \figuremode {
   \globalB
   \override Staff.BassFigureAlignmentPositioning #'direction = #DOWN
   % Figures follow here.
-  
+  \scoreABcFigures
 }
 
 scoreBChordNames = \chordmode {
@@ -292,7 +297,7 @@ scoreBChordsPart = \new ChordNames \scoreBChordNames
 
 \bookpart {
   \header {
-    title = "Herzliebster Jesu, was hast du verbrochen"
+    title = "Herzliebster Jesu, was hast du verbrochen (Nr. 3 (1))"
     instrument = "Chor und B.C.)"
   }
   \score {
@@ -339,36 +344,82 @@ scoreBChordsPart = \new ChordNames \scoreBChordNames
   }
 }
 
+%%%%%%%%%%%%%%%%%%%%%
+% Nr. 10 (2. Choral, p. 49) Ich bins, ich sollte büßen, CF
+%%%%%%%%%%%%%%%%%%%%%
+
+globalC = {
+  \key af \major
+%   \numericTimeSignature
+  \time 4/4
+  \tempo "Andante" 4=60
+}
 
 scoreCChordNames = \chordmode {
-  \global
+  \globalC
   \germanChords
   % Chords follow here.
-  
+  \partial 4
+  af4
+  df r af r r r af\fermata
+  r r r ef c f:7 df ef\fermata
+  r r bf af r ef2.\fermata
+  r4 r r af r bf2 f4\fermata
+  f r af r r r2 c4\fermata
+  c r r af r r r af\fermata
 }
 
 scoreCMelody = \relative c'' {
-  \global
+  \globalC
   % Music follows here.
-  
+  \partial 4
+  c4
+  af bf c8(df) ef4 df2 c4\fermata
+  c8(df) ef4 ef bf c af2 g4\fermata
+  ef af bf c c bf2.\fermata
+  c4 af bf c8(df) ef4 df2 c4\fermata
+  c8(df) ef4 ef bf c af2 g4\fermata
+  ef af bf c df c df af\fermata
+  \bar "|."
 }
 
 scoreCVerse = \lyricmode {
   % Lyrics follow here.
-  
+  Ich bin's, ich soll -- te bü -- ßen,
+  An Hän -- den und an Fü -- ßen
+  Ge -- bun -- den in der Höll.
+  Die Gei -- ßeln und die Ban -- den
+  Und was du aus -- ge -- stan -- den,
+  Ds hat ver -- die -- net mei -- ne Seel.
 }
 
 scoreCBcMusic = \relative c {
-  \global
+  \globalC
   % Music follows here.
-  
+    \partial 4
+  af'4
+  df8(c) bf4 af4. g8 f4(g) af\fermata
+  f c8(bf) c(df) ef(df) c4 f2 ef4\fermata
+  df c bf af8(bf) c(df) ef2.\fermata
+  e4 f g af a bf(bf,) f'\fermata
+  f g af(af8) g f(e) f(g af bf) c4\fermata
+  c, f g af8(g) f(ef) d4 ef af,\fermata
+  \bar "|."  
 }
 
 scoreCBcFigures = \figuremode {
-  \global
+  \globalC
   \override Staff.BassFigureAlignmentPositioning #'direction = #DOWN
   % Figures follow here.
-  
+  \partial 4
+  s4
+  s <6> s4. s8 <6 5>4 <6 5> s\fermata
+  <5>8 <6> <6> s <6> s s4 s <7>4 <6> s\fermata
+  <6 4 2> <6> <5>8 <6> s s <6> s s2.\fermata
+  <6>4 <5>8 <6> <6 5>4 s <6 5> s s <_!>\fermata
+  <_-> <6>8 <5>8 s4 <6 4 2> <5 2> <9> <6> <_!>\fermata
+  <_-> <7>8 <6> <6 5>4 s <6> <7 5> s s\fermata
+  \bar "|."  
 }
 
 scoreCLeadSheetPart = <<
@@ -389,6 +440,10 @@ scoreCBassoContinuoPart = <<
 >>
 
 \bookpart {
+  \header {
+    title = "Ich bins, ich sollte büßen (Nr. 10 (2))"
+    instrument = "C.F. (und B.C.)"
+  }
   \score {
     <<
       \scoreCLeadSheetPart
@@ -399,33 +454,63 @@ scoreCBassoContinuoPart = <<
   }
 }
 
+%%%%%%%%%%%%%%%%%%%%%
+% Nr. 10 (2. Choral, p. 49) Ich bins, ich sollte büßen, Chor
+%%%%%%%%%%%%%%%%%%%%%
+
+globalD = \globalC
+
 scoreDSoprano = \relative c'' {
-  \global
+  \globalD
   % Music follows here.
-  
+  \scoreCMelody
 }
 
 scoreDAlto = \relative c' {
-  \global
+  \globalD
   % Music follows here.
-  
+  \partial 4
+  af'4
+  f g af8(bf) c4 c(bf) af\fermata
+  af af8(g) af(f) g(f) ef4 ef(d) ef\fermata
+  bf ef df c8(df) ef4 ef2.\fermata
+  g4 f ef ef f f8(ef f g) a4\fermata
+  af bf af8(g) f4 g g(f) e\fermata
+  ef ef8(f) ef(df) c(ef) f(g) af4 g ef\fermata
+  \bar "|."
 }
 
 scoreDTenor = \relative c' {
-  \global
+  \globalD
   % Music follows here.
-  
+  \partial 4
+  ef
+  df df ef8(df) c(bf) af4(ef') ef\fermata
+  f ef ef ef gf, af8(gf af4) bf\fermata
+  gf8(ff) ef4 ff8(gf) af4 af g2.\fermata
+  cf4 cf8(df) cf(bf) af(bf) cf4 bff8(cf df ef) ff4\fermata
+  ff ef8(df) cf4 df gf, cf2 cf4\fermata
+  cf cf8(df) cf(bff) af4 af ff' bf,8(cf16 df) cf4\fermata
+  \bar "|."
 }
 
 scoreDBass = \relative c {
-  \global
+  \globalD
   % Music follows here.
-  
+  \partial 4
+  af'4
+  df8(c) bf4 af4. g8 f4(g) af\fermata
+  f c8(bf) c(df) ef(df) c4 f2 ef4\fermata
+  df c bf af8(bf) c(df) ef2.\fermata
+  e4 f g af a bf(bf,) f'\fermata
+  f g af af8(g) f(e) f(g af bf) c4\fermata
+  c, f g af8(g) f(ef) d4 ef af,\fermata
+  \bar "|."
 }
 
 scoreDVerse = \lyricmode {
   % Lyrics follow here.
-  
+  \scoreCVerse
 }
 
 scoreDPianoReduction = \new PianoStaff \with {
@@ -479,16 +564,16 @@ scoreDRehearsalMidi = #
  #})
 
 scoreDBcMusic = \relative c {
-  \global
+  \globalD
   % Music follows here.
-  
+  \scoreCBcMusic
 }
 
 scoreDBcFigures = \figuremode {
   \global
   \override Staff.BassFigureAlignmentPositioning #'direction = #DOWN
   % Figures follow here.
-  
+  \scoreCBcFigures
 }
 
 scoreDChordNames = \chordmode {
@@ -539,6 +624,9 @@ scoreDChoirPart = <<
       \clef bass
       \new Voice = "bass" \scoreDBass
     }
+    \new Lyrics \with {
+      \override VerticalAxisGroup #'staff-affinity = #CENTER
+    } \lyricsto "bass" \scoreDVerse
   >>
   \scoreDPianoReduction
 >>
@@ -555,6 +643,10 @@ scoreDBassoContinuoPart = <<
 scoreDChordsPart = \new ChordNames \scoreDChordNames
 
 \bookpart {
+  \header {
+    title = "Ich bins, ich sollte büßen (Nr. 10 (2))"
+    instrument = "Chor und B.C."
+  }
   \score {
     <<
       \scoreDChoirPart
@@ -597,6 +689,17 @@ scoreDChordsPart = \new ChordNames \scoreDChordNames
     \scoreDRehearsalMidi "bass" "tenor sax" \scoreDVerse
     \midi { }
   }
+}
+
+%%%%%%%%%%%%%%%%%%%%%
+% Nr. 15 (3. Choral, p.58) Erkenne mich, mein Hüter, C.F.
+%%%%%%%%%%%%%%%%%%%%%
+
+globalE = {
+  \key af \major
+%   \numericTimeSignature
+  \time 4/4
+  \tempo "Andante" 4=60
 }
 
 
@@ -658,6 +761,12 @@ scoreEBassoContinuoPart = <<
     \midi { }
   }
 }
+
+%%%%%%%%%%%%%%%%%%%%%
+% Nr. 15 (3. Choral, p. 49) Erkenne mich mein Hüter, Chor
+%%%%%%%%%%%%%%%%%%%%%
+
+globalF = \globalE
 
 scoreFSoprano = \relative c'' {
   \global
@@ -859,6 +968,9 @@ scoreFChordsPart = \new ChordNames \scoreFChordNames
   }
 }
 
+%%%%%%%%%%%%%%%%%%%%%
+% Nr. 17 (4. Choral, p. 60) Ich will hier bei dir stehen, C.F.
+%%%%%%%%%%%%%%%%%%%%%
 
 scoreGChordNames = \chordmode {
   \global
@@ -917,6 +1029,17 @@ scoreGBassoContinuoPart = <<
     \layout { }
     \midi { }
   }
+}
+
+%%%%%%%%%%%%%%%%%%%%%
+% Nr. 17 (4. Choral, p. 60) Ich will hier bei dir stehen, C.F.
+%%%%%%%%%%%%%%%%%%%%%
+
+globalH = {
+  \key af \major
+%   \numericTimeSignature
+  \time 4/4
+  \tempo "Andante" 4=60
 }
 
 scoreHSoprano = \relative c'' {
@@ -1119,6 +1242,16 @@ scoreHChordsPart = \new ChordNames \scoreHChordNames
   }
 }
 
+%%%%%%%%%%%%%%%%%%%%%
+% Nr. 25 (5. Choral, p. 90) Was mein Gott, das gscheh allzeit, C.F.
+%%%%%%%%%%%%%%%%%%%%%
+
+globalI = {
+  \key b \minor
+%   \numericTimeSignature
+  \time 4/4
+  \tempo "Andante" 4=60
+}
 
 scoreIChordNames = \chordmode {
   \global
@@ -1177,6 +1310,17 @@ scoreIBassoContinuoPart = <<
     \layout { }
     \midi { }
   }
+}
+
+%%%%%%%%%%%%%%%%%%%%%
+% Nr. 25 (5. Choral, p. 90) Was mein Gott, das gscheh allzeit, Chor
+%%%%%%%%%%%%%%%%%%%%%
+
+globalI = {
+  \key b \minor
+%   \numericTimeSignature
+  \time 4/4
+  \tempo "Andante" 4=60
 }
 
 scoreJSoprano = \relative c'' {
@@ -3363,36 +3507,106 @@ scoreXChordsPart = \new ChordNames \scoreXChordNames
   }
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Nr. 62 (13. Choral, p. 254) Wenn ich einmal soll scheiden, **a-Moll**, C.F.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+globalY = {
+  \key a \minor
+%   \numericTimeSignature
+  \time 4/4
+  \tempo "Andante" 4=60
+}
 
 scoreYChordNames = \chordmode {
-  \global
+  \globalY
   \germanChords
   % Chords follow here.
-  
+  \repeat volta 2 {
+    \partial 4
+    a4:min
+    f s s c s s a:min\fermata
+    s a:min s s s a2.:min
+  }
+  \partial 4
+  a4:min
+  s e:min s s s f a:min\fermata
+  c s s s d:min s a s\fermata
+  s g s s g s d g\fermata
+  c s c s s s a:min e\fermata
+  \bar "|."
 }
 
 scoreYMelody = \relative c'' {
-  \global
+  \globalY
   % Music follows here.
-  
+  \repeat volta 2 {
+    \partial 4
+    e,4
+    a g f e d2 e4\fermata
+    b' c b8(c16 d) c4 b8(a) a2.
+  }
+  \partial 4
+  c4
+  b8(a) g4 a b c2 c4\fermata
+  g a g a8(g) f4 e2.\fermata
+  c'4 b8(c) d4 c b a2 b4\fermata
+  e, f e d g8(f) e2.\fermata
+  \bar "|."
 }
 
 scoreYVerse = \lyricmode {
   % Lyrics follow here.
-  
+  Wenn ich ein -- mal soll schei -- den,
+  so schei -- de nicht von mir,
+}
+
+scoreYVerseB = \lyricmode {
+  % Lyrics follow here.
+  wenn ich den Tod soll lei -- den,
+  so tritt du denn her -- für,
+}
+
+scoreYVerseC = \lyricmode {
+  % Lyrics follow here.
+  wenn mir am al -- ler -- bängs -- ten
+  wird um das Her -- ze sein,
+  so reiß mich aus den Ängs -- ten
+  kraft dei -- ner Angst und Pein.
 }
 
 scoreYBcMusic = \relative c {
-  \global
+  \globalY
   % Music follows here.
-  
+  \repeat volta 2 {
+    \partial 4
+    a'8(g)
+    f4 e d c fs,(g) a\fermata
+    gs a d e e, a2.
+  }
+  a'4 ds, e ef d e(f) c\fermata
+  c f e8(d) cs4 d a2.\fermata
+  fs'4 g8(a) b4 e,8(fs) g4 cs, d g,\fermata
+  c b c bf8(a) g4 gs a e\fermata
+  \bar "|."
 }
 
 scoreYBcFigures = \figuremode {
-  \global
+  \globalY
   \override Staff.BassFigureAlignmentPositioning #'direction = #DOWN
   % Figures follow here.
-  
+  \repeat volta 2 {
+    \partial 4
+    s4 s <6> <7>8 <6> s4 <6 5> s s\fermata
+    <6> s <6 5> <6 4> <5_+> s2.
+  }
+  \partial 4
+  s4
+  <6>8 <5> s4 <6 4 2> <6> <6 5-> s s\fermata
+  s <7>8 <6> <6 5->4 <6>8 <5> s4 <4> <_+>2\fermata
+  <6 5!>4 s <6> <6>8 <6 5> s4 <6 5> s s\fermata
+  s <6 5> s <6> <8 _->8 <7> <6 5>4 s <_+>\fermata
+  \bar "|."
 }
 
 scoreYLeadSheetPart = <<
@@ -3400,7 +3614,7 @@ scoreYLeadSheetPart = <<
   \new Staff \with {
     \consists "Ambitus_engraver"
   } { \scoreYMelody }
-  \addlyrics { \scoreYVerse }
+  \addlyrics { <<\scoreYVerse \new Lyrics {\scoreYVerseB}>> \scoreYVerseC }
 >>
 
 scoreYBassoContinuoPart = <<
@@ -3413,43 +3627,97 @@ scoreYBassoContinuoPart = <<
 >>
 
 \bookpart {
+  \header {
+    title = "Wenn ich einmal soll scheiden (Nr. 62 (13. Choral), a-Moll)"
+    instrument = "C.F. (und B.C.)"
+  }
   \score {
     <<
       \scoreYLeadSheetPart
-      \scoreYBassoContinuoPart
+%       \scoreYBassoContinuoPart
     >>
     \layout { }
     \midi { }
   }
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Nr. 62 (13. Choral, p. 254) Wenn ich einmal soll scheiden, **a-Moll**, Chor
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+globalZ = \globalY
+
 scoreZSoprano = \relative c'' {
-  \global
+  \globalZ
   % Music follows here.
-  
+  \scoreYMelody
 }
 
 scoreZAlto = \relative c' {
-  \global
+  \globalZ
   % Music follows here.
-  
+  \repeat volta 2 {
+    \partial 4
+    c
+    c8(d) e4 a,8(b) c4 c(b) c\fermata
+    e e f e d8(c) c2.
+  }
+  \partial 4
+  e4
+  fs e f f g(f) e\fermata
+  e e8(d) cs(d) e4 e8(d) d4(cs2)\fermata
+  a'4 g g g8(a) b(g) g4(fs) g\fermata
+  c, d c d e8(d) d4(c b)\fermata
+  \bar "|."
 }
 
 scoreZTenor = \relative c' {
-  \global
+  \globalZ
   % Music follows here.
-  
+  \repeat volta 2 {
+    \partial 4
+    a4
+    a8(b) c4 d g, a(g) g\fermata
+    b a a a gs e2.
+  }
+  \partial 4
+  a8(g)
+  fs4 b c d c8(bf4 af8) g4\fermata
+  c8(b) a4 bf a a a2.\fermata
+  d4 d d8(e16 f) e4 d e(d) d\fermata
+  g, g g g8(a) bf4 b(a gs)\fermata
+  \bar "|."
 }
 
 scoreZBass = \relative c {
-  \global
+  \globalZ
   % Music follows here.
-  
+  \repeat volta 2 {
+    \partial 4
+    a'8(g)
+    f4 e d c fs,(g) a\fermata
+    gs a d e e a,2.
+  }
+  a'4 ds e ef d e(f) a,\fermata
+  a f e8(d) cs4 d a2.\fermata
+  fs'4 g8(a) b4 e,8(fs) g4 cs,(d) g,\fermata
+  c b c bf8(a) g4 gs(a e')\fermata
+  \bar "|."
 }
 
 scoreZVerse = \lyricmode {
   % Lyrics follow here.
-  
+  \scoreYVerse
+}
+
+scoreZVerseB = \lyricmode {
+  % Lyrics follow here.
+  \scoreYVerseB
+}
+
+scoreZVerseC = \lyricmode {
+  % Lyrics follow here.
+  \scoreYVerseC
 }
 
 scoreZPianoReduction = \new PianoStaff \with {
@@ -3503,20 +3771,20 @@ scoreZRehearsalMidi = #
  #})
 
 scoreZBcMusic = \relative c {
-  \global
+  \globalZ
   % Music follows here.
-  
+  \scoreYBcMusic
 }
 
 scoreZBcFigures = \figuremode {
-  \global
+  \globalZ
   \override Staff.BassFigureAlignmentPositioning #'direction = #DOWN
   % Figures follow here.
   
 }
 
 scoreZChordNames = \chordmode {
-  \global
+  \globalZ
   \germanChords
   % Chords follow here.
   
@@ -3532,7 +3800,7 @@ scoreZChoirPart = <<
     } \new Voice = "soprano" \scoreZSoprano
     \new Lyrics \with {
       \override VerticalAxisGroup #'staff-affinity = #CENTER
-    } \lyricsto "soprano" \scoreZVerse
+    } \lyricsto "soprano" { <<\scoreZVerse \new Lyrics {\scoreZVerseB}>> \scoreZVerseC }
     \new Staff \with {
       midiInstrument = "choir aahs"
       instrumentName = "Alt"
@@ -3541,7 +3809,7 @@ scoreZChoirPart = <<
     } \new Voice = "alto" \scoreZAlto
     \new Lyrics \with {
       \override VerticalAxisGroup #'staff-affinity = #CENTER
-    } \lyricsto "alto" \scoreZVerse
+    } \lyricsto "alto" { <<\scoreZVerse \new Lyrics {\scoreZVerseB}>> \scoreZVerseC }
     \new Staff \with {
       midiInstrument = "choir aahs"
       instrumentName = "Tenor"
@@ -3553,7 +3821,7 @@ scoreZChoirPart = <<
     }
     \new Lyrics \with {
       \override VerticalAxisGroup #'staff-affinity = #CENTER
-    } \lyricsto "tenor" \scoreZVerse
+    } \lyricsto "tenor" { <<\scoreZVerse \new Lyrics {\scoreZVerseB}>> \scoreZVerseC }
     \new Staff \with {
       midiInstrument = "choir aahs"
       instrumentName = "Bass"
@@ -3563,6 +3831,9 @@ scoreZChoirPart = <<
       \clef bass
       \new Voice = "bass" \scoreZBass
     }
+    \new Lyrics \with {
+      \override VerticalAxisGroup #'staff-affinity = #CENTER
+    } \lyricsto "bass" { <<\scoreZVerse \new Lyrics {\scoreZVerseB}>> \scoreZVerseC }
   >>
   \scoreZPianoReduction
 >>
@@ -3579,6 +3850,10 @@ scoreZBassoContinuoPart = <<
 scoreZChordsPart = \new ChordNames \scoreZChordNames
 
 \bookpart {
+  \header {
+    title = "Wenn ich einmal soll scheiden (Nr. 62 (13. Choral), a-Moll)"
+    instrument = "Chor und B.C."
+  }
   \score {
     <<
       \scoreZChoirPart
@@ -3586,9 +3861,19 @@ scoreZChordsPart = \new ChordNames \scoreZChordNames
       \scoreZChordsPart
     >>
     \layout { }
-    \midi { }
+%     \midi { }
   }
-}
+  \score {
+    \unfoldRepeats {
+    <<
+      \scoreZChoirPart
+      \scoreZBassoContinuoPart
+      \scoreZChordsPart
+    >>
+    }
+%     \layout { }
+    \midi { }
+  }}
 
 % Rehearsal MIDI files:
 \book {
