@@ -692,11 +692,11 @@ scoreDChordsPart = \new ChordNames \scoreDChordNames
 }
 
 %%%%%%%%%%%%%%%%%%%%%
-% Nr. 15 (3. Choral, p.58) Erkenne mich, mein Hüter, C.F.
+% Nr. 15 (3. Choral, p.58) Erkenne mich, mein Hüter, E-Dur, C.F.
 %%%%%%%%%%%%%%%%%%%%%
 
 globalE = {
-  \key af \major
+  \key e \major
   %   \numericTimeSignature
   \time 4/4
   \tempo "Andante" 4=60
@@ -704,34 +704,85 @@ globalE = {
 
 
 scoreEChordNames = \chordmode {
-  \global
+  \globalE
   \germanChords
   % Chords follow here.
 
 }
 
 scoreEMelody = \relative c'' {
-  \global
+  \globalE
   % Music follows here.
-
+  \repeat volta 2 {
+    \partial 4
+    gs
+    cs b a gs fs2 gs4\fermata
+    ds' e e ds8(cs) ds4 cs2.
+  }
+  \partial 4
+  e4
+  ds8(cs) b4 cs ds e2 e4\fermata
+  b cs b a a gs2.\fermata
+  e'4 ds8(e) fs4 e ds cs2 ds4\fermata
+  gs, a gs fs b gs2.\fermata
+  \bar "|."
 }
 
 scoreEVerse = \lyricmode {
   % Lyrics follow here.
+  Er -- ken -- ne mich, mein Hü -- ter,
+  mein Hir -- te, nimm mich an,
+}
 
+scoreEVerseB = \lyricmode {
+  % Lyrics follow here.
+  von dir, Quell al -- ler Gü -- ter,
+  ist mir viel Guts ge -- tan,
+}
+
+scoreEVerseC = \lyricmode {
+  % Lyrics follow here.
+  dein Mund hat mich ge -- la -- bet
+  mit Milch und sü -- ßer Kost,
+  dein Geist hat mich be -- ga -- bet
+  mit man -- cher Him -- mels -- lust.
 }
 
 scoreEBcMusic = \relative c {
-  \global
+  \globalE
   % Music follows here.
-
+  \repeat volta 2 {
+    \partial 4
+    e4
+    a gs cs,8(ds) e4 a,(b) e\fermata
+    ds cs8(ds) e(fs) gs4 gs, cs2.
+  }
+  \partial 4
+  cs'4
+  fs, gs a8(gs) fs4 e2 e4\fermata
+  e a e fs8(gs) a(b) cs2.\fermata
+  as4 b ds, gs8(as) b4 e,(fs) b,\fermata
+  e8(ds) cs4 b a b e,2.\fermata
+  \bar "|."
 }
 
 scoreEBcFigures = \figuremode {
-  \global
+  \globalE
   \override Staff.BassFigureAlignmentPositioning #'direction = #DOWN
   % Figures follow here.
-
+  \repeat volta 2 {
+    \partial 4
+    s4
+    s <6> <6>8 <6 5> <9> <8> <6 5>4 s s\fermata
+    <6/> s <6> <5 4> <_+> s2.
+  }
+  \partial 4
+  s4
+  <6>8 <5> <8> <7> <5>4 <6> <6 4>2 <5 3>4\fermata
+  s s s <9> <6> <_+>2.\fermata
+  <6 5!>4 s <6>8 <5/> <6> <6 5> s4 <6 5> <_+> s\fermata
+  s <6> <6 4> <6 5> s s2.\fermata
+  \bar "|."
 }
 
 scoreELeadSheetPart = <<
@@ -739,7 +790,7 @@ scoreELeadSheetPart = <<
   \new Staff \with {
     \consists "Ambitus_engraver"
   } { \scoreEMelody }
-  \addlyrics { \scoreEVerse }
+  \addlyrics { <<\scoreEVerse \new Lyrics{\scoreEVerseB}>>\scoreEVerseC }
 >>
 
 scoreEBassoContinuoPart = <<
@@ -752,6 +803,11 @@ scoreEBassoContinuoPart = <<
 >>
 
 \bookpart {
+  \header {
+    title = "Erkenne mich mein Hüter"
+    subsubtitle = "Choräle, Nr. 15, 3. Choral, E-Dur"
+    instrument = "C.F. (und B.C.)"
+  }
   \score {
     <<
       \scoreELeadSheetPart
@@ -763,40 +819,85 @@ scoreEBassoContinuoPart = <<
 }
 
 %%%%%%%%%%%%%%%%%%%%%
-% Nr. 15 (3. Choral, p. 49) Erkenne mich mein Hüter, Chor
+% Nr. 15 (3. Choral, p. 49) Erkenne mich mein Hüter, E-Dur, Chor
 %%%%%%%%%%%%%%%%%%%%%
 
 globalF = \globalE
 
 scoreFSoprano = \relative c'' {
-  \global
+  \globalF
   % Music follows here.
-
+  \scoreEMelody
 }
 
 scoreFAlto = \relative c' {
-  \global
+  \globalF
   % Music follows here.
-
+  \repeat volta 2 {
+    \partial 4
+    e4
+    e e e8(fs) fs(e) e4(ds) e\fermata
+    fs e8(fs) gs4 gs gs8(fs) e2.
+  }
+  \partial 4
+  cs'8(b)
+  a4 gs8(fs) e4 a a( gs8 fs) gs4\fermata
+  gs a gs gs fs es2.\fermata
+  fs4 fs fs gs fs gs(fs) fs\fermata
+  e e8(ds) e4 e ds e2.\fermata
+  \bar "|."
 }
 
 scoreFTenor = \relative c' {
-  \global
+  \globalF
   % Music follows here.
-
+  \repeat volta 2 {
+    \partial 4
+    b4
+    a b cs8(b) b4 cs(b) b\fermata
+    bs gs cs cs bs cs2.
+  }
+  \partial 4
+  gs'4
+  fs8(e) ds4 cs8(b) a(b) cs4( b8 a) b4\fermata
+  e e e8(ds) cs4 cs cs2.\fermata
+  cs4 b b8(as) b(cs) ds(b) gs(cs as4) b\fermata
+  b a b cs fs,8(b) b2.\fermata
+  \bar "|."
 }
 
 scoreFBass = \relative c {
-  \global
+  \globalF
   % Music follows here.
-
+  \repeat volta 2 {
+    \partial 4
+    e4
+    a gs cs,8(ds) e4 a,(b) e\fermata
+    ds cs8(ds) e(fs) gs4 gs, cs2.
+  }
+  \partial 4
+  cs'4
+  fs, gs a8(gs) fs4 e2 e4\fermata
+  e a e fs8(gs) a(b) cs2.\fermata
+  as4 b ds, gs8(as) b4 e,(fs) b,\fermata
+  e8(ds) cs4 b a b e2.\fermata
+  \bar "|."
 }
 
 scoreFVerse = \lyricmode {
   % Lyrics follow here.
-
+  \scoreEVerse
 }
 
+scoreFVerseB = \lyricmode {
+  % Lyrics follow here.
+  \scoreEVerseB
+}
+
+scoreFVerseC = \lyricmode {
+  % Lyrics follow here.
+  \scoreEVerseC
+}
 scoreFPianoReduction = \new PianoStaff \with {
   fontSize = #-1
   \override StaffSymbol #'staff-space = #(magstep -1)
@@ -848,23 +949,23 @@ scoreFRehearsalMidi = #
  #})
 
 scoreFBcMusic = \relative c {
-  \global
+  \globalF
   % Music follows here.
-
+  \scoreEBcMusic
 }
 
 scoreFBcFigures = \figuremode {
-  \global
+  \globalF
   \override Staff.BassFigureAlignmentPositioning #'direction = #DOWN
   % Figures follow here.
-
+  \scoreEBcFigures
 }
 
 scoreFChordNames = \chordmode {
-  \global
+  \globalF
   \germanChords
   % Chords follow here.
-
+  \scoreEChordNames
 }
 
 scoreFChoirPart = <<
@@ -877,7 +978,7 @@ scoreFChoirPart = <<
     } \new Voice = "soprano" \scoreFSoprano
     \new Lyrics \with {
       \override VerticalAxisGroup #'staff-affinity = #CENTER
-    } \lyricsto "soprano" \scoreFVerse
+    } \lyricsto "soprano" {<<\scoreFVerse \new Lyrics{\scoreFVerseB}>>\scoreFVerseC}
     \new Staff \with {
       midiInstrument = "choir aahs"
       instrumentName = "Alt"
@@ -886,7 +987,7 @@ scoreFChoirPart = <<
     } \new Voice = "alto" \scoreFAlto
     \new Lyrics \with {
       \override VerticalAxisGroup #'staff-affinity = #CENTER
-    } \lyricsto "alto" \scoreFVerse
+    } \lyricsto "alto" {<<\scoreFVerse \new Lyrics{\scoreFVerseB}>>\scoreFVerseC}
     \new Staff \with {
       midiInstrument = "choir aahs"
       instrumentName = "Tenor"
@@ -898,7 +999,7 @@ scoreFChoirPart = <<
     }
     \new Lyrics \with {
       \override VerticalAxisGroup #'staff-affinity = #CENTER
-    } \lyricsto "tenor" \scoreFVerse
+    } \lyricsto "tenor" {<<\scoreFVerse \new Lyrics{\scoreFVerseB}>>\scoreFVerseC}
     \new Staff \with {
       midiInstrument = "choir aahs"
       instrumentName = "Bass"
@@ -908,6 +1009,9 @@ scoreFChoirPart = <<
       \clef bass
       \new Voice = "bass" \scoreFBass
     }
+    \new Lyrics \with {
+      \override VerticalAxisGroup #'staff-affinity = #CENTER
+    } \lyricsto "bass" {<<\scoreFVerse \new Lyrics{\scoreFVerseB}>>\scoreFVerseC}    
   >>
   \scoreFPianoReduction
 >>
@@ -924,6 +1028,11 @@ scoreFBassoContinuoPart = <<
 scoreFChordsPart = \new ChordNames \scoreFChordNames
 
 \bookpart {
+    \header {
+    title = "Erkenne mich mein Hüter"
+    subsubtitle = "Choräle, Nr. 15, 3. Choral, E-Dur"
+    instrument = "Chor und B.C."
+  }
   \score {
     <<
       \scoreFChoirPart
@@ -931,6 +1040,17 @@ scoreFChordsPart = \new ChordNames \scoreFChordNames
       \scoreFChordsPart
     >>
     \layout { }
+%     \midi { }
+  }
+  \score {
+    \unfoldRepeats {
+    <<
+      \scoreFChoirPart
+      \scoreFBassoContinuoPart
+      \scoreFChordsPart
+    >>
+    }
+%     \layout { }
     \midi { }
   }
 }
@@ -1041,10 +1161,22 @@ scoreGBcMusic = \relative c {
 }
 
 scoreGBcFigures = \figuremode {
-  \global
+  \globalG
   \override Staff.BassFigureAlignmentPositioning #'direction = #DOWN
   % Figures follow here.
-
+  \repeat volta 2 {
+    \partial 4
+    s4
+    s <6> <6>8 <6 5> <9> <8> <6 5>4 s s\fermata
+    <6!> s <6> <5 4> <_!> s2.
+  }
+  \partial 4
+  s4
+  <6>8 <5> <8> <7> <5>4 <6> <6 4>2 <5 3>4\fermata
+  s s s <9> <6> <_!>2.\fermata
+  <6 5>4 s <6>8 <5!> <6> <6 5> s4 <6 5> <_!> s\fermata
+  s <6> <6 4> <6 5> s s2.\fermata
+  \bar "|."
 }
 
 scoreGLeadSheetPart = <<
@@ -1112,9 +1244,18 @@ scoreHAlto = \relative c' {
 scoreHTenor = \relative c' {
   \globalH
   % Music follows here.
+  \repeat volta 2 {
+    \partial 4
+    bf4
+    af bf c8(bf) bf4 c(bf) bf\fermata
+    b g c c b c2.
+  }
   \partial 4
-  bf4
-  af bf c8(bf) bf4 c(bf)
+  g'4 f8(ef) d4 c8(bf) af(bf) c4(bf8 af) bf4\fermata
+  ef ef ef8(d) c4 c c2.\fermata
+  c4 bf bf8(a) bf(c) d(bf) g(c) a4 bf\fermata
+  bf af bf c f,8(bf) bf2.\fermata
+  \bar "|."
 }
 
 scoreHBass = \relative c {
@@ -1235,11 +1376,11 @@ scoreHChoirPart = <<
       \consists "Ambitus_engraver"
     } {
       \clef "treble_8"
-      \new Voice = "tenor" {<<\scoreHVerse \new Lyrics{\scoreHVerseB}>> \scoreHVerseC}
+      \new Voice = "tenor" \scoreHTenor
     }
     \new Lyrics \with {
       \override VerticalAxisGroup #'staff-affinity = #CENTER
-    } \lyricsto "tenor" \scoreHVerse
+    } \lyricsto "tenor" {<<\scoreHVerse \new Lyrics{\scoreHVerseB}>> \scoreHVerseC}
     \new Staff \with {
       midiInstrument = "choir aahs"
       instrumentName = "Bass"
