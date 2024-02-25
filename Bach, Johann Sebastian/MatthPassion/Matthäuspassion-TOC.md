@@ -3,8 +3,8 @@
 https://imslp.eu/files/imglnks/euimg/7/7d/IMSLP580710-PMLP3301-bachNBAII,5matthaeus-passionBWV244.pdf
 1. ~~ab Nr. 3 (1. Choral, p. 32) Herzliebster Jesu, was hast du verbrochen, **h-Moll**~~
 2. ~~cd Nr. 10 (2. Choral, p. 49) Ich bin's, ich sollte büßen, **As-Dur**~~
-3. ef Nr. 15 (3. Choral, p. 58) Erkenne mich, mein Hüter, **E-Dur**
-4. gh Nr. 17 (4. Choral, p. 60) Ich will hier bei dir stehen, **Es-Dur**
+3. ~~ef Nr. 15 (3. Choral, p. 58) Erkenne mich, mein Hüter, **E-Dur**~~
+4. ~~gh Nr. 17 (4. Choral, p. 60) Ich will hier bei dir stehen, **Es-Dur**~~
 5. ~~ij Nr. 25 (5. Choral. p. 90) Was mein Gott will, das g'scheh allzeit, **h-Moll**~~
 6. kl Nr. 29 (6. Choral, p. 119) O Mensch, bewein dein Sünde groß, **E-Dur**
 7. ~~mn Nr. 32 (7. Choral, p. 163) Mir hat die Welt trüglich gericht't, **B-Dur**~~
