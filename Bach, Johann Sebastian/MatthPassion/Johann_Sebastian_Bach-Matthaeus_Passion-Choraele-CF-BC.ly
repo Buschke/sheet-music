@@ -361,12 +361,12 @@ scoreCChordNames = \chordmode {
   % Chords follow here.
   \partial 4
   af4
-  df r af r r r af\fermata
-  r r r ef c f:7 df ef\fermata
-  r r bf af r ef2.\fermata
-  r4 r r af r bf2 f4\fermata
-  f r af r r r2 c4\fermata
-  c r r af r r r af\fermata
+  df s af s s s af\fermata
+  s s s ef c f:7 df ef\fermata
+  s s bf af s ef2.\fermata
+  s4 s s af s bf2 f4\fermata
+  f s af s s s2 c4\fermata
+  c s s af s s s af\fermata
 }
 
 scoreCMelody = \relative c'' {
@@ -447,7 +447,7 @@ scoreCBassoContinuoPart = <<
   \score {
     <<
       \scoreCLeadSheetPart
-      \scoreCBassoContinuoPart
+%       \scoreCBassoContinuoPart
     >>
     \layout { }
     \midi { }
@@ -707,7 +707,18 @@ scoreEChordNames = \chordmode {
   \globalE
   \germanChords
   % Chords follow here.
-
+  \repeat volta 2 {
+    \partial 4
+    e4 a s s s s s e\fermata
+    s cs:min s s gs cs2.:min
+  }
+  \partial 4
+  cs4:min
+  s s s s s s s\fermata
+  e a e s s cs2.\fermata
+  s4 b s s b s fs b\fermata
+  e s s s b e2.\fermata
+  \bar "|."
 }
 
 scoreEMelody = \relative c'' {
@@ -715,7 +726,7 @@ scoreEMelody = \relative c'' {
   % Music follows here.
   \repeat volta 2 {
     \partial 4
-    gs
+    gs4
     cs b a gs fs2 gs4\fermata
     ds' e e ds8(cs) ds4 cs2.
   }
@@ -811,7 +822,7 @@ scoreEBassoContinuoPart = <<
   \score {
     <<
       \scoreELeadSheetPart
-      \scoreEBassoContinuoPart
+%       \scoreEBassoContinuoPart
     >>
     \layout { }
     \midi { }
