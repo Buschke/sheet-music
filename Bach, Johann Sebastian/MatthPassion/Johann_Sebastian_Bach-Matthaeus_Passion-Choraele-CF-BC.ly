@@ -3,7 +3,7 @@
 
 \header {
   dedication = ""
-  title = "NN"
+  title = "Matthäus-Passion Johann Sebastian Bach"
   subtitle = "Matthäus-Passion"
   subsubtitle = "Choräle"
   instrument = "Chor und BC"
