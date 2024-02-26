@@ -386,7 +386,9 @@ scoreCChordNames = \chordmode {
   \globalC
   \germanChords
   % Chords follow here.
-
+  \partial 4
+  d4:min
+  s d:min
 }
 
 scoreCMelody = \relative c'' {
