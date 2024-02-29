@@ -315,13 +315,13 @@ scoreCMelody = \relative c'' {
 scoreCAccRight = \relative c' {
   \global
   % Music follows here.
-  <<\scoreASoprano||\scoreAAlto>>
+  \scoreAAlto
 }
 
 scoreCAccLeft = \relative c {
   \global
   % Music follows here.
-  \scoreABass
+  <<\scoreATenor||\scoreABass>>
 }
 
 scoreCVerse = \lyricmode {
