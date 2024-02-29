@@ -24,21 +24,21 @@
 }
 
 global = {
-  \key c \major
+  \key a \major
   \time 4/4
   \tempo "Andante" 4=50
 }
 
-scoreASoprano = \relative c'' {
+scoreASoprano = \relative c' {
   \global
   % Music follows here.
   \partial 4
-  g8 g
-  a4 g c b2\breathe
-  g8 g
-  a4 g d' c2\breathe
-  g8 g g'4 e c8 c b4 a\breathe
-  f'8 f e4 c d c2
+  e8 e
+  fs4 e a gs2\breathe
+  e8 e
+  fs4 e b' a2\breathe
+  e8 e e'4 cs a8 a gs4 fs\breathe
+  d'8 d cs4 a b a2
   \bar "|."   
 }
 
@@ -46,33 +46,33 @@ scoreAAlto = \relative c' {
   \global
   % Music follows here.
   \partial 4
-  e4
-  f e g g2
-  e4 f e b' g2
-  e4 d' c f, g f
-  c' c a b g2    
+  cs4
+  d cs e e2
+  cs4 d cs gs' e2
+  cs4 b' a d, e d
+  a' a fs gs e2    
 }
 
 scoreATenor = \relative c' {
   \global
   % Music follows here.
   \partial 4
-  c4
-  c c e d2
-  c4 c c g' e2
-  c4 g' g e d c
-  a' g f g e2    
+  a4
+  a a cs b2
+  a4 a a e' cs2
+  a4 e' e cs b a
+  fs' e d e cs2    
 }
 
 scoreABass = \relative c {
   \global
   % Music follows here.
   \partial 4
-  c4
-  f c c g2
-  c4 f c g c2
-  c4 g c c g f
-  f c f g c2     
+  a4
+  d a a e2
+  a4 d a e a2
+  a4 e a a e d
+  d a d e a2     
 }
 
 scoreAVerse = \lyricmode {
@@ -116,10 +116,10 @@ scoreAChordNames = \chordmode {
   \global
   % Chords follow here.
   \partial 4
-  c4 f c c g2
-  c4 f c g c2
-  c4 g c c c f
-  f c f g c2      
+  a4 d a a e2
+  a4 d a e a2
+  a4 e a a a d
+  d a d e a2      
 }
 
 scoreAChoirPart = \new ChoirStaff <<
