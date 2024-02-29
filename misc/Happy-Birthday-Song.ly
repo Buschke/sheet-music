@@ -260,7 +260,7 @@ scoreBFigBass = \figuremode {
 
 scoreBLeadSheetPart = <<
   \new ChordNames \scoreBChordNames
-  \new FretBoards \scoreBChordNames
+%   \new FretBoards \scoreBChordNames
   \new Staff \with {
     \consists "Ambitus_engraver"
   } { \scoreBMelody }
@@ -344,7 +344,7 @@ scoreCBcFigures = \figuremode {
 
 scoreCLeadSheetPart = <<
   \new ChordNames \scoreCChordNames
-  \new FretBoards \scoreCChordNames
+%   \new FretBoards \scoreCChordNames
   \new ChoirStaff <<
     \new Staff <<
       \new Voice = "melody" \with {
