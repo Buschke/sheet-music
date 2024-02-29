@@ -1,6 +1,8 @@
 \version "2.24.3"
 \language "english"
 
+\include "predefined-guitar-fretboards.ly"
+
 \header {
   dedication = "For my big 13"
   title = "Happy Birthday Song"
@@ -23,8 +25,8 @@
 
 global = {
   \key c \major
-  \time 3/4
-  \tempo "Andante" 4=100
+  \time 4/4
+  \tempo "Andante" 4=50
 }
 
 scoreASoprano = \relative c'' {
@@ -48,7 +50,7 @@ scoreAAlto = \relative c' {
   f e g g2
   e4 f e b' g2
   e4 d' c f, g f
-  c' c a b g2   
+  c' c a b g2    
 }
 
 scoreATenor = \relative c' {
@@ -70,7 +72,7 @@ scoreABass = \relative c {
   f c c g2
   c4 f c g c2
   c4 g c c g f
-  f c f g c2    
+  f c f g c2     
 }
 
 scoreAVerse = \lyricmode {
@@ -78,7 +80,7 @@ scoreAVerse = \lyricmode {
   Hap -- py birth -- day to me,
   hap -- py birth -- day to me,
   hap -- py birth -- day, hap -- py birth -- day,
-  hap -- py birth -- day to me!   
+  hap -- py birth -- day to me!    
 }
 
 scoreARehearsalMidi = #
@@ -107,7 +109,7 @@ scoreARehearsalMidi = #
 scoreAFigBass = \figuremode {
   \global
   % Figures follow here.
-  
+  \partial 4
 }
 
 scoreAChordNames = \chordmode {
@@ -116,8 +118,8 @@ scoreAChordNames = \chordmode {
   \partial 4
   c4 f c c g2
   c4 f c g c2
-  c4 g c c g f
-  f c f g c2   
+  c4 g c c c f
+  f c f g c2      
 }
 
 scoreAChoirPart = \new ChoirStaff <<
@@ -153,9 +155,15 @@ scoreAChoirPart = \new ChoirStaff <<
   >>
 >>
 
-scoreABassFiguresPart = \new FiguredBass \scoreAFigBass
+scoreABassFiguresPart = \new FiguredBass \with {
+  useBassFigureExtenders = ##t
+} \scoreAFigBass
 
-scoreAChordsPart = \new ChordNames \scoreAChordNames
+scoreAChordsPart = <<
+  \new ChordNames \scoreAChordNames
+  \new Voice \scoreAChordNames
+%   \new FretBoards \scoreAChordNames
+>>
 
 \bookpart {
   \score {
@@ -203,7 +211,7 @@ scoreAChordsPart = \new ChordNames \scoreAChordNames
 }
 
 
-scoreBChordNamesLeadSheet = \chordmode {
+scoreBChordNames = \chordmode {
   \global
   % Chords follow here.
   \scoreAChordNames
@@ -247,17 +255,12 @@ scoreBPedal = \relative c {
 scoreBFigBass = \figuremode {
   \global
   % Figures follow here.
-  
-}
-
-scoreBChordNamesChords = \chordmode {
-  \global
-  % Chords follow here.
-%   \scoreAChordNames
+  \scoreABassFiguresPart
 }
 
 scoreBLeadSheetPart = <<
-  \new ChordNames \scoreBChordNamesLeadSheet
+  \new ChordNames \scoreBChordNames
+  \new FretBoards \scoreBChordNames
   \new Staff \with {
     \consists "Ambitus_engraver"
   } { \scoreBMelody }
@@ -281,9 +284,9 @@ scoreBOrganPart = <<
   } { \clef bass \scoreBPedal }
 >>
 
-scoreBBassFiguresPart = \new FiguredBass \scoreBFigBass
-
-scoreBChordsPart = \new ChordNames \scoreBChordNamesChords
+scoreBBassFiguresPart = \new FiguredBass \with {
+  useBassFigureExtenders = ##t
+} \scoreBFigBass
 
 \bookpart {
   \score {
@@ -291,7 +294,6 @@ scoreBChordsPart = \new ChordNames \scoreBChordNamesChords
       \scoreBLeadSheetPart
       \scoreBOrganPart
       \scoreBBassFiguresPart
-      \scoreBChordsPart
     >>
     \layout { }
     \midi { }
@@ -313,13 +315,13 @@ scoreCMelody = \relative c'' {
 scoreCAccRight = \relative c' {
   \global
   % Music follows here.
-  
+  <<\scoreASoprano||\scoreAAlto>>
 }
 
 scoreCAccLeft = \relative c {
   \global
   % Music follows here.
-  <<\scoreAAlto||\scoreATenor>>
+  \scoreABass
 }
 
 scoreCVerse = \lyricmode {
@@ -337,11 +339,12 @@ scoreCBcFigures = \figuremode {
   \global
   \override Staff.BassFigureAlignmentPositioning #'direction = #DOWN
   % Figures follow here.
-  
+  \scoreABassFiguresPart
 }
 
 scoreCLeadSheetPart = <<
   \new ChordNames \scoreCChordNames
+  \new FretBoards \scoreCChordNames
   \new ChoirStaff <<
     \new Staff <<
       \new Voice = "melody" \with {
