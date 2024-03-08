@@ -34,8 +34,18 @@ scoreAChordNamesLeadSheet = \chordmode {
   \global
   \germanChords
   % Chords follow here.
-  c2 c4 g c c c f c2\breathe
-  c f   
+  \repeat volta 2 {
+    c2 c4 g c c c f c2\breathe
+    c f4 c g c c f c2\breathe
+    f c4 f c c g2 c s
+  }
+  c2 c4 c g c f f c2\breathe
+  c c4 c g c f f c2\breathe
+  c c4 f c c f c c2 s
+  g c4 f c4. f8 c4 c g2\breathe
+  c f4 g c4. g8 f4 f c2\breathe
+  c g4 c f c g2 c1
+  \bar "|."
 }
 
 scoreAMelody = \relative c'' {
@@ -48,7 +58,7 @@ scoreAMelody = \relative c'' {
   }
   c' c4 c b g a a e2\breathe
   c' c4 c b g a a g2\breathe
-  e g4 a g e f(g) e2 r d e4 f g4 f8 e4 e d2\breathe
+  e g4 a g e f(g) e2 r d e4 f g4. f8 e4 e d2\breathe
   g a4 b c4. b8 a4 a g2\breathe
   c, d4 e f e d2 c1
   \bar "|."  
@@ -94,7 +104,18 @@ scoreABcFigures = \figuremode {
 scoreAChordNamesChords = \chordmode {
   \global
   % Chords follow here.
-  
+  \repeat volta 2 {
+    c2 c4 b:dim/d c/e c c/e f g2\breathe
+    g f4 c/e b:dim/d c c/e f g2\breathe
+    f/a g4 f c/e c b2:dim/d c s
+  }
+  c c4 c g/b g f/a f/a c2/e\breathe
+  c c4 c g/b g f/a f/a g2\breathe
+  c/e g4 f/a g c/e f g c2/e s
+  b:dim/d c4/e f g4. f8 c4/e c/e b2:dim/d\breathe
+  g f4/a g/b c4. g8/b f4/a f/a g2\breathe
+  c b4:dim/d c/e f c/e b2:dim/d c1
+  \bar "|."
 }
 
 scoreALeadSheetPart = <<
@@ -117,14 +138,15 @@ scoreABassoContinuoPart = <<
 
 scoreAChordsPart = <<
   \new ChordNames \scoreAChordNamesChords
-  \new FretBoards \scoreAChordNamesChords
+%   \new Chord \scoreAChordNamesChords
+%   \new FretBoards \scoreAChordNamesChords
 >>
 
 \bookpart {
   \score {
     <<
       \scoreALeadSheetPart
-      \scoreABassoContinuoPart
+%       \scoreABassoContinuoPart
       \scoreAChordsPart
     >>
     \layout { }
