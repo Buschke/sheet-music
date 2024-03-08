@@ -12,7 +12,7 @@
   composer = "Johann Sebastian Bach"
   arranger = ""
   poet = ""
-  meter = "arrangiert: Prof. Dr. iur. Dr. med. Dr. rer.nat. Sven Buschke"
+  meter = "arrangiert: Sven Buschke"
   piece = ""
   opus = "BWV 248"
   copyright = ""
@@ -143,7 +143,7 @@ scoreABassoContinuoPart = <<
 \bookpart {
   \header {
     title = "Wie soll ich dich empfangen"
-    subsubtitle = "Choräle, Nr. 5, 1. Choral, a-Moll"
+    subsubtitle = "Choräle, Nr. 5, 1. Teil, 1. Choral (1. gesamt), a-Moll"
     instrument = "C.F. (und B.C.)"
   }
   \score {
@@ -371,7 +371,7 @@ scoreBChordsPart = <<
 \bookpart {
   \header {
     title = "Wie soll ich dich empfangen"
-    subsubtitle = "Choräle, Nr. 5, 1. Choral, a-Moll"
+    subsubtitle = "Choräle, Nr. 5, 1. Teil, 1. Choral (1. gesamt), a-Moll"
     instrument = "Chor und B.C."
   }
   \score {
@@ -515,7 +515,7 @@ scoreCBassoContinuoPart = <<
 \bookpart {
   \header {
     title = "Ach, mein herzliebes Jesulein"
-    subsubtitle = "Choräle, Nr. 9, 2. Choral, D-Dur"
+    subsubtitle = "Choräle, Nr. 9, 1. Teil, 2. Choral (2. gesamt), D-Dur"
     instrument = "C.F. (und B.C.)"
   }
   \score {
@@ -800,6 +800,11 @@ scoreDChordsPart = <<
 >>
 
 \bookpart {
+  \header {
+    title = "Ach, mein herzliebes Jesulein"
+    subsubtitle = "Choräle, Nr. 9, 1. Teil, 2. Choral (2. gesamt), D-Dur"
+    instrument = "Chor und B.C."
+  }
   \score {
     <<
       \new StaffGroup <<
@@ -1292,7 +1297,7 @@ scoreGBassoContinuoPart = <<
 \bookpart {
   \header {
     title = "Schaut hin, dort liegt im finstern Stall"
-    subsubtitle = "Nr. 17, 2. Teil, 2. Choral (4. gesamt), C-Dur,"
+    subsubtitle = "Choräle, Nr. 17, 2. Teil, 2. Choral (4. gesamt), C-Dur,"
     instrument = "C.F. (und B.C.)"
   }
   \score {
@@ -1487,7 +1492,7 @@ scoreHChordsPart = <<
 \bookpart {
   \header {
     title = "Schaut hin, dort liegt im finstern Stall"
-    subsubtitle = "Nr. 17, 2. Teil, 2. Choral (4. gesamt), C-Dur,"
+    subsubtitle = "Choräle, Nr. 17, 2. Teil, 2. Choral (4. gesamt), C-Dur,"
     instrument = "Chor und B.C."
   }
   \score {
@@ -2001,9 +2006,15 @@ scoreKVerse = \lyricmode {
 }
 
 scoreKBcMusic = \relative c {
-  \global
+  \globalK
   % Music follows here.
-
+  \partial 4
+  a'8(g)
+  fs(e) d4 g4.(fs16 e fs8) d a' a, d2\fermata
+  fs8(e) d(cs) b(a') gs(e) a(fs) d(e) a4\fermata
+  d,8(e) fs(gs) a(b) cs(d) e(ds) cs(a) b4 e,\fermata
+  a gs8(fs) e(ds) e(fs) g(e) fs(gs a gs fs e) d(cs) ds(b) e(d) cs(a d4) a2.\fermata
+  \bar "|."
 }
 
 scoreKBcFigures = \figuremode {
@@ -2060,21 +2071,33 @@ scoreLSoprano = \relative c'' {
 }
 
 scoreLAlto = \relative c' {
-  \global
+  \globalL
   % Music follows here.
-
+  \partial 4
+  e4
+  fs fs8(e) d(g) e(cs) a'(g16 fs g8) e fs2\fermata
+  a4 a d8(cs) b4 b8(a4) gs8 e4\fermata
+  fs8(g) a(b b) a16(gs) a4 gs8(fs) e4. ds8 b4\fermata
+  cs8(ds) e4 fs e e8(g) fs(e) ds(es) fs(gs a4 a g2) fs4(fs) e8(d) e4\fermata
+  \bar "|."
 }
 
 scoreLTenor = \relative c' {
-  \global
+  \globalL
   % Music follows here.
-
+  \partial 4
+  cs4
+  cs d8(cs) b(e) cs(e) a,(d4) cs8 a2\fermata
+  fs'4 e d e e8(fs4) e16(d)cs4\fermata
+  a fs'8(e) e4 e e8(b) cs(e) bs(a)gs4\fermata
+  a8(fs) gs4 a gs a a8(gs) fs(b) cs(d e4 fs e2) d4(d) cs8(b) cs4\fermata
+  \bar "|."
 }
 
 scoreLBass = \relative c {
-  \global
+  \globalL
   % Music follows here.
-
+  \scoreKBcMusic
 }
 
 scoreLVerse = \lyricmode {
@@ -2133,23 +2156,23 @@ scoreLRehearsalMidi = #
  #})
 
 scoreLBcMusic = \relative c {
-  \global
+  \globalL
   % Music follows here.
-
+  \scoreKBcMusic
 }
 
 scoreLBcFigures = \figuremode {
-  \global
+  \globalL
   \override Staff.BassFigureAlignmentPositioning #'direction = #DOWN
   % Figures follow here.
-
+  \scoreKBcFigures
 }
 
 scoreLChordNames = \chordmode {
-  \global
+  \globalL
   \germanChords
   % Chords follow here.
-
+  \scoreKChordNames
 }
 
 scoreLChoirPart = <<
@@ -2193,6 +2216,9 @@ scoreLChoirPart = <<
       \clef bass
       \new Voice = "bass" \scoreLBass
     }
+    \new Lyrics \with {
+      \override VerticalAxisGroup #'staff-affinity = #CENTER
+    } \lyricsto "bass" \scoreLVerse
   >>
   \scoreLPianoReduction
 >>
