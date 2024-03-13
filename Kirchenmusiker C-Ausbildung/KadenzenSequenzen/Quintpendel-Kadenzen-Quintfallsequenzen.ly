@@ -31,8 +31,8 @@
 
 global = {
   \key c \major
-  \numericTimeSignature
-  \time 4/4
+%   \numericTimeSignature
+  \time 3/4
   \tempo "Andante" 4=50
 }
 
@@ -365,7 +365,8 @@ verse = \lyricmode {
   % Lyrics follow here.
   % QP^5_EL
   do so do do fa do do di do do so do do fa do do di do
-  do so do do fa do do di 
+  do so do do fa do do di do do di do do so do do fa do do
+  do so do do fa do do di do do so do do fa do do di do do di do 
 }
 
 figBass = \figuremode {
@@ -382,19 +383,19 @@ figBass = \figuremode {
     % QP^3_EL
     r4 r r
     r4 r r
-    r4 r r
+    r8 <6> r r <6> r
     % QP^5_WL
-    r4 r r
+    r4 <6> r
     r4 r r
     r4 r r
     % QP^8_WL
     r4 r r
     r4 r r
-    r4 r r
+    r4 <6> r 
     % QP^3_WL
     r4 r r
     r4 r r
-    r4 r r
+    r8 <6> r r <6> r
     \time 4/4
     %
     % KD I VI V I
@@ -480,11 +481,11 @@ chordNames = \chordmode {
   % QP^8_WL
   c g c
   c f c
-  c d c
+  c b:dim/d c
   % QP^3_WL
   c g c
   c f c
-  c8[d c]c[d c]
+  c8[b:dim/d c]c[b:dim/d c]
   \time 4/4
   % KD
   % KD^5_EL-I-IV-V-I
