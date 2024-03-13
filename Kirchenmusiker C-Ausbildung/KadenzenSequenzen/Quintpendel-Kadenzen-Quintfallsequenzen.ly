@@ -44,7 +44,7 @@ globalA = {
 }
 
 scoreASoprano = \relative c'' {
-  \global
+  \globalA
   % Music follows here.
   g^\markup{\column{\line{C-Dur: QP\super{5}\sub{EL}}\line{I-V-I}}} g g
   g^\markup{\column{\line{QP\super{5}\sub{EL}}\line{I-IV-I}}} a g
@@ -598,45 +598,520 @@ scoreAChordsPart = \new ChordNames \scoreAChordNames
   }
 }
 
+% -----------------------------------------------
+% -----------------------------------------------
+% -----------------------------------------------
+% begin a minor
+% -----------------------------------------------
+% -----------------------------------------------
+% -----------------------------------------------
+
+globalB = {
+  \key a \minor
+  %   \numericTimeSignature
+  \time 3/4
+  \tempo "Andante" 4=50
+}
+
 scoreBSoprano = \relative c'' {
-  \global
+  \globalB
   % Music follows here.
-  
+  e,^\markup{\column{\line{C-Dur: QP\super{5}\sub{EL}}\line{I-V-I}}} e e
+  e^\markup{\column{\line{QP\super{5}\sub{EL}}\line{I-IV-I}}} f e
+  e^\markup{\column{\line{QP\super{5}\sub{EL}}\line{I-VII-I}}} d e
+  \bar "||"
+  a^\markup{\column{\line{QP\super{8}\sub{EL}}\line{I-V-I}}} gs a
+  a^\markup{\column{\line{QP\super{8}\sub{EL}}\line{I-IV-I}}} a a
+  a^\markup{\column{\line{QP\super{8}\sub{EL}}\line{I-VII-I}}} gs a
+  \bar "||"
+  c,^\markup{\column{\line{QP\super{3}\sub{EL}}\line{I-V-I}}} b c
+  c^\markup{\column{\line{QP\super{3}\sub{EL}}\line{I-IV-I}}} d c
+  c8^\markup{\column{\line{QP\super{3}\sub{EL}}\line{I-VII-I}}}[b c] c d c
+  \bar "||"
+  e4^\markup{\column{\line{QP\super{5}\sub{WL}}\line{I-V-I}}} e e
+  e^\markup{\column{\line{QP\super{5}\sub{WL}}\line{I-IV-I}}} f e
+  e^\markup{\column{\line{QP\super{5}\sub{WL}}\line{I-VII-I}}} r r
+  \bar "||"
+  a^\markup{\column{\line{QP\super{8}\sub{WL}}\line{I-V-I}}} gs a
+  a^\markup{\column{\line{QP\super{8}\sub{WL}}\line{I-IV-I}}} a a
+  a^\markup{\column{\line{QP\super{8}\sub{WL}}\line{I-VII-I}}} gs a
+  \bar "||"
+  c^\markup{\column{\line{QP\super{3}\sub{WL}}\line{I-V-I}}} b c
+  c^\markup{\column{\line{QP\super{3}\sub{WL}}\line{I-IV-I}}} d c
+  c8^\markup{\column{\line{QP\super{3}\sub{WL}}\line{I-VII-I}}}[b c] c[d c]
+  \bar "|.|"\break
+  \time 4/4
+  % KD I IV V I
+  e,4^\markup{\column{\line{KD\super{5}\sub{EL}}\line{I-IV-V-I}}} f e e
+  \bar "||"
+  a^\markup{\column{\line{KD\super{8}\sub{EL}}\line{I-IV-V-I}}} a gs a
+  \bar "||"
+  c,^\markup{\column{\line{KD\super{3}\sub{EL}}\line{I-IV-V-I}}} d b c
+  \bar "||"
+  e^\markup{\column{\line{KD\super{5}\sub{WL}}\line{I-IV-V-I}}} f e e
+  \bar "||"
+  a4^\markup{\column{\line{KD\super{8}\sub{WL}}\line{I-IV-V-I}}} a gs a
+  \bar "||"
+  c^\markup{\column{\line{KD\super{3}\sub{WL}}\line{I-IV-V-I}}} d b c
+  \bar "|.|"
+  % KD I IV VII I
+  e,4^\markup{\column{\line{KD\super{5}\sub{EL}}\line{I-IV-VII-I}}} f d e
+  \bar "||"
+  a^\markup{\column{\line{KD\super{8}\sub{EL}}\line{I-IV-VII-I}}} a gs a
+  \bar "||"
+  c,^\markup{\column{\line{KD\super{3}\sub{EL}}\line{I-IV-VII-I}}} d b c
+  \bar "||"
+  e^\markup{\column{\line{KD\super{5}\sub{WL}}\line{I-IV-VII-I}}} f d e
+  \bar "||"
+  a4^\markup{\column{\line{KD\super{8}\sub{WL}}\line{I-IV-VII-I}}} a gs a
+  \bar "||"
+  c^\markup{\column{\line{KD\super{3}\sub{WL}}\line{I-IV-VII-I}}} d b c
+  \bar "|.|"
+  % KD I II65 V I
+  e,4^\markup{\column{\line{KD\super{5}\sub{EL}}\line{I-II\super{6/5}-V-I}}} f e e
+  \bar "||"
+  a^\markup{\column{\line{KD\super{8}\sub{EL}}\line{I-II\super{6/5}-V-I}}} a gs a
+  \bar "||"
+  c,^\markup{\column{\line{KD\super{3}\sub{EL}}\line{I-II\super{6/5}-V-I}}} b b c
+  \bar "||"
+  e^\markup{\column{\line{KD\super{5}\sub{WL}}\line{I-II\super{6/5}-V-I}}} f e e
+  \bar "||"
+  a4^\markup{\column{\line{KD\super{8}\sub{WL}}\line{I-II\super{6/5}-V-I}}} a gs a
+  \bar "||"
+  c^\markup{\column{\line{KD\super{3}\sub{WL}}\line{I-II\super{6/5}-V-I}}} b b c
+  \bar "|.|"
+  % QFS
+  e,^\markup{\column{\line{QFS\super{5}\sub{EL}}\line{I-IV-VII-III-VI-II-V-I}}} f d e c d b c
+  \bar "||"
+  a'^\markup{\column{\line{QFS\super{8}\sub{EL}}\line{I-IV-VII-III-VI-II-V-I}}} a gs gs f f e e
+  \bar "||"
+  c'^\markup{\column{\line{QFS\super{3}\sub{EL}}\line{I-IV-VII-III-VI-II-V-I}}} d b c a b gs a
+  \bar "||"
+  e'^\markup{\column{\line{QFS\super{5}\sub{WL}}\line{I-IV-VII-III-VI-II-V-I}}} f d e c d b c
+  \bar "||"
+  a^\markup{\column{\line{QFS\super{8}\sub{WL}}\line{I-IV-VII-III-VI-II-V-I}}} a gs gs f f e e
+  \bar "||"
+  cs'^\markup{\column{\line{QFS\super{3}\sub{WL}}\line{I-IV-VII-III-VI-II-V-I}}} d b c a b gs a
+  \bar "|."  
 }
 
 scoreBAlto = \relative c' {
-  \global
+  \globalB
   % Music follows here.
-  
+  % QP^5_EL
+  c b c
+  c d c
+  c b c
+  % QP^8_EL
+  e e e
+  e f e
+  e d e
+  % QP^3_EL
+  a, gs a
+  a a a
+  a8[gs a]a[gs a]
+  % QP^5_WL
+  a4 gs a
+  a a a
+  a r r
+  % QP^8_WL
+  c b c
+  c d c
+  c b c
+  % QP^3_WL
+  e e e
+  e f e
+  e8[d e] e[d e]
+  \time 4/4
+  % KD
+  % KD^5_WE-I-IV-V-I
+  c4 d b c
+  % KD^8_EL-I-IV-V-I
+  e fs e e
+  % KD^3_EL-I-IV-V-I
+  a, a gs a
+  % KD^5_WL-I-IV-V-I
+  a a gs a
+  % KD^8_WL-I-IV-V-I
+  c d b c
+  % KD^3_WL-I-IV-V-I
+  e f e e
+  % KD^5_WE-I-IV-V-I
+  c4 d b c
+  % KD^8_EL-I-IV-V-I
+  e f d e
+  % KD^3_EL-I-IV-V-I
+  a, a gs a
+  % KD^5_WL-I-IV-V-I
+  a a gs a
+  % KD^8_WL-I-IV-V-I
+  c d b c
+  % KD^3_WL-I-IV-V-I
+  e f d e
+  % KD^5_WE-I-IV-V-I
+  c4 b b c
+  % KD^8_EL-I-IV-V-I
+  e f e e
+  % KD^3_EL-I-IV-V-I
+  a, a gs a
+  % KD^5_WL-I-IV-V-I
+  a a gs a
+  % KD^8_WL-I-IV-V-I
+  c b b c
+  % KD^3_WL-I-IV-V-I
+  e f e e
+  % QFS
+  % QFS^5_EL-I-IV-VII-III-VI-II-V-I
+  c d b c a b gs a
+  % QFS^8_EL-I-IV-VII-III-VI-II-V-I
+  e' f d e c d b c
+  % QFS^3_EL-I-IV-VII-III-VI-II-V-I
+  a' a gs gs f f e e
+  % QFS^5_WL-I-IV-VII-III-VI-II-V-I
+  a a gs gs f f e e
+  % QFS^8_WL-I-IV-VII-III-VI-II-V-I
+  c d b c a b gs a
+  % QFS^3_WL-I-IV-VII-III-VI-II-V-I
+  e' f d e c d b c
+  \bar "|."  
 }
 
 scoreBTenor = \relative c' {
-  \global
+  \globalB
   % Music follows here.
-  
+  % QP^5_EL
+  a gs a
+  a a a
+  a gs a
+  % QP^8_EL
+  c b c
+  c d c
+  c b c
+  % QP^3_EL
+  e, e e
+  e f e
+  e8[d e]e[d e]
+  % QP^5_WL
+  c4 b c
+  c d c
+  c r r
+  % QP^8_WL
+  e e e
+  e f e
+  e d e
+  % QP^3_WL
+  a gs a
+  a a a
+  a8[gs a]a[gs a]
+  \time 4/4
+  % KD
+  % KD^5_EL-I-IV-V-I
+  a4 a gs a
+  % KD^8_EL-I-IV-V-I
+  c d b c
+  % KD^3_EL-I-IV-V-I
+  e, f e e
+  % KD^5_WL-I-IV-V-I
+  c d b c
+  % KD^8_WL-I-IV-V-I
+  e f e e
+  % KD^3_WL-I-IV-V-I
+  a a gs a
+  % KD^5_EL-I-IV-V-I
+  a4 a gs a
+  % KD^8_EL-I-IV-V-I
+  c d b c
+  % KD^3_EL-I-IV-V-I
+  e, f d e
+  % KD^5_WL-I-IV-V-I
+  c d e c
+  % KD^8_WL-I-IV-V-I
+  e f d e
+  % KD^3_WL-I-IV-V-I
+  a a gs a
+  % KD^5_EL-I-IV-V-I
+  a4 a gs a
+  % KD^8_EL-I-IV-V-I
+  c b b c
+  % KD^3_EL-I-IV-V-I
+  e, f e e
+  % KD^5_WL-I-IV-V-I
+  c b b c
+  % KD^8_WL-I-IV-V-I
+  e f e e
+  % KD^3_WL-I-IV-V-I
+  a a gs a
+  % QFS
+  % QFS^5_EL-I-IV-VII-III-VI-II-V-I
+  a a gs gs f f e e
+  % QFS^8_EL-I-IV-VII-III-VI-II-V-I
+  c' d b c a b gs a
+  % QFS^3_EL-I-IV-VII-III-VI-II-V-I
+  e' f d e c d b c
+  % QFS^5_WL-I-IV-VII-III-VI-II-V-I
+  c d b c a b gs a
+  % QFS^8_WL-I-IV-VII-III-VI-II-V-I
+  e f d e c d b c
+  % QFS^3_WL-I-IV-VII-III-VI-II-V-I
+  a' a gs gs f f e e
+  \bar "|."  
 }
 
 scoreBBass = \relative c {
-  \global
+  \globalB
   % Music follows here.
-  
+  % QP^5_EL
+  a e a
+  a d a
+  a b a
+  % QP^8_EL
+  a e a
+  a d, a'
+  a b a
+  % QP^3_EL
+  a e a
+  a d a
+  a8[b a]a[b a]
+  % QP^5_WL
+  a4 e a
+  a d, a'
+  a r r
+  % QP^8_WL
+  a e a
+  a d a
+  a b a
+  % QP^3_WL
+  a e a
+  a d a
+  a8[b a]a[b a]
+  \time 4/4
+  % KD
+  % KD^5_EL-I-IV-V-I
+  a4 d, e a|
+  % KD^8_EL-I-IV-V-I
+  a d, e a|
+  % KD^3_EL-I-IV-V-I
+  a d, e a|
+  % KD^5_WL-I-IV-V-I
+  a d, e a|
+  % KD^8_WL-I-IV-V-I
+  a d, e a|
+  % KD^3_WL-I-IV-V-I
+  a d, e a|
+  % KD^5_EL-I-IV-V-I
+  a4 d, b' a|
+  % KD^8_EL-I-IV-V-I
+  a d, b' a|
+  % KD^3_EL-I-IV-V-I
+  a d, b' a|
+  % KD^5_WL-I-IV-V-I
+  a d, b' a|
+  % KD^8_WL-I-IV-V-I
+  a d, b' a|
+  % KD^3_WL-I-IV-V-I
+  a d, b' a|
+  % KD^5_EL-I-IV-V-I
+  a4 d,8 \parenthesize ds e4 a|
+  % KD^8_EL-I-IV-V-I
+  a d,8 \parenthesize ds e4 a|
+  % KD^3_EL-I-IV-V-I
+  a d,8 \parenthesize ds e4 a|
+  % KD^5_WL-I-IV-V-I
+  a d,8 \parenthesize ds e4 a|
+  % KD^8_WL-I-IV-V-I
+  a d,8 \parenthesize ds e4 a|
+  % KD^3_WL-I-IV-V-I
+  a d,8 \parenthesize ds e4 a|
+  % QFS
+  % QFS^5_EL-I-IV-VII-III-VI-II-V-I
+  a d gs, c f, b e, a
+  % QFS^8_EL-I-IV-VII-III-VI-II-V-I
+  a d gs, c f, b e, a
+  % QFS^3_EL-I-IV-VII-III-VI-II-V-I
+  a d gs, c f, b e, a
+  % QFS^5_WL-I-IV-VII-III-VI-II-V-I
+  a d gs, c f, b e, a
+  % QFS^8_WL-I-IV-VII-III-VI-II-V-I
+  a d gs, c f, b e, a
+  % QFS^3_WL-I-IV-VII-III-VI-II-V-I
+  a d gs, c f, b e, a
+  \bar "|."  
 }
 
 scoreBVerse = \lyricmode {
   % Lyrics follow here.
-  
+  \scoreAVerse
 }
 
 scoreBFigBass = \figuremode {
-  \global
+  \globalB
   % Figures follow here.
-  
+  % QP^5_EL
+  r4 r r
+  r4 r r
+  r4 <6> r
+  % QP^8_EL
+  r4 r r
+  r4 r r
+  r4 <6> r
+  % QP^3_EL
+  r4 r r
+  r4 r r
+  r8 <6> r r <6> r
+  % QP^5_WL
+  r4 <6> r
+  r4 r r
+  r4 r r
+  % QP^8_WL
+  r4 r r
+  r4 r r
+  r4 <6> r
+  % QP^3_WL
+  r4 r r
+  r4 r r
+  r8 <6> r r <6> r
+  \time 4/4
+  %
+  % KD I VI V I
+  %
+  % KD^5_EL-I-IV-V-I
+  r4 r r r
+  % KD^8_EL-I-IV-V-I
+  r4 r r r
+  % KD^3_EL-I-IV-V-I
+  r4 r r r
+  % KD^5_WL-I-IV-V-I
+  r4 r r r
+  % KD^8_WL-I-IV-V-I
+  r4 r r r
+  % KD^3_WL-I-IV-V-I
+  r4 r r r
+  %
+  % KD I VI VII I
+  %
+  % KD^5_EL-I-IV-VII-I
+  r4 r r r
+  % KD^8_EL-I-IV-VII-I
+  r4 r r r
+  % KD^3_EL-I-IV-VII-I
+  r4 r r r
+  % KD^5_WL-I-IV-VII-I
+  r4 r r r
+  % KD^8_WL-I-IV-VII-I
+  r4 r r r
+  % KD^3_WL-I-IV-VII-I
+  r4 r r r
+  %
+  % KD I II6/5 V I
+  %
+  % KD^5_EL-I-II6/5-V-I
+  r4 <6 5> r r
+  % KD^8_EL-I-II6/5-V-I
+  r4 <6 5> r r
+  % KD^3_EL-I-II6/5-V-I
+  r4 <6 5> r r
+  % KD^5_WL-I-II6/5-V-I
+  r4 <6 5> r r
+  % KD^8_WL-I-II6/5-V-I
+  r4 <6 5> r r
+  % KD^3_WL-I-II6/5-V-I
+  r4 <6 5> r r
+  %
+  % QFS
+  %
+  r4 r r r
+  r4 r r r
+  r4 r r r
+  r4 r r r
+  r4 r r r
+  r4 r r r
+  r4 r r r
+  r4 r r r
+  r4 r r r
+  r4 r r r
+  r4 r r r
+  r4 r r r  
 }
 
 scoreBChordNames = \chordmode {
-  \global
+  \globalB
   % Chords follow here.
-  
+  % QP^5_EL
+  a:min e a:min
+  a:min d a:min
+  a:min gs:dim/b a
+  % QP^8_EL
+  a:min e a:min
+  a:min d:min a:min
+  a:min gs:dim/b a:min
+  % QP^3_EL
+  a:min e a:min
+  a:min d:min a:min
+  a8[gs:dim/b a]a[gs:dim/b a]
+  % QP^5_WL
+  a4:min e a:min
+  a:min d:min a:min
+  a:min s s
+  % QP^8_WL
+  a:min e a:min
+  a:min d:min a:min
+  a:min gs:dim/b a:min
+  % QP^3_WL
+  a:min e a:min
+  a:min d:min a:min
+  a8[gs:dim/b a]a[gs:dim/b a]
+  \time 4/4
+  % KD
+  % KD^5_EL-I-IV-V-I
+  a4:min d:min e a:min|
+  % KD^8_EL-I-IV-V-I
+  a:min d:min e a:min|
+  % KD^3_EL-I-IV-V-I
+  a:min d:min e a:min|
+  % KD^5_WL-I-IV-V-I
+  a:min d:min e a:min|
+  % KD^8_WL-I-IV-V-I
+  a:min d:min e a:min|
+  % KD^3_WL-I-IV-V-I
+  a:min d:min e a:min|
+  % KD^5_EL-I-IV-V-I
+  a4:min d:min gs:dim/b a:min|
+  % KD^8_EL-I-IV-V-I
+  a:min d:min gs:dim/b a:min|
+  % KD^3_EL-I-IV-V-I
+  a:min d:min gs:dim/b a:min|
+  % KD^5_WL-I-IV-V-I
+  a:min d:min gs:dim/b a:min|
+  % KD^8_WL-I-IV-V-I
+  a:min d:min gs:dim/b a:min|
+  % KD^3_WL-I-IV-V-I
+  a:min d:min gs:dim/b a:min|
+  % KD^5_EL-I-IV-V-I
+  a4:min d8:min \parenthesize ds e4 a:min|
+  % KD^8_EL-I-IV-V-I
+  a:min d8:min \parenthesize ds e4 a:min|
+  % KD^3_EL-I-IV-V-I
+  a:min d8:min \parenthesize ds e4 a:min|
+  % KD^5_WL-I-IV-V-I
+  a:min d8:min \parenthesize ds e4 a:min|
+  % KD^8_WL-I-IV-V-I
+  a:min d8:min \parenthesize ds e4 a:min|
+  % KD^3_WL-I-IV-V-I
+  a:min d8:min \parenthesize ds e4 a:min|
+  % QFS
+  % QFS^5_EL-I-IV-VII-III-VI-II-V-I
+  a:min d:min gs c f b e a:min
+  % QFS^8_EL-I-IV-VII-III-VI-II-V-I
+  a:min d:min gs c f b e a:min
+  % QFS^3_EL-I-IV-VII-III-VI-II-V-I
+  a:min d:min gs c f b e a:min
+  % QFS^5_WL-I-IV-VII-III-VI-II-V-I
+  a:min d:min gs c f b e a:min
+  % QFS^8_WL-I-IV-VII-III-VI-II-V-I
+  a:min d:min gs c f b e a:min
+  % QFS^3_WL-I-IV-VII-III-VI-II-V-I
+  a:min d:min gs c f b e a:min
+  \bar "|."  
 }
 
 scoreBChoirPart = \new ChoirStaff <<
@@ -677,6 +1152,9 @@ scoreBBassFiguresPart = \new FiguredBass \scoreBFigBass
 scoreBChordsPart = \new ChordNames \scoreBChordNames
 
 \bookpart {
+  \header {
+    subtitle = "a-Moll"
+  }
   \score {
     <<
       \scoreBChoirPart
@@ -686,6 +1164,21 @@ scoreBChordsPart = \new ChordNames \scoreBChordNames
     \layout { }
     \midi { }
   }
+}
+
+% -----------------------------------------------
+% -----------------------------------------------
+% -----------------------------------------------
+% begin a minor
+% -----------------------------------------------
+% -----------------------------------------------
+% -----------------------------------------------
+
+globalB = {
+  \transpose c g \key c \major
+  %   \numericTimeSignature
+  \time 3/4
+  \tempo "Andante" 4=50
 }
 
 scoreCSoprano = \relative c'' {
