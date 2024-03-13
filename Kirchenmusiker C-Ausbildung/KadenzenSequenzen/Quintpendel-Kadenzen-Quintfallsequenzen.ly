@@ -4,8 +4,8 @@
 \header {
   dedication = ""
   title = "Quintpendel (QP), Kadenzen (KD), Quintfallsequenzen (QFS)"
-  subtitle = ""
-  subsubtitle = ""
+  subtitle = "C-Dur"
+  subsubtitle = "Weite und enge Lage"
   instrument = "Orgel"
   composer = ""
   arranger = \markup{"Fingerings: " \with-url "https://buschke.com" "Sven Buschke"}
