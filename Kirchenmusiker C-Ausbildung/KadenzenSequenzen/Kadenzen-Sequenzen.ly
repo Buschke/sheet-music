@@ -735,7 +735,6 @@ scoreABassGMajor = \relative c' {
 
 scoreAVerse = \lyricmode {
   % Lyrics follow here.
-
 }
 
 scoreAFigBass = \figuremode {
