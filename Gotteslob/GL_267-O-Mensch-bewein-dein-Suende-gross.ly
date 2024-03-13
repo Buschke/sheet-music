@@ -25,8 +25,8 @@
 
 global = {
   \key c \major
-%   \numericTimeSignature
-  \time 2/1
+  \numericTimeSignature
+  \time 4/4
   \tempo "Andante" 4=50
 }
 
@@ -45,7 +45,7 @@ scoreAChordNamesLeadSheet = \chordmode {
   g c4 f c4. f8 c4 c g2\breathe
   c f4 g c4. g8 f4 f c2\breathe
   c g4 c f c g2 c1
-  \bar "|."
+  \bar "|."  
 }
 
 scoreAMelody = \relative c'' {
@@ -61,7 +61,7 @@ scoreAMelody = \relative c'' {
   e g4 a g e f(g) e2 r d e4 f g4. f8 e4 e d2\breathe
   g a4 b c4. b8 a4 a g2\breathe
   c, d4 e f e d2 c1
-  \bar "|."  
+  \bar "|."   
 }
 
 scoreAVerse = \lyricmode {
@@ -88,6 +88,7 @@ scoreAVerseC = \lyricmode {
   wohl an dem Kreu -- ze lan -- ge.
 }
 
+
 scoreABcMusic = \relative c {
   \global
   % Music follows here.
@@ -101,7 +102,7 @@ scoreABcFigures = \figuremode {
   
 }
 
-scoreAChordNamesChords = \chordmode {
+scoreAChordNamesChordsI = \chordmode {
   \global
   % Chords follow here.
   \repeat volta 2 {
@@ -115,7 +116,19 @@ scoreAChordNamesChords = \chordmode {
   b:dim/d c4/e f g4. f8 c4/e c/e b2:dim/d\breathe
   g f4/a g/b c4. g8/b f4/a f/a g2\breathe
   c b4:dim/d c/e f c/e b2:dim/d c1
-  \bar "|."
+  \bar "|."  
+}
+
+scoreAChordNamesChordsII = \chordmode {
+  \global
+  % Chords follow here.
+  
+}
+
+scoreAChordNamesChordsIII = \chordmode {
+  \global
+  % Chords follow here.
+  
 }
 
 scoreALeadSheetPart = <<
@@ -136,18 +149,23 @@ scoreABassoContinuoPart = <<
   \new FiguredBass \scoreABcFigures
 >>
 
-scoreAChordsPart = <<
-  \new ChordNames \scoreAChordNamesChords
-%   \new Chord \scoreAChordNamesChords
-%   \new FretBoards \scoreAChordNamesChords
+scoreAChordsIPart = <<
+  \new ChordNames \scoreAChordNamesChordsI
+%   \new FretBoards \scoreAChordNamesChordsI
 >>
+
+scoreAChordsIIPart = \new ChordNames \scoreAChordNamesChordsII
+
+scoreAChordsIIIPart = \new ChordNames \scoreAChordNamesChordsIII
 
 \bookpart {
   \score {
     <<
       \scoreALeadSheetPart
 %       \scoreABassoContinuoPart
-      \scoreAChordsPart
+      \scoreAChordsIPart
+      \scoreAChordsIIPart
+      \scoreAChordsIIIPart
     >>
     \layout { }
     \midi { }
