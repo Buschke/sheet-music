@@ -1,0 +1,13 @@
+a: c major  b: a minor
+c: g major  d: e minor 
+e: f major  f: d minor
+g: d major  h: h minor
+i: bf major j: g minor
+k: a major  l: fs minor
+m: ef major n: c minor
+o: e major  p: cs minor
+q: af major r: f minor
+s: b major  t: gs minor
+u: df major v: bf minor
+w: fs major x: ds minor
+y: gf major z: ef minor

@@ -1169,12 +1169,12 @@ scoreBChordsPart = \new ChordNames \scoreBChordNames
 % -----------------------------------------------
 % -----------------------------------------------
 % -----------------------------------------------
-% begin a minor
+% begin G major
 % -----------------------------------------------
 % -----------------------------------------------
 % -----------------------------------------------
 
-globalB = {
+globalC = {
   \transpose c g \key c \major
   %   \numericTimeSignature
   \time 3/4
@@ -1182,44 +1182,44 @@ globalB = {
 }
 
 scoreCSoprano = \relative c'' {
-  \global
+  \globalC
   % Music follows here.
-  
+  \transpose c g \scoreASoprano
 }
 
 scoreCAlto = \relative c' {
-  \global
+  \globalC
   % Music follows here.
-  
+  \transpose c g \scoreAAlto
 }
 
 scoreCTenor = \relative c' {
-  \global
+  \globalC
   % Music follows here.
-  
+  \transpose c g \scoreATenor
 }
 
 scoreCBass = \relative c {
-  \global
+  \globalC
   % Music follows here.
-  
+  \transpose c g \scoreABass
 }
 
 scoreCVerse = \lyricmode {
   % Lyrics follow here.
-  
+  \scoreAVerse
 }
 
 scoreCFigBass = \figuremode {
-  \global
+  \globalC
   % Figures follow here.
-  
+  \scoreAFigBass
 }
 
 scoreCChordNames = \chordmode {
-  \global
+  \globalC
   % Chords follow here.
-  
+  \transpose c g \scoreAChordNames
 }
 
 scoreCChoirPart = \new ChoirStaff <<
@@ -1260,6 +1260,9 @@ scoreCBassFiguresPart = \new FiguredBass \scoreCFigBass
 scoreCChordsPart = \new ChordNames \scoreCChordNames
 
 \bookpart {
+  \header {
+    subtitle = "G-Dur"
+  }
   \score {
     <<
       \scoreCChoirPart
@@ -1271,45 +1274,60 @@ scoreCChordsPart = \new ChordNames \scoreCChordNames
   }
 }
 
+% -----------------------------------------------
+% -----------------------------------------------
+% -----------------------------------------------
+% begin e minor
+% -----------------------------------------------
+% -----------------------------------------------
+% -----------------------------------------------
+
+globalD = {
+  \transpose a e \key a \minor
+  %   \numericTimeSignature
+  \time 3/4
+  \tempo "Andante" 4=50
+}
+
 scoreDSoprano = \relative c'' {
-  \global
+  \globalD
   % Music follows here.
-  
+  \transpose a e \scoreBSoprano
 }
 
 scoreDAlto = \relative c' {
-  \global
+  \globalD
   % Music follows here.
-  
+  \transpose a e \scoreBAlto
 }
 
 scoreDTenor = \relative c' {
-  \global
+  \globalD
   % Music follows here.
-  
+  \transpose a e \scoreBTenor
 }
 
 scoreDBass = \relative c {
-  \global
+  \globalD
   % Music follows here.
-  
+  \transpose a e \scoreBBass
 }
 
 scoreDVerse = \lyricmode {
   % Lyrics follow here.
-  
+  \scoreBVerse
 }
 
 scoreDFigBass = \figuremode {
-  \global
+  \globalD
   % Figures follow here.
-  
+  \scoreBFigBass
 }
 
 scoreDChordNames = \chordmode {
-  \global
+  \globalD
   % Chords follow here.
-  
+  \transpose a e \scoreBChordNames
 }
 
 scoreDChoirPart = \new ChoirStaff <<
@@ -1350,6 +1368,9 @@ scoreDBassFiguresPart = \new FiguredBass \scoreDFigBass
 scoreDChordsPart = \new ChordNames \scoreDChordNames
 
 \bookpart {
+  \header {
+    subtitle = "e-Moll"
+  }
   \score {
     <<
       \scoreDChoirPart
@@ -1361,45 +1382,60 @@ scoreDChordsPart = \new ChordNames \scoreDChordNames
   }
 }
 
+% -----------------------------------------------
+% -----------------------------------------------
+% -----------------------------------------------
+% begin f major
+% -----------------------------------------------
+% -----------------------------------------------
+% -----------------------------------------------
+
+globalE = {
+  \transpose c f \key c \major
+  %   \numericTimeSignature
+  \time 3/4
+  \tempo "Andante" 4=50
+}
+
 scoreESoprano = \relative c'' {
-  \global
+  \globalE
   % Music follows here.
-  
+  \transpose c f \scoreASoprano
 }
 
 scoreEAlto = \relative c' {
-  \global
+  \globalE
   % Music follows here.
-  
+  \transpose c f \scoreAAlto
 }
 
 scoreETenor = \relative c' {
-  \global
+  \globalE
   % Music follows here.
-  
+  \transpose c f \scoreATenor
 }
 
 scoreEBass = \relative c {
-  \global
+  \globalE
   % Music follows here.
-  
+  \transpose c f \scoreABass
 }
 
 scoreEVerse = \lyricmode {
   % Lyrics follow here.
-  
+  \scoreAVerse
 }
 
 scoreEFigBass = \figuremode {
-  \global
+  \globalE
   % Figures follow here.
-  
+  \scoreAFigBass
 }
 
 scoreEChordNames = \chordmode {
-  \global
+  \globalE
   % Chords follow here.
-  
+  \transpose c f \scoreAChordNames
 }
 
 scoreEChoirPart = \new ChoirStaff <<
@@ -1440,6 +1476,9 @@ scoreEBassFiguresPart = \new FiguredBass \scoreEFigBass
 scoreEChordsPart = \new ChordNames \scoreEChordNames
 
 \bookpart {
+  \header {
+    subtitle = "F-Dur"
+  }
   \score {
     <<
       \scoreEChoirPart
@@ -1451,45 +1490,60 @@ scoreEChordsPart = \new ChordNames \scoreEChordNames
   }
 }
 
+% -----------------------------------------------
+% -----------------------------------------------
+% -----------------------------------------------
+% begin d minor
+% -----------------------------------------------
+% -----------------------------------------------
+% -----------------------------------------------
+
+globalF = {
+  \transpose a d \key a \minor
+  %   \numericTimeSignature
+  \time 3/4
+  \tempo "Andante" 4=50
+}
+
 scoreFSoprano = \relative c'' {
-  \global
+  \globalF
   % Music follows here.
-  
+  \transpose a d \scoreBSoprano
 }
 
 scoreFAlto = \relative c' {
-  \global
+  \globalF
   % Music follows here.
-  
+  \transpose a d \scoreBAlto
 }
 
 scoreFTenor = \relative c' {
-  \global
+  \globalF
   % Music follows here.
-  
+  \transpose a d \scoreBTenor
 }
 
 scoreFBass = \relative c {
-  \global
+  \globalF
   % Music follows here.
-  
+  \transpose a d \scoreBBass
 }
 
 scoreFVerse = \lyricmode {
   % Lyrics follow here.
-  
+  \scoreBVerse
 }
 
 scoreFFigBass = \figuremode {
-  \global
+  \globalF
   % Figures follow here.
-  
+  \scoreBFigBass
 }
 
 scoreFChordNames = \chordmode {
-  \global
+  \globalF
   % Chords follow here.
-  
+  \transpose a d \scoreBChordNames
 }
 
 scoreFChoirPart = \new ChoirStaff <<
@@ -1530,6 +1584,9 @@ scoreFBassFiguresPart = \new FiguredBass \scoreFFigBass
 scoreFChordsPart = \new ChordNames \scoreFChordNames
 
 \bookpart {
+  \header {
+    subtitle = "d-Moll"
+  }
   \score {
     <<
       \scoreFChoirPart
@@ -1541,45 +1598,60 @@ scoreFChordsPart = \new ChordNames \scoreFChordNames
   }
 }
 
+% -----------------------------------------------
+% -----------------------------------------------
+% -----------------------------------------------
+% begin d major
+% -----------------------------------------------
+% -----------------------------------------------
+% -----------------------------------------------
+
+globalG = {
+  \transpose c d \key c \major
+  %   \numericTimeSignature
+  \time 3/4
+  \tempo "Andante" 4=50
+}
+
 scoreGSoprano = \relative c'' {
-  \global
+  \globalG
   % Music follows here.
-  
+  \transpose c d \scoreASoprano
 }
 
 scoreGAlto = \relative c' {
-  \global
+  \globalG
   % Music follows here.
-  
+  \transpose c d \scoreAAlto
 }
 
 scoreGTenor = \relative c' {
-  \global
+  \globalG
   % Music follows here.
-  
+  \transpose c d \scoreATenor
 }
 
 scoreGBass = \relative c {
-  \global
+  \globalG
   % Music follows here.
-  
+  \transpose c d \scoreABass
 }
 
 scoreGVerse = \lyricmode {
   % Lyrics follow here.
-  
+  \scoreAVerse
 }
 
 scoreGFigBass = \figuremode {
-  \global
+  \globalG
   % Figures follow here.
-  
+  \scoreAFigBass
 }
 
 scoreGChordNames = \chordmode {
-  \global
+  \globalG
   % Chords follow here.
-  
+  \transpose c d \scoreAChordNames
 }
 
 scoreGChoirPart = \new ChoirStaff <<
@@ -1620,6 +1692,9 @@ scoreGBassFiguresPart = \new FiguredBass \scoreGFigBass
 scoreGChordsPart = \new ChordNames \scoreGChordNames
 
 \bookpart {
+  \header {
+    subtitle = "D-Dur"
+  }
   \score {
     <<
       \scoreGChoirPart
@@ -1631,45 +1706,60 @@ scoreGChordsPart = \new ChordNames \scoreGChordNames
   }
 }
 
+% -----------------------------------------------
+% -----------------------------------------------
+% -----------------------------------------------
+% begin h minor
+% -----------------------------------------------
+% -----------------------------------------------
+% -----------------------------------------------
+
+globalH = {
+  \transpose a b \key a \minor
+  %   \numericTimeSignature
+  \time 3/4
+  \tempo "Andante" 4=50
+}
+
 scoreHSoprano = \relative c'' {
-  \global
+  \globalH
   % Music follows here.
-  
+  \transpose a b \scoreBSoprano
 }
 
 scoreHAlto = \relative c' {
-  \global
+  \globalH
   % Music follows here.
-  
+  \transpose a b \scoreBAlto
 }
 
 scoreHTenor = \relative c' {
-  \global
+  \globalH
   % Music follows here.
-  
+  \transpose a b \scoreBTenor
 }
 
 scoreHBass = \relative c {
-  \global
+  \globalH
   % Music follows here.
-  
+  \transpose a b \scoreBBass
 }
 
 scoreHVerse = \lyricmode {
   % Lyrics follow here.
-  
+  \scoreBVerse
 }
 
 scoreHFigBass = \figuremode {
-  \global
+  \globalH
   % Figures follow here.
-  
+  \scoreBBass
 }
 
 scoreHChordNames = \chordmode {
-  \global
+  \globalH
   % Chords follow here.
-  
+  \transpose a b \scoreBChordNames
 }
 
 scoreHChoirPart = \new ChoirStaff <<
@@ -1710,6 +1800,9 @@ scoreHBassFiguresPart = \new FiguredBass \scoreHFigBass
 scoreHChordsPart = \new ChordNames \scoreHChordNames
 
 \bookpart {
+  \header {
+    subtitle = "h-Moll"
+  }
   \score {
     <<
       \scoreHChoirPart
@@ -1721,45 +1814,60 @@ scoreHChordsPart = \new ChordNames \scoreHChordNames
   }
 }
 
+% -----------------------------------------------
+% -----------------------------------------------
+% -----------------------------------------------
+% begin b major
+% -----------------------------------------------
+% -----------------------------------------------
+% -----------------------------------------------
+
+globalI = {
+  \transpose c bf \key c \major
+  %   \numericTimeSignature
+  \time 3/4
+  \tempo "Andante" 4=50
+}
+
 scoreISoprano = \relative c'' {
-  \global
+  \globalI
   % Music follows here.
-  
+  \transpose c bf, \scoreASoprano
 }
 
 scoreIAlto = \relative c' {
-  \global
+  \globalI
   % Music follows here.
-  
+  \transpose c bf, \scoreAAlto
 }
 
 scoreITenor = \relative c' {
-  \global
+  \globalI
   % Music follows here.
-  
+  \transpose c bf, \scoreATenor
 }
 
 scoreIBass = \relative c {
-  \global
+  \globalI
   % Music follows here.
-  
+  \transpose c bf, \scoreABass
 }
 
 scoreIVerse = \lyricmode {
   % Lyrics follow here.
-  
+  \scoreAVerse
 }
 
 scoreIFigBass = \figuremode {
-  \global
+  \globalI
   % Figures follow here.
-  
+  \scoreABass
 }
 
 scoreIChordNames = \chordmode {
-  \global
+  \globalI
   % Chords follow here.
-  
+  \transpose c bf \scoreAChordNames
 }
 
 scoreIChoirPart = \new ChoirStaff <<
@@ -1800,6 +1908,9 @@ scoreIBassFiguresPart = \new FiguredBass \scoreIFigBass
 scoreIChordsPart = \new ChordNames \scoreIChordNames
 
 \bookpart {
+  \header {
+    subtitle = "B-Dur"
+  }
   \score {
     <<
       \scoreIChoirPart
@@ -1811,45 +1922,60 @@ scoreIChordsPart = \new ChordNames \scoreIChordNames
   }
 }
 
+% -----------------------------------------------
+% -----------------------------------------------
+% -----------------------------------------------
+% begin g minor
+% -----------------------------------------------
+% -----------------------------------------------
+% -----------------------------------------------
+
+globalJ = {
+  \transpose a g \key a \minor
+  %   \numericTimeSignature
+  \time 3/4
+  \tempo "Andante" 4=50
+}
+
 scoreJSoprano = \relative c'' {
-  \global
+  \globalJ
   % Music follows here.
-  
+  \transpose a g \scoreBSoprano
 }
 
 scoreJAlto = \relative c' {
-  \global
+  \globalJ
   % Music follows here.
-  
+  \transpose a g \scoreBAlto
 }
 
 scoreJTenor = \relative c' {
-  \global
+  \globalJ
   % Music follows here.
-  
+  \transpose a g \scoreBTenor
 }
 
 scoreJBass = \relative c {
-  \global
+  \globalJ
   % Music follows here.
-  
+  \transpose a g \scoreBBass
 }
 
 scoreJVerse = \lyricmode {
   % Lyrics follow here.
-  
+  \scoreBVerse
 }
 
 scoreJFigBass = \figuremode {
-  \global
+  \globalJ
   % Figures follow here.
-  
+  \scoreBFigBass
 }
 
 scoreJChordNames = \chordmode {
-  \global
+  \globalJ
   % Chords follow here.
-  
+  \transpose a g \scoreBChordNames
 }
 
 scoreJChoirPart = \new ChoirStaff <<
@@ -1890,6 +2016,9 @@ scoreJBassFiguresPart = \new FiguredBass \scoreJFigBass
 scoreJChordsPart = \new ChordNames \scoreJChordNames
 
 \bookpart {
+  \header {
+    subtitle = "g-Moll"
+  }
   \score {
     <<
       \scoreJChoirPart
@@ -1901,45 +2030,60 @@ scoreJChordsPart = \new ChordNames \scoreJChordNames
   }
 }
 
+% -----------------------------------------------
+% -----------------------------------------------
+% -----------------------------------------------
+% begin a major
+% -----------------------------------------------
+% -----------------------------------------------
+% -----------------------------------------------
+
+globalK = {
+  \transpose c a \key c \major
+  %   \numericTimeSignature
+  \time 3/4
+  \tempo "Andante" 4=50
+}
+
 scoreKSoprano = \relative c'' {
-  \global
+  \globalK
   % Music follows here.
-  
+  \transpose c a \scoreASoprano
 }
 
 scoreKAlto = \relative c' {
-  \global
+  \globalK
   % Music follows here.
-  
+  \transpose c a \scoreAAlto
 }
 
 scoreKTenor = \relative c' {
-  \global
+  \globalK
   % Music follows here.
-  
+  \transpose c a \scoreATenor
 }
 
 scoreKBass = \relative c {
-  \global
+  \globalK
   % Music follows here.
-  
+  \transpose c a \scoreABass
 }
 
 scoreKVerse = \lyricmode {
   % Lyrics follow here.
-  
+  \scoreAVerse
 }
 
 scoreKFigBass = \figuremode {
-  \global
+  \globalK
   % Figures follow here.
-  
+  \scoreAFigBass
 }
 
 scoreKChordNames = \chordmode {
-  \global
+  \globalK
   % Chords follow here.
-  
+  \transpose c a \scoreAChordNames
 }
 
 scoreKChoirPart = \new ChoirStaff <<
@@ -1980,6 +2124,9 @@ scoreKBassFiguresPart = \new FiguredBass \scoreKFigBass
 scoreKChordsPart = \new ChordNames \scoreKChordNames
 
 \bookpart {
+  \header {
+    subtitle = "A-Dur"
+  }
   \score {
     <<
       \scoreKChoirPart
@@ -1991,45 +2138,60 @@ scoreKChordsPart = \new ChordNames \scoreKChordNames
   }
 }
 
+% -----------------------------------------------
+% -----------------------------------------------
+% -----------------------------------------------
+% begin fs minor
+% -----------------------------------------------
+% -----------------------------------------------
+% -----------------------------------------------
+
+globalL = {
+  \transpose a fs \key a \minor
+  %   \numericTimeSignature
+  \time 3/4
+  \tempo "Andante" 4=50
+}
+
 scoreLSoprano = \relative c'' {
-  \global
+  \globalL
   % Music follows here.
-  
+  \transpose a fs \scoreBSoprano
 }
 
 scoreLAlto = \relative c' {
-  \global
+  \globalL
   % Music follows here.
-  
+  \transpose a fs \scoreBAlto
 }
 
 scoreLTenor = \relative c' {
-  \global
+  \globalL
   % Music follows here.
-  
+  \transpose a fs \scoreBTenor
 }
 
 scoreLBass = \relative c {
-  \global
+  \globalL
   % Music follows here.
-  
+  \transpose a fs \scoreBBass
 }
 
 scoreLVerse = \lyricmode {
   % Lyrics follow here.
-  
+  \scoreBVerse
 }
 
 scoreLFigBass = \figuremode {
-  \global
+  \globalL
   % Figures follow here.
-  
+  \scoreBBass
 }
 
 scoreLChordNames = \chordmode {
-  \global
+  \globalL
   % Chords follow here.
-  
+  \transpose a fs \scoreBChordNames
 }
 
 scoreLChoirPart = \new ChoirStaff <<
@@ -2070,6 +2232,9 @@ scoreLBassFiguresPart = \new FiguredBass \scoreLFigBass
 scoreLChordsPart = \new ChordNames \scoreLChordNames
 
 \bookpart {
+  \header {
+    subtitle = "fis-Moll"
+  }
   \score {
     <<
       \scoreLChoirPart
@@ -2081,45 +2246,60 @@ scoreLChordsPart = \new ChordNames \scoreLChordNames
   }
 }
 
+% -----------------------------------------------
+% -----------------------------------------------
+% -----------------------------------------------
+% begin ef major
+% -----------------------------------------------
+% -----------------------------------------------
+% -----------------------------------------------
+
+globalM = {
+  \transpose c ef \key c \major
+  %   \numericTimeSignature
+  \time 3/4
+  \tempo "Andante" 4=50
+}
+
 scoreMSoprano = \relative c'' {
-  \global
+  \globalM
   % Music follows here.
-  
+  \transpose c ef \scoreASoprano
 }
 
 scoreMAlto = \relative c' {
-  \global
+  \globalM
   % Music follows here.
-  
+  \transpose c ef \scoreAAlto
 }
 
 scoreMTenor = \relative c' {
-  \global
+  \globalM
   % Music follows here.
-  
+  \transpose c ef \scoreATenor
 }
 
 scoreMBass = \relative c {
-  \global
+  \globalM
   % Music follows here.
-  
+  \transpose c ef \scoreABass
 }
 
 scoreMVerse = \lyricmode {
   % Lyrics follow here.
-  
+  \scoreAVerse
 }
 
 scoreMFigBass = \figuremode {
-  \global
+  \globalM
   % Figures follow here.
-  
+  \scoreAFigBass
 }
 
 scoreMChordNames = \chordmode {
-  \global
+  \globalM
   % Chords follow here.
-  
+  \transpose c ef \scoreAChordNames
 }
 
 scoreMChoirPart = \new ChoirStaff <<
@@ -2160,6 +2340,9 @@ scoreMBassFiguresPart = \new FiguredBass \scoreMFigBass
 scoreMChordsPart = \new ChordNames \scoreMChordNames
 
 \bookpart {
+  \header {
+    subtitle = "Es-Dur"
+  }
   \score {
     <<
       \scoreMChoirPart
@@ -2171,45 +2354,60 @@ scoreMChordsPart = \new ChordNames \scoreMChordNames
   }
 }
 
+% -----------------------------------------------
+% -----------------------------------------------
+% -----------------------------------------------
+% begin c minor
+% -----------------------------------------------
+% -----------------------------------------------
+% -----------------------------------------------
+
+globalN = {
+  \transpose a c \key a \minor
+  %   \numericTimeSignature
+  \time 3/4
+  \tempo "Andante" 4=50
+}
+
 scoreNSoprano = \relative c'' {
-  \global
+  \globalN
   % Music follows here.
-  
+  \transpose a c \scoreBSoprano
 }
 
 scoreNAlto = \relative c' {
-  \global
+  \globalN
   % Music follows here.
-  
+  \transpose a c \scoreBAlto
 }
 
 scoreNTenor = \relative c' {
-  \global
+  \globalN
   % Music follows here.
-  
+  \transpose a c \scoreBTenor
 }
 
 scoreNBass = \relative c {
-  \global
+  \globalN
   % Music follows here.
-  
+  \transpose a c \scoreBBass
 }
 
 scoreNVerse = \lyricmode {
   % Lyrics follow here.
-  
+  \scoreBVerse
 }
 
 scoreNFigBass = \figuremode {
-  \global
+  \globalN
   % Figures follow here.
-  
+  \scoreBFigBass
 }
 
 scoreNChordNames = \chordmode {
-  \global
+  \globalN
   % Chords follow here.
-  
+  \transpose a c \scoreBChordNames
 }
 
 scoreNChoirPart = \new ChoirStaff <<
@@ -2250,6 +2448,9 @@ scoreNBassFiguresPart = \new FiguredBass \scoreNFigBass
 scoreNChordsPart = \new ChordNames \scoreNChordNames
 
 \bookpart {
+  \header {
+    subtitle = "c-Moll"
+  }
   \score {
     <<
       \scoreNChoirPart
@@ -2261,45 +2462,60 @@ scoreNChordsPart = \new ChordNames \scoreNChordNames
   }
 }
 
+% -----------------------------------------------
+% -----------------------------------------------
+% -----------------------------------------------
+% begin e major
+% -----------------------------------------------
+% -----------------------------------------------
+% -----------------------------------------------
+
+globalO = {
+  \transpose c e \key c \major
+  %   \numericTimeSignature
+  \time 3/4
+  \tempo "Andante" 4=50
+}
+
 scoreOSoprano = \relative c'' {
-  \global
+  \globalO
   % Music follows here.
-  
+  \transpose c e \scoreASoprano
 }
 
 scoreOAlto = \relative c' {
-  \global
+  \globalO
   % Music follows here.
-  
+  \transpose c e \scoreAAlto
 }
 
 scoreOTenor = \relative c' {
-  \global
+  \globalO
   % Music follows here.
-  
+  \transpose c e \scoreATenor
 }
 
 scoreOBass = \relative c {
-  \global
+  \globalO
   % Music follows here.
-  
+  \transpose c e \scoreABass
 }
 
 scoreOVerse = \lyricmode {
   % Lyrics follow here.
-  
+  \scoreAVerse
 }
 
 scoreOFigBass = \figuremode {
-  \global
+  \globalO
   % Figures follow here.
-  
+  \scoreABass
 }
 
 scoreOChordNames = \chordmode {
-  \global
+  \globalO
   % Chords follow here.
-  
+  \transpose c e \scoreAChordNames
 }
 
 scoreOChoirPart = \new ChoirStaff <<
@@ -2340,6 +2556,9 @@ scoreOBassFiguresPart = \new FiguredBass \scoreOFigBass
 scoreOChordsPart = \new ChordNames \scoreOChordNames
 
 \bookpart {
+  \header {
+    subtitle = "E-Dur"
+  }
   \score {
     <<
       \scoreOChoirPart
@@ -2351,45 +2570,60 @@ scoreOChordsPart = \new ChordNames \scoreOChordNames
   }
 }
 
+% -----------------------------------------------
+% -----------------------------------------------
+% -----------------------------------------------
+% begin cs minor
+% -----------------------------------------------
+% -----------------------------------------------
+% -----------------------------------------------
+
+globalP = {
+  \transpose a cs \key a \minor
+  %   \numericTimeSignature
+  \time 3/4
+  \tempo "Andante" 4=50
+}
+
 scorePSoprano = \relative c'' {
-  \global
+  \globalP
   % Music follows here.
-  
+  \transpose a cs \scoreBSoprano
 }
 
 scorePAlto = \relative c' {
-  \global
+  \globalP
   % Music follows here.
-  
+  \transpose a cs \scoreBAlto
 }
 
 scorePTenor = \relative c' {
-  \global
+  \globalP
   % Music follows here.
-  
+  \transpose a cs \scoreBTenor
 }
 
 scorePBass = \relative c {
-  \global
+  \globalP
   % Music follows here.
-  
+  \transpose a cs \scoreBBass
 }
 
 scorePVerse = \lyricmode {
   % Lyrics follow here.
-  
+  \scoreBVerse
 }
 
 scorePFigBass = \figuremode {
-  \global
+  \globalP
   % Figures follow here.
-  
+  \scoreBFigBass
 }
 
 scorePChordNames = \chordmode {
-  \global
+  \globalP
   % Chords follow here.
-  
+  \transpose a cs \scoreBChordNames
 }
 
 scorePChoirPart = \new ChoirStaff <<
@@ -2430,6 +2664,9 @@ scorePBassFiguresPart = \new FiguredBass \scorePFigBass
 scorePChordsPart = \new ChordNames \scorePChordNames
 
 \bookpart {
+  \header {
+    subtitle = "cis-Moll"
+  }
   \score {
     <<
       \scorePChoirPart
@@ -2441,45 +2678,60 @@ scorePChordsPart = \new ChordNames \scorePChordNames
   }
 }
 
+% -----------------------------------------------
+% -----------------------------------------------
+% -----------------------------------------------
+% begin af major
+% -----------------------------------------------
+% -----------------------------------------------
+% -----------------------------------------------
+
+globalQ = {
+  \transpose c af \key c \major
+  %   \numericTimeSignature
+  \time 3/4
+  \tempo "Andante" 4=50
+}
+
 scoreQSoprano = \relative c'' {
-  \global
+  \globalQ
   % Music follows here.
-  
+  \transpose c af \scoreASoprano
 }
 
 scoreQAlto = \relative c' {
-  \global
+  \globalQ
   % Music follows here.
-  
+  \transpose c af \scoreAAlto
 }
 
 scoreQTenor = \relative c' {
-  \global
+  \globalQ
   % Music follows here.
-  
+  \transpose c af \scoreATenor
 }
 
 scoreQBass = \relative c {
-  \global
+  \globalQ
   % Music follows here.
-  
+  \transpose c af \scoreABass
 }
 
 scoreQVerse = \lyricmode {
   % Lyrics follow here.
-  
+  \scoreAVerse
 }
 
 scoreQFigBass = \figuremode {
-  \global
+  \globalQ
   % Figures follow here.
-  
+  \scoreAFigBass
 }
 
 scoreQChordNames = \chordmode {
-  \global
+  \globalQ
   % Chords follow here.
-  
+  \transpose c af \scoreAChordNames
 }
 
 scoreQChoirPart = \new ChoirStaff <<
@@ -2520,6 +2772,9 @@ scoreQBassFiguresPart = \new FiguredBass \scoreQFigBass
 scoreQChordsPart = \new ChordNames \scoreQChordNames
 
 \bookpart {
+  \header {
+    subtitle = "As-Dur"
+  }
   \score {
     <<
       \scoreQChoirPart
@@ -2531,45 +2786,60 @@ scoreQChordsPart = \new ChordNames \scoreQChordNames
   }
 }
 
+% -----------------------------------------------
+% -----------------------------------------------
+% -----------------------------------------------
+% begin f minor
+% -----------------------------------------------
+% -----------------------------------------------
+% -----------------------------------------------
+
+globalR = {
+  \transpose a f \key a \minor
+  %   \numericTimeSignature
+  \time 3/4
+  \tempo "Andante" 4=50
+}
+
 scoreRSoprano = \relative c'' {
-  \global
+  \globalR
   % Music follows here.
-  
+  \transpose a f \scoreBSoprano
 }
 
 scoreRAlto = \relative c' {
-  \global
+  \globalR
   % Music follows here.
-  
+  \transpose a f \scoreBAlto
 }
 
 scoreRTenor = \relative c' {
-  \global
+  \globalR
   % Music follows here.
-  
+  \transpose a f \scoreBTenor
 }
 
 scoreRBass = \relative c {
-  \global
+  \globalR
   % Music follows here.
-  
+  \transpose a f \scoreBBass
 }
 
 scoreRVerse = \lyricmode {
   % Lyrics follow here.
-  
+  \scoreBVerse
 }
 
 scoreRFigBass = \figuremode {
-  \global
+  \globalR
   % Figures follow here.
-  
+  \scoreBFigBass
 }
 
 scoreRChordNames = \chordmode {
-  \global
+  \globalR
   % Chords follow here.
-  
+  \transpose a f \scoreBChordNames
 }
 
 scoreRChoirPart = \new ChoirStaff <<
@@ -2610,6 +2880,9 @@ scoreRBassFiguresPart = \new FiguredBass \scoreRFigBass
 scoreRChordsPart = \new ChordNames \scoreRChordNames
 
 \bookpart {
+  \header {
+    subtitle = "f-Moll"
+  }
   \score {
     <<
       \scoreRChoirPart
@@ -2621,45 +2894,60 @@ scoreRChordsPart = \new ChordNames \scoreRChordNames
   }
 }
 
+% -----------------------------------------------
+% -----------------------------------------------
+% -----------------------------------------------
+% begin b major
+% -----------------------------------------------
+% -----------------------------------------------
+% -----------------------------------------------
+
+globalS = {
+  \transpose c b \key c \major
+  %   \numericTimeSignature
+  \time 3/4
+  \tempo "Andante" 4=50
+}
+
 scoreSSoprano = \relative c'' {
-  \global
+  \globalS
   % Music follows here.
-  
+  \transpose c b \scoreASoprano
 }
 
 scoreSAlto = \relative c' {
-  \global
+  \globalS
   % Music follows here.
-  
+  \transpose c b \scoreAAlto
 }
 
 scoreSTenor = \relative c' {
-  \global
+  \globalS
   % Music follows here.
-  
+  \transpose c b \scoreATenor
 }
 
 scoreSBass = \relative c {
-  \global
+  \globalS
   % Music follows here.
-  
+  \transpose c b \scoreABass
 }
 
 scoreSVerse = \lyricmode {
   % Lyrics follow here.
-  
+  \scoreAVerse
 }
 
 scoreSFigBass = \figuremode {
-  \global
+  \globalS
   % Figures follow here.
-  
+  \scoreAFigBass
 }
 
 scoreSChordNames = \chordmode {
-  \global
+  \globalS
   % Chords follow here.
-  
+  \transpose c b \scoreAChordNames
 }
 
 scoreSChoirPart = \new ChoirStaff <<
@@ -2700,6 +2988,9 @@ scoreSBassFiguresPart = \new FiguredBass \scoreSFigBass
 scoreSChordsPart = \new ChordNames \scoreSChordNames
 
 \bookpart {
+  \header {
+    subtitle = "H-Dur"
+  }
   \score {
     <<
       \scoreSChoirPart
@@ -2711,45 +3002,60 @@ scoreSChordsPart = \new ChordNames \scoreSChordNames
   }
 }
 
+% -----------------------------------------------
+% -----------------------------------------------
+% -----------------------------------------------
+% begin gs minor
+% -----------------------------------------------
+% -----------------------------------------------
+% -----------------------------------------------
+
+globalT = {
+  \transpose a gs \key a \minor
+  %   \numericTimeSignature
+  \time 3/4
+  \tempo "Andante" 4=50
+}
+
 scoreTSoprano = \relative c'' {
-  \global
+  \globalT
   % Music follows here.
-  
+  \transpose a gs \scoreBSoprano
 }
 
 scoreTAlto = \relative c' {
-  \global
+  \globalT
   % Music follows here.
-  
+  \transpose a gs \scoreBAlto
 }
 
 scoreTTenor = \relative c' {
-  \global
+  \globalT
   % Music follows here.
-  
+  \transpose a gs \scoreBTenor
 }
 
 scoreTBass = \relative c {
-  \global
+  \globalT
   % Music follows here.
-  
+  \transpose a gs \scoreBBass
 }
 
 scoreTVerse = \lyricmode {
   % Lyrics follow here.
-  
+  \scoreBVerse
 }
 
 scoreTFigBass = \figuremode {
-  \global
+  \globalT
   % Figures follow here.
-  
+  \scoreBFigBass
 }
 
 scoreTChordNames = \chordmode {
-  \global
+  \globalT
   % Chords follow here.
-  
+  \transpose a gs \scoreBChordNames
 }
 
 scoreTChoirPart = \new ChoirStaff <<
@@ -2790,6 +3096,9 @@ scoreTBassFiguresPart = \new FiguredBass \scoreTFigBass
 scoreTChordsPart = \new ChordNames \scoreTChordNames
 
 \bookpart {
+  \header {
+    subtitle = "gis-Moll"
+  }
   \score {
     <<
       \scoreTChoirPart
@@ -2801,45 +3110,60 @@ scoreTChordsPart = \new ChordNames \scoreTChordNames
   }
 }
 
+% -----------------------------------------------
+% -----------------------------------------------
+% -----------------------------------------------
+% begin df major
+% -----------------------------------------------
+% -----------------------------------------------
+% -----------------------------------------------
+
+globalU = {
+  \transpose c df \key c \major
+  %   \numericTimeSignature
+  \time 3/4
+  \tempo "Andante" 4=50
+}
+
 scoreUSoprano = \relative c'' {
-  \global
+  \globalU
   % Music follows here.
-  
+  \transpose c df \scoreASoprano
 }
 
 scoreUAlto = \relative c' {
-  \global
+  \globalU
   % Music follows here.
-  
+  \transpose c df \scoreAAlto
 }
 
 scoreUTenor = \relative c' {
-  \global
+  \globalU
   % Music follows here.
-  
+  \transpose c df \scoreATenor
 }
 
 scoreUBass = \relative c {
-  \global
+  \globalU
   % Music follows here.
-  
+  \transpose c df \scoreABass
 }
 
 scoreUVerse = \lyricmode {
   % Lyrics follow here.
-  
+  \scoreAVerse
 }
 
 scoreUFigBass = \figuremode {
-  \global
+  \globalU
   % Figures follow here.
-  
+  \scoreAFigBass
 }
 
 scoreUChordNames = \chordmode {
-  \global
+  \globalU
   % Chords follow here.
-  
+  \transpose c df \scoreAChordNames
 }
 
 scoreUChoirPart = \new ChoirStaff <<
@@ -2880,6 +3204,9 @@ scoreUBassFiguresPart = \new FiguredBass \scoreUFigBass
 scoreUChordsPart = \new ChordNames \scoreUChordNames
 
 \bookpart {
+  \header {
+    subtitle = "Des-Dur"
+  }
   \score {
     <<
       \scoreUChoirPart
@@ -2891,45 +3218,60 @@ scoreUChordsPart = \new ChordNames \scoreUChordNames
   }
 }
 
+% -----------------------------------------------
+% -----------------------------------------------
+% -----------------------------------------------
+% begin bf minor
+% -----------------------------------------------
+% -----------------------------------------------
+% -----------------------------------------------
+
+globalV = {
+  \transpose a bf \key a \minor
+  %   \numericTimeSignature
+  \time 3/4
+  \tempo "Andante" 4=50
+}
+
 scoreVSoprano = \relative c'' {
-  \global
+  \globalV
   % Music follows here.
-  
+  \transpose a bf \scoreBSoprano
 }
 
 scoreVAlto = \relative c' {
-  \global
+  \globalV
   % Music follows here.
-  
+  \transpose a bf \scoreBAlto
 }
 
 scoreVTenor = \relative c' {
-  \global
+  \globalV
   % Music follows here.
-  
+  \transpose a bf \scoreBTenor
 }
 
 scoreVBass = \relative c {
-  \global
+  \globalV
   % Music follows here.
-  
+  \transpose a bf \scoreBBass
 }
 
 scoreVVerse = \lyricmode {
   % Lyrics follow here.
-  
+  \scoreBVerse
 }
 
 scoreVFigBass = \figuremode {
-  \global
+  \globalV
   % Figures follow here.
-  
+  \scoreBFigBass
 }
 
 scoreVChordNames = \chordmode {
-  \global
+  \globalV
   % Chords follow here.
-  
+  \transpose a bf \scoreBChordNames
 }
 
 scoreVChoirPart = \new ChoirStaff <<
@@ -2970,6 +3312,9 @@ scoreVBassFiguresPart = \new FiguredBass \scoreVFigBass
 scoreVChordsPart = \new ChordNames \scoreVChordNames
 
 \bookpart {
+  \header {
+    subtitle = "b-Moll"
+  }
   \score {
     <<
       \scoreVChoirPart
@@ -2981,45 +3326,60 @@ scoreVChordsPart = \new ChordNames \scoreVChordNames
   }
 }
 
+% -----------------------------------------------
+% -----------------------------------------------
+% -----------------------------------------------
+% begin fs major
+% -----------------------------------------------
+% -----------------------------------------------
+% -----------------------------------------------
+
+globalW = {
+  \transpose c fs \key c \major
+  %   \numericTimeSignature
+  \time 3/4
+  \tempo "Andante" 4=50
+}
+
 scoreWSoprano = \relative c'' {
-  \global
+  \globalW
   % Music follows here.
-  
+  \transpose c fs \scoreASoprano
 }
 
 scoreWAlto = \relative c' {
-  \global
+  \globalW
   % Music follows here.
-  
+  \transpose c fs \scoreAAlto
 }
 
 scoreWTenor = \relative c' {
-  \global
+  \globalW
   % Music follows here.
-  
+  \transpose c fs \scoreATenor
 }
 
 scoreWBass = \relative c {
-  \global
+  \globalW
   % Music follows here.
-  
+  \transpose c fs \scoreABass
 }
 
 scoreWVerse = \lyricmode {
   % Lyrics follow here.
-  
+  \scoreAVerse
 }
 
 scoreWFigBass = \figuremode {
-  \global
+  \globalW
   % Figures follow here.
-  
+  \scoreAFigBass
 }
 
 scoreWChordNames = \chordmode {
-  \global
+  \globalW
   % Chords follow here.
-  
+  \transpose c fs \scoreAChordNames
 }
 
 scoreWChoirPart = \new ChoirStaff <<
@@ -3060,6 +3420,9 @@ scoreWBassFiguresPart = \new FiguredBass \scoreWFigBass
 scoreWChordsPart = \new ChordNames \scoreWChordNames
 
 \bookpart {
+  \header {
+    subtitle = "Fis-Dur"
+  }
   \score {
     <<
       \scoreWChoirPart
@@ -3071,45 +3434,60 @@ scoreWChordsPart = \new ChordNames \scoreWChordNames
   }
 }
 
+% -----------------------------------------------
+% -----------------------------------------------
+% -----------------------------------------------
+% begin ds minor
+% -----------------------------------------------
+% -----------------------------------------------
+% -----------------------------------------------
+
+globalX = {
+  \transpose a ds \key a \minor
+  %   \numericTimeSignature
+  \time 3/4
+  \tempo "Andante" 4=50
+}
+
 scoreXSoprano = \relative c'' {
-  \global
+  \globalX
   % Music follows here.
-  
+  \transpose a ds \scoreBSoprano
 }
 
 scoreXAlto = \relative c' {
-  \global
+  \globalX
   % Music follows here.
-  
+  \transpose a ds \scoreBAlto
 }
 
 scoreXTenor = \relative c' {
-  \global
+  \globalX
   % Music follows here.
-  
+  \transpose a ds \scoreBTenor
 }
 
 scoreXBass = \relative c {
-  \global
+  \globalX
   % Music follows here.
-  
+  \transpose a ds \scoreBBass
 }
 
 scoreXVerse = \lyricmode {
   % Lyrics follow here.
-  
+  \scoreBVerse
 }
 
 scoreXFigBass = \figuremode {
-  \global
+  \globalX
   % Figures follow here.
-  
+  \scoreBFigBass
 }
 
 scoreXChordNames = \chordmode {
-  \global
+  \globalX
   % Chords follow here.
-  
+  \transpose a ds \scoreBChordNames
 }
 
 scoreXChoirPart = \new ChoirStaff <<
@@ -3150,6 +3528,9 @@ scoreXBassFiguresPart = \new FiguredBass \scoreXFigBass
 scoreXChordsPart = \new ChordNames \scoreXChordNames
 
 \bookpart {
+  \header {
+    subtitle = "dis-Moll"
+  }
   \score {
     <<
       \scoreXChoirPart
@@ -3161,45 +3542,60 @@ scoreXChordsPart = \new ChordNames \scoreXChordNames
   }
 }
 
+% -----------------------------------------------
+% -----------------------------------------------
+% -----------------------------------------------
+% begin gf major
+% -----------------------------------------------
+% -----------------------------------------------
+% -----------------------------------------------
+
+globalY = {
+  \transpose c gf \key c \major
+  %   \numericTimeSignature
+  \time 3/4
+  \tempo "Andante" 4=50
+}
+
 scoreYSoprano = \relative c'' {
-  \global
+  \globalY
   % Music follows here.
-  
+  \transpose c gf \scoreASoprano
 }
 
 scoreYAlto = \relative c' {
-  \global
+  \globalY
   % Music follows here.
-  
+  \transpose c gf \scoreAAlto
 }
 
 scoreYTenor = \relative c' {
-  \global
+  \globalY
   % Music follows here.
-  
+  \transpose c gf \scoreATenor
 }
 
 scoreYBass = \relative c {
-  \global
+  \globalY
   % Music follows here.
-  
+  \transpose c gf \scoreABass
 }
 
 scoreYVerse = \lyricmode {
   % Lyrics follow here.
-  
+  \scoreAVerse
 }
 
 scoreYFigBass = \figuremode {
-  \global
+  \globalY
   % Figures follow here.
-  
+  \scoreAFigBass
 }
 
 scoreYChordNames = \chordmode {
-  \global
+  \globalY
   % Chords follow here.
-  
+  \transpose c gf \scoreAChordNames
 }
 
 scoreYChoirPart = \new ChoirStaff <<
@@ -3240,6 +3636,9 @@ scoreYBassFiguresPart = \new FiguredBass \scoreYFigBass
 scoreYChordsPart = \new ChordNames \scoreYChordNames
 
 \bookpart {
+  \header {
+    subtitle = "Ges-Dur"
+  }
   \score {
     <<
       \scoreYChoirPart
@@ -3251,45 +3650,60 @@ scoreYChordsPart = \new ChordNames \scoreYChordNames
   }
 }
 
+% -----------------------------------------------
+% -----------------------------------------------
+% -----------------------------------------------
+% begin ef minor
+% -----------------------------------------------
+% -----------------------------------------------
+% -----------------------------------------------
+
+globalZ = {
+  \transpose a ef \key a \minor
+  %   \numericTimeSignature
+  \time 3/4
+  \tempo "Andante" 4=50
+}
+
 scoreZSoprano = \relative c'' {
-  \global
+  \globalZ
   % Music follows here.
-  
+  \transpose a ef \scoreBSoprano
 }
 
 scoreZAlto = \relative c' {
-  \global
+  \globalZ
   % Music follows here.
-  
+  \transpose a ef \scoreBAlto
 }
 
 scoreZTenor = \relative c' {
-  \global
+  \globalZ
   % Music follows here.
-  
+  \transpose a ef \scoreBTenor
 }
 
 scoreZBass = \relative c {
-  \global
+  \globalZ
   % Music follows here.
-  
+  \transpose a ef \scoreBBass
 }
 
 scoreZVerse = \lyricmode {
   % Lyrics follow here.
-  
+  \scoreAVerse
 }
 
 scoreZFigBass = \figuremode {
-  \global
+  \globalZ
   % Figures follow here.
-  
+  \scoreBFigBass
 }
 
 scoreZChordNames = \chordmode {
-  \global
+  \globalZ
   % Chords follow here.
-  
+  \transpose a ef \scoreBChordNames
 }
 
 scoreZChoirPart = \new ChoirStaff <<
@@ -3330,6 +3744,9 @@ scoreZBassFiguresPart = \new FiguredBass \scoreZFigBass
 scoreZChordsPart = \new ChordNames \scoreZChordNames
 
 \bookpart {
+  \header {
+    subtitle = "es-Moll"
+  }
   \score {
     <<
       \scoreZChoirPart
