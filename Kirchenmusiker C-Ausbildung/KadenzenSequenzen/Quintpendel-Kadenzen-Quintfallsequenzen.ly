@@ -366,7 +366,10 @@ verse = \lyricmode {
   % QP^5_EL
   do so do do fa do do di do do so do do fa do do di do
   do so do do fa do do di do do di do do so do do fa do do
-  do so do do fa do do di do do so do do fa do do di do do di do 
+  do so do do fa do do di do do so do do fa do do di do do di do
+  do fa so do do fa so do do fa so do do fa so do do fa so do do fa so do do fa si do do fa si do do fa si do do fa si do do fa si do do fa si do
+  do fa so do do fa so do do fa so do do fa so do do fa so do do fa so do
+  do fa si mi la re so do do fa si mi la re so do do fa si mi la re so do do fa si mi la re so do do fa si mi la re so do do fa si mi la re so do
 }
 
 figBass = \figuremode {
@@ -501,17 +504,17 @@ chordNames = \chordmode {
   % KD^3_WL-I-IV-V-I
   c f, g c|
   % KD^5_EL-I-IV-V-I
-  c4 f, d' c|
+  c4 f, b:dim/d' c|
   % KD^8_EL-I-IV-V-I
-  c f, d' c|
+  c f, b:dim/d' c|
   % KD^3_EL-I-IV-V-I
-  c f, d' c|
+  c f, b:dim/d' c|
   % KD^5_WL-I-IV-V-I
-  c f, d' c|
+  c f, b:dim/d' c|
   % KD^8_WL-I-IV-V-I
-  c f, d' c|
+  c f, b:dim/d' c|
   % KD^3_WL-I-IV-V-I
-  c f, d' c|
+  c f, b:dim/d' c|
   % KD^5_EL-I-IV-V-I
   c4 f,8 \parenthesize fs g4 c|
   % KD^8_EL-I-IV-V-I
