@@ -1,4 +1,4 @@
-\version "2.24.1"
+\version "2.24.3"
 \language "english"
 
 \header {
@@ -21,20 +21,6 @@
   #(set-paper-size "a4")
 }
 
-\layout {
-  \context {
-    \Voice
-    \consists "Melody_engraver"
-    \override Stem #'neutral-direction = #'()
-  }
-}
-
-global = {
- %  \key c \major
- %  \time 4/4
-  \tempo "Andante" 4=100
-}
-
 % -----------------------------------------------
 % -----------------------------------------------
 % -----------------------------------------------
@@ -43,10 +29,15 @@ global = {
 % -----------------------------------------------
 % -----------------------------------------------
 
-scoreASopranoCMajor = \relative c'' {
-  \global
+global = {
   \key c \major
-  \time 3/4
+  \numericTimeSignature
+  \time 4/4
+  \tempo "Andante" 4=50
+}
+
+soprano = \relative c'' {
+  \global
   % Music follows here.
   g^\markup{\column{\line{C-Dur: QP\super{5}\sub{EL}}\line{I-V-I}}} g g
   g^\markup{\column{\line{QP\super{5}\sub{EL}}\line{I-IV-I}}} a g
@@ -124,13 +115,11 @@ scoreASopranoCMajor = \relative c'' {
   c^\markup{\column{\line{QFS\super{8}\sub{WL}}\line{I-IV-VII-III-VI-II-V-I}}} c b b a a g g
   \bar "||"
   e'^\markup{\column{\line{QFS\super{3}\sub{WL}}\line{I-IV-VII-III-VI-II-V-I}}} f d e c d b c
-  \bar "|."
+  \bar "|."  
 }
 
-scoreAAltoCMajor = \relative c' {
+alto = \relative c' {
   \global
-  \key c \major
-  \time 3/4
   % Music follows here.
   % QP^5_EL
   e d e
@@ -207,13 +196,11 @@ scoreAAltoCMajor = \relative c' {
   e f d e c d b c
   % QFS^3_WL-I-IV-VII-III-VI-II-V-I
   g' a f g e f d e
-  \bar "|."
+  \bar "|."  
 }
 
-scoreATenorCMajor = \relative c' {
+tenor = \relative c' {
   \global
-  \key c \major
-  \time 3/4
   % Music follows here.
   % QP^5_EL
   c b c
@@ -290,13 +277,11 @@ scoreATenorCMajor = \relative c' {
   g a f g e f d e
   % QFS^3_WL-I-IV-VII-III-VI-II-V-I
   c' c b b a a g g
-  \bar "|."
+  \bar "|."  
 }
 
-scoreABassCMajor = \relative c {
+bass = \relative c {
   \global
-  \key c \major
-  \time 3/4
   % Music follows here.
   % QP^5_EL
   c g c
@@ -373,375 +358,19 @@ scoreABassCMajor = \relative c {
   c f b, e a, d g, c
   % QFS^3_WL-I-IV-VII-III-VI-II-V-I
   c f b, e a, d g, c
-  \bar "|."
+  \bar "|."  
 }
 
-% -----------------------------------------------
-% -----------------------------------------------
-% -----------------------------------------------
-% end C major
-% -----------------------------------------------
-% -----------------------------------------------
-% -----------------------------------------------
-
-% -----------------------------------------------
-% -----------------------------------------------
-% -----------------------------------------------
-% begin G major
-% -----------------------------------------------
-% -----------------------------------------------
-% -----------------------------------------------
-
-scoreASopranoGMajor = \relative c'' {
-  \global
-  \key g \major
-  \time 3/4
-  % Music follows here.
-  d^\markup{\column{\line{G-Dur: QP\super{5}\sub{EL}}\line{I-V-I}}} d d
-  d^\markup{\column{\line{QP\super{5}\sub{EL}}\line{I-IV-I}}} e d
-  d^\markup{\column{\line{QP\super{5}\sub{EL}}\line{I-VII-I}}} c d
-  \bar "||"
-  g^\markup{\column{\line{QP\super{8}\sub{EL}}\line{I-V-I}}} fs g
-  g^\markup{\column{\line{QP\super{8}\sub{EL}}\line{I-IV-I}}} g g
-  g^\markup{\column{\line{QP\super{8}\sub{EL}}\line{I-VII-I}}} fs g
-  \bar "||"
-  b,^\markup{\column{\line{QP\super{3}\sub{EL}}\line{I-V-I}}} a b
-  b^\markup{\column{\line{QP\super{3}\sub{EL}}\line{I-IV-I}}} c b
-  b8^\markup{\column{\line{QP\super{3}\sub{EL}}\line{I-VII-I}}}[a b] b c b
-  \bar "||"
-  d4^\markup{\column{\line{QP\super{5}\sub{WL}}\line{I-V-I}}} d d
-  d^\markup{\column{\line{QP\super{5}\sub{WL}}\line{I-IV-I}}} e d
-  d^\markup{\column{\line{QP\super{5}\sub{WL}}\line{I-VII-I}}} r r
-  \bar "||"
-  g^\markup{\column{\line{QP\super{8}\sub{WL}}\line{I-V-I}}} fs g
-  g^\markup{\column{\line{QP\super{8}\sub{WL}}\line{I-IV-I}}} g g
-  g^\markup{\column{\line{QP\super{8}\sub{WL}}\line{I-VII-I}}} fs g
-  \bar "||"
-  b^\markup{\column{\line{QP\super{3}\sub{WL}}\line{I-V-I}}} a b
-  b^\markup{\column{\line{QP\super{3}\sub{WL}}\line{I-IV-I}}} c b
-  b8^\markup{\column{\line{QP\super{3}\sub{WL}}\line{I-VII-I}}}[a b] b[c b]
-  \bar "|.|"\break
-  \time 4/4
-    % KD I IV V I
-  d,4^\markup{\column{\line{KD\super{5}\sub{EL}}\line{I-IV-V-I}}} e d d
-  \bar "||"
-  g^\markup{\column{\line{KD\super{8}\sub{EL}}\line{I-IV-V-I}}} g fs g
-  \bar "||"
-  b,^\markup{\column{\line{KD\super{3}\sub{EL}}\line{I-IV-V-I}}} c a b
-  \bar "||"
-  d^\markup{\column{\line{KD\super{5}\sub{WL}}\line{I-IV-V-I}}} e d d
-  \bar "||"
-  g4^\markup{\column{\line{KD\super{8}\sub{WL}}\line{I-IV-V-I}}} g fs g
-  \bar "||"
-  b^\markup{\column{\line{KD\super{3}\sub{WL}}\line{I-IV-V-I}}} c a b
-  \bar "|.|"
-      % KD I IV VII I
-  d,4^\markup{\column{\line{KD\super{5}\sub{EL}}\line{I-IV-VII-I}}} e c d
-  \bar "||"
-  g^\markup{\column{\line{KD\super{8}\sub{EL}}\line{I-IV-VII-I}}} g fs g
-  \bar "||"
-  b,^\markup{\column{\line{KD\super{3}\sub{EL}}\line{I-IV-VII-I}}} c a b
-  \bar "||"
-  d^\markup{\column{\line{KD\super{5}\sub{WL}}\line{I-IV-VII-I}}} e c d
-  \bar "||"
-  g4^\markup{\column{\line{KD\super{8}\sub{WL}}\line{I-IV-VII-I}}} g fs g
-  \bar "||"
-  b^\markup{\column{\line{KD\super{3}\sub{WL}}\line{I-IV-VII-I}}} c a b
-  \bar "|.|"
-% KD I II65 V I
-  d,4^\markup{\column{\line{KD\super{5}\sub{EL}}\line{I-II\super{6/5}-V-I}}} e d d
-  \bar "||"
-  g^\markup{\column{\line{KD\super{8}\sub{EL}}\line{I-II\super{6/5}-V-I}}} g fs g
-  \bar "||"
-  b,^\markup{\column{\line{KD\super{3}\sub{EL}}\line{I-II\super{6/5}-V-I}}} a a b
-  \bar "||"
-  d^\markup{\column{\line{KD\super{5}\sub{WL}}\line{I-II\super{6/5}-V-I}}} e d d
-  \bar "||"
-  g4^\markup{\column{\line{KD\super{8}\sub{WL}}\line{I-II\super{6/5}-V-I}}} g fs g
-  \bar "||"
-  b^\markup{\column{\line{KD\super{3}\sub{WL}}\line{I-II\super{6/5}-V-I}}} a a b
-  \bar "|.|"
-  % QFS
-  d,^\markup{\column{\line{QFS\super{5}\sub{EL}}\line{I-IV-VII-III-VI-II-V-I}}} e c d b c a b
-  \bar "||"
-  g^\markup{\column{\line{QFS\super{8}\sub{EL}}\line{I-IV-VII-III-VI-II-V-I}}} g fs fs e e d d
-  \bar "||"
-  b'^\markup{\column{\line{QFS\super{3}\sub{EL}}\line{I-IV-VII-III-VI-II-V-I}}} c a b g a fs g
-  \bar "||"
-  d'^\markup{\column{\line{QFS\super{5}\sub{WL}}\line{I-IV-VII-III-VI-II-V-I}}} e c d b c a b
-  \bar "||"
-  g^\markup{\column{\line{QFS\super{8}\sub{WL}}\line{I-IV-VII-III-VI-II-V-I}}} g fs fs e e d d
-  \bar "||"
-  b'^\markup{\column{\line{QFS\super{3}\sub{WL}}\line{I-IV-VII-III-VI-II-V-I}}} c a b g a fs g
-  \bar "|."
-}
-
-scoreAAltoGMajor = \relative c'' {
-  \global
-  \key g \major
-  \time 3/4
-  % Music follows here.
-  % QP^5_EL
-  b a b
-  b c b
-  b a b
-  % QP^8_EL
-  d d d
-  d e d
-  d c d
-  % QP^3_EL
-  g, fs g
-  g g g
-  g8[fs g]g[fs g]
-  % QP^5_WL
-  g4 fs g
-  g g g
-  g r r
-  % QP^8_WL
-  b a b
-  b c b
-  b a b
-  % QP^3_WL
-  d d d
-  d e d
-  d8[c d] d[c d]
-  \time 4/4
-  % KD
-  % KD^5_WE-I-IV-V-I
-  b4 c a b
-  % KD^8_EL-I-IV-V-I
-  d e d d
-  % KD^3_EL-I-IV-V-I
-  g, g fs g
-  % KD^5_WL-I-IV-V-I
-  g g fs g
-  % KD^8_WL-I-IV-V-I
-  b c a b
-  % KD^3_WL-I-IV-V-I
-  d e d d
-    % KD^5_WE-I-IV-V-I
-  b4 c a b
-  % KD^8_EL-I-IV-V-I
-  d e c d
-  % KD^3_EL-I-IV-V-I
-  g, g fs g
-  % KD^5_WL-I-IV-V-I
-  g g fs g
-  % KD^8_WL-I-IV-V-I
-  b c a b
-  % KD^3_WL-I-IV-V-I
-  d e c d
-    % KD^5_WE-I-IV-V-I
-  b4 a a b
-  % KD^8_EL-I-IV-V-I
-  d e d d
-  % KD^3_EL-I-IV-V-I
-  g, g fs g
-  % KD^5_WL-I-IV-V-I
-  g g fs g
-  % KD^8_WL-I-IV-V-I
-  b a a b
-  % KD^3_WL-I-IV-V-I
-  d e d d
-  % QFS
-  % QFS^5_EL-I-IV-VII-III-VI-II-V-I
-  b c a b g a fs g
-  % QFS^8_EL-I-IV-VII-III-VI-II-V-I
-  d e c d b c a b
-  % QFS^3_EL-I-IV-VII-III-VI-II-V-I
-  g' g fs fs e e d d
-  % QFS^5_WL-I-IV-VII-III-VI-II-V-I
-  g g fs fs e e d d
-  % QFS^8_WL-I-IV-VII-III-VI-II-V-I
-  b c a b g a fs g
-  % QFS^3_WL-I-IV-VII-III-VI-II-V-I
-  d' e c d b c a b
-  \bar "|."
-}
-
-scoreATenorGMajor = \relative c'' {
-  \global
-  \key g \major
-  \time 3/4
-  % Music follows here.
-  % QP^5_EL
-  g fs g
-  g g g
-  g fs g
-  % QP^8_EL
-  b a b
-  b c b
-  b a b
-  % QP^3_EL
-  d, d d
-  d e d
-  d8[c d]d[c d]
-  % QP^5_WL
-  b4 a b
-  b c b
-  b r r
-  % QP^8_WL
-  d d d
-  d e d
-  d c d
-  % QP^3_WL
-  g fs g
-  g g g
-  g8[fs g]g[fs g]
-  \time 4/4
-  % KD
-  % KD^5_EL-I-IV-V-I
-  g4 g fs g
-  % KD^8_EL-I-IV-V-I
-  b c a b
-  % KD^3_EL-I-IV-V-I
-  d, e d d
-  % KD^5_WL-I-IV-V-I
-  b c a b
-  % KD^8_WL-I-IV-V-I
-  d e d d
-  % KD^3_WL-I-IV-V-I
-  g g fs g
-    % KD^5_EL-I-IV-V-I
-  g4 g fs g
-  % KD^8_EL-I-IV-V-I
-  b c a b
-  % KD^3_EL-I-IV-V-I
-  d, e c d
-  % KD^5_WL-I-IV-V-I
-  b c d b
-  % KD^8_WL-I-IV-V-I
-  d e c d
-  % KD^3_WL-I-IV-V-I
-  g g fs g
-    % KD^5_EL-I-IV-V-I
-  g4 g fs g
-  % KD^8_EL-I-IV-V-I
-  b a a b
-  % KD^3_EL-I-IV-V-I
-  d, e d d
-  % KD^5_WL-I-IV-V-I
-  b a a b
-  % KD^8_WL-I-IV-V-I
-  d e d d
-  % KD^3_WL-I-IV-V-I
-  g g fs g
-  % QFS
-  % QFS^5_EL-I-IV-VII-III-VI-II-V-I
-  g g fs fs e e d d
-  % QFS^8_EL-I-IV-VII-III-VI-II-V-I
-  b c a b g a fs g
-  % QFS^3_EL-I-IV-VII-III-VI-II-V-I
-  d' e c d b c a b
-  % QFS^5_WL-I-IV-VII-III-VI-II-V-I
-  b c a b g a fs g
-  % QFS^8_WL-I-IV-VII-III-VI-II-V-I
-  d e c d b c a b
-  % QFS^3_WL-I-IV-VII-III-VI-II-V-I
-  g' g fs fs e e d d
-  \bar "|."
-}
-
-scoreABassGMajor = \relative c' {
-  \global
-  \key g \major
-  \time 3/4
-  % Music follows here.
-  % QP^5_EL
-  g d g
-  g c g
-  g a g
-  % QP^8_EL
-  g d g
-  g c, g'
-  g a g
-  % QP^3_EL
-  g d g
-  g c g
-  g8[a g]g[a g]
-  % QP^5_WL
-  g4 d g
-  g c, g'
-  g r r
-  % QP^8_WL
-  g d g
-  g c g
-  g a g
-  % QP^3_WL
-  g d g
-  g c g
-  g8[a g]g[a g]
-  \time 4/4
-  % KD
-  % KD^5_EL-I-IV-V-I
-  g4 c, d g|
-  % KD^8_EL-I-IV-V-I
-  g c, d g|
-  % KD^3_EL-I-IV-V-I
-  g c, d g|
-  % KD^5_WL-I-IV-V-I
-  g c, d g|
-  % KD^8_WL-I-IV-V-I
-  g c, d g|
-  % KD^3_WL-I-IV-V-I
-  g c, d g|
-  % KD^5_EL-I-IV-V-I
-  g4 c, a' g|
-  % KD^8_EL-I-IV-V-I
-  g c, a' g|
-  % KD^3_EL-I-IV-V-I
-  g c, a' g|
-  % KD^5_WL-I-IV-V-I
-  g c, a' g|
-  % KD^8_WL-I-IV-V-I
-  g c, a' g|
-  % KD^3_WL-I-IV-V-I
-  g c, a' g|
-  % KD^5_EL-I-IV-V-I
-  g4 c,8 \parenthesize cs d4 g|
-  % KD^8_EL-I-IV-V-I
-  g c,8 \parenthesize cs d4 g|
-  % KD^3_EL-I-IV-V-I
-  g c,8 \parenthesize cs d4 g|
-  % KD^5_WL-I-IV-V-I
-  g c,8 \parenthesize cs d4 g|
-  % KD^8_WL-I-IV-V-I
-  g c,8 \parenthesize cs d4 g|
-  % KD^3_WL-I-IV-V-I
-  g c,8 \parenthesize cs d4 g|
-  % QFS
-  % QFS^5_EL-I-IV-VII-III-VI-II-V-I
-  g, c fs, b e, a d, g
-  % QFS^8_EL-I-IV-VII-III-VI-II-V-I
-  g c fs, b e, a d, g
-  % QFS^3_EL-I-IV-VII-III-VI-II-V-I
-  g c fs, b e, a d, g
-  % QFS^5_WL-I-IV-VII-III-VI-II-V-I
-  g c fs, b e, a d, g
-  % QFS^8_WL-I-IV-VII-III-VI-II-V-I
-  g c fs, b e, a d, g
-  % QFS^3_WL-I-IV-VII-III-VI-II-V-I
-  g c fs, b e, a d, g
-  \bar "|."
-}
-
-% -----------------------------------------------
-% -----------------------------------------------
-% -----------------------------------------------
-% end G major
-% -----------------------------------------------
-% -----------------------------------------------
-% -----------------------------------------------
-
-scoreAVerse = \lyricmode {
+verse = \lyricmode {
   % Lyrics follow here.
+  % QP^5_EL
+  do so do do fa do do di do do so do do fa do do di do
+  do so do do fa do do di 
 }
 
-scoreAFigBass = \figuremode {
+figBass = \figuremode {
   \global
-  \repeat unfold 2 {
-    \time 3/4
-    % Figures follow here.
+  % Figures follow here.
     % QP^5_EL
     r4 r r
     r4 r r
@@ -827,38 +456,98 @@ scoreAFigBass = \figuremode {
     r4 r r r
     r4 r r r
     r4 r r r
-  }
 }
 
-scoreASoprano = {
+chordNames = \chordmode {
   \global
-  \scoreASopranoCMajor
-  \pageBreak
-  \scoreASopranoGMajor
+  % Chords follow here.
+  % QP^5_EL
+  c g c
+  c f c
+  c b:dim/d c
+  % QP^8_EL
+  c g c
+  c f, c'
+  c b:dim/d c
+  % QP^3_EL
+  c g c
+  c f c
+  c8[b:dim/d c]c[b:dim/d c]
+  % QP^5_WL
+  c4 g c
+  c f, c'
+  c s s
+  % QP^8_WL
+  c g c
+  c f c
+  c d c
+  % QP^3_WL
+  c g c
+  c f c
+  c8[d c]c[d c]
+  \time 4/4
+  % KD
+  % KD^5_EL-I-IV-V-I
+  c4 f, g c|
+  % KD^8_EL-I-IV-V-I
+  c f, g c|
+  % KD^3_EL-I-IV-V-I
+  c f, g c|
+  % KD^5_WL-I-IV-V-I
+  c f, g c|
+  % KD^8_WL-I-IV-V-I
+  c f, g c|
+  % KD^3_WL-I-IV-V-I
+  c f, g c|
+  % KD^5_EL-I-IV-V-I
+  c4 f, d' c|
+  % KD^8_EL-I-IV-V-I
+  c f, d' c|
+  % KD^3_EL-I-IV-V-I
+  c f, d' c|
+  % KD^5_WL-I-IV-V-I
+  c f, d' c|
+  % KD^8_WL-I-IV-V-I
+  c f, d' c|
+  % KD^3_WL-I-IV-V-I
+  c f, d' c|
+  % KD^5_EL-I-IV-V-I
+  c4 f,8 \parenthesize fs g4 c|
+  % KD^8_EL-I-IV-V-I
+  c f,8 \parenthesize fs g4 c|
+  % KD^3_EL-I-IV-V-I
+  c f,8 \parenthesize fs g4 c|
+  % KD^5_WL-I-IV-V-I
+  c f,8 \parenthesize fs g4 c|
+  % KD^8_WL-I-IV-V-I
+  c f,8 \parenthesize fs g4 c|
+  % KD^3_WL-I-IV-V-I
+  c f,8 \parenthesize fs g4 c|
+  % QFS
+  % QFS^5_EL-I-IV-VII-III-VI-II-V-I
+  c f b, e a, d g, c
+  % QFS^8_EL-I-IV-VII-III-VI-II-V-I
+  c f b, e a, d g, c
+  % QFS^3_EL-I-IV-VII-III-VI-II-V-I
+  c f b, e a, d g, c
+  % QFS^5_WL-I-IV-VII-III-VI-II-V-I
+  c f b, e a, d g, c
+  % QFS^8_WL-I-IV-VII-III-VI-II-V-I
+  c f b, e a, d g, c
+  % QFS^3_WL-I-IV-VII-III-VI-II-V-I
+  c f b, e a, d g, c
+  \bar "|."    
 }
 
-scoreAAlto = {
-  \global
-  \scoreAAltoCMajor
-  \pageBreak
-  \scoreAAltoGMajor
-}
+% -----------------------------------------------
+% -----------------------------------------------
+% -----------------------------------------------
+% end C major
+% -----------------------------------------------
+% -----------------------------------------------
+% -----------------------------------------------
 
-scoreATenor = {
-  \global
-  \scoreATenorCMajor
-  \pageBreak
-  \scoreATenorGMajor
-}
-
-scoreABass = {
-  \global
-  \scoreABassCMajor
-  \pageBreak
-  \scoreABassGMajor
-}
-
-scoreAChoirPart = \new ChoirStaff <<
+choirPart = \new ChoirStaff <<
   \new Staff \with {
     midiInstrument = "choir aahs"
     instrumentName = \markup \center-column { "Sopran" "Alt" }
@@ -866,15 +555,15 @@ scoreAChoirPart = \new ChoirStaff <<
   } <<
     \new Voice = "soprano" \with {
       \consists "Ambitus_engraver"
-    } { \voiceOne \scoreASoprano }
+    } { \voiceOne \soprano }
     \new Voice = "alto" \with {
       \consists "Ambitus_engraver"
       \override Ambitus #'X-offset = #2.0
-    } { \voiceTwo \scoreAAlto }
+    } { \voiceTwo \alto }
   >>
   \new Lyrics \with {
     \override VerticalAxisGroup #'staff-affinity = #CENTER
-  } \lyricsto "soprano" \scoreAVerse
+  } \lyricsto "soprano" \verse
   \new Staff \with {
     midiInstrument = "choir aahs"
     instrumentName = \markup \center-column { "Tenor" "Bass" }
@@ -883,347 +572,24 @@ scoreAChoirPart = \new ChoirStaff <<
     \clef bass
     \new Voice = "tenor" \with {
       \consists "Ambitus_engraver"
-    } { \voiceOne \scoreATenor }
+    } { \voiceOne \tenor }
     \new Voice = "bass" \with {
       \consists "Ambitus_engraver"
       \override Ambitus #'X-offset = #2.0
-    } { \voiceTwo \scoreABass }
+    } { \voiceTwo \bass }
   >>
 >>
 
-scoreABassFiguresPart = \new FiguredBass \scoreAFigBass
+bassFiguresPart = \new FiguredBass \figBass
 
-\bookpart {
-  \score {
-    <<
-      \scoreAChoirPart
-      \scoreABassFiguresPart
-    >>
-    \layout { }
-    \midi { }
-  }
-}
+chordsPart = \new ChordNames \chordNames
 
-scoreBSoprano = \relative c'' {
-  \global
-  % Music follows here.
-
-}
-
-scoreBAlto = \relative c' {
-  \global
-  % Music follows here.
-
-}
-
-scoreBTenor = \relative c' {
-  \global
-  % Music follows here.
-
-}
-
-scoreBBass = \relative c {
-  \global
-  % Music follows here.
-
-}
-
-scoreBVerse = \lyricmode {
-  % Lyrics follow here.
-
-}
-
-scoreBFigBass = \figuremode {
-  \global
-  % Figures follow here.
-
-}
-
-scoreBChoirPart = \new ChoirStaff <<
-  \new Staff \with {
-    midiInstrument = "choir aahs"
-    instrumentName = \markup \center-column { "Sopran" "Alt" }
-    shortInstrumentName = \markup \center-column { "S." "A." }
-  } <<
-    \new Voice = "soprano" \with {
-      \consists "Ambitus_engraver"
-    } { \voiceOne \scoreBSoprano }
-    \new Voice = "alto" \with {
-      \consists "Ambitus_engraver"
-      \override Ambitus #'X-offset = #2.0
-    } { \voiceTwo \scoreBAlto }
+\score {
+  <<
+    \choirPart
+    \bassFiguresPart
+    \chordsPart
   >>
-  \new Lyrics \with {
-    \override VerticalAxisGroup #'staff-affinity = #CENTER
-  } \lyricsto "soprano" \scoreBVerse
-  \new Staff \with {
-    midiInstrument = "choir aahs"
-    instrumentName = \markup \center-column { "Tenor" "Bass" }
-    shortInstrumentName = \markup \center-column { "T." "B." }
-  } <<
-    \clef bass
-    \new Voice = "tenor" \with {
-      \consists "Ambitus_engraver"
-    } { \voiceOne \scoreBTenor }
-    \new Voice = "bass" \with {
-      \consists "Ambitus_engraver"
-      \override Ambitus #'X-offset = #2.0
-    } { \voiceTwo \scoreBBass }
-  >>
->>
-
-scoreBBassFiguresPart = \new FiguredBass \scoreBFigBass
-
-\bookpart {
-  \score {
-    <<
-      \scoreBChoirPart
-      \scoreBBassFiguresPart
-    >>
-    \layout { }
-    \midi { }
-  }
-}
-
-scoreCSoprano = \relative c'' {
-  \global
-  % Music follows here.
-
-}
-
-scoreCAlto = \relative c' {
-  \global
-  % Music follows here.
-
-}
-
-scoreCTenor = \relative c' {
-  \global
-  % Music follows here.
-
-}
-
-scoreCBass = \relative c {
-  \global
-  % Music follows here.
-
-}
-
-scoreCVerse = \lyricmode {
-  % Lyrics follow here.
-
-}
-
-scoreCFigBass = \figuremode {
-  \global
-  % Figures follow here.
-
-}
-
-scoreCChoirPart = \new ChoirStaff <<
-  \new Staff \with {
-    midiInstrument = "choir aahs"
-    instrumentName = \markup \center-column { "Sopran" "Alt" }
-    shortInstrumentName = \markup \center-column { "S." "A." }
-  } <<
-    \new Voice = "soprano" \with {
-      \consists "Ambitus_engraver"
-    } { \voiceOne \scoreCSoprano }
-    \new Voice = "alto" \with {
-      \consists "Ambitus_engraver"
-      \override Ambitus #'X-offset = #2.0
-    } { \voiceTwo \scoreCAlto }
-  >>
-  \new Lyrics \with {
-    \override VerticalAxisGroup #'staff-affinity = #CENTER
-  } \lyricsto "soprano" \scoreCVerse
-  \new Staff \with {
-    midiInstrument = "choir aahs"
-    instrumentName = \markup \center-column { "Tenor" "Bass" }
-    shortInstrumentName = \markup \center-column { "T." "B." }
-  } <<
-    \clef bass
-    \new Voice = "tenor" \with {
-      \consists "Ambitus_engraver"
-    } { \voiceOne \scoreCTenor }
-    \new Voice = "bass" \with {
-      \consists "Ambitus_engraver"
-      \override Ambitus #'X-offset = #2.0
-    } { \voiceTwo \scoreCBass }
-  >>
->>
-
-scoreCBassFiguresPart = \new FiguredBass \scoreCFigBass
-
-\bookpart {
-  \score {
-    <<
-      \scoreCChoirPart
-      \scoreCBassFiguresPart
-    >>
-    \layout { }
-    \midi { }
-  }
-}
-
-scoreDSoprano = \relative c'' {
-  \global
-  % Music follows here.
-
-}
-
-scoreDAlto = \relative c' {
-  \global
-  % Music follows here.
-
-}
-
-scoreDTenor = \relative c' {
-  \global
-  % Music follows here.
-
-}
-
-scoreDBass = \relative c {
-  \global
-  % Music follows here.
-
-}
-
-scoreDVerse = \lyricmode {
-  % Lyrics follow here.
-
-}
-
-scoreDFigBass = \figuremode {
-  \global
-  % Figures follow here.
-
-}
-
-scoreDChoirPart = \new ChoirStaff <<
-  \new Staff \with {
-    midiInstrument = "choir aahs"
-    instrumentName = \markup \center-column { "Sopran" "Alt" }
-    shortInstrumentName = \markup \center-column { "S." "A." }
-  } <<
-    \new Voice = "soprano" \with {
-      \consists "Ambitus_engraver"
-    } { \voiceOne \scoreDSoprano }
-    \new Voice = "alto" \with {
-      \consists "Ambitus_engraver"
-      \override Ambitus #'X-offset = #2.0
-    } { \voiceTwo \scoreDAlto }
-  >>
-  \new Lyrics \with {
-    \override VerticalAxisGroup #'staff-affinity = #CENTER
-  } \lyricsto "soprano" \scoreDVerse
-  \new Staff \with {
-    midiInstrument = "choir aahs"
-    instrumentName = \markup \center-column { "Tenor" "Bass" }
-    shortInstrumentName = \markup \center-column { "T." "B." }
-  } <<
-    \clef bass
-    \new Voice = "tenor" \with {
-      \consists "Ambitus_engraver"
-    } { \voiceOne \scoreDTenor }
-    \new Voice = "bass" \with {
-      \consists "Ambitus_engraver"
-      \override Ambitus #'X-offset = #2.0
-    } { \voiceTwo \scoreDBass }
-  >>
->>
-
-scoreDBassFiguresPart = \new FiguredBass \scoreDFigBass
-
-\bookpart {
-  \score {
-    <<
-      \scoreDChoirPart
-      \scoreDBassFiguresPart
-    >>
-    \layout { }
-    \midi { }
-  }
-}
-
-scoreESoprano = \relative c'' {
-  \global
-  % Music follows here.
-
-}
-
-scoreEAlto = \relative c' {
-  \global
-  % Music follows here.
-
-}
-
-scoreETenor = \relative c' {
-  \global
-  % Music follows here.
-
-}
-
-scoreEBass = \relative c {
-  \global
-  % Music follows here.
-
-}
-
-scoreEVerse = \lyricmode {
-  % Lyrics follow here.
-
-}
-
-scoreEFigBass = \figuremode {
-  \global
-  % Figures follow here.
-
-}
-
-scoreEChoirPart = \new ChoirStaff <<
-  \new Staff \with {
-    midiInstrument = "choir aahs"
-    instrumentName = \markup \center-column { "Sopran" "Alt" }
-    shortInstrumentName = \markup \center-column { "S." "A." }
-  } <<
-    \new Voice = "soprano" \with {
-      \consists "Ambitus_engraver"
-    } { \voiceOne \scoreESoprano }
-    \new Voice = "alto" \with {
-      \consists "Ambitus_engraver"
-      \override Ambitus #'X-offset = #2.0
-    } { \voiceTwo \scoreEAlto }
-  >>
-  \new Lyrics \with {
-    \override VerticalAxisGroup #'staff-affinity = #CENTER
-  } \lyricsto "soprano" \scoreEVerse
-  \new Staff \with {
-    midiInstrument = "choir aahs"
-    instrumentName = \markup \center-column { "Tenor" "Bass" }
-    shortInstrumentName = \markup \center-column { "T." "B." }
-  } <<
-    \clef bass
-    \new Voice = "tenor" \with {
-      \consists "Ambitus_engraver"
-    } { \voiceOne \scoreETenor }
-    \new Voice = "bass" \with {
-      \consists "Ambitus_engraver"
-      \override Ambitus #'X-offset = #2.0
-    } { \voiceTwo \scoreEBass }
-  >>
->>
-
-scoreEBassFiguresPart = \new FiguredBass \scoreEFigBass
-
-\bookpart {
-  \score {
-    <<
-      \scoreEChoirPart
-      \scoreEBassFiguresPart
-    >>
-    \layout { }
-    \midi { }
-  }
+  \layout { }
+  \midi { }
 }
