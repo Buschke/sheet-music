@@ -470,6 +470,7 @@ scoreAFigBass = \figuremode {
 
 scoreAChordNames = \chordmode {
   \globalA
+  \germanChords
   % Chords follow here.
   % QP^5_EL
   c g c
@@ -1035,6 +1036,7 @@ scoreBFigBass = \figuremode {
 
 scoreBChordNames = \chordmode {
   \globalB
+  \germanChords
   % Chords follow here.
   % QP^5_EL
   a:min e a:min
@@ -1218,6 +1220,7 @@ scoreCFigBass = \figuremode {
 
 scoreCChordNames = \chordmode {
   \globalC
+  \germanChords
   % Chords follow here.
   \transpose c g \scoreAChordNames
 }
@@ -1326,6 +1329,7 @@ scoreDFigBass = \figuremode {
 
 scoreDChordNames = \chordmode {
   \globalD
+  \germanChords
   % Chords follow here.
   \transpose a e \scoreBChordNames
 }
@@ -1434,6 +1438,7 @@ scoreEFigBass = \figuremode {
 
 scoreEChordNames = \chordmode {
   \globalE
+  \germanChords
   % Chords follow here.
   \transpose c f \scoreAChordNames
 }
@@ -1542,6 +1547,7 @@ scoreFFigBass = \figuremode {
 
 scoreFChordNames = \chordmode {
   \globalF
+  \germanChords
   % Chords follow here.
   \transpose a d \scoreBChordNames
 }
@@ -1650,6 +1656,7 @@ scoreGFigBass = \figuremode {
 
 scoreGChordNames = \chordmode {
   \globalG
+  \germanChords
   % Chords follow here.
   \transpose c d \scoreAChordNames
 }
@@ -1758,6 +1765,7 @@ scoreHFigBass = \figuremode {
 
 scoreHChordNames = \chordmode {
   \globalH
+  \germanChords
   % Chords follow here.
   \transpose a b \scoreBChordNames
 }
@@ -1866,6 +1874,7 @@ scoreIFigBass = \figuremode {
 
 scoreIChordNames = \chordmode {
   \globalI
+  \germanChords
   % Chords follow here.
   \transpose c bf \scoreAChordNames
 }
@@ -1974,6 +1983,7 @@ scoreJFigBass = \figuremode {
 
 scoreJChordNames = \chordmode {
   \globalJ
+  \germanChords
   % Chords follow here.
   \transpose a g \scoreBChordNames
 }
@@ -2082,6 +2092,7 @@ scoreKFigBass = \figuremode {
 
 scoreKChordNames = \chordmode {
   \globalK
+  \germanChords
   % Chords follow here.
   \transpose c a \scoreAChordNames
 }
@@ -2190,6 +2201,7 @@ scoreLFigBass = \figuremode {
 
 scoreLChordNames = \chordmode {
   \globalL
+  \germanChords
   % Chords follow here.
   \transpose a fs \scoreBChordNames
 }
@@ -2298,6 +2310,7 @@ scoreMFigBass = \figuremode {
 
 scoreMChordNames = \chordmode {
   \globalM
+  \germanChords
   % Chords follow here.
   \transpose c ef \scoreAChordNames
 }
@@ -2406,6 +2419,7 @@ scoreNFigBass = \figuremode {
 
 scoreNChordNames = \chordmode {
   \globalN
+  \germanChords
   % Chords follow here.
   \transpose a c \scoreBChordNames
 }
@@ -2514,6 +2528,7 @@ scoreOFigBass = \figuremode {
 
 scoreOChordNames = \chordmode {
   \globalO
+  \germanChords
   % Chords follow here.
   \transpose c e \scoreAChordNames
 }
@@ -2622,6 +2637,7 @@ scorePFigBass = \figuremode {
 
 scorePChordNames = \chordmode {
   \globalP
+  \germanChords
   % Chords follow here.
   \transpose a cs \scoreBChordNames
 }
@@ -2730,6 +2746,7 @@ scoreQFigBass = \figuremode {
 
 scoreQChordNames = \chordmode {
   \globalQ
+  \germanChords
   % Chords follow here.
   \transpose c af \scoreAChordNames
 }
@@ -2838,6 +2855,7 @@ scoreRFigBass = \figuremode {
 
 scoreRChordNames = \chordmode {
   \globalR
+  \germanChords
   % Chords follow here.
   \transpose a f \scoreBChordNames
 }
@@ -2946,6 +2964,7 @@ scoreSFigBass = \figuremode {
 
 scoreSChordNames = \chordmode {
   \globalS
+  \germanChords
   % Chords follow here.
   \transpose c b \scoreAChordNames
 }
@@ -3054,6 +3073,7 @@ scoreTFigBass = \figuremode {
 
 scoreTChordNames = \chordmode {
   \globalT
+  \germanChords
   % Chords follow here.
   \transpose a gs \scoreBChordNames
 }
@@ -3162,6 +3182,7 @@ scoreUFigBass = \figuremode {
 
 scoreUChordNames = \chordmode {
   \globalU
+  \germanChords
   % Chords follow here.
   \transpose c df \scoreAChordNames
 }
@@ -3270,6 +3291,7 @@ scoreVFigBass = \figuremode {
 
 scoreVChordNames = \chordmode {
   \globalV
+  \germanChords
   % Chords follow here.
   \transpose a bf \scoreBChordNames
 }
@@ -3378,6 +3400,7 @@ scoreWFigBass = \figuremode {
 
 scoreWChordNames = \chordmode {
   \globalW
+  \germanChords
   % Chords follow here.
   \transpose c fs \scoreAChordNames
 }
@@ -3486,6 +3509,7 @@ scoreXFigBass = \figuremode {
 
 scoreXChordNames = \chordmode {
   \globalX
+  \germanChords
   % Chords follow here.
   \transpose a ds \scoreBChordNames
 }
@@ -3594,6 +3618,7 @@ scoreYFigBass = \figuremode {
 
 scoreYChordNames = \chordmode {
   \globalY
+  \germanChords
   % Chords follow here.
   \transpose c gf \scoreAChordNames
 }
@@ -3702,6 +3727,7 @@ scoreZFigBass = \figuremode {
 
 scoreZChordNames = \chordmode {
   \globalZ
+  \germanChords
   % Chords follow here.
   \transpose a ef \scoreBChordNames
 }
