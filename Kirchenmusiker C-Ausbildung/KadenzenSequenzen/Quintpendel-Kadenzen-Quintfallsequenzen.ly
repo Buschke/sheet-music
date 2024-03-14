@@ -1184,25 +1184,25 @@ globalC = {
 scoreCSoprano = \relative c'' {
   \globalC
   % Music follows here.
-  \transpose c g \scoreASoprano
+  \transpose c g, \scoreASoprano
 }
 
 scoreCAlto = \relative c' {
   \globalC
   % Music follows here.
-  \transpose c g \scoreAAlto
+  \transpose c g, \scoreAAlto
 }
 
 scoreCTenor = \relative c' {
   \globalC
   % Music follows here.
-  \transpose c g \scoreATenor
+  \transpose c g, \scoreATenor
 }
 
 scoreCBass = \relative c {
   \globalC
   % Music follows here.
-  \transpose c g \scoreABass
+  \transpose c g, \scoreABass
 }
 
 scoreCVerse = \lyricmode {
@@ -1292,25 +1292,25 @@ globalD = {
 scoreDSoprano = \relative c'' {
   \globalD
   % Music follows here.
-  \transpose a e \scoreBSoprano
+  \transpose a e' \scoreBSoprano
 }
 
 scoreDAlto = \relative c' {
   \globalD
   % Music follows here.
-  \transpose a e \scoreBAlto
+  \transpose a e' \scoreBAlto
 }
 
 scoreDTenor = \relative c' {
   \globalD
   % Music follows here.
-  \transpose a e \scoreBTenor
+  \transpose a e' \scoreBTenor
 }
 
 scoreDBass = \relative c {
   \globalD
   % Music follows here.
-  \transpose a e \scoreBBass
+  \transpose a e' \scoreBBass
 }
 
 scoreDVerse = \lyricmode {
@@ -1508,25 +1508,25 @@ globalF = {
 scoreFSoprano = \relative c'' {
   \globalF
   % Music follows here.
-  \transpose a d \scoreBSoprano
+  \transpose a d' \scoreBSoprano
 }
 
 scoreFAlto = \relative c' {
   \globalF
   % Music follows here.
-  \transpose a d \scoreBAlto
+  \transpose a d' \scoreBAlto
 }
 
 scoreFTenor = \relative c' {
   \globalF
   % Music follows here.
-  \transpose a d \scoreBTenor
+  \transpose a d' \scoreBTenor
 }
 
 scoreFBass = \relative c {
   \globalF
   % Music follows here.
-  \transpose a d \scoreBBass
+  \transpose a d' \scoreBBass
 }
 
 scoreFVerse = \lyricmode {
@@ -2048,25 +2048,25 @@ globalK = {
 scoreKSoprano = \relative c'' {
   \globalK
   % Music follows here.
-  \transpose c a \scoreASoprano
+  \transpose c a, \scoreASoprano
 }
 
 scoreKAlto = \relative c' {
   \globalK
   % Music follows here.
-  \transpose c a \scoreAAlto
+  \transpose c a, \scoreAAlto
 }
 
 scoreKTenor = \relative c' {
   \globalK
   % Music follows here.
-  \transpose c a \scoreATenor
+  \transpose c a, \scoreATenor
 }
 
 scoreKBass = \relative c {
   \globalK
   % Music follows here.
-  \transpose c a \scoreABass
+  \transpose c a, \scoreABass
 }
 
 scoreKVerse = \lyricmode {
@@ -2372,25 +2372,25 @@ globalN = {
 scoreNSoprano = \relative c'' {
   \globalN
   % Music follows here.
-  \transpose a c \scoreBSoprano
+  \transpose a c' \scoreBSoprano
 }
 
 scoreNAlto = \relative c' {
   \globalN
   % Music follows here.
-  \transpose a c \scoreBAlto
+  \transpose a c' \scoreBAlto
 }
 
 scoreNTenor = \relative c' {
   \globalN
   % Music follows here.
-  \transpose a c \scoreBTenor
+  \transpose a c' \scoreBTenor
 }
 
 scoreNBass = \relative c {
   \globalN
   % Music follows here.
-  \transpose a c \scoreBBass
+  \transpose a c' \scoreBBass
 }
 
 scoreNVerse = \lyricmode {
@@ -2588,25 +2588,25 @@ globalP = {
 scorePSoprano = \relative c'' {
   \globalP
   % Music follows here.
-  \transpose a cs \scoreBSoprano
+  \transpose a cs' \scoreBSoprano
 }
 
 scorePAlto = \relative c' {
   \globalP
   % Music follows here.
-  \transpose a cs \scoreBAlto
+  \transpose a cs' \scoreBAlto
 }
 
 scorePTenor = \relative c' {
   \globalP
   % Music follows here.
-  \transpose a cs \scoreBTenor
+  \transpose a cs' \scoreBTenor
 }
 
 scorePBass = \relative c {
   \globalP
   % Music follows here.
-  \transpose a cs \scoreBBass
+  \transpose a cs' \scoreBBass
 }
 
 scorePVerse = \lyricmode {
@@ -2696,25 +2696,25 @@ globalQ = {
 scoreQSoprano = \relative c'' {
   \globalQ
   % Music follows here.
-  \transpose c af \scoreASoprano
+  \transpose c af, \scoreASoprano
 }
 
 scoreQAlto = \relative c' {
   \globalQ
   % Music follows here.
-  \transpose c af \scoreAAlto
+  \transpose c af, \scoreAAlto
 }
 
 scoreQTenor = \relative c' {
   \globalQ
   % Music follows here.
-  \transpose c af \scoreATenor
+  \transpose c af, \scoreATenor
 }
 
 scoreQBass = \relative c {
   \globalQ
   % Music follows here.
-  \transpose c af \scoreABass
+  \transpose c af, \scoreABass
 }
 
 scoreQVerse = \lyricmode {
@@ -2912,25 +2912,25 @@ globalS = {
 scoreSSoprano = \relative c'' {
   \globalS
   % Music follows here.
-  \transpose c b \scoreASoprano
+  \transpose c b, \scoreASoprano
 }
 
 scoreSAlto = \relative c' {
   \globalS
   % Music follows here.
-  \transpose c b \scoreAAlto
+  \transpose c b, \scoreAAlto
 }
 
 scoreSTenor = \relative c' {
   \globalS
   % Music follows here.
-  \transpose c b \scoreATenor
+  \transpose c b, \scoreATenor
 }
 
 scoreSBass = \relative c {
   \globalS
   % Music follows here.
-  \transpose c b \scoreABass
+  \transpose c b, \scoreABass
 }
 
 scoreSVerse = \lyricmode {
@@ -3452,25 +3452,25 @@ globalX = {
 scoreXSoprano = \relative c'' {
   \globalX
   % Music follows here.
-  \transpose a ds \scoreBSoprano
+  \transpose a ds' \scoreBSoprano
 }
 
 scoreXAlto = \relative c' {
   \globalX
   % Music follows here.
-  \transpose a ds \scoreBAlto
+  \transpose a ds' \scoreBAlto
 }
 
 scoreXTenor = \relative c' {
   \globalX
   % Music follows here.
-  \transpose a ds \scoreBTenor
+  \transpose a ds' \scoreBTenor
 }
 
 scoreXBass = \relative c {
   \globalX
   % Music follows here.
-  \transpose a ds \scoreBBass
+  \transpose a ds' \scoreBBass
 }
 
 scoreXVerse = \lyricmode {
@@ -3560,25 +3560,25 @@ globalY = {
 scoreYSoprano = \relative c'' {
   \globalY
   % Music follows here.
-  \transpose c gf \scoreASoprano
+  \transpose c gf, \scoreASoprano
 }
 
 scoreYAlto = \relative c' {
   \globalY
   % Music follows here.
-  \transpose c gf \scoreAAlto
+  \transpose c gf, \scoreAAlto
 }
 
 scoreYTenor = \relative c' {
   \globalY
   % Music follows here.
-  \transpose c gf \scoreATenor
+  \transpose c gf, \scoreATenor
 }
 
 scoreYBass = \relative c {
   \globalY
   % Music follows here.
-  \transpose c gf \scoreABass
+  \transpose c gf, \scoreABass
 }
 
 scoreYVerse = \lyricmode {
@@ -3668,25 +3668,25 @@ globalZ = {
 scoreZSoprano = \relative c'' {
   \globalZ
   % Music follows here.
-  \transpose a ef \scoreBSoprano
+  \transpose a ef' \scoreBSoprano
 }
 
 scoreZAlto = \relative c' {
   \globalZ
   % Music follows here.
-  \transpose a ef \scoreBAlto
+  \transpose a ef' \scoreBAlto
 }
 
 scoreZTenor = \relative c' {
   \globalZ
   % Music follows here.
-  \transpose a ef \scoreBTenor
+  \transpose a ef' \scoreBTenor
 }
 
 scoreZBass = \relative c {
   \globalZ
   % Music follows here.
-  \transpose a ef \scoreBBass
+  \transpose a ef' \scoreBBass
 }
 
 scoreZVerse = \lyricmode {
