@@ -21,6 +21,9 @@
   #(set-paper-size "a4")
 }
 
+\markuplist \table-of-contents
+\pageBreak
+
 global = {
   \key c \major
   \numericTimeSignature
@@ -35,6 +38,9 @@ global = {
 % -----------------------------------------------
 % -----------------------------------------------
 % -----------------------------------------------
+
+\label #'C-Dur
+\tocItem \markup {C-Dur}
 
 globalA = {
   \key c \major
@@ -607,6 +613,9 @@ scoreAChordsPart = \new ChordNames \scoreAChordNames
 % -----------------------------------------------
 % -----------------------------------------------
 
+\label #'a-Moll
+\tocItem \markup {a-Moll}
+
 globalB = {
   \key a \minor
   %   \numericTimeSignature
@@ -1176,6 +1185,9 @@ scoreBChordsPart = \new ChordNames \scoreBChordNames
 % -----------------------------------------------
 % -----------------------------------------------
 
+\label #'G-Dur
+\tocItem \markup {G-Dur}
+
 globalC = {
   \transpose c g \key c \major
   %   \numericTimeSignature
@@ -1284,6 +1296,9 @@ scoreCChordsPart = \new ChordNames \scoreCChordNames
 % -----------------------------------------------
 % -----------------------------------------------
 % -----------------------------------------------
+
+\label #'e-Moll
+\tocItem \markup {e-Moll}
 
 globalD = {
   \transpose a e \key a \minor
@@ -1394,6 +1409,9 @@ scoreDChordsPart = \new ChordNames \scoreDChordNames
 % -----------------------------------------------
 % -----------------------------------------------
 
+\label #'F-Dur
+\tocItem \markup {F-Dur}
+
 globalE = {
   \transpose c f \key c \major
   %   \numericTimeSignature
@@ -1502,6 +1520,9 @@ scoreEChordsPart = \new ChordNames \scoreEChordNames
 % -----------------------------------------------
 % -----------------------------------------------
 % -----------------------------------------------
+
+\label #'d-Moll
+\tocItem \markup {d-Moll}
 
 globalF = {
   \transpose a d \key a \minor
@@ -1612,6 +1633,9 @@ scoreFChordsPart = \new ChordNames \scoreFChordNames
 % -----------------------------------------------
 % -----------------------------------------------
 
+\label #'D-Dur
+\tocItem \markup {D-Dur}
+
 globalG = {
   \transpose c d \key c \major
   %   \numericTimeSignature
@@ -1721,6 +1745,9 @@ scoreGChordsPart = \new ChordNames \scoreGChordNames
 % -----------------------------------------------
 % -----------------------------------------------
 
+\label #'h-Moll
+\tocItem \markup {h-Moll}
+
 globalH = {
   \transpose a b \key a \minor
   %   \numericTimeSignature
@@ -1825,10 +1852,13 @@ scoreHChordsPart = \new ChordNames \scoreHChordNames
 % -----------------------------------------------
 % -----------------------------------------------
 % -----------------------------------------------
-% begin b major
+% begin bf major
 % -----------------------------------------------
 % -----------------------------------------------
 % -----------------------------------------------
+
+\label #'B-Dur
+\tocItem \markup {B-Dur}
 
 globalI = {
   \transpose c bf \key c \major
@@ -1939,6 +1969,9 @@ scoreIChordsPart = \new ChordNames \scoreIChordNames
 % -----------------------------------------------
 % -----------------------------------------------
 
+\label #'g-Moll
+\tocItem \markup {g-Moll}
+
 globalJ = {
   \transpose a g \key a \minor
   %   \numericTimeSignature
@@ -2047,6 +2080,9 @@ scoreJChordsPart = \new ChordNames \scoreJChordNames
 % -----------------------------------------------
 % -----------------------------------------------
 % -----------------------------------------------
+
+\label #'A-Dur
+\tocItem \markup {A-Dur}
 
 globalK = {
   \transpose c a \key c \major
@@ -2157,6 +2193,9 @@ scoreKChordsPart = \new ChordNames \scoreKChordNames
 % -----------------------------------------------
 % -----------------------------------------------
 
+\label #'fis-Moll
+\tocItem \markup {fis-Mol}
+
 globalL = {
   \transpose a fs \key a \minor
   %   \numericTimeSignature
@@ -2265,6 +2304,9 @@ scoreLChordsPart = \new ChordNames \scoreLChordNames
 % -----------------------------------------------
 % -----------------------------------------------
 % -----------------------------------------------
+
+\label #'Es-Dur
+\tocItem \markup {Es-Dur}
 
 globalM = {
   \transpose c ef \key c \major
@@ -2375,6 +2417,9 @@ scoreMChordsPart = \new ChordNames \scoreMChordNames
 % -----------------------------------------------
 % -----------------------------------------------
 
+\label #'c-Moll
+\tocItem \markup {c-Moll}
+
 globalN = {
   \transpose a c \key a \minor
   %   \numericTimeSignature
@@ -2483,6 +2528,9 @@ scoreNChordsPart = \new ChordNames \scoreNChordNames
 % -----------------------------------------------
 % -----------------------------------------------
 % -----------------------------------------------
+
+\label #'E-Dur
+\tocItem \markup {E-Dur}
 
 globalO = {
   \transpose c e \key c \major
@@ -2593,6 +2641,9 @@ scoreOChordsPart = \new ChordNames \scoreOChordNames
 % -----------------------------------------------
 % -----------------------------------------------
 
+\label #'cis-Moll
+\tocItem \markup {cis-Moll}
+
 globalP = {
   \transpose a cs \key a \minor
   %   \numericTimeSignature
@@ -2701,6 +2752,9 @@ scorePChordsPart = \new ChordNames \scorePChordNames
 % -----------------------------------------------
 % -----------------------------------------------
 % -----------------------------------------------
+
+\label #'As-Dur
+\tocItem \markup {As-Dur}
 
 globalQ = {
   \transpose c af \key c \major
@@ -2811,6 +2865,9 @@ scoreQChordsPart = \new ChordNames \scoreQChordNames
 % -----------------------------------------------
 % -----------------------------------------------
 
+\label #'f-Moll
+\tocItem \markup {f-Moll}
+
 globalR = {
   \transpose a f \key a \minor
   %   \numericTimeSignature
@@ -2919,6 +2976,9 @@ scoreRChordsPart = \new ChordNames \scoreRChordNames
 % -----------------------------------------------
 % -----------------------------------------------
 % -----------------------------------------------
+
+\label #'H-Dur
+\tocItem \markup {H-Dur}
 
 globalS = {
   \transpose c b \key c \major
@@ -3029,6 +3089,9 @@ scoreSChordsPart = \new ChordNames \scoreSChordNames
 % -----------------------------------------------
 % -----------------------------------------------
 
+\label #'gis-Moll
+\tocItem \markup {gis-Moll}
+
 globalT = {
   \transpose a gs \key a \minor
   %   \numericTimeSignature
@@ -3137,6 +3200,9 @@ scoreTChordsPart = \new ChordNames \scoreTChordNames
 % -----------------------------------------------
 % -----------------------------------------------
 % -----------------------------------------------
+
+\label #'Des-Dur
+\tocItem \markup {Des-Dur}
 
 globalU = {
   \transpose c df \key c \major
@@ -3247,6 +3313,9 @@ scoreUChordsPart = \new ChordNames \scoreUChordNames
 % -----------------------------------------------
 % -----------------------------------------------
 
+\label #'b-Moll
+\tocItem \markup {b-Moll}
+
 globalV = {
   \transpose a bf \key a \minor
   %   \numericTimeSignature
@@ -3355,6 +3424,9 @@ scoreVChordsPart = \new ChordNames \scoreVChordNames
 % -----------------------------------------------
 % -----------------------------------------------
 % -----------------------------------------------
+
+\label #'Fis-Dur
+\tocItem \markup {Fis-Dur}
 
 globalW = {
   \transpose c fs \key c \major
@@ -3465,6 +3537,9 @@ scoreWChordsPart = \new ChordNames \scoreWChordNames
 % -----------------------------------------------
 % -----------------------------------------------
 
+\label #'dis-Moll
+\tocItem \markup {dis-Moll}
+
 globalX = {
   \transpose a ds \key a \minor
   %   \numericTimeSignature
@@ -3574,6 +3649,9 @@ scoreXChordsPart = \new ChordNames \scoreXChordNames
 % -----------------------------------------------
 % -----------------------------------------------
 
+\label #'Ges-Dur
+\tocItem \markup {Ges-Dur}
+
 globalY = {
   \transpose c gf \key c \major
   %   \numericTimeSignature
@@ -3682,6 +3760,9 @@ scoreYChordsPart = \new ChordNames \scoreYChordNames
 % -----------------------------------------------
 % -----------------------------------------------
 % -----------------------------------------------
+
+\label #'es-Moll
+\tocItem \markup {es-Moll}
 
 globalZ = {
   \transpose a ef \key a \minor
