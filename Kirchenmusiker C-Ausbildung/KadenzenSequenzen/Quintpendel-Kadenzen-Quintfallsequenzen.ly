@@ -54,7 +54,7 @@ scoreASoprano = \relative c'' {
   % Music follows here.
   g^\markup{\column{\line{C-Dur: QP\super{5}\sub{EL}}\line{I-V-I}}} g g
   g^\markup{\column{\line{QP\super{5}\sub{EL}}\line{I-IV-I}}} a g
-  g^\markup{\column{\line{QP\super{5}\sub{EL}}\line{I-VII-I}}} f g
+  g^\markup{\column{\line{QP\super{5}\sub{EL}}\line{I-VII-I}}} \override NoteHead.color = #blue b \footnote #'(-1 . 3) "Vermeidung Parallelen" g \revert NoteHead.color
   \bar "||"
   c^\markup{\column{\line{QP\super{8}\sub{EL}}\line{I-V-I}}} b c
   c^\markup{\column{\line{QP\super{8}\sub{EL}}\line{I-IV-I}}} c c
@@ -66,7 +66,7 @@ scoreASoprano = \relative c'' {
   \bar "||"
   g4^\markup{\column{\line{QP\super{5}\sub{WL}}\line{I-V-I}}} g g
   g^\markup{\column{\line{QP\super{5}\sub{WL}}\line{I-IV-I}}} a g
-  g^\markup{\column{\line{QP\super{5}\sub{WL}}\line{I-VII-I}}} r r
+  g^\markup{\column{\line{QP\super{5}\sub{WL}}\line{I-VII-I}}} \override NoteHead.color=#red \footnote #'(-1 . 3) "Verdopplung Terz wg. Parallelen, aber Wechsel zur EL. Geht das?" d g \revert NoteHead.color
   \bar "||"
   c^\markup{\column{\line{QP\super{8}\sub{WL}}\line{I-V-I}}} b c
   c^\markup{\column{\line{QP\super{8}\sub{WL}}\line{I-IV-I}}} c c
@@ -91,17 +91,17 @@ scoreASoprano = \relative c'' {
   e^\markup{\column{\line{KD\super{3}\sub{WL}}\line{I-IV-V-I}}} f d e
   \bar "|.|"
   % KD I IV VII I
-  g,4^\markup{\column{\line{KD\super{5}\sub{EL}}\line{I-IV-VII-I}}} a f g
+  g,4^\markup{\column{\line{KD\super{5}\sub{EL}}\line{I-IV-VII-I}}} a f8 b g4
   \bar "||"
   c^\markup{\column{\line{KD\super{8}\sub{EL}}\line{I-IV-VII-I}}} c b c
   \bar "||"
-  e,^\markup{\column{\line{KD\super{3}\sub{EL}}\line{I-IV-VII-I}}} f d e
+  e,^\markup{\column{\line{KD\super{3}\sub{EL}}\line{I-IV-VII-I}}} f f e
   \bar "||"
-  g^\markup{\column{\line{KD\super{5}\sub{WL}}\line{I-IV-VII-I}}} a f g
+  g^\markup{\column{\line{KD\super{5}\sub{WL}}\line{I-IV-VII-I}}} a b g
   \bar "||"
   c4^\markup{\column{\line{KD\super{8}\sub{WL}}\line{I-IV-VII-I}}} c b c
   \bar "||"
-  e^\markup{\column{\line{KD\super{3}\sub{WL}}\line{I-IV-VII-I}}} f d e
+  e^\markup{\column{\line{KD\super{3}\sub{WL}}\line{I-IV-VII-I}}} f f e
   \bar "|.|"
   % KD I II65 V I
   g,4^\markup{\column{\line{KD\super{5}\sub{EL}}\line{I-II\super{6/5}-V-I}}} a g g
@@ -137,7 +137,7 @@ scoreAAlto = \relative c' {
   % QP^5_EL
   e d e
   e f e
-  e d e
+  e f e
   % QP^8_EL
   g g g
   g a g
@@ -149,7 +149,7 @@ scoreAAlto = \relative c' {
   % QP^5_WL
   c4 b c
   c c c
-  c r r
+  c \override NoteHead.color=#red b c \revert NoteHead.color
   % QP^8_WL
   e d e
   e f e
@@ -173,17 +173,17 @@ scoreAAlto = \relative c' {
   % KD^3_WL-I-IV-V-I
   g a g g
   % KD^5_WE-I-IV-V-I
-  e4 f d e
+  e4 f d8 d e4
   % KD^8_EL-I-IV-V-I
   g a f g
   % KD^3_EL-I-IV-V-I
-  c, c b c
+  c, c d c
   % KD^5_WL-I-IV-V-I
-  c c b c
+  c c d c  
   % KD^8_WL-I-IV-V-I
   e f d e
   % KD^3_WL-I-IV-V-I
-  g a f g
+  g a b g
   % KD^5_WE-I-IV-V-I
   e4 d d e
   % KD^8_EL-I-IV-V-I
@@ -218,7 +218,7 @@ scoreATenor = \relative c' {
   % QP^5_EL
   c b c
   c c c
-  c b c
+  c \override NoteHead.color = #blue d c \revert NoteHead.color
   % QP^8_EL
   e d e
   e f e
@@ -230,7 +230,7 @@ scoreATenor = \relative c' {
   % QP^5_WL
   e4 d e
   e f e
-  e r r
+  e f e
   % QP^8_WL
   g g g
   g a g
@@ -238,7 +238,7 @@ scoreATenor = \relative c' {
   % QP^3_WL
   c b c
   c c c
-  c8[b c]c[b c]
+  \override NoteHead.color = #blue \footnote #'(-1 . 3) "Terz verdoppeln wg. Parallelen" e8 [b e] \revert NoteHead.color c[b c]
   \time 4/4
   % KD
   % KD^5_EL-I-IV-V-I
@@ -254,17 +254,17 @@ scoreATenor = \relative c' {
   % KD^3_WL-I-IV-V-I
   c c b c
   % KD^5_EL-I-IV-V-I
-  c4 c b c
+  c4 c \footnote #'(-1 . 3) "Zur Vermeidung von Oktavparallelen." b c
   % KD^8_EL-I-IV-V-I
   e f d e
   % KD^3_EL-I-IV-V-I
-  g, a f g
+  g, a b g
   % KD^5_WL-I-IV-V-I
-  e f g e
+  e f f e
   % KD^8_WL-I-IV-V-I
   g a f g
   % KD^3_WL-I-IV-V-I
-  c c b c
+  c c \override NoteHead.color=#red \footnote #'(-1 . 3) "OK? War durchgestrichen, warum?" d c \revert NoteHead.color
   % KD^5_EL-I-IV-V-I
   c4 c b c
   % KD^8_EL-I-IV-V-I
@@ -297,7 +297,7 @@ scoreABass = \relative c {
   \globalA
   % Music follows here.
   % QP^5_EL
-  \footnote #'(-1 . 3) "Octave not fixed." c g c
+  c g c
   c f c
   c d c
   % QP^8_EL
@@ -311,7 +311,7 @@ scoreABass = \relative c {
   % QP^5_WL
   c4 g c
   c f, c'
-  c r r
+  c d c
   % QP^8_WL
   c g c
   c f c
@@ -400,9 +400,9 @@ scoreAFigBass = \figuremode {
   r4 r r
   r8 <6> r r <6> r
   % QP^5_WL
+  r4 r r
+  r4 r r
   r4 <6> r
-  r4 r r
-  r4 r r
   % QP^8_WL
   r4 r r
   r4 r r
@@ -493,7 +493,7 @@ scoreAChordNames = \chordmode {
   % QP^5_WL
   c4 g c
   c f, c'
-  c s s
+  c b:dim/d c
   % QP^8_WL
   c g c
   c f c
@@ -1201,25 +1201,25 @@ globalC = {
 scoreCSoprano = \relative c'' {
   \globalC
   % Music follows here.
-  \transpose c g, \scoreASoprano
+  \transpose c g \scoreASoprano
 }
 
 scoreCAlto = \relative c' {
   \globalC
   % Music follows here.
-  \transpose c g, \scoreAAlto
+  \transpose c g \scoreAAlto
 }
 
 scoreCTenor = \relative c' {
   \globalC
   % Music follows here.
-  \transpose c g, \scoreATenor
+  \transpose c g \scoreATenor
 }
 
 scoreCBass = \relative c {
   \globalC
   % Music follows here.
-  \transpose c g, \scoreABass
+  \transpose c g \scoreABass
 }
 
 scoreCVerse = \lyricmode {
