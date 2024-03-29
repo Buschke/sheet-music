@@ -54,7 +54,7 @@ scoreASoprano = \relative c'' {
   % Music follows here.
   g^\markup{\column{\line{C-Dur: QP\super{5}\sub{EL}}\line{I-V-I}}} g g
   g^\markup{\column{\line{QP\super{5}\sub{EL}}\line{I-IV-I}}} a g
-  g^\markup{\column{\line{QP\super{5}\sub{EL}}\line{I-VII-I}}} \override NoteHead.color = #blue b \footnote #'(-1 . 3) "Vermeidung Parallelen" g \revert NoteHead.color
+  g^\markup{\column{\line{QP\super{5}\sub{EL}}\line{I-VII-I}}} \override NoteHead.color = #blue b g \revert NoteHead.color
   \bar "||"
   c^\markup{\column{\line{QP\super{8}\sub{EL}}\line{I-V-I}}} b c
   c^\markup{\column{\line{QP\super{8}\sub{EL}}\line{I-IV-I}}} c c
@@ -218,7 +218,7 @@ scoreATenor = \relative c' {
   % QP^5_EL
   c b c
   c c c
-  c \override NoteHead.color = #blue d c \revert NoteHead.color
+  c \override NoteHead.color = #blue \footnote #'(-1 . 3) "Verdopplung Grundton und Abweichung von enger Lage wegen Parallelen" b c \revert NoteHead.color
   % QP^8_EL
   e d e
   e f e
@@ -238,7 +238,7 @@ scoreATenor = \relative c' {
   % QP^3_WL
   c b c
   c c c
-  \override NoteHead.color = #blue \footnote #'(-1 . 3) "Terz verdoppeln wg. Parallelen" e8 [b e] \revert NoteHead.color c[b c]
+  \override NoteHead.color = #blue \footnote #'(-1 . 3) "Terz verdoppeln wegen Parallelen" e8 [b e] \revert NoteHead.color c[b c]
   \time 4/4
   % KD
   % KD^5_EL-I-IV-V-I
