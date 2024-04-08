@@ -2,19 +2,19 @@
 \language "english"
 
 \header {
-  dedication = "NN"
+  dedication = ""
   title = "Improvisier-Muster"
-  subtitle = "NN"
-  subsubtitle = "NN"
-  instrument = "NN"
-  composer = "NN"
-  arranger = "NN"
-  poet = "NN"
-  meter = "NN"
-  piece = "NN"
-  opus = "NN"
-  copyright = "NN"
-  tagline = "NN"
+  subtitle = "C-Dur"
+  subsubtitle = ""
+  instrument = ""
+  composer = ""
+  arranger = ""
+  poet = ""
+  meter = ""
+  piece = ""
+  opus = ""
+  copyright = ""
+  tagline = ""
 }
 
 \paper {
@@ -22,20 +22,24 @@
 }
 
 global = {
-  \key g \major
+  \key c \major
   \numericTimeSignature
   \time 4/4
   \tempo "Andante" 4=100
 }
 
+globalA = {
+  \key g \major
+}
+
 scoreAChordNamesLeadSheet = \chordmode {
-  \global
+  \globalA
   % Chords follow here.
   
 }
 
 scoreAMelody = \relative c'' {
-  \global
+  \globalA
   % Music follows here.
   a4 b a g a a g2
 }
@@ -46,7 +50,7 @@ scoreAVerseLeadSheet = \lyricmode {
 }
 
 scoreASopranoVoiceI = \relative c'' {
-  \global
+  \globalA
   \dynamicUp
   % Music follows here.
   a8 g16 a b8 c16 b a8 b16 a g8 fs16 g a8 b16 a a8 g16 a g2
@@ -58,7 +62,7 @@ scoreAVerseSopranoVoiceI = \lyricmode {
 }
 
 scoreASopranoVoiceII = \relative c'' {
-  \global
+  \globalA
   \dynamicUp
   % Music follows here.
   a8 g a b a b a g a b b d g,2 
@@ -70,7 +74,7 @@ scoreAVerseSopranoVoiceII = \lyricmode {
 }
 
 scoreASopranoVoiceIII = \relative c'' {
-  \global
+  \globalA
   \dynamicUp
   % Music follows here.
   a16 e fs g a c b a g b a g g b a g a e fs g a b c d g,2 
@@ -82,7 +86,7 @@ scoreAVerseSopranoVoiceIII = \lyricmode {
 }
 
 scoreASopranoVoiceIV = \relative c'' {
-  \global
+  \globalA
   \dynamicUp
   % Music follows here.
   \tuplet 3/2 { a8 fs d } \tuplet 3/2 { a' fs d } \tuplet 3/2 { a' fs d } \tuplet 3/2 { fs d b } \tuplet 3/2 { a' fs d } \tuplet 3/2 { a' fs d } g2
@@ -94,7 +98,7 @@ scoreAVerseSopranoVoiceIV = \lyricmode {
 }
 
 scoreASopranoVoiceV = \relative c'' {
-  \global
+  \globalA
   \dynamicUp
   % Music follows here.
   a16 d, fs a a d, fs a a d, fs a g b, d g a d, fs a d c b a g2
@@ -106,25 +110,25 @@ scoreAVerseSopranoVoiceV = \lyricmode {
 }
 
 scoreASoprano = \relative c'' {
-  \global
+  \globalA
   % Music follows here.
   a4 b a b a a b2
 }
 
 scoreAAlto = \relative c' {
-  \global
+  \globalA
   % Music follows here.
   fs4 g fs g fs fs g2
 }
 
 scoreATenor = \relative c' {
-  \global
+  \globalA
   % Music follows here.
   d4 d d d d d d2
 }
 
 scoreABass = \relative c {
-  \global
+  \globalA
   % Music follows here.
   d,4 g d g d d g2
 }
