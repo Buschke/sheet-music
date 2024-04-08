@@ -1201,25 +1201,25 @@ globalC = {
 scoreCSoprano = \relative c'' {
   \globalC
   % Music follows here.
-  \transpose c g \scoreASoprano
+  \transpose c g, \scoreASoprano
 }
 
 scoreCAlto = \relative c' {
   \globalC
   % Music follows here.
-  \transpose c g \scoreAAlto
+  \transpose c g, \scoreAAlto
 }
 
 scoreCTenor = \relative c' {
   \globalC
   % Music follows here.
-  \transpose c g \scoreATenor
+  \transpose c g, \scoreATenor
 }
 
 scoreCBass = \relative c {
   \globalC
   % Music follows here.
-  \transpose c g \scoreABass
+  \transpose c g, \scoreABass
 }
 
 scoreCVerse = \lyricmode {
