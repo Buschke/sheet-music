@@ -57,7 +57,7 @@ scoreATenorVoice = \relative c' {
   ef8.\f ef16 ef4 d8. d16 d8 d d4(c2) bf8 bf
   bf4(a) bf r
   f'8. f16 f4 f8. f16 f8 f f2 f4 r
-  r2 r8 ef\f c(d) g,4 r r2
+  r2 r8 bf,\f c(ef) d4 r r2
   \bar "|."
 }
 
