@@ -160,30 +160,30 @@ scoreBTenorVoice = \relative c' {
 scoreBVerse = \lyricmode {
   % Lyrics follow here.
   % Glória in ex -- cél -- sis Deo
-  Et in ter -- ra pax homí -- ni -- bus bonæ vo -- luntátis.
-  Lau -- dámus te,
+  Et in ter -- ra pax ho -- mí -- ni -- bus bo -- næ vo -- lun -- tá -- tis.
+  Lau -- dá -- mus te,
   be -- ne -- dí -- ci -- mus te,
-  ad -- orámus te,
-  glo -- ri -- ficámus te,
-  gráti -- as ági -- mus ti -- bi propter ma -- gnam glóri -- am tuam,
-  Dó -- mi -- ne De -- us, Rex cælés -- tis,
+  ad -- o -- rá -- mus te,
+  glo -- ri -- fi -- cá -- mus te,
+  grá -- ti -- as á -- gi -- mus ti -- bi pro -- pter mag -- nam gló -- ri -- am tu -- am,
+  Dó -- mi -- ne De -- us, Rex cæ -- lé -- stis,
   De -- us Pa -- ter om -- ní -- po -- tens.
-  Dó -- mi -- ne Fi -- li Un -- igé -- ni -- te, Ie -- su Chris -- te,
-  Dó -- mi -- ne De -- us, Ag -- nus Dei, Fí -- li -- us Pa -- tris,
-  qui tol -- lis pec -- cáta mun -- di,
-  mi -- seré -- re no -- bis;
-  qui tol -- lis pec -- cáta mun -- di,
-  sús -- ci -- pe de -- pre -- ca -- tió -- nem no -- stram.
-  Qui se -- des ad déx -- teram Pa -- tris,
-  mi -- seré -- re no -- bis.
-
-  Quó -- niam tu so -- lus Sanc -- tus,
-  tu so -- lus Dó -- mi -- nus,
+  Dó -- mi -- ne Fi -- li U -- ni -- gé -- ni -- te.
+%   Ie -- su Chris -- te,
+%   Dó -- mi -- ne De -- us, Ag -- nus Dei, Fí -- li -- us Pa -- tris,
+  Qui tol -- lis pec -- cá -- ta mun -- di,
+  mi -- se -- ré -- re mi -- se -- ré -- re no -- bis.
+  Qui tol -- lis pec -- cá -- ta mun -- di,
+  sú --sci -- pe de -- pre -- ca -- ti -- ó -- nem no -- stram.
+  Qui se -- des ad déx -- te -- ram Pa -- tris,
+  mi -- se -- ré -- re, mi -- se -- ré -- re no -- bis.
+  Quó -- ni -- am tu so -- lus Sanc -- tus.
+  Tu so -- lus Dó -- mi -- nus,
   tu so -- lus Al -- tís -- si -- mus,
-  Ie -- su Chris -- te,
-  cum Sanc -- to Spíri -- tu:
-  in glória Dei Pa -- tris.
-  Amen.
+  Ie -- su, Ie -- su Chri -- ste.
+  Cum San -- cto Spí -- ri -- tu,
+  in gló -- ri -- a De -- i Pa -- tris.
+  A -- men, a -- men, a -- men, a -- men.
 }
 
 \bookpart {
