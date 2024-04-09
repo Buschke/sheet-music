@@ -7,12 +7,12 @@
   subtitle = ""
   subsubtitle = "Kleine Orgelmesse"
   instrument = "Tenor"
-  composer = "Joseph Haydn, 1732-1809"
-  arranger = "arranged: Sven Buschke / Anton Böhm"
-  poet = "Liturgie"
-  meter = ""
-  piece = ""
-  opus = "Hob. XII:7"
+  composer = "M: Joseph Haydn, 1732-1809"
+  arranger = "Bearbeitet: F. Habel"
+  poet = "T: Liturgie"
+  meter = "Satz: Sven Buschke"
+  piece = "Ausgabe: Anton Böhm"
+  opus = "Opus: Hob. XII:7"
   copyright = ""
   tagline = ""
 }
@@ -43,8 +43,8 @@ scoreATenorVoice = \relative c' {
   \globalA
   \dynamicUp
   % Music follows here.
-  bf4. bf8  bf4. bf8 bf4 a16(bf) c8 d(c) bf4
-  r1 r2 d8. f16 f4
+  bf4.\p bf8  bf4. bf8 bf4 a16(bf) c8 d(c) bf4
+  r1 r2 d8.\f f16 f4
   r2 c8. f16 f4
   r4 r8 c c4 c8 r
   r2 c8. c16 c8 c c4(bf2) a8 a d4(c) c r
@@ -52,8 +52,9 @@ scoreATenorVoice = \relative c' {
   c2\f c4 r8 f
   f4 e8 e f4 f, c' f8 f16(ef) d4 \afterGrace ef {c8}
   c4 c8 c c4 d8 ef16(f)
-  g8.(ef16) c8 c c4 c d bf bf4. bf8 bf4 a16(bf) c8 d(c) c4
-  e8.\f e16 e4 d8. d16 d8 d d4(c2) bf8 bf
+  g8.(ef16) c8 c c4 c
+  d\p bf bf4. bf8 bf4 a16(bf) c8 d(c) c4
+  ef8.\f ef16 ef4 d8. d16 d8 d d4(c2) bf8 bf
   bf4(a) bf r
   f'8. f16 f4 f8. f16 f8 f f2 f4 r
   r2 r8 e\f c(d) g,4 r r2
@@ -63,16 +64,14 @@ scoreATenorVoice = \relative c' {
 scoreAVerse = \lyricmode {
   % Lyrics follow here.
   Ky -- ri --e, e --lei --son, e -- lei --son.
-  Ky -- ri --e, e --lei --son, e -- lei --son.
-  Ky -- ri --e, e --lei --son, e -- lei --son.
-  Ky -- ri --e, e --lei --son, e -- lei --son.
+  Ky -- ri --e, Ky -- ri --e, e --lei --son, Ky -- ri --e, e -- lei --son, e -- lei --son.
+  Ky -- ri --e, e -- lei --son.
   Chri -- ste, e --lei --son, e -- lei --son.
-  Chri -- ste, e --lei --son, e -- lei --son.
-  Chri -- ste, e --lei --son, e -- lei --son.
-  Chri -- ste, e --lei --son, e -- lei --son.
-  Chri -- ste, e --lei --son, e -- lei --son.
+  Chri -- ste, e --lei --son,
+  Chri -- ste, e --lei --son, e -- lei --son, e -- lei --son, 
   Ky -- ri --e, e --lei --son, e -- lei --son.
-  Ky -- ri --e, e --lei --son, e -- lei --son.
+  Ky -- ri --e, Ky -- ri --e, e --lei --son, e -- lei --son.
+  Ky -- ri --e, Ky -- ri --e, e --lei --son, e -- lei --son.
 }
 
 \bookpart {
