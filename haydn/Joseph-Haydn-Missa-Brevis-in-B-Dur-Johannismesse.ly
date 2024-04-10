@@ -68,7 +68,7 @@ scoreAVerse = \lyricmode {
   Ky -- ri --e, e -- lei --son.
   Chri -- ste, e --lei --son, e -- lei --son.
   Chri -- ste, e --lei --son,
-  Chri -- ste, e --lei --son, e -- lei --son, e -- lei --son, 
+  Chri -- ste, e --lei --son, e -- lei --son, e -- lei --son,
   Ky -- ri --e, e --lei --son, e -- lei --son.
   Ky -- ri --e, Ky -- ri --e, e --lei --son, e -- lei --son.
   Ky -- ri --e, Ky -- ri --e, e --lei --son, e -- lei --son.
@@ -130,7 +130,7 @@ scoreBTenorVoice = \relative c' {
   d\p d d d d r
   f4.\f f8 f4 d2 d4
   ef2 ef4
-  f2 ef4 ef2(d4) c r r 
+  f2 ef4 ef2(d4) c r r
   r2. r r
   r4 r ef d ef r8 ef
   c4. c8 d4 bf a r
@@ -142,12 +142,12 @@ scoreBTenorVoice = \relative c' {
   r4 bf4. bf8
   a2 a8(bf) c2 c4 d f f g2 g4
   f8. f16 f4 d c c d8(bf) bf4. a8 a4
-  c2. f d c 
+  c2. f d c
   d4(c bf) a r a
   c2 c4 bf4. bf8 8 8
   bf4 bf8 8 8 8
   bf4(g') g f2 f4
-  ef(d c) bf r r 
+  ef(d c) bf r r
   r2. r r
   r4 r r
   r r r
@@ -169,8 +169,8 @@ scoreBVerse = \lyricmode {
   Dó -- mi -- ne De -- us, Rex cæ -- lé -- stis,
   De -- us Pa -- ter om -- ní -- po -- tens.
   Dó -- mi -- ne Fi -- li U -- ni -- gé -- ni -- te.
-%   Ie -- su Chris -- te,
-%   Dó -- mi -- ne De -- us, Ag -- nus Dei, Fí -- li -- us Pa -- tris,
+  %   Ie -- su Chris -- te,
+  %   Dó -- mi -- ne De -- us, Ag -- nus Dei, Fí -- li -- us Pa -- tris,
   Qui tol -- lis pec -- cá -- ta mun -- di,
   mi -- se -- ré -- re mi -- se -- ré -- re no -- bis.
   Qui tol -- lis pec -- cá -- ta mun -- di,
@@ -219,15 +219,23 @@ scoreCTenorVoice = \relative c' {
   \dynamicUp
   % Music follows here.
   r1
-  r2 b8\f
+  r2 bf8\f 8 c c16 c
+  d8 ef d g f ef16 d ef8. ef16
+  d4 r r2
+  c4. c8 c4 c, r1
+  d'4 c c8 bf a g f d' c d16 d c4 c c r r2
+  r1
+  r1
+  r2 bf4 c
 }
 
 scoreCVerse = \lyricmode {
   % Lyrics follow here.
-  Cre -- do in un -- um De -- um,
-  Pa -- trem om -- ni -- potén -- tem,
-  fac -- tórem cæ -- li et terræ,
-  vi -- si -- bí -- li -- um óm -- ni -- um et in -- vi -- si -- bí -- li -- um.
+  %   Cre -- do in un -- um De -- um,
+  %   Pa -- trem om -- ni -- potén -- tem,
+  %   fac -- tórem cæ -- li et terræ,
+  Vi -- si -- bí -- li -- um ó -- mni -- um et in -- vi -- si -- bí -- li -- um.
+  Ie -- sum Chris -- tum
   Et in un -- um Dó -- mi -- num, Ie -- sum Chris -- tum,
   Fí -- li -- um Dei un -- igé -- ni -- tum,
   et ex Pa -- tre na -- tum an -- te óm -- nia sǽ -- cu -- la.
@@ -343,7 +351,8 @@ scoreETenorVoice = \relative c' {
 
 scoreEVerse = \lyricmode {
   % Lyrics follow here.
-
+  Be -- ne -- dic -- tus qui ve -- nit in no -- mi -- ne Do -- mi -- ni.
+  Ho -- san -- na in ex -- cel -- sis.
 }
 
 \bookpart {
@@ -384,7 +393,9 @@ scoreFTenorVoice = \relative c' {
 
 scoreFVerse = \lyricmode {
   % Lyrics follow here.
-
+  Ag -- nus Dei, qui tol -- lis pec -- ca -- ta mun -- di, mi -- se -- re -- re no -- bis.
+  Ag -- nus Dei, qui tol -- lis pec -- ca -- ta mun -- di, mi -- se -- re -- re no -- bis.
+  Ag -- nus Dei, qui tol -- lis pec -- ca -- ta mun -- di, do -- na no -- bis pacem.
 }
 
 \bookpart {
