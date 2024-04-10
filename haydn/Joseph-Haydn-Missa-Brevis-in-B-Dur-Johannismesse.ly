@@ -28,20 +28,32 @@ global = {
   \tempo "Andante" 4=100
 }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Kyrie
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-globalA = {
-  \key bf \major
-  %   \numericTimeSignature
-  \time 4/4
-  \tempo "Andante" 4=100
+scoreAViolinI = \relative c'' {
+  \global
+  % Music follows here.
+  
 }
 
-scoreATenorVoice = \relative c' {
-  \globalA
-  \dynamicUp
+scoreAViolinII = \relative c'' {
+  \global
+  % Music follows here.
+  
+}
+
+scoreASoprano = \relative c'' {
+  \global
+  % Music follows here.
+  
+}
+
+scoreAAlto = \relative c' {
+  \global
+  % Music follows here.
+  
+}
+
+scoreATenor = \relative c' {
+  \global
   % Music follows here.
   bf4.\p bf8  bf4. bf8 bf4 a16(bf) c8 d(c) bf4
   r1 r2 d8.\f f16 f4
@@ -58,10 +70,16 @@ scoreATenorVoice = \relative c' {
   bf4(a) bf r
   f'8. f16 f4 f8. f16 f8 f f2 f4 r
   r2 r8 bf,\f c(ef) d4 r r2
-  \bar "|."
+  \bar "|."  
 }
 
-scoreAVerse = \lyricmode {
+scoreABass = \relative c {
+  \global
+  % Music follows here.
+  
+}
+
+scoreASopranoVerse = \lyricmode {
   % Lyrics follow here.
   Ky -- ri --e, e --lei --son, e -- lei --son.
   Ky -- ri --e, Ky -- ri --e, e --lei --son, Ky -- ri --e, e -- lei --son, e -- lei --son.
@@ -71,22 +89,187 @@ scoreAVerse = \lyricmode {
   Chri -- ste, e --lei --son, e -- lei --son, e -- lei --son,
   Ky -- ri --e, e --lei --son, e -- lei --son.
   Ky -- ri --e, Ky -- ri --e, e --lei --son, e -- lei --son.
-  Ky -- ri --e, Ky -- ri --e, e --lei --son, e -- lei --son.
+  Ky -- ri --e, Ky -- ri --e, e --lei --son, e -- lei --son.  
 }
+
+scoreAAltoVerse = \lyricmode {
+  % Lyrics follow here.
+  
+}
+
+scoreATenorVerse = \lyricmode {
+  % Lyrics follow here.
+  \scoreASopranoVerse
+}
+
+scoreABassVerse = \lyricmode {
+  % Lyrics follow here.
+  
+}
+
+scoreAPianoReduction = \new PianoStaff \with {
+  fontSize = #-1
+  \override StaffSymbol #'staff-space = #(magstep -1)
+} <<
+  \new Staff \with {
+    \consists "Mark_engraver"
+    \consists "Metronome_mark_engraver"
+    \remove "Staff_performer"
+  } {
+    #(set-accidental-style 'piano)
+    <<
+      \scoreASoprano \\
+      \scoreAAlto
+    >>
+  }
+  \new Staff \with {
+    \remove "Staff_performer"
+  } {
+    \clef bass
+    #(set-accidental-style 'piano)
+    <<
+      \scoreATenor \\
+      \scoreABass
+    >>
+  }
+>>
+
+scoreARehearsalMidi = #
+(define-music-function
+ (parser location name midiInstrument lyrics) (string? string? ly:music?)
+ #{
+   \unfoldRepeats <<
+     \new Staff = "soprano" \new Voice = "soprano" { \scoreASoprano }
+     \new Staff = "alto" \new Voice = "alto" { \scoreAAlto }
+     \new Staff = "tenor" \new Voice = "tenor" { \scoreATenor }
+     \new Staff = "bass" \new Voice = "bass" { \scoreABass }
+     \context Staff = $name {
+       \set Score.midiMinimumVolume = #0.5
+       \set Score.midiMaximumVolume = #0.5
+       \set Score.tempoWholesPerMinute = #(ly:make-moment 100 4)
+       \set Staff.midiMinimumVolume = #0.8
+       \set Staff.midiMaximumVolume = #1.0
+       \set Staff.midiInstrument = $midiInstrument
+     }
+     \new Lyrics \with {
+       alignBelowContext = $name
+     } \lyricsto $name $lyrics
+   >>
+ #})
+
+scoreABcMusic = \relative c {
+  \global
+  % Music follows here.
+  
+}
+
+scoreABcFigures = \figuremode {
+  \global
+  \override Staff.BassFigureAlignmentPositioning #'direction = #DOWN
+  % Figures follow here.
+  
+}
+
+scoreAViolinIPart = \new Staff \with {
+  instrumentName = "Violine I"
+  shortInstrumentName = "Vl. I"
+  midiInstrument = "violin"
+} \scoreAViolinI
+
+scoreAViolinIIPart = \new Staff \with {
+  instrumentName = "Violine II"
+  shortInstrumentName = "Vl. II"
+  midiInstrument = "violin"
+} \scoreAViolinII
+
+scoreAChoirPart = <<
+  \new ChoirStaff <<
+    \new Staff \with {
+      midiInstrument = "choir aahs"
+      instrumentName = "Sopran"
+      shortInstrumentName = "S."
+      \consists "Ambitus_engraver"
+    } { \scoreASoprano }
+    \addlyrics { \scoreASopranoVerse }
+    \new Staff \with {
+      midiInstrument = "choir aahs"
+      instrumentName = "Alt"
+      shortInstrumentName = "A."
+      \consists "Ambitus_engraver"
+    } { \scoreAAlto }
+    \addlyrics { \scoreAAltoVerse }
+    \new Staff \with {
+      midiInstrument = "choir aahs"
+      instrumentName = "Tenor"
+      shortInstrumentName = "T."
+      \consists "Ambitus_engraver"
+    } { \clef "treble_8" \scoreATenor }
+    \addlyrics { \scoreATenorVerse }
+    \new Staff \with {
+      midiInstrument = "choir aahs"
+      instrumentName = "Bass"
+      shortInstrumentName = "B."
+      \consists "Ambitus_engraver"
+    } { \clef bass \scoreABass }
+    \addlyrics { \scoreABassVerse }
+  >>
+  \scoreAPianoReduction
+>>
+
+scoreABassoContinuoPart = <<
+  \new Staff \with {
+    instrumentName = "Basso Continuo"
+    shortInstrumentName = "B.C."
+    midiInstrument = "cello"
+  } { \clef bass \scoreABcMusic }
+  \new FiguredBass \scoreABcFigures
+>>
 
 \bookpart {
   \header {
     subtitle = "Kyrie"
   }
   \score {
-    \new Staff \with {
-      instrumentName = "Tenor"
-      shortInstrumentName = "T."
-      midiInstrument = "choir aahs"
-      \consists "Ambitus_engraver"
-    } { \clef "treble_8" \scoreATenorVoice }
-    \addlyrics { \scoreAVerse }
+    <<
+      \scoreAViolinIPart
+      \scoreAViolinIIPart
+      \scoreAChoirPart
+      \scoreABassoContinuoPart
+    >>
     \layout { }
+    \midi { }
+  }
+}
+
+% Rehearsal MIDI files:
+\book {
+  \bookOutputSuffix "soprano"
+  \score {
+    \scoreARehearsalMidi "soprano" "soprano sax" \scoreASopranoVerse
+    \midi { }
+  }
+}
+
+\book {
+  \bookOutputSuffix "alto"
+  \score {
+    \scoreARehearsalMidi "alto" "soprano sax" \scoreAAltoVerse
+    \midi { }
+  }
+}
+
+\book {
+  \bookOutputSuffix "tenor"
+  \score {
+    \scoreARehearsalMidi "tenor" "tenor sax" \scoreATenorVerse
+    \midi { }
+  }
+}
+
+\book {
+  \bookOutputSuffix "bass"
+  \score {
+    \scoreARehearsalMidi "bass" "tenor sax" \scoreABassVerse
     \midi { }
   }
 }
@@ -102,9 +285,32 @@ globalB = {
   \tempo "Allegro" 4=100
 }
 
-scoreBTenorVoice = \relative c' {
-  \globalB
-  \dynamicUp
+scoreBViolinI = \relative c'' {
+  \global
+  % Music follows here.
+  
+}
+
+scoreBViolinII = \relative c'' {
+  \global
+  % Music follows here.
+  
+}
+
+scoreBSoprano = \relative c'' {
+  \global
+  % Music follows here.
+  
+}
+
+scoreBAlto = \relative c' {
+  \global
+  % Music follows here.
+  
+}
+
+scoreBTenor = \relative c' {
+  \global
   % Music follows here.
   bf8\f 8 8 8 8 8
   a8. a16 a4 a8 bf
@@ -154,10 +360,16 @@ scoreBTenorVoice = \relative c' {
   r16 r r r r2
   r4 r r
   r r c\f d r a bf r r
-  \bar "|."
+  \bar "|."  
 }
 
-scoreBVerse = \lyricmode {
+scoreBBass = \relative c {
+  \global
+  % Music follows here.
+  
+}
+
+scoreBSopranoVerse = \lyricmode {
   % Lyrics follow here.
   % Glória in ex -- cél -- sis Deo
   Et in ter -- ra pax ho -- mí -- ni -- bus bo -- næ vo -- lun -- tá -- tis.
@@ -183,22 +395,187 @@ scoreBVerse = \lyricmode {
   Ie -- su, Ie -- su Chri -- ste.
   Cum San -- cto Spí -- ri -- tu,
   in gló -- ri -- a De -- i Pa -- tris.
-  A -- men, a -- men, a -- men, a -- men.
+  A -- men, a -- men, a -- men, a -- men.  
 }
+
+scoreBAltoVerse = \lyricmode {
+  % Lyrics follow here.
+  
+}
+
+scoreBTenorVerse = \lyricmode {
+  % Lyrics follow here.
+  \scoreBSopranoVerse
+}
+
+scoreBBassVerse = \lyricmode {
+  % Lyrics follow here.
+  
+}
+
+scoreBPianoReduction = \new PianoStaff \with {
+  fontSize = #-1
+  \override StaffSymbol #'staff-space = #(magstep -1)
+} <<
+  \new Staff \with {
+    \consists "Mark_engraver"
+    \consists "Metronome_mark_engraver"
+    \remove "Staff_performer"
+  } {
+    #(set-accidental-style 'piano)
+    <<
+      \scoreBSoprano \\
+      \scoreBAlto
+    >>
+  }
+  \new Staff \with {
+    \remove "Staff_performer"
+  } {
+    \clef bass
+    #(set-accidental-style 'piano)
+    <<
+      \scoreBTenor \\
+      \scoreBBass
+    >>
+  }
+>>
+
+scoreBRehearsalMidi = #
+(define-music-function
+ (parser location name midiInstrument lyrics) (string? string? ly:music?)
+ #{
+   \unfoldRepeats <<
+     \new Staff = "soprano" \new Voice = "soprano" { \scoreBSoprano }
+     \new Staff = "alto" \new Voice = "alto" { \scoreBAlto }
+     \new Staff = "tenor" \new Voice = "tenor" { \scoreBTenor }
+     \new Staff = "bass" \new Voice = "bass" { \scoreBBass }
+     \context Staff = $name {
+       \set Score.midiMinimumVolume = #0.5
+       \set Score.midiMaximumVolume = #0.5
+       \set Score.tempoWholesPerMinute = #(ly:make-moment 100 4)
+       \set Staff.midiMinimumVolume = #0.8
+       \set Staff.midiMaximumVolume = #1.0
+       \set Staff.midiInstrument = $midiInstrument
+     }
+     \new Lyrics \with {
+       alignBelowContext = $name
+     } \lyricsto $name $lyrics
+   >>
+ #})
+
+scoreBBcMusic = \relative c {
+  \global
+  % Music follows here.
+  
+}
+
+scoreBBcFigures = \figuremode {
+  \global
+  \override Staff.BassFigureAlignmentPositioning #'direction = #DOWN
+  % Figures follow here.
+  
+}
+
+scoreBViolinIPart = \new Staff \with {
+  instrumentName = "Violine I"
+  shortInstrumentName = "Vl. I"
+  midiInstrument = "violin"
+} \scoreBViolinI
+
+scoreBViolinIIPart = \new Staff \with {
+  instrumentName = "Violine II"
+  shortInstrumentName = "Vl. II"
+  midiInstrument = "violin"
+} \scoreBViolinII
+
+scoreBChoirPart = <<
+  \new ChoirStaff <<
+    \new Staff \with {
+      midiInstrument = "choir aahs"
+      instrumentName = "Sopran"
+      shortInstrumentName = "S."
+      \consists "Ambitus_engraver"
+    } { \scoreBSoprano }
+    \addlyrics { \scoreBSopranoVerse }
+    \new Staff \with {
+      midiInstrument = "choir aahs"
+      instrumentName = "Alt"
+      shortInstrumentName = "A."
+      \consists "Ambitus_engraver"
+    } { \scoreBAlto }
+    \addlyrics { \scoreBAltoVerse }
+    \new Staff \with {
+      midiInstrument = "choir aahs"
+      instrumentName = "Tenor"
+      shortInstrumentName = "T."
+      \consists "Ambitus_engraver"
+    } { \clef "treble_8" \scoreBTenor }
+    \addlyrics { \scoreBTenorVerse }
+    \new Staff \with {
+      midiInstrument = "choir aahs"
+      instrumentName = "Bass"
+      shortInstrumentName = "B."
+      \consists "Ambitus_engraver"
+    } { \clef bass \scoreBBass }
+    \addlyrics { \scoreBBassVerse }
+  >>
+  \scoreBPianoReduction
+>>
+
+scoreBBassoContinuoPart = <<
+  \new Staff \with {
+    instrumentName = "Basso Continuo"
+    shortInstrumentName = "B.C."
+    midiInstrument = "cello"
+  } { \clef bass \scoreBBcMusic }
+  \new FiguredBass \scoreBBcFigures
+>>
 
 \bookpart {
   \header {
     subtitle = "Gloria"
   }
   \score {
-    \new Staff \with {
-      instrumentName = "Tenor"
-      shortInstrumentName = "T."
-      midiInstrument = "choir aahs"
-      \consists "Ambitus_engraver"
-    } { \clef "treble_8" \scoreBTenorVoice }
-    \addlyrics { \scoreBVerse }
+    <<
+      \scoreBViolinIPart
+      \scoreBViolinIIPart
+      \scoreBChoirPart
+      \scoreBBassoContinuoPart
+    >>
     \layout { }
+    \midi { }
+  }
+}
+
+% Rehearsal MIDI files:
+\book {
+  \bookOutputSuffix "soprano"
+  \score {
+    \scoreBRehearsalMidi "soprano" "soprano sax" \scoreBSopranoVerse
+    \midi { }
+  }
+}
+
+\book {
+  \bookOutputSuffix "alto"
+  \score {
+    \scoreBRehearsalMidi "alto" "soprano sax" \scoreBAltoVerse
+    \midi { }
+  }
+}
+
+\book {
+  \bookOutputSuffix "tenor"
+  \score {
+    \scoreBRehearsalMidi "tenor" "tenor sax" \scoreBTenorVerse
+    \midi { }
+  }
+}
+
+\book {
+  \bookOutputSuffix "bass"
+  \score {
+    \scoreBRehearsalMidi "bass" "tenor sax" \scoreBBassVerse
     \midi { }
   }
 }
@@ -214,9 +591,32 @@ globalC = {
   \tempo "Andante" 4=100
 }
 
-scoreCTenorVoice = \relative c' {
-  \globalC
-  \dynamicUp
+scoreCViolinI = \relative c'' {
+  \global
+  % Music follows here.
+  
+}
+
+scoreCViolinII = \relative c'' {
+  \global
+  % Music follows here.
+  
+}
+
+scoreCSoprano = \relative c'' {
+  \global
+  % Music follows here.
+  
+}
+
+scoreCAlto = \relative c' {
+  \global
+  % Music follows here.
+  
+}
+
+scoreCTenor = \relative c' {
+  \global
   % Music follows here.
   r1
   r2 bf8\f 8 c c16 c
@@ -226,10 +626,16 @@ scoreCTenorVoice = \relative c' {
   d'4 c c8 bf a g f d' c d16 d c4 c c r r2
   r1
   r1
-  r2 bf4 c
+  r2 bf4 c  
 }
 
-scoreCVerse = \lyricmode {
+scoreCBass = \relative c {
+  \global
+  % Music follows here.
+  
+}
+
+scoreCSopranoVerse = \lyricmode {
   % Lyrics follow here.
   %   Cre -- do in un -- um De -- um,
   %   Pa -- trem om -- ni -- potén -- tem,
@@ -260,22 +666,187 @@ scoreCVerse = \lyricmode {
   Et un -- am, sanc -- tam, ca -- thó -- li -- cam et apo -- stó -- li -- cam Ec -- clé -- si -- am.
   Con -- fíte -- or un -- um bap -- tís -- ma in re -- mis -- sió -- nem pec -- catórum.
   Et ex -- spéc -- to re -- s -- ur -- rec -- tió -- nem mor -- tuórum,
-  et vit -- am ventúri sǽ -- cu -- li. Amen.
+  et vit -- am ventúri sǽ -- cu -- li. Amen.  
 }
+
+scoreCAltoVerse = \lyricmode {
+  % Lyrics follow here.
+  
+}
+
+scoreCTenorVerse = \lyricmode {
+  % Lyrics follow here.
+  \scoreCSopranoVerse
+}
+
+scoreCBassVerse = \lyricmode {
+  % Lyrics follow here.
+  
+}
+
+scoreCPianoReduction = \new PianoStaff \with {
+  fontSize = #-1
+  \override StaffSymbol #'staff-space = #(magstep -1)
+} <<
+  \new Staff \with {
+    \consists "Mark_engraver"
+    \consists "Metronome_mark_engraver"
+    \remove "Staff_performer"
+  } {
+    #(set-accidental-style 'piano)
+    <<
+      \scoreCSoprano \\
+      \scoreCAlto
+    >>
+  }
+  \new Staff \with {
+    \remove "Staff_performer"
+  } {
+    \clef bass
+    #(set-accidental-style 'piano)
+    <<
+      \scoreCTenor \\
+      \scoreCBass
+    >>
+  }
+>>
+
+scoreCRehearsalMidi = #
+(define-music-function
+ (parser location name midiInstrument lyrics) (string? string? ly:music?)
+ #{
+   \unfoldRepeats <<
+     \new Staff = "soprano" \new Voice = "soprano" { \scoreCSoprano }
+     \new Staff = "alto" \new Voice = "alto" { \scoreCAlto }
+     \new Staff = "tenor" \new Voice = "tenor" { \scoreCTenor }
+     \new Staff = "bass" \new Voice = "bass" { \scoreCBass }
+     \context Staff = $name {
+       \set Score.midiMinimumVolume = #0.5
+       \set Score.midiMaximumVolume = #0.5
+       \set Score.tempoWholesPerMinute = #(ly:make-moment 100 4)
+       \set Staff.midiMinimumVolume = #0.8
+       \set Staff.midiMaximumVolume = #1.0
+       \set Staff.midiInstrument = $midiInstrument
+     }
+     \new Lyrics \with {
+       alignBelowContext = $name
+     } \lyricsto $name $lyrics
+   >>
+ #})
+
+scoreCBcMusic = \relative c {
+  \global
+  % Music follows here.
+  
+}
+
+scoreCBcFigures = \figuremode {
+  \global
+  \override Staff.BassFigureAlignmentPositioning #'direction = #DOWN
+  % Figures follow here.
+  
+}
+
+scoreCViolinIPart = \new Staff \with {
+  instrumentName = "Violine I"
+  shortInstrumentName = "Vl. I"
+  midiInstrument = "violin"
+} \scoreCViolinI
+
+scoreCViolinIIPart = \new Staff \with {
+  instrumentName = "Violine II"
+  shortInstrumentName = "Vl. II"
+  midiInstrument = "violin"
+} \scoreCViolinII
+
+scoreCChoirPart = <<
+  \new ChoirStaff <<
+    \new Staff \with {
+      midiInstrument = "choir aahs"
+      instrumentName = "Sopran"
+      shortInstrumentName = "S."
+      \consists "Ambitus_engraver"
+    } { \scoreCSoprano }
+    \addlyrics { \scoreCSopranoVerse }
+    \new Staff \with {
+      midiInstrument = "choir aahs"
+      instrumentName = "Alt"
+      shortInstrumentName = "A."
+      \consists "Ambitus_engraver"
+    } { \scoreCAlto }
+    \addlyrics { \scoreCAltoVerse }
+    \new Staff \with {
+      midiInstrument = "choir aahs"
+      instrumentName = "Tenor"
+      shortInstrumentName = "T."
+      \consists "Ambitus_engraver"
+    } { \clef "treble_8" \scoreCTenor }
+    \addlyrics { \scoreCTenorVerse }
+    \new Staff \with {
+      midiInstrument = "choir aahs"
+      instrumentName = "Bass"
+      shortInstrumentName = "B."
+      \consists "Ambitus_engraver"
+    } { \clef bass \scoreCBass }
+    \addlyrics { \scoreCBassVerse }
+  >>
+  \scoreCPianoReduction
+>>
+
+scoreCBassoContinuoPart = <<
+  \new Staff \with {
+    instrumentName = "Basso Continuo"
+    shortInstrumentName = "B.C."
+    midiInstrument = "cello"
+  } { \clef bass \scoreCBcMusic }
+  \new FiguredBass \scoreCBcFigures
+>>
 
 \bookpart {
   \header {
     subtitle = "Credo"
-  }
+  }  
   \score {
-    \new Staff \with {
-      instrumentName = "Tenor"
-      shortInstrumentName = "T."
-      midiInstrument = "choir aahs"
-      \consists "Ambitus_engraver"
-    } { \clef "treble_8" \scoreCTenorVoice }
-    \addlyrics { \scoreCVerse }
+    <<
+      \scoreCViolinIPart
+      \scoreCViolinIIPart
+      \scoreCChoirPart
+      \scoreCBassoContinuoPart
+    >>
     \layout { }
+    \midi { }
+  }
+}
+
+% Rehearsal MIDI files:
+\book {
+  \bookOutputSuffix "soprano"
+  \score {
+    \scoreCRehearsalMidi "soprano" "soprano sax" \scoreCSopranoVerse
+    \midi { }
+  }
+}
+
+\book {
+  \bookOutputSuffix "alto"
+  \score {
+    \scoreCRehearsalMidi "alto" "soprano sax" \scoreCAltoVerse
+    \midi { }
+  }
+}
+
+\book {
+  \bookOutputSuffix "tenor"
+  \score {
+    \scoreCRehearsalMidi "tenor" "tenor sax" \scoreCTenorVerse
+    \midi { }
+  }
+}
+
+\book {
+  \bookOutputSuffix "bass"
+  \score {
+    \scoreCRehearsalMidi "bass" "tenor sax" \scoreCBassVerse
     \midi { }
   }
 }
@@ -291,38 +862,232 @@ globalD = {
   \tempo "Andante" 4=100
 }
 
-scoreDTenorVoice = \relative c' {
-  \globalD
-  \dynamicUp
+scoreDViolinI = \relative c'' {
+  \global
+  % Music follows here.
+  
+}
+
+scoreDViolinII = \relative c'' {
+  \global
+  % Music follows here.
+  
+}
+
+scoreDSoprano = \relative c'' {
+  \global
+  % Music follows here.
+  
+}
+
+scoreDAlto = \relative c' {
+  \global
+  % Music follows here.
+  
+}
+
+scoreDTenor = \relative c' {
+  \global
   % Music follows here.
   \partial 2.
   r4 r8\f f4.
   d r8 ef ef d8. d16 e8 f(ef) c
-  bf4.(ef4) c8 bf d d
+  bf4.(ef4) c8 bf d d  
 }
 
-scoreDVerse = \lyricmode {
+scoreDBass = \relative c {
+  \global
+  % Music follows here.
+  
+}
+
+scoreDSopranoVerse = \lyricmode {
   % Lyrics follow here.
   Sanc -- tus, Sanc -- tus, Sanc -- tus Do -- mi -- nus De -- us Sa -- ba -- oth.
   Ple -- ni sunt cae -- li et ter -- ra glo -- ria tua.
   Ho -- san -- na in ex -- cel -- sis.
   Be -- ne -- dic -- tus qui ve -- nit in no -- mi -- ne Do -- mi -- ni.
-  Ho -- san -- na in ex -- cel -- sis.
+  Ho -- san -- na in ex -- cel -- sis.  
 }
+
+scoreDAltoVerse = \lyricmode {
+  % Lyrics follow here.
+  
+}
+
+scoreDTenorVerse = \lyricmode {
+  % Lyrics follow here.
+    \scoreDSopranoVerse
+}
+
+scoreDBassVerse = \lyricmode {
+  % Lyrics follow here.
+  
+}
+
+scoreDPianoReduction = \new PianoStaff \with {
+  fontSize = #-1
+  \override StaffSymbol #'staff-space = #(magstep -1)
+} <<
+  \new Staff \with {
+    \consists "Mark_engraver"
+    \consists "Metronome_mark_engraver"
+    \remove "Staff_performer"
+  } {
+    #(set-accidental-style 'piano)
+    <<
+      \scoreDSoprano \\
+      \scoreDAlto
+    >>
+  }
+  \new Staff \with {
+    \remove "Staff_performer"
+  } {
+    \clef bass
+    #(set-accidental-style 'piano)
+    <<
+      \scoreDTenor \\
+      \scoreDBass
+    >>
+  }
+>>
+
+scoreDRehearsalMidi = #
+(define-music-function
+ (parser location name midiInstrument lyrics) (string? string? ly:music?)
+ #{
+   \unfoldRepeats <<
+     \new Staff = "soprano" \new Voice = "soprano" { \scoreDSoprano }
+     \new Staff = "alto" \new Voice = "alto" { \scoreDAlto }
+     \new Staff = "tenor" \new Voice = "tenor" { \scoreDTenor }
+     \new Staff = "bass" \new Voice = "bass" { \scoreDBass }
+     \context Staff = $name {
+       \set Score.midiMinimumVolume = #0.5
+       \set Score.midiMaximumVolume = #0.5
+       \set Score.tempoWholesPerMinute = #(ly:make-moment 100 4)
+       \set Staff.midiMinimumVolume = #0.8
+       \set Staff.midiMaximumVolume = #1.0
+       \set Staff.midiInstrument = $midiInstrument
+     }
+     \new Lyrics \with {
+       alignBelowContext = $name
+     } \lyricsto $name $lyrics
+   >>
+ #})
+
+scoreDBcMusic = \relative c {
+  \global
+  % Music follows here.
+  
+}
+
+scoreDBcFigures = \figuremode {
+  \global
+  \override Staff.BassFigureAlignmentPositioning #'direction = #DOWN
+  % Figures follow here.
+  
+}
+
+scoreDViolinIPart = \new Staff \with {
+  instrumentName = "Violine I"
+  shortInstrumentName = "Vl. I"
+  midiInstrument = "violin"
+} \scoreDViolinI
+
+scoreDViolinIIPart = \new Staff \with {
+  instrumentName = "Violine II"
+  shortInstrumentName = "Vl. II"
+  midiInstrument = "violin"
+} \scoreDViolinII
+
+scoreDChoirPart = <<
+  \new ChoirStaff <<
+    \new Staff \with {
+      midiInstrument = "choir aahs"
+      instrumentName = "Sopran"
+      shortInstrumentName = "S."
+      \consists "Ambitus_engraver"
+    } { \scoreDSoprano }
+    \addlyrics { \scoreDSopranoVerse }
+    \new Staff \with {
+      midiInstrument = "choir aahs"
+      instrumentName = "Alt"
+      shortInstrumentName = "A."
+      \consists "Ambitus_engraver"
+    } { \scoreDAlto }
+    \addlyrics { \scoreDAltoVerse }
+    \new Staff \with {
+      midiInstrument = "choir aahs"
+      instrumentName = "Tenor"
+      shortInstrumentName = "T."
+      \consists "Ambitus_engraver"
+    } { \clef "treble_8" \scoreDTenor }
+    \addlyrics { \scoreDTenorVerse }
+    \new Staff \with {
+      midiInstrument = "choir aahs"
+      instrumentName = "Bass"
+      shortInstrumentName = "B."
+      \consists "Ambitus_engraver"
+    } { \clef bass \scoreDBass }
+    \addlyrics { \scoreDBassVerse }
+  >>
+  \scoreDPianoReduction
+>>
+
+scoreDBassoContinuoPart = <<
+  \new Staff \with {
+    instrumentName = "Basso Continuo"
+    shortInstrumentName = "B.C."
+    midiInstrument = "cello"
+  } { \clef bass \scoreDBcMusic }
+  \new FiguredBass \scoreDBcFigures
+>>
 
 \bookpart {
   \header {
     subtitle = "Sanctus"
   }
   \score {
-    \new Staff \with {
-      instrumentName = "Tenor"
-      shortInstrumentName = "T."
-      midiInstrument = "choir aahs"
-      \consists "Ambitus_engraver"
-    } { \clef "treble_8" \scoreDTenorVoice }
-    \addlyrics { \scoreDVerse }
+    <<
+      \scoreDViolinIPart
+      \scoreDViolinIIPart
+      \scoreDChoirPart
+      \scoreDBassoContinuoPart
+    >>
     \layout { }
+    \midi { }
+  }
+}
+
+% Rehearsal MIDI files:
+\book {
+  \bookOutputSuffix "soprano"
+  \score {
+    \scoreDRehearsalMidi "soprano" "soprano sax" \scoreDSopranoVerse
+    \midi { }
+  }
+}
+
+\book {
+  \bookOutputSuffix "alto"
+  \score {
+    \scoreDRehearsalMidi "alto" "soprano sax" \scoreDAltoVerse
+    \midi { }
+  }
+}
+
+\book {
+  \bookOutputSuffix "tenor"
+  \score {
+    \scoreDRehearsalMidi "tenor" "tenor sax" \scoreDTenorVerse
+    \midi { }
+  }
+}
+
+\book {
+  \bookOutputSuffix "bass"
+  \score {
+    \scoreDRehearsalMidi "bass" "tenor sax" \scoreDBassVerse
     \midi { }
   }
 }
@@ -338,9 +1103,32 @@ globalE = {
   \tempo "Andante" 4=100
 }
 
-scoreETenorVoice = \relative c' {
-  \globalE
-  \dynamicUp
+scoreEViolinI = \relative c'' {
+  \global
+  % Music follows here.
+  
+}
+
+scoreEViolinII = \relative c'' {
+  \global
+  % Music follows here.
+  
+}
+
+scoreESoprano = \relative c'' {
+  \global
+  % Music follows here.
+  
+}
+
+scoreEAlto = \relative c' {
+  \global
+  % Music follows here.
+  
+}
+
+scoreETenor = \relative c' {
+  \global
   % Music follows here.
   r1
   \time 6/8
@@ -349,25 +1137,196 @@ scoreETenorVoice = \relative c' {
   r4 r8 bf4.\f
 }
 
-scoreEVerse = \lyricmode {
+scoreEBass = \relative c {
+  \global
+  % Music follows here.
+  
+}
+
+scoreESopranoVerse = \lyricmode {
   % Lyrics follow here.
   Be -- ne -- dic -- tus qui ve -- nit in no -- mi -- ne Do -- mi -- ni.
-  Ho -- san -- na in ex -- cel -- sis.
+  Ho -- san -- na in ex -- cel -- sis.  
 }
+
+scoreEAltoVerse = \lyricmode {
+  % Lyrics follow here.
+  
+}
+
+scoreETenorVerse = \lyricmode {
+  % Lyrics follow here.
+  \scoreESopranoVerse
+}
+
+scoreEBassVerse = \lyricmode {
+  % Lyrics follow here.
+  
+}
+
+scoreEPianoReduction = \new PianoStaff \with {
+  fontSize = #-1
+  \override StaffSymbol #'staff-space = #(magstep -1)
+} <<
+  \new Staff \with {
+    \consists "Mark_engraver"
+    \consists "Metronome_mark_engraver"
+    \remove "Staff_performer"
+  } {
+    #(set-accidental-style 'piano)
+    <<
+      \scoreESoprano \\
+      \scoreEAlto
+    >>
+  }
+  \new Staff \with {
+    \remove "Staff_performer"
+  } {
+    \clef bass
+    #(set-accidental-style 'piano)
+    <<
+      \scoreETenor \\
+      \scoreEBass
+    >>
+  }
+>>
+
+scoreERehearsalMidi = #
+(define-music-function
+ (parser location name midiInstrument lyrics) (string? string? ly:music?)
+ #{
+   \unfoldRepeats <<
+     \new Staff = "soprano" \new Voice = "soprano" { \scoreESoprano }
+     \new Staff = "alto" \new Voice = "alto" { \scoreEAlto }
+     \new Staff = "tenor" \new Voice = "tenor" { \scoreETenor }
+     \new Staff = "bass" \new Voice = "bass" { \scoreEBass }
+     \context Staff = $name {
+       \set Score.midiMinimumVolume = #0.5
+       \set Score.midiMaximumVolume = #0.5
+       \set Score.tempoWholesPerMinute = #(ly:make-moment 100 4)
+       \set Staff.midiMinimumVolume = #0.8
+       \set Staff.midiMaximumVolume = #1.0
+       \set Staff.midiInstrument = $midiInstrument
+     }
+     \new Lyrics \with {
+       alignBelowContext = $name
+     } \lyricsto $name $lyrics
+   >>
+ #})
+
+scoreEBcMusic = \relative c {
+  \global
+  % Music follows here.
+  
+}
+
+scoreEBcFigures = \figuremode {
+  \global
+  \override Staff.BassFigureAlignmentPositioning #'direction = #DOWN
+  % Figures follow here.
+  
+}
+
+scoreEViolinIPart = \new Staff \with {
+  instrumentName = "Violine I"
+  shortInstrumentName = "Vl. I"
+  midiInstrument = "violin"
+} \scoreEViolinI
+
+scoreEViolinIIPart = \new Staff \with {
+  instrumentName = "Violine II"
+  shortInstrumentName = "Vl. II"
+  midiInstrument = "violin"
+} \scoreEViolinII
+
+scoreEChoirPart = <<
+  \new ChoirStaff <<
+    \new Staff \with {
+      midiInstrument = "choir aahs"
+      instrumentName = "Sopran"
+      shortInstrumentName = "S."
+      \consists "Ambitus_engraver"
+    } { \scoreESoprano }
+    \addlyrics { \scoreESopranoVerse }
+    \new Staff \with {
+      midiInstrument = "choir aahs"
+      instrumentName = "Alt"
+      shortInstrumentName = "A."
+      \consists "Ambitus_engraver"
+    } { \scoreEAlto }
+    \addlyrics { \scoreEAltoVerse }
+    \new Staff \with {
+      midiInstrument = "choir aahs"
+      instrumentName = "Tenor"
+      shortInstrumentName = "T."
+      \consists "Ambitus_engraver"
+    } { \clef "treble_8" \scoreETenor }
+    \addlyrics { \scoreETenorVerse }
+    \new Staff \with {
+      midiInstrument = "choir aahs"
+      instrumentName = "Bass"
+      shortInstrumentName = "B."
+      \consists "Ambitus_engraver"
+    } { \clef bass \scoreEBass }
+    \addlyrics { \scoreEBassVerse }
+  >>
+  \scoreEPianoReduction
+>>
+
+scoreEBassoContinuoPart = <<
+  \new Staff \with {
+    instrumentName = "Basso Continuo"
+    shortInstrumentName = "B.C."
+    midiInstrument = "cello"
+  } { \clef bass \scoreEBcMusic }
+  \new FiguredBass \scoreEBcFigures
+>>
 
 \bookpart {
   \header {
     subtitle = "Benedictus"
   }
   \score {
-    \new Staff \with {
-      instrumentName = "Tenor"
-      shortInstrumentName = "T."
-      midiInstrument = "choir aahs"
-      \consists "Ambitus_engraver"
-    } { \clef "treble_8" \scoreETenorVoice }
-    \addlyrics { \scoreEVerse }
+    <<
+      \scoreEViolinIPart
+      \scoreEViolinIIPart
+      \scoreEChoirPart
+      \scoreEBassoContinuoPart
+    >>
     \layout { }
+    \midi { }
+  }
+}
+
+% Rehearsal MIDI files:
+\book {
+  \bookOutputSuffix "soprano"
+  \score {
+    \scoreERehearsalMidi "soprano" "soprano sax" \scoreESopranoVerse
+    \midi { }
+  }
+}
+
+\book {
+  \bookOutputSuffix "alto"
+  \score {
+    \scoreERehearsalMidi "alto" "soprano sax" \scoreEAltoVerse
+    \midi { }
+  }
+}
+
+\book {
+  \bookOutputSuffix "tenor"
+  \score {
+    \scoreERehearsalMidi "tenor" "tenor sax" \scoreETenorVerse
+    \midi { }
+  }
+}
+
+\book {
+  \bookOutputSuffix "bass"
+  \score {
+    \scoreERehearsalMidi "bass" "tenor sax" \scoreEBassVerse
     \midi { }
   }
 }
@@ -383,34 +1342,229 @@ globalF = {
   \tempo "Andante" 4=100
 }
 
-scoreFTenorVoice = \relative c' {
-  \globalF
-  \dynamicUp
+scoreFViolinI = \relative c'' {
+  \global
   % Music follows here.
-  r2. r
-  r4 r bf
+  
 }
 
-scoreFVerse = \lyricmode {
+scoreFViolinII = \relative c'' {
+  \global
+  % Music follows here.
+  
+}
+
+scoreFSoprano = \relative c'' {
+  \global
+  % Music follows here.
+  
+}
+
+scoreFAlto = \relative c' {
+  \global
+  % Music follows here.
+  
+}
+
+scoreFTenor = \relative c' {
+  \global
+  % Music follows here.
+  r2. r
+  r4 r bf  
+}
+
+scoreFBass = \relative c {
+  \global
+  % Music follows here.
+  
+}
+
+scoreFSopranoVerse = \lyricmode {
   % Lyrics follow here.
   Ag -- nus Dei, qui tol -- lis pec -- ca -- ta mun -- di, mi -- se -- re -- re no -- bis.
   Ag -- nus Dei, qui tol -- lis pec -- ca -- ta mun -- di, mi -- se -- re -- re no -- bis.
-  Ag -- nus Dei, qui tol -- lis pec -- ca -- ta mun -- di, do -- na no -- bis pacem.
+  Ag -- nus Dei, qui tol -- lis pec -- ca -- ta mun -- di, do -- na no -- bis pacem.  
 }
+
+scoreFAltoVerse = \lyricmode {
+  % Lyrics follow here.
+  
+}
+
+scoreFTenorVerse = \lyricmode {
+  % Lyrics follow here.
+  \scoreFSopranoVerse
+}
+
+scoreFBassVerse = \lyricmode {
+  % Lyrics follow here.
+  
+}
+
+scoreFPianoReduction = \new PianoStaff \with {
+  fontSize = #-1
+  \override StaffSymbol #'staff-space = #(magstep -1)
+} <<
+  \new Staff \with {
+    \consists "Mark_engraver"
+    \consists "Metronome_mark_engraver"
+    \remove "Staff_performer"
+  } {
+    #(set-accidental-style 'piano)
+    <<
+      \scoreFSoprano \\
+      \scoreFAlto
+    >>
+  }
+  \new Staff \with {
+    \remove "Staff_performer"
+  } {
+    \clef bass
+    #(set-accidental-style 'piano)
+    <<
+      \scoreFTenor \\
+      \scoreFBass
+    >>
+  }
+>>
+
+scoreFRehearsalMidi = #
+(define-music-function
+ (parser location name midiInstrument lyrics) (string? string? ly:music?)
+ #{
+   \unfoldRepeats <<
+     \new Staff = "soprano" \new Voice = "soprano" { \scoreFSoprano }
+     \new Staff = "alto" \new Voice = "alto" { \scoreFAlto }
+     \new Staff = "tenor" \new Voice = "tenor" { \scoreFTenor }
+     \new Staff = "bass" \new Voice = "bass" { \scoreFBass }
+     \context Staff = $name {
+       \set Score.midiMinimumVolume = #0.5
+       \set Score.midiMaximumVolume = #0.5
+       \set Score.tempoWholesPerMinute = #(ly:make-moment 100 4)
+       \set Staff.midiMinimumVolume = #0.8
+       \set Staff.midiMaximumVolume = #1.0
+       \set Staff.midiInstrument = $midiInstrument
+     }
+     \new Lyrics \with {
+       alignBelowContext = $name
+     } \lyricsto $name $lyrics
+   >>
+ #})
+
+scoreFBcMusic = \relative c {
+  \global
+  % Music follows here.
+  
+}
+
+scoreFBcFigures = \figuremode {
+  \global
+  \override Staff.BassFigureAlignmentPositioning #'direction = #DOWN
+  % Figures follow here.
+  
+}
+
+scoreFViolinIPart = \new Staff \with {
+  instrumentName = "Violine I"
+  shortInstrumentName = "Vl. I"
+  midiInstrument = "violin"
+} \scoreFViolinI
+
+scoreFViolinIIPart = \new Staff \with {
+  instrumentName = "Violine II"
+  shortInstrumentName = "Vl. II"
+  midiInstrument = "violin"
+} \scoreFViolinII
+
+scoreFChoirPart = <<
+  \new ChoirStaff <<
+    \new Staff \with {
+      midiInstrument = "choir aahs"
+      instrumentName = "Sopran"
+      shortInstrumentName = "S."
+      \consists "Ambitus_engraver"
+    } { \scoreFSoprano }
+    \addlyrics { \scoreFSopranoVerse }
+    \new Staff \with {
+      midiInstrument = "choir aahs"
+      instrumentName = "Alt"
+      shortInstrumentName = "A."
+      \consists "Ambitus_engraver"
+    } { \scoreFAlto }
+    \addlyrics { \scoreFAltoVerse }
+    \new Staff \with {
+      midiInstrument = "choir aahs"
+      instrumentName = "Tenor"
+      shortInstrumentName = "T."
+      \consists "Ambitus_engraver"
+    } { \clef "treble_8" \scoreFTenor }
+    \addlyrics { \scoreFTenorVerse }
+    \new Staff \with {
+      midiInstrument = "choir aahs"
+      instrumentName = "Bass"
+      shortInstrumentName = "B."
+      \consists "Ambitus_engraver"
+    } { \clef bass \scoreFBass }
+    \addlyrics { \scoreFBassVerse }
+  >>
+  \scoreFPianoReduction
+>>
+
+scoreFBassoContinuoPart = <<
+  \new Staff \with {
+    instrumentName = "Basso Continuo"
+    shortInstrumentName = "B.C."
+    midiInstrument = "cello"
+  } { \clef bass \scoreFBcMusic }
+  \new FiguredBass \scoreFBcFigures
+>>
 
 \bookpart {
   \header {
     subtitle = "Agnus Dei"
   }
   \score {
-    \new Staff \with {
-      instrumentName = "Tenor"
-      shortInstrumentName = "T."
-      midiInstrument = "choir aahs"
-      \consists "Ambitus_engraver"
-    } { \clef "treble_8" \scoreFTenorVoice }
-    \addlyrics { \scoreFVerse }
+    <<
+      \scoreFViolinIPart
+      \scoreFViolinIIPart
+      \scoreFChoirPart
+      \scoreFBassoContinuoPart
+    >>
     \layout { }
     \midi { }
   }
 }
+
+% Rehearsal MIDI files:
+\book {
+  \bookOutputSuffix "soprano"
+  \score {
+    \scoreFRehearsalMidi "soprano" "soprano sax" \scoreFSopranoVerse
+    \midi { }
+  }
+}
+
+\book {
+  \bookOutputSuffix "alto"
+  \score {
+    \scoreFRehearsalMidi "alto" "soprano sax" \scoreFAltoVerse
+    \midi { }
+  }
+}
+
+\book {
+  \bookOutputSuffix "tenor"
+  \score {
+    \scoreFRehearsalMidi "tenor" "tenor sax" \scoreFTenorVerse
+    \midi { }
+  }
+}
+
+\book {
+  \bookOutputSuffix "bass"
+  \score {
+    \scoreFRehearsalMidi "bass" "tenor sax" \scoreFBassVerse
+    \midi { }
+  }
+}
+
