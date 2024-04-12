@@ -66,7 +66,7 @@ scoreASoprano = \relative c'' {
   \bar "||"
   g4^\markup{\column{\line{QP\super{5}\sub{WL}}\line{I-V-I}}} g g
   g^\markup{\column{\line{QP\super{5}\sub{WL}}\line{I-IV-I}}} a g
-  g^\markup{\column{\line{QP\super{5}\sub{WL}}\line{I-VII-I}}} \override NoteHead.color=#red \footnote #'(-1 . 3) "Verdopplung Terz wg. Parallelen, aber Wechsel zur EL. Geht das?" d g \revert NoteHead.color
+  g^\markup{\column{\line{QP\super{5}\sub{WL}}\line{I-VII-I}}} \override NoteHead.color=#red \footnote #'(-1 . 3) "Hier auf EL3 gehen. alt: Verdopplung Terz wg. Parallelen, aber Wechsel zur EL. Geht das?" d g \revert NoteHead.color
   \bar "||"
   c^\markup{\column{\line{QP\super{8}\sub{WL}}\line{I-V-I}}} b c
   c^\markup{\column{\line{QP\super{8}\sub{WL}}\line{I-IV-I}}} c c
@@ -91,7 +91,7 @@ scoreASoprano = \relative c'' {
   e^\markup{\column{\line{KD\super{3}\sub{WL}}\line{I-IV-V-I}}} f d e
   \bar "|.|"
   % KD I IV VII I
-  g,4^\markup{\column{\line{KD\super{5}\sub{EL}}\line{I-IV-VII-I}}} a f8 b g4
+  g,4^\markup{\column{\line{KD\super{5}\sub{EL}}\line{I-IV-VII-I}}} \override NoteHead.color=#red \footnote #'(-1 . 3) "Achtung: muss anders sein" a f8 b g4 \revert NoteHead.color
   \bar "||"
   c^\markup{\column{\line{KD\super{8}\sub{EL}}\line{I-IV-VII-I}}} c b c
   \bar "||"
@@ -101,7 +101,7 @@ scoreASoprano = \relative c'' {
   \bar "||"
   c4^\markup{\column{\line{KD\super{8}\sub{WL}}\line{I-IV-VII-I}}} c b c
   \bar "||"
-  e^\markup{\column{\line{KD\super{3}\sub{WL}}\line{I-IV-VII-I}}} f f e
+  e^\markup{\column{\line{KD\super{3}\sub{WL}}\line{I-IV-VII-I}}} \override NoteHead.color=#red \footnote #'(-1 . 3) "Hier in enge Lage gehen" f f e \revert NoteHead.color
   \bar "|.|"
   % KD I II65 V I
   g,4^\markup{\column{\line{KD\super{5}\sub{EL}}\line{I-II\super{6/5}-V-I}}} a g g
@@ -157,7 +157,7 @@ scoreAAlto = \relative c' {
   % QP^3_WL
   g g g
   g a g
-  g8[f g] g[f g]
+  g8[f e] \override NoteHead.color=#red \footnote #'(-1 . 3) "Achtung: geht nicht" g[f g] \revert NoteHead.color
   \time 4/4
   % KD
   % KD^5_WE-I-IV-V-I
@@ -218,7 +218,7 @@ scoreATenor = \relative c' {
   % QP^5_EL
   c b c
   c c c
-  c \override NoteHead.color = #blue \footnote #'(-1 . 3) "Verdopplung Grundton und Abweichung von enger Lage wegen Parallelen" b c \revert NoteHead.color
+  c \override NoteHead.color = #blue \footnote #'(-1 . 3) "Verdopplung Grundton und Abweichung von enger Lage wegen Parallelen, schwierig" b c \revert NoteHead.color
   % QP^8_EL
   e d e
   e f e
@@ -238,7 +238,7 @@ scoreATenor = \relative c' {
   % QP^3_WL
   c b c
   c c c
-  \override NoteHead.color = #blue \footnote #'(-1 . 3) "Terz verdoppeln wegen Parallelen" e8 [b e] \revert NoteHead.color c[b c]
+  \override NoteHead.color = #blue \footnote #'(-1 . 3) "Terz verdoppeln wegen Parallelen" c8 [b c] \revert NoteHead.color c[b c]
   \time 4/4
   % KD
   % KD^5_EL-I-IV-V-I
@@ -626,12 +626,12 @@ globalB = {
   \tempo "Andante" 4=50
 }
 
-scoreBSoprano = \relative c'' {
+scoreBSoprano = \relative c' {
   \globalB
   % Music follows here.
-  e,^\markup{\column{\line{C-Dur: QP\super{5}\sub{EL}}\line{I-V-I}}} e e
+  e^\markup{\column{\line{C-Dur: QP\super{5}\sub{EL}}\line{I-V-I}}} e e
   e^\markup{\column{\line{QP\super{5}\sub{EL}}\line{I-IV-I}}} f e
-  e^\markup{\column{\line{QP\super{5}\sub{EL}}\line{I-VII-I}}} d e
+  e^\markup{\column{\line{QP\super{5}\sub{EL}}\line{I-VII-I}}} \override NoteHead.color=#red \footnote #'(-1 . 3) "Achtung, geht nicht, Vermindert-rein-Parallele" d e \revert NoteHead.color
   \bar "||"
   a^\markup{\column{\line{QP\super{8}\sub{EL}}\line{I-V-I}}} gs a
   a^\markup{\column{\line{QP\super{8}\sub{EL}}\line{I-IV-I}}} a a
@@ -643,7 +643,7 @@ scoreBSoprano = \relative c'' {
   \bar "||"
   e4^\markup{\column{\line{QP\super{5}\sub{WL}}\line{I-V-I}}} e e
   e^\markup{\column{\line{QP\super{5}\sub{WL}}\line{I-IV-I}}} f e
-  e^\markup{\column{\line{QP\super{5}\sub{WL}}\line{I-VII-I}}} r r
+  e^\markup{\column{\line{QP\super{5}\sub{WL}}\line{I-VII-I}}} \footnote #'(-1 . 3) "Leitton abspringen" r r
   \bar "||"
   a^\markup{\column{\line{QP\super{8}\sub{WL}}\line{I-V-I}}} gs a
   a^\markup{\column{\line{QP\super{8}\sub{WL}}\line{I-IV-I}}} a a
@@ -651,7 +651,7 @@ scoreBSoprano = \relative c'' {
   \bar "||"
   c^\markup{\column{\line{QP\super{3}\sub{WL}}\line{I-V-I}}} b c
   c^\markup{\column{\line{QP\super{3}\sub{WL}}\line{I-IV-I}}} d c
-  c8^\markup{\column{\line{QP\super{3}\sub{WL}}\line{I-VII-I}}}[b c] c[d c]
+  c8^\markup{\column{\line{QP\super{3}\sub{WL}}\line{I-VII-I}}} \override NoteHead.color=#red \footnote #'(-1 . 3) "Achtung, geht nicht, Parallelen" [b c] c[d c] \revert NoteHead.color
   \bar "|.|"\break
   \time 4/4
   % KD I IV V I
@@ -668,7 +668,7 @@ scoreBSoprano = \relative c'' {
   c^\markup{\column{\line{KD\super{3}\sub{WL}}\line{I-IV-V-I}}} d b c
   \bar "|.|"
   % KD I IV VII I
-  e,4^\markup{\column{\line{KD\super{5}\sub{EL}}\line{I-IV-VII-I}}} f d e
+  e,4^\markup{\column{\line{KD\super{5}\sub{EL}}\line{I-IV-VII-I}}} \override NoteHead.color=#red \footnote #'(-1 . 3) "Achtung, Parallelen" f d e \revert NoteHead.color
   \bar "||"
   a^\markup{\column{\line{KD\super{8}\sub{EL}}\line{I-IV-VII-I}}} a gs a
   \bar "||"
