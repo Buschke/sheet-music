@@ -115,8 +115,9 @@ scoreBTenorVoice = \relative c' {
   c4 c8 c16 c d8 bf
   bf4(a) a(c4.) c8 c4
   f f8 f f f d d d4. d8  c4. c8 c4
-  d(c bf) a a a8 a c4 c c8 c bf4 bf bf8 bf bf4 bf8 bf bf bf bf4 g' g8 g f4 f f8 f e4(d) c bf r r
-  r2. r r r r r r r4 r r\fermata
+  d(c bf) a a a8 a c4 c c8 c bf4 bf bf8 bf bf4 bf8 bf bf bf bf4 g' g8 g f4 f f8 f ef4(d) c bf r r
+  r2. r r
+  r4 f'2(g4 ef) c d16(ef d ef) f2 ef8 ef16 ef d4(c) bf r4 r\fermata
   \bar "||"
   \time 3/4
   \tempo "Adagio" 4=70
@@ -149,10 +150,7 @@ scoreBTenorVoice = \relative c' {
   bf4(g') g f2 f4
   ef(d c) bf r r
   r2. r r
-  r4 r r
-  r r r
-  r16 r r r r2
-  r4 r r
+  r4 f'2\p(g4 ef) c d16(ef d ef) f2 ef4(d c) bf
   r r c\f d r a bf r r
   \bar "|."
 }
@@ -171,6 +169,7 @@ scoreBVerse = \lyricmode {
   Dó -- mi -- ne Fi -- li U -- ni -- gé -- ni -- te.
   %   Ie -- su Chris -- te,
   %   Dó -- mi -- ne De -- us, Ag -- nus Dei, Fí -- li -- us Pa -- tris,
+  A -- gnus De -- i, Fi -- li -- us Pa -- tris.
   Qui tol -- lis pec -- cá -- ta mun -- di,
   mi -- se -- ré -- re mi -- se -- ré -- re no -- bis.
   Qui tol -- lis pec -- cá -- ta mun -- di,
@@ -183,7 +182,9 @@ scoreBVerse = \lyricmode {
   Ie -- su, Ie -- su Chri -- ste.
   Cum San -- cto Spí -- ri -- tu,
   in gló -- ri -- a De -- i Pa -- tris.
-  A -- men, a -- men, a -- men, a -- men.
+  A -- men, a -- men,
+  a -- men, a -- men, a -- men,
+  a -- men, a -- men.
 }
 
 \bookpart {
