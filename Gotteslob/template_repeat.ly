@@ -3,16 +3,16 @@
 
 \include "predefined-guitar-fretboards.ly"
 \header {
-  dedication = "A. L., für die Begleitung hin zum C-Schein"
+  dedication = ""
   title = ""
   subsubtitle = "Gotteslob Nr. "
   instrument = "Orgel"
-  composer = "M: "
+  composer = \markup {"M: " \with-url #"" ""}
   arranger = \markup { "Satz: " \with-url #"https://buschke.com" "Sven Buschke" }
-  poet = "T: "
-  meter = ""
+  poet = \markup {\with-url #"" "T: " \with-url #"" ""}
+  meter = \markup {\with-url #"" "Wikipedia-Link"}
   piece = ""
-  opus = "GL "
+  opus = "GL  /  EG  ö"
   copyright = \markup { "© Satz: 21.07.2023" \with-url #"mailto:sven@buschke.com" "Sven Buschke" }
   tagline = ""
 }
@@ -27,21 +27,28 @@ scoreASoprano = \relative c'' {
   \global
   % Music follows here.
   \repeat volta 2 { c }
+  
 }
 
 scoreAAlto = \relative c' {
   \global
   % Music follows here.
+  \repeat volta 2 {  }
+  
 }
 
 scoreATenor = \relative c' {
   \global
   % Music follows here.
+  \repeat volta 2 {  }
+  
 }
 
 scoreABass = \relative c {
   \global
   % Music follows here.
+  \repeat volta 2 {  }
+  
 }
 
 scoreAVerseA = \lyricmode {
@@ -63,11 +70,13 @@ scoreAChordNames = \chordmode {
   \global
   \germanChords
   % Chords follow here.
+  \repeat volta 2 {  }
 }
 
 scoreAFigBass = \figuremode {
   \global
   % Figures follow here.
+  \repeat volta 2 {  }
 }
 
 scoreAChoirPart = \new ChoirStaff <<
@@ -131,53 +140,53 @@ scoreABassFiguresPart = \new FiguredBass \with {
 scoreBSoprano = \relative c'' {
   \global
   % Music follows here.
-
+  \transpose c c' \scoreAAlto
 }
 
 scoreBAlto = \relative c' {
   \global
   % Music follows here.
-
+  \transpose c c' \scoreATenor
 }
 
 scoreBTenor = \relative c' {
   \global
   % Music follows here.
-
+  \transpose c c, \scoreASoprano
 }
 
 scoreBBass = \relative c {
   \global
   % Music follows here.
-
+  \scoreABass
 }
 
 scoreBVerseA = \lyricmode {
   % Lyrics follow here.
-
+  \scoreAVerseA
 }
 
 scoreBVerseB = \lyricmode {
   % Lyrics follow here.
-
+  \scoreAVerseB
 }
 
 scoreBVerseC = \lyricmode {
   % Lyrics follow here.
-
+  \scoreAVerseC
 }
 
 scoreBChordNames = \chordmode {
   \global
   \germanChords
   % Chords follow here.
-
+  \scoreAChordNames
 }
 
 scoreBFigBass = \figuremode {
   \global
   % Figures follow here.
-
+  \scoreAFigBass
 }
 
 scoreBChoirPart = \new ChoirStaff <<
@@ -241,53 +250,59 @@ scoreBBassFiguresPart = \new FiguredBass \with {
 scoreCSoprano = \relative c'' {
   \global
   % Music follows here.
-
+  \repeat volta 2 {  }
+  
 }
 
 scoreCAlto = \relative c' {
   \global
   % Music follows here.
-
+  \repeat volta 2 {  }
+  
 }
 
 scoreCTenor = \relative c' {
   \global
   % Music follows here.
-
+  \repeat volta 2 {  }
+  
 }
 
 scoreCBass = \relative c {
   \global
   % Music follows here.
-
+  \repeat volta 2 {  }
+  
 }
 
 scoreCVerseA = \lyricmode {
   % Lyrics follow here.
-
+  \scoreAVerseA
 }
 
 scoreCVerseB = \lyricmode {
   % Lyrics follow here.
-
+  \scoreAVerseB
 }
 
 scoreCVerseC = \lyricmode {
   % Lyrics follow here.
-
+  \scoreAVerseC
 }
 
 scoreCChordNames = \chordmode {
   \global
   \germanChords
   % Chords follow here.
-
+  \repeat volta 2 {  }
+  
 }
 
 scoreCFigBass = \figuremode {
   \global
   % Figures follow here.
-
+  \repeat volta 2 {  }
+  
 }
 
 scoreCChoirPart = \new ChoirStaff <<
@@ -351,53 +366,53 @@ scoreCBassFiguresPart = \new FiguredBass \with {
 scoreDSoprano = \relative c'' {
   \global
   % Music follows here.
-
+  \transpose c c'' \scoreATenor
 }
 
 scoreDAlto = \relative c' {
   \global
   % Music follows here.
-
+  \scoreASoprano
 }
 
 scoreDTenor = \relative c' {
   \global
   % Music follows here.
-
+  \transpose c c \scoreAAlto
 }
 
 scoreDBass = \relative c {
   \global
   % Music follows here.
-
+  \scoreABass
 }
 
 scoreDVerseA = \lyricmode {
   % Lyrics follow here.
-
+  \scoreAVerseA
 }
 
 scoreDVerseB = \lyricmode {
   % Lyrics follow here.
-
+  \scoreAVerseB
 }
 
 scoreDVerseC = \lyricmode {
   % Lyrics follow here.
-
+  \scoreAVerseC
 }
 
 scoreDChordNames = \chordmode {
   \global
   \germanChords
   % Chords follow here.
-
+  \scoreAChordNames
 }
 
 scoreDFigBass = \figuremode {
   \global
   % Figures follow here.
-
+  \scoreAFigBass
 }
 
 scoreDChoirPart = \new ChoirStaff <<
