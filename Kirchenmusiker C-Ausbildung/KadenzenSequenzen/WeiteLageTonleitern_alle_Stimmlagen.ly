@@ -577,7 +577,7 @@ globalB = {
 scoreBSoprano = \relative c''' {
   \globalB
   % Music follows here.
-  a,4^"Cantus firmus im Sopran, Sekunde" b c d e f g a a g f e d c b a
+  a,4^"Cantus firmus im Sopran, Sekunde" b c d e f gs a a g f e d c b a
   \bar "||"
   a^"Terz" c e g b, d f a a f d b g' e c a
   \bar "||"
@@ -589,17 +589,17 @@ scoreBSoprano = \relative c''' {
   \bar "||"
   a^"Septime" gs' f e d c b a a b c d e f gs a
   \bar "|."
-  cs,^"CF im Tenor, Sekunde" e e f a a b c c b a a f e e cs
-  cs^"Terz" e gs b e, f a c c a f e b' a e c
-  cs^"Quarte" f b e, a e gs c c gs e a e b' f c
-  cs^"Quinte" gs' e a e b' f c' c f, b e, a e gs c,
-  cs^"Sexte" a' f e b' gs e c' c e, gs b e, f a c,
-  cs^"Septime" b' a a f e e c c e e f a a b c
+  c,^"CF im Tenor, Sekunde" e e f a a b c c b a a f e e c
+  c^"Terz" e gs b e, f a c c a f e b' a e c
+  c^"Quarte" f b e, a e gs c c gs e a e b' f c
+  c^"Quinte" gs' e a e b' f c' c f, b e, a e gs c,
+  c^"Sexte" a' f e b' gs e c' c e, gs b e, f a c,
+  c^"Septime" b' a a f e e c c e e f a a b c
   \bar "|."
   %%%%%%%%%%
     % Sekundintervall
   % Grundstellung
-  cs^"CF im Bass, Grundstellung Sekunde" b gs f e cs b a a b c e f gs b c
+  c^"CF im Bass, Grundstellung Sekunde" b gs f e c b a a b c e f gs b c
   % Sextakkord
   f,^"Sextakkord Sekunde" d a' f c' a e' c c e a, c f, a d, f
   % Quartsextakkord
@@ -803,7 +803,7 @@ scoreBTenor = \relative c' {
   % Quartsextakkord
   d e f a b c e f f e c b a f e d
   %%%%%%%%%%%%%%%%%
-    c, e e f a a b c
+  c e e f a a b c
   c b a a f e e c
   c e gs b e, f a c
   c a f e b' a e c
@@ -820,87 +820,87 @@ scoreBTenor = \relative c' {
 scoreBBass = \relative c' {
   \global
   % Music follows here.
-  a, e a d a d b a
-  a e d' a d a e a
-  a a e e e d' d a
-  a d d e, e a a a a d e, a d e, e a a e e d' a e d' a
-  a e e d' a e d a' a d e, a d e, e a
-  a d d e, e e a a a a e e e d' d a a e d' a d a e a a e a d a d b a  
+  a, e a d, a' d, b' a
+  a e d a' d, a' e a
+  a a e e e d d a'
+  a d, d e e a a a a d, e a d, e e a a e e d a' e d a'
+  a e e d a' e d a' a d, e a d, e e a
+  a d, d e e e a a a a e e e d d a' a e d a' d, a' e a a e a d, a' d, b' a  
   %%%%%%%%%%%%%%%%%%%%%
-    a e a d a d b a
-  a e d' a d a e a
-  a a e e e d' d a
-  a d d e, e a a a a d e, a d e, e a a e e d' a e d' a
-  a e e d' a e d a' a d e, a d e, e a
-  a d d e, e e a a a a e e e d' d a a e d' a d a e a a e a d a d b a
+    a e a d, a' d, b' a
+  a e d a' d, a' e a
+  a a e e e d d a'
+  a d, d e e a a a a d, e a d, e e a a e e d a' e d a'
+  a e e d a' e d a' a d, e a d, e e a
+  a d, d e e e a a a a e e e d d a' a e d a' d, a' e a a e a d, a' d, b' a
   %%%%%%%%%%%%%%%%%%%%%%%
     % Sekundintervall
   % Grundstellung
-  a,4 b c d e f gs a a gs f e d c b a
+  a4 b c d, e f gs a a gs f e d c b' a
   \bar "||"
   % Sextakkord
-  a4 b c d e f gs a a gs f e d c b a
+  a4 b c d, e f gs a a gs f e d c b' a
   \bar "||"
   % Quartsextakkord
-  a4 b c d e f gs a a gs f e d c b a
+  a4 b c d, e f gs a a gs f e d c b' a
   \bar "||"
   % Terzintervall
   % Grundstellung
-  a c e gs b, d f a a f d b gs' e c a
+  a c e, gs b d, f a a f d b' gs e c a'
   \bar "||"
   % Sextakkord
-  a c e gs b, d f a a f d b gs' e c a
+  a c e, gs b d, f a a f d b' gs e c a'
   \bar "||"
   % Quartsextakkord
-  a c e gs b, d f a a f d b gs' e c a
+  a c, e gs b d, f a a f d b' gs e c a'
   \bar "||"
   % Quartintervall
   % Grundstellung
-  a d gs c, f b, e a a e b f' c gs' d a
+  a d, gs c, f b e, a a e b' f c gs' d a'
   \bar "||"
   % Sextakkord
-  a d gs c, f b, e a a e b f' c gs' d a
+  a d, gs c, f b e, a a e b' f c gs' d a'
   \bar "||"
   % Quartsextakkord
-  a d gs c, f b, e a a e b f' c gs' d a
+  a d, gs c, f b e, a a e b' f c gs' d a'
   \bar "||"
   % Quintintervall
   % Grundstellung
-  a e' b f' c gs' d a' a d, gs c, f b, e a,
+  a e b' f c gs' d a' a d, gs c, f b e, a
   \bar "||"
   % Sextakkord
-  a e' b f' c gs' d a' a d, gs c, f b, e a,
+  a e b' f c gs' d a' a d, gs c, f b e, a
   \bar "||"
   % Quartsextakkord
-  a e' b f' c gs' d a' a d, gs c, f b, e a,
+  a e b' f c gs' d a' a d, gs c, f b e, a
   \bar "||"
   % Sextintervall
   % Grundstellung
-  a f' d b gs' e c a' a c, e gs b, d f a,
+  a f d b' gs e c a' a c e, gs b d, f a
   \bar "||"
   % Sextakkord
-  a f' d b gs' e c a' a c, e gs b, d f a,
+  a f d b' gs e c a' a c, e gs b d, f a
   \bar "||"
   % Quartsextakkord
-  a f' d b gs' e c a' a c, e gs b, d f a,
+  a f d b' gs e c a' a c, e gs b d, f a
   \bar "||"
   % Septimintervall
   % Grundstellung
-  a gs' f e d' c, b' a, a b' c, d' e, f gs a,
+  a gs f e d c b' a a b c, d e f gs a
   \bar "|."
   % Sextakkord
-  a gs' f e d' c, b' a, a b' c, d' e, f gs a,
+  a gs f e d c b' a a b c, d e f gs a
   \bar "|."
   % Quartsextakkord
-  a gs' f e d' c, b' a, a b' c, d' e, f gs a,
+  a gs f e d c b' a a b c, d e f gs a
   \bar "|."
   %%%%%%%%%%%%%%%%%%%%
-    a e a d a d b a
-  a e d' a d a e a
-  a a e e e d' d a
-  a d d e, e a a a a d e, a d e, e a a e e d' a e d' a
-  a e e d' a e d a' a d e, a d e, e a
-  a d d e, e e a a a a e e e d' d a a e d' a d a e a a e a d a d b a  
+    a e a d, a' d, b' a
+  a e d a' d, a' e a
+  a a e e e d d a'
+  a d, d e e a a a a d, e a d, e e a a e e d a' e d a'
+  a e e d a' e d a' a d, e a d, e e a
+  a d, d e e e a a a a e e e d d a' a e d a' d, a' e a a e a d, a' d, b' a  
 }
 
 scoreBVerse = \lyricmode {
@@ -973,75 +973,75 @@ scoreBVerse = \lyricmode {
 scoreBChordNames = \chordmode {
   \global
   % Chords follow here.
-  a:min e a d a d gs:dim/b a
-  a e d a d a e a
-  a a e e e d d a
-  a d d e e a a a
-  a d e a d e e a a e e d a e d a
-  a e e d a e d a a d e a d e e a
-  a d d e e e a a a a e e e d d a
-  a e d a d a e a a e a d a d gs:dim/b a
+  a:min e:min a:min d:min a:min d:min gs:dim/b a
+  a:min e:min d:min a:min d:min a:min e:min a:min
+  a:min a:min e:min e:min e:min d:min d:min a:min
+  a:min d:min d:min e:min e:min a:min a:min a:min
+  a:min d:min e:min a:min d:min e:min e:min a:min a:min e:min e:min d:min a:min e:min d:min a:min
+  a:min e:min e:min d:min a:min e:min d:min a:min a:min d:min e:min a:min d:min e:min e:min a:min
+  a:min d:min d:min e:min e:min e:min a:min a:min a:min a:min e:min e:min e:min d:min d:min a:min
+  a:min e:min d:min a:min d:min a:min e:min a:min a:min e:min a:min d:min a:min d:min gs:dim/b a:min
   %%%%%%%%%%%%%%%%%%%
-    a e a d a d gs:dim/b a
-  a e d a d a e a
-  a a e e e d d a
-  a d d e e a a a
-  a d e a d e e a a e e d a e d a
-  a e e d a e d a a d e a d e e a
-  a d d e e e a a a a e e e d d a
-  a e d a d a e a a e a d a d gs:dim/b a
+    a:min e:min a:min d:min a:min d:min gs:dim/b a
+  a:min e:min d:min a:min d:min a:min e:min a:min
+  a:min a:min e:min e:min e:min d:min d:min a:min
+  a:min d:min d:min e:min e:min a:min a:min a:min
+  a:min d:min e:min a:min d:min e:min e:min a:min a:min e:min e:min d:min a:min e:min d:min a:min
+  a:min e:min e:min d:min a:min e:min d:min a:min a:min d:min e:min a:min d:min e:min e:min a:min
+  a:min d:min d:min e:min e:min e:min a:min a:min a:min a:min e:min e:min e:min d:min d:min a:min
+  a:min e:min d:min a:min d:min a:min e:min a:min a:min e:min a:min d:min a:min d:min gs:dim/b a:min
   %%%%%%%%%%%%%%%%%%%%%%%%
     % Sekundintervall
   % Grundstellung
-  a b:m c:m d e f:m gs:dim a a gs:dim f:m e d c:m b:m a
+  a:min b:m c:m d:min e:min f:m gs:dim a:min a:min gs:dim f:m e:min d:min c:m b:m a:min
   % Sextakkord
-  f:m/a gs:dim/b a/c b:m/d c:m/e d/f e/gs a a e/gs d/f c:m/e b:m/d a/c gs:dim/b f:m/a
+  f:m/a gs:dim/b a/c b:m/d c:m/e d/f e/gs a:min a:min e/gs d/f c:m/e b:m/d a/c gs:dim/b f:m/a
   % Quartsextakkord
   d/a e/b f:m/c gs:dim/d a/e b:m/f c:m/gs d/a d/a c:m/gs b:m/f a/e gs:dim/d f:m/c e/b d/a
   % Terzintervall
   % Grundstellung
-  a c:m e gs:dim b:m d f:m a a f:m d b gs:dim e c:m a
+  a:min c:m e:min gs:dim b:m d:min f:m a:min a:min f:m d:min b gs:dim e:min c:m a
   % Sextakkord
   f:m/a a/c c:m/e e/gs gs:dim/b b:m/d d/f f:m/a f:m/a d/f b:m/d gs:dim/b e/gs c:m/e a/c f:m/a
   % Quartsextakkord
   d/a f:m/c a/e c:m/gs e/b gs:dim/d b:m/f d/a d/a b:m/f gs:dim/d e/b c:dim/gs a/e f:m/c d/a
   % Quartintervall
   % Grundstellung
-  a d gs:dim c:m f:m b:m e a a e b:m f:m c:m gs:dim d a
+  a:min d:min gs:dim c:m f:m b:m e:min a:min a:min e:min b:m f:m c:m gs:dim d:min a
   % Sextakkord
   f:m/a b:m/d e/gs a/c d/f gs:dim/b c:m/e f:m/a f:m/a c:m/e gs:dim/b d/f a/c e/gs b:m/d f:m/a
   % Quartsextakkord
   d/a gs:dim/d c:m/gs f:m/c b:m/f e/b a/e d/a d/a a/e e/b b:m/f f:m/c c:m/gs gs:dim/d d/a
   % Quintintervall
   % Grundstellung
-  a e b f c gs d a a d gs c f b e a
+  a:min e:min b f c gs d:min a:min a d:min gs c f b e:min a
   % Sextakkord
   f:m/a c:m/e gs:dim/b d/f a/c e/gs b:m/d f:m/a f:m/a b:m/d e/gs a/c d/f gs:dim/b c:m/e f:m/a
   % Quartsextakkord
   d/a a/e e/b b:m/f f:m/c c:m/gs gs:dim/d d/a d/a gs:dim/d c:m/gs f:m/c b:m/f e/b a/e d/a
   % Sextintervall
   % Grundstellung
-  a f:m d b:m gs:dim e c:m a a c:m e gs:dim b:m d f:m a
+  a:min f:m d:min b:m gs:dim e:min c:m a:min a:min c:m e:min gs:dim b:m d:min f:m a:min
   % Sextakkord
   f:m/a d/f b:m/d gs:dim/b e/gs c:m/e a/c f:m/a f:m/a a/c c:m/e e/gs gs:dim/b b:m/d d:/f f:m/a
   % Quartsextakkord
   d/a b:m/f gs:dim/d e/b c:m/gs a/e f:m/c d/a d/a f:m/c a/e c:m/gs e/b gs:dim/d b:m/f d/a
   % Septimintervall
   % Grundstellung
-  a gs:dim f:m e d c:m b:m a a b:m c:m d e f:m gs:dim a  
+  a:min gs:dim f:m e:min d:min c:m b:m a:min a:min b:m c:m d:min e:min f:m gs:dim a:min  
   % Sextakkord
   f:m/a e/gs d/f c:m/e b:m/d a/c gs:dim/b f:m/a f:m/a gs:dim/b a/c b:m/d c:m/e d/f e/gs f:m/a  
   % Quartsextakkord
   d/a c:m/gs b:m/f a/e gs:dim/d f:m/c e/b d/a d/a e/b f:m/c gs:dim/d a/e b:m/f c:m/gs d/a  
   %%%%%%%%%%%%%%%%%%%%%%%%
-    a e a d a d gs:dim/b a
-  a e d a d a e a
-  a a e e e d d a
-  a d d e e a a a
-  a d e a d e e a a e e d a e d a
-  a e e d a e d a a d e a d e e a
-  a d d e e e a a a a e e e d d a
-  a e d a d a e a a e a d a d gs:dim/b a  
+    a:min e:min a:min d:min a:min d:min gs:dim/b a
+  a:min e:min d:min a:min d:min a:min e:min a
+  a:min a:min e:min e:min e:min d:min d:min a:min
+  a:min d:min d:min e:min e:min a:min a:min a:min
+  a:min d:min e:min a:min d:min e:min e:min a:min a:min e:min e:min d:min a:min e:min d:min a:min
+  a:min e:min e:min d:min a:min e:min d:min a:min a:min d:min e:min a:min d:min e:min e:min a
+  a:min d:min d:min e:min e:min e:min a:min a:min a:min a:min e:min e:min e:min d:min d:min a:min
+  a:min e:min d:min a:min d:min a:min e:min a:min a:min e:min a:min d:min a:min d:min gs:dim/b a:min  
 }
 
 scoreBFigBass = \figuremode {
@@ -1206,7 +1206,7 @@ scoreCBassFiguresPart = \new FiguredBass \scoreCFigBass
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%
-% a-Moll
+% e-Moll
 %%%%%%%%%%%%%%%%%%%%%%%%%
 
 globalD = {
