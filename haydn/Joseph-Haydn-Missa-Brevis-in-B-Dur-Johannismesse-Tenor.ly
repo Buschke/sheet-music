@@ -228,6 +228,11 @@ scoreCTenorVoice = \relative c' {
   r1
   r1
   r2 bf4 c
+  d8(ef) d g f ef16(d) ef4 d r r c8 c c8. c16 c8 c c4 c, r2 r4 r8 f' d4 c8 c c(bf a) g f d' c d c c16 c c4 c r r2 r r8 c d(c16 bf)
+  \time 3/4
+  \tempo "Adagio" 4 = 46
+  a4 f'\p f8 f f2.(f2) a4 bf 4 4 bf2.(bf2) bf4 4 bf2 b4. b8 b4 c b r
+  ef4. ef8 d c c8. b16 bf4 r ef4. ef8 d c c8. b16 b4 g e c e'8(c) af2 e4 c2 c4 fs4 r fs g2. 
 }
 
 scoreCVerse = \lyricmode {
@@ -299,7 +304,11 @@ scoreDTenorVoice = \relative c' {
   \partial 2.
   r4 r8\f f4.
   d r8 ef ef d8. d16 e8 f(ef) c
-  bf4.(ef4) c8 bf d d
+  bf4.(ef4) c8 bf d d c8. d16 c8 r e e d8. c16 b8 c4 c8 b c16d c8 c(d) e d(g f ef4 d8 c4) c8 b4 r8 r4 r8 ef ef ef ef c b c c r r4 r8 d d d d bf a
+  bf bf r r4 r8 c8. c16 bf8 bf a r bf8. bf16 bf8 a a r bf8. bf16 bf8 a a r
+  r4 r8 bf4. a8(f') ef ef(d) c d4( c8 bf4 c8) f,4 r8 r4 r8
+  r2. r4 r8 ef'4. d8(g f ef d c( bf g' ef d4(c8) bf4 r8 r4 r8
+  \bar "|." 
 }
 
 scoreDVerse = \lyricmode {
