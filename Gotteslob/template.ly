@@ -245,7 +245,7 @@ scoreCTenor = \relative c' {
 scoreCBass = \relative c {
   \global
   % Music follows here.
-  
+  \transpose c c, \scoreASoprano
 }
 
 scoreCVerse = \lyricmode {

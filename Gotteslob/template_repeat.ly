@@ -271,8 +271,7 @@ scoreCTenor = \relative c' {
 scoreCBass = \relative c {
   \global
   % Music follows here.
-  \repeat volta 2 {  }
-  
+  \transpose c c, \scoreASoprano
 }
 
 scoreCVerseA = \lyricmode {
