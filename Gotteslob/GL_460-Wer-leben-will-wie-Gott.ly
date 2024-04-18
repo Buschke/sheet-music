@@ -33,7 +33,7 @@ scoreASoprano = \relative c'' {
     e4 fs8 g4 a8 b4 b8 a(b) a g4(fs8) e
   }
   \partial 8
-  fs,
+  fs
   g4 fs8 e4 fs8 g4 fs8 e4\breathe
   \repeat volta 2 {
     \partial 8
@@ -56,7 +56,7 @@ scoreAAlto = \relative c' {
   \repeat volta 2 {
     \partial 8
     e'8
-    e4 e8 c4 d8 b4(b8) g4
+    e4 e8 c4 fs8 b,4(b8) g4
   }
 }
 
@@ -72,7 +72,7 @@ scoreATenor = \relative c' {
   d8 e4 d8 b4 d8 e4 ds8 b4
   \repeat volta 2 {
     \partial 8
-    g'8 g4 g8 e4 fs8 e4(ds8) b4
+    g'8 g4 g8 e4 b'8 e,4(ds8) b4
   }
 }
 
@@ -88,7 +88,7 @@ scoreABass = \relative c {
   b' e,4 b'8 e,4 b'8 e,4 b'8 e,4
   \repeat volta 2 {
     \partial 8
-    e8 e4 e8 a4 b8 e4 b8 e,4
+    e8 e4 e8 a4 d8 e4 b8 e,4
   }
 }
 
@@ -112,7 +112,7 @@ scoreAChordNames = \chordmode {
   b:min e4:min b8:min e4:min b8:min e4:min b8:min e4:min
   \repeat volta 2 {
     \partial 8
-    e8:min e4:min e8:min a4:min b8:min e4:min b8 e4:min
+    e8:min e4:min e8:min a4:min b8:min/d e4:min b8 e4:min
   }
 }
 
@@ -323,7 +323,7 @@ scoreCTenor = \relative c' {
   }
   \partial 8
   a8
-  e4 a8 e4 a8 e4 a8 b4
+  e'4 a8 e4 a,8 e'4 a,8 b4
   \repeat volta 2 {
     \partial 8
     b8
