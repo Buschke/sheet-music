@@ -28,9 +28,9 @@ scoreASoprano = \relative c'' {
   \global
   % Music follows here.
   \partial 4
-  d,4
+  d4
   f f e c d2 d4 d f f g g a2.\breathe
-  a4 c2 a g2. a4 f e d c d2.
+  a4 a2 a g2. a4 f e d c d2.
   \bar "|."
 }
 
@@ -38,18 +38,18 @@ scoreAAlto = \relative c' {
   \global
   % Music follows here.
   \partial 4
-  f4,
+  f4
   a a a e f2 f4 f a a bf bf d2.\breathe
-  d4 e2 d bf2. d4 a a f e f2. 
+  d4 c2 d bf2. d4 a a f e f2. 
 }
 
 scoreATenor = \relative c' {
   \global
   % Music follows here.
   \partial 4
-  a,4
+  a4
   d d c a a2 a4 a d d d d f2.\breathe
-  f4 a2 f d2. f4 d c a a a2.
+  f4 e2 f d2. f4 d c a a a2.
 }
 
 scoreABass = \relative c {
