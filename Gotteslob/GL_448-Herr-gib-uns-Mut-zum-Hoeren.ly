@@ -244,19 +244,29 @@ scoreBBassFiguresPart = \new FiguredBass \with {
 scoreCSoprano = \relative c'' {
   \global
   % Music follows here.
-
+  \partial 4
+  d4
+  d d g, a a2 a4 a d d bf bf f2.\breathe
+  a4 a2 a bf2. f4 f g a a a2. 
 }
 
 scoreCAlto = \relative c' {
   \global
   % Music follows here.
+  \partial 4
+  f4
+  a a cs, e d2 d4 d a' a d, d c2.\breathe
+  c4 e2 c d2. c4 a cs d e d2.
 
 }
 
 scoreCTenor = \relative c' {
   \global
   % Music follows here.
-
+  \partial 4
+  a4
+  d d e, a f2 f4 f4 d' d g g f2.\breathe
+  e4 a2, e g2. f4 c e f a f2. 
 }
 
 scoreCBass = \relative c {
@@ -275,9 +285,9 @@ scoreCChordNames = \chordmode {
   \germanChords
   % Chords follow here.
   \partial 4
-  d4:min
-  d:min/f d:min/f as:min/c a:min/c g2:min/bf g4:min/bf g:min/bf d:min d:min g:min g:min a2.:min
-  a4:min a2:min/c a:min g2.:min a4:min d:min/f as:min d:min a:min/c d2.:min
+  d4:m
+  d:m/f d:m/f cs:m/e a:m/c d2:m d4:m d:m d:m/f d:m/f g:m g:m f2./a
+  a4:m a2:m/c a:m g2.:m f4/a f cs:m/e d:m a:min/c d2.:m
 }
 
 scoreCFigBass = \figuremode {
