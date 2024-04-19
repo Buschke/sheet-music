@@ -598,8 +598,10 @@ scoreBSoprano = \relative c''' {
   \bar "|."
   %%%%%%%%%%
     % Sekundintervall
+  % Grundstellung, Harmonisierung
+  c,^"CF im Bass, Harmonisierung 1, Sekunde, " b a a c c e e e e c c a a b c
   % Grundstellung
-  c^"CF im Bass, Grundstellung Sekunde" b gs f e c b a a b c e f gs b c
+  c'^"CF im Bass, Grundstellung Sekunde" b gs f e c b a a b c e f gs b c
   % Sextakkord
   f,^"Sextakkord Sekunde" d a' f c' a e' c c e a, c f, a d, f
   % Quartsextakkord
@@ -675,8 +677,10 @@ scoreBAlto = \relative c'' {
   e gs a a c d d e
   %%%%%%%%%%%%%%%%
     % Sekundintervall
+  % Grundstellung, Harmonisierung
+  e, d e d g f b a a b f g d e d e
   % Grundstellung
-  e d c a gs f d c c d f gs a c d e
+  e' d c a gs f d c c d f gs a c d e
   % Sextakkord
   c, d e f gs a b c c b a gs f e d c
   % Quartsextakkord
@@ -761,8 +765,10 @@ scoreBTenor = \relative c' {
   \bar "|."
   %%%%%%%%%%%%%%%%%%%%%
     % Sekundintervall
+  % Grundstellung, Grundharmonisierung
+  a, gs a f c' a e' c c e a, c f, a gs a
   % Grundstellung
-  a f e d b a gs e e gs a b d e f a
+  a' f e d b a gs e e gs a b d e f a
   % Sextakkord
   f, gs a b c d e f f e d c b a gs f
   % Quartsextakkord
@@ -835,9 +841,13 @@ scoreBBass = \relative c' {
   a d, d e e e a a a a e e e d d a' a e d a' d, a' e a a e a d, a' d, b' a
   %%%%%%%%%%%%%%%%%%%%%%%
     % Sekundintervall
+  % Grundstellung, Harmonisierung
+  a4 b c d, e f g a a g f e d c' b a
+  \bar "||"
   % Grundstellung
   a4 b c d, e f gs a a gs f e d c b' a
   \bar "||"
+  % 
   % Sextakkord
   a4 b c d, e f gs a a gs f e d c b' a
   \bar "||"
@@ -992,6 +1002,8 @@ scoreBChordNames = \chordmode {
   a:min e:min d:min a:min d:min a:min e:min a:min a:min e:min a:min d:min a:min d:min gs:dim/b a:min
   %%%%%%%%%%%%%%%%%%%%%%%%
     % Sekundintervall
+  % Grundstellung, Grundharmonisierung
+  a:min gs:dim/b a:m/c d:m c/e f e:m/g a:m a:m e:m/g f c/e d:m a:m/c gs:dim/b a:m
   % Grundstellung
   a:min b:m c:m d:min e:min f:m gs:dim a:min a:min gs:dim f:m e:min d:min c:m b:m a:min
   % Sextakkord
@@ -1424,25 +1436,25 @@ globalF = {
 scoreFSoprano = \relative c'' {
   \globalF
   % Music follows here.
-  \transpose a d \scoreBSoprano
+  \transpose a d' \scoreBSoprano
 }
 
 scoreFAlto = \relative c' {
   \globalF
   % Music follows here.
-  \transpose a d \scoreBAlto
+  \transpose a d' \scoreBAlto
 }
 
 scoreFTenor = \relative c' {
   \globalF
   % Music follows here.
-  \transpose a d \scoreBTenor
+  \transpose a d' \scoreBTenor
 }
 
 scoreFBass = \relative c {
   \globalF
   % Music follows here.
-  \transpose a d \scoreBBass
+  \transpose a d' \scoreBBass
 }
 
 scoreFVerse = \lyricmode {
