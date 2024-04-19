@@ -266,7 +266,7 @@ scoreCTenor = \relative c' {
   \partial 4
   a4
   d d e, a f2 f4 f4 d' d g g f2.\breathe
-  e4 a2, e g2. f4 c e f a f2. 
+  e4 a,2 e g2. f4 c e f a f2. 
 }
 
 scoreCBass = \relative c {
