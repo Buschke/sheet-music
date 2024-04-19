@@ -6,7 +6,7 @@
 \header {
   dedication = ""
   title = "Herr, gib uns Mut zum Hören"
-  subsubtitle = "Gotteslob Nr. "
+  subsubtitle = "Gotteslob Nr. 448"
   instrument = "Orgel"
   composer = \markup {"M: " \with-url #"https://de.wikipedia.org/wiki/Kurt_Rommel" "Kurt Rommel, 1963"}
   arranger = \markup { "Satz: " \with-url #"https://buschke.com" "Sven Buschke" }
