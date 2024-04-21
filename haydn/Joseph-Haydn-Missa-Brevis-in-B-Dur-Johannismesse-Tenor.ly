@@ -134,7 +134,7 @@ scoreBTenorVoice = \relative c' {
   f2 ef4 ef2(d4) c r r
   r2. r r
   r4 r ef d ef r8 ef
-  c4. c8 d4 bf a r
+  c4. c8 bf4 bf a r
   d2\f d4 e2 e4
   r ef ef d2 c4 bf2(a4) g r r\fermata
   \bar "||"
@@ -151,7 +151,7 @@ scoreBTenorVoice = \relative c' {
   ef(d c) bf r r
   r2. r r
   r4 f'2\p(g4 ef) c d16(ef d ef) f2 ef4(d c) bf
-  r r c\f d r a bf r r
+  r c\f d r a bf r r
   \bar "|."
 }
 
