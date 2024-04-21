@@ -212,7 +212,7 @@ globalC = {
   \key bf \major
   %   \numericTimeSignature
   \time 4/4
-  \tempo "Andante" 4=100
+  \tempo "Allegro" 4=100
 }
 
 scoreCTenorVoice = \relative c' {
@@ -231,8 +231,25 @@ scoreCTenorVoice = \relative c' {
   d8(ef) d g f ef16(d) ef4 d r r c8 c c8. c16 c8 c c4 c, r2 r4 r8 f' d4 c8 c c(bf a) g f d' c d c c16 c c4 c r r2 r r8 c d(c16 bf)
   \time 3/4
   \tempo "Adagio" 4 = 46
-  a4 f'\p f8 f f2.(f2) a4 bf 4 4 bf2.(bf2) bf4 4 bf2 b4. b8 b4 c b r
-  ef4. ef8 d c c8. b16 bf4 r ef4. ef8 d c c8. b16 b4 g e c e'8(c) af2 e4 c2 c4 fs4 r fs g2. 
+  a4 f'\p f8 f f2.(f2) a,4 bf4 4 4 bf2.(bf2) bf4 4 bf2 b4. b8 b4 c b r
+  ef4. ef8 d c c8. b16 b4 r ef4. ef8 d c c8. b16 b4 g ef c ef'8(c) af2 ef4 c2 c4 fs4 r fs g2. a g2 g4 g2 r4
+  r2. r r r r
+  b
+  b bf(a2) bf4 a2 bf4 c(bf) a g r r
+  r2.
+  r4 d\p d d2 d4
+  \bar "||"
+  \tempo "Allegro" 4=80
+  d d'\f d8 d d2 d4 d4. d8 d4 d d bf c4. c8 c4 c c c8 c bf4 bf bf a2 a4 bf g' e c d c d(c2) c4 r
+  f, f4. f8 f f bf bf g4 e f f8 f f f 
+  bf4(g) e f f r8 f bf4(g) e f r r
+  c'2\f c4 bf bf bf bf2 bf4 bf(g') g f f f ef(d c)
+  bf r d8 d d4. d8 d4 d2 d4 d4. d8 d4 d8 d d4 bf c c c8 c c4 c c8 c bf4 bf bf a a a8 a bf4 g' e c d c d8 d c4 c a f f c'2 c4
+  bf2 bf4 a2. bf4 g' e c d c d8 d c2 f,4 r8 f f f f4 f f bf8. bf16 g4 e f8 f f f f f bf8. bf16 g4 e f8. f16 f8 f f f bf4 g e8 e f2 c'4 c c c8 c bf4 bf bf8 bf bf2 bf4 bf(g') g f8 f f4 f ef ef d4(c) bf r r 
+  r2. r r 
+  r4 f'2
+  g4 ef c d16(c bf ef) f2 ef4(d) c bf r c\f d r a bf r r
+  \bar "|."
 }
 
 scoreCVerse = \lyricmode {
@@ -242,31 +259,36 @@ scoreCVerse = \lyricmode {
   %   fac -- tórem cæ -- li et terræ,
   Vi -- si -- bí -- li -- um ó -- mni -- um et in -- vi -- si -- bí -- li -- um.
   Ie -- sum Chris -- tum
-  Et in un -- um Dó -- mi -- num, Ie -- sum Chris -- tum,
-  Fí -- li -- um Dei un -- igé -- ni -- tum,
-  et ex Pa -- tre na -- tum an -- te óm -- nia sǽ -- cu -- la.
-  De -- um de Deo, lu -- men de lú -- mi -- ne, De -- um ver -- um de Deo ve -- ro,
-  gé -- ni -- tum, non fac -- tum, con -- sub -- stan -- tiálem Pa -- tri:
-  per quem óm -- nia fac -- ta sunt.
-  Qui propter nos hó -- mi -- nes et propter no -- stram sa -- lútem
-  de -- scén -- dit de cæ -- lis.
-  Et in -- carnátus est de Spíri -- tu Sanc -- to
-  ex Ma -- ría Vír -- gi -- ne, et ho -- mo fac -- tus est.
-  Cru -- cifí -- xus éti -- am pro no -- bis sub Pón -- tio Piláto;
-  pas -- sus et sepúl -- tus est,
-  et re -- s -- urré -- xit tér -- tia die, secún -- dum Scrip -- túras,
-  et ascén -- dit in cælum, se -- det ad déx -- teram Pa -- tris.
-  Et íte -- rum ventúrus est cum glória,
-  iu -- dicá -- re vi -- vos et mór -- tu -- os,
-  cui -- us reg -- ni non erit fi -- nis.
-  Et in Spíri -- tum Sanc -- tum, Dó -- mi -- num et vi -- vi -- ficán -- tem:
-  qui ex Pa -- tre Fi -- lióque procé -- dit.
-  Qui cum Pa -- tre et Fí -- lio si -- mul ad -- orátur et conglo -- ri -- ficátur:
-  qui locútus est per pro -- phétas.
-  Et un -- am, sanc -- tam, ca -- thó -- li -- cam et apo -- stó -- li -- cam Ec -- clé -- si -- am.
-  Con -- fíte -- or un -- um bap -- tís -- ma in re -- mis -- sió -- nem pec -- catórum.
-  Et ex -- spéc -- to re -- s -- ur -- rec -- tió -- nem mor -- tuórum,
-  et vit -- am ventúri sǽ -- cu -- li. Amen.
+  Et ex Pa -- tre na -- tum an -- te óm -- ni -- a sǽ -- cu -- la.
+  De -- um ve -- rum de De -- o ve -- ro.
+  Con -- sub -- stan -- ti -- á -- lem Pa -- tri.
+  Qui pro -- pter nos hó -- mi -- nes et pro -- pter no -- stram sa -- lú -- tem
+  de coe -- lis.
+  Et in -- car -- ná -- tus est,
+  in -- car -- ná -- tus est
+  de Spí -- ri -- tu San -- cto
+  ex Ma -- rí -- a Vír -- gi -- ne,
+  ex Ma -- rí -- a Vír -- gi -- ne:
+  et ho -- mo, et ho -- mo fac -- tus est.
+  et ho -- mo fac -- tus est.
+  pas -- sus
+  pas -- sus
+  et se -- púl -- tus est,
+  et se -- púl -- tus est.
+  Et re -- sur -- ré -- xit tér -- ti -- a di -- e, se -- cún -- dum Scrip -- tú -- ras.
+  Et as -- cén -- dit in coe -- lum, se -- det ad déx -- te -- ram Pa -- tris.
+  Et í -- te -- rum ven -- tú -- rus est cum gló -- ri -- a,
+  iu -- di -- cá -- re vi -- vos et mór -- tu -- os.
+  Cui -- us reg -- ni non e -- rit fi -- nis,
+  non e -- rit fi -- nis.
+  Et in Spí -- ri -- tum San -- ctum, Dó -- mi -- num et vi -- vi -- fi -- cán -- tem:
+  qui ex Pa -- tre Fi -- li -- ó -- que pro -- cé -- dit.
+  Qui cum Pa -- tre et Fí -- li -- o si -- mul ad -- o -- rá -- tur et con -- glo -- ri -- fi -- cá -- tur:
+  qui lo -- cú -- tus est per pro -- phé -- tas.
+  Et un -- am, sanc -- tam, ca -- thó -- li -- cam et a -- po -- stó -- li -- cam Ec -- clé -- si -- am.
+  Con -- fí -- te -- or u -- num ba -- ptís -- ma in re -- mis -- si -- ó -- nem pec -- ca -- tó -- rum.
+  Et ex -- spéc -- to re -- sur -- re -- cti -- ó -- nem mor -- tu -- ó -- rum.
+  Et vit -- am ven -- tú -- ri sǽ -- cu -- li. A -- men, a -- men.
 }
 
 \bookpart {
@@ -301,22 +323,28 @@ scoreDTenorVoice = \relative c' {
   \globalD
   \dynamicUp
   % Music follows here.
-  \partial 2.
   r4 r8\f f4.
   d r8 ef ef d8. d16 e8 f(ef) c
-  bf4.(ef4) c8 bf d d c8. d16 c8 r e e d8. c16 b8 c4 c8 b c16d c8 c(d) e d(g f ef4 d8 c4) c8 b4 r8 r4 r8 ef ef ef ef c b c c r r4 r8 d d d d bf a
+  bf4.(ef4) c8 bf d d c8. d16 c8 r ef ef d8. c16 b8 c4 c8 b c16(d) c8 c(d) ef d(g f ef4 d8 c4) c8 b4 r8 r4 r8 ef ef ef ef c b c c r r4 r8 d d d d bf a
   bf bf r r4 r8 c8. c16 bf8 bf a r bf8. bf16 bf8 a a r bf8. bf16 bf8 a a r
   r4 r8 bf4. a8(f') ef ef(d) c d4( c8 bf4 c8) f,4 r8 r4 r8
-  r2. r4 r8 ef'4. d8(g f ef d c( bf g' ef d4(c8) bf4 r8 r4 r8
+  r2. r4 r8 ef'4. d8(g f ef d c) bf g' ef d4(c8) bf4 r8 r4 r8
+  r4 r8 ef4.\p d8(g f ef d c) bf g'\f ef d4(c8) bf4 r8 r4 r8
   \bar "|." 
 }
 
 scoreDVerse = \lyricmode {
   % Lyrics follow here.
-  Sanc -- tus, Sanc -- tus, Sanc -- tus Do -- mi -- nus De -- us Sa -- ba -- oth.
-  Ple -- ni sunt cae -- li et ter -- ra glo -- ria tua.
-  Ho -- san -- na in ex -- cel -- sis.
-  Be -- ne -- dic -- tus qui ve -- nit in no -- mi -- ne Do -- mi -- ni.
+  Sanc -- tus, Sanc -- tus, Do -- mi -- nus De -- us Sa -- ba -- oth.
+  Sanc -- tus, Do -- mi -- nus, Sanc -- tus, Do -- mi -- nus
+  De -- us Sa -- ba -- oth, De -- us Sa -- ba -- oth.
+  Ple -- ni sunt cae -- li et ter -- ra,
+  ple -- ni sunt cae -- li et ter -- ra
+  glo -- ri -- a tu -- a,
+  glo -- ri -- a tu -- a,
+  glo -- ri -- a tu -- a.
+  Ho -- san -- na in ex -- cel -- sis,
+  ho -- san -- na in ex -- cel -- sis.
   Ho -- san -- na in ex -- cel -- sis.
 }
 
@@ -352,16 +380,24 @@ scoreETenorVoice = \relative c' {
   \globalE
   \dynamicUp
   % Music follows here.
-  r1
+  \compressMMRests R1*56
+  r4 r8 
+  \key bf \major
   \time 6/8
+  \partial 4.
   r4 r8
   r2.
-  r4 r8 bf4.\f
+  r4 r8 bf4.\f a8(f') ef ef(d) c d4(c8 bf4 c8) f,4 r8 r4 r8 r2.
+  r4 r8 ef'4. d8(g f ef d c) bf g' ef d4(c8) bf4 r8 r4 r8
+  r4 r8 ef4.\p d8(g f ef d c) bf
+  g'\f ef d4(c8) bf4 r8 r4 r8
+  \bar "|."
 }
 
 scoreEVerse = \lyricmode {
   % Lyrics follow here.
-  Be -- ne -- dic -- tus qui ve -- nit in no -- mi -- ne Do -- mi -- ni.
+  Ho -- san -- na in ex -- cel -- sis.
+  Ho -- san -- na in ex -- cel -- sis.
   Ho -- san -- na in ex -- cel -- sis.
 }
 
@@ -398,14 +434,35 @@ scoreFTenorVoice = \relative c' {
   \dynamicUp
   % Music follows here.
   r2. r
-  r4 r bf
+  r4 r bf c bf r
+  g' f ef ef d r
+  d2\f f4 e2 e4 r ef c d2 c4 bf2(a4) g r r r2. r r
+  r4 r bf c bf r d d d d d r r f\f f d2 d4 r ef ef f2 f4 ef2(d4)
+  c r r
+  r2. r r
+  r4 r ef\f d c r c\p c bf bf a r
+  bf2 bf4 bf2 bf4 bf2(a4) bf r r r2.
+  r8 a(bf) a d c bf4(c2) f,4 r r r2.
+  r8 d'(f) ef d c  bf2 d4
+  ef(g8 f ef d c ef d c bf a) g4 r r 
+  a2 bf4 g(f2) f4 r r
+  d'2\ff d4 c2. bf2 r4
+  r2. r r8 f'\p(ef) d c bf a4(bf8 c) d4 ef(d c) bf r r d2\f d4 c2. bf2 r4 r2. r
+  r8 f'\pp(ef) d c bf a4(bf8 c) d4 ef(d c) bf r r r2. r r f2.\pp d2 r4 r2.
+  \bar "|."
 }
 
 scoreFVerse = \lyricmode {
   % Lyrics follow here.
-  Ag -- nus Dei, qui tol -- lis pec -- ca -- ta mun -- di, mi -- se -- re -- re no -- bis.
-  Ag -- nus Dei, qui tol -- lis pec -- ca -- ta mun -- di, mi -- se -- re -- re no -- bis.
-  Ag -- nus Dei, qui tol -- lis pec -- ca -- ta mun -- di, do -- na no -- bis pacem.
+  Qui tol -- lis pec -- ca -- ta mun -- di, mi -- se -- re -- re, mi -- se -- re -- re  no -- bis.
+  Qui tol -- lis pec -- ca -- ta mun -- di, mi -- se -- re -- re, mi -- se -- re -- re no -- bis.
+  Qui tol -- lis pec -- ca -- ta mun -- di, do -- na no -- bis pa -- cem,
+  do -- na no -- bis pa -- cem,
+  do -- na no -- bis pa -- cem,
+  do -- na no -- bis pa -- cem,
+  do -- na no -- bis,
+  do -- na no -- bis pa -- cem, pa -- cem,
+  do -- na no -- bis, do -- na no -- bis pa -- cem, pa -- cem, pa -- cem.
 }
 
 \bookpart {
