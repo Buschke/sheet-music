@@ -28,9 +28,9 @@ scoreASoprano = \relative c'' {
   \global
   % Music follows here.
   \partial 4
-  d4
+  d,4
   f f e c d2 d4 d f f g g a2.\breathe
-  a4 a2 a g2. a4 f e d c d2.
+  a4 c2 a g2. a4 f e d c d2.
   \bar "|."
 }
 
@@ -38,18 +38,18 @@ scoreAAlto = \relative c' {
   \global
   % Music follows here.
   \partial 4
-  f4
+  f,4
   a a a e f2 f4 f a a bf bf d2.\breathe
-  d4 c2 d bf2. d4 a a f e f2. 
+  d4 e2 d bf2. d4 a a f e f2. 
 }
 
 scoreATenor = \relative c' {
   \global
   % Music follows here.
   \partial 4
-  a4
+  a,4
   d d c a a2 a4 a d d d d f2.\breathe
-  f4 e2 f d2. f4 d c a a a2.
+  f4 a2 f d2. f4 d c a a a2.
 }
 
 scoreABass = \relative c {
@@ -246,8 +246,8 @@ scoreCSoprano = \relative c'' {
   % Music follows here.
   \partial 4
   d4
-  d d g, a a2 a4 a d d bf bf f2.\breathe
-  a4 a2 a bf2. f4 f g a a a2. 
+  d d cs a a2 a4 a d d d d f2.\breathe
+  a,4 a2 a bf2. f4 c' cs d a a2. 
 }
 
 scoreCAlto = \relative c' {
@@ -255,9 +255,8 @@ scoreCAlto = \relative c' {
   % Music follows here.
   \partial 4
   f4
-  a a cs, e d2 d4 d a' a d, d c2.\breathe
-  c4 e2 c d2. c4 a cs d e d2.
-
+  a a e e d2 d4 d a' a g g c2.\breathe
+  c,4 e2 c d2. c4 f e f e d2.
 }
 
 scoreCTenor = \relative c' {
@@ -265,8 +264,8 @@ scoreCTenor = \relative c' {
   % Music follows here.
   \partial 4
   a4
-  d d e, a f2 f4 f4 d' d g g f2.\breathe
-  e4 a,2 e g2. f4 c e f a f2. 
+  d d g, a f2 f4 f4 d' d bf bf f2.\breathe
+  e4 a2 e g2. f4 a g a a f2. 
 }
 
 scoreCBass = \relative c {
@@ -357,7 +356,7 @@ scoreCBassFiguresPart = \new FiguredBass \with {
 scoreDSoprano = \relative c'' {
   \global
   % Music follows here.
-  \transpose c c'' \scoreATenor
+  \transpose c c' \scoreAAlto
 }
 
 scoreDAlto = \relative c' {
@@ -369,7 +368,7 @@ scoreDAlto = \relative c' {
 scoreDTenor = \relative c' {
   \global
   % Music follows here.
-  \transpose c c \scoreAAlto
+  \transpose c c' \scoreATenor
 }
 
 scoreDBass = \relative c {
