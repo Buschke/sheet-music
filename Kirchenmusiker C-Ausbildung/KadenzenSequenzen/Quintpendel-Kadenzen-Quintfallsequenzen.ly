@@ -681,7 +681,7 @@ scoreBSoprano = \relative c' {
   c^\markup{\column{\line{KD\super{3}\sub{WL}}\line{I-IV-VII-I}}} d \override NoteHead.color=#red \footnote #'(-1 . 3) "Springt runter wegen Parallelen" gs, \revert NoteHead.color a 
   \bar "|.|"
   % KD I II65 V I
-  e,4^\markup{\column{\line{KD\super{5}\sub{EL}}\line{I-II\super{6/5}-V-I}}} f e e
+  e4^\markup{\column{\line{KD\super{5}\sub{EL}}\line{I-II\super{6/5}-V-I}}} f e e
   \bar "||"
   a^\markup{\column{\line{KD\super{8}\sub{EL}}\line{I-II\super{6/5}-V-I}}} a gs a
   \bar "||"
