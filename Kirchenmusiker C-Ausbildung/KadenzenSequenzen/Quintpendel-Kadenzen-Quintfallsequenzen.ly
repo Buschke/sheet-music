@@ -91,7 +91,7 @@ scoreASoprano = \relative c'' {
   e^\markup{\column{\line{KD\super{3}\sub{WL}}\line{I-IV-V-I}}} f d e
   \bar "|.|"
   % KD I IV VII I
-  g,4^\markup{\column{\line{KD\super{5}\sub{EL}}\line{I-IV-VII-I}}} \override NoteHead.color=#red \footnote #'(-1 . 3) "Achtung: muss anders sein" a f8 b g4 \revert NoteHead.color
+  g,4^\markup{\column{\line{KD\super{5}\sub{EL}}\line{I-IV-VII-I}}} \override NoteHead.color=#red \footnote #'(-1 . 3) "Achtung wegen Parallelen" a d g, \revert NoteHead.color
   \bar "||"
   c^\markup{\column{\line{KD\super{8}\sub{EL}}\line{I-IV-VII-I}}} c b c
   \bar "||"
@@ -99,7 +99,7 @@ scoreASoprano = \relative c'' {
   \bar "||"
   g^\markup{\column{\line{KD\super{5}\sub{WL}}\line{I-IV-VII-I}}} a b g
   \bar "||"
-  c4^\markup{\column{\line{KD\super{8}\sub{WL}}\line{I-IV-VII-I}}} c b c
+  c4^\markup{\column{\line{KD\super{8}\sub{WL}}\line{I-IV-VII-I}}} c \footnote #'(-1 . 3) "Achtung wegen Parallelen" b c
   \bar "||"
   e^\markup{\column{\line{KD\super{3}\sub{WL}}\line{I-IV-VII-I}}} \override NoteHead.color=#red \footnote #'(-1 . 3) "Hier in enge Lage gehen" f f e \revert NoteHead.color
   \bar "|.|"
@@ -173,7 +173,7 @@ scoreAAlto = \relative c' {
   % KD^3_WL-I-IV-V-I
   g a g g
   % KD^5_WE-I-IV-V-I
-  e4 f d8 d e4
+  e4 f f e
   % KD^8_EL-I-IV-V-I
   g a f g
   % KD^3_EL-I-IV-V-I
@@ -181,7 +181,7 @@ scoreAAlto = \relative c' {
   % KD^5_WL-I-IV-V-I
   c c d c  
   % KD^8_WL-I-IV-V-I
-  e f d e
+  e f f e
   % KD^3_WL-I-IV-V-I
   g a b g
   % KD^5_WE-I-IV-V-I
@@ -262,9 +262,9 @@ scoreATenor = \relative c' {
   % KD^5_WL-I-IV-V-I
   e f f e
   % KD^8_WL-I-IV-V-I
-  g a f g
+  g a b g
   % KD^3_WL-I-IV-V-I
-  c c \override NoteHead.color=#red \footnote #'(-1 . 3) "OK? War durchgestrichen, warum?" d c \revert NoteHead.color
+  c c \override NoteHead.color=#red d c \revert NoteHead.color
   % KD^5_EL-I-IV-V-I
   c4 c b c
   % KD^8_EL-I-IV-V-I
@@ -668,17 +668,17 @@ scoreBSoprano = \relative c' {
   c^\markup{\column{\line{KD\super{3}\sub{WL}}\line{I-IV-V-I}}} d b c
   \bar "|.|"
   % KD I IV VII I
-  e,4^\markup{\column{\line{KD\super{5}\sub{EL}}\line{I-IV-VII-I}}} \override NoteHead.color=#red \footnote #'(-1 . 3) "Achtung, Parallelen" f d e \revert NoteHead.color
+  e,4^\markup{\column{\line{KD\super{5}\sub{EL}}\line{I-IV-VII-I}}} \override NoteHead.color=#red \footnote #'(-1 . 3) "Achtung, Parallelen" f gs \footnote #'(-1 . 3) "Springt hoch zur Vermeidung von Parallelen" a \revert NoteHead.color
   \bar "||"
   a^\markup{\column{\line{KD\super{8}\sub{EL}}\line{I-IV-VII-I}}} a gs a
   \bar "||"
   c,^\markup{\column{\line{KD\super{3}\sub{EL}}\line{I-IV-VII-I}}} d b c
   \bar "||"
-  e^\markup{\column{\line{KD\super{5}\sub{WL}}\line{I-IV-VII-I}}} f d e
+  e^\markup{\column{\line{KD\super{5}\sub{WL}}\line{I-IV-VII-I}}} f gs \override NoteHead.color=#red \footnote #'(-1 . 3) "Springt hoch wegen Parallelen" a \revert NoteHead.color
   \bar "||"
   a4^\markup{\column{\line{KD\super{8}\sub{WL}}\line{I-IV-VII-I}}} a gs a
   \bar "||"
-  c^\markup{\column{\line{KD\super{3}\sub{WL}}\line{I-IV-VII-I}}} d b c
+  c^\markup{\column{\line{KD\super{3}\sub{WL}}\line{I-IV-VII-I}}} d \override NoteHead.color=#red \footnote #'(-1 . 3) "Springt runter wegen Parallelen" gs, \revert NoteHead.color a 
   \bar "|.|"
   % KD I II65 V I
   e,4^\markup{\column{\line{KD\super{5}\sub{EL}}\line{I-II\super{6/5}-V-I}}} f e e
@@ -740,7 +740,7 @@ scoreBAlto = \relative c' {
   % KD^5_WE-I-IV-V-I
   c4 d b c
   % KD^8_EL-I-IV-V-I
-  e fs e e
+  e f e e
   % KD^3_EL-I-IV-V-I
   a, a gs a
   % KD^5_WL-I-IV-V-I
@@ -750,17 +750,17 @@ scoreBAlto = \relative c' {
   % KD^3_WL-I-IV-V-I
   e f e e
   % KD^5_WE-I-IV-V-I
-  c4 d b c
+  c4 d d e
   % KD^8_EL-I-IV-V-I
   e f d e
   % KD^3_EL-I-IV-V-I
   a, a gs a
   % KD^5_WL-I-IV-V-I
-  a a gs a
+  a a b c
   % KD^8_WL-I-IV-V-I
   c d b c
   % KD^3_WL-I-IV-V-I
-  e f d e
+  e f b, c
   % KD^5_WE-I-IV-V-I
   c4 b b c
   % KD^8_EL-I-IV-V-I
@@ -831,17 +831,17 @@ scoreBTenor = \relative c' {
   % KD^3_WL-I-IV-V-I
   a a gs a
   % KD^5_EL-I-IV-V-I
-  a4 a gs a
+  a4 a b e
   % KD^8_EL-I-IV-V-I
   c d b c
   % KD^3_EL-I-IV-V-I
   e, f d e
   % KD^5_WL-I-IV-V-I
-  c d e c
+  c d d e
   % KD^8_WL-I-IV-V-I
   e f d e
   % KD^3_WL-I-IV-V-I
-  a a gs a
+  a a d, e
   % KD^5_EL-I-IV-V-I
   a4 a gs a
   % KD^8_EL-I-IV-V-I
