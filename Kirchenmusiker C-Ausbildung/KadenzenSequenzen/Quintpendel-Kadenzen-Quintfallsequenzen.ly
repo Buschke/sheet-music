@@ -91,20 +91,20 @@ scoreASoprano = \relative c'' {
   e^\markup{\column{\line{KD\super{3}\sub{WL}}\line{I-IV-V-I}}} f d e
   \bar "|.|"
   % KD I IV VII I
-  g,4^\markup{\column{\line{KD\super{5}\sub{EL}}\line{I-IV-VII-I}}} \override NoteHead.color=#red \footnote #'(-1 . 3) "Achtung wegen Parallelen" a d g, \revert NoteHead.color
+  g,4^\markup{\column{\line{KD\super{5}\sub{EL}}\line{I-IV-VII-I}}} a \override NoteHead.color=#red \footnote #'(-1 . 3) "Springt hoch wegen Parallelen" b \revert NoteHead.color c
   \bar "||"
   c^\markup{\column{\line{KD\super{8}\sub{EL}}\line{I-IV-VII-I}}} c b c
   \bar "||"
-  e,^\markup{\column{\line{KD\super{3}\sub{EL}}\line{I-IV-VII-I}}} f f e
+  e,^\markup{\column{\line{KD\super{3}\sub{EL}}\line{I-IV-VII-I}}} f d e
   \bar "||"
-  g^\markup{\column{\line{KD\super{5}\sub{WL}}\line{I-IV-VII-I}}} a b g
+  g^\markup{\column{\line{KD\super{5}\sub{WL}}\line{I-IV-VII-I}}} a \override NoteHead.color=#red \footnote #'(-1 . 3) "Springt hoch wegen Parallelen" b \revert NoteHead.color c
   \bar "||"
-  c4^\markup{\column{\line{KD\super{8}\sub{WL}}\line{I-IV-VII-I}}} c \footnote #'(-1 . 3) "Achtung wegen Parallelen" b c
+  c4^\markup{\column{\line{KD\super{8}\sub{WL}}\line{I-IV-VII-I}}} c b c
   \bar "||"
-  e^\markup{\column{\line{KD\super{3}\sub{WL}}\line{I-IV-VII-I}}} \override NoteHead.color=#red \footnote #'(-1 . 3) "Hier in enge Lage gehen" f f e \revert NoteHead.color
+  e^\markup{\column{\line{KD\super{3}\sub{WL}}\line{I-IV-VII-I}}} f \override NoteHead.color=#red \footnote #'(-1 . 3) "Springt runter wegen Parallelen, Alternative: Hier in enge Lage gehen" b, \revert NoteHead.color c
   \bar "|.|"
   % KD I II65 V I
-  g,4^\markup{\column{\line{KD\super{5}\sub{EL}}\line{I-II\super{6/5}-V-I}}} a g g
+  g4^\markup{\column{\line{KD\super{5}\sub{EL}}\line{I-II\super{6/5}-V-I}}} a g g
   \bar "||"
   c^\markup{\column{\line{KD\super{8}\sub{EL}}\line{I-II\super{6/5}-V-I}}} c b c
   \bar "||"
@@ -173,17 +173,17 @@ scoreAAlto = \relative c' {
   % KD^3_WL-I-IV-V-I
   g a g g
   % KD^5_WE-I-IV-V-I
-  e4 f f e
+  e4 f f g
   % KD^8_EL-I-IV-V-I
   g a f g
   % KD^3_EL-I-IV-V-I
-  c, c d c
+  c, c b c
   % KD^5_WL-I-IV-V-I
-  c c d c  
+  c c d e  
   % KD^8_WL-I-IV-V-I
-  e f f e
+  e f d e
   % KD^3_WL-I-IV-V-I
-  g a b g
+  g a d, e
   % KD^5_WE-I-IV-V-I
   e4 d d e
   % KD^8_EL-I-IV-V-I
@@ -254,17 +254,17 @@ scoreATenor = \relative c' {
   % KD^3_WL-I-IV-V-I
   c c b c
   % KD^5_EL-I-IV-V-I
-  c4 c \footnote #'(-1 . 3) "Zur Vermeidung von Oktavparallelen." b c
+  c4 c d e
   % KD^8_EL-I-IV-V-I
   e f d e
   % KD^3_EL-I-IV-V-I
-  g, a b g
+  g, a f g
   % KD^5_WL-I-IV-V-I
-  e f f e
+  e f f g
   % KD^8_WL-I-IV-V-I
-  g a b g
+  g a f g
   % KD^3_WL-I-IV-V-I
-  c c \override NoteHead.color=#red d c \revert NoteHead.color
+  c c f, g
   % KD^5_EL-I-IV-V-I
   c4 c b c
   % KD^8_EL-I-IV-V-I
@@ -335,7 +335,7 @@ scoreABass = \relative c {
   % KD^3_WL-I-IV-V-I
   c f, g c|
   % KD^5_EL-I-IV-V-I
-  c4 f, d' c|
+  c4 f, \footnote #'(-1 . 3) "Terz im Bass zur Vermeidung von Oktavparallelen." d' c|
   % KD^8_EL-I-IV-V-I
   c f, d' c|
   % KD^3_EL-I-IV-V-I
