@@ -214,11 +214,11 @@ scoreASoprano = \relative c'' {
   \scoreCSopranoB
   \transpose c c' \scoreAAltoB^"Dux 1"
   \scoreACFC
-  c4^"Bicinium" c2 c c2.
+  c4^"Bicinium" bf2 c f2.
   \scoreCSopranoC
   \transpose c c' \scoreAAltoC^"Dux 1"
   \scoreACFD
-  c4^"Bicinium" e e d bf c2 c4
+  c4^"Bicinium" e d c bf c2 c4
   \scoreCSopranoD
   \transpose c c' \scoreAAltoD
   \bar "|."
