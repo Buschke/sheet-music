@@ -142,14 +142,14 @@ scoreCSopranoB = \relative c'' {
   b4 e e e e g2.\breathe
 }
 
-scoreCSopranoC = \relative c' {
+scoreCSopranoC = \relative c'' {
   % Music follows here.
-  b4 b2 b c2. 
+  b4 b2 b c2.
 }
 
-scoreCSopranoD = \relative c''' {
+scoreCSopranoD = \relative c'' {
   % Music follows here.
-  g4 d' ds e b b2. 
+  g4 d' ds e b b2.
 }
 
 scoreCAltoA = \relative c'' {
@@ -194,7 +194,23 @@ scoreCTenorC = \relative c' {
 
 scoreCTenorD = \relative c'' {
   % Music follows here.
-  g4 b a b b g2. 
+  g4 b a b b g2.
+}
+
+scoreABiciniumA = \relative c' {
+  d4^"Bicinium a" fs fs e c d2 d4\breathe
+}
+
+scoreABiciniumB = \relative c'' {
+  d4^"Bicinium b" fs fs e c d2.\breathe
+}
+
+scoreABiciniumC = \relative c'' {
+  d4^"Bicinium c" c2 d g2.\breathe
+}
+
+scoreABiciniumD = \relative c'' {
+  d4^"Bicinium d" fs e d c d2.\breathe
 }
 
 scoreASoprano = \relative c'' {
@@ -204,21 +220,21 @@ scoreASoprano = \relative c'' {
   \scoreACFB
   \scoreACFC
   \scoreACFD
-  \bar "||"^"Dux 1"
+  \bar "||"^"Dux 1a"
   \scoreACFA
-  d4^"Bicinium" fs fs e c d2 d4\breathe
+  \scoreABiciniumA
   \scoreCSopranoA
-  \transpose d d' \scoreAAltoA^"Dux 1"
+  \transpose d d' \scoreAAltoA^"Dux 1b"
   \scoreACFB
-  d4^"Bicinium" fs fs e c d2.
+  \scoreABiciniumB
   \scoreCSopranoB
-  \transpose d d' \scoreAAltoB^"Dux 1"
+  \transpose d d' \scoreAAltoB^"Dux 1c"
   \scoreACFC
-  d4^"Bicinium" c2 d g2.
+  \scoreABiciniumC
   \scoreCSopranoC
-  \transpose d d' \scoreAAltoC^"Dux 1"
+  \transpose d d' \scoreAAltoC^"Dux 1d"
   \scoreACFD
-  d4^"Bicinium" fs e d c d2 d4
+  \scoreABiciniumD
   \scoreCSopranoD
   \transpose d d' \scoreAAltoD
   \bar "|."
@@ -234,19 +250,19 @@ scoreAAlto = \relative c' {
   \bar "||"
   \scoreARestA
   \scoreARestA
-  \scoreARestA^"Dux 3 Pachelbel"
+  \scoreARestA^"Dux 3a Pachelbel"
   \scoreACFA
   \scoreARestB
   \scoreARestB
-  \scoreARestB^"Dux 3 Pachelbel"
+  \scoreARestB^"Dux 3b Pachelbel"
   \scoreACFB
   \scoreARestC
   \scoreARestC
-  \scoreARestC^"Dux 3 Pachelbel"
+  \scoreARestC^"Dux 3c Pachelbel"
   \scoreACFC
   \scoreARestD
   \scoreARestD
-  \scoreARestD^"Dux 3 Pachelbel"
+  \scoreARestD^"Dux 3d Pachelbel"
   \scoreACFD
 }
 
@@ -258,19 +274,19 @@ scoreATenor = \relative c' {
   \scoreATenorC
   \scoreATenorD
   \bar "||"
-  \scoreARestA^"Comes"
+  \scoreARestA^"Comes a"
   \transpose e b,, \scoreACFA
   \transpose d d, \scoreCTenorA
   \transpose d d' \scoreATenorA
-  \scoreARestB^"Comes"
+  \scoreARestB^"Comes b"
   \transpose e b,, \scoreACFB
   \transpose d d, \scoreCTenorB
   \transpose d d' \scoreATenorB
-  \scoreARestC^"Comes"
+  \scoreARestC^"Comes c"
   \transpose e b,, \scoreACFC
   \transpose d d, \scoreCTenorC
   \transpose d d' \scoreATenorC
-  \scoreARestD^"Comes"
+  \scoreARestD^"Comes d"
   \transpose e b,, \scoreACFD
   \transpose d d, \scoreCTenorD
   \transpose d d' \scoreATenorD
@@ -285,19 +301,19 @@ scoreABass = \relative c {
   \scoreABassD
   \bar "||"
   \scoreARestA
-  \scoreARestA^"Dux 2"
+  \scoreARestA^"Dux 2a"
   \transpose d d,, \scoreACFA
   \scoreABassA
   \scoreARestB
-  \scoreARestB^"Dux 2"
+  \scoreARestB^"Dux 2b"
   \transpose d d,, \scoreACFB
   \scoreABassB
   \scoreARestC
-  \scoreARestC^"Dux 2"
+  \scoreARestC^"Dux 2c"
   \transpose d d,, \scoreACFC
   \scoreABassC
   \scoreARestD
-  \scoreARestD^"Dux 2"
+  \scoreARestD^"Dux 2d"
   \transpose d d,, \scoreACFD
   \scoreABassD
 }
@@ -324,10 +340,7 @@ scoreAVerseD = \lyricmode {
 
 scoreAVerse = \lyricmode {
   % Lyrics follow here.
-  \scoreAVerseA
-  \scoreAVerseB
-  \scoreAVerseC
-  \scoreAVerseD
+  \scoreAVerseA \scoreAVerseB \scoreAVerseC \scoreAVerseD \scoreAVerseA \scoreAVerseA \scoreAVerseA \scoreAVerseA \scoreAVerseB \scoreAVerseB \scoreAVerseB \scoreAVerseB \scoreAVerseC \scoreAVerseC \scoreAVerseC \scoreAVerseC \scoreAVerseD \scoreAVerseD \scoreAVerseD \scoreAVerseD
 }
 
 scoreAChordNames = \chordmode {
@@ -337,7 +350,7 @@ scoreAChordNames = \chordmode {
   \partial 4
   e4:min
   e:min e:min b:min b:min e2:min e4:min e4:min e4:min e:min a:min a:min e2.:min\breathe
-  e4:min b2:min e:min a2.:min e4:min e:min b:min e:min b:min e2.:min 
+  e4:min b2:min e:min a2.:min e4:min e:min b:min e:min b:min e2.:min
 }
 
 scoreAFigBass = \figuremode {
@@ -361,7 +374,7 @@ scoreAChoirPart = \new ChoirStaff <<
   >>
   \new Lyrics \with {
     \override VerticalAxisGroup #'staff-affinity = #CENTER
-  } \lyricsto "soprano" {\scoreAVerseA \scoreAVerseB \scoreAVerseC \scoreAVerseD \scoreAVerseA \scoreAVerseA \scoreAVerseA \scoreAVerseA \scoreAVerseB \scoreAVerseB \scoreAVerseB \scoreAVerseB \scoreAVerseC \scoreAVerseC \scoreAVerseC \scoreAVerseC \scoreAVerseD \scoreAVerseD \scoreAVerseD \scoreAVerseD} 
+  } \lyricsto "soprano" \scoreAVerse
   \new Staff \with {
     midiInstrument = "choir aahs"
     instrumentName = \markup \center-column { "Tenor" "Bass" }
@@ -459,9 +472,6 @@ scoreBChoirPart = \new ChoirStaff <<
       \override Ambitus #'X-offset = #2.0
     } { \voiceTwo \scoreBAlto }
   >>
-  \new Lyrics \with {
-    \override VerticalAxisGroup #'staff-affinity = #CENTER
-  } \lyricsto "soprano" \scoreBVerse
   \new Staff \with {
     midiInstrument = "choir aahs"
     instrumentName = \markup \center-column { "Tenor" "Bass" }
@@ -475,6 +485,9 @@ scoreBChoirPart = \new ChoirStaff <<
       \override Ambitus #'X-offset = #2.0
     } { \voiceTwo \scoreBBass }
   >>
+  \new Lyrics \with {
+    \override VerticalAxisGroup #'staff-affinity = #CENTER
+  } \lyricsto "tenor" \scoreBVerse
 >>
 
 scoreBChordsPart = <<
@@ -504,37 +517,172 @@ scoreBBassFiguresPart = \new FiguredBass \with {
   }
 }
 
-scoreCSoprano = \relative c'' {
-  \global
+scoreCSopranoA = \relative c'' {
   % Music follows here.
   \partial 4
   e4
-  e e d d b2 b4 b e e e e g2.\breathe
-  b,4 b2 b c2. g4 d' ds e b b2. 
+  e e d d b2 b4\breathe
 }
 
-scoreCAlto = \relative c'' {
+scoreCSopranoB = \relative c'' {
+  % Music follows here.
+  b4 e e e e g2.\breathe
+}
+
+scoreCSopranoC = \relative c'' {
+  % Music follows here.
+  b4 b2 b c2.\breathe
+}
+
+scoreCSopranoD = \relative c'' {
+  % Music follows here.
+  g4 d' ds e b b2.\breathe
+}
+
+scoreCSoprano = \relative c'' {
   \global
+  % Music follows here.
+  \scoreCSopranoA
+  \scoreCSopranoB
+  \scoreCSopranoC
+  \scoreCSopranoD
+  \scoreARestA
+  \scoreACFA
+  \scoreCSopranoA
+  \scoreCSopranoA
+  \scoreARestB
+  \scoreACFB
+  \scoreCSopranoB
+  \scoreCSopranoB
+  \scoreARestC
+  \scoreACFC
+  \scoreCSopranoC
+  \scoreCSopranoC
+  \scoreARestD
+  \scoreACFD
+  \scoreCSopranoD
+  \scoreCSopranoD
+}
+
+scoreCAltoA = \relative c'' {
   % Music follows here.
   \partial 4
   g4
-  b b a fs e2 e4 e b' b a a d2.\breathe
-  d,4 fs2 d e2. d4 g fs g fs e2.
+  b b a fs e2 e4\breathe
+}
+
+scoreCAltoB = \relative c' {
+  % Music follows here.
+  e4 b' b a a d2.\breathe
+}
+
+scoreCAltoC = \relative c' {
+  % Music follows here.
+  d4 fs2 d e2.\breathe
+}
+
+scoreCAltoD = \relative c' {
+  % Music follows here.
+  d4 g fs g fs e2.\breathe
+}
+
+scoreCAlto = \relative c' {
+  \global
+  % Music follows here.
+  \scoreCAltoA
+  \scoreCAltoB
+  \scoreCAltoC
+  \scoreCAltoD
+  \scoreARestA
+  \scoreARestA
+  \scoreARestA
+  \scoreCAltoA
+  \scoreARestB
+  \scoreARestB
+  \scoreARestB
+  \scoreCAltoB
+  \scoreARestC
+  \scoreARestC
+  \scoreARestC
+  \scoreCAltoC
+  \scoreARestD
+  \scoreARestD
+  \scoreARestD
+  \scoreCAltoD
+}
+
+scoreCTenorA = \relative c' {
+  % Music follows here.
+  \partial 4
+  b4
+  e g d a g2 g4\breathe
+}
+
+scoreCTenorB = \relative c' {
+  % Music follows here.
+  g4 e' e c c g2.\breathe
+}
+
+scoreCTenorC = \relative c' {
+  % Music follows here.
+  fs4 b2 fs a2.\breathe
+}
+
+scoreCTenorD = \relative c' {
+  % Music follows here.
+  g4 b a b b g2.\breathe
 }
 
 scoreCTenor = \relative c' {
   \global
   % Music follows here.
-  \partial 4
-  b4
-  e g d a g2 g4 g4 e' e c c g2.\breathe
-  fs4 b2 fs a2. g4 b a b b g2. 
+  \scoreCTenorA
+  \scoreCTenorB
+  \scoreCTenorC
+  \scoreCTenorD
+  \scoreARestA
+  \scoreARestA^"Dux 2a"
+  \scoreACFA
+  \scoreCTenorA
+  \scoreARestB
+  \scoreARestB^"Dux 2b"
+  \transpose d d, \scoreACFB
+  \transpose d d, \scoreCTenorB
+  \scoreARestC
+  \scoreARestC^"Dux 2c"
+  \transpose d d, \scoreACFC
+  \transpose d d, \scoreCTenorC
+  \scoreARestD
+  \scoreARestD^"Dux 2d"
+  \transpose d d, \scoreACFD
+  \transpose d d \scoreCTenorD
 }
 
-scoreCBass = \relative c {
+scoreCBass = \relative c, {
   \global
   % Music follows here.
-  \transpose d d,, \scoreASoprano
+  \transpose d d,, \scoreACFA
+  \transpose d d,, \scoreACFB
+  \transpose d d,, \scoreACFC
+  \transpose d d,, \scoreACFD
+  \bar "||"^"Dux 1a"
+  \transpose d d,, \scoreACFA
+  d4^"Bicinium" fs fs e c d2 d4\breathe
+  \transpose d d,, \scoreCSopranoA
+  \transpose d d, \scoreAAltoA^"Dux 1b"
+  \transpose d d,, \scoreACFB
+  d'4^"Bicinium" fs fs e c d2.
+  \transpose d d,, \scoreCSopranoB
+  \transpose d d, \scoreAAltoB^"Dux 1c"
+  \transpose d d,, \scoreACFC
+  d,4^"Bicinium" c2 d g2.
+  \transpose d d,, \scoreCSopranoC
+  \transpose d d, \scoreAAltoC^"Dux 1d"
+  \transpose d d,, \scoreACFD
+  d'4^"Bicinium" fs e d c d2 d4
+  \transpose d d,, \scoreCSopranoD
+  \transpose d d, \scoreAAltoD
+  \bar "|."
 }
 
 scoreCVerse = \lyricmode {
@@ -571,9 +719,6 @@ scoreCChoirPart = \new ChoirStaff <<
       \override Ambitus #'X-offset = #2.0
     } { \voiceTwo \scoreCAlto }
   >>
-  \new Lyrics \with {
-    \override VerticalAxisGroup #'staff-affinity = #CENTER
-  } \lyricsto "soprano" \scoreCVerse
   \new Staff \with {
     midiInstrument = "choir aahs"
     instrumentName = \markup \center-column { "Tenor" "Bass" }
@@ -587,6 +732,9 @@ scoreCChoirPart = \new ChoirStaff <<
       \override Ambitus #'X-offset = #2.0
     } { \voiceTwo \scoreCBass }
   >>
+  \new Lyrics \with {
+    \override VerticalAxisGroup #'staff-affinity = #CENTER
+  } \lyricsto "bass" \scoreCVerse
 >>
 
 scoreCChordsPart = <<
@@ -619,25 +767,107 @@ scoreCBassFiguresPart = \new FiguredBass \with {
 scoreDSoprano = \relative c'' {
   \global
   % Music follows here.
-  \transpose d d' \scoreAAlto
+  \transpose d d' \scoreAAltoA
+  \transpose d d' \scoreAAltoB
+  \transpose d d' \scoreAAltoC
+  \transpose d d' \scoreAAltoD
+  \bar "||"
+  \scoreARestA
+  \scoreARestA
+  \scoreARestA^"Dux 3a Pachelbel"
+  \scoreACFA
+  \scoreARestB
+  \scoreARestB
+  \scoreARestB^"Dux 3b Pachelbel"
+  \scoreACFB
+  \scoreARestC
+  \scoreARestC
+  \scoreARestC^"Dux 3c Pachelbel"
+  \scoreACFC
+  \scoreARestD
+  \scoreARestD
+  \scoreARestD^"Dux 3d Pachelbel"
+  \scoreACFD
+  \bar "|."
 }
 
 scoreDAlto = \relative c' {
   \global
   % Music follows here.
-  \scoreASoprano
+  \scoreACFA
+  \scoreACFB
+  \scoreACFC
+  \scoreACFD
+  \bar "||"^"Dux 1a"
+  \scoreACFA
+  \scoreABiciniumA
+  \scoreCAltoA
+  \scoreAAltoA^"Dux 1b"
+  \scoreACFB
+  \transpose d d, \scoreABiciniumB
+  \scoreCAltoB
+  \scoreAAltoB^"Dux 1c"
+  \scoreACFC
+  \transpose d d, \scoreABiciniumC
+  \scoreCAltoC
+  \scoreAAltoC^"Dux 1d"
+  \scoreACFD
+  \transpose d d, \scoreABiciniumD
+  \scoreCAltoD
+  \scoreAAltoD
+  \bar "|."
 }
 
 scoreDTenor = \relative c' {
   \global
   % Music follows here.
-  \transpose d d' \scoreATenor
+  \scoreATenorA
+  \scoreATenorB
+  \scoreATenorC
+  \scoreATenorD
+  \bar "||"
+  \scoreARestA^"Comes a"
+  \transpose e b, \scoreACFA
+  \scoreCTenorA
+  \scoreATenorA
+  \scoreARestB^"Comes b"
+  \transpose e b, \scoreACFB
+  \scoreCTenorB
+  \scoreATenorB
+  \scoreARestC^"Comes c"
+  \transpose e b,, \scoreACFC
+  \transpose d d, \scoreCTenorC
+  \scoreATenorC
+  \scoreARestD^"Comes d"
+  \transpose e b,, \scoreACFD
+  \scoreCTenorD
+  \scoreATenorD
 }
 
 scoreDBass = \relative c {
   \global
   % Music follows here.
-  \scoreABass
+  \scoreABassA
+  \scoreABassB
+  \scoreABassC
+  \scoreABassD
+  \bar "||"
+  \scoreARestA
+  \scoreARestA^"Dux 2a"
+  \transpose d d,, \scoreACFA
+  \scoreABassA
+  \scoreARestB
+  \scoreARestB^"Dux 2b"
+  \transpose d d,, \scoreACFB
+  \scoreABassB
+  \scoreARestC
+  \scoreARestC^"Dux 2c"
+  \transpose d d,, \scoreACFC
+  \scoreABassC
+  \scoreARestD
+  \scoreARestD^"Dux 2d"
+  \transpose d d,, \scoreACFD
+  \scoreABassD
 }
 
 scoreDVerse = \lyricmode {
@@ -673,7 +903,7 @@ scoreDChoirPart = \new ChoirStaff <<
   >>
   \new Lyrics \with {
     \override VerticalAxisGroup #'staff-affinity = #CENTER
-  } \lyricsto "soprano" \scoreDVerse
+  } \lyricsto "alto" \scoreDVerse
   \new Staff \with {
     midiInstrument = "choir aahs"
     instrumentName = \markup \center-column { "Tenor" "Bass" }
