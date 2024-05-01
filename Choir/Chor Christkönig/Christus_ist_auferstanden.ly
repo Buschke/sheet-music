@@ -33,7 +33,7 @@ tenorVoice = \relative c' {
   % Music follows here.
   \partial 8
   c8
-  a4 a8 c4 c8 c4(a8) a4 d8 c4 a8 c4 c8 c4. c4 c8\p c4 c8 c4 c8 f,4 f8 f4 g16\f(a) bf4 bf8 bf(a) d a4 c8 c4 f8 d(c) bf a4 c8 c4 bf8 a4
+  a4 a8 c4 c8 c4(a8) a4 d8 c4 a8 c4 c8 c4. c4 c8\p c4 c8 c4 c8 f,4 f8 f4 g16\f(a) bf4 bf8 bf(a) g a4 c8 c4 f8 d(c) bf a4 c8 c4 bf8 a4
   \bar "|."
 }
 
