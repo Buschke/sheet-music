@@ -26,16 +26,6 @@ global = {
   \tempo "Andante" 4=50
 }
 
-scoreAChordNamesLeadSheet = \chordmode {
-  \global
-  \germanChords
-  % Chords follow here.
-  \partial 4
-  d4:min
-  d:min d:min a:min a:min d2:min d4:min d4:min d4:min d:min g:min g:min d2.:min\breathe
-  d4:min a2:min d:min g2.:min d4:min d:min a:min d:min a:min d2.:min  
-}
-
 scoreACFA = \relative c'' {
   % Music follows here.
   \partial 4
@@ -76,7 +66,6 @@ scoreARestD = \relative c'' {
   r4 r1 r2.
 }
 
-
 scoreAMelody = \relative c'' {
   \global
   % Music follows here.
@@ -84,7 +73,7 @@ scoreAMelody = \relative c'' {
   \scoreACFB
   \scoreACFC
   \scoreACFD
-  \bar "|."
+  \bar "|."  
 }
 
 scoreAVerseA = \lyricmode {
@@ -112,140 +101,87 @@ scoreAVerse = \lyricmode {
   \scoreAVerseA \scoreAVerseB \scoreAVerseC \scoreAVerseD
 }
 
-scoreAFigBassBassFiguresI = \figuremode {
+\bookpart {
+  \header {
+    subtitle = "Cantus Firmus"
+  }
+  \score {
+    \new Staff \with {
+      \consists "Ambitus_engraver"
+    } { \scoreAMelody }
+    \addlyrics { \scoreAVerse }
+    \layout { }
+    \midi { }
+  }
+}
+
+scoreBChordNamesLeadSheet = \chordmode {
+  \global
+  \germanChords
+  % Chords follow here.
+  \partial 4
+  d4:min
+  d:min d:min a:min a:min d2:min d4:min d4:min d4:min d:min g:min g:min d2.:min\breathe
+  d4:min a2:min d:min g2.:min d4:min d:min a:min d:min a:min d2.:min   
+}
+
+scoreBMelody = \relative c'' {
+  \global
+  % Music follows here.
+  \scoreAMelody
+}
+
+scoreBVerse = \lyricmode {
+  % Lyrics follow here.
+  \scoreAVerse
+}
+
+scoreBFigBassBassFiguresI = \figuremode {
   \global
   % Figures follow here.
   
 }
 
-scoreAChordNamesChords = \chordmode {
+scoreBChordNamesChords = \chordmode {
   \global
   \germanChords
   % Chords follow here.
   \partial 4
   d4:m
   d:m/f d:m/f c:/e c d2:m d4:m d:m d:m/f d:m/f g:m g:m f2./a
-  a4:m a2:m/c a:m g2.:m f4/a f cs:m/e d:m a:min/c d2.:m
+  a4:m a2:m/c a:m g2.:m f4/a f cs:m/e d:m a:min/c d2.:m  
 }
 
-scoreAFigBassBassFiguresII = \figuremode {
+scoreBFigBassBassFiguresII = \figuremode {
   \global
   % Figures follow here.
   
 }
 
-scoreALeadSheetPart = <<
-  \new ChordNames \scoreAChordNamesLeadSheet
+scoreBLeadSheetPart = <<
+  \new ChordNames \scoreBChordNamesLeadSheet
   \new Staff \with {
     \consists "Ambitus_engraver"
-  } { \scoreAMelody }
-  \addlyrics { \scoreAVerse }
+  } { \scoreBMelody }
+  \addlyrics { \scoreBVerse }
 >>
 
-scoreABassFiguresIPart = \new FiguredBass \scoreAFigBassBassFiguresI
+scoreBBassFiguresIPart = \new FiguredBass \scoreBFigBassBassFiguresI
 
-scoreAChordsPart = \new ChordNames \scoreAChordNamesChords
+scoreBChordsPart = \new ChordNames \scoreBChordNamesChords
 
-scoreABassFiguresIIPart = \new FiguredBass \scoreAFigBassBassFiguresII
+scoreBBassFiguresIIPart = \new FiguredBass \scoreBFigBassBassFiguresII
 
 \bookpart {
-  \score {
-    <<
-      \scoreALeadSheetPart
-      \scoreABassFiguresIPart
-      \scoreAChordsPart
-      \scoreABassFiguresIIPart
-    >>
-    \layout { }
-    \midi { }
+  \header {
+    subtitle = "Cantus Firmus mit Akkorden und Generalbassbezifferung"
   }
-}
-
-scoreBSoprano = \relative c'' {
-  \global
-  % Music follows here.
-  
-}
-
-scoreBAlto = \relative c' {
-  \global
-  % Music follows here.
-  
-}
-
-scoreBTenor = \relative c' {
-  \global
-  % Music follows here.
-  
-}
-
-scoreBBass = \relative c {
-  \global
-  % Music follows here.
-  
-}
-
-scoreBVerse = \lyricmode {
-  % Lyrics follow here.
-  
-}
-
-scoreBChordNames = \chordmode {
-  \global
-  \germanChords
-  % Chords follow here.
-  
-}
-
-scoreBFigBass = \figuremode {
-  \global
-  % Figures follow here.
-  
-}
-
-scoreBChoirPart = \new ChoirStaff <<
-  \new Staff \with {
-    midiInstrument = "choir aahs"
-    instrumentName = \markup \center-column { "Sopran" "Alt" }
-    shortInstrumentName = \markup \center-column { "S." "A." }
-  } <<
-    \new Voice = "soprano" \with {
-      \consists "Ambitus_engraver"
-    } { \voiceOne \scoreBSoprano }
-    \new Voice = "alto" \with {
-      \consists "Ambitus_engraver"
-      \override Ambitus #'X-offset = #2.0
-    } { \voiceTwo \scoreBAlto }
-  >>
-  \new Lyrics \with {
-    \override VerticalAxisGroup #'staff-affinity = #CENTER
-  } \lyricsto "soprano" \scoreBVerse
-  \new Staff \with {
-    midiInstrument = "choir aahs"
-    instrumentName = \markup \center-column { "Tenor" "Bass" }
-    shortInstrumentName = \markup \center-column { "T." "B." }
-  } <<
-    \clef bass
-    \new Voice = "tenor" \with {
-      \consists "Ambitus_engraver"
-    } { \voiceOne \scoreBTenor }
-    \new Voice = "bass" \with {
-      \consists "Ambitus_engraver"
-      \override Ambitus #'X-offset = #2.0
-    } { \voiceTwo \scoreBBass }
-  >>
->>
-
-scoreBChordsPart = \new ChordNames \scoreBChordNames
-
-scoreBBassFiguresPart = \new FiguredBass \scoreBFigBass
-
-\bookpart {
   \score {
     <<
-      \scoreBChoirPart
+      \scoreBLeadSheetPart
+      \scoreBBassFiguresIPart
       \scoreBChordsPart
-      \scoreBBassFiguresPart
+      \scoreBBassFiguresIIPart
     >>
     \layout { }
     \midi { }
@@ -524,3 +460,97 @@ scoreEBassFiguresPart = \new FiguredBass \scoreEFigBass
     \midi { }
   }
 }
+
+scoreFSoprano = \relative c'' {
+  \global
+  % Music follows here.
+  
+}
+
+scoreFAlto = \relative c' {
+  \global
+  % Music follows here.
+  
+}
+
+scoreFTenor = \relative c' {
+  \global
+  % Music follows here.
+  
+}
+
+scoreFBass = \relative c {
+  \global
+  % Music follows here.
+  
+}
+
+scoreFVerse = \lyricmode {
+  % Lyrics follow here.
+  
+}
+
+scoreFChordNames = \chordmode {
+  \global
+  \germanChords
+  % Chords follow here.
+  
+}
+
+scoreFFigBass = \figuremode {
+  \global
+  % Figures follow here.
+  
+}
+
+scoreFChoirPart = \new ChoirStaff <<
+  \new Staff \with {
+    midiInstrument = "choir aahs"
+    instrumentName = \markup \center-column { "Sopran" "Alt" }
+    shortInstrumentName = \markup \center-column { "S." "A." }
+  } <<
+    \new Voice = "soprano" \with {
+      \consists "Ambitus_engraver"
+    } { \voiceOne \scoreFSoprano }
+    \new Voice = "alto" \with {
+      \consists "Ambitus_engraver"
+      \override Ambitus #'X-offset = #2.0
+    } { \voiceTwo \scoreFAlto }
+  >>
+  \new Lyrics \with {
+    \override VerticalAxisGroup #'staff-affinity = #CENTER
+  } \lyricsto "soprano" \scoreFVerse
+  \new Staff \with {
+    midiInstrument = "choir aahs"
+    instrumentName = \markup \center-column { "Tenor" "Bass" }
+    shortInstrumentName = \markup \center-column { "T." "B." }
+  } <<
+    \clef bass
+    \new Voice = "tenor" \with {
+      \consists "Ambitus_engraver"
+    } { \voiceOne \scoreFTenor }
+    \new Voice = "bass" \with {
+      \consists "Ambitus_engraver"
+      \override Ambitus #'X-offset = #2.0
+    } { \voiceTwo \scoreFBass }
+  >>
+>>
+
+scoreFChordsPart = \new ChordNames \scoreFChordNames
+
+scoreFBassFiguresPart = \new FiguredBass \scoreFFigBass
+
+\bookpart {
+  \score {
+    <<
+      \scoreFChoirPart
+      \scoreFChordsPart
+      \scoreFBassFiguresPart
+    >>
+    \layout { }
+    \midi { }
+  }
+}
+
+
+\bookpart { }
