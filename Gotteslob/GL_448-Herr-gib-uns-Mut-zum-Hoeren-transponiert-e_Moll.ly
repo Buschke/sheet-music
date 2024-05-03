@@ -1,7 +1,5 @@
-\version "2.24.1"
+\version "2.24.3"
 \language "english"
-
-\include "predefined-guitar-fretboards.ly"
 
 \header {
   dedication = ""
@@ -16,6 +14,10 @@
   opus = "GL 448 / EG 667 ö"
   copyright = \markup { "© Satz: 21.07.2023" \with-url #"mailto:sven@buschke.com" "Sven Buschke" }
   tagline = ""
+}
+
+\paper {
+  #(set-paper-size "a4")
 }
 
 global = {
@@ -64,258 +66,14 @@ scoreARestD = \relative c'' {
   r4 r1 r2.
 }
 
-scoreAAltoA = \relative c' {
-  % Music follows here.
-  \partial 4
-  g4
-  b b b fs g2 g4
-}
-
-scoreAAltoB = \relative c' {
-  % Music follows here.
-  g4 b b c c e2.\breathe
-}
-
-scoreAAltoC = \relative c' {
-  % Music follows here.
-  e4 fs2 e c2.\breathe
-}
-
-scoreAAltoD = \relative c' {
-  % Music follows here.
-  e4 b b g fs g2.
-}
-
-scoreATenorA = \relative c {
-  % Music follows here.
-  \partial 4
-  b4
-  e e d b b2 b4
-}
-
-scoreATenorB = \relative c {
-  % Music follows here.
-  b4 e e e e g2.\breathe
-}
-
-scoreATenorC = \relative c' {
-  % Music follows here.
-  g4 b2 g e2.\breathe
-}
-
-scoreATenorD = \relative c' {
-  % Music follows here.
-  g4 e d b b b2.
-}
-
-scoreABassA = \relative c, {
-  % Music follows here.
-  \partial 4
-  e4
-  e e b' b e,2 e4
-}
-
-scoreABassB = \relative c, {
-  % Music follows here.
-  e4 e e a a e2.\breathe
-}
-
-scoreABassC = \relative c, {
-  % Music follows here.
-  e4 b'2 e, a2.\breathe
-}
-
-scoreABassD = \relative c, {
-  % Music follows here.
-  e4 e b' e, b' e,2.
-}
-
-scoreCSopranoA = \relative c'' {
-  % Music follows here.
-  \partial 4
-  e4
-  e e d d b2 b4\breathe
-}
-
-scoreCSopranoB = \relative c'' {
-  % Music follows here.
-  b4 e e e e g2.\breathe
-}
-
-scoreCSopranoC = \relative c'' {
-  % Music follows here.
-  b4 b2 b c2.
-}
-
-scoreCSopranoD = \relative c'' {
-  % Music follows here.
-  g4 d' ds e b b2.
-}
-
-scoreCAltoA = \relative c'' {
-  % Music follows here.
-  \partial 4
-  g4
-  b b a fs e2 e4
-}
-
-scoreCAltoB = \relative c' {
-  % Music follows here.
-  e4 b' b a a d2.\breathe
-}
-
-scoreCAltoC = \relative c {
-  % Music follows here.
-  d4 fs2 d e2.
-}
-
-scoreCAltoD = \relative c' {
-  % Music follows here.
-  \partial 4
-  d4 g fs g fs e2.
-}
-
-scoreCTenorA = \relative c' {
-  % Music follows here.
-  \partial 4
-  b4
-  e g d a g2 g4
-}
-
-scoreCTenorB = \relative c'' {
-  % Music follows here.
-  g4 e' e c c g2.\breathe
-}
-
-scoreCTenorC = \relative c' {
-  % Music follows here.
-  fs4 b2 fs a2.
-}
-
-scoreCTenorD = \relative c'' {
-  % Music follows here.
-  g4 b a b b g2.
-}
-
-scoreABiciniumA = \relative c' {
-  d4^"Bicinium a" fs fs e c d2 d4\breathe
-}
-
-scoreABiciniumB = \relative c'' {
-  d4^"Bicinium b" fs fs e c d2.\breathe
-}
-
-scoreABiciniumC = \relative c'' {
-  d4^"Bicinium c" c2 d g2.\breathe
-}
-
-scoreABiciniumD = \relative c'' {
-  d4^"Bicinium d" fs e d c d2.\breathe
-}
-
-scoreASoprano = \relative c'' {
+scoreAMelody = \relative c'' {
   \global
   % Music follows here.
   \scoreACFA
   \scoreACFB
   \scoreACFC
   \scoreACFD
-  \bar "||"^"Dux 1a"
-  \scoreACFA
-  \scoreABiciniumA
-  \scoreCSopranoA
-  \transpose d d' \scoreAAltoA^"Dux 1b"
-  \scoreACFB
-  \scoreABiciniumB
-  \scoreCSopranoB
-  \transpose d d' \scoreAAltoB^"Dux 1c"
-  \scoreACFC
-  \scoreABiciniumC
-  \scoreCSopranoC
-  \transpose d d' \scoreAAltoC^"Dux 1d"
-  \scoreACFD
-  \scoreABiciniumD
-  \scoreCSopranoD
-  \transpose d d' \scoreAAltoD
-  \bar "|."
-}
-
-scoreAAlto = \relative c' {
-  \global
-  % Music follows here.
-  \scoreAAltoA
-  \scoreAAltoB
-  \scoreAAltoC
-  \scoreAAltoD
-  \bar "||"
-  \scoreARestA
-  \scoreARestA
-  \scoreARestA^"Dux 3a Pachelbel"
-  \scoreACFA
-  \scoreARestB
-  \scoreARestB
-  \scoreARestB^"Dux 3b Pachelbel"
-  \scoreACFB
-  \scoreARestC
-  \scoreARestC
-  \scoreARestC^"Dux 3c Pachelbel"
-  \scoreACFC
-  \scoreARestD
-  \scoreARestD
-  \scoreARestD^"Dux 3d Pachelbel"
-  \scoreACFD
-}
-
-scoreATenor = \relative c' {
-  \global
-  % Music follows here.
-  \scoreATenorA
-  \scoreATenorB
-  \scoreATenorC
-  \scoreATenorD
-  \bar "||"
-  \scoreARestA^"Comes a"
-  \transpose e b,, \scoreACFA
-  \transpose d d, \scoreCTenorA
-  \transpose d d' \scoreATenorA
-  \scoreARestB^"Comes b"
-  \transpose e b,, \scoreACFB
-  \transpose d d, \scoreCTenorB
-  \transpose d d' \scoreATenorB
-  \scoreARestC^"Comes c"
-  \transpose e b,, \scoreACFC
-  \transpose d d, \scoreCTenorC
-  \transpose d d' \scoreATenorC
-  \scoreARestD^"Comes d"
-  \transpose e b,, \scoreACFD
-  \transpose d d, \scoreCTenorD
-  \transpose d d' \scoreATenorD
-}
-
-scoreABass = \relative c {
-  \global
-  % Music follows here.
-  \scoreABassA
-  \scoreABassB
-  \scoreABassC
-  \scoreABassD
-  \bar "||"
-  \scoreARestA
-  \scoreARestA^"Dux 2a"
-  \transpose d d,, \scoreACFA
-  \scoreABassA
-  \scoreARestB
-  \scoreARestB^"Dux 2b"
-  \transpose d d,, \scoreACFB
-  \scoreABassB
-  \scoreARestC
-  \scoreARestC^"Dux 2c"
-  \transpose d d,, \scoreACFC
-  \scoreABassC
-  \scoreARestD
-  \scoreARestD^"Dux 2d"
-  \transpose d d,, \scoreACFD
-  \scoreABassD
+  \bar "|."  
 }
 
 scoreAVerseA = \lyricmode {
@@ -340,105 +98,37 @@ scoreAVerseD = \lyricmode {
 
 scoreAVerse = \lyricmode {
   % Lyrics follow here.
-  \scoreAVerseA \scoreAVerseB \scoreAVerseC \scoreAVerseD \scoreAVerseA \scoreAVerseA \scoreAVerseA \scoreAVerseA \scoreAVerseB \scoreAVerseB \scoreAVerseB \scoreAVerseB \scoreAVerseC \scoreAVerseC \scoreAVerseC \scoreAVerseC \scoreAVerseD \scoreAVerseD \scoreAVerseD \scoreAVerseD
+  \scoreAVerseA \scoreAVerseB \scoreAVerseC \scoreAVerseD
 }
 
-scoreAChordNames = \chordmode {
+\bookpart {
+  \header {
+    subtitle = "Cantus Firmus"
+  }
+  \score {
+    \new Staff \with {
+      \consists "Ambitus_engraver"
+    } { \scoreAMelody }
+    \addlyrics { \scoreAVerse }
+    \layout { }
+    \midi { }
+  }
+}
+
+scoreBChordNamesLeadSheet = \chordmode {
   \global
   \germanChords
   % Chords follow here.
   \partial 4
   e4:min
   e:min e:min b:min b:min e2:min e4:min e4:min e4:min e:min a:min a:min e2.:min\breathe
-  e4:min b2:min e:min a2.:min e4:min e:min b:min e:min b:min e2.:min
+  e4:min b2:min e:min a2.:min e4:min e:min b:min e:min b:min e2.:min   
 }
 
-scoreAFigBass = \figuremode {
-  \global
-  % Figures follow here.
-
-}
-
-scoreAChoirPart = \new ChoirStaff <<
-  \new Staff \with {
-    midiInstrument = "choir aahs"
-    instrumentName = \markup \center-column { "Soprano" "Alto" }
-  } <<
-    \new Voice = "soprano" \with {
-      \consists "Ambitus_engraver"
-    } { \voiceOne \scoreASoprano }
-    \new Voice = "alto" \with {
-      \consists "Ambitus_engraver"
-      \override Ambitus #'X-offset = #2.0
-    } { \voiceTwo \scoreAAlto }
-  >>
-  \new Lyrics \with {
-    \override VerticalAxisGroup #'staff-affinity = #CENTER
-  } \lyricsto "soprano" \scoreAVerse
-  \new Staff \with {
-    midiInstrument = "choir aahs"
-    instrumentName = \markup \center-column { "Tenor" "Bass" }
-  } <<
-    \clef bass
-    \new Voice = "tenor" \with {
-      \consists "Ambitus_engraver"
-    } { \voiceOne \scoreATenor }
-    \new Voice = "bass" \with {
-      \consists "Ambitus_engraver"
-      \override Ambitus #'X-offset = #2.0
-    } { \voiceTwo \scoreABass }
-  >>
->>
-
-scoreAChordsPart = <<
-  \new ChordNames \scoreAChordNames
-  %   \scoreAChordNames
-  %   \new FretBoards \scoreAChordNames
->>
-
-scoreABassFiguresPart = \new FiguredBass \with {
-  useBassFigureExtenders = ##t
-} \scoreAFigBass
-
-\bookpart {
-  \header {
-    subtitle = "Cantus firmus im Sopran"
-  }
-  \score {
-    <<
-      \scoreAChoirPart
-      \scoreAChordsPart
-      \scoreABassFiguresPart
-    >>
-    \layout { }
-    \midi {
-      \tempo 4=100
-    }
-  }
-}
-
-scoreBSoprano = \relative c'' {
+scoreBMelody = \relative c'' {
   \global
   % Music follows here.
-  \transpose d d' \scoreAAlto
-}
-
-scoreBAlto = \relative c' {
-  \global
-  % Music follows here.
-  \transpose d d' \scoreATenor
-}
-
-scoreBTenor = \relative c' {
-  \global
-  % Music follows here.
-  \transpose d d, \scoreASoprano
-}
-
-scoreBBass = \relative c {
-  \global
-  % Music follows here.
-  \scoreABass
+  \scoreAMelody
 }
 
 scoreBVerse = \lyricmode {
@@ -446,270 +136,531 @@ scoreBVerse = \lyricmode {
   \scoreAVerse
 }
 
-scoreBChordNames = \chordmode {
-  \global
-  \germanChords
-  % Chords follow here.
-  \scoreAChordNames
-}
-
-scoreBFigBass = \figuremode {
+scoreBFigBassBassFiguresI = \figuremode {
   \global
   % Figures follow here.
-  \scoreAFigBass
+  
 }
 
-scoreBChoirPart = \new ChoirStaff <<
-  \new Staff \with {
-    midiInstrument = "choir aahs"
-    instrumentName = \markup \center-column { "Soprano" "Alto" }
-  } <<
-    \new Voice = "soprano" \with {
-      \consists "Ambitus_engraver"
-    } { \voiceOne \scoreBSoprano }
-    \new Voice = "alto" \with {
-      \consists "Ambitus_engraver"
-      \override Ambitus #'X-offset = #2.0
-    } { \voiceTwo \scoreBAlto }
-  >>
-  \new Staff \with {
-    midiInstrument = "choir aahs"
-    instrumentName = \markup \center-column { "Tenor" "Bass" }
-  } <<
-    \clef bass
-    \new Voice = "tenor" \with {
-      \consists "Ambitus_engraver"
-    } { \voiceOne \scoreBTenor }
-    \new Voice = "bass" \with {
-      \consists "Ambitus_engraver"
-      \override Ambitus #'X-offset = #2.0
-    } { \voiceTwo \scoreBBass }
-  >>
-  \new Lyrics \with {
-    \override VerticalAxisGroup #'staff-affinity = #CENTER
-  } \lyricsto "tenor" \scoreBVerse
->>
-
-scoreBChordsPart = <<
-  \new ChordNames \scoreBChordNames
-  %   \scoreBChordNames
-  %   \new FretBoards \scoreBChordNames
->>
-
-scoreBBassFiguresPart = \new FiguredBass \with {
-  useBassFigureExtenders = ##t
-} \scoreBFigBass
-
-\bookpart {
-  \header {
-    subtitle = "Cantus firmus im Tenor"
-  }
-  \score {
-    <<
-      \scoreBChoirPart
-      \scoreBChordsPart
-      \scoreBBassFiguresPart
-    >>
-    \layout { }
-    \midi {
-      \tempo 4=100
-    }
-  }
-}
-
-scoreCSopranoA = \relative c'' {
-  % Music follows here.
-  \partial 4
-  e4
-  e e d d b2 b4\breathe
-}
-
-scoreCSopranoB = \relative c'' {
-  % Music follows here.
-  b4 e e e e g2.\breathe
-}
-
-scoreCSopranoC = \relative c'' {
-  % Music follows here.
-  b4 b2 b c2.\breathe
-}
-
-scoreCSopranoD = \relative c'' {
-  % Music follows here.
-  g4 d' ds e b b2.\breathe
-}
-
-scoreCSoprano = \relative c'' {
-  \global
-  % Music follows here.
-  \scoreCSopranoA
-  \scoreCSopranoB
-  \scoreCSopranoC
-  \scoreCSopranoD
-  \scoreARestA
-  \scoreACFA
-  \scoreCSopranoA
-  \scoreCSopranoA
-  \scoreARestB
-  \scoreACFB
-  \scoreCSopranoB
-  \scoreCSopranoB
-  \scoreARestC
-  \scoreACFC
-  \scoreCSopranoC
-  \scoreCSopranoC
-  \scoreARestD
-  \scoreACFD
-  \scoreCSopranoD
-  \scoreCSopranoD
-}
-
-scoreCAltoA = \relative c'' {
-  % Music follows here.
-  \partial 4
-  g4
-  b b a fs e2 e4\breathe
-}
-
-scoreCAltoB = \relative c' {
-  % Music follows here.
-  e4 b' b a a d2.\breathe
-}
-
-scoreCAltoC = \relative c' {
-  % Music follows here.
-  d4 fs2 d e2.\breathe
-}
-
-scoreCAltoD = \relative c' {
-  % Music follows here.
-  d4 g fs g fs e2.\breathe
-}
-
-scoreCAlto = \relative c' {
-  \global
-  % Music follows here.
-  \scoreCAltoA
-  \scoreCAltoB
-  \scoreCAltoC
-  \scoreCAltoD
-  \scoreARestA
-  \scoreARestA
-  \scoreARestA
-  \scoreCAltoA
-  \scoreARestB
-  \scoreARestB
-  \scoreARestB
-  \scoreCAltoB
-  \scoreARestC
-  \scoreARestC
-  \scoreARestC
-  \scoreCAltoC
-  \scoreARestD
-  \scoreARestD
-  \scoreARestD
-  \scoreCAltoD
-}
-
-scoreCTenorA = \relative c' {
-  % Music follows here.
-  \partial 4
-  b4
-  e g d a g2 g4\breathe
-}
-
-scoreCTenorB = \relative c' {
-  % Music follows here.
-  g4 e' e c c g2.\breathe
-}
-
-scoreCTenorC = \relative c' {
-  % Music follows here.
-  fs4 b2 fs a2.\breathe
-}
-
-scoreCTenorD = \relative c' {
-  % Music follows here.
-  g4 b a b b g2.\breathe
-}
-
-scoreCTenor = \relative c' {
-  \global
-  % Music follows here.
-  \scoreCTenorA
-  \scoreCTenorB
-  \scoreCTenorC
-  \scoreCTenorD
-  \scoreARestA
-  \scoreARestA^"Dux 2a"
-  \scoreACFA
-  \scoreCTenorA
-  \scoreARestB
-  \scoreARestB^"Dux 2b"
-  \transpose d d, \scoreACFB
-  \transpose d d, \scoreCTenorB
-  \scoreARestC
-  \scoreARestC^"Dux 2c"
-  \transpose d d, \scoreACFC
-  \transpose d d, \scoreCTenorC
-  \scoreARestD
-  \scoreARestD^"Dux 2d"
-  \transpose d d, \scoreACFD
-  \transpose d d \scoreCTenorD
-}
-
-scoreCBass = \relative c, {
-  \global
-  % Music follows here.
-  \transpose d d,, \scoreACFA
-  \transpose d d,, \scoreACFB
-  \transpose d d,, \scoreACFC
-  \transpose d d,, \scoreACFD
-  \bar "||"^"Dux 1a"
-  \transpose d d,, \scoreACFA
-  d4^"Bicinium" fs fs e c d2 d4\breathe
-  \transpose d d,, \scoreCSopranoA
-  \transpose d d, \scoreAAltoA^"Dux 1b"
-  \transpose d d,, \scoreACFB
-  d'4^"Bicinium" fs fs e c d2.
-  \transpose d d,, \scoreCSopranoB
-  \transpose d d, \scoreAAltoB^"Dux 1c"
-  \transpose d d,, \scoreACFC
-  d,4^"Bicinium" c2 d g2.
-  \transpose d d,, \scoreCSopranoC
-  \transpose d d, \scoreAAltoC^"Dux 1d"
-  \transpose d d,, \scoreACFD
-  d'4^"Bicinium" fs e d c d2 d4
-  \transpose d d,, \scoreCSopranoD
-  \transpose d d, \scoreAAltoD
-  \bar "|."
-}
-
-scoreCVerse = \lyricmode {
-  % Lyrics follow here.
-  \scoreAVerse
-}
-
-scoreCChordNames = \chordmode {
+scoreBChordNamesChords = \chordmode {
   \global
   \germanChords
   % Chords follow here.
   \partial 4
   e4:m
   e:m/g e:m/g d:/fs d e2:m e4:m e:m e:m/g e:m/g a:m a:m g2./b
-  b4:m b2:m/d b:m a2.:m g4/b g ds:m/fs e:m b:min/d e2.:m
+  b4:m b2:m/d b:m a2.:m g4/b g ds:m/fs e:m b:min/d e2.:m  
+}
+
+scoreBFigBassBassFiguresII = \figuremode {
+  \global
+  % Figures follow here.
+  
+}
+
+scoreBLeadSheetPart = <<
+  \new ChordNames \scoreBChordNamesLeadSheet
+  \new Staff \with {
+    \consists "Ambitus_engraver"
+  } { \scoreBMelody }
+  \addlyrics { \scoreBVerse }
+>>
+
+scoreBBassFiguresIPart = \new FiguredBass \scoreBFigBassBassFiguresI
+
+scoreBChordsPart = \new ChordNames \scoreBChordNamesChords
+
+scoreBBassFiguresIIPart = \new FiguredBass \scoreBFigBassBassFiguresII
+
+\bookpart {
+  \header {
+    subtitle = "Cantus Firmus mit Akkorden und Generalbassbezifferung"
+  }
+  \score {
+    <<
+      \scoreBLeadSheetPart
+      \scoreBBassFiguresIPart
+      \scoreBChordsPart
+      \scoreBBassFiguresIIPart
+    >>
+    \layout { }
+    \midi { }
+  }
+}
+
+scoreCAltoA = \relative c' {
+  % Music follows here.
+  \partial 4
+  g4
+  b b b fs g2 g4
+}
+
+scoreCAltoB = \relative c' {
+  % Music follows here.
+  g4 b b c c e2.\breathe
+}
+
+scoreCAltoC = \relative c' {
+  % Music follows here.
+  e4 fs2 e c2.\breathe
+}
+
+scoreCAltoD = \relative c' {
+  % Music follows here.
+  e4 b b g fs g2.
+}
+
+scoreCTenorA = \relative c {
+  % Music follows here.
+  \partial 4
+  b4
+  e e d b b2 b4
+}
+
+scoreCTenorB = \relative c {
+  % Music follows here.
+  b4 e e e e g2.\breathe
+}
+
+scoreCTenorC = \relative c' {
+  % Music follows here.
+  g4 b2 g e2.\breathe
+}
+
+scoreCTenorD = \relative c' {
+  % Music follows here.
+  g4 e d b b b2.
+}
+
+scoreCBassA = \relative c, {
+  % Music follows here.
+  \partial 4
+  e4
+  e e b' b e,2 e4
+}
+
+scoreCBassB = \relative c, {
+  % Music follows here.
+  e4 e e a a e2.\breathe
+}
+
+scoreCBassC = \relative c, {
+  % Music follows here.
+  e4 b'2 e, a2.\breathe
+}
+
+scoreCBassD = \relative c, {
+  % Music follows here.
+  e4 e b' e, b' e,2.
+}
+
+scoreESopranoA = \relative c'' {
+  % Music follows here.
+  \partial 4
+  e4
+  e e d d b2 b4\breathe
+}
+
+scoreESopranoB = \relative c'' {
+  % Music follows here.
+  b4 e e e e g2.\breathe
+}
+
+scoreESopranoC = \relative c'' {
+  % Music follows here.
+  b4 b2 b c2.
+}
+
+scoreESopranoD = \relative c'' {
+  % Music follows here.
+  g4 d' ds e b b2.
+}
+
+scoreEAltoA = \relative c'' {
+  % Music follows here.
+  \partial 4
+  g4
+  b b a fs e2 e4
+}
+
+scoreEAltoB = \relative c' {
+  % Music follows here.
+  e4 b' b a a d2.\breathe
+}
+
+scoreEAltoC = \relative c {
+  % Music follows here.
+  d4 fs2 d e2.
+}
+
+scoreEAltoD = \relative c' {
+  % Music follows here.
+  \partial 4
+  d4 g fs g fs e2.
+}
+
+scoreETenorA = \relative c' {
+  % Music follows here.
+  \partial 4
+  b4
+  e g d a g2 g4
+}
+
+scoreETenorB = \relative c'' {
+  % Music follows here.
+  g4 e' e c c g2.\breathe
+}
+
+scoreETenorC = \relative c' {
+  % Music follows here.
+  fs4 b2 fs a2.
+}
+
+scoreETenorD = \relative c'' {
+  % Music follows here.
+  g4 b a b b g2.
+}
+
+scoreCBiciniumA = \relative c' {
+  d4^"Bicinium 1a" fs fs e c d2 d4\breathe
+}
+
+scoreCBiciniumB = \relative c'' {
+  d4^"Bicinium 1b" fs fs e c d2.\breathe
+}
+
+scoreCBiciniumC = \relative c'' {
+  d4^"Bicinium 1c" c2 d g2.\breathe
+}
+
+scoreCBiciniumD = \relative c'' {
+  d4^"Bicinium 1d" fs e d c d2.\breathe
+}
+
+%%%
+
+scoreCCodettaASopranoA = \relative c'' {
+  d4^"Codetta 1a" d d d\breathe
+}
+
+scoreCCodettaASopranoB = \relative c'' {
+  d4^"Codetta 1b" d d d\breathe
+}
+
+scoreCCodettaASopranoC = \relative c'' {
+  d4^"Codetta 1c" d d d\breathe
+}
+
+scoreCCodettaASopranoD= \relative c'' {
+  d4^"Codetta 1d" d d d\breathe
+}
+
+scoreCCodettaBSopranoA = \relative c'' {
+  d4^"Codetta 2a" d d d\breathe
+}
+
+scoreCCodettaBSopranoB = \relative c'' {
+  d4^"Codetta 2b" d d d\breathe
+}
+
+scoreCCodettaBSopranoC = \relative c'' {
+  d4^"Codetta 2c" d d d\breathe
+}
+
+scoreCCodettaBSopranoD= \relative c'' {
+  d4^"Codetta 2d" d d d\breathe
+}
+
+%%%%
+
+scoreCCodettaAAltoA = \relative c'' {
+  d4^"Codetta 1a" d d d\breathe
+}
+
+scoreCCodettaAAltoB = \relative c'' {
+  d4^"Codetta 1b" d d d\breathe
+}
+
+scoreCCodettaAAltoC = \relative c'' {
+  d4^"Codetta 1c" d d d\breathe
+}
+
+scoreCCodettaAAltoD= \relative c'' {
+  d4^"Codetta 1d" d d d\breathe
+}
+
+scoreCCodettaBAltoA = \relative c'' {
+  d4^"Codetta 2a" d d d\breathe
+}
+
+scoreCCodettaBAltoB = \relative c'' {
+  d4^"Codetta 2b" d d d\breathe
+}
+
+scoreCCodettaBAltoC = \relative c'' {
+  d4^"Codetta 2c" d d d\breathe
+}
+
+scoreCCodettaBAltoD= \relative c'' {
+  d4^"Codetta 2d" d d d\breathe
+}
+
+%%%
+
+scoreCCodettaATenorA = \relative c'' {
+  d4^"Codetta 1a" d d d\breathe
+}
+
+scoreCCodettaATenorB = \relative c'' {
+  d4^"Codetta 1b" d d d\breathe
+}
+
+scoreCCodettaATenorC = \relative c'' {
+  d4^"Codetta 1c" d d d\breathe
+}
+
+scoreCCodettaATenorD= \relative c'' {
+  d4^"Codetta 1d" d d d\breathe
+}
+
+scoreCCodettaBTenorA = \relative c'' {
+  d4^"Codetta 2a" d d d\breathe
+}
+
+scoreCCodettaBTenorB = \relative c'' {
+  d4^"Codetta 2b" d d d\breathe
+}
+
+scoreCCodettaBTenorC = \relative c'' {
+  d4^"Codetta 2c" d d d\breathe
+}
+
+scoreCCodettaBTenorD= \relative c'' {
+  d4^"Codetta 2d" d d d\breathe
+}
+
+%%%
+
+scoreCCodettaABassA = \relative c'' {
+  d4^"Codetta 1a" d d d\breathe
+}
+
+scoreCCodettaABassB = \relative c'' {
+  d4^"Codetta 1b" d d d\breathe
+}
+
+scoreCCodettaABassC = \relative c'' {
+  d4^"Codetta 1c" d d d\breathe
+}
+
+scoreCCodettaABassD= \relative c'' {
+  d4^"Codetta 1d" d d d\breathe
+}
+
+scoreCCodettaBBassA = \relative c'' {
+  d4^"Codetta 2a" d d d\breathe
+}
+
+scoreCCodettaBBassB = \relative c'' {
+  d4^"Codetta 2b" d d d\breathe
+}
+
+scoreCCodettaBBassC = \relative c'' {
+  d4^"Codetta 2c" d d d\breathe
+}
+
+scoreCCodettaBBassD= \relative c'' {
+  d4^"Codetta 2d" d d d\breathe
+}
+
+scoreCSoprano = \relative c'' {
+  \global
+  % Music follows here.
+  \scoreAMelody
+  \bar "||"^"Dux 1a"
+  %
+  \scoreACFA
+  \scoreCBiciniumA
+  \scoreCCodettaASopranoA
+  \scoreESopranoA
+  \transpose d d' \scoreCAltoA^"Dux 1b"
+  \scoreCCodettaBSopranoA
+  %
+  \scoreACFB
+  \scoreCBiciniumB
+  \scoreCCodettaASopranoB
+  \scoreESopranoB
+  \transpose d d' \scoreCAltoB^"Dux 1c"
+  \scoreCCodettaBSopranoB
+  %
+  \scoreACFC
+  \scoreCBiciniumC
+  \scoreCCodettaASopranoC
+  \scoreESopranoC
+  \transpose d d' \scoreCAltoC^"Dux 1d"
+  \scoreCCodettaBSopranoC
+  %
+  \scoreACFD
+  \scoreCBiciniumD
+  \scoreCCodettaASopranoA
+  \scoreESopranoD
+  \transpose d d' \scoreCAltoD
+  \scoreCCodettaBSopranoD
+  \bar "|."
+}
+
+scoreCAltoChorale = \relative c' {
+  % Music follows here.
+  \scoreCAltoA
+  \scoreCAltoB
+  \scoreCAltoC
+  \scoreCAltoD
+}
+
+scoreCAlto = \relative c' {
+  \global
+  % Music follows here.
+  \scoreCAltoChorale
+  \bar "||"
+  \scoreARestA
+  \scoreARestA
+  \scoreCCodettaAAltoA
+  \scoreARestA^"Comes 2a (noch nicht Pachelbel)"
+  \transpose d a, \scoreACFA
+  \scoreCCodettaBAltoA
+  %
+  \scoreARestB
+  \scoreARestB
+  \scoreCCodettaAAltoB
+  \scoreARestB^"Comes 2b (noch nicht Pachelbel)"
+  \transpose d a, \scoreACFB
+  \scoreCCodettaBAltoB
+  %
+  \scoreARestC
+  \scoreARestC
+  \scoreCCodettaAAltoC
+  \scoreARestC^"Comes 2c (noch nicht Pachelbel)"
+  \transpose d a, \scoreACFC
+  \scoreCCodettaBAltoC
+  %
+  \scoreARestD
+  \scoreARestD
+  \scoreCCodettaAAltoD
+  \scoreARestD^"Comes 2d (noch nicht Pachelbel)"
+  \transpose d a, \scoreACFD
+  \scoreCCodettaBAltoD
+}
+
+scoreCTenorChorale = \relative c' {
+  % Music follows here.
+  \scoreCTenorA
+  \scoreCTenorB
+  \scoreCTenorC
+  \scoreCTenorD
+}
+
+scoreCTenor = \relative c' {
+  \global
+  % Music follows here.
+  \scoreCTenorChorale
+  \bar "||"
+  %
+  \scoreARestA^"Comes 1a"
+  \transpose e b,, \scoreACFA
+  \scoreCCodettaATenorA
+  \transpose d d, \scoreETenorA
+  \transpose d d' \scoreCTenorA
+  \scoreCCodettaBTenorA
+  %
+  \scoreARestB^"Comes 1b"
+  \transpose e b,, \scoreACFB
+  \scoreCCodettaATenorB
+  \transpose d d, \scoreETenorB
+  \transpose d d' \scoreCTenorB
+  \scoreCCodettaBTenorB
+  %
+  \scoreARestC^"Comes 1c"
+  \transpose e b,, \scoreACFC
+  \scoreCCodettaATenorC
+  \transpose d d, \scoreETenorC
+  \transpose d d' \scoreCTenorC
+  \scoreCCodettaBTenorC
+  %
+  \scoreARestD^"Comes 1d"
+  \transpose e b,, \scoreACFD
+  \scoreCCodettaATenorD
+  \transpose d d, \scoreETenorD
+  \transpose d d' \scoreCTenorD
+  \scoreCCodettaBTenorD
+}
+
+scoreCBassChorale = \relative c {
+  % Music follows here.
+  \scoreCBassA
+  \scoreCBassB
+  \scoreCBassC
+  \scoreCBassD
+}
+
+scoreCBass = \relative c {
+  \global
+  % Music follows here.
+  \scoreCBassChorale
+  \bar "||"
+  %
+  \scoreARestA
+  \scoreARestA
+  \scoreCCodettaABassA^"Dux 2a"
+  \transpose d d,, \scoreACFA
+  \scoreCBassA
+  \scoreCCodettaBBassA
+  %
+  \scoreARestB
+  \scoreARestB
+  \scoreCCodettaABassB^"Dux 2b"
+  \transpose d d,, \scoreACFB
+  \scoreCBassB
+  \scoreCCodettaBBassB
+  %
+  \scoreARestC
+  \scoreARestC
+  \scoreCCodettaABassC^"Dux 2c"
+  \transpose d d,, \scoreACFC
+  \scoreCBassC
+  \scoreCCodettaBBassC
+  %
+  \scoreARestD
+  \scoreARestD
+  \scoreCCodettaABassD^"Dux 2d"
+  \transpose d d,, \scoreACFD
+  \scoreCBassD
+  \scoreCCodettaBBassD
+}
+
+scoreCVerse = \lyricmode {
+  % Lyrics follow here.
+  \scoreAVerse
+  \scoreAVerseA \scoreAVerseA \scoreAVerseA \scoreAVerseA \scoreAVerseB \scoreAVerseB \scoreAVerseB \scoreAVerseB \scoreAVerseC \scoreAVerseC \scoreAVerseC \scoreAVerseC \scoreAVerseD \scoreAVerseD \scoreAVerseD \scoreAVerseD
+}
+
+scoreCChordNames = \chordmode {
+  \global
+  \germanChords
+  % Chords follow here.
+  % \scorea
 }
 
 scoreCFigBass = \figuremode {
   \global
   % Figures follow here.
-
+  
 }
 
 scoreCChoirPart = \new ChoirStaff <<
   \new Staff \with {
     midiInstrument = "choir aahs"
-    instrumentName = \markup \center-column { "Soprano" "Alto" }
+    instrumentName = \markup \center-column { "Sopran" "Alt" }
+    shortInstrumentName = \markup \center-column { "S." "A." }
   } <<
     \new Voice = "soprano" \with {
       \consists "Ambitus_engraver"
@@ -719,9 +670,13 @@ scoreCChoirPart = \new ChoirStaff <<
       \override Ambitus #'X-offset = #2.0
     } { \voiceTwo \scoreCAlto }
   >>
+  \new Lyrics \with {
+    \override VerticalAxisGroup #'staff-affinity = #CENTER
+  } \lyricsto "soprano" \scoreCVerse
   \new Staff \with {
     midiInstrument = "choir aahs"
     instrumentName = \markup \center-column { "Tenor" "Bass" }
+    shortInstrumentName = \markup \center-column { "T." "B." }
   } <<
     \clef bass
     \new Voice = "tenor" \with {
@@ -732,24 +687,15 @@ scoreCChoirPart = \new ChoirStaff <<
       \override Ambitus #'X-offset = #2.0
     } { \voiceTwo \scoreCBass }
   >>
-  \new Lyrics \with {
-    \override VerticalAxisGroup #'staff-affinity = #CENTER
-  } \lyricsto "bass" \scoreCVerse
 >>
 
-scoreCChordsPart = <<
-  \new ChordNames \scoreCChordNames
-  %   \scoreCChordNames
-  %   \new FretBoards \scoreCChordNames
->>
+scoreCChordsPart = \new ChordNames \scoreCChordNames
 
-scoreCBassFiguresPart = \new FiguredBass \with {
-  useBassFigureExtenders = ##t
-} \scoreCFigBass
+scoreCBassFiguresPart = \new FiguredBass \scoreCFigBass
 
 \bookpart {
   \header {
-    subtitle = "Cantus firmus im Bass"
+    subtitle = "Cantus Firmus im Sopran, mit Dux-Comes"
   }
   \score {
     <<
@@ -758,116 +704,32 @@ scoreCBassFiguresPart = \new FiguredBass \with {
       \scoreCBassFiguresPart
     >>
     \layout { }
-    \midi {
-      \tempo 4=100
-    }
+    \midi { }
   }
 }
 
 scoreDSoprano = \relative c'' {
   \global
   % Music follows here.
-  \transpose d d' \scoreAAltoA
-  \transpose d d' \scoreAAltoB
-  \transpose d d' \scoreAAltoC
-  \transpose d d' \scoreAAltoD
-  \bar "||"
-  \scoreARestA
-  \scoreARestA
-  \scoreARestA^"Dux 3a Pachelbel"
-  \scoreACFA
-  \scoreARestB
-  \scoreARestB
-  \scoreARestB^"Dux 3b Pachelbel"
-  \scoreACFB
-  \scoreARestC
-  \scoreARestC
-  \scoreARestC^"Dux 3c Pachelbel"
-  \scoreACFC
-  \scoreARestD
-  \scoreARestD
-  \scoreARestD^"Dux 3d Pachelbel"
-  \scoreACFD
-  \bar "|."
+  \transpose d d' \scoreCAltoChorale
 }
 
 scoreDAlto = \relative c' {
   \global
   % Music follows here.
-  \scoreACFA
-  \scoreACFB
-  \scoreACFC
-  \scoreACFD
-  \bar "||"^"Dux 1a"
-  \scoreACFA
-  \scoreABiciniumA
-  \scoreCAltoA
-  \scoreAAltoA^"Dux 1b"
-  \scoreACFB
-  \transpose d d, \scoreABiciniumB
-  \scoreCAltoB
-  \scoreAAltoB^"Dux 1c"
-  \scoreACFC
-  \transpose d d, \scoreABiciniumC
-  \scoreCAltoC
-  \scoreAAltoC^"Dux 1d"
-  \scoreACFD
-  \transpose d d, \scoreABiciniumD
-  \scoreCAltoD
-  \scoreAAltoD
-  \bar "|."
+  \transpose d d' \scoreCTenorChorale
 }
 
 scoreDTenor = \relative c' {
   \global
   % Music follows here.
-  \scoreATenorA
-  \scoreATenorB
-  \scoreATenorC
-  \scoreATenorD
-  \bar "||"
-  \scoreARestA^"Comes a"
-  \transpose e b, \scoreACFA
-  \scoreCTenorA
-  \scoreATenorA
-  \scoreARestB^"Comes b"
-  \transpose e b, \scoreACFB
-  \scoreCTenorB
-  \scoreATenorB
-  \scoreARestC^"Comes c"
-  \transpose e b,, \scoreACFC
-  \transpose d d, \scoreCTenorC
-  \scoreATenorC
-  \scoreARestD^"Comes d"
-  \transpose e b,, \scoreACFD
-  \scoreCTenorD
-  \scoreATenorD
+  \transpose d d, \scoreAMelody
 }
 
 scoreDBass = \relative c {
   \global
   % Music follows here.
-  \scoreABassA
-  \scoreABassB
-  \scoreABassC
-  \scoreABassD
-  \bar "||"
-  \scoreARestA
-  \scoreARestA^"Dux 2a"
-  \transpose d d,, \scoreACFA
-  \scoreABassA
-  \scoreARestB
-  \scoreARestB^"Dux 2b"
-  \transpose d d,, \scoreACFB
-  \scoreABassB
-  \scoreARestC
-  \scoreARestC^"Dux 2c"
-  \transpose d d,, \scoreACFC
-  \scoreABassC
-  \scoreARestD
-  \scoreARestD^"Dux 2d"
-  \transpose d d,, \scoreACFD
-  \scoreABassD
+  \scoreCBassChorale
 }
 
 scoreDVerse = \lyricmode {
@@ -879,19 +741,20 @@ scoreDChordNames = \chordmode {
   \global
   \germanChords
   % Chords follow here.
-  \scoreAChordNames
+  
 }
 
 scoreDFigBass = \figuremode {
   \global
   % Figures follow here.
-  \scoreAFigBass
+  
 }
 
 scoreDChoirPart = \new ChoirStaff <<
   \new Staff \with {
     midiInstrument = "choir aahs"
-    instrumentName = \markup \center-column { "Soprano" "Alto" }
+    instrumentName = \markup \center-column { "Sopran" "Alt" }
+    shortInstrumentName = \markup \center-column { "S." "A." }
   } <<
     \new Voice = "soprano" \with {
       \consists "Ambitus_engraver"
@@ -903,10 +766,11 @@ scoreDChoirPart = \new ChoirStaff <<
   >>
   \new Lyrics \with {
     \override VerticalAxisGroup #'staff-affinity = #CENTER
-  } \lyricsto "alto" \scoreDVerse
+  } \lyricsto "soprano" \scoreDVerse
   \new Staff \with {
     midiInstrument = "choir aahs"
     instrumentName = \markup \center-column { "Tenor" "Bass" }
+    shortInstrumentName = \markup \center-column { "T." "B." }
   } <<
     \clef bass
     \new Voice = "tenor" \with {
@@ -919,19 +783,13 @@ scoreDChoirPart = \new ChoirStaff <<
   >>
 >>
 
-scoreDChordsPart = <<
-  \new ChordNames \scoreDChordNames
-  %   \scoreDChordNames
-  %   \new FretBoards \scoreDChordNames
->>
+scoreDChordsPart = \new ChordNames \scoreDChordNames
 
-scoreDBassFiguresPart = \new FiguredBass \with {
-  useBassFigureExtenders = ##t
-} \scoreDFigBass
+scoreDBassFiguresPart = \new FiguredBass \scoreDFigBass
 
 \bookpart {
   \header {
-    subtitle = "Cantus firmus im Alt"
+    subtitle = "Cantus Firmus im Tenor"
   }
   \score {
     <<
@@ -940,8 +798,269 @@ scoreDBassFiguresPart = \new FiguredBass \with {
       \scoreDBassFiguresPart
     >>
     \layout { }
-    \midi {
-      \tempo 4=100
-    }
+    \midi { }
+  }
+}
+
+scoreESopranoA = \relative c'' {
+  % Music follows here.
+  \partial 4
+  e4
+  e e d d b2 b4\breathe
+}
+
+scoreESopranoB = \relative c'' {
+  % Music follows here.
+  b4 e e e e g2.\breathe
+}
+
+scoreESopranoC = \relative c'' {
+  % Music follows here.
+  b4 b2 b c2.\breathe
+}
+
+scoreESopranoD = \relative c'' {
+  % Music follows here.
+  g4 d' ds e b b2.\breathe
+}
+
+scoreESoprano = \relative c'' {
+  \global
+  % Music follows here.
+  \scoreESopranoA
+  \scoreESopranoB
+  \scoreESopranoC
+  \scoreESopranoD
+}
+
+scoreEAltoA = \relative c'' {
+  % Music follows here.
+  \partial 4
+  g4
+  b b a fs e2 e4\breathe
+}
+
+scoreEAltoB = \relative c' {
+  % Music follows here.
+  e4 b' b a a d2.\breathe
+}
+
+scoreEAltoC = \relative c' {
+  % Music follows here.
+  d4 fs2 d e2.\breathe
+}
+
+scoreEAltoD = \relative c' {
+  % Music follows here.
+  d4 g fs g fs e2.\breathe
+}
+
+scoreEAlto = \relative c' {
+  \global
+  % Music follows here.
+  \scoreEAltoA
+  \scoreEAltoB
+  \scoreEAltoC
+  \scoreEAltoD
+}
+
+scoreETenorA = \relative c' {
+  % Music follows here.
+  \partial 4
+  b4
+  e g d a g2 g4\breathe
+}
+
+scoreETenorB = \relative c' {
+  % Music follows here.
+  g4 e' e c c g2.\breathe
+}
+
+scoreETenorC = \relative c {
+  % Music follows here.
+  fs4 b2 fs a2.\breathe
+}
+
+scoreETenorD = \relative c' {
+  % Music follows here.
+  g4 b a b b g2.\breathe
+}
+
+scoreETenor = \relative c' {
+  \global
+  % Music follows here.
+  \scoreETenorA
+  \scoreETenorB
+  \scoreETenorC
+  \scoreETenorD
+}
+
+scoreEBass = \relative c {
+  \global
+  % Music follows here.
+  \transpose d d,, \scoreAMelody
+}
+
+scoreEVerse = \lyricmode {
+  % Lyrics follow here.
+  \scoreAVerse
+}
+
+scoreEChordNames = \chordmode {
+  \global
+  \germanChords
+  % Chords follow here.
+  
+}
+
+scoreEFigBass = \figuremode {
+  \global
+  % Figures follow here.
+  
+}
+
+scoreEChoirPart = \new ChoirStaff <<
+  \new Staff \with {
+    midiInstrument = "choir aahs"
+    instrumentName = \markup \center-column { "Sopran" "Alt" }
+    shortInstrumentName = \markup \center-column { "S." "A." }
+  } <<
+    \new Voice = "soprano" \with {
+      \consists "Ambitus_engraver"
+    } { \voiceOne \scoreESoprano }
+    \new Voice = "alto" \with {
+      \consists "Ambitus_engraver"
+      \override Ambitus #'X-offset = #2.0
+    } { \voiceTwo \scoreEAlto }
+  >>
+  \new Lyrics \with {
+    \override VerticalAxisGroup #'staff-affinity = #CENTER
+  } \lyricsto "soprano" \scoreEVerse
+  \new Staff \with {
+    midiInstrument = "choir aahs"
+    instrumentName = \markup \center-column { "Tenor" "Bass" }
+    shortInstrumentName = \markup \center-column { "T." "B." }
+  } <<
+    \clef bass
+    \new Voice = "tenor" \with {
+      \consists "Ambitus_engraver"
+    } { \voiceOne \scoreETenor }
+    \new Voice = "bass" \with {
+      \consists "Ambitus_engraver"
+      \override Ambitus #'X-offset = #2.0
+    } { \voiceTwo \scoreEBass }
+  >>
+>>
+
+scoreEChordsPart = \new ChordNames \scoreEChordNames
+
+scoreEBassFiguresPart = \new FiguredBass \scoreEFigBass
+
+\bookpart {
+  \header {
+    subtitle = "Cantus Firmus im Bass"
+  }
+  \score {
+    <<
+      \scoreEChoirPart
+      \scoreEChordsPart
+      \scoreEBassFiguresPart
+    >>
+    \layout { }
+    \midi { }
+  }
+}
+
+scoreFSoprano = \relative c'' {
+  \global
+  % Music follows here.
+  \transpose d d' \scoreCAltoChorale
+}
+
+scoreFAlto = \relative c' {
+  \global
+  % Music follows here.
+  \scoreAMelody
+}
+
+scoreFTenor = \relative c' {
+  \global
+  % Music follows here.
+  \scoreCTenorChorale
+}
+
+scoreFBass = \relative c {
+  \global
+  % Music follows here.
+  \scoreCBassChorale
+}
+
+scoreFVerse = \lyricmode {
+  % Lyrics follow here.
+  \scoreAVerse
+}
+
+scoreFChordNames = \chordmode {
+  \global
+  \germanChords
+  % Chords follow here.
+  
+}
+
+scoreFFigBass = \figuremode {
+  \global
+  % Figures follow here.
+  
+}
+
+scoreFChoirPart = \new ChoirStaff <<
+  \new Staff \with {
+    midiInstrument = "choir aahs"
+    instrumentName = \markup \center-column { "Sopran" "Alt" }
+    shortInstrumentName = \markup \center-column { "S." "A." }
+  } <<
+    \new Voice = "soprano" \with {
+      \consists "Ambitus_engraver"
+    } { \voiceOne \scoreFSoprano }
+    \new Voice = "alto" \with {
+      \consists "Ambitus_engraver"
+      \override Ambitus #'X-offset = #2.0
+    } { \voiceTwo \scoreFAlto }
+  >>
+  \new Lyrics \with {
+    \override VerticalAxisGroup #'staff-affinity = #CENTER
+  } \lyricsto "soprano" \scoreFVerse
+  \new Staff \with {
+    midiInstrument = "choir aahs"
+    instrumentName = \markup \center-column { "Tenor" "Bass" }
+    shortInstrumentName = \markup \center-column { "T." "B." }
+  } <<
+    \clef bass
+    \new Voice = "tenor" \with {
+      \consists "Ambitus_engraver"
+    } { \voiceOne \scoreFTenor }
+    \new Voice = "bass" \with {
+      \consists "Ambitus_engraver"
+      \override Ambitus #'X-offset = #2.0
+    } { \voiceTwo \scoreFBass }
+  >>
+>>
+
+scoreFChordsPart = \new ChordNames \scoreFChordNames
+
+scoreFBassFiguresPart = \new FiguredBass \scoreFFigBass
+
+\bookpart {
+  \header {
+    subtitle = "Cantus Firmus im Alt"
+  }
+  \score {
+    <<
+      \scoreFChoirPart
+      \scoreFChordsPart
+      \scoreFBassFiguresPart
+    >>
+    \layout { }
+    \midi { }
   }
 }
