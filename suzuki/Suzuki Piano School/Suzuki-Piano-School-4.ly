@@ -53,7 +53,7 @@ globalA = {
 scoreARight = \relative c'' {
   \globalA
   % Music follows here.
-  g'4. 
+  g'4.
 }
 
 scoreALeft = \relative c' {
@@ -300,7 +300,7 @@ globalF = {
   \key g \major
 %  \numericTimeSignature
   \time 2/2
-  \tempo "Allegro, ma non troppo" 4=136
+  \tempo "Allegro, ma non troppo" 2=40
 }
 
 scoreFRight = \relative c'' {
@@ -310,7 +310,7 @@ scoreFRight = \relative c'' {
     <b, d g>2
     \tuplet 3/2 { d8 g b d c a }
     g4 g fs g a4. a8 b4. b8 d4 c b r
-    <b d g>2 \tuplet 3/2 { d8 g b } \tuplet 3/2 { d c a } g4 g fs g a4. a8 b4. b8 
+    <b d g>2 \tuplet 3/2 { d8 g b } \tuplet 3/2 { d c a } g4 g fs g a4. a8 b4. b8
     d4 c b8(c cs d ds e) r e d c b a cs d r d c b a g fs e d c b a g fs g4. a8 b c cs d ds e r e d c b a ds e r e e cs a g fs4 \tuplet 3/2 { a'8 fs d } c4 \tuplet 3/2 { a'8 fs c } b4 \tuplet 3/2 { g'8 d b } g4 \tuplet 3/2 { d'8 b g } fs4 \tuplet 3/2 { a'8 fs d } c4 \tuplet 3/2 { a'8 fs c } b4 \tuplet 3/2 { g'8 d b } g4 \tuplet 3/2 { d'8 b g }
     d4 \tuplet 3/2 { d'8 b g } d4 \tuplet 3/2 { d'8 b g } d4 r r8 a' a a d4 cs d e g8 fs e4 r8 a, a a
     e'4 d <cs e> <d fs> <e a>8 g <d fs>4 r8 a' g fs fs e e e d a' g fs fs e e e d  a' g fs fs e r e e d r d d cs b a gs a b cs d4 cs d e <d g>8 fs <cs e>4 r8 a a a
