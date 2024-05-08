@@ -3,19 +3,19 @@
 \language "english"
 
 \header {
-  dedication = "To me"
+  dedication = ""
   title = "Suzuki Cello 1"
   subtitle = "Cello 1"
-  subsubtitle = "NN"
-  instrument = "NN"
+  subsubtitle = ""
+  instrument = ""
   composer = "Suzuki"
-  arranger = "Satz: Sven Buschke"
-  poet = "NN"
-  meter = "NN"
-  piece = "NN"
-  opus = "NN"
-  copyright = "NN"
-  tagline = "NN"
+  arranger = \markup {"Satz: " \with-url "https://buschke.com" "Sven Buschke"}
+  poet = ""
+  meter = ""
+  piece = ""
+  opus = ""
+  copyright = ""
+  tagline = ""
 }
 
 \paper {
@@ -183,11 +183,11 @@ scoreAPianoPart = \new PianoStaff \with {
 \bookpart {
 \header {
   subtitle = "Rigadoon"
-  subsubtitle = "NN"
+  subsubtitle = ""
   composer = "Henry Purcell"
-  meter = "NN"
-  piece = "NN"
-  opus = "NN"
+  meter = ""
+  piece = ""
+  opus = ""
 }
   \score {
 %    {
@@ -403,11 +403,11 @@ scoreCPianoPart = \new PianoStaff \with {
 \bookpart {
 \header {
   subtitle = "Minuet in C"
-  subsubtitle = "NN"
+  subsubtitle = ""
   composer = "Johann Sebastian Bach"
-  meter = "NN"
-  piece = "NN"
-  opus = "NN"
+  meter = ""
+  piece = ""
+  opus = ""
 }
   \score {
 %    \unfoldRepeats {
