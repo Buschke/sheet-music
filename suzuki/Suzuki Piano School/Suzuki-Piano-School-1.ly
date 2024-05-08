@@ -53,7 +53,7 @@ globalA = {
 scoreARight = \relative c'' {
   \global
   % Music follows here.
-
+  
 }
 
 scoreALeft = \relative c' {
@@ -501,25 +501,51 @@ globalJ = {
 }
 
 scoreJRight = \relative c'' {
-  \global
+  \globalJ
   % Music follows here.
-
+  c4-1 c8-1 d-2 e4-3 e8-2 f-3 g4-4 a8-5 g-4 e4-2 r
+  g-5 f8-4 e-3 d4-2 r f-4 e8-3 d-2 c4-1 r
+  c4-1 c8-1 d-2 e4-3 e8-2 f-3 g4-4 a8-5 g-4 e4-2 r
+  g-5 f8-4 e-3 d4-2 e8-3 d-2 c2-1 r
+  g'4-5 f8-4 e-3 d4-2 g,8-1 g-1 
+  f'4-4 e8-3 d-2 c4-1 r
+  g'4-5 f8-4 e-3 d4-2 g,8-1 g-1 
+  f'4-4 e8-3 d-2 c4-1 r
+  c4-1 c8-1 d-2 e4-3 e8-2 f-3 g4-4 a8-5 g-4 e4-2 r
+  g-5 f8-4 e-3 d4-2 e8-3 d-2 c2-1 r
+  \bar "|."
 }
 
 scoreJLeft = \relative c' {
-  \global
+  \globalJ
   % Music follows here.
-
+  c,8-5 g'-1 e-3 g-1 c,8-5 g'-1 e-3 g-1
+  c,8-5 g'-1 e-3 g-1 c,8-5 g'-1 e-3 g-1
+  b,-5 g'-1 d-3 g-1 b,-5 g'-1 d-3 g-1
+  c,8-5 g'-1 e-3 g-1 c,8-5 g'-1 e-3 g-1
+  c,8-5 g'-1 e-3 g-1 c,8-5 g'-1 e-3 g-1
+  c,8-5 g'-1 e-3 g-1 c,8-5 g'-1 e-3 g-1
+  b,-5 g'-1 d-3 g-1 b,-5 g'-1 d-3 g-1
+  c,8-5 g'-1 e-3 g-1 c,8-5 g'-1 e-3 g-1
+  b,-5 g'-1 d-3 g-1 b,-5 g'-1 d-3 g-1
+  c,8-5 g'-1 e-3 g-1 c,8-5 g'-1 e-3 g-1
+  b,-5 g'-1 d-3 g-1 b,-5 g'-1 d-3 g-1
+  c,8-5 g'-1 e-3 g-1 c,8-5 g'-1 e-3 g-1
+  c,8-5 g'-1 e-3 g-1 c,8-5 g'-1 e-3 g-1
+  c,8-5 g'-1 e-3 g-1 c,8-5 g'-1 e-3 g-1
+  b,-5 g'-1 d-3 g-1 b,-5 g'-1 d-3 g-1
+  c,8-5 g'-1 e-3 g-1 c,4-5 r4
+  \bar "|."
 }
 
 \bookpart {
 \header {
-  title = ""
-  composer = ""
+  title = \markup {\with-url #"https://en.wikipedia.org/wiki/Long,_Long_Ago" "Long, Long Ago"}
+  composer = \markup {\with-url #"https://en.wikipedia.org/wiki/Thomas_Haynes_Bayly" "Thomas Haynes Bayly"}
   poet = ""
   meter = ""
   piece = ""
-  opus = "Suzuki No. 1, Vol. 2"
+  opus = "Suzuki No. 10, Vol. 1"
   tagline = ""
 }
   \score {
