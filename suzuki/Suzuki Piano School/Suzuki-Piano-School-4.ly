@@ -300,17 +300,17 @@ globalF = {
   \key g \major
 %  \numericTimeSignature
   \time 2/2
-  \tempo "Allegro, ma non troppo" 2=40
+  \tempo "Allegro, ma non troppo" 2=80
 }
 
 scoreFRight = \relative c'' {
   \globalF
   % Music follows here.
   \repeat volta 2 {
-    <b, d g>2
-    \tuplet 3/2 { d8 g b d c a }
-    g4 g fs g a4. a8 b4. b8 d4 c b r
-    <b d g>2 \tuplet 3/2 { d8 g b } \tuplet 3/2 { d c a } g4 g fs g a4. a8 b4. b8
+    <b,-1 d-2 g-5>2\f
+    \tuplet 3/2 { d8-1(g-2 b-3 } \tuplet 3/2 { d-5 c-4 a-2 }
+    g4-1) g-3\p(fs-2 g-1 a4.-2) a8-1(b4.-2) b8-1\(d4-3 \afterGrace c\trill({c16 d)} b4\)\< r
+    <b d g>2\f \tuplet 3/2 { d8 g b } \tuplet 3/2 { d c a } g4 g fs g a4. a8 b4. b8
     d4 c b8(c cs d ds e) r e d c b a cs d r d c b a g fs e d c b a g fs g4. a8 b c cs d ds e r e d c b a ds e r e e cs a g fs4 \tuplet 3/2 { a'8 fs d } c4 \tuplet 3/2 { a'8 fs c } b4 \tuplet 3/2 { g'8 d b } g4 \tuplet 3/2 { d'8 b g } fs4 \tuplet 3/2 { a'8 fs d } c4 \tuplet 3/2 { a'8 fs c } b4 \tuplet 3/2 { g'8 d b } g4 \tuplet 3/2 { d'8 b g }
     d4 \tuplet 3/2 { d'8 b g } d4 \tuplet 3/2 { d'8 b g } d4 r r8 a' a a d4 cs d e g8 fs e4 r8 a, a a
     e'4 d <cs e> <d fs> <e a>8 g <d fs>4 r8 a' g fs fs e e e d a' g fs fs e e e d  a' g fs fs e r e e d r d d cs b a gs a b cs d4 cs d e <d g>8 fs <cs e>4 r8 a a a
@@ -330,8 +330,8 @@ scoreFLeft = \relative c' {
   \globalF
   % Music follows here.
   \repeat volta 2 {
-    <g, g'>2 r
-    r4 b' a g fs d g f e fs g8 g b d <g, g'>2 r
+    <g,-5 g'-1>2 r
+    r4 b'-1 a-2 g-1 fs-2 d-4 g-1 f-2 e-3 fs-2 g8-1 g-5 b-4 d-3 <g,-5 g'-1>2 r
     \clef treble
     r4 b'8 d a d g, d' fs, d' d, d' g, d' f, d' e, g fs a g4 r
     r <c, e a> r2 r4 <b d g> r2
