@@ -5,15 +5,15 @@
   dedication = ""
   title = ""
   subtitle = "Suzuki Piano School"
-  subsubtitle = "Volume 1"
+  subsubtitle = "Volume 2"
   instrument = "Piano"
   composer = ""
-  arranger = \markup {"Fingering: " \with-url "https://buschke.com" "Sven Buschke"}
+  arranger = \markup {"Fingering: " \with-url #"https://buschke.com" "Sven Buschke"}
   poet = ""
   meter = ""
   piece = ""
   opus = "No. 1"
-  copyright = \markup {"© Fingering, 03.05.2023: " \with-url "https://buschke.com" "Sven Buschke"}
+  copyright = \markup {"© Fingering, 03.05.2023: " \with-url #"https://buschke.com" "Sven Buschke"}
 %  tagline = ""
   % Remove default LilyPond tagline
   tagline = ##f
@@ -144,20 +144,20 @@ scoreBLeft = \relative c' {
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 globalC = {
-  \key c \major
+  \key g \major
   \numericTimeSignature
-  \time 4/4
-  \tempo "Andante" 4=100
+  \time 3/4
+  \tempo "Allegretto" 4=100
 }
 
 scoreCRight = \relative c'' {
-  \global
+  \globalC
   % Music follows here.
-
+  
 }
 
 scoreCLeft = \relative c' {
-  \global
+  \globalC
   % Music follows here.
 
 }
@@ -169,7 +169,7 @@ scoreCLeft = \relative c' {
   poet = ""
   meter = ""
   piece = ""
-  opus = "Suzuki No. 1, Vol. 2"
+  opus = "Suzuki No. 3, Vol. 2 / Op. 68 No. 10"
   tagline = ""
 }
   \score {
@@ -194,32 +194,37 @@ scoreCLeft = \relative c' {
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 globalD = {
-  \key c \major
+  \key g \major
   \numericTimeSignature
-  \time 4/4
+  \time 3/4
   \tempo "Andante" 4=100
 }
 
 scoreDRight = \relative c'' {
-  \global
+  \globalD
   % Music follows here.
-
+  \repeat volta 2 { d4-5 d-4 d-5 b-3 a8 b g4 a d c b2 a4 d c8 b a g e'4 c8 b a g fs4 e8 d fs4} \alternative {{ g2. } { g2. } }
+  \repeat volta 2 {
+    b4 e2 cs4 b8 cs a4 d e fs e8 d cs b a4 a' g8 fs e d b'4 g8 fs e d cs4 a cs d2.
+    d4 c8 b a4 b a8 b g4 c2 c8 b a2. d4 c8 b a g e'4 c8 b a g fs4 e8 d fs4 g2.
+  }
 }
 
 scoreDLeft = \relative c' {
-  \global
+  \globalD
   % Music follows here.
-
+  \repeat volta 2 { g4 fs d g2. g4 fs8 e fs d g4 g, d'8 c b4 r r c r r d2. } \alternative {{g,4 b8 c d4 } { g2.}}
+  \repeat volta 2 { g2 e4 a2. fs4 e d a2. fs4 r r g r r a'2 a,4 d d'8 c b a g2 fs4 g2. a4 fs g d d, d'8 c b4 r r c r r d2 d,4 g2. }
 }
 
 \bookpart {
 \header {
-  title = ""
-  composer = ""
-  poet = ""
+  title = "Minuet 1"
+  composer = "Johann Sebastian Bach"
+  poet = "aus: Klaviersuite in g-Moll"
   meter = ""
   piece = ""
-  opus = "Suzuki No. 1, Vol. 2"
+  opus = "Suzuki No. 4, Vol. 2 / BWV 822"
   tagline = ""
 }
   \score {
