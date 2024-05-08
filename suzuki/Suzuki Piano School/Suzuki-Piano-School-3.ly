@@ -5,7 +5,7 @@
   dedication = ""
   title = ""
   subtitle = "Suzuki Piano School"
-  subsubtitle = "Volume 1"
+  subsubtitle = "Volume 3"
   instrument = "Piano"
   composer = ""
   arranger = \markup {"Fingering: " \with-url "https://buschke.com" "Sven Buschke"}
@@ -244,32 +244,86 @@ scoreDLeft = \relative c' {
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 globalE = {
-  \key c \major
+  \key g \major
   \numericTimeSignature
-  \time 4/4
-  \tempo "Andante" 4=100
+  \time 2/4
+  \tempo "Allegro" 4=132
 }
 
 scoreERight = \relative c'' {
-  \global
+  \globalE
   % Music follows here.
-
+  \repeat volta 2 {
+    \partial 8
+    b16(c
+    d8-.) b a g fs e4(d8) a b c d a as4 b16(c d8) b a g fs e'4(d8) a b c d g r r
+  }
+  \partial 8
+  a16(b)
+  <a c>8 <a c> <a c> <a c>
+  <a c>16(d c b) a8 
+  a16(b)
+  <a c>8 <a c> <a c> <a c>
+  <a c>16(d c b) a8 a16 b
+  <a c>8 <a c>4 <g b>8
+  <g e'> <g e'>4 <g d'>8
+  a b c d g, r r 
+  a16(b)
+  <a c>8 <a c> <a c> <a c>
+  <a c>16(d c b) a8 
+  a16(b)
+  <a c>8 <a c> <a c> <a c>
+  <a c>16(d c b) a8 a16 b
+  <a c>8 <a c>4 <g b>8
+  <g e'> <g e'>4 <g d'>8
+  a b c d g, r r 
+  \bar "|."
 }
 
 scoreELeft = \relative c' {
-  \global
+  \globalE
   % Music follows here.
-
+  \repeat volta 2 {
+    \partial 8
+    r
+    g <b d> <b d> <b d>
+    d, <a' c> <a c> <a c>
+    d, <fs c'> <fs c'> <fs c'>
+    g <c d> <c d> <c d>
+    g <b d> <b d> <b d>
+    d, <a' c> <a c> <a c>
+    d, <fs c'> <fs c'> <fs c'>
+    <g b> d g,
+  }
+  \partial 8
+  r8
+  d d' d, d'
+  a a' d, d'
+  d,, d' d, d'
+  a a' d, d'
+  <fs, d'> <fs d'>4 <g d'>8
+  <c, c'> <c c'>4 <b b'>8
+  d <fs c'> d <fs c'>
+  <g b> d g, r
+  d d' d, d'
+  a a' d, d'
+  d,, d' d, d'
+  a a' d, d'
+  <fs, d'> <fs d'>4 <g d'>8
+  <c, c'> <c c'>4 <b b'>8
+  d <fs c'> d <fs c'>
+  <g b> d g,
+  \bar "|."
 }
 
 \bookpart {
 \header {
-  title = ""
-  composer = ""
+  title = "Ecossaise"
+  composer = \markup {\with-url #"https://es.wikipedia.org/wiki/Ludwig_van_Beethoven" "Ludwig van Beethoven"}
   poet = ""
   meter = ""
   piece = ""
-  opus = "Suzuki No. 1, Vol. 2"
+  opus = "Suzuki No. 5, Vol. 3"
   tagline = ""
 }
   \score {
@@ -346,26 +400,32 @@ scoreFLeft = \relative c' {
 globalG = {
   \key c \major
   \numericTimeSignature
-  \time 4/4
-  \tempo "Andante" 4=100
+  \time 6/8
+  \tempo "Allegretto" 4=132
 }
 
 scoreGRight = \relative c'' {
-  \global
+  \globalG
   % Music follows here.
-
+  \partial 8
+  d8(
+  g4. a16 g8 f) r d(g4. a16 g8 c)
 }
 
 scoreGLeft = \relative c' {
-  \global
+  \globalG
   % Music follows here.
-
+  \partial 8
+  r \clef treble
+  <g' b>4 <g b>8(<a c>) r r
+  <g b>4 <g b>8(<fs a>)r g(
+  <c, e>4.\(<c e>8\))
 }
 
 \bookpart {
 \header {
-  title = ""
-  composer = ""
+  title = "Sonatina"
+  composer = \markup {\with-url #"https://es.wikipedia.org/wiki/Wolfgang_Amadeus_Mozart" "Wolfgang Amadeus Mozart"}
   poet = ""
   meter = ""
   piece = ""
