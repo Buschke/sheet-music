@@ -309,7 +309,7 @@ scoreFRight = \relative c'' {
   \repeat volta 2 {
      \set fingeringOrientations = #'(left) <b,-1 d-2 g-5>2\f
      \override Fingering.direction = #DOWN \tuplet 3/2 { d8-1(g-2 b-3 } \tuplet 3/2 { d-5 c-4 a-2 }
-    g4-1) g-3\p(fs-2 g-1 a4.-2) a8-1(b4.-2) b8-1\(d4-3 \afterGrace c-2\trill({c16-1 d-3)} b4-2\)\< r
+    g4-1) g-3\p(fs-2 g-1 a4.-2) a8-1(b4.-2) <<{\override NoteHead.color = #red \override NoteHead.font-size = #-3 s8 s4 c32[d c d] c16[d] s4 \revert NoteHead.color \revert NoteHead.font-size}\\{b8-1\(d4-3 \afterGrace c-2\trill({c16-1[d-3])} b4-2\)}>>\< r
     <b d g>2\f \tuplet 3/2 { d8 g b } \tuplet 3/2 { d c a } g4 g fs g a4. a8 b4. b8
     d4 c b8(c cs d ds e) r e d c b a cs d r d c b a g fs e d c b a g fs g4. a8 b c cs d ds e r e d c b a ds e r e e cs a g fs4 \tuplet 3/2 { a'8 fs d } c4 \tuplet 3/2 { a'8 fs c } b4 \tuplet 3/2 { g'8 d b } g4 \tuplet 3/2 { d'8 b g } fs4 \tuplet 3/2 { a'8 fs d } c4 \tuplet 3/2 { a'8 fs c } b4 \tuplet 3/2 { g'8 d b } g4 \tuplet 3/2 { d'8 b g }
     d4 \tuplet 3/2 { d'8 b g } d4 \tuplet 3/2 { d'8 b g } d4 r r8 a' a a d4 cs d e g8 fs e4 r8 a, a a
