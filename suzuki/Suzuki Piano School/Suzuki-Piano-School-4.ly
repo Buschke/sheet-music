@@ -5,15 +5,15 @@
   dedication = ""
   title = ""
   subtitle = "Suzuki Piano School"
-  subsubtitle = "Volume 1"
+  subsubtitle = "Volume 4"
   instrument = "Piano"
   composer = ""
-  arranger = \markup {"Fingering: " \with-url "https://buschke.com" "Sven Buschke"}
+  arranger = \markup {"Fingering: " \with-url #"https://buschke.com" "Sven Buschke"}
   poet = ""
   meter = ""
   piece = ""
   opus = "No. 1"
-  copyright = \markup {"© Fingering, 03.05.2023: " \with-url "https://buschke.com" "Sven Buschke"}
+  copyright = \markup {"© Fingering, 03.05.2023: " \with-url #"https://buschke.com" "Sven Buschke"}
 %  tagline = ""
   % Remove default LilyPond tagline
   tagline = ##f
@@ -45,31 +45,34 @@ global = {
 
 globalA = {
   \key c \major
-  \numericTimeSignature
-  \time 4/4
-  \tempo "Andante" 4=100
+%  \numericTimeSignature
+  \time 6/8
+  \tempo "Allegro" 4=132
 }
 
 scoreARight = \relative c'' {
-  \global
+  \globalA
   % Music follows here.
-
+  g'4. 
 }
 
 scoreALeft = \relative c' {
-  \global
+  \globalA
   % Music follows here.
-
+  \clef treble
+  c8 e g c, e g
+  c,8 e g c, e g
+  c,8 e g c, e g
 }
 
 \bookpart {
 \header {
-  title = ""
-  composer = ""
+  title = "Rondo"
+  composer = \markup {\with-url #"" "Wolfgang Amadeus Mozart"}
   poet = ""
   meter = ""
   piece = ""
-  opus = "Suzuki No. 1, Vol. 2"
+  opus = "Suzuki No. 1, Vol. 4"
   tagline = ""
 }
   \score {
@@ -294,32 +297,89 @@ scoreELeft = \relative c' {
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 globalF = {
-  \key c \major
-  \numericTimeSignature
-  \time 4/4
-  \tempo "Andante" 4=100
+  \key g \major
+%  \numericTimeSignature
+  \time 2/2
+  \tempo "Allegro, ma non troppo" 4=136
 }
 
 scoreFRight = \relative c'' {
-  \global
+  \globalF
   % Music follows here.
-
+  \repeat volta 2 {
+    <b, d g>2
+    \tuplet 3/2 { d8 g b d c a }
+    g4 g fs g a4. a8 b4. b8 d4 c b r
+    <b d g>2 \tuplet 3/2 { d8 g b } \tuplet 3/2 { d c a } g4 g fs g a4. a8 b4. b8 
+    d4 c b8(c cs d ds e) r e d c b a cs d r d c b a g fs e d c b a g fs g4. a8 b c cs d ds e r e d c b a ds e r e e cs a g fs4 \tuplet 3/2 { a'8 fs d } c4 \tuplet 3/2 { a'8 fs c } b4 \tuplet 3/2 { g'8 d b } g4 \tuplet 3/2 { d'8 b g } fs4 \tuplet 3/2 { a'8 fs d } c4 \tuplet 3/2 { a'8 fs c } b4 \tuplet 3/2 { g'8 d b } g4 \tuplet 3/2 { d'8 b g }
+    d4 \tuplet 3/2 { d'8 b g } d4 \tuplet 3/2 { d'8 b g } d4 r r8 a' a a d4 cs d e g8 fs e4 r8 a, a a
+    e'4 d <cs e> <d fs> <e a>8 g <d fs>4 r8 a' g fs fs e e e d a' g fs fs e e e d  a' g fs fs e r e e d r d d cs b a gs a b cs d4 cs d e <d g>8 fs <cs e>4 r8 a a a
+    e'4 d <cs e> <d fs> <e a>8 g <d fs>4 r8 a' g fs fs e e e d a' g fs fs e e e d a' g fs fs e g e e d d cs \tuplet 3/2 { a' g fs } \tuplet 3/2 { e d cs } \tuplet 3/2 { b a g } \tuplet 3/2 { fs e d } cs4 cs cs cs
+    \tuplet 3/2 { d8 e fs } \tuplet 3/2 { g a b } \tuplet 3/2 { cs d e } \tuplet 3/2 { fs g a }
+    g4 g g g \tuplet 3/2 { a8 g fs } \tuplet 3/2 { e d cs } \tuplet 3/2 { b a g } \tuplet 3/2 { fs e d }
+    c4 c c c
+    \tuplet 3/2 { b8 e g } \tuplet 3/2 { b g e } d4 e \tuplet 3/2 { d8 e fs } \tuplet 3/2 { g a b } \tuplet 3/2 { cs d e } \tuplet 3/2 { fs g a }
+    <g b>1 <fs a>4 <e g> <d fs> <cs e>
+    \tuplet 3/2 { a'8 g fs } \tuplet 3/2 { e d cs } \tuplet 3/2 { b a g } \tuplet 3/2 { fs e d }
+    <g b>1 <d fs>4 <e g> <d fs> <cs e> d \tuplet 3/2 { a''8 fs d } cs4 \tuplet 3/2 { g'8 e cs } d4
+    \tuplet 3/2 { a8 fs d } cs4 \tuplet 3/2 { g'8 e cs } d4 \tuplet 3/2 { g8 e cs } d4 \tuplet 3/2 { g8 e cs } d4 <fs a d>4 4 r
+  }
 }
 
 scoreFLeft = \relative c' {
-  \global
+  \globalF
   % Music follows here.
-
+  \repeat volta 2 {
+    <g, g'>2 r
+    r4 b' a g fs d g f e fs g8 g b d <g, g'>2 r
+    \clef treble
+    r4 b'8 d a d g, d' fs, d' d, d' g, d' f, d' e, g fs a g4 r
+    r <c, e a> r2 r4 <b d g> r2
+    \clef bass
+    c4 r d r g, r r2
+    r4 <c, e a> r2
+    r4 <cs e a> r2
+    \tuplet 3/2 { d8 fs a } \tuplet 3/2 {  d, fs a } \tuplet 3/2 {  d, fs a } \tuplet 3/2 {  d, fs a }
+    \tuplet 3/2 { d, g b } \tuplet 3/2 { d, g b } \tuplet 3/2 { d, g b } \tuplet 3/2 { d, g b }
+    \tuplet 3/2 { d, fs a } \tuplet 3/2 {  d, fs a } \tuplet 3/2 {  d, fs a } \tuplet 3/2 {  d, fs a }
+    \tuplet 3/2 { d, g b } \tuplet 3/2 { d, g b } \tuplet 3/2 { d, g b } \tuplet 3/2 { d, g b }
+    \tuplet 3/2 { d, fs a } \tuplet 3/2 {  d, g a } \tuplet 3/2 {  d, fs a } \tuplet 3/2 {  d, g a }
+    <d, fs>4 r r2
+    \clef treble
+    fs'8 a g a fs a cs, a' d, a' cs, a' a,4  r
+    g'8 a fs a e a d, a' cs, a' d, a' d,4 r
+    <g b>2 <fs a>4 r
+    <g b>2 <fs a>4 r
+    r g r gs a a, r2
+    fs'8 a g a fs a cs, a' d, a' cs, a' a,4  r
+    g'8 a fs a e a d, a' cs, a' d, a' d,4 r
+    <g b>2 <fs a>4 r
+    <g b>2 <fs a>4 r
+    \clef bass
+    r g, a a, d r r2
+    \tuplet 3/2 { e8 g a } \tuplet 3/2 { e g a } \tuplet 3/2 { e g a } \tuplet 3/2 { e g a } <d, fs>4 r r2
+    \tuplet 3/2 { cs8 e a } \tuplet 3/2 { cs, e a } \tuplet 3/2 { cs, e a } \tuplet 3/2 { cs, e a } d,4 r r2
+    \tuplet 3/2 { d8 fs a } \tuplet 3/2 { d, fs a } \tuplet 3/2 { d, fs a } \tuplet 3/2 { d, fs a }
+    g,2 a4 a <d fs> r r2
+    \clef treble
+    \tuplet 3/2 { r8 g a } \tuplet 3/2 { b cs d } \tuplet 3/2 { e fs g } \tuplet 3/2 { a b cs } d4 g, a a, r1
+    \clef bass
+    \tuplet 3/2 { r8 g, a } \tuplet 3/2 { b cs d } \tuplet 3/2 { e fs g } \tuplet 3/2 { a b cs } d4 g, a a,
+    \tuplet 3/2 { d8 fs a } \tuplet 3/2 { d, fs a } \tuplet 3/2 { d, g a } \tuplet 3/2 { d, g a }
+    \tuplet 3/2 { d,8 fs a } \tuplet 3/2 { d, fs a } \tuplet 3/2 { d, g a } \tuplet 3/2 { d, g a }
+    \tuplet 3/2 { d, fs a } \tuplet 3/2 { d, g a } \tuplet 3/2 { d, fs a } \tuplet 3/2 { d, g a }
+    <d, fs>4 <d, d'> <d d'> r
+  }
 }
 
 \bookpart {
 \header {
-  title = ""
-  composer = ""
+  title = "Sonata"
+  composer = \markup {\with-url #"" "Ludwig van Beethoven"}
   poet = ""
   meter = ""
   piece = ""
-  opus = "Suzuki No. 1, Vol. 2"
+  opus = "Suzuki No. 6, Vol. 4 / Op. 49 Nr. 2"
   tagline = ""
 }
   \score {
