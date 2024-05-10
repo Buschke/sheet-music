@@ -5,7 +5,7 @@
   dedication = ""
   title = ""
   subtitle = "Suzuki Piano School"
-  subsubtitle = "Volume 1"
+  subsubtitle = "Volume 6"
   instrument = "Piano"
   composer = ""
   arranger = \markup {"Fingering: " \with-url "https://buschke.com" "Sven Buschke"}
@@ -195,31 +195,53 @@ scoreCLeft = \relative c' {
 
 globalD = {
   \key c \major
-  \numericTimeSignature
+%  \numericTimeSignature
   \time 4/4
-  \tempo "Andante" 4=100
+  \tempo "Allegro" 4=130
 }
 
 scoreDRight = \relative c'' {
-  \global
+  \globalD
   % Music follows here.
-
+  \phrasingSlurDotted\=1\(c2-1 e4-3 g \phrasingSlurSolid \=2\(b,4.-1
+   c16 d\=2\) c4 \=1\) r
+   a'2-3 g4-2 c <<{\override NoteHead.color = #red \override NoteHead.font-size = #-3 s4 g32 f g f e16 f}\\{g4-3\(f8\trill e16f\)}>> e4-2 r
+   a,8-1 b16 c d-1 e f g a g f e d c-4 b a
+   g8-1 a16 b c-1 d e f g f e d c b-4 a g
+   f8 g16 a b-1 c d e f e d c b a-4 g f
+   e8 f16 g a-1 b c d e d c b a g-4 f e
+   d8 e16 f g-1 a b cs d a-1 b cs d-1\< e f g a b c b a g-1 f-3 e f g a g f e d-1 c-2
+   b8\f g' e c d g e c
+   d4 <b d g> g r
+   
 }
 
 scoreDLeft = \relative c' {
-  \global
+  \globalD
   % Music follows here.
-
+  \clef treble
+  c8-5 g' e g c, g' e g
+  d-4 g f g c, g' e g 
+  c, a' f-2 a c, g' e g
+  b, g' d-3 g c, g' e g
+  f4 r r \clef bass <f,-5 c'-1>
+  <e-5 c'-1> r r <e-5 c'-2>
+  <d c'> r r <d b'>
+  <c c'> r r <c-5 e-3>
+  <f-2 a-1>1
+  f4.-3 g8 a4. fs8-2
+  g,16 b-4 d-2 g g, c-3 e-2 g g, b d g g, c e g
+  g,4 g' g, r
 }
 
 \bookpart {
 \header {
-  title = ""
-  composer = ""
+  title = "Sonata"
+  composer = \markup {\with-url #"" "Wolfgang Amadeus Mozart"}
   poet = ""
   meter = ""
   piece = ""
-  opus = "Suzuki No. 1, Vol. 2"
+  opus = "Suzuki No. 4, Vol. 6 / K 545"
   tagline = ""
 }
   \score {
