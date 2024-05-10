@@ -53,7 +53,11 @@ globalA = {
 scoreARight = \relative c'' {
   \globalA
   % Music follows here.
-  g'4.
+  g'4.-2\p g8-.\< g-. g-. c4\!\( g8 e\) r r
+  g4-5\(e8 \acciaccatura {d} c b-2 c-3 d4-4\> b8 g\!\) r r
+  g'4.-2 g8-.\< g-. g-. c4\!\( g8 e\) r r
+  g4-5\(e8 \acciaccatura {d} c b-2 c-3 d4-4\> b g\!\) r r
+
 }
 
 scoreALeft = \relative c' {
@@ -61,8 +65,17 @@ scoreALeft = \relative c' {
   % Music follows here.
   \clef treble
   c8 e g c, e g
-  c,8 e g c, e g
-  c,8 e g c, e g
+  c, e g c, e g
+  c, e g c, e g
+  g,-5 d' g g, d' g
+  c, e g c, e g
+  c, e g c, e g
+  c, e g g, d' g
+  \clef bass
+  c,,-5 e-4 g-2 c g e
+  <<{c2.}\\{c8 e g c g e}>>
+  <<{c2.}\\{c8 e g c g e}>>
+  <<{c2.}\\{c8 e g c g e}>>
 }
 
 \bookpart {
