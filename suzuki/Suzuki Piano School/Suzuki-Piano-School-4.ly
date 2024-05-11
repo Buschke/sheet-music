@@ -56,15 +56,25 @@ scoreARight = \relative c'' {
   g'4.-2\p g8-.\< g-. g-. c4\!\( g8 e\) r r
   g4-5\(e8 \acciaccatura {d} c b-2 c-3 d4-4\> b8 g\!\) r r
   g'4.-2 g8-.\< g-. g-. c4\!\( g8 e\) r r
-  g4-5\(e8 \acciaccatura {d} c b-2 c-3 d4-4\> b g\!\) r r
-
+  g4-5\(e8 \acciaccatura {e} d\> c d c4\!\) r8 r4 r8
+  g'4.-2\f g8-. g-. g-. c4\( g8 e\) r r
+  g4-5\(e8 \acciaccatura {d} c b-2 c-3 d4-4\> b8 g\!\) r r
+  \appoggiatura {g32 c-2 e-4} g4.\(\f fs16-2 g fs g fs g c4 g8 e\) r r
+  g4-5\(e8 \acciaccatura {e} d\> c d c4\!\) r8 r4 r8
+  g8\p\(f'\) f-.-4 g16\<\(f e d c b-2\! c8-1 c'-5\) c-.-4 c16-5\>\(b a g f e-2 g8-4\! f\) f-. g16-5\(f e d c b-2 c-3\< g c-2 e-4 g e-3 d8-.\) e-. f-.
+  g4.\(\f fs16-2 g fs g fs g c4 g8 e\) r r
+  g4-5\(e8 \acciaccatura {e} d\> c d c4\!\) r8 \appoggiatura {e8} d\(c d e4\) r8
+  \appoggiatura {c-3}b-.\f a-. b-.
+  c-. <e, g c>8-. 8-. 4 r8
+  \bar "|."
 }
 
 scoreALeft = \relative c' {
   \globalA
   % Music follows here.
   \clef treble
-  c8 e g c, e g
+  \override Fingering.direction=#DOWN
+  c8-4_\markup{\italic "legato"} e g c, e g
   c, e g c, e g
   c, e g c, e g
   g,-5 d' g g, d' g
@@ -76,6 +86,22 @@ scoreALeft = \relative c' {
   <<{c2.}\\{c8 e g c g e}>>
   <<{c2.}\\{c8 e g c g e}>>
   <<{c2.}\\{c8 e g c g e}>>
+  <<{g,2.-5}\\{g8 b-4 d g d b}>>
+  <<{c2.-5}\\{c8 e-4 g c g e}>>
+  <<{c2.}\\{c8 e g c g e}>>
+  <<{c4.-5 g}\\{c8 e-3 g g, d'-2 g}>>
+  c,-.-5 g'-.-1 f-. e-.-1 d-.-2 c-.-3
+  <g g'>4 8 r <g' d' f>8 8
+  <g c e>4 r8 r8 8 8 <g b d>4 r8 r8 <g d' f>8 8
+  <g c e>4 <g c>8-. <g b>4 r8
+  <<{c,2.}\\{c8 e g c g e}>>
+  <<{c2.}\\{c8 e g c g e}>>
+  <<{c4.-4 g}\\{c8 e g g, d' g}>>
+  <<{c,4.-4 g}\\{c8 e g g, d' g}>>
+  <<{c,4.-4 g}\\{c8 e g g, d' g}>>
+  c,,-.-5 e-.-4 g-.-2 c4 r8
+  \bar "|."
+    
 }
 
 \bookpart {
