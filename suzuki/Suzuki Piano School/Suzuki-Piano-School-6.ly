@@ -203,7 +203,7 @@ globalD = {
 scoreDRight = \relative c'' {
   \globalD
   % Music follows here.
-  \phrasingSlurDotted\=1\(c2-1 e4-3 g \phrasingSlurSolid \=2\(b,4.-1
+  \phrasingSlurDotted\=1\(c2-1\mp e4-3 g \phrasingSlurSolid \=2\(b,4.-1
    c16 d\=2\) c4 \=1\) r
    a'2-3 g4-2 c <<{\override NoteHead.color = #red \override NoteHead.font-size = #-3 s4 g32 f g f e16 f}\\{g4-3\(f8\trill e16f\)}>> e4-2 r
    a,8-1 b16 c d-1 e f g a g f e d c-4 b a
@@ -212,8 +212,11 @@ scoreDRight = \relative c'' {
    e8 f16 g a-1 b c d e d c b a g-4 f e
    d8 e16 f g-1 a b cs d a-1 b cs d-1\< e f g a b c b a g-1 f-3 e f g a g f e d-1 c-2
    b8\f g' e c d g e c
-   d4 <b d g> g r
-   
+   d4 <b d g> g-2 r
+   r1
+   d''8-5\(b\) g4.-1\(a16 b a8\) g-.
+   g8.\trill\(fs16\) fs4 r2
+   d8\(b\) g4.\(a16 b a8\) g-.
 }
 
 scoreDLeft = \relative c' {
