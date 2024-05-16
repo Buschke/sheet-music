@@ -128,7 +128,7 @@ scoreASoprano = \relative c'' {
   c^\markup{\column{\line{QFS\super{8}\sub{WL}}\line{I-IV-VII-III-VI-II-V-I}}} c b b a a g g
   \bar "||"
   e'^\markup{\column{\line{QFS\super{3}\sub{WL}}\line{I-IV-VII-III-VI-II-V-I}}} f d e c d b c
-  \bar "|."  
+  \bar "|."
 }
 
 scoreAAlto = \relative c' {
@@ -179,7 +179,7 @@ scoreAAlto = \relative c' {
   % KD^3_EL-I-IV-V-I
   c, c b c
   % KD^5_WL-I-IV-V-I
-  c c d e  
+  c c d e
   % KD^8_WL-I-IV-V-I
   e f d e
   % KD^3_WL-I-IV-V-I
@@ -209,7 +209,7 @@ scoreAAlto = \relative c' {
   e f d e c d b c
   % QFS^3_WL-I-IV-VII-III-VI-II-V-I
   g' a f g e f d e
-  \bar "|."  
+  \bar "|."
 }
 
 scoreATenor = \relative c' {
@@ -290,7 +290,7 @@ scoreATenor = \relative c' {
   g a f g e f d e
   % QFS^3_WL-I-IV-VII-III-VI-II-V-I
   c' c b b a a g g
-  \bar "|."  
+  \bar "|."
 }
 
 scoreABass = \relative c {
@@ -371,7 +371,7 @@ scoreABass = \relative c {
   c f b, e a, d g, c
   % QFS^3_WL-I-IV-VII-III-VI-II-V-I
   c f b, e a, d g, c
-  \bar "|."  
+  \bar "|."
 }
 
 scoreAVerse = \lyricmode {
@@ -381,7 +381,7 @@ scoreAVerse = \lyricmode {
 %   do so do do fa do do di do do so do do fa do do di do do di do
 %   do fa so do do fa so do do fa so do do fa so do do fa so do do fa so do do fa si do do fa si do do fa si do do fa si do do fa si do do fa si do
 %   do fa so do do fa so do do fa so do do fa so do do fa so do do fa so do
-%   do fa si mi la re so do do fa si mi la re so do do fa si mi la re so do do fa si mi la re so do do fa si mi la re so do do fa si mi la re so do  
+%   do fa si mi la re so do do fa si mi la re so do do fa si mi la re so do do fa si mi la re so do do fa si mi la re so do do fa si mi la re so do
 }
 
 scoreAFigBass = \figuremode {
@@ -471,7 +471,7 @@ scoreAFigBass = \figuremode {
   r4 r r r
   r4 r r r
   r4 r r r
-  r4 r r r  
+  r4 r r r
 }
 
 scoreAChordNames = \chordmode {
@@ -553,7 +553,7 @@ scoreAChordNames = \chordmode {
   c f b, e a, d g, c
   % QFS^3_WL-I-IV-VII-III-VI-II-V-I
   c f b, e a, d g, c
-  \bar "|."  
+  \bar "|."
 }
 
 scoreAChoirPart = \new ChoirStaff <<
@@ -678,7 +678,7 @@ scoreBSoprano = \relative c' {
   \bar "||"
   a4^\markup{\column{\line{KD\super{8}\sub{WL}}\line{I-IV-VII-I}}} a gs a
   \bar "||"
-  c^\markup{\column{\line{KD\super{3}\sub{WL}}\line{I-IV-VII-I}}} d \override NoteHead.color=#red \footnote #'(-1 . 3) "Springt runter wegen Parallelen" gs, \revert NoteHead.color a 
+  c^\markup{\column{\line{KD\super{3}\sub{WL}}\line{I-IV-VII-I}}} d \override NoteHead.color=#red \footnote #'(-1 . 3) "Springt runter wegen Parallelen" gs, \revert NoteHead.color a
   \bar "|.|"
   % KD I II65 V I
   e4^\markup{\column{\line{KD\super{5}\sub{EL}}\line{I-II\super{6/5}-V-I}}} f e e
@@ -705,7 +705,7 @@ scoreBSoprano = \relative c' {
   a^\markup{\column{\line{QFS\super{8}\sub{WL}}\line{I-IV-VII-III-VI-II-V-I}}} a gs gs f f e e
   \bar "||"
   cs'^\markup{\column{\line{QFS\super{3}\sub{WL}}\line{I-IV-VII-III-VI-II-V-I}}} d b c a b gs a
-  \bar "|."  
+  \bar "|."
 }
 
 scoreBAlto = \relative c' {
@@ -786,7 +786,7 @@ scoreBAlto = \relative c' {
   c d b c a b gs a
   % QFS^3_WL-I-IV-VII-III-VI-II-V-I
   e' f d e c d b c
-  \bar "|."  
+  \bar "|."
 }
 
 scoreBTenor = \relative c' {
@@ -867,7 +867,7 @@ scoreBTenor = \relative c' {
   e f d e c d b c
   % QFS^3_WL-I-IV-VII-III-VI-II-V-I
   a' a gs gs f f e e
-  \bar "|."  
+  \bar "|."
 }
 
 scoreBBass = \relative c {
@@ -948,7 +948,7 @@ scoreBBass = \relative c {
   a d gs, c f, b e, a
   % QFS^3_WL-I-IV-VII-III-VI-II-V-I
   a d gs, c f, b e, a
-  \bar "|."  
+  \bar "|."
 }
 
 scoreBVerse = \lyricmode {
@@ -1043,7 +1043,7 @@ scoreBFigBass = \figuremode {
   r4 r r r
   r4 r r r
   r4 r r r
-  r4 r r r  
+  r4 r r r
 }
 
 scoreBChordNames = \chordmode {
@@ -1125,7 +1125,7 @@ scoreBChordNames = \chordmode {
   a:min d:min gs c f b e a:min
   % QFS^3_WL-I-IV-VII-III-VI-II-V-I
   a:min d:min gs c f b e a:min
-  \bar "|."  
+  \bar "|."
 }
 
 scoreBChoirPart = \new ChoirStaff <<
@@ -1367,7 +1367,7 @@ scoreDChoirPart = \new ChoirStaff <<
     } { \voiceTwo \scoreDAlto }
   >>
   \new Lyrics \with {
-    \override VerticalAxisGroup #'staff-affinity = #CENTER
+    \override VerticalAxisGroup.staff-affinity = #CENTER
   } \lyricsto "soprano" \scoreDVerse
   \new Staff \with {
     midiInstrument = "choir aahs"
@@ -1380,7 +1380,7 @@ scoreDChoirPart = \new ChoirStaff <<
     } { \voiceOne \scoreDTenor }
     \new Voice = "bass" \with {
       \consists "Ambitus_engraver"
-      \override Ambitus #'X-offset = #2.0
+      \override Ambitus.X-offset = #2.0
     } { \voiceTwo \scoreDBass }
   >>
 >>
