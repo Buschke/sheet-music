@@ -567,7 +567,7 @@ scoreAChoirPart = \new ChoirStaff <<
     } { \voiceOne \scoreASoprano }
     \new Voice = "alto" \with {
       \consists "Ambitus_engraver"
-      \override Ambitus #'X-offset = #2.0
+      \override Ambitus.X-offset = #2.0
     } { \voiceTwo \scoreAAlto }
   >>
   \new Lyrics \with {
@@ -831,7 +831,7 @@ scoreBTenor = \relative c' {
   % KD^3_WL-I-IV-V-I
   a a gs a
   % KD^5_EL-I-IV-V-I
-  a4 a b e
+  a4 a b c
   % KD^8_EL-I-IV-V-I
   c d b c
   % KD^3_EL-I-IV-V-I
