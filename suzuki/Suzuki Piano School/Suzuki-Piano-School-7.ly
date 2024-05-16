@@ -54,11 +54,11 @@ globalA = {
 ATemaRight = {
   \repeat volta 2 {
 %    cs8.^\markup { \large "Andante grazioso" }\p^\markup { \huge "TEMA" }( d16) cs8 e4 e8
-    cs8.^\markup { \huge "TEMA" }( d16) cs8 e4 e8
-    b8.( cs16) b8 d4 d8 a4 a8 b4 b8
-    cs4 << { e16( d) cs4( b8) } \\ { b8 a4( gs8) } >>
+    cs8.-2^\markup { \huge "TEMA" }( d16) cs8 e4-4 e8-5
+    b8.-2( cs16) b8 d4-4 d8-5 a4-1 a8 b4 b8
+    cs4-3 << { e16-5( d) cs4-34( b8-3) } \\ { b8 a4( gs8) } >>
     cs8.( d16) cs8 e4 e8 b8.( cs16) b8 d4 d8
-    a4 b8 cs4 <fs, b d>8\sf <e a cs>4\p <d e gs b>8 <cs e a>4 r8
+    a4 b8 cs4 <fs,-1 b-3 d-5>8\sf <e-1 a-3 cs-5>4\p <d-1 e-1 gs-2 b-4>8 <cs-1 e-2 a-5>4 r8
   }
   \repeat volta 2 {
     e'8.( fs16) e8 fs4 fs8
@@ -83,7 +83,7 @@ AVarIRight = {
   \tempo "Moderato" 4=92
   \time 6/8
    \repeat volta 2 { \override Voice.TextScript #'padding = #3.0
- bs16_\p^\markup { \huge "VAR.I." } cs r cs( bs cs) ds( e) r e( fs e)
+ bs16-2_\p^\markup { \huge "VAR.I." } cs r cs( bs cs) ds( e) r e( fs e)
  e16( b!) r b( as b) cs( d!) r d( e d)
  d16( a!) r a( gs a) as( b) r b( as b)
  bs( cs bs cs e d cs b a! gs fs e)
@@ -312,17 +312,17 @@ scoreARight = \relative c'' {
 ATemaLeft = { \repeat volta 2 {
     <<
       {
-        e4 e8 e4 e8 e4 e8 e4 e8 e4 e8 e4 e8 e4 s2
-        e4 e8 e4 e8 e4 e8 e4 e8 e4 e8 e4 s8 s4 e,,8 a4 r8
+        e4-1 e8 e4-1 e8-1 e4-1 e8 e4-1 e8-1 e4-1 e8 e4 e8 e4-1 s2
+        e4-1 e8 e4-1 e8-1 e4-1 e8 e4-1 e8-1 e4-1 e8-1 e4-1 s8 s4 e,,8 a4 r8
       } \\
       {
-        a'8.\p( b16) a8 cs4 cs8 gs8.( a16) gs8 b4 b8 fs4 fs8 gs4 gs8 a4 d,8 e4.
-        a8.( b16) a8 cs4 cs8 gs8.( a16) gs8 b4 b8 fs4 gs8 a4 d,8\sf e4\p s2
+        a'8.-5\p( b16) a8 cs4-3 cs8-3 gs8.-5( a16) gs8 b4-3 b8-2 fs4-5 fs8 gs4 gs8 a4-3 d,8-5 e4.-4
+        a8.-5( b16) a8 cs4-3 cs8-2 gs8.( a16) gs8 b4 b8 fs4-5 gs8-4 a4-3 d,8-2\sf e4-1\p s2
       }
     >>
   }
   \repeat volta 2 {
-    a8( cs e a, d fs a, d fs a, cs e)
+    a8-5( cs e a, d fs a, d fs a, cs e)
     <a, cs>4\sf r8 <gs d'>4\sf r8 <a cs>4\sf <fs ds'>8 <e e'>4.
     <<
       { e'4 e8 e4 e8 e4 e8 e4 e8 e4 e8 e4 s8 s4 e,,8 a4. } \\
