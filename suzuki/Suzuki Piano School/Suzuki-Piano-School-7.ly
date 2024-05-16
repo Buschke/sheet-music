@@ -29,7 +29,7 @@
   \context {
     \Voice
     \consists "Melody_engraver"
-    \override Stem #'neutral-direction = #'()
+    \override Stem.neutral-direction = #'()
   }
 }
 
