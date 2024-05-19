@@ -1101,6 +1101,7 @@ scoreBVerse = \lyricmode {
 
 scoreBChordNames = \chordmode {
   \globalB
+  \germanChords
   % Chords follow here.
   a:min e:min a:min d:min a:min d:min gs:dim/b a
   a:min e:min d:min a:min d:min a:min e:min a:min
