@@ -50,7 +50,7 @@ scoreATenorVoice = \relative c' {
   r2 c8. c16 c8 c c4(bf2) a8 a d4(c) c r
   f8.\p f16 f8 f f4(e) f r r2
   c2\f c4 r8 f
-  f4 e8 e f4 f, c' f8 f16(ef) d4 \afterGrace ef {c8}
+  f4 e8 e f4 f, c' f8 f16(ef) d4 ef
   c4 c8 c c4 d8 ef16(f)
   g8.(ef16) c8 c c4 c
   d\p bf bf4. bf8 bf4 a16(bf) c8 d(c) c4
