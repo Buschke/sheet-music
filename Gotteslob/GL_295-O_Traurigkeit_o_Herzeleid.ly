@@ -243,23 +243,37 @@ scoreBChordsPart = \new ChordNames \scoreBChordNamesChords
 }
 
 biciniumA = { fs4 d e2 r4\breathe}
-
 biciniumB = { c d d c2 r4\breathe}
-
 biciniumC = { fs4 d e2 r4\breathe}
-
 biciniumD = { fs4 d e2 r4\breathe}
-
 biciniumE = { fs4 d e2 r4\breathe}
 
 codettaOneSA = {fs4 c ds e\breathe}
+codettaOneSC = {fss4 c ds e\breathe}
+codettaOneSD = {fss4 c ds e\breathe}
+codettaOneSE = {fss4 c ds e\breathe}
 codettaOneTA = {d4 a b g\breathe}
-codettaTwoAA = {css4 e e e\breathe}
-codettaTwoBA = {css4 e e e\breathe}
+codettaOneTC = {d4 a b g\breathe}
+codettaOneTD = {d4 a b g\breathe}
+codettaOneTE = {d4 a b g\breathe}
+
 codettaTwoSA = {cs,4 e' fs g\breathe}
+codettaTwoSC = {cs,4 e' fs g\breathe}
+codettaTwoSD = {cs,4 e' fs g\breathe}
+codettaTwoSE = {cs,4 e' fs g\breathe}
+
 codettaTwoAA = {as4 a' b b\breathe}
+codettaTwoAC = {css4 e e e\breathe}
+codettaTwoAD = {css4 e e e\breathe}
+codettaTwoAE = {css4 e e e\breathe}
+
 codettaTwoTA = {a4 c ds e\breathe}
 codettaTwoBA = {a'4 a b e,\breathe}
+
+codettaTwoBA = {css4 e e e\breathe}
+codettaTwoBC = {css4 e e e\breathe}
+codettaTwoBD = {css4 e e e\breathe}
+codettaTwoBE = {css4 e e e\breathe}
 
 codettaVerseOneA = \lyricmode {
   Da da da da
@@ -413,17 +427,50 @@ bassE = {
 }
 
 adDuxTwoSA = {d'2 \sopranBassCFA \sopranBassCFB}
+adDuxTwoSC = {d'2 \sopranBassCFA \sopranBassCFB}
+adDuxTwoSD = {d'2 \sopranBassCFA \sopranBassCFB}
+adDuxTwoSE = {d'2 \sopranBassCFA \sopranBassCFB}
+
 adComesTwoSA = \transpose e b {e'2 \altoA \altoB}
+adComesTwoSC = \transpose e b {e'2 \altoA \altoB}
+adComesTwoSD = \transpose e b {e'2 \altoA \altoB}
+adComesTwoSE = \transpose e b {e'2 \altoA \altoB}
+
 adDuxTwoTA = {b2 \tenorBassCFA \tenorBassCFB}
-adComesTwoTA = \transpose e b {g2 e4 b, d2 r4 b,4 b, c d2 r4}
-adComesTwoBA = \transpose e b, {e2 \bassA b,4 e a, d2 r4}
+adDuxTwoTC = {b2 \tenorBassCFA \tenorBassCFB}
+adDuxTwoTD = {b2 \tenorBassCFA \tenorBassCFB}
+adDuxTwoTE = {b2 \tenorBassCFA \tenorBassCFB}
+
 comesTwoAA = \transpose e b {b2 \cfAMOne \cfB}
+comesTwoAC = \transpose e b {b2 \cfAMOne \cfB}
+comesTwoAD = \transpose e b {b2 \cfAMOne \cfB}
+comesTwoAE = \transpose e b {b2 \cfAMOne \cfB}
+
+adComesTwoTA = \transpose e b {g2 e4 b, d2 r4 b,4 b, c d2 r4}
+adComesTwoTC = \transpose e b {g2 e4 b, d2 r4 b,4 b, c d2 r4}
+adComesTwoTD = \transpose e b {g2 e4 b, d2 r4 b,4 b, c d2 r4}
+adComesTwoTE = \transpose e b {g2 e4 b, d2 r4 b,4 b, c d2 r4}
+
+adComesTwoBA = \transpose e b, {e2 \bassA b,4 e a, d2 r4}
+adComesTwoBC = \transpose e b, {e2 \bassA b,4 e a, d2 r4}
+adComesTwoBD = \transpose e b, {e2 \bassA b,4 e a, d2 r4}
+adComesTwoBE = \transpose e b, {e2 \bassA b,4 e a, d2 r4}
 
 scoreCSoprano = \relative c'' {
   \global
   % Music follows here.
   b2 \cfAllMOne r2\fermata \bar "||"
-  b'2^"Dux 1a S" \cfAMOne \cfB \breathe a'2^"Bicinium 1a ST" \biciniumA \biciniumB \breathe^"Codetta 1a ST" \codettaOneSA \breathe^"ad Dux 2a BST" \adDuxTwoSA \breathe^"Ad Comes 2a SATB" \adComesTwoSA \breathe^"Codetta 2a SATB" \codettaTwoSA
+  % Part a, b
+  b'2^"Dux 1ab S" \cfAMOne \cfB \breathe a'2^"Bicinium 1ab ST" \biciniumA \biciniumB \breathe^"Codetta 1ab ST" \codettaOneSA \breathe^"ad Dux 2ab BST" \adDuxTwoSA \breathe^"Ad Comes 2ab SATB" \adComesTwoSA \breathe^"Codetta 2ab SATB" \codettaTwoSA
+  % Part c
+  \fermata^"Dux 1c S"
+  \cfC \breathe a'2^"Bicinium 1b ST" \biciniumC \breathe^"Codetta 1c ST" \codettaOneSC \breathe^"ad Dux 2c BST" \adDuxTwoSC \breathe^"Ad Comes 2c SATB" \adComesTwoSC \breathe^"Codetta 2c SATB" \codettaTwoSC
+  % Part d
+  \fermata^"Dux 1d S"
+  \cfD \breathe a'2^"Bicinium 1d ST" \biciniumD \breathe^"Codetta 1d ST" \codettaOneSD \breathe^"ad Dux 2d BST" \adDuxTwoSD \breathe^"Ad Comes 2d SATB" \adComesTwoSD \breathe^"Codetta 2d SATB" \codettaTwoSD
+  % Part e
+  \fermata^"Dux 1e S"
+  \cfE \breathe a'2^"Bicinium 1e ST" \biciniumE \breathe^"Codetta 1e ST" \codettaOneSE \breathe^"ad Dux 2e BST" \adDuxTwoSE \breathe^"Ad Comes 2e SATB" \adComesTwoSE \breathe^"Codetta 2e SATB" \codettaTwoSE
 }
 
 altoAll = {
@@ -438,7 +485,17 @@ scoreCAlto = \relative c' {
   \global
   % Music follows here.
   e2 \altoAll r2\fermata \bar "||"
-  r2 \cfRestA \cfRestB \breathe r2 \cfRestA \cfRestB \breathe \codettaRestA \breathe r2 \cfRestA \cfRestB \breathe^"Comes 2a ASTB" \comesTwoAA \breathe^"Codetta 2a ASTB" \codettaTwoAA
+  % Part a, b
+  r2 \cfRestA \cfRestB \breathe r2 \cfRestA \cfRestB \breathe \codettaRestA \breathe r2 \cfRestA \cfRestB \breathe^"Comes 2ab ASTB" \comesTwoAA \breathe^"Codetta 2ab ASTB" \codettaTwoAA
+  % Part c
+  \fermata
+  \cfRestC \breathe \cfRestC \breathe \codettaRestC \breathe \cfRestC \breathe^"Comes 2c ASTB" \comesTwoAC \breathe^"Codetta 2c ASTB" \codettaTwoAC  
+  % Part d
+  \fermata
+  \cfRestD \breathe \cfRestD \breathe \codettaRestD \breathe \cfRestD \breathe^"Comes 2d ASTB" \comesTwoAD \breathe^"Codetta 2d ASTB" \codettaTwoAD  
+  % Part e
+  \fermata
+  \cfRestE \breathe \cfRestE \breathe \codettaRestE \breathe \cfRestE \breathe^"Comes 2e ASTB" \comesTwoAE \breathe^"Codetta 2e ASTB" \codettaTwoAE  
 }
 
 tenorAll = {
@@ -458,7 +515,14 @@ scoreCTenor = \relative c' {
   \global
   % Music follows here.
   g2 \tenorAll r2\fermata \bar "||"
-  r2 \cfRestA \cfRestB \breathe fs''2^"Comes 1a TS" \transpose e b \cfAMOne \transpose e b \cfB \breathe^"Codetta 1a ST" \codettaOneTA \breathe^"ad Dux 2a BST" \adDuxTwoTA \breathe^"Ad Comes 2a TSAB" \adComesTwoTA \breathe^"Codetta 2a TSAB" \codettaTwoTA
+  % Part a, b
+  r2 \cfRestA \cfRestB \breathe fs''2^"Comes 1a TS" \transpose e b {b2 \cfAMOne \cfB} \breathe^"Codetta 1a ST" \codettaOneTA \breathe^"ad Dux 2a BST" \adDuxTwoTA \breathe^"Ad Comes 2a TSAB" \adComesTwoTA \breathe^"Codetta 2a TSAB" \codettaTwoTA
+  % Part c
+  \cfRestC \breathe fs''2^"Comes 1c TS" \transpose e b \cfC \breathe^"Codetta 1c ST" \codettaOneTC \breathe^"ad Dux 2c BST" \adDuxTwoTC \breathe^"Ad Comes 2c TSAB" \adComesTwoTC \breathe^"Codetta 2c TSAB" \codettaTwoTC
+  % Part d
+  \cfRestD \breathe fs''2^"Comes 1d TS" \transpose e b \cfD \breathe^"Codetta 1d ST" \codettaOneTD \breathe^"ad Dux 2d BST" \adDuxTwoTD \breathe^"Ad Comes 2d TSAB" \adComesTwoTD \breathe^"Codetta 2d TSAB" \codettaTwoTD
+  % Part e
+  \cfRestE \breathe fs''2^"Comes 1e TS" \transpose e b \cfE \breathe^"Codetta 1e ST" \codettaOneTE \breathe^"ad Dux 2e BST" \adDuxTwoTE \breathe^"Ad Comes 2e TSAB" \adComesTwoTE \breathe^"Codetta 2e TSAB" \codettaTwoTE
 }
 
 bassAll = {
@@ -473,7 +537,14 @@ scoreCBass = \relative c {
   \global
   % Music follows here.
   e,2 \bassAll r2\fermata \bar "||"
+  % Part a, b
   r2 \cfRestA \cfRestB \breathe r2 \cfRestA \cfRestB \breathe \codettaRestA \breathe b'2^"Dux 2a BST" \cfAMOne \cfB \breathe^"Ad Comes 2a BAST" \adComesTwoBA\breathe^"Codetta 2a BSAT" \codettaTwoBA
+  % Part c
+  \cfRestC \breathe \cfRestC \breathe \codettaRestC \breathe b'2^"Dux 2c BST" \cfC \breathe^"Ad Comes 2c BAST" \adComesTwoBC \breathe^"Codetta 2c BSAT" \codettaTwoBC
+  % Part d
+  \cfRestD \breathe \cfRestD \breathe \codettaRestD \breathe b'2^"Dux 2d BST" \cfD \breathe^"Ad Comes 2d BAST" \adComesTwoBD \breathe^"Codetta 2d BSAT" \codettaTwoBD
+  % Part e
+  \cfRestE \breathe \cfRestE \breathe \codettaRestE \breathe b'2^"Dux 2e BST" \cfE \breathe^"Ad Comes 2e BAST" \adComesTwoBE \breathe^"Codetta 2e BSAT" \codettaTwoBE
 }
 
 scoreCVerse = \lyricmode {
