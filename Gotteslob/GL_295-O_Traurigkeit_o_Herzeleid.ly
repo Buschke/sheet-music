@@ -137,7 +137,7 @@ chordsAMOne = \chordmode {
 }
 
 chordsB = \chordmode {
-  b4 e:m a:m d2 s4
+  b4 e:m a:m d2:m s4
 }
 
 chordsC = \chordmode {
@@ -244,7 +244,7 @@ scoreBChordsPart = \new ChordNames \scoreBChordNamesChords
 
 biciniumA = { fs4 d e2 r4\breathe}
 
-biciniumB = { fs4 d e2 r4\breathe}
+biciniumB = { c d d c2 r4\breathe}
 
 biciniumC = { fs4 d e2 r4\breathe}
 
@@ -252,10 +252,18 @@ biciniumD = { fs4 d e2 r4\breathe}
 
 biciniumE = { fs4 d e2 r4\breathe}
 
-codettaOneA = {css4 e e e\breathe}
-codettaTwoA = {css4 e e e\breathe}
+codettaOneSA = {fs4 c ds e\breathe}
+codettaOneTA = {d4 a b g\breathe}
+codettaTwoAA = {css4 e e e\breathe}
+codettaTwoBA = {css4 e e e\breathe}
+codettaTwoSA = {cs,4 e' fs g\breathe}
+codettaTwoAA = {as4 a' b b\breathe}
+codettaTwoTA = {a4 c ds e\breathe}
+codettaTwoBA = {a'4 a b e,\breathe}
 
-codettaVerseOneA = \lyricmode {Da da da da}
+codettaVerseOneA = \lyricmode {
+  Da da da da
+}
 codettaVerseOneB = \codettaVerseOneA
 codettaVerseOneC = \codettaVerseOneA
 codettaVerseOneD = \codettaVerseOneA
@@ -267,17 +275,17 @@ codettaVerseTwoC = \codettaVerseOneA
 codettaVerseTwoD = \codettaVerseOneA
 codettaVerseTwoE = \codettaVerseOneA
 
-codettaOneB = {\codettaOneA}
-codettaTwoB = {\codettaTwoA}
-
-codettaOneC = {\codettaOneA}
-codettaTwoB = {\codettaTwoA}
-
-codettaOneD = {\codettaOneA}
-codettaTwoB = {\codettaTwoA}
-
-codettaOneE = {\codettaOneA}
-codettaTwoB = {\codettaTwoA}
+% codettaOneB = \codettaOneA
+% codettaTwoB = \codettaTwoA
+% 
+% codettaOneC = \codettaOneA
+% codettaTwoB = \codettaTwoA
+% 
+% codettaOneD = \codettaOneA
+% codettaTwoB = \codettaTwoA
+% 
+% codettaOneE = \codettaOneA
+% codettaTwoB = \codettaTwoA
 
 codettaBicA = {df f4 c c c\breathe}
 
@@ -289,7 +297,7 @@ codettaBicD = {\codettaBicA}
 
 codettaBicE = {\codettaBicA}
 
-codettaRestA = {s4 s s s\breathe}
+codettaRestA = {s4 s s s}
 
 codettaRestB = {\codettaRestA}
 
@@ -298,15 +306,6 @@ codettaRestC = {\codettaRestA}
 codettaRestD = {\codettaRestA}
 
 codettaRestE = {\codettaRestA}
-
-scoreCSoprano = \relative c'' {
-  \global
-  % Music follows here.
-  b2 \cfAllMOne r2\fermata \bar "||"
-  b'2^"Dux 1a S" \cfAMOne \cfB \breathe b2^"Bicinium 1a ST" \biciniumA \biciniumB \breathe b4^"Codetta 1a ST" \codettaOneA \breathe b2^"ad Dux 2a BST" css \breathe b2^"Ad Comes 2a ASTB"\breathe b4^"Codetta 2a SATB" b b b
-%  b'2^"Dux 1a S" \cfAMOne\breathe a2^"Bicinium 1a ST" \biciniumA r4^"Codetta 1a ST" \codettaOneA r2^"fuer Dux 2a BST" r2^"fuer Comes 2a ASBT" c2^"Codetta 2a SATB" 
-%  b'2^"Dux 1b" \cfB a2^"Bicinium 1b" \biciniumB r4^"Codetta 1a" \codettaOneA
-}
 
 altoA = {
   %first e2
@@ -327,23 +326,6 @@ altoD = {
 
 altoE = {
   g4 b b c b2 g
-}
-
-altoAll = {
-  \altoA
-  \altoB
-  \altoC
-  \altoD
-  \altoE
-}
-
-scoreCAlto = \relative c' {
-  \global
-  % Music follows here.
-  e2 \altoAll r2\fermata \bar "||"
-  r2 \cfRestA \cfRestB \breathe r2 \cfRestA \cfRestB \breathe \codettaRestA \breathe r2 \cfRestA \breathe b2^"Ad Comes 2a ASTB"\breathe b4^"Codetta 2a SATB" b b b
-%  r2 \cfRestA r2 \cfRestA \codettaRestA r2 \cfRestA b2^"Comes 2a" \transpose e b \cfAMOne c^"Codetta 2a" \codettaTwoA
-%  \cfRestB
 }
 
 tenorA= {
@@ -367,27 +349,46 @@ tenorE = {
   b4 d e e d2 b
 }
 
-tenorAll = {
-  \tenorA
-  \tenorB
-  \tenorC
-  \tenorD
-  \tenorE
+sopranBassCFA = {
+  % First: d2
+  e4 e4 d2 r4
 }
 
-comesA = {
-  %first fs
-  
+sopranBassCFB = {
+  b4 b b b2 r4
 }
 
-scoreCTenor = \relative c' {
-  \global
-  % Music follows here.
-  g2 \tenorAll r2\fermata \bar "||"
-  r2 \cfRestA \cfRestB \breathe fs''2^"Comes 1a TS" \transpose e b \cfAMOne \transpose e b \cfB \breathe b4^"Codetta 1a ST" b b b\breathe b2^"ad Dux 2a BST" b b r4\breathe b2^"Ad Comes 2a ASTB"\breathe b4^"Codetta 2a SATB" b b b
-%  r2 \cfRestA
-%  
-%  fs''2^"Comes 1a TS" \transpose e b \cfAMOne\breathe r4^"Codetta 1a ST"\codettaBicA r^"fuer Dux 2a BST" r1^"fuer Comes 2a ASTB" r r r1^"Codetta 2a SATB"
+sopranBassCFC = {
+  b4 b b a d e2 e\breathe
+}
+
+sopranBassCFD = {
+  d4 e e d e e4 ds2
+}
+
+sopranBassCFE = {
+  e4 d e e d2 e
+}
+
+tenorBassCFA = {
+  % First: b2
+  e4 b d2 r4
+}
+
+tenorBassCFB = {
+  b4 g g b2 r4
+}
+
+tenorBassCFC = {
+  fs4 fs fs a b c2 e\breathe
+}
+
+tenorBassCFD = {
+  a,4 e' c d c e a,2
+}
+
+tenorBassCFE = {
+  b4 a e c' a2 b
 }
 
 bassA = {
@@ -411,6 +412,55 @@ bassE = {
   e,4 b' e, a b2 e,
 }
 
+adDuxTwoSA = {d'2 \sopranBassCFA \sopranBassCFB}
+adComesTwoSA = \transpose e b {e'2 \altoA \altoB}
+adDuxTwoTA = {b2 \tenorBassCFA \tenorBassCFB}
+adComesTwoTA = \transpose e b {g2 e4 b, d2 r4 b,4 b, c d2 r4}
+adComesTwoBA = \transpose e b, {e2 \bassA b,4 e a, d2 r4}
+comesTwoAA = \transpose e b {b2 \cfAMOne \cfB}
+
+scoreCSoprano = \relative c'' {
+  \global
+  % Music follows here.
+  b2 \cfAllMOne r2\fermata \bar "||"
+  b'2^"Dux 1a S" \cfAMOne \cfB \breathe a'2^"Bicinium 1a ST" \biciniumA \biciniumB \breathe^"Codetta 1a ST" \codettaOneSA \breathe^"ad Dux 2a BST" \adDuxTwoSA \breathe^"Ad Comes 2a SATB" \adComesTwoSA \breathe^"Codetta 2a SATB" \codettaTwoSA
+}
+
+altoAll = {
+  \altoA
+  \altoB
+  \altoC
+  \altoD
+  \altoE
+}
+
+scoreCAlto = \relative c' {
+  \global
+  % Music follows here.
+  e2 \altoAll r2\fermata \bar "||"
+  r2 \cfRestA \cfRestB \breathe r2 \cfRestA \cfRestB \breathe \codettaRestA \breathe r2 \cfRestA \cfRestB \breathe^"Comes 2a ASTB" \comesTwoAA \breathe^"Codetta 2a ASTB" \codettaTwoAA
+}
+
+tenorAll = {
+  \tenorA
+  \tenorB
+  \tenorC
+  \tenorD
+  \tenorE
+}
+
+comesA = {
+  %first fs
+  
+}
+
+scoreCTenor = \relative c' {
+  \global
+  % Music follows here.
+  g2 \tenorAll r2\fermata \bar "||"
+  r2 \cfRestA \cfRestB \breathe fs''2^"Comes 1a TS" \transpose e b \cfAMOne \transpose e b \cfB \breathe^"Codetta 1a ST" \codettaOneTA \breathe^"ad Dux 2a BST" \adDuxTwoTA \breathe^"Ad Comes 2a TSAB" \adComesTwoTA \breathe^"Codetta 2a TSAB" \codettaTwoTA
+}
+
 bassAll = {
   \bassA
   \bassB
@@ -423,22 +473,16 @@ scoreCBass = \relative c {
   \global
   % Music follows here.
   e,2 \bassAll r2\fermata \bar "||"
-  r2 \cfRestA \cfRestB \breathe \cfRestA \cfRestB \breathe b4^"Codetta 1a ST" b b b \breathe b2^"Dux 2a BST" b b r4\breathe b2^"Ad Comes 2a ASTB"\breathe b4^"Codetta 2a SATB" b b b
-%  r2 \cfRestA r2 \cfRestA \codettaRestA b'2^"Dux 2a" \cfAMOne r2 \cfRestA e2 \bassA\fermata
-%  \cfRestB \cfRestB b'2^"Dux 2b" \cfB \cfRestB \bassB\fermata
-%  \cfRestC \cfRestC b'2^"Dux 2c" \cfC \cfRestC \bassC\fermata
-%  \cfRestD \cfRestD b'2^"Dux 2d" \cfD \cfRestD \bassD\fermata
-%  \cfRestD \cfRestD b'2^"Dux 2e" \cfE \cfRestE \bassE\fermata
-%  \bar "|."
+  r2 \cfRestA \cfRestB \breathe r2 \cfRestA \cfRestB \breathe \codettaRestA \breathe b'2^"Dux 2a BST" \cfAMOne \cfB \breathe^"Ad Comes 2a BAST" \adComesTwoBA\breathe^"Codetta 2a BSAT" \codettaTwoBA
 }
 
 scoreCVerse = \lyricmode {
   % Lyrics follow here.
   O \verseAllMOne
   O \verseAMOne \verseB
+  O \verseAMOne \verseB \codettaVerseOneA
   O \verseAMOne \verseB
-  O \verseAMOne \verseB
-  O \verseAMOne \verseB
+  O \verseAMOne \verseB \codettaVerseTwoA
 }
 
 scoreCRehearsalMidi = #
@@ -468,8 +512,11 @@ scoreCChordNames = \chordmode {
   \global
   \germanChords
   % Chords follow here.
-  e2:m 
-  \chordsAllMOne s2\bar "||"
+  e2:m \chordsAllMOne s2\bar "||"
+  e2:m \chordsAMOne \chordsB \transpose e b { e2:m \chordsAMOne \chordsB }
+  % Codetta 1a
+  d4:m a:m b e:m
+  b2:m \chordsBassAMOne \chordsBassB \transpose e b {b2:m \chordsBassAMOne \chordsBassB}
 }
 
 figAMOne = \figuremode {
@@ -750,27 +797,6 @@ scoreDBassFiguresPart = \new FiguredBass \scoreDFigBass
   }
 }
 
-sopranBassCFA = {
-  % First: b2
-  e4 e4 d2 r4
-}
-
-sopranBassCFB = {
-  b4 b b b2 r4
-}
-
-sopranBassCFC = {
-  b4 b b a d e2 e\breathe
-}
-
-sopranBassCFD = {
-  d4 e e d e e4 ds2
-}
-
-sopranBassCFE = {
-  e4 d e e d2 e
-}
-
 sopranBassCFAll = {
   \sopranBassCFA
   \sopranBassCFB
@@ -819,27 +845,6 @@ scoreEAlto = \relative c' {
   fs2 \altoBassCFAll \bar "|."
 }
 
-tenorBassCFA = {
-  % First: 
-  e4 b d2 r4
-}
-
-tenorBassCFB = {
-  b4 g g b2 r4
-}
-
-tenorBassCFC = {
-  fs4 fs fs a b c2 e\breathe
-}
-
-tenorBassCFD = {
-  a,4 e' c d c e a,2
-}
-
-tenorBassCFE = {
-  b4 a e c' a2 b
-}
-
 tenorBassCFAll = {
   \tenorBassCFA
   \tenorBassCFB
@@ -851,7 +856,7 @@ tenorBassCFAll = {
 scoreETenor = \relative c' {
   \global
   % Music follows here.
-  d2 \tenorBassCFAll \bar "|."
+  b2 \tenorBassCFAll \bar "|."
 }
 
 scoreEBass = \relative c {
