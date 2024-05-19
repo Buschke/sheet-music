@@ -174,7 +174,7 @@ scoreASoprano = \relative c'' {
   e^"CF im Bass, Grundstellung Sekunde" d b a g e d c c d e g a b d e
   % Sextakkord
   c^"CF im Bass, Grundstellung Sekunde, bevorzugte Harmonisierung" b g c b f d' c c d f, b c g b c\bar "||"
-  a^"Sextakkord Sekunde" b c d e c g' e e g c, e a, c f, a
+  a^"Sextakkord Sekunde, muss überarbeitet werden, lauter Parallelen" b c d e c g' e e g c, e a, c f, a
   % Quartsextakkord
   f^"Quartsextakkord Sekunde" g a b c d e f f e d c b a g f
   % Terzintervall
@@ -360,7 +360,7 @@ scoreATenor = \relative c' {
   f f e e d d c c c c d d e e f f 
   % Qutintintervall
   % Grundstellung
-  c' b a a g g a g g a g g a a b c
+  c b a a g g a g g a g g a a b c
   % Sextakkord
   a e' b f' c g' d a' a d, g c, f b, e a,
   % Quartsextakkord
@@ -729,7 +729,7 @@ scoreBSoprano = \relative c''' {
   % Grundstellung
   c'^"Grundstellung Terz" c b b b a a a a a a b b b c c
   % Sextakkord
-  f^"Sextakkord Terz" a, c e, gs b, d f, f d' b gs' e c' a f'
+  f^"Sextakkord Terz" a, c e, gs b, d f, f d' b gs' e c' a f
   % Quartsextakkord
   f^"Quartsextakkord Terz" f e e e d d d d d d e e e f f
   % Quartintervall
