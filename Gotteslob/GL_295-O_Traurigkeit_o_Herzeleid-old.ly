@@ -1,21 +1,20 @@
-#(ly:set-option 'compile-scheme-code)
 \version "2.24.3"
 \language "english"
 
 \header {
   dedication = ""
-  title = "Komm, o Tröster, Heilger Geist"
+  title = "O Traurigkeit, o Herzeleid!"
   subtitle = ""
-  subsubtitle = "Harmonisierung Gotteslob-Lied 349, inkl. Dux-Comes und Intonation"
+  subsubtitle = ""
   instrument = "Orgel / Chor"
-  composer = "M: Bremen 1639"
+  composer = "M: Mainz / Würzburg 1628"
   arranger = \markup {"Satz: " \with-url #"https://buschke.com" "Sven Buschke"}
-  poet = \markup {"T: " \with-url #"https://de.wikipedia.org/wiki/Maria_Luise_Thurmair" "Maria Luise Thurmair" ", 1970"}
-  meter = \markup {"nach " \with-url #"https://de.wikipedia.org/wiki/Veni_Sancte_Spiritus" "Veni Sancte Spritus"}
-  piece = \markup {\with-url #"https://de.wikipedia.org/wiki/Stephen_Langton" "Stephen Langton" ", 1200"}
-  opus = "GL 349 ö"
-  copyright = "Satz: Sven Buschke, 19.05.2024"
-  tagline = "CF in SATB, sowie Dux-Comes in S"
+  poet = "T: Friedrich Spee, 1628"
+  meter = ""
+  piece = ""
+  opus = "GL 295"
+  copyright = \markup {"Satz: © 16.05.2024" \with-url #"https://buschke.com" "Sven Buschke"}
+  tagline = ""
 }
 
 \paper {
@@ -24,43 +23,103 @@
 
 global = {
   \key e \minor
-  \time 6/4
+  \time 2/2
   \tempo "Andante" 4=100
 }
 
-#(define (average a b c) (/ (+ a b c) 3 ))
-twelve = 12
-twentyFour = #(* 2 twelve)
+cfAMOne = {
+  % first: b2
+  g4 e fs2 r4
+}
 
-cfA = {e2 g4 fs2 b4 a2 g4 fs2.}
-cfB = {fs2 g4 a2 b4 b a2 b2.}
-cfC = {b2 g4 fs2 e4 e ds2 e2.}
-cfAll = {\cfA \breathe \cfB \breathe \cfC }
+cfRestA = {
+  %first r2
+  r4 s s2 s4}
 
-scoreAMelody = \relative c' {
+cfB = {
+  ds e e ds2 r4
+}
+
+cfRestB = {r4 s s s2 s4}
+
+cfC = {
+  b'4 b b c b a2 g\breathe
+}
+
+cfRestC = {r4 s s s s s2 s\breathe}
+
+cfD = {
+  fs4 g a b a g fs2
+}
+
+cfRestD= {r4 s s s s s s2}
+
+cfE = {
+  e4 fs g a fs2 e
+}
+
+cfRestE = {r4 r r r r2 r}
+
+cfAllMOne = {
+  \cfAMOne
+  \cfB
+  \cfC
+  \cfD
+  \cfE  
+}
+
+% cfAll = {
+%   \cfA
+%   \cfB
+%   \cfC
+%   \cfD
+%   \cfE
+% }
+
+scoreAMelody = \relative c'' {
   \global
   % Music follows here.
-  \partial 2. \cfAll \bar "|."
+  b2
+  \cfAllMOne
+  \bar "|."
 }
 
-verseA = \lyricmode {o Trös -- ter, Heil -- ger Geist
+verseAMOne = \lyricmode {
+  Trau -- rig -- keit
 }
-verseB = \lyricmode {das uns den Tag ver -- heißt,
+verseB= \lyricmode {
+  o Her -- ze -- leid!
 }
-verseC = \lyricmode {der uns mit Ga -- ben speist.
+
+verseC = \lyricmode {
+  Ist das denn nicht zu kla -- gen:
 }
-verseCodettaA = \lyricmode {Da da da da
+
+verseD = \lyricmode {
+  Gott des Va -- ters ei -- nigs Kind
 }
-verseCodettaB = \lyricmode {\verseCodettaA}
+
+verseE = \lyricmode {
+  wird zum Grab ge -- tra -- gen.
+}
+
+verseAllMOne = \lyricmode {
+  \verseAMOne
+  \verseB
+  \verseC
+  \verseD
+  \verseE  
+}
 
 scoreAVerse = \lyricmode {
   % Lyrics follow here.
-  Komm, \verseA Licht, \verseB Quell, \verseC
+  O
+  \verseAllMOne
 }
 
 \bookpart {
   \header {
-    subtitle = "Cantus Firmus"
+    subtitle = "Cantus Firmus (C.F.)"
   }
   \score {
     \new Staff \with {
@@ -72,263 +131,429 @@ scoreAVerse = \lyricmode {
   }
 }
 
-chordsA = \chordmode {e2:min e4:m b2 e4:m a2:m e4:m b2.}
-chordsB = \chordmode {b2 e4:m a2:m e4:m e:m a2:m e2.:m}
-chordsC = \chordmode {e2:m e4:m b2 e4:m e:m ds2:dim/fs e2.:m}
-chordsAll = \chordmode {\chordsA \chordsB \chordsC}
-chordsCodettaA = \chordmode {a4:m b e:m}
-chordsCodettaB = \chordmode {\chordsCodettaA}
+chordsAMOne = \chordmode {
+  % first: e2:m
+  e4:m e4:m d2:m s4
+}
+
+chordsB = \chordmode {
+  b4 e:m a:m d2:m s4
+}
+
+chordsC = \chordmode {
+  e4:m e:m e:m a:m e:m a2:m e:m\breathe
+}
+
+chordsD = \chordmode {
+  b4 e:m a:m e:m a:m e:m b2
+}
+
+chordsE = \chordmode {
+  e4:m b e:m a:m b2 e:m
+}
+
+chordsAllMOne = {
+  \chordsAMOne
+  \chordsB
+  \chordsC
+  \chordsD
+  \chordsE
+}
+
+chordsBassAMOne = \chordmode {
+  % first: b2
+  e4:m/g e d2/fs s4
+}
+
+chordsBassB = \chordmode {
+  b4/ds e e b2/ds s4
+}
+
+chordsBassC = \chordmode {
+  b4 b b a/cs b a2:m e:m/g\breathe
+}
+
+chordsBassD = \chordmode {
+  d4:m e:m/g a:m b a:m e:m/g ds2:dim/fs
+}
+
+chordsBassE = \chordmode {
+  e4:m d/fs e:m/g a:m ds2:dim/fs e2:m
+}
+
+chordsBaseAllMOne = {
+  \chordsBassAMOne
+  \chordsBassB
+  \chordsBassC
+  \chordsBassD
+  \chordsBassE
+}
 
 scoreBChordNamesLeadSheet = \chordmode {
   \global
   \germanChords
   % Chords follow here.
-  \chordsA
-  \chordsB
-  \chordsC
+  e2:m 
+  \chordsAllMOne
+  \bar "|."
 }
 
 scoreBMelody = \relative c'' {
   \global
   % Music follows here.
-  \scoreAMelody
+  b2
+  \cfAllMOne
 }
 
 scoreBVerse = \lyricmode {
   % Lyrics follow here.
-  \scoreAVerse
+  O
+  \verseAllMOne
 }
-
-chordsBassA = \chordmode {e2:m g4 d2/fs g4/b a2:m g4 ds2.:dim/fs}
-chordsBassB = \chordmode {ds2:dim/fs e4:m/g a2:m g4/b g/b a2:m g2./b}
-chordsBassC = \chordmode {b2 e4:m/g ds2:dim/fs e4:m e:m b2/ds e2.:m}
-chordsBassAll = \chordmode { \chordsBassA \chordsBassB \chordsBassC }
 
 scoreBChordNamesChords = \chordmode {
   \global
   \germanChords
   % Chords follow here.
-  \chordsBassAll
-}
-
-bassFigIA = \figuremode {s2 s4 s2 s4 s2 s4 s2.}
-bassFigIB = \figuremode {s2 s4 s2 s4 s4 s2 s2.}
-bassFigIC = \figuremode {s2 s4 s2 s4 s4 <6>2 s2.}
-bassFigCodettaA = \figuremode {s4 s s s}
-bassFigCodettaB = \figuremode {\bassFigCodettaA}
-bassFigIAll = \figuremode {\bassFigIA \bassFigIB \bassFigIC}
-
-scoreBFigBassBassFiguresI = \figuremode {
-  \global
-  % Figures follow here.
-  \bassFigIAll
-}
-
-bassFigIIA = \figuremode {s2 s4 <6>2 s4 s2 s4 <6>2.}
-bassFigIIB = \figuremode {<6>2 <6>4 s2 <6>4 <6> s2 <6>2.}
-bassFigIIC = \figuremode {s2 <6>4 <6>2 s4 s4 <6>2 s2.}
-bassFigIIAll = \figuremode {\bassFigIIA \bassFigIIB \bassFigIIC}
-
-scoreBFigBassBassFiguresII = \figuremode {
-  \global
-  % Figures follow here.
-  \bassFigIIAll
+  b2
+  \chordsBaseAllMOne
+  \bar "|."
 }
 
 scoreBLeadSheetPart = <<
   \new ChordNames \scoreBChordNamesLeadSheet
-  \new Staff \with {
-    \consists "Ambitus_engraver"
-  } { \scoreBMelody }
+  \new Staff { \scoreBMelody }
   \addlyrics { \scoreBVerse }
 >>
 
 scoreBChordsPart = \new ChordNames \scoreBChordNamesChords
 
-scoreBBassFiguresIPart = \new FiguredBass \scoreBFigBassBassFiguresI
-
-scoreBBassFiguresIIPart = \new FiguredBass \scoreBFigBassBassFiguresII
-
 \bookpart {
   \header {
-    subtitle = "Cantus Firmus, mit Akkorden und Bassbezifferung"
-  }  
+    subtitle = "Cantus Firmus (C.F.) und Akkorde"
+  }
   \score {
     <<
       \scoreBLeadSheetPart
       \scoreBChordsPart
-      \scoreBBassFiguresIPart
-      \scoreBBassFiguresIIPart
     >>
     \layout { }
     \midi { }
   }
 }
 
-bCfSA = {e2 d4 d2 d4 e2 g4 a2.}
-bCfSB = {ds,2 e4 e2 d4 d4 e2 d2.}
-bCfSC = {ds2 e4 ds2 e4 e b2 b2.}
-bCfSAll = {\bCfSA \breathe \bCfSB \breathe \bCfSC}
+biciniumA = { fs4 d e2 r4\breathe}
+biciniumB = { c d d c2 r4\breathe}
+biciniumC = { fs4 d e2 r4\breathe}
+biciniumD = { fs4 d e2 r4\breathe}
+biciniumE = { fs4 d e2 r4\breathe}
 
-duxSA = \cfA
-duxSB = \cfB
-duxSC = \cfC
+codettaOneSA = {fs4 c ds e\breathe}
+codettaOneSC = {fss4 c ds e\breathe}
+codettaOneSD = {fss4 c ds e\breathe}
+codettaOneSE = {fss4 c ds e\breathe}
+codettaOneTA = {d4 a b g\breathe}
+codettaOneTC = {d4 a b g\breathe}
+codettaOneTD = {d4 a b g\breathe}
+codettaOneTE = {d4 a b g\breathe}
 
-biciniumSA = {\transpose e b {g2 b4 a2 d4 c2 b4 a2.}} 
-biciniumSB = {\transpose e b {a2 b4 c2 d4 d c2 d2.}}
-biciniumSC = {\transpose e b {d2 b4 a2 g4 g fs2 g2.}}
+codettaTwoSA = {cs,4 e' fs g\breathe}
+codettaTwoSC = {cs,4 e' fs g\breathe}
+codettaTwoSD = {cs,4 e' fs g\breathe}
+codettaTwoSE = {cs,4 e' fs g\breathe}
 
-codettaISA = {a4 b e}
-codettaISB = \codettaISA
-codettaISC = \codettaISA
+codettaTwoAA = {as4 a' b b\breathe}
+codettaTwoAC = {css4 e e e\breathe}
+codettaTwoAD = {css4 e e e\breathe}
+codettaTwoAE = {css4 e e e\breathe}
 
-bDuxSA = \bCfSA
-bDuxSB = \bCfSB
-bDuxSC = \bCfSC
+codettaTwoTA = {a4 c ds e\breathe}
+codettaTwoBA = {a'4 a b e,\breathe}
 
-codettaIISA = \codettaISA
-codettaIISB = \codettaIISA
-codettaIISC = \codettaIISA
+codettaTwoBA = {css4 e e e\breathe}
+codettaTwoBC = {css4 e e e\breathe}
+codettaTwoBD = {css4 e e e\breathe}
+codettaTwoBE = {css4 e e e\breathe}
 
-altoA = {g2 b4 b2 e4 c2 b4 b2.}
-altoB = {b2 b4 c2 e4 e c2 e2.}
-altoC = {e2 b4 b2 g4 g fs2 g2.}
-altoAll = {\altoA \breathe \altoB \breathe \altoC}
+codettaVerseOneA = \lyricmode {
+  Da da da da
+}
+codettaVerseOneB = \codettaVerseOneA
+codettaVerseOneC = \codettaVerseOneA
+codettaVerseOneD = \codettaVerseOneA
+codettaVerseOneE = \codettaVerseOneA
+codettaVerseTwoA = \codettaVerseOneA
+codettaVerseTwoA = \codettaVerseOneA
+codettaVerseTwoB = \codettaVerseOneA
+codettaVerseTwoC = \codettaVerseOneA
+codettaVerseTwoD = \codettaVerseOneA
+codettaVerseTwoE = \codettaVerseOneA
 
-aComesSA = \transpose e b \altoA
-aComesSB = \transpose e b \altoB
-aComesSC = \transpose e b \altoC
+% codettaOneB = \codettaOneA
+% codettaTwoB = \codettaTwoA
+% 
+% codettaOneC = \codettaOneA
+% codettaTwoB = \codettaTwoA
+% 
+% codettaOneD = \codettaOneA
+% codettaTwoB = \codettaTwoA
+% 
+% codettaOneE = \codettaOneA
+% codettaTwoB = \codettaTwoA
 
-bCfAA = {g2 g4 a2 g4 a2 b4 ds2.}
-bCfAB = {fs,2 b4 a2 g4 g a2 g2.}
-bCfAC = {fs2 b4 a2 g4 g fs2 e2.}
-bCfAAll = {\bCfAA \breathe \bCfAB \breathe \bCfAC}
+codettaBicA = {df f4 c c c\breathe}
 
-duxRestA = {r4 r2 r4 r2 r4 r2.}
-duxRestB = {r4 r2 r4 r r2 r2.}
-duxRestC = {r4 r2 r4 r r2 r2.}
+codettaBicB = {\codettaBicA}
 
-codettaIRestA = {r4 r r}
-codettaIRestB = \codettaIRestA
-codettaIRestC = \codettaIRestA
+codettaBicC = {\codettaBicA}
 
-comesAA = \transpose e b \cfA
-comesAB = \transpose e b \cfB
-comesAC = \transpose e b \cfC
+codettaBicD = {\codettaBicA}
 
-codettaAA = {c4 ds e }
-codettaAB = \codettaAA
-codettaAC = \codettaAA
+codettaBicE = {\codettaBicA}
 
-tenorA = {b2 e4 d2 g4 e2 e4 d2.}
-tenorB = {d2 e4 e2 g4 g e2 g2.}
-tenorC = {g2 e4 d2 b4 b a2 b2.}
-tenorAll = {\tenorA \breathe \tenorB \breathe \tenorC}
+codettaRestA = {s4 s s s}
 
-#(define (average a b c) (/ (+a b c) 3))
+codettaRestB = {\codettaRestA}
 
-% Tonumfang Sopran, Alt, Tenor, Bariton, Bass 
-%\fixed c {\clef treble c'32^\markup{"Tonumfang SATBaB" \with-url #"https://en.wikipedia.org/wiki/Vocal_range" "Wiki"} c''' f f'' \clef bass \tuplet 3/2 {  c c'' a, } \tuplet 3/2 {  a' e, e'} }
-bCfTA = {b2 b4 d2 d4 c2 d4 fs2.}
-bCfTB = {a,2 e'4 c2 d4 d c2 d2.}
-bCfTC = {b2 e4 fs2 b,4 b b2 g2.}
-bCfTAll = {\bCfTA \breathe \bCfTB \breathe \bCfTC}
+codettaRestC = {\codettaRestA}
 
-comesTA = \transpose e b \cfA
-comesTB = \transpose e b \cfB
-comesTC = \transpose e b \cfC
+codettaRestD = {\codettaRestA}
 
-codettaITA = {e4 fs e}
-codettaITB = \codettaITA
-codettaITC = \codettaITA
+codettaRestE = {\codettaRestA}
 
-bDuxTA = \bCfTA
-bDuxTB = \bCfTB
-bDuxTC = \bCfTC
+altoA = {
+  %first e2
+  b4 g a2 r4
+}
 
-aComesTA = \transpose e b \tenorA
-aComesTB = \transpose e b \tenorB
-aComesTC = \transpose e b \tenorC
+altoB = {
+  fs g a fs2 r4
+}
 
-codettaIITA = \codettaITA
-codettaIITB = \codettaIITA
-codettaIITC = \codettaIITA
+altoC = {
+  e'4 e e e e c2 b\breathe 
+}
 
-bassA = {e2 e4 b2 e4 a2 e4 b2.}
-bassB = {b2 e4 a2 e4 e a2 e2.}
-bassC = {e2 e4 b2 e4 e fs2 e2.}
-bassAll = {\bassA \breathe \bassB \breathe \bassC}
+altoD = {
+  b4b c e c b b2
+}
 
-duxBA = \cfA
-duxBB = \cfB
-duxBC = \cfC
+altoE = {
+  g4 b b c b2 g
+}
 
-aComesBA = \transpose e b \bassA
-aComesBB = \transpose e b \bassB
-aComesBC = \transpose e b \bassC
+tenorA= {
+  %first: g2
+  e4 b d2 r4
+}
 
-codettaIIBA = {a4 b e}
-codettaIIBB = \codettaIIBA
-codettaIIBC = \codettaIIBA
+tenorB = {
+  b4 b c d2 r4 
+}
 
-scoreCSoprano = \relative c' {
+tenorC = {
+  g4 g g a g e2 e\breathe
+}
+
+tenorD = {
+  d4 e e g e e d2
+}
+
+tenorE = {
+  b4 d e e d2 b
+}
+
+sopranBassCFA = {
+  % First: d2
+  e4 e4 d2 r4
+}
+
+sopranBassCFB = {
+  b4 b b b2 r4
+}
+
+sopranBassCFC = {
+  b4 b b a d e2 e\breathe
+}
+
+sopranBassCFD = {
+  d4 e e d e e4 ds2
+}
+
+sopranBassCFE = {
+  e4 d e e d2 e
+}
+
+tenorBassCFA = {
+  % First: b2
+  e4 b d2 r4
+}
+
+tenorBassCFB = {
+  b4 g g b2 r4
+}
+
+tenorBassCFC = {
+  fs4 fs fs a b c2 e\breathe
+}
+
+tenorBassCFD = {
+  a,4 e' c d c e a,2
+}
+
+tenorBassCFE = {
+  b4 a e c' a2 b
+}
+
+bassA = {
+  %first: e2
+  e4 e d2 r4
+}
+
+bassB = {
+  b'4 e, a d,2 r4
+}
+
+bassC = {
+  e4 e e a e a2 e\breathe
+}
+
+bassD = {
+  b'4 e, a e a e b'2
+}
+
+bassE = {
+  e,4 b' e, a b2 e,
+}
+
+adDuxTwoSA = {d'2 \sopranBassCFA \sopranBassCFB}
+adDuxTwoSC = {d'2 \sopranBassCFA \sopranBassCFB}
+adDuxTwoSD = {d'2 \sopranBassCFA \sopranBassCFB}
+adDuxTwoSE = {d'2 \sopranBassCFA \sopranBassCFB}
+
+adComesTwoSA = \transpose e b {e'2 \altoA \altoB}
+adComesTwoSC = \transpose e b {e'2 \altoA \altoB}
+adComesTwoSD = \transpose e b {e'2 \altoA \altoB}
+adComesTwoSE = \transpose e b {e'2 \altoA \altoB}
+
+adDuxTwoTA = {b2 \tenorBassCFA \tenorBassCFB}
+adDuxTwoTC = {b2 \tenorBassCFA \tenorBassCFB}
+adDuxTwoTD = {b2 \tenorBassCFA \tenorBassCFB}
+adDuxTwoTE = {b2 \tenorBassCFA \tenorBassCFB}
+
+comesTwoAA = \transpose e b {b2 \cfAMOne \cfB}
+comesTwoAC = \transpose e b {b2 \cfAMOne \cfB}
+comesTwoAD = \transpose e b {b2 \cfAMOne \cfB}
+comesTwoAE = \transpose e b {b2 \cfAMOne \cfB}
+
+adComesTwoTA = \transpose e b {g2 e4 b, d2 r4 b,4 b, c d2 r4}
+adComesTwoTC = \transpose e b {g2 e4 b, d2 r4 b,4 b, c d2 r4}
+adComesTwoTD = \transpose e b {g2 e4 b, d2 r4 b,4 b, c d2 r4}
+adComesTwoTE = \transpose e b {g2 e4 b, d2 r4 b,4 b, c d2 r4}
+
+adComesTwoBA = \transpose e b, {e2 \bassA b,4 e a, d2 r4}
+adComesTwoBC = \transpose e b, {e2 \bassA b,4 e a, d2 r4}
+adComesTwoBD = \transpose e b, {e2 \bassA b,4 e a, d2 r4}
+adComesTwoBE = \transpose e b, {e2 \bassA b,4 e a, d2 r4}
+
+scoreCSoprano = \relative c'' {
   \global
   % Music follows here.
-  \breathe^"S" \scoreAMelody
-  % Part a
-  \bar "||"^"Dux S a" \duxSA \breathe^"Bicinium S a" \biciniumSA \breathe^"Codetta I S a" e4 \codettaISA \breathe^"ad B Dux S a" \bDuxSA \breathe^"ad A Comes S a" \aComesSA \breathe^"Codetta II S a" fs,4 \codettaIISA 
-% Part b
-\bar "||"^"Dux S b" \duxSB \breathe^"Bicinium S b" \biciniumSB \breathe^"Codetta I S b" e,4 \codettaISB \breathe^"ad B Dux S b" \bDuxSB \breathe^"ad A Comes S b" \aComesSB \breathe^"Codetta II S b" fs,4 \codettaIISB
-% Part c
-\bar "||"^"Dux S c" \duxSC \breathe^"Bicinium S c" \biciniumSC \breathe^"Codetta I S c" e4 \codettaISC \breathe^"ad B Dux S c" \bDuxSC \breathe^"ad A Comes S c" \aComesSC \breathe^"Codetta II S c" fs4 \codettaIISC  \bar "|."
+  b2 \cfAllMOne r2\fermata \bar "||"
+  % Part a, b
+  b'2^"Dux 1ab S" \cfAMOne \cfB \breathe a'2^"Bicinium 1ab ST" \biciniumA \biciniumB \breathe^"Codetta 1ab ST" \codettaOneSA \breathe^"ad Dux 2ab BST" \adDuxTwoSA \breathe^"Ad Comes 2ab SATB" \adComesTwoSA \breathe^"Codetta 2ab SATB" \codettaTwoSA
+  % Part c
+  \fermata^"Dux 1c S"
+  \cfC \breathe a'2^"Bicinium 1b ST" \biciniumC \breathe^"Codetta 1c ST" \codettaOneSC \breathe^"ad Dux 2c BST" \adDuxTwoSC \breathe^"Ad Comes 2c SATB" \adComesTwoSC \breathe^"Codetta 2c SATB" \codettaTwoSC
+  % Part d
+  \fermata^"Dux 1d S"
+  \cfD \breathe a'2^"Bicinium 1d ST" \biciniumD \breathe^"Codetta 1d ST" \codettaOneSD \breathe^"ad Dux 2d BST" \adDuxTwoSD \breathe^"Ad Comes 2d SATB" \adComesTwoSD \breathe^"Codetta 2d SATB" \codettaTwoSD
+  % Part e
+  \fermata^"Dux 1e S"
+  \cfE \breathe a'2^"Bicinium 1e ST" \biciniumE \breathe^"Codetta 1e ST" \codettaOneSE \breathe^"ad Dux 2e BST" \adDuxTwoSE \breathe^"Ad Comes 2e SATB" \adComesTwoSE \breathe^"Codetta 2e SATB" \codettaTwoSE
+}
+
+altoAll = {
+  \altoA
+  \altoB
+  \altoC
+  \altoD
+  \altoE
 }
 
 scoreCAlto = \relative c' {
   \global
   % Music follows here.
-  \breathe^"A"
-  \altoAll \bar "||"^"A"
-    % Part a
-  r2 \duxRestA \breathe r2 \duxRestA \breathe r4 \codettaIRestA \breathe r2 \duxRestA \breathe^"Comes A a" \comesAA \breathe^"Codetta II A a" cs4 \codettaAA \bar "||"^"A"
-    % Part b
-  r2 \duxRestB \breathe r2 \duxRestB \breathe r4 \codettaIRestB \breathe r2 \duxRestB \breathe^"Comes A b" \comesAB \breathe^"Codetta II A b" cs4 \codettaAB \bar "||"^"A"
-    % Part c
-  r2 \duxRestC \breathe r2 \duxRestC \breathe r4 \codettaIRestC \breathe r2 \duxRestC \breathe^"Comes A c" \comesAC \breathe^"Codetta II A c" cs4 \codettaAC \bar "|."
+  e2 \altoAll r2\fermata \bar "||"
+  % Part a, b
+  r2 \cfRestA \cfRestB \breathe r2 \cfRestA \cfRestB \breathe \codettaRestA \breathe r2 \cfRestA \cfRestB \breathe^"Comes 2ab ASTB" \comesTwoAA \breathe^"Codetta 2ab ASTB" \codettaTwoAA
+  % Part c
+  \fermata
+  \cfRestC \breathe \cfRestC \breathe \codettaRestC \breathe \cfRestC \breathe^"Comes 2c ASTB" \comesTwoAC \breathe^"Codetta 2c ASTB" \codettaTwoAC  
+  % Part d
+  \fermata
+  \cfRestD \breathe \cfRestD \breathe \codettaRestD \breathe \cfRestD \breathe^"Comes 2d ASTB" \comesTwoAD \breathe^"Codetta 2d ASTB" \codettaTwoAD  
+  % Part e
+  \fermata
+  \cfRestE \breathe \cfRestE \breathe \codettaRestE \breathe \cfRestE \breathe^"Comes 2e ASTB" \comesTwoAE \breathe^"Codetta 2e ASTB" \codettaTwoAE  
 }
 
-scoreCTenor = \relative c {
-  \global
-  % Music follows here.
-  \breathe^"T"
-  \tenorAll \bar "||"^"T"
-    % Part a
-  r2 \duxRestA \breathe^"Comes T a" \comesTA \breathe^"Codetta I T a" cs'4 \codettaITA \breathe^"ad B Dux T a" \bDuxTA \breathe^"ad A Comes T a" \aComesTA \breathe^"Codetta II T a" a,4 \codettaIITA \bar "||"^"T"
-      % Part b
-  r2 \duxRestB \breathe^"Comes T b" \comesTB \breathe^"Codetta I T b" cs4 \codettaITB \breathe^"ad B Dux T b" \bDuxTB \breathe^"ad A Comes T b" \aComesTB \breathe^"Codetta II T b" a'4 \codettaIITB \bar "||"^"T"
-      % Part c
-  r2 \duxRestC \breathe^"Comes T c" \comesTC \breathe^"Codetta I T c" cs4 \codettaITC \breathe^"ad B Dux T c" \bDuxTC \breathe^"ad A Comes T c" \aComesTC \breathe^"Codetta II T c" a'4 \codettaIITC \bar "|."
+tenorAll = {
+  \tenorA
+  \tenorB
+  \tenorC
+  \tenorD
+  \tenorE
 }
 
-scoreCBass = \relative c, {
+comesA = {
+  %first fs
+  
+}
+
+scoreCTenor = \relative c' {
   \global
   % Music follows here.
-  \breathe^"B"
-  \bassAll \bar "||"^"B"
-      % Part a
+  g2 \tenorAll r2\fermata \bar "||"
+  % Part a, b
+  r2 \cfRestA \cfRestB \breathe fs''2^"Comes 1a TS" \transpose e b {b2 \cfAMOne \cfB} \breathe^"Codetta 1a ST" \codettaOneTA \breathe^"ad Dux 2a BST" \adDuxTwoTA \breathe^"Ad Comes 2a TSAB" \adComesTwoTA \breathe^"Codetta 2a TSAB" \codettaTwoTA
+  % Part c
+  \cfRestC \breathe fs''2^"Comes 1c TS" \transpose e b \cfC \breathe^"Codetta 1c ST" \codettaOneTC \breathe^"ad Dux 2c BST" \adDuxTwoTC \breathe^"Ad Comes 2c TSAB" \adComesTwoTC \breathe^"Codetta 2c TSAB" \codettaTwoTC
+  % Part d
+  \cfRestD \breathe fs''2^"Comes 1d TS" \transpose e b \cfD \breathe^"Codetta 1d ST" \codettaOneTD \breathe^"ad Dux 2d BST" \adDuxTwoTD \breathe^"Ad Comes 2d TSAB" \adComesTwoTD \breathe^"Codetta 2d TSAB" \codettaTwoTD
+  % Part e
+  \cfRestE \breathe fs''2^"Comes 1e TS" \transpose e b \cfE \breathe^"Codetta 1e ST" \codettaOneTE \breathe^"ad Dux 2e BST" \adDuxTwoTE \breathe^"Ad Comes 2e TSAB" \adComesTwoTE \breathe^"Codetta 2e TSAB" \codettaTwoTE
+}
 
-  r2 \duxRestA \breathe r2 \duxRestA \breathe r4 \codettaIRestA \breathe^"Dux B a" \duxBA \breathe^"ad A Comes B a" \aComesBA \breathe^"Codetta II B a" fs4 \codettaIIBA \bar "||"^"B"
-      % Part b
-  r2 \duxRestB \breathe r2 \duxRestB \breathe r4 \codettaIRestB \breathe^"Dux B b" \duxBB \breathe^"ad A Comes B b" \aComesBB \breathe^"Codetta II B b" fs,4 \codettaIIBB \bar "||"^"B"
-      % Part c
-  r2 \duxRestC \breathe r2 \duxRestC \breathe r4 \codettaIRestC \breathe^"Dux B c" \duxBC \breathe^"ad A Comes B c" \aComesBC \breathe^"Codetta II B c" fs4 \codettaIIBC \bar "|."
+bassAll = {
+  \bassA
+  \bassB
+  \bassC
+  \bassD
+  \bassE
+}
+
+scoreCBass = \relative c {
+  \global
+  % Music follows here.
+  e,2 \bassAll r2\fermata \bar "||"
+  % Part a, b
+  r2 \cfRestA \cfRestB \breathe r2 \cfRestA \cfRestB \breathe \codettaRestA \breathe b'2^"Dux 2a BST" \cfAMOne \cfB \breathe^"Ad Comes 2a BAST" \adComesTwoBA\breathe^"Codetta 2a BSAT" \codettaTwoBA
+  % Part c
+  \cfRestC \breathe \cfRestC \breathe \codettaRestC \breathe b'2^"Dux 2c BST" \cfC \breathe^"Ad Comes 2c BAST" \adComesTwoBC \breathe^"Codetta 2c BSAT" \codettaTwoBC
+  % Part d
+  \cfRestD \breathe \cfRestD \breathe \codettaRestD \breathe b'2^"Dux 2d BST" \cfD \breathe^"Ad Comes 2d BAST" \adComesTwoBD \breathe^"Codetta 2d BSAT" \codettaTwoBD
+  % Part e
+  \cfRestE \breathe \cfRestE \breathe \codettaRestE \breathe b'2^"Dux 2e BST" \cfE \breathe^"Ad Comes 2e BAST" \adComesTwoBE \breathe^"Codetta 2e BSAT" \codettaTwoBE
 }
 
 scoreCVerse = \lyricmode {
   % Lyrics follow here.
-  \scoreAVerse
-  Komm, \verseA Komm, \verseA \verseCodettaA Komm, \verseA Komm, \verseA \verseCodettaB
-  Licht, \verseB Licht, \verseB \verseCodettaA Licht, \verseB Licht, \verseB \verseCodettaB
-  Quell, \verseC Quell, \verseC \verseCodettaA Quell, \verseC Quell, \verseC \verseCodettaB
+  O \verseAllMOne
+  O \verseAMOne \verseB
+  O \verseAMOne \verseB \codettaVerseOneA
+  O \verseAMOne \verseB
+  O \verseAMOne \verseB \codettaVerseTwoA
 }
 
 scoreCRehearsalMidi = #
@@ -358,21 +583,47 @@ scoreCChordNames = \chordmode {
   \global
   \germanChords
   % Chords follow here.
-  \chordsAll \bar "||"
-  \chordsA \transpose e b \chordsA fs4 \chordsCodettaA \chordsBassA \transpose e b \chordsA fs4 \chordsCodettaB
-  \chordsB \transpose e b \chordsB fs4 \chordsCodettaA \chordsBassB \transpose e b \chordsB fs4 \chordsCodettaB
-  \chordsC \transpose e b \chordsC fs4 \chordsCodettaA \chordsBassC \transpose e b \chordsC fs4 \chordsCodettaB
-  \bar "|."
+  e2:m \chordsAllMOne s2\bar "||"
+  e2:m \chordsAMOne \chordsB \transpose e b { e2:m \chordsAMOne \chordsB }
+  % Codetta 1a
+  d4:m a:m b e:m
+  b2:m \chordsBassAMOne \chordsBassB \transpose e b {b2:m \chordsBassAMOne \chordsBassB}
+}
+
+figAMOne = \figuremode {
+  %first: <6>2
+  <5 3>4 s4 s2 s4
+}
+
+figB = \figuremode {
+ s4 s s s2 s4  
+}
+
+figC = \figuremode {
+  s4 s s s s s2 s
+}
+
+figD = \figuremode {
+  s4 s s s s s s2
+}
+
+figE = \figuremode {
+  s4 s s s s2 s
+}
+
+figAllMOne = {
+  \figAMOne
+  \figB
+  \figC
+  \figD
+  \figE
 }
 
 scoreCFigBass = \figuremode {
   \global
   % Figures follow here.
-  \bassFigIAll \bar "||"
-  \bassFigIA \bassFigIA \bassFigCodettaA \bassFigIIA \bassFigIA \bassFigCodettaB
-  \bassFigIB \bassFigIB \bassFigCodettaA \bassFigIIB \bassFigIB \bassFigCodettaB
-  \bassFigIC \bassFigIC \bassFigCodettaA \bassFigIIC \bassFigIC \bassFigCodettaB
-  \bar "|."
+  <5 3>2
+  \figAllMOne s2 \bar "||"
 }
 
 scoreCChoirPart = \new ChoirStaff <<
@@ -414,7 +665,7 @@ scoreCBassFiguresPart = \new FiguredBass \scoreCFigBass
 
 \bookpart {
   \header {
-    subtitle = "Cantus Firmus im Sopran, mit Intonation und Dux-Comes"
+    subtitle = "C.F. im Sopran, Dux & Comes"
   }
   \score {
     <<
@@ -464,32 +715,31 @@ scoreCBassFiguresPart = \new FiguredBass \scoreCFigBass
 scoreDSoprano = \relative c'' {
   \global
   % Music follows here.
-  \breathe^"S" \altoAll
+  e2 \altoAll \bar "|."
 }
 
-scoreDAlto = \relative c'' {
+scoreDAlto = \relative c' {
   \global
   % Music follows here.
-  \breathe^"A" \tenorAll
+  g'2 \tenorAll \bar "||."
 }
 
-scoreDTenor = \relative c {
+scoreDTenor = \relative c' {
   \global
   % Music follows here.
-  \breathe^"T"
-  \cfAll
-  \bar "|."
+  b2 \cfAllMOne \bar "|."
 }
 
 scoreDBass = \relative c {
   \global
   % Music follows here.
-  \breathe^"B" \bassAll
+  e,2 \bassAll \bar "|."  
 }
 
 scoreDVerse = \lyricmode {
   % Lyrics follow here.
-  \scoreAVerse
+  O
+  \verseAllMOne
 }
 
 scoreDRehearsalMidi = #
@@ -519,13 +769,18 @@ scoreDChordNames = \chordmode {
   \global
   \germanChords
   % Chords follow here.
-  \chordsAll
+  e2:m 
+  \chordsAllMOne
+  \bar "|."
 }
 
 scoreDFigBass = \figuremode {
   \global
   % Figures follow here.
-  \bassFigIAll
+  <5 3>2
+  \figAllMOne
+  \bar "|."
+
 }
 
 scoreDChoirPart = \new ChoirStaff <<
@@ -567,7 +822,7 @@ scoreDBassFiguresPart = \new FiguredBass \scoreDFigBass
 
 \bookpart {
   \header {
-    subtitle = "Cantus Firmus im Tenor"
+    subtitle = "C.F. im Tenor"
   }
   \score {
     <<
@@ -613,37 +868,78 @@ scoreDBassFiguresPart = \new FiguredBass \scoreDFigBass
   }
 }
 
+sopranBassCFAll = {
+  \sopranBassCFA
+  \sopranBassCFB
+  \sopranBassCFC
+  \sopranBassCFD
+  \sopranBassCFE
+}
 
 scoreESoprano = \relative c'' {
   \global
   % Music follows here.
-  \breathe^"S" \bCfSAll
+   d2 \sopranBassCFAll \bar "|."
 }
 
-scoreEAlto = \relative c'' {
+altoBassCFA = {
+  g4 g a2 r4
+}
+
+altoBassCFB = {
+  fs4 e e fs2 r4
+}
+
+altoBassCFC = {
+  d4 d d e fs a2 b\breathe
+}
+
+altoBassCFD = {
+  fs4 b a fs a b fs2
+}
+
+altoBassCFE = {
+  g4 fs b a fs2 g
+}
+
+altoBassCFAll = {
+  \altoBassCFA
+  \altoBassCFB
+  \altoBassCFC
+  \altoBassCFD
+  \altoBassCFE
+}
+
+scoreEAlto = \relative c' {
   \global
   % Music follows here.
-  \breathe^"A" \bCfAAll
+  fs2 \altoBassCFAll \bar "|."
+}
+
+tenorBassCFAll = {
+  \tenorBassCFA
+  \tenorBassCFB
+  \tenorBassCFC
+  \tenorBassCFD
+  \tenorBassCFE
 }
 
 scoreETenor = \relative c' {
   \global
   % Music follows here.
-  \breathe^"T" \bCfTAll
-  
+  b2 \tenorBassCFAll \bar "|."
 }
 
-scoreEBass = \relative c, {
+scoreEBass = \relative c {
   \global
   % Music follows here.
-  \breathe^"B"
-  \cfAll
-  \bar "|."
+  b2 \cfAllMOne \bar "|."
 }
 
 scoreEVerse = \lyricmode {
   % Lyrics follow here.
-  \scoreAVerse
+  O
+  \verseAllMOne
 }
 
 scoreERehearsalMidi = #
@@ -673,13 +969,18 @@ scoreEChordNames = \chordmode {
   \global
   \germanChords
   % Chords follow here.
-  \chordsBassAll
+  b2:m 
+  \chordsBaseAllMOne
+  \bar "|."
 }
 
 scoreEFigBass = \figuremode {
   \global
   % Figures follow here.
-  \bassFigIIAll
+  <5 3>2 
+  \figAllMOne
+  \bar "|."
+
 }
 
 scoreEChoirPart = \new ChoirStaff <<
@@ -721,7 +1022,7 @@ scoreEBassFiguresPart = \new FiguredBass \scoreEFigBass
 
 \bookpart {
   \header {
-    subtitle = "Cantus Firmus im Bass"
+    subtitle = "C.F. im Bass"
   }
   \score {
     <<
@@ -771,31 +1072,31 @@ scoreEBassFiguresPart = \new FiguredBass \scoreEFigBass
 scoreFSoprano = \relative c'' {
   \global
   % Music follows here.
-  \breathe^"S" \altoAll
+  e2 \altoAll \bar "|."
 }
 
 scoreFAlto = \relative c' {
   \global
   % Music follows here.
-  \breathe^"A" \cfAll
-  \bar "|."
+  b'2 \cfAllMOne \bar "|."
 }
 
 scoreFTenor = \relative c' {
   \global
   % Music follows here.
-  \breathe^"T" \tenorAll
+  g'2 \tenorAll \bar "||."
 }
 
 scoreFBass = \relative c {
   \global
   % Music follows here.
-  \breathe^"B" \bassAll
+  e,2 \bassAll \bar "|."
 }
 
 scoreFVerse = \lyricmode {
   % Lyrics follow here.
-  \scoreAVerse
+  O
+  \verseAllMOne
 }
 
 scoreFRehearsalMidi = #
@@ -825,13 +1126,17 @@ scoreFChordNames = \chordmode {
   \global
   \germanChords
   % Chords follow here.
-  \chordsAll
+  e2:m 
+  \chordsAllMOne
+  \bar "|."
 }
 
 scoreFFigBass = \figuremode {
   \global
   % Figures follow here.
-  \bassFigIAll
+  <5 3>2
+  \figAllMOne
+  \bar "|."
 }
 
 scoreFChoirPart = \new ChoirStaff <<
@@ -873,7 +1178,7 @@ scoreFBassFiguresPart = \new FiguredBass \scoreFFigBass
 
 \bookpart {
   \header {
-    subtitle = "Cantus Firmus im Alt"
+    subtitle = "C.F. im Alt"
   }
   \score {
     <<
