@@ -171,16 +171,16 @@ bCfSC = {ds2 e4 ds2 e4 e b2 b2.}
 bCfSAll = {\bCfSA \breathe \bCfSB \breathe \bCfSC}
 
 duxSA = \cfA
-duxSB = \cfB
+duxSB = \relative c' {\cfB}
 duxSC = \cfC
 
 biciniumSA = {\transpose e b {g2 b4 a2 d4 c2 b4 a2.}} 
-biciniumSB = {\transpose e b {a2 b4 c2 d4 d c2 d2.}}
-biciniumSC = {\transpose e b {d2 b4 a2 g4 g fs2 g2.}}
+biciniumSB = {\transpose e b {a2 b4 c'2 d'4 d' c'2 d'2.}}
+biciniumSC = {\transpose e b' {d2 b,4 a,2 g,4 g, fs,2 g,2.}}
 
 codettaISA = {a4 b e}
 codettaISB = \codettaISA
-codettaISC = \codettaISA
+codettaISC = {c ds e}
 
 bDuxSA = \bCfSA
 bDuxSB = \bCfSB
@@ -188,15 +188,15 @@ bDuxSC = \bCfSC
 
 codettaIISA = \codettaISA
 codettaIISB = \codettaIISA
-codettaIISC = \codettaIISA
+codettaIISC = {a' b b}
 
 altoA = {g2 b4 b2 e4 c2 b4 b2.}
 altoB = {b2 b4 c2 e4 e c2 e2.}
 altoC = {e2 b4 b2 g4 g fs2 g2.}
 altoAll = {\altoA \breathe \altoB \breathe \altoC}
 
-aComesSA = \transpose e b \altoA
-aComesSB = \transpose e b \altoB
+aComesSA = \transpose e b {g2 b4 b2 e'4 c'2 b4 b2.}
+aComesSB = \transpose e b {b2 b4 c'2 e'4 e' c'2 e'2.}
 aComesSC = \transpose e b \altoC
 
 bCfAA = {g2 g4 a2 g4 a2 b4 ds2.}
@@ -235,12 +235,12 @@ bCfTC = {b2 e4 fs2 b,4 b b2 g2.}
 bCfTAll = {\bCfTA \breathe \bCfTB \breathe \bCfTC}
 
 comesTA = \transpose e b \cfA
-comesTB = \transpose e b \cfB
+comesTB = \transpose e b, \cfB
 comesTC = \transpose e b \cfC
 
-codettaITA = {e4 fs e}
-codettaITB = \codettaITA
-codettaITC = \codettaITA
+codettaITA = {a4 b e}
+codettaITB = {a4 b e}
+codettaITC = {a4 b e}
 
 bDuxTA = \bCfTA
 bDuxTB = \bCfTB
@@ -248,26 +248,26 @@ bDuxTC = \bCfTC
 
 aComesTA = \transpose e b \tenorA
 aComesTB = \transpose e b \tenorB
-aComesTC = \transpose e b \tenorC
+aComesTC = \transpose e b {g2 e4 d2 b,4 b, a,2 b,2.}
 
-codettaIITA = \codettaITA
-codettaIITB = \codettaIITA
-codettaIITC = \codettaIITA
+codettaIITA = {a4 b e}
+codettaIITB = {a4 b e}
+codettaIITC = {e4 fs g}
 
-bassA = {e2 e4 b2 e4 a2 e4 b2.}
-bassB = {b2 e4 a2 e4 e a2 e2.}
-bassC = {e2 e4 b2 e4 e fs2 e2.}
+bassA = {e2 e4 b'2 e,4 a2 e4 b'2.}
+bassB = {b2 e,4 a2 e4 e a2 e2.}
+bassC = {e2 e4 b'2 e,4 e fs2 e2.}
 bassAll = {\bassA \breathe \bassB \breathe \bassC}
 
 duxBA = \cfA
 duxBB = \cfB
-duxBC = \cfC
+duxBC = \relative c {\cfC}
 
-aComesBA = \transpose e b \bassA
-aComesBB = \transpose e b \bassB
-aComesBC = \transpose e b \bassC
+aComesBA = \transpose e b, {e2 e4 b,2 e4 a,2 e'4 b,2.}
+aComesBB = \transpose e b {b,,2 e,4 a,,2 e,4 e, a,2 e,2.}
+aComesBC = \transpose e b, {e2 e4 b,2 e4 e fs2 e2.}
 
-codettaIIBA = {a4 b e}
+codettaIIBA = {a4 b e,}
 codettaIIBB = \codettaIIBA
 codettaIIBC = \codettaIIBA
 
@@ -278,9 +278,9 @@ scoreCSoprano = \relative c' {
   % Part a
   \bar "||"^"Dux S a" \duxSA \breathe^"Bicinium S a" \biciniumSA \breathe^"Codetta I S a" e4 \codettaISA \breathe^"ad B Dux S a" \bDuxSA \breathe^"ad A Comes S a" \aComesSA \breathe^"Codetta II S a" fs,4 \codettaIISA 
 % Part b
-\bar "||"^"Dux S b" \duxSB \breathe^"Bicinium S b" \biciniumSB \breathe^"Codetta I S b" e,4 \codettaISB \breathe^"ad B Dux S b" \bDuxSB \breathe^"ad A Comes S b" \aComesSB \breathe^"Codetta II S b" fs,4 \codettaIISB
+\bar "||"^"Dux S b" \duxSB \breathe^"Bicinium S b" \biciniumSB \breathe^"Codetta I S b" a,4 \codettaISB \breathe^"ad B Dux S b" \bDuxSB \breathe^"ad A Comes S b" \aComesSB \breathe^"Codetta II S b" b'4 \codettaIISB
 % Part c
-\bar "||"^"Dux S c" \duxSC \breathe^"Bicinium S c" \biciniumSC \breathe^"Codetta I S c" e4 \codettaISC \breathe^"ad B Dux S c" \bDuxSC \breathe^"ad A Comes S c" \aComesSC \breathe^"Codetta II S c" fs4 \codettaIISC  \bar "|."
+\bar "||"^"Dux S c" \duxSC \breathe^"Bicinium S c" \biciniumSC \breathe^"Codetta I S c" d4 \codettaISC \breathe^"ad B Dux S c" \bDuxSC \breathe^"ad A Comes S c" \aComesSC \breathe^"Codetta II S c" d4 \codettaIISC  \bar "|."
 }
 
 scoreCAlto = \relative c' {
@@ -291,9 +291,9 @@ scoreCAlto = \relative c' {
     % Part a
   r2 \duxRestA \breathe r2 \duxRestA \breathe r4 \codettaIRestA \breathe r2 \duxRestA \breathe^"Comes A a" \comesAA \breathe^"Codetta II A a" cs4 \codettaAA \bar "||"^"A"
     % Part b
-  r2 \duxRestB \breathe r2 \duxRestB \breathe r4 \codettaIRestB \breathe r2 \duxRestB \breathe^"Comes A b" \comesAB \breathe^"Codetta II A b" cs4 \codettaAB \bar "||"^"A"
+  r2 \duxRestB \breathe r2 \duxRestB \breathe r4 \codettaIRestB \breathe r2 \duxRestB \breathe^"Comes A b" \comesAB \breathe^"Codetta II A b" fs4 \codettaAB \bar "||"^"A"
     % Part c
-  r2 \duxRestC \breathe r2 \duxRestC \breathe r4 \codettaIRestC \breathe r2 \duxRestC \breathe^"Comes A c" \comesAC \breathe^"Codetta II A c" cs4 \codettaAC \bar "|."
+  r2 \duxRestC \breathe r2 \duxRestC \breathe r4 \codettaIRestC \breathe r2 \duxRestC \breathe^"Comes A c" \comesAC \breathe^"Codetta II A c" b4 \codettaAC \bar "|."
 }
 
 scoreCTenor = \relative c {
@@ -304,9 +304,9 @@ scoreCTenor = \relative c {
     % Part a
   r2 \duxRestA \breathe^"Comes T a" \comesTA \breathe^"Codetta I T a" cs'4 \codettaITA \breathe^"ad B Dux T a" \bDuxTA \breathe^"ad A Comes T a" \aComesTA \breathe^"Codetta II T a" a,4 \codettaIITA \bar "||"^"T"
       % Part b
-  r2 \duxRestB \breathe^"Comes T b" \comesTB \breathe^"Codetta I T b" cs4 \codettaITB \breathe^"ad B Dux T b" \bDuxTB \breathe^"ad A Comes T b" \aComesTB \breathe^"Codetta II T b" a'4 \codettaIITB \bar "||"^"T"
+  r2 \duxRestB \breathe^"Comes T b" \comesTB \breathe^"Codetta I T b" fs,4 \codettaITB \breathe^"ad B Dux T b" \bDuxTB \breathe^"ad A Comes T b" \aComesTB \breathe^"Codetta II T b" d4 \codettaIITB \bar "||"^"T"
       % Part c
-  r2 \duxRestC \breathe^"Comes T c" \comesTC \breathe^"Codetta I T c" cs4 \codettaITC \breathe^"ad B Dux T c" \bDuxTC \breathe^"ad A Comes T c" \aComesTC \breathe^"Codetta II T c" a'4 \codettaIITC \bar "|."
+  r2 \duxRestC \breathe^"Comes T c" \comesTC \breathe^"Codetta I T c" b4 \codettaITC \breathe^"ad B Dux T c" \bDuxTC \breathe^"ad A Comes T c" \aComesTC \breathe^"Codetta II T c" fs4 \codettaIITC \bar "|."
 }
 
 scoreCBass = \relative c, {
@@ -318,9 +318,9 @@ scoreCBass = \relative c, {
 
   r2 \duxRestA \breathe r2 \duxRestA \breathe r4 \codettaIRestA \breathe^"Dux B a" \duxBA \breathe^"ad A Comes B a" \aComesBA \breathe^"Codetta II B a" fs4 \codettaIIBA \bar "||"^"B"
       % Part b
-  r2 \duxRestB \breathe r2 \duxRestB \breathe r4 \codettaIRestB \breathe^"Dux B b" \duxBB \breathe^"ad A Comes B b" \aComesBB \breathe^"Codetta II B b" fs,4 \codettaIIBB \bar "||"^"B"
+  r2 \duxRestB \breathe r2 \duxRestB \breathe r4 \codettaIRestB \breathe^"Dux B b" \duxBB \breathe^"ad A Comes B b" \aComesBB \breathe^"Codetta II B b" b4 \codettaIIBB \bar "||"^"B"
       % Part c
-  r2 \duxRestC \breathe r2 \duxRestC \breathe r4 \codettaIRestC \breathe^"Dux B c" \duxBC \breathe^"ad A Comes B c" \aComesBC \breathe^"Codetta II B c" fs4 \codettaIIBC \bar "|."
+  r2 \duxRestC \breathe r2 \duxRestC \breathe r4 \codettaIRestC \breathe^"Dux B c" \duxBC \breathe^"ad A Comes B c" \aComesBC \breathe^"Codetta II B c" b'4 \codettaIIBC \bar "|."
 }
 
 scoreCVerse = \lyricmode {
@@ -467,7 +467,7 @@ scoreDSoprano = \relative c'' {
   \breathe^"S" \altoAll
 }
 
-scoreDAlto = \relative c'' {
+scoreDAlto = \relative c' {
   \global
   % Music follows here.
   \breathe^"A" \tenorAll
@@ -481,7 +481,7 @@ scoreDTenor = \relative c {
   \bar "|."
 }
 
-scoreDBass = \relative c {
+scoreDBass = \relative c, {
   \global
   % Music follows here.
   \breathe^"B" \bassAll
