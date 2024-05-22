@@ -252,7 +252,8 @@ aComesTC = \transpose e b {g2 e4 d2 b,4 b, a,2 b,2.}
 
 codettaIITA = {a4 b e}
 codettaIITB = {a4 b e}
-codettaIITC = {e4 fs g}
+codettaIITC = {e4 fs g
+}
 
 bassA = {e2 e4 b'2 e,4 a2 e4 b'2.}
 bassB = {b2 e,4 a2 e4 e a2 e2.}
