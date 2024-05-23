@@ -235,7 +235,7 @@ comesAA = \comesTA
 comesAB = \comesTB
 comesAC = \comesTC
 
-adComesSA = {g4 g c a a2 g4}
+adComesSA = {g4 e a g g2 e4}
 adComesSB = {b4 b b b b2 b4}
 adComesSC = {fss4 f f f f g fff}
 
@@ -261,7 +261,7 @@ codettaIIAA = {bf4 g a}
 codettaIIAB = {d4 bf c}
 codettaIIAC = {r4 r r}
 
-codettaIITA = {d,4 c c}
+codettaIITA = {d4 c c}
 codettaIITB = {r4 r r}
 codettaIITC = {r4 r r}
 
@@ -433,7 +433,7 @@ scoreCTenor = \relative c' {
   % Comes 2 (CF: Alt, A S T, Rückmodulation)
   % Codetta 2 (S A T B, Rückmodulation)
   % a
-  \partial 4 %{Dux 1 a%}r4\duxRestA \breathe %{Comes 1 a/ Bicinium a%} c4^"Comes T a" \comesTA \breathe %{Codetta 1 a%} c4^"Codetta 1 T a"\codettaITA \breathe %{Dux 2 b%} c4^"ad Dux B T a"\adDuxTA \breathe %{Comes 2 a%} g^"ad Comes A T a" \adComesTA \breathe %{Codetta 2 a%}c4^"Codetta 2 B a"\codettaIITA\fermata
+  \partial 4 %{Dux 1 a%}r4\duxRestA \breathe %{Comes 1 a/ Bicinium a%} c4^"Comes T a" \comesTA \breathe %{Codetta 1 a%} c4^"Codetta 1 T a"\codettaITA \breathe %{Dux 2 b%} c4^"ad Dux B T a"\adDuxTA \breathe %{Comes 2 a%} g^"ad Comes A T a" \adComesTA \breathe %{Codetta 2 a%}g4^"Codetta 2 B a"\codettaIITA\fermata
   % b
   \partial 4 %{Dux 1 b%}r4\duxRestB \breathe %{Comes 1 b/ Bicinium b%} e4^"Comes T a" \comesTB \breathe %{Codetta 1 a%} c4^"Codetta 1 T b"\codettaITB \breathe %{Dux 2 b%} f4^"ad Dux T B a"\adDuxTB %{Comes 2 a%} e^"ad Comes A B b" \adComesTB \breathe %{Codetta 2 a%}c4^"Codetta 2 T b"\codettaIITB\fermata
   % c
