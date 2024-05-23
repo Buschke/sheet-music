@@ -3,12 +3,12 @@
 
 \header {
   dedication = "A.L. für Weg zum C-Schein"
-  title = "Der Mond ist aufgegangen"
+  title = \markup {\with-url #"https://de.wikipedia.org/wiki/Abendlied_(Matthias_Claudius)" "Der Mond ist aufgegangen"}
   subsubtitle = "Gotteslob Nr. 93"
   instrument = "Orgel"
-  composer = "M: Johann Abraham Peter Schulz 1790"
+  composer = \markup {"M: " \with-url #"https://de.wikipedia.org/wiki/Johann_Abraham_Peter_Schulzhttps://de.wikipedia.org/wiki/Johann_Abraham_Peter_Schulz" "Johann Abraham Peter Schulz" "1790"}
   arranger = \markup { "Satz: " \with-url #"https://buschke.com" "Sven Buschke" }
-  poet = "T: Matthias Claudius 1779"
+  poet = \markup {"T: " \with-url #"https://de.wikipedia.org/wiki/Matthias_Claudius" "Matthias Claudius 1779"}
   meter = ""
   piece = ""
   opus = "GL 93"
@@ -90,11 +90,11 @@ chordsBCfCA = \chordmode {f4/a f/a bf f/a}
 chordsBCfCB = \chordmode {s4}
 chordsBCfCC = \chordmode {e4:dim/g f}
 
-figBassA = \figuremode {<6>4 s s s <643>2 s4}
-figBassB = \figuremode {s4 s s s <6234>2 s4}
-figBassCA = \figuremode {s4 s s <6345>4}
-figBassCB = \figuremode {<435>4}
-figBassCC = \figuremode {s4 <2346>4}
+figBassA = \figuremode {s4 s s s s2 s4}
+figBassB = \figuremode {s4 s s s s2 s4}
+figBassCA = \figuremode {s4 s s s4}
+figBassCB = \figuremode {s4}
+figBassCC = \figuremode {s4 s4}
 
 figBCfBassA = \figuremode {<6>4 s s s <6>2 s4}
 figBCfBassB = \figuremode {<6>4 <6> s s s2 <6>4}
@@ -330,7 +330,7 @@ scoreBChordNamesChords = \chordmode {
 scoreBFigBassBassFiguresI = \figuremode {
   \global
   % Figures follow here.
-  \repeat volta 2 { \partial 4 <6>4\figBassA <6>4\figBassB <6>4\figBassCA \alternative {{<6>2\figBassCB}{<6>4\figBassCC} }}  
+  \repeat volta 2 { \partial 4 s4\figBassA s4\figBassB 4\figBassCA \alternative {{s2\figBassCB}{s4\figBassCC} }}  
 }
 
 scoreBFigBassBassFiguresII = \figuremode {
