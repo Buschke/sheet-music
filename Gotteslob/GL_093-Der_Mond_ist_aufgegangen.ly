@@ -79,7 +79,7 @@ verseDB = \lyricmode {wun -- der -- bar. }
 
 chordsA = \chordmode {c4 f bf f c2 f4}
 chordsB = \chordmode {f4 f bf f bf2 f4}
-chordsCA = \chordmode {f4 f f bf}
+chordsCA = \chordmode {f4 f bf f}
 chordsCB = \chordmode {s4}
 chordsCC = \chordmode {c4 f}
 chordsAll = \chordmode {\repeat volta 2 {\partial 4 f4\chordsA f4\chordsB f4\chordsCA \alternative {{c2\chordsCB}{c4\chordsCC}}}\bar "|."}
@@ -185,7 +185,7 @@ comesTB = {e4 e a f f2 e4} % {a a d c bf2 a4}
 comesTC = {e4 e f e d d c} % {a a bf a g g f}
 
 biciniumA = {bf4 e a c bf2 e,4}
-biciniumB = {c4 c f, a a2 g4}
+biciniumB = {c4 c f, a a2 c4}
 biciniumC = {g4 g a g f f e}
 
 comesChordsA = \chordmode {g4 c f c g2 c4} %{ f4{c4 f bf f c2 f4} %}
@@ -236,11 +236,11 @@ comesAB = \comesTB
 comesAC = \comesTC
 
 adComesSA = {g4 e a g g2 e4}
-adComesSB = {b4 b b b b2 b4}
+adComesSB = {g4 g c a a2 g4}
 adComesSC = {fss4 f f f f g fff}
 
 adComesTA = {bf4 g c c bf2 g4}
-adComesTB = {c'4 c f c c2 c4}
+adComesTB = {c4 c f c c2 c4}
 adComesTC = {fss4 g f f f f fff}
 
 adComesBA = {g'4 c, f f g2 c4}
@@ -254,15 +254,15 @@ comesACfChordsC = \chordmode {\comesChordsC}
 
 % Codetta 2 (S A T B, Rückmodulation)
 codettaIISA = {f4 e f}
-codettaIISB = {r4 r r}
+codettaIISB = {f4 e f}
 codettaIISC = {r4 r r}
 
 codettaIIAA = {bf4 g a}
-codettaIIAB = {d4 bf c}
+codettaIIAB = {bf4 g a}
 codettaIIAC = {r4 r r}
 
 codettaIITA = {d4 c c}
-codettaIITB = {r4 r r}
+codettaIITB = {d,4 bf c}
 codettaIITC = {r4 r r}
 
 codettaIIBA = {bf4 c, f}
@@ -387,7 +387,7 @@ scoreCSoprano = \relative c'' {
   % a
   \partial 4 %{Dux 1 a%}f4^"Dux S a" \duxSA \breathe %{Comes 1 a/ Bicinium a%} c4^"Bicinium a" \biciniumA \breathe %{Codetta 1 a%} e4^"Codetta 1 S a" \codettaISA \breathe %{Dux 2 b%} a4^"ad Dux B S a"\adDuxSA \breathe %{Comes 2 a%} e,^"ad Comes A S a" \adComesSA \breathe %{Codetta 2 a%}e4^"Codetta 2 S a"\codettaIISA\fermata
   % b
-  \partial 4 %{Dux 1 b%}f4^"Dux S b" \duxSB \breathe %{Comes 1 b/ Bicinium b%}c4^"Bincinium b" \biciniumB \breathe %{Codetta 1 b%}c4^"Codetta 1 b"\codettaISB \breathe %{Dux 2 b%}c4^"ad Dux B S b"\adDuxSB \breathe %{Comes 2 b%} e^"ad Comes A S b" \adComesSB \breathe %{Codetta 2 b%}g4^"Codetta 2 S b"\codettaIISB\fermata
+  \partial 4 %{Dux 1 b%}f4^"Dux S b" \duxSB \breathe %{Comes 1 b/ Bicinium b%}c4^"Bincinium b" \biciniumB \breathe %{Codetta 1 b%}c4^"Codetta 1 b"\codettaISB \breathe %{Dux 2 b%}c4^"ad Dux B S b"\adDuxSB \breathe %{Comes 2 b%} g'^"ad Comes A S b" \adComesSB \breathe %{Codetta 2 b%}g4^"Codetta 2 S b"\codettaIISB\fermata
   % c
   \partial 4 %{Dux 1 c%}f4^"Dux S c" \duxSC \breathe %{Comes 1 c/ Bicinium c%}c4^"Bicinium c" \biciniumC \breathe %{Codetta 1 c%}c4^"Codetta 1 c"\codettaISC \breathe %{Dux 2 c%}s4^"ad Dux B S c"\adDuxSC \breathe %{Comes 2 c%} e^"ad Comes A S c" \adComesSC \breathe %{Codetta 2 c%}c4^"Codetta 2 S c"\codettaIISC\bar "|."
 }
@@ -435,7 +435,7 @@ scoreCTenor = \relative c' {
   % a
   \partial 4 %{Dux 1 a%}r4\duxRestA \breathe %{Comes 1 a/ Bicinium a%} c4^"Comes T a" \comesTA \breathe %{Codetta 1 a%} c4^"Codetta 1 T a"\codettaITA \breathe %{Dux 2 b%} c4^"ad Dux B T a"\adDuxTA \breathe %{Comes 2 a%} g^"ad Comes A T a" \adComesTA \breathe %{Codetta 2 a%}g4^"Codetta 2 B a"\codettaIITA\fermata
   % b
-  \partial 4 %{Dux 1 b%}r4\duxRestB \breathe %{Comes 1 b/ Bicinium b%} e4^"Comes T a" \comesTB \breathe %{Codetta 1 a%} c4^"Codetta 1 T b"\codettaITB \breathe %{Dux 2 b%} f4^"ad Dux T B a"\adDuxTB %{Comes 2 a%} e^"ad Comes A B b" \adComesTB \breathe %{Codetta 2 a%}c4^"Codetta 2 T b"\codettaIITB\fermata
+  \partial 4 %{Dux 1 b%}r4\duxRestB \breathe %{Comes 1 b/ Bicinium b%} e4^"Comes T a" \comesTB \breathe %{Codetta 1 a%} c4^"Codetta 1 T b"\codettaITB \breathe %{Dux 2 b%} f4^"ad Dux T B a"\adDuxTB %{Comes 2 a%} c'^"ad Comes A B b" \adComesTB \breathe %{Codetta 2 a%}c4^"Codetta 2 T b"\codettaIITB\fermata
   % c
   \partial 4 %{Dux 1 b%}r4\duxRestB \breathe %{Comes 1 b/ Bicinium b%} c4^"Comes T a" \comesTB \breathe %{Codetta 1 a%} c4^"Codetta 1 T a"\codettaITC \breathe %{Dux 2 b%} a4^"ad Dux B T a"\adDuxTC \breathe %{Comes 2 a%} e^"ad Comes A B c" \adComesTC \breathe %{Codetta 2 a%}c4^"Codetta 2 B c"\codettaIITC\bar "|."
 }
