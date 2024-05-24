@@ -332,13 +332,13 @@ scoreBChordNamesChords = \chordmode {
 scoreBFigBassBassFiguresI = \figuremode {
   \global
   % Figures follow here.
-  \repeat volta 2 { \partial 4 s4\figBassA s4\figBassB 4\figBassCA \alternative {{s2\figBassCB}{s4\figBassCC} }}  
+  \repeat volta 2 { \partial 4 <Figured Bass>4\figBassA <FB>4\figBassB <FB>4\figBassCA \alternative {{s2\figBassCB}{s4\figBassCC} }}  
 }
 
 scoreBFigBassBassFiguresII = \figuremode {
   \global
   % Figures follow here.
-  \repeat volta 2 { \partial 4 s4\figBCfBassA <6>4\figBCfBassB <6>4\figBCfBassCA \alternative {{<6>2\figBCfBassCB}{<6>4\figBCfBassCC} }}  
+  \repeat volta 2 { \partial 4 <Figured Bass>4\figBCfBassA <6>4\figBCfBassB <6>4\figBCfBassCA \alternative {{<6>2\figBCfBassCB}{<6>4\figBCfBassCC} }}  
   
 }
 
@@ -377,6 +377,7 @@ scoreCSoprano = \relative c'' {
   f,4\intonationISA
   f4\intonationISA
   f4\intonationISA
+  f4\intonationISA
   % Intonation 2: Fächerpolyphonie 1-2-3-4stimmig
   % Intonation 3: Unisono, letzten 4 4stimmig
   % Intonation 4: Bass CF, Fächerpolyphonie 1-2-3-4stimmig
@@ -401,6 +402,7 @@ scoreCAlto = \relative c' {
   \global
   % Music follows here.
   % Intonation 1: solo, letzten 4 4stimmig
+  r4 \intonationIAA
   r4 \intonationIAA
   r4 \intonationIAA
   r4 \intonationIAA
@@ -431,6 +433,7 @@ scoreCTenor = \relative c' {
   r4 \intonationITA
   r4 \intonationITA
   r4 \intonationITA
+  r4 \intonationITA
   % Intonation 2: Fächerpolyphonie 1-2-3-4stimmig
   % Intonation 3: Unisono, letzten 4 4stimmig
   % Intonation 4: Bass CF, Fächerpolyphonie 1-2-3-4stimmig
@@ -458,6 +461,7 @@ scoreCBass = \relative c {
   r4 \intonationIBA
   r4 \intonationIBA
   r4 \intonationIBA
+  r4 \intonationIBA
   % Intonation 2: Fächerpolyphonie 1-2-3-4stimmig
   % Intonation 3: Unisono, letzten 4 4stimmig
   % Intonation 4: Bass CF, Fächerpolyphonie 1-2-3-4stimmig
@@ -480,6 +484,9 @@ scoreCBass = \relative c {
 
 scoreCVerse = \lyricmode {
   % Lyrics follow here.
+  % Intonation
+  Der \verseAB Der \verseAB Der \verseAB Der \verseAB 
+  % Main
   \scoreAVerse  
   Der \verseAB Der \verseAB Da \codettaIVerseA Der \verseAB Der \verseAB  Da \codettaIIVerseA
   und \verseBB und \verseBB Da \codettaIVerseB und \verseBB und \verseBB Da \codettaIIVerseB 
@@ -513,6 +520,9 @@ scoreCChordNames = \chordmode {
   \global
   \germanChords
   % Chords follow here.
+  % Intonation
+  \partial 4 f4\chordsA f4\chordsA f4\chordsA f4\chordsA 
+  % Main
   \chordsAll\bar"|.|"
   % a
   \partial 4 f4\chordsA c4\comesChordsA c4\codettaIChordsA f4\duxBCfChordsA c4\comesACfChordsA c4\codettaIIChordsA
@@ -525,7 +535,12 @@ scoreCChordNames = \chordmode {
 scoreCFigBass = \figuremode {
   \global
   % Figures follow here.
+  % Intonation
+  \partial 4 <Figured Bass>4\figBassA s4\figBassA s4\figBassA s4\figBassA
+  % Main
   \scoreBBassFiguresIPart
+  % Dux Comes
+  \partial 4 <Figured Bass>4\figBassA s4\figBassA s4\figBassA
 }
 
 scoreCChoirPart = \new ChoirStaff <<
