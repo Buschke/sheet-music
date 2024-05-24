@@ -102,74 +102,6 @@ figBCfBassCA = \figuremode {<6>4 <6> s <6>4}
 figBCfBassCB = \figuremode {s4}
 figBCfBassCC = \figuremode {<6>4 s}
 
-% Intonation 1: solo, letzten 4 4stimmig
-intonationISA = {}
-intonationISB = {}
-intonationISC = {}
-
-intonationIAA = {}
-intonationIAB = {}
-intonationIAC = {}
-
-intonationITA = {}
-intonationITB = {}
-intonationITC = {}
-
-intonationIBA = {}
-intonationIBB = {}
-intonationIBC = {}
-
-% Intonation 2: Fächerpolyphonie 1-2-3-4stimmig
-intonationIISA = {}
-intonationIISB = {}
-intonationIISC = {}
-
-intonationIIAA = {}
-intonationIIAB = {}
-intonationIIAC = {}
-
-intonationIITA = {}
-intonationIITB = {}
-intonationIITC = {}
-
-intonationIIBA = {}
-intonationIIBB = {}
-intonationIIBC = {}
-
-% Intonation 3: Unisono, letzten 4 4stimmig
-intonationIIISA = {}
-intonationIIISB = {}
-intonationIIISC = {}
-
-intonationIIIAA = {}
-intonationIIIAB = {}
-intonationIIIAC = {}
-
-intonationIIITA = {}
-intonationIIITB = {}
-intonationITIIC = {}
-
-intonationIIIBA = {}
-intonationIIIBB = {}
-intonationIIIBC = {}
-
-% Intonation 4: Bass CF, Fächerpolyphonie 1-2-3-4stimmig
-intonationIVSA = {}
-intonationIVSB = {}
-intonationIVSC = {}
-
-intonationIVAA = {}
-intonationIVAB = {}
-intonationIVAC = {}
-
-intonationIVTA = {}
-intonationIVTB = {}
-intonationIVTC = {}
-
-intonationIVBA = {}
-intonationIVBB = {}
-intonationIVBC = {}
-
 % Dux 1 (CF: Sopran, S)
 duxSA = \cfA
 duxSB = \cfB
@@ -279,6 +211,76 @@ codettaIIChordsC = \chordmode {g4:m7/bf c f}
 
 %%%%%%%%%%%%%%%%%%%
 
+% Intonation 1: solo, letzten 4 4stimmig
+intonationISA = \cfA
+intonationISB = {}
+intonationISC = {}
+
+intonationIAA = {r4 r r r r2 r4}
+intonationIAB = {}
+intonationIAC = {}
+
+intonationITA = {r4 r r r r2 r4}
+intonationITB = {}
+intonationITC = {}
+
+intonationIBA = {r4 r r r r2 r4}
+intonationIBB = {}
+intonationIBC = {}
+
+% Intonation 2: Fächerpolyphonie 1-2-3-4stimmig
+intonationIISA = {}
+intonationIISB = {}
+intonationIISC = {}
+
+intonationIIAA = {}
+intonationIIAB = {}
+intonationIIAC = {}
+
+intonationIITA = {}
+intonationIITB = {}
+intonationIITC = {}
+
+intonationIIBA = {}
+intonationIIBB = {}
+intonationIIBC = {}
+
+% Intonation 3: Unisono, letzten 4 4stimmig
+intonationIIISA = {}
+intonationIIISB = {}
+intonationIIISC = {}
+
+intonationIIIAA = {}
+intonationIIIAB = {}
+intonationIIIAC = {}
+
+intonationIIITA = {}
+intonationIIITB = {}
+intonationITIIC = {}
+
+intonationIIIBA = {}
+intonationIIIBB = {}
+intonationIIIBC = {}
+
+% Intonation 4: Bass CF, Fächerpolyphonie 1-2-3-4stimmig
+intonationIVSA = {}
+intonationIVSB = {}
+intonationIVSC = {}
+
+intonationIVAA = {}
+intonationIVAB = {}
+intonationIVAC = {}
+
+intonationIVTA = {}
+intonationIVTB = {}
+intonationIVTC = {}
+
+intonationIVBA = {}
+intonationIVBB = {}
+intonationIVBC = {}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 scoreAMelody = \relative c'' {
   \global
   % Music follows here.
@@ -372,11 +374,14 @@ scoreCSoprano = \relative c'' {
   \global
   % Music follows here.
   % Intonation 1: solo, letzten 4 4stimmig
+  f,4\intonationISA
+  f4\intonationISA
+  f4\intonationISA
   % Intonation 2: Fächerpolyphonie 1-2-3-4stimmig
   % Intonation 3: Unisono, letzten 4 4stimmig
   % Intonation 4: Bass CF, Fächerpolyphonie 1-2-3-4stimmig
   % CF-Satz
-  \repeat volta 2{\partial 4 f,4\cfA\breathe a4\cfB\breathe a4\cfCA\alternative{{g2\cfCB}{g4\cfCC}}}\bar "|.|"
+  \repeat volta 2{\partial 4 f4\cfA\breathe a4\cfB\breathe a4\cfCA\alternative{{g2\cfCB}{g4\cfCC}}}\bar "|.|"
   % Dux-Comes
   % Dux 1 (CF: Sopran, S)
   % Comes 1 (CF: Tenor, T S (Bicinium), Quinttonart)
@@ -396,6 +401,9 @@ scoreCAlto = \relative c' {
   \global
   % Music follows here.
   % Intonation 1: solo, letzten 4 4stimmig
+  r4 \intonationIAA
+  r4 \intonationIAA
+  r4 \intonationIAA
   % Intonation 2: Fächerpolyphonie 1-2-3-4stimmig
   % Intonation 3: Unisono, letzten 4 4stimmig
   % Intonation 4: Bass CF, Fächerpolyphonie 1-2-3-4stimmig
@@ -420,6 +428,9 @@ scoreCTenor = \relative c' {
   \global
   % Music follows here.
   % Intonation 1: solo, letzten 4 4stimmig
+  r4 \intonationITA
+  r4 \intonationITA
+  r4 \intonationITA
   % Intonation 2: Fächerpolyphonie 1-2-3-4stimmig
   % Intonation 3: Unisono, letzten 4 4stimmig
   % Intonation 4: Bass CF, Fächerpolyphonie 1-2-3-4stimmig
@@ -444,6 +455,9 @@ scoreCBass = \relative c {
   \global
   % Music follows here.
   % Intonation 1: solo, letzten 4 4stimmig
+  r4 \intonationIBA
+  r4 \intonationIBA
+  r4 \intonationIBA
   % Intonation 2: Fächerpolyphonie 1-2-3-4stimmig
   % Intonation 3: Unisono, letzten 4 4stimmig
   % Intonation 4: Bass CF, Fächerpolyphonie 1-2-3-4stimmig
