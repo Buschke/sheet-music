@@ -149,6 +149,9 @@ globalA = {
 scoreASoprano = \relative c'' {
   \globalA
   % Music follows here.
+  c4^"Tonleiter" d e f g a b8 b c4
+  c,^"Tonleiter im Bass" b c c8 d d4 c g g
+  \bar "||"
   c4^"Cantus firmus im Sopran, Sekunde" d e f g a b c c b a g f e d c
   \bar "||"
   c^"Terz" e g b d, f a c c a f d b' g e c
@@ -221,6 +224,9 @@ scoreASoprano = \relative c'' {
 scoreAAlto = \relative c' {
   \globalA
   % Music follows here.
+  e g g a c c d8 d e4
+  e, f g f8 a g4 e d c
+  \bar "||"
   e g g a c c d e
   e d c c a g g e
   e g b d g, a c e
@@ -309,6 +315,9 @@ scoreAAlto = \relative c' {
 scoreATenor = \relative c' {
   \globalA
   % Music follows here.
+  g b c c e f g8 f g4
+  g, b c a8 c b4 a g e
+  \bar "||"
   g b c c e f f g
   g g f e c c b g
   g c d g b, c f g
@@ -397,6 +406,9 @@ scoreATenor = \relative c' {
 scoreABass = \relative c {
   \globalA
   % Music follows here.
+  c g c f c f g8 d c4
+  c, d e f8 f g4 a b c
+  \bar "||"
   c g c f c f d c
   c g f' c f c g c
   c c g g g f' f c
@@ -483,6 +495,7 @@ scoreABass = \relative c {
 
 scoreAVerse = \lyricmode {
   % Lyrics follow here.
+  do re mi fa sol la si do | do re mi fa sol la si do
   do re mi fa sol la si do | do si la sol fa mi re do
   do mi sol si re fa la do | do la fa re si sol mi do
   do fa si mi la re sol do | do sol re la mi si fa do
@@ -552,6 +565,10 @@ scoreAChordNames = \chordmode {
   \globalA
   % Chords follow here.
   \germanChords
+  c g c f c f g8 b:dim/d c4
+  \bar "||"
+  c b:dim/d c/e f8 d:min7/f g4 a:min g/b c
+  \bar "||"
   c g c f c f b:dim/d c
   c g f c f c g c
   c c g g g f f c
