@@ -128,9 +128,6 @@ scoreASoprano = \relative c'' {
   c^\markup{\column{\line{QFS\super{8}\sub{WL}}\line{I-IV-VII-III-VI-II-V-I}}} c b b a a g g
   \bar "||"
   e'^\markup{\column{\line{QFS\super{3}\sub{WL}}\line{I-IV-VII-III-VI-II-V-I}}} f d e c d b c
-  \bar "||"
-  c4^"Tonleiter" d e f g a b8 b c4
-  c,^"Tonleiter im Bass" b c c8 d d4 c g g
   \bar "|."
 }
 
@@ -212,9 +209,6 @@ scoreAAlto = \relative c' {
   e f d e c d b c
   % QFS^3_WL-I-IV-VII-III-VI-II-V-I
   g' a f g e f d e
-  \bar "||"
-  e g g a c c d8 d e4
-  e, f g f8 a g4 e d c
   \bar "|."
 }
 
@@ -296,9 +290,6 @@ scoreATenor = \relative c' {
   g a f g e f d e
   % QFS^3_WL-I-IV-VII-III-VI-II-V-I
   c' c b b a a g g
-  \bar "||"
-  g b c c e f g8 f g4
-  g, b c a8 c b4 a g e
   \bar "|."
 }
 
@@ -380,9 +371,6 @@ scoreABass = \relative c {
   c f b, e a, d g, c
   % QFS^3_WL-I-IV-VII-III-VI-II-V-I
   c f b, e a, d g, c
-  \bar "||"
-  c g c f c f g8 d c4
-  c, d e f8 f g4 a b c
   \bar "|."
 }
 
@@ -565,10 +553,6 @@ scoreAChordNames = \chordmode {
   c f b, e a, d g, c
   % QFS^3_WL-I-IV-VII-III-VI-II-V-I
   c f b, e a, d g, c
-  \bar "||"
-  c g c f c f g8 b:dim/d c4
-  \bar "||"
-  c b:dim/d c/e f8 d:min7/f g4 a:min g/b c
   \bar "|."
 }
 
