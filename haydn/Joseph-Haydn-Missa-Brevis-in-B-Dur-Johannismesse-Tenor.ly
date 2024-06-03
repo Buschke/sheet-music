@@ -50,7 +50,7 @@ scoreATenorVoice = \relative c' {
   r2 c8. c16 c8 c c4(bf2) a8 a d4(c) c r
   f8.\p f16 f8 f f4(e) f r r2
   c2\f c4 r8 f
-  f4 e8 e f4 f, c' f8 f16(ef) d4 \afterGrace ef {c8}
+  f4 e8 e f4 f, c' f8 f16(ef) d4 ef
   c4 c8 c c4 d8 ef16(f)
   g8.(ef16) c8 c c4 c
   d\p bf bf4. bf8 bf4 a16(bf) c8 d(c) c4
@@ -232,20 +232,20 @@ scoreCTenorVoice = \relative c' {
   \time 3/4
   \tempo "Adagio" 4 = 46
   a4 f'\p f8 f f2.(f2) a,4 bf4 4 4 bf2.(bf2) bf4 4 bf2 b4. b8 b4 c b r
-  ef4. ef8 d c c8. b16 b4 r ef4. ef8 d c c8. b16 b4 g ef c ef'8(c) af2 ef4 c2 c4 fs4 r fs g2. a g2 g4 g2 r4
+  ef4. ef8 d c c8. b16 b4 r ef4. ef8 d c c8. b16 b4 g ef c ef'8(c) af2 ef4 c2 c4 fs4 r fs g2. a g2 f4 ef2 r4
   r2. r r r r
-  b
+  b'
   b bf(a2) bf4 a2 bf4 c(bf) a g r r
   r2.
   r4 d\p d d2 d4
   \bar "||"
   \tempo "Allegro" 4=80
-  d d'\f d8 d d2 d4 d4. d8 d4 d d bf c4. c8 c4 c c c8 c bf4 bf bf a2 a4 bf g' e c d c d(c2) c4 r
+  d d'\f d8 d d2 d4 d4. d8 d4 d bf bf c4. c8 c4 c c c8 c bf4 bf bf a2 a4 bf g' e c d c d(c2) c4 r
   f, f4. f8 f f bf bf g4 e f f8 f f f 
   bf4(g) e f f r8 f bf4(g) e f r r
   c'2\f c4 bf bf bf bf2 bf4 bf(g') g f f f ef(d c)
   bf r d8 d d4. d8 d4 d2 d4 d4. d8 d4 d8 d d4 bf c c c8 c c4 c c8 c bf4 bf bf a a a8 a bf4 g' e c d c d8 d c4 c a f f c'2 c4
-  bf2 bf4 a2. bf4 g' e c d c d8 d c2 f,4 r8 f f f f4 f f bf8. bf16 g4 e f8 f f f f f bf8. bf16 g4 e f8. f16 f8 f f f bf4 g e8 e f2 c'4 c c c8 c bf4 bf bf8 bf bf2 bf4 bf(g') g f8 f f4 f ef ef d4(c) bf r r 
+  bf2 bf4 a2. bf4 g' e c d c d8 d c2 f,4 r8 f f f f4 f f bf8. bf16 g4 e f8 f f f f f bf8. bf16 g4 e f8. f16 f8 f f f bf4 g e8 e f2 c'4 c c c8 c bf4 bf bf8 bf bf2 bf4 bf(g') g f8 f f4 f ef8 ef d4(c) bf r r 
   r2. r r 
   r4 f'2
   g4 ef c d16(c bf ef) f2 ef4(d) c bf r c\f d r a bf r r
@@ -436,19 +436,19 @@ scoreFTenorVoice = \relative c' {
   r2. r
   r4 r bf c bf r
   g' f ef ef d r
-  d2\f f4 e2 e4 r ef c d2 c4 bf2(a4) g r r r2. r r
-  r4 r bf c bf r d d d d d r r f\f f d2 d4 r ef ef f2 f4 ef2(d4)
+  d2\f d4 e2 e4 r ef c d2 c4 bf2(a4) g r r r2. r r
+  r4 r bf c bf r d d d d d r r f\f f d2 d4 r ef ef f2 ef4 ef2(d4)
   c r r
   r2. r r
-  r4 r ef\f d c r c\p c bf bf a r
+  r4 r ef\f d ef r c\p c bf bf a r
   bf2 bf4 bf2 bf4 bf2(a4) bf r r r2.
   r8 a(bf) a d c bf4(c2) f,4 r r r2.
   r8 d'(f) ef d c  bf2 d4
   ef(g8 f ef d c ef d c bf a) g4 r r 
-  a2 bf4 g(f2) f4 r r
+  c2 bf4 g(f ef) d4 r r
   d'2\ff d4 c2. bf2 r4
   r2. r r8 f'\p(ef) d c bf a4(bf8 c) d4 ef(d c) bf r r d2\f d4 c2. bf2 r4 r2. r
-  r8 f'\pp(ef) d c bf a4(bf8 c) d4 ef(d c) bf r r r2. r r f2.\pp d2 r4 r2.
+  r8 f'\pp(ef) d c bf a4(bf8 c) d4 ef(d c) bf r r r2. r r f'2.\pp d2 r4 r2.
   \bar "|."
 }
 

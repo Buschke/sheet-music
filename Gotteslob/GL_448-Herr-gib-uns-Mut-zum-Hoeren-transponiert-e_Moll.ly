@@ -197,12 +197,12 @@ scoreCAltoA = \relative c' {
 
 scoreCAltoB = \relative c' {
   % Music follows here.
-  g4 b b c c e2.\breathe
+  g4 b b cs cs e2.\breathe
 }
 
 scoreCAltoC = \relative c' {
   % Music follows here.
-  e4 fs2 e c2.\breathe
+  e4 fs2 e cs2.\breathe
 }
 
 scoreCAltoD = \relative c' {
@@ -254,7 +254,7 @@ scoreCBassD = \relative c, {
   e4 e b' e, b' e,2.
 }
 
-scoreESopranoA = \relative c'' {
+scoreESopranoA = \relative c' {
   % Music follows here.
   \partial 4
   e4
@@ -322,7 +322,7 @@ scoreETenorD = \relative c'' {
 }
 
 scoreCBiciniumA = \relative c' {
-  d4^"Bicinium 1a" fs fs e c d2 d4\breathe
+  d4^"Bicinium 1a" fs fs e cs d2 d4\breathe
 }
 
 scoreCBiciniumB = \relative c'' {
@@ -339,16 +339,16 @@ scoreCBiciniumD = \relative c'' {
 
 %%%
 
-scoreCCodettaASopranoA = \relative c'' {
-  d4^"Codetta 1a" d d d\breathe
+scoreCCodettaASopranoA = \relative c' {
+  d4^"Codetta 1a" e ds e\breathe
 }
 
 scoreCCodettaASopranoB = \relative c'' {
-  d4^"Codetta 1b" d d d\breathe
+  d4^"Codetta 1b" c b g\breathe
 }
 
-scoreCCodettaASopranoC = \relative c'' {
-  d4^"Codetta 1c" d d d\breathe
+scoreCCodettaASopranoC = \relative c''' {
+  g4^"Codetta 1c" a fs g\breathe
 }
 
 scoreCCodettaASopranoD= \relative c'' {
@@ -356,121 +356,121 @@ scoreCCodettaASopranoD= \relative c'' {
 }
 
 scoreCCodettaBSopranoA = \relative c'' {
-  d4^"Codetta 2a" d d d\breathe
+  g4^"Codetta 2a" a fs g\breathe
 }
 
 scoreCCodettaBSopranoB = \relative c'' {
-  d4^"Codetta 2b" d d d\breathe
+  e4^"Codetta 2b" e ds e\breathe
 }
 
 scoreCCodettaBSopranoC = \relative c'' {
-  d4^"Codetta 2c" d d d\breathe
+  cs4^"Codetta 2c" c b b\breathe
 }
 
 scoreCCodettaBSopranoD= \relative c'' {
-  d4^"Codetta 2d" d d d\breathe
+  g4^"Codetta 2d" a fs g\breathe
 }
 
 %%%%
 
 scoreCCodettaAAltoA = \relative c'' {
-  d4^"Codetta 1a" d d d\breathe
+  r4 r r r\breathe
 }
 
 scoreCCodettaAAltoB = \relative c'' {
-  d4^"Codetta 1b" d d d\breathe
+  r4 r r r\breathe
 }
 
 scoreCCodettaAAltoC = \relative c'' {
-  d4^"Codetta 1c" d d d\breathe
+  r4 r r r\breathe
 }
 
 scoreCCodettaAAltoD= \relative c'' {
-  d4^"Codetta 1d" d d d\breathe
+  r4 r r r\breathe
 }
 
-scoreCCodettaBAltoA = \relative c'' {
-  d4^"Codetta 2a" d d d\breathe
+scoreCCodettaBAltoA = \relative c' {
+  e4^"Codetta 2a" e ds e\breathe
 }
 
-scoreCCodettaBAltoB = \relative c'' {
-  d4^"Codetta 2b" d d d\breathe
+scoreCCodettaBAltoB = \relative c' {
+  fs4^"Codetta 2b" d e d\breathe
 }
 
-scoreCCodettaBAltoC = \relative c'' {
-  d4^"Codetta 2c" d d d\breathe
+scoreCCodettaBAltoC = \relative c' {
+  e4^"Codetta 2c" a fs g\breathe
 }
 
-scoreCCodettaBAltoD= \relative c'' {
-  d4^"Codetta 2d" d d d\breathe
+scoreCCodettaBAltoD= \relative c' {
+  d4^"Codetta 2d" e ds e\breathe
 }
 
 %%%
 
-scoreCCodettaATenorA = \relative c'' {
-  d4^"Codetta 1a" d d d\breathe
+scoreCCodettaATenorA = \relative c {
+  b4^"Codetta 1a" c b g\breathe
 }
 
-scoreCCodettaATenorB = \relative c'' {
-  d4^"Codetta 1b" d d d\breathe
+scoreCCodettaATenorB = \relative c {
+  fs4^"Codetta 1b" e ds e\breathe
 }
 
-scoreCCodettaATenorC = \relative c'' {
-  d4^"Codetta 1c" d d d\breathe
+scoreCCodettaATenorC = \relative c {
+  e4^"Codetta 1c" c ds e\breathe
 }
 
-scoreCCodettaATenorD= \relative c'' {
+scoreCCodettaATenorD= \relative c {
   d4^"Codetta 1d" d d d\breathe
 }
 
-scoreCCodettaBTenorA = \relative c'' {
-  d4^"Codetta 2a" d d d\breathe
+scoreCCodettaBTenorA = \relative c' {
+  b4^"Codetta 2a" c b b\breathe
 }
 
 scoreCCodettaBTenorB = \relative c'' {
-  d4^"Codetta 2b" d d d\breathe
+  g4^"Codetta 2b" d d d\breathe
 }
 
-scoreCCodettaBTenorC = \relative c'' {
-  d4^"Codetta 2c" d d d\breathe
+scoreCCodettaBTenorC = \relative c' {
+  e4^"Codetta 2c" e ds e\breathe
 }
 
-scoreCCodettaBTenorD= \relative c'' {
-  d4^"Codetta 2d" d d d\breathe
+scoreCCodettaBTenorD= \relative c' {
+  b4^"Codetta 2d" c b b\breathe
 }
 
 %%%
 
 scoreCCodettaABassA = \relative c'' {
-  d4^"Codetta 1a" d d d\breathe
+  r4 r r r\breathe
 }
 
 scoreCCodettaABassB = \relative c'' {
-  d4^"Codetta 1b" d d d\breathe
+  r4 r r r\breathe
 }
 
 scoreCCodettaABassC = \relative c'' {
-  d4^"Codetta 1c" d d d\breathe
+  r4 r r r\breathe
 }
 
 scoreCCodettaABassD= \relative c'' {
-  d4^"Codetta 1d" d d d\breathe
+  r4 r r r\breathe
 }
 
-scoreCCodettaBBassA = \relative c'' {
-  d4^"Codetta 2a" d d d\breathe
+scoreCCodettaBBassA = \relative c, {
+  e4^"Codetta 2a" a b e,\breathe
 }
 
-scoreCCodettaBBassB = \relative c'' {
-  d4^"Codetta 2b" d d d\breathe
+scoreCCodettaBBassB = \relative c, {
+  e4^"Codetta 2b" a b e,\breathe
 }
 
-scoreCCodettaBBassC = \relative c'' {
-  d4^"Codetta 2c" d d d\breathe
+scoreCCodettaBBassC = \relative c {
+  a4^"Codetta 2c" a b e,\breathe
 }
 
-scoreCCodettaBBassD= \relative c'' {
-  d4^"Codetta 2d" d d d\breathe
+scoreCCodettaBBassD= \relative c, {
+  e4^"Codetta 2d" a b e,\breathe
 }
 
 scoreCSoprano = \relative c'' {

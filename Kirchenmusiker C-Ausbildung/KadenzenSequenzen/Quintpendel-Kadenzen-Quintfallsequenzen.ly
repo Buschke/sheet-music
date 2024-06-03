@@ -705,6 +705,10 @@ scoreBSoprano = \relative c' {
   a^\markup{\column{\line{QFS\super{8}\sub{WL}}\line{I-IV-VII-III-VI-II-V-I}}} a gs gs f f e e
   \bar "||"
   cs'^\markup{\column{\line{QFS\super{3}\sub{WL}}\line{I-IV-VII-III-VI-II-V-I}}} d b c a b gs a
+  \bar "||"
+  a^"Tonleiter" b c d e f g a
+  \bar "||"
+  a^"Bass"
   \bar "|."
 }
 
