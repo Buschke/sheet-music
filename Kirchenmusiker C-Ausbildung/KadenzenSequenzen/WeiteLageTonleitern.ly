@@ -174,12 +174,12 @@ scoreASoprano = \relative c'' {
   %%%%%%%%%%
   % Grundstellung
   c'^"8"^"Oktavlage"^"CF im Bass, Grundstellung" a^"3" g^"5" f^"8" d^"3" c^"8" b^"8" g^"5" g^"5" b^"8" c^"8" d^"3" f^"8" g^"5" a^"3" c^"8"\bar "||"
-  e,^"3"^"Terzlage" d^"8" b^"5" a^"3" g^"8" e^"5" d^"3" c^"8" c^"8" d^"3" e^"5" g^"8" a^"3" b^"5" d^"8" e^"3"
-  g^"5"^"Quintlage"
+  e^"3"^"Terzlage" d^"8" b^"5" a^"3" g^"8" e^"5" d^"3" c^"8" c^"8" d^"3" e^"5" g^"8" a^"3" b^"5" d^"8" e^"3"
+  g,^"5"^"Quintlage" f^"3" e^"8" c^"5" b^"3" a^"8" f^"5" e^"3" e^"3" f^"5" a^"8" b^"3" c^"5" e^"8" f^"3" g^"5"
   % Sekundintervall
-  e^"3"^"CF im Bass, Grundstellung Sekunde" d^"3" c^"8" c^"7" d^"" f^"" g^"8" c^"" c^"" d^"" e^"" g^"" a^"" b^"" d^"" e^""
+  e^"3"^"CF im Bass, Grundstellung Sekunde" d^"3" c^"8" c^"7" d^"5" a'^"8" g^"8" g^"5" g^"5" g^"8" a^"8" d,^"5" c^"5" c^"8" b^"8" c^"8"
   % Sextakkord
-  a,^"8"^"Sextakkord Sekunde, muss überarbeitet werden, lauter Parallelen" b^"" c^"" d^"" e^"" c^"" g'^"" e^"" e^"" g^"" c,^"" e^"" a,^"" c^"" f,^"" a^""
+  a'^"8"^"Sextakkord Sekunde, muss überarbeitet werden, lauter Parallelen" f^"5" c^"8" a^"5" e^"8" c^"5" g'^"8" g^"5" g^"5" g^"8" c,^"5" e^"8" a^"5" c^"8" f^"5" a^"8"
   % Quartsextakkord
   f^"8"^"Quartsextakkord Sekunde" g^"" a^"" b^"" c^"" d^"" e^"" f^"" f^"" e^"" d^"" c^"" b^"" a^"" g^"" f^""
   % Terzintervall
@@ -259,13 +259,13 @@ scoreAAlto = \relative c' {
   % Grundstellung bevorzugte Harmonisierung
   e' d b a g e d c c d e g a b d e \bar "||"
   % Terzlage
-  g, f d c b g f e e f g b c d f g
+  g f e c b a f e e f a b c e f g
   % Quintlage
-
+  c, a g f d c b g g b c d f b a c
   % Grundstellung
-  g f g d b c d e e f a b c e f g
+  g f g d g c d c c d c g f g f g
   % Sextakkord
-  e f g a b c d e e d c b a g f e
+  e' b g d b f d' c c d f, b d g b e
   % Quartsextakkord
   a, b c d e f g a a g f e d c b a
   % Terzintervall
@@ -353,10 +353,14 @@ scoreATenor = \relative c' {
     % Sekundintervall
   % Grundstellung bevorzugte Harmonisierung
   g' f e c b a f e e f a b c e f g \bar "||"
+  % Terzlage
+  c a g f d c b g g b c d f g a c
+  % Quintlage
+  e, d b a g e d c c d e g a b d e  
   % Grundstellung
-  c a c b d f g g' g b c d f g a c
+  c a c b b e g, e e g e b' a c b c
   % Sextakkord
-  a, b c d e f g a a g f e d c b a
+  a' d, c f, e a g e e g a e f c' d a'
   % Quartsextakkord
   f d a' f c' a e' c c e a, c f, a d, f
   % Terzintervall
@@ -430,8 +434,12 @@ scoreABass = \relative c {
   c f f g, g g c c c c g g g f' f c c g f' c f c g c c g c f c f d c
   %%%%%%%%%%%%%%%%%%%%%%%
     % Sekundintervall
-  % Grundstellung bevorzugte Harmonisierung
+  % Grundstellung bevorzugte Harmonisierung, Oktavlage
   c,4 d e f g a b c c b a g f e d c \bar "||"
+  % Terzlage
+  c4 d e f g a b c c b a g f e d c \bar "||"
+  % Quintlage
+  c4 d e f g a b c c b a g f e d c \bar "||"
   % Grundstellung
   c4 d e f g a b c c b a g f e d c \bar "||"
   % Sextakkord
@@ -603,7 +611,7 @@ scoreAChordNames = \chordmode {
   c d:m e:m f g a:m b:dim c c b:dim a:m g f e:m d:m c
   c d:m e:m f g a:m b:dim c c b:dim a:m g f e:m d:m c
   % Grundstellung bevorzugte Harmonisierung
-  c b:dim/d c/e d:m7/f g a:m g/b c c g/b a g f c/e b:min/d c \bar "||"
+  c b:dim/d c/e d:m7/f g a:m g/b c c g/b a:m g f c/e b:dim/d c \bar "||"
   % Sextakkord
   a:m/c b:dim/d c/e d:m/f e:m/g f/a g/b c c g/b f/a e:m/g d:m/f c/e b:dim/d a:m/c
   % Quartsextakkord
