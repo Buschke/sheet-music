@@ -150,7 +150,7 @@ scoreASoprano = \relative c'' {
   \globalA
   % Music follows here.
   c4^"8"^"Tonleiter" d^"5" e^"3" f^"8" g^"5" a^"3" b^"3" c^"8"
-  c,^"8"^"Tonleiter im Bass" b^"8" c^"8" c8^"5" d^"8" d4^"5" c^"3" g^"8" g^"5"
+  c,^"8"^"Tonleiter im Bass" d^"3" c^"8" c^"7" d^"5" c^"3" g^"8" c^"8"
   \bar "||"
   c4^"8"^"Cantus firmus im Sopran, Sekunde" d^"5" e^"3" f^"8" g^"5" a^"3" b^"8" c^"8" c^"8" b^"8" a^"3" g^"5" f^"8" e^"3" d^"5" c^"8"
   \bar "||"
@@ -227,7 +227,7 @@ scoreAAlto = \relative c' {
   \globalA
   % Music follows here.
   e g g a c c d e
-  e, f g f8 a g4 e d c
+  e, f g d g e d e
   \bar "||"
   e g g a c c d e
   e d c c a g g e
@@ -322,7 +322,7 @@ scoreATenor = \relative c' {
   \globalA
   % Music follows here.
   g b c c e f f g
-  g, b c a8 c b4 a g e
+  g, b c a b a g g
   \bar "||"
   g b c c e f f g
   g g f e c c b g
@@ -417,7 +417,7 @@ scoreABass = \relative c {
   \globalA
   % Music follows here.
   c g c f c f d c
-  c, d e f8 f g4 a b c
+  c, d e f g a b c
   \bar "||"
   c g c f c f d c
   c g f' c f c g c
@@ -585,7 +585,7 @@ scoreAChordNames = \chordmode {
   \germanChords
   c g c f c f b:dim/d c
   \bar "||"
-  c b:dim/d c/e f8 d:m7/f g4 a:min g/b c
+  c b:dim/d c/e d:m7/f g a:min g/b c
   \bar "||"
   c g c f c f b:dim/d c
   c g f c f c g c
