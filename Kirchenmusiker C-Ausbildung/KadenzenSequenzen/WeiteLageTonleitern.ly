@@ -160,65 +160,67 @@ scoreASoprano = \relative c'' {
   \bar "||"
   c^"8"^"Quinte" g'^"8" d^"5" a'^"3" e^"3" b'^"3" f^"8" c'^"8" c^"8" f,^"8" b^"3" e,^"3" a^"3" d,^"5" g^"8" c,^"8"
   \bar "||"
-  c^"8"^"Sexte" a'^"" f^"" d^"" b'^"" g^"" e^"" c'^"" c^"" e,^"" g^"" b^"" d,^"" f^"" a^"" c,^""
+  c^"8"^"Sexte" a'^"3" f^"8" d^"5" b'^"3" g^"8" e^"3" c'^"8" c^"8" e,^"3" g^"8" b^"3" d,^"5" f^"8" a^"3" c,^"8"
   \bar "||"
-  c^"8"^"Septime" b'^"" a^"" g^"" f^"" e^"" d^"" c^"" c^"" d^"" e^"" f^"" g^"" a^"" b^"" c^""
+  c^"8"^"Septime" b'^"3" a^"3" g^"5" f^"8" e^"3" d^"5" c^"8" c^"8" d^"5" e^"3" f^"8" g^"5" a^"3" b^"8" c^"8"
   \bar "|."
-  e,,^"3"^"CF im Tenor, Sekunde" g^"" g^"" a^"" c^"" c^"" d^"" e^"" e^"" d^"" c^"" c^"" a^"" g^"" g^"" e^""
-  e^"3"^"Terz" g^"" b^"" d^"" g,^"" a^"" c^"" e^"" e^"" c^"" a^"" g^"" d'^"" c^"" g^"" e^""
-  e^"3"^"Quarte" a^"" d^"" g,^"" c^"" g^"" b^"" e^"" e^"" b^"" g^"" c^"" g^"" d'^"" a^"" e^""
-  e^"3"^"Quinte" b'^"" g^"" c^"" g^"" d'^"" a^"" e'^"" e^"" a,^"" d^"" g,^"" c^"" g^"" b^"" e,^""
-  e^"3"^"Sexte" c'^"" a^"" g^"" d'^"" b^"" g^"" e'^"" e^"" g,^"" b^"" d^"" g,^"" a^"" c^"" e,^""
-  e^"3"^"Septime" d'^"" c^"" c^"" a^"" g^"" g^"" e^"" e^"" g^"" g^"" a^"" c^"" c^"" d^"" e^""
+  e,,^"3"^"CF im Tenor, Sekunde" g^"8" g^"5" a^"3" c^"8" c^"5" d^"3" e^"3" e^"3" d^"5" c^"5" c^"8" a^"3" g^"5" g^"8" e^"3"
+  e^"3"^"Terz" g^"5" b^"3" d^"5" g,^"8" a^"3" c^"8" e^"3" e^"3" c^"5" a^"3" g^"8" d'^"5" c^"8" g^"5" e^"3"
+  e^"3"^"Quarte" a^"3" d^"5" g,^"5" c^"5" g^"8" b^"3" e^"3" e^"3" b^"3" g^"8" c^"5" g^"5" d'^"5" a^"3" e^"3"
+  e^"3"^"Quinte" b'^"3" g^"8" c^"5" g^"5" d'^"5" a^"3" e'^"3" e^"3" a,^"3" d^"5" g,^"5" c^"5" g^"8" b^"3" e,^"3"
+  e^"3"^"Sexte" c'^"5" a^"3" g^"8" d'^"5" b^"3" g^"5" e'^"3" e^"3" g,^"5" b^"3" d^"5" g,^"8" a^"3" c^"5" e,^"3"
+  e^"3"^"Septime" d'^"5" c^"5" c^"8" a^"3" g^"5" g^"8" e^"3" e^"3" g^"8" g^"5" a^"3" c^"8" c^"5" d^"5" e^"3"
   \bar "|."
   %%%%%%%%%%
   % Grundstellung
-  c^"8"^"CF im Bass, Grundstellung" b^"" g^"" c^"" b^"" f^"" d'^"" c^"" c^"" d^"" f,^"" b^"" c g b c\bar "||"
+  c'^"8"^"Oktavlage"^"CF im Bass, Grundstellung" a^"3" g^"5" f^"8" d^"3" c^"8" b^"8" g^"5" g^"5" b^"8" c^"8" d^"3" f^"8" g^"5" a^"3" c^"8"\bar "||"
+  e,^"3"^"Terzlage" d^"8" b^"5" a^"3" g^"8" e^"5" d^"3" c^"8" c^"8" d^"3" e^"5" g^"8" a^"3" b^"5" d^"8" e^"3"
+  g^"5"^"Quintlage"
   % Sekundintervall
-  e^"3"^"CF im Bass, Grundstellung Sekunde" d b a g e d c c d e g a b d e
+  e^"3"^"CF im Bass, Grundstellung Sekunde" d^"3" c^"8" c^"7" d^"" f^"" g^"8" c^"" c^"" d^"" e^"" g^"" a^"" b^"" d^"" e^""
   % Sextakkord
-  a,^"8"^"Sextakkord Sekunde, muss überarbeitet werden, lauter Parallelen" b c d e c g' e e g c, e a, c f, a
+  a,^"8"^"Sextakkord Sekunde, muss überarbeitet werden, lauter Parallelen" b^"" c^"" d^"" e^"" c^"" g'^"" e^"" e^"" g^"" c,^"" e^"" a,^"" c^"" f,^"" a^""
   % Quartsextakkord
   f^"8"^"Quartsextakkord Sekunde" g^"" a^"" b^"" c^"" d^"" e^"" f^"" f^"" e^"" d^"" c^"" b^"" a^"" g^"" f^""
   % Terzintervall
   % Grundstellung
-  e'^"3"^"Grundstellung Terz" e d d d c c c c c c d d d e e
+  e'^"3"^"Grundstellung Terz" e^"" d^"" d^"" d^"" c^"" c^"" c^"" c^"" c^"" c^"" d^"" d^"" d^"" e^"" e^""
   % Sextakkord
-  a^""^"Sextakkord Terz" c, e g, b d, f a, a f' d b' g e' c a'
+  a^""^"Sextakkord Terz" c,^"" e^"" g,^"" b^"" d,^"" f^"" a,^"" a^"" f'^"" d^"" b'^"" g^"" e'^"" c^"" a'^""
   % Quartsextakkord
-  a^""^"Quartsextakkord Terz" a g g g f f f f f f g g g a a
+  a^""^"Quartsextakkord Terz" a^"" g^"" g^"" g^"" f^"" f^"" f^"" f^"" f^"" f^"" g^"" g^"" g^"" a^"" a^""
   % Quartintervall
   % Grundstellung
-  e^""^"Grundstellung Quarte" f f g a a b c c b a a g f f e
+  e^""^"Grundstellung Quarte" f^"" f^"" g^"" a^"" a^"" b^"" c^"" c^"" b^"" a^"" a^"" g^"" f^"" f^"" e^""
   % Sextakkord
-  a,^""^"Sextakkord Quarte" a g g f f e e e e f f g g a a
-  a'^""^"Quartsextakkord Quarte" b g a f g e f f e g f a g b a
+  a,^""^"Sextakkord Quarte" a^"" g^"" g^"" f^"" f^"" e^"" e^"" e^"" e^"" f^"" f^"" g^"" g^"" a^"" a^""
+  a'^""^"Quartsextakkord Quarte" b^"" g^"" a^"" f^"" g^"" e^"" f^"" f^"" e^"" g^"" f^"" a^"" g^"" b^"" a^""
   % Quintintervall
   % Grundstellung
-  e^""^"Grundstellung Quinte" d d c b b c c c c b b c d d e
+  e^""^"Grundstellung Quinte" d^"" d^"" c^"" b^"" b^"" c^"" c^"" c^"" c^"" b^"" b^"" c^"" d^"" d^"" e^""
   % Sextakkord
-  a,^""^"Sextakkord Quinte" b b c c d d e e d d c c b b a
-  a^""^"Quartsextakkord Quinte" g g a a b b c c b b a a g g a
+  a,^""^"Sextakkord Quinte" b^"" b^"" c^"" c^"" d^"" d^"" e^"" e^"" d^"" d^"" c^"" c^"" b^"" b^"" a^""
+  a^""^"Quartsextakkord Quinte" g^"" g^"" a^"" a^"" b^"" b^"" c^"" c^"" b^"" b^"" a^"" a^"" g^"" g^"" a^""
   % Sextintervall
   % Grundstellung
-  e^""^"Grundstellung Sexte" e f f f g g g g g g f f f e e
+  e^""^"Grundstellung Sexte" e^"" f^"" f^"" f^"" g^"" g^"" g^"" g^"" g^"" g^"" f^"" f^"" f^"" e^"" e^""
   % Sextakkord
-  a^""^"Sextakkord Sexte" f d f g e c' e, e c' e, g f d f e
-  f^""^"Quartsextakkord Sexte" f f g g g a a a a g g g f f f
+  a^""^"Sextakkord Sexte" f^"" d^"" f^"" g^"" e^"" c'^"" e,^"" e^"" c'^"" e,^"" g^"" f^"" d^"" f^"" e^""
+  f^""^"Quartsextakkord Sexte" f^"" f^"" g^"" g^"" g^"" a^"" a^"" a^"" a^"" g^"" g^"" g^"" f^"" f^"" f^""
   % Septimintervall
   % Grundstellung
-  e^""^"Grundstellung Septime" f a b c e f g g f e c b a f e
+  e^""^"Grundstellung Septime" f^"" a^"" b^"" c^"" e^"" f^"" g^"" g^"" f^"" e^"" c^"" b^"" a^"" f^"" e^""
   % Sextakkord
-  a^""^"Sextakkord Septime" d, f b, d' g, b e, e b' g d' b, f' d a'
-  a^""^"Quartsextakkord Septime" b d e f a b c c b a f e d b a
+  a^""^"Sextakkord Septime" d,^"" f^"" b,^"" d'^"" g,^"" b^"" e,^"" e^"" b'^"" g^"" d'^"" b,^"" f'^"" d^"" a'^""
+  a^""^"Quartsextakkord Septime" b^"" d^"" e^"" f^"" a^"" b^"" c^"" c^"" b^"" a^"" f^"" e^"" d^"" b^"" a^""
   \bar "|."
   %%%%%%%%%%%%%%%%
     g^"5"^"CF im Alt, Sekunde" b^"" c^"" c^"" e^"" f^"" f^"" g^"" g^"" g^"" f^"" e^"" c^"" c^"" b^"" g^""
-  g^"5"^"Terz" c d g b, c f g g f c b g' e c g
-  g^"5"^"Quarte" c g' c, f b, d g g d b f' c g' c, g
-  g^"5"^"Quinte" d b' f' c g' c, g' g c, g' c, f b, d g,
-  g^"5"^"Sexte" f' c b g' d c g' g c, d g b, c f g,
-  g^"5"^"Septime" g' f e c c b g g b c c e f f g
+  g^"5"^"Terz" c^"" d^"" g^"" b,^"" c^"" f^"" g^"" g^"" f^"" c^"" b^"" g'^"" e^"" c^"" g^""
+  g^"5"^"Quarte" c^"" g'^"" c,^"" f^"" b,^"" d^"" g^"" g^"" d^"" b^"" f'^"" c^"" g'^"" c,^"" g^""
+  g^"5"^"Quinte" d^"" b'^"" f'^"" c^"" g'^"" c,^"" g'^"" g^"" c,^"" g'^"" c,^"" f^"" b,^"" d^"" g,^""
+  g^"5"^"Sexte" f'^"" c^"" b^"" g'^"" d^"" c^"" g'^"" g^"" c,^"" d^"" g^"" b,^"" c^"" f^"" g,^""
+  g^"5"^"Septime" g'^"" f^"" e^"" c^"" c^"" b^"" g^"" g^"" b^"" c^"" c^"" e^"" f^"" f^"" g^""
 }
 
 scoreAAlto = \relative c' {
@@ -255,9 +257,13 @@ scoreAAlto = \relative c' {
   %%%%%%%%%%%%%%%%
     % Sekundintervall
   % Grundstellung bevorzugte Harmonisierung
-  e f c f d c g' e e g c, d f c f e \bar "||"
+  e' d b a g e d c c d e g a b d e \bar "||"
+  % Terzlage
+  g, f d c b g f e e f g b c d f g
+  % Quintlage
+
   % Grundstellung
-  g f e c b a f e e f a b c e f g
+  g f g d b c d e e f a b c e f g
   % Sextakkord
   e f g a b c d e e d c b a g f e
   % Quartsextakkord
@@ -346,9 +352,9 @@ scoreATenor = \relative c' {
   %%%%%%%%%%%%%%%%%%%%%
     % Sekundintervall
   % Grundstellung bevorzugte Harmonisierung
-  g b g a g f d' c c d f, g a g b g \bar "||"
+  g' f e c b a f e e f a b c e f g \bar "||"
   % Grundstellung
-  c a g f d c b g' g b c d f g a c
+  c a c b d f g g' g b c d f g a c
   % Sextakkord
   a, b c d e f g a a g f e d c b a
   % Quartsextakkord
@@ -495,6 +501,8 @@ scoreABass = \relative c {
 
 scoreAVerse = \lyricmode {
   % Lyrics follow here.
+  do re mi fa sol la si do | do re mi fa fa sol la si do
+  do re mi fa sol la si do | do re mi fa sol la si do
   do re mi fa sol la si do | do re mi fa sol la si do
   do re mi fa sol la si do | do si la sol fa mi re do
   do mi sol si re fa la do | do la fa re si sol mi do
@@ -512,6 +520,8 @@ scoreAVerse = \lyricmode {
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%
     % Sekundintervall
   % Grundstellung
+  do re mi fa sol la si do | do si la sol fa mi re do
+  do re mi fa sol la si do | do si la sol fa mi re do
   do re mi fa sol la si do | do si la sol fa mi re do
   % Sextakkord
   do re mi fa sol la si do | do si la sol fa mi re do
@@ -567,7 +577,7 @@ scoreAChordNames = \chordmode {
   \germanChords
   c g c f c f b:dim/d c
   \bar "||"
-  c b:dim/d c/e f8 d:min7/f g4 a:min g/b c
+  c b:dim/d c/e f8 d:m7/f g4 a:min g/b c
   \bar "||"
   c g c f c f b:dim/d c
   c g f c f c g c
@@ -590,8 +600,10 @@ scoreAChordNames = \chordmode {
     % Sekundintervall
   % Grundstellung
   c d:m e:m f g a:m b:dim c c b:dim a:m g f e:m d:m c
+  c d:m e:m f g a:m b:dim c c b:dim a:m g f e:m d:m c
+  c d:m e:m f g a:m b:dim c c b:dim a:m g f e:m d:m c
   % Grundstellung bevorzugte Harmonisierung
-  c b:min/d c/e f g f/a g/b c c g/b f/a g f c/e b:min/d c \bar "||"
+  c b:dim/d c/e d:m7/f g a:m g/b c c g/b a g f c/e b:min/d c \bar "||"
   % Sextakkord
   a:m/c b:dim/d c/e d:m/f e:m/g f/a g/b c c g/b f/a e:m/g d:m/f c/e b:dim/d a:m/c
   % Quartsextakkord
