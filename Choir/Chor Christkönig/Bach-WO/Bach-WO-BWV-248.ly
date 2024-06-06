@@ -17,6 +17,8 @@
   tagline = ""
 }
 
+\include "Bach-WO-Teil_5-BWV-248.ly"
+
 \paper {
   #(set-paper-size "a4")
 }
@@ -31,7 +33,7 @@ tenorVoice = \relative c' {
   \global
   \dynamicUp
   % Music follows here.
-  
+  c
 }
 
 verse = \lyricmode {
