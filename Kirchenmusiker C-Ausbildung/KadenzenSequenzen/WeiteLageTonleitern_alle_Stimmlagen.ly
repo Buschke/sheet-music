@@ -282,7 +282,7 @@ scoreEVerse = \lyricmode {
 scoreEChordNames = \chordmode {
   \globalE
   % Chords follow here.
-  \transpose c g \scoreAChordNames
+  \transpose c f \scoreAChordNames
 }
 
 scoreEFigBass = \figuremode {
