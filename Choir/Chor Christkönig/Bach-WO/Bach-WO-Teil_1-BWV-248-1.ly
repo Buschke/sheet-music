@@ -19,17 +19,7 @@
   #(set-paper-size "a4")
 }
 
-global = {
-  \key c \major
-  \time 4/4
-  \tempo "Andante" 4=100
-}
-
-globalAA = {
-  \key d \major
-  \time 3/8
-  \tempo "Vivace" 8=120
-}
+\include "Bach-WO-Noten_Texte-BWV-248.ly"
 
 scoreATenorVoice = \relative c' {
   \globalAA

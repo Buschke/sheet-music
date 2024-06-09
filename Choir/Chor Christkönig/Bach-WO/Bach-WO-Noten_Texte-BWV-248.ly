@@ -1,3 +1,6 @@
+\version "2.24.3"
+\language "english"
+
 % Teil 1
 globalAA = {
   \key d \major
@@ -21,83 +24,6 @@ scoreAAVerse = \lyricmode {
 }
 
 % Teil 2
-globalBA = {
-  \key g \major
-  \time 4/4
-  \tempo "Andante" 4=80
-}
-
-scoreBATenorVoice = \relative c' {
-  \globalBA
-  \dynamicUp
-  % Music follows here.
-  \partial 4
-  b8
-  b8 c~ c d b a a4 a a\fermata
-}
-
-scoreBAVerse = \lyricmode {
-  % Lyrics follow here.
-  Brich an, _ o schö -- nes Mor -- gen -- licht
-}
-
-globalBB = {
-  \key c \major
-  \time 4/4
-  \tempo "Langsam" 4=40
-}
-
-scoreBBTenorVoice = \relative c' {
-  \globalBB
-  \dynamicUp
-  % Music follows here.
-  \partial 4
-  e4
-  d4. c8 b4 c8 b a g f4 g\fermata
-}
-
-scoreBBVerse = \lyricmode {
-  % Lyrics follow here.
-  Schaut hin, dort liegt im _ fins _ -- tern Stall
-}
-
-globalBC = {
-  \key g \major
-  \time 2/2
-  \tempo "Vivace" 2=80
-}
-
-scoreBCTenorVoice = \relative c' {
-  \globalBC
-  \dynamicUp
-  % Music follows here.
-  b8 c d b c b c b16 c d8 c b a g4 c~ c b8 a g4 e'~ e
-}
-
-scoreBCVerse = \lyricmode {
-  % Lyrics follow here.
-  Eh -- re sei Gott in der Hö -- he
-}
-
-globalBD = {
-  \key g \major
-  \time 12/8
-  \tempo "Andante" 4.=40
-}
-
-scoreBDTenorVoice = \relative c' {
-  \globalBD
-  \dynamicUp
-  % Music follows here.
-  \partial 4.
-  d4.
-  a4. b4(a8) a4. g g4(c8) b(a8) b4. r
-}
-
-scoreBDVerse = \lyricmode {
-  % Lyrics follow here.
-  Wir sin -- gen dir in dei -- nem Herr
-}
 
 % Teil 3
 globalCA = {
@@ -187,7 +113,7 @@ scoreCETenorVoice = \relative c' {
   % Music follows here.
   \partial 4
   a8 b
-  c4 c8 b a4\fermata
+  cs4 cs8 b a4\fermata
 }
 
 scoreCEVerse = \lyricmode {
