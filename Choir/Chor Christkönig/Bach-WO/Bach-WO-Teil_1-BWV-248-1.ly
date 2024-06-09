@@ -21,20 +21,9 @@
 
 \include "Bach-WO-Noten_Texte-BWV-248.ly"
 
-scoreATenorVoice = \relative c' {
-  \globalAA
-  \dynamicUp
-  \compressEmptyMeasures
-  % Music follows here.
-  R4.*32
-  d8 d d d a r
-  
-}
+scoreATenorVoice = \scoreAATenorVoice
 
-scoreAVerse = \lyricmode {
-  % Lyrics follow here.
-  Jauch -- zet, fro -- lok -- ket,
-}
+scoreAVerse = \scoreAAVerse
 
 \bookpart {
   \header {
@@ -54,36 +43,9 @@ scoreAVerse = \lyricmode {
   }
 }
 
-globalAB = {
-  \key c \major
-  \time 4/4
-  \tempo "Andante" 4=60
-}
+scoreBTenorVoice = \scoreABTenorVoice
 
-scoreBTenorVoice = \relative c' {
-  \globalAB
-  \dynamicUp
-  % Music follows here.
-  \repeat volta 2 {
-    \partial 4
-    gs4
-    a b c8(d) g,4 a8(gs a4) gs\fermata
-    gs a8 b c4 f e8 d c2.
-  }
-  \partial 4
-  e4
-  d8 c b4 a8(g) f(g) a4(g8 f) g4\fermata
-  c
-  c8(d) e4 d8(cs) d(gs,) a2.\fermata
-  a4 g8 a b4 c8 d e4 e(d) d\fermata
-  c c8(b) b(a) a4 g8 a b4(a gs)\fermata
-  \bar "|."
-}
-
-scoreBVerse = \lyricmode {
-  % Lyrics follow here.
-  Wie soll ich dich emp -- fan -- gen
-}
+scoreBVerse = \scoreABVerse
 
 \bookpart {
   \header {
@@ -103,25 +65,9 @@ scoreBVerse = \lyricmode {
   }
 }
 
-globalC = {
-  \key d \major
-  \time 4/4
-  \tempo "Andante" 4=60
-}
+scoreCTenorVoice = \scoreACTenorVoice
 
-scoreCTenorVoice = \relative c' {
-  \globalC
-  \dynamicUp
-  % Music follows here.
-  \partial 4
-  fs4
-  
-}
-
-scoreCVerse = \lyricmode {
-  % Lyrics follow here.
-  Ach mein herz -- lie -- bes Je -- su -- lein,  
-}
+scoreCVerse = \scoreACVerse
 
 \bookpart {
   \header {
