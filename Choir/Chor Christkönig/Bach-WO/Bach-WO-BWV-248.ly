@@ -38,7 +38,7 @@ tenorVoice = \relative c' {
 
 verse = \lyricmode {
   % Lyrics follow here.
-  
+
 }
 
 \score {

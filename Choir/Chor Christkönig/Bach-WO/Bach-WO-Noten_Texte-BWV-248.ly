@@ -571,7 +571,7 @@ scoreFCTenorVoice = \relative c' {
   r2 r4 a b8 cs d4 g, a b8(g e a) a4 r
   r1 r2 r4 fs' fs d8(fs) g(e) fs(cs) d4 r r2 r1
   }
-  R1*2 r2 r4 e e d d e8 cs fs4.(b,) fs4 r r1 r4 d' d d b b8(as) as4 r r1 r
+  R1*2 r2 r4 e e d d e8 cs fs4.(b,8) fs'4 r r1 r4 d d d b b8(as) as4 r r1 r
   r2 r4 e' e4. b8 a4. a8 a(b gs4) a r
   R1*4 r2 r4 d d8 cs16 b a4 a a a1 R1*9 r2 r4\fermata
   \bar "|."
@@ -580,6 +580,6 @@ scoreFCTenorVoice = \relative c' {
 scoreFCVerse = \lyricmode {
   % Lyrics follow here.
   \repeat volta 2 { <<{Nun seid _ ihr wohl ge -- ro -- chen an eu -- rer Fein -- de Schar} \new Lyrics{denn Chris -- tus hat zer -- bro -- chen, was euch zu -- wi -- der war. }>> }
-                    Tod, Teu -- fel, Sünd und Höl -- le sind ganz und gar ge -- schwächt;
-                    bei Gott hat sei -- ne Stel -- le das mensch -- li -- che Ge -- schlecht.
+                    Tod, Teu -- fel, Sünd und _ Höl -- le sind ganz und gar ge -- schwächt;
+                    bei Gott hat sei -- ne Stel -- le das mensch _ _ -- li  -- che Ge -- schlecht.
 }
