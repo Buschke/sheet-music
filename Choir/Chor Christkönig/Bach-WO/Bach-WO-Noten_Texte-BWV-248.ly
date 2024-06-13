@@ -14,13 +14,39 @@ scoreAATenorVoice = \relative c' {
   \compressEmptyMeasures
   % Music follows here.
   R4.*32
-  d8 d d d a r
-
+  d8^"Bis 77" d d d a r r4. r8 r a a d16 a fs d a'8 a r r fs' d
+  r r d d a r r4. d8 d d d cs16 b cs d
+  e8 e e e d16 cs d8 d d d d d e a,16 b cs8 d e a,16 b b16.\trill a64 b cs8 cs ds
+  e e d d g g fs fs r r a,16 b b16.\trill a64 b cs8 e gs a a, a'
+  g c, c b(a g fs) d r r a'16 cs b16.\trill a64 b cs8 e b b b r b e g
+  g(as, b e) as, as b fs cs' fs fs d~d b fs' b, b b
+  b a b e4 e8 fs a, cs b b ds e e b
+  a a r d b e fs16(e d cs b a e'8) d d
+  cs b e cs4 r8 R2.*7
+  d8 d d d a r r2.
 }
 
 scoreAAVerse = \lyricmode {
   % Lyrics follow here.
-  Jauch -- zet, fro -- lok -- ket,
+  Jauch -- zet, froh -- lo -- cket, auf, prei -- set _ die _ Ta -- ge,
+  Jauch -- zet, froh -- lo -- cket,
+  Jauch -- zet, froh -- lo -- cket, _
+  auf, _ prei -- set _ die Ta _ -- ge,
+  Rüh -- met, was heu -- te der Höchs _ -- te ge -- tan,
+  Las _ _ _ _ _ -- set das Za -- gen, ver -- ban -- net die Kla -- ge,
+  Las _ _ _ _ _ -- set das Za -- gen, ver -- ban -- net die Kla -- ge,
+  Las _ _ _ _ _ -- set das Za -- gen,
+  Las -- set das Za -- gen,
+  ver -- ban -- net die Kla -- ge,
+  Las -- set das Za -- gen,
+  ver -- ban -- net die Kla -- ge,
+  Las -- set das Za -- gen,
+  ver -- ban -- net die Kla -- ge,
+  Stim -- met voll Jauch -- zen und Fröh -- lich -- keit an.
+  Jauch -- zet, froh -- lo -- cket, auf, prei -- set _ die _ Ta -- ge,
+
+  Die -- net dem Höchs -- ten mit herr -- li -- chen Chö -- ren,
+  Laßt uns den Na -- men des Herr -- schers ver -- eh -- ren.
 }
 
 globalAB = {
@@ -51,7 +77,19 @@ scoreABTenorVoice = \relative c' {
 
 scoreABVerse = \lyricmode {
   % Lyrics follow here.
-  Wie soll ich dich emp -- fan -- gen
+  <<
+    {
+      Wie soll ich dich emp -- fan -- gen
+      Und wie _ be -- gegn' ich _ dir,
+    } \new Lyrics {
+      O al -- ler Welt Ver -- lan -- gen,
+      O mei _ -- ner See -- len _ Zier,
+      O Je _ -- su, Je -- su, set -- ze
+      Mir selbst die Fa -- ckel bei,
+      Da -- mit _ was dich _ er -- göt -- ze,
+      Mir kund und wis -- send _ sei!
+    }
+  >>
 }
 
 globalAC = {
@@ -66,12 +104,18 @@ scoreACTenorVoice = \relative c' {
   % Music follows here.
   \partial 4
   fs4
-
+  e d cs d8 cs b a g4 a r r1
+  r4 a d d cs c8 b a4 a a r r2
+  r2 r4 a
+  a gs a8 d cs b a cs fs e cs4 r r1 r4 d8(b) b(a) a(g) a4 g8 fs e4 a8(g) fs4 r r2 r1 r2 r4\fermata
 }
 
 scoreACVerse = \lyricmode {
   % Lyrics follow here.
-  Ach mein herz -- lie -- bes Je -- su -- lein,
+  Ach, mein herz -- lie -- bes _ Je _ -- su -- lein,
+  Mach dir ein rein sanft _ Bet -- te -- lein,
+  Zu ruhn in mei _ -- nes _ Her _ -- zens _ Schrein,
+  Dass ich nim -- mer ver _ -- ges -- se dein.
 }
 
 % Teil 2
@@ -86,7 +130,7 @@ scoreBATenorVoice = \relative c' {
   \dynamicUp
   % Music follows here.
   \partial 4
-  b8
+  b8^"Bis 2"
   b8 c~ c d b a a4 a a\fermata
 }
 
@@ -106,7 +150,7 @@ scoreBBTenorVoice = \relative c' {
   \dynamicUp
   % Music follows here.
   \partial 4
-  e4
+  e4^"Bis 1"
   d4. c8 b4 c8 b a g f4 g\fermata
 }
 
@@ -125,7 +169,7 @@ scoreBCTenorVoice = \relative c' {
   \globalBC
   \dynamicUp
   % Music follows here.
-  b8 c d b c b c b16 c d8 c b a g4 c~ c b8 a g4 e'~ e
+  b8^"Bis 1" c d b c b c b16 c d8 c b a g4 c~ c b8 a g4 e'~ e
 }
 
 scoreBCVerse = \lyricmode {
@@ -144,7 +188,7 @@ scoreBDTenorVoice = \relative c' {
   \dynamicUp
   % Music follows here.
   \partial 4.
-  d4.
+  d4.^"Bis 1"
   a4. b4(a8) a4. g g4(c8) b(a8) b4. r
 }
 
@@ -166,7 +210,7 @@ scoreCATenorVoice = \relative c' {
   \dynamicUp
   % Music follows here.
   R4.*16
-  d8 d d d fs16 e d cs d8
+  d8^"Bis 1" d d d fs16 e d cs d8
 }
 
 scoreCAVerse = \lyricmode {
@@ -184,7 +228,7 @@ scoreCBTenorVoice = \relative c' {
   \globalCB
   \dynamicUp
   % Music follows here.
-  r4 a8 b cs d e4 e a fs2 fs4 e r
+  r4 a8^"Bis 1" b cs d e4 e a fs2 fs4 e r
 }
 
 scoreCBVerse = \lyricmode {
@@ -203,7 +247,7 @@ scoreCCTenorVoice = \relative c' {
   \dynamicUp
   % Music follows here.
   \partial 4
-  cs4 cs d8 cs a(e) cs(e) a(d4) cs8 a2\fermata
+  cs4^"Bis 1" cs d8 cs a(e) cs(e) a(d4) cs8 a2\fermata
 }
 
 scoreCCVerse = \lyricmode {
@@ -221,7 +265,7 @@ scoreCDTenorVoice = \relative c' {
   \globalCD
   \dynamicUp
   % Music follows here.
-  b4 c fs, g c c8 b e4(d) e2\fermata
+  b4^"Bis 1" c fs, g c c8 b e4(d) e2\fermata
 }
 
 scoreCDVerse = \lyricmode {
@@ -240,7 +284,7 @@ scoreCETenorVoice = \relative c' {
   \dynamicUp
   % Music follows here.
   \partial 4
-  a8 b
+  a8^"Bis 1" b
   cs4 cs8 b a4\fermata
 }
 
@@ -261,13 +305,31 @@ scoreDATenorVoice = \relative c' {
   \compressEmptyMeasures
   \dynamicUp
   % Music follows here.
-  R4.*26
-  c4 d8 bf4 a8 c(d) ef f f r
+  R4.*24
+  c4^"Bis 51" d8 bf4 a8 c(d) ef f f r
+  r4.*2 d8 ef f f(ef d c4) a8 f'4 c8
+  bf(a g e' f) bf, c4 d8 bf4 a8 c(d) ef f f r f c4 f,8 a c
+  c(bf) d c4. R4.*2
+  c4 bf8 c4 c8 c4 d8 a4 bf8
+  a^"51"(bf) c
+  R4.*16
+  d4(d,8 g f) e
+  R4.*16\fermata\bar "|."
 }
 
 scoreDAVerse = \lyricmode {
   % Lyrics follow here.
   Fallt mit Dan -- ken, fallt mit Lo -- ben
+  Fallt _ mit Dan -- ken, fallt mit Lo -- ben
+  Fallt mit Dan -- ken, fallt mit Lo -- ben
+  Vor des Höchs _ -- ten Gna -- den -- thron.
+  Fallt mit Lo -- ben, fallt mit Dan -- ken, 
+  Fallt mit Lo -- ben, fallt mit Dan -- ken, 
+  Got -- tes Sohn
+  Will der Er -- den
+  Hei -- land und Er -- lö -- ser wer -- den,
+  Got -- tes Sohn
+  Dämpft der Fein -- de Wut und To -- ben.
 }
 
 globalDB = {
@@ -282,15 +344,26 @@ scoreDBTenorVoice = \relative c' {
   \dynamicUp
   % Music follows here.
   R2.*1
-  \repeat volta 2 { R2.*3
-  f4 c2 c4.(bf8) a4 bf2 a8(bf16 c) c4(bf8 a bf4) a2 r4 R2.*3
-  f'4
+  \repeat volta 2 {
+    R2.*3
+    f4 c2 c4.(bf8) a4 bf2 a8(bf16 c) c4(bf8 a bf4) a2 r4 R2.*3
+    f'4 d2 c8(bf a4) a d8 c c2 c2. r2.
   }
+  R2.*4
+  c2 e4 c2 bf4~bf a d8(c) bf4(a8 g a4) a2 r4
+  R2.*3
+  bf4.(g8) c4 c2 g4 f2 d'4 g(c bf) a2 r4
+  R2.*3 r2.\fermata\bar "|."
 }
 
 scoreDBVerse = \lyricmode {
   % Lyrics follow here.
-  Jesu richte mein Beginnen
+  <<{Je -- sus rich -- te mein Be -- gin -- nen,
+  Je -- sus blei -- be stets _ bei mir, } \new Lyrics {
+  Je -- sus zäu -- me mir die Sin -- nen,
+  Je -- sus sein nur mein _ Be -- gier, }>>
+  Je -- sus sei mir in Ge -- dan -- ken,
+  Je -- su, las -- se mich nicht wan -- ken.
 }
 
 % Teil 5
@@ -451,8 +524,12 @@ scoreEDTenorVoice = \relative c' {
 
 scoreEDVerse = \lyricmode {
   % Lyrics follow here.
-  <<{ Zwar ist sol -- che Her -- zens -- stu -- be wohl _ kein _ schö -- ner Fürs -- ten -- saal }\new Lyrics{Son -- dern ei -- ne fin -- stre Gru -- be;
-  Doch _ so _ -- bald dein Gna -- den -- strahl }>>
+  <<
+    { Zwar ist sol -- che Her -- zens -- stu -- be wohl _ kein _ schö -- ner Fürs -- ten -- saal }\new Lyrics{
+      Son -- dern ei -- ne fin -- stre Gru -- be;
+      Doch _ so _ -- bald dein Gna -- den -- strahl
+    }
+  >>
   In den -- sel -- ben nur wird blin -- ken,
   wird es vol -- ler Son _ -- nen _ dün _ -- ken.
 }
@@ -472,7 +549,7 @@ scoreFATenorVoice = \relative c' {
   \partial 8
   r8
   R4. * 47
-  r8 r a d4 a8 e'4 a,8 fs' e16 fs g e g(fs e d) fs(d)
+  r8^"Bis 82" r a d4 a8 e'4 a,8 fs' e16 fs g e g(fs e d) fs(d)
   e(d cs b) d(b) e8 d16 cs b cs a4.~ a~ a8 cs e d(e16 d) e cs d8 fs a~ a a,16 cs b a
   gs8 e gs a d4 e16 fs g e a8 d,16(e fs8) a, a e' e fs cs cs fs fs a, d4 a8
   e'4 a,8 fs' e16 fs g e g(fs e d) fs(d) fs(e d cs) e(cs) e(d cs b) d(b) e8 d16 cs b cs a4.~ a~
@@ -488,7 +565,7 @@ scoreFATenorVoice = \relative c' {
   b g fs e g b e cs e e(d) a a fs b b4.~ b16 cs d8 e fs g fs
   d r r r2. r8 cs cs fs b, fs' d4 r8 R4.*3
   r8 r d fs4 fs8 e4 e8 d4 cs8 d a r R4.*3^"d"
-    r8 r a d4 a8 e'4 a,8 fs' e16 fs g e g(fs e d) fs(d)
+  r8 r a d4 a8 e'4 a,8 fs' e16 fs g e g(fs e d) fs(d)
   e(d cs b) d(b) e8 d16 cs b cs
   a8 cs cs d4 d8 a cs e d4 cs8 a a r R4.*3
   r8 r b cs(fs16 e) d(cs) a8(d) cs b e4~ e8 d16 cs d8 d cs fs b, e16 d cs b
@@ -506,11 +583,11 @@ scoreFAVerse = \lyricmode {
   Herr, wenn die stol -- zen Fein _ _ -- de _ schnau _ _ _ _ _ _ _ _ _ -- ben,
   die stol -- zen _ Fein _ _ _ _ _ _ _ -- de,
   Herr, wenn die stol _ _ _  -- zen Fein -- de schnau -- ben,
-    die Fein _ -- de schnau -- ben,
-    so gib, dass wir im fe _ -- sten Glau _ _ _ _ _ _ _ _ -- ben, _ im _ fe _ -- sten Glau -- ben, gib, _ dass wir _ im fe _ -- sten Glau -- ben, im fe -- sten Glau _ _ _ -- ben, im fe _ -- sten Glau -- ben
-    XXXXXXXXXXnach dei -- ner Macht und Hül -- fe sehn, nach dei -- ner Macht und Hül -- fe sehn, nach
-    dei -- ner Macht und Hül -- fe sehn, nach dei -- ner Macht und Hül -- fe, so
-    gib, dass wir im fe -- sten Glau -- ben nach dei -- ner Macht und Hül -- fe sehn!oneonesix
+  die Fein _ -- de schnau -- ben,
+  so gib, dass wir im fe _ -- sten Glau _ _ _ _ _ _ _ _ -- ben, _ im _ fe _ -- sten Glau -- ben, gib, _ dass wir _ im fe _ -- sten Glau -- ben, im fe -- sten Glau _ _ _ -- ben, im fe _ -- sten Glau -- ben
+  XXXXXXXXXXnach dei -- ner Macht und Hül -- fe sehn, nach dei -- ner Macht und Hül -- fe sehn, nach
+  dei -- ner Macht und Hül -- fe sehn, nach dei -- ner Macht und Hül -- fe, so
+  gib, dass wir im fe -- sten Glau -- ben nach dei -- ner Macht und Hül -- fe sehn!oneonesix
   Wir wo -- len dir al -- lein ver -- trau -- en, so kön -- nen wir den schar -- fen Klau -- en des Fein -- des un -- ver -- sehrt ent -- gehn;
   wir wol -- len dir al -- lein ver -- trau -- en, wir wol -- len dir al -- lein ver --
   trau -- en, so kön -- nen wir den schar -- fen Klau -- en des Fein -- des un -- ver -- sehrt ent --
@@ -551,8 +628,21 @@ scoreFBTenorVoice = \relative c' {
 
 scoreFBVerse = \lyricmode {
   % Lyrics follow here.
-  \repeat volta 2 { <<{Ich steh an dei -- ner Krip -- pen hier, o Je -- su -- lein, mein Le -- ben;}{\new Lyrics{ich kom -- me}}>> }
-                       Nimm hin
+  \repeat volta 2 {
+    <<
+      {
+        Ich steh an dei -- ner Krip -- pen hier,
+        O Je -- su -- lein, mein Le -- ben,}{\new Lyrics{
+          Ich kom -- me, bring und schen -- ke dir,
+          Was du mir hast ge -- ge -- ben,
+
+        }
+      }
+    >>
+  }
+  Nimm hin, es ist mein Geist und Sinn,
+  Herz, Seel und Mut, nimm al -- les _ hin
+  Und lass dir's wohl ge -- fal -- len.
 }
 
 globalFC = {
@@ -567,9 +657,10 @@ scoreFCTenorVoice = \relative c' {
   \partial 4
   r4
   r1
-  \repeat volta 2 { R1*10
-  r2 r4 a b8 cs d4 g, a b8(g e a) a4 r
-  r1 r2 r4 fs' fs d8(fs) g(e) fs(cs) d4 r r2 r1
+  \repeat volta 2 {
+    R1*10
+    r2 r4 a b8 cs d4 g, a b8(g e a) a4 r
+    r1 r2 r4 fs' fs d8(fs) g(e) fs(cs) d4 r r2 r1
   }
   R1*2 r2 r4 e e d d e8 cs fs4.(b,8) fs'4 r r1 r4 d d d b b8(as) as4 r r1 r
   r2 r4 e' e4. b8 a4. a8 a(b gs4) a r
@@ -579,7 +670,8 @@ scoreFCTenorVoice = \relative c' {
 
 scoreFCVerse = \lyricmode {
   % Lyrics follow here.
-  \repeat volta 2 { <<{Nun seid _ ihr wohl ge -- ro -- chen an eu -- rer Fein -- de Schar} \new Lyrics{denn Chris -- tus hat zer -- bro -- chen, was euch zu -- wi -- der war. }>> }
-                    Tod, Teu -- fel, Sünd und _ Höl -- le sind ganz und gar ge -- schwächt;
-                    bei Gott hat sei -- ne Stel -- le das mensch _ _ -- li  -- che Ge -- schlecht.
-}
+  \repeat volta 2 {
+    <<{Nun seid _ ihr wohl ge -- ro -- chen an eu -- rer Fein -- de Schar} \new Lyrics{denn Chris -- tus hat zer -- bro -- chen, was euch zu -- wi -- der war. }>> }
+    Tod, Teu -- fel, Sünd und _ Höl -- le sind ganz und gar ge -- schwächt;
+    bei Gott hat sei -- ne Stel -- le das mensch _ _ -- li  -- che Ge -- schlecht.
+  }
