@@ -187,6 +187,69 @@ wohlDenenDieDaWandeln = {
   c bf4 g a2 g f2.\bar "|."
 }
 
+% SM 430
+amazingGrace = {
+  \time 3/4
+  \partial 4
+  c4^"Amazing Grace, SM 430"
+  f2 a8(f) a2 g4 f2 d4 c2 c4 f2 a8(f) a2 g4 c2.~ c2 a4 c4.(a8) c(a) f2 c4 d4.(f8) f(d) c2 c4 f2 a8(f) a2 g4 f2.~f2\bar "|.|"
+}
+
+% SM 431
+america = {
+  \time 3/4
+  f4^"America, SM 431" f  g e4. f8 g4 a a bf a4. g8 f4 g f e f2. c'4 c c c4. bf8 a4 bf bf bf bf4. a8 g4 a bf8(a) g(f) a4. bf8 c4 d(bf) a4 g f2.\bar "|.|"
+}
+
+% SM 447
+awayInAManger = {
+  \time 3/4
+  \partial 4
+  c4^"Away in a Manger, SM 447"
+  f f g8(a) f4 f a8(bf) c4 c d bf2 g8(a) bf4 bf c a a f8(a) g4 d f e2 c4 f f g8(a) f4 f a8(bf) c4 c d bf2 g8(a) bf4 bf c a a f8(a) g4 d e \partial 2 f2\bar "|.|"
+}
+
+% SM 532
+goTellItOnTheMountains = {
+  \time 4/4
+  a2^"Go, Tell It on the Mountains, SM 532" a8. g16 f8. d16 c2 f g8 g4 g8 f4 g a8(g) a(g) f2 a a8. g16 f8. d16 c2 f4 bf a a g8(f) g4 \partial 2. f2.\bar "|.|"
+}
+
+% SM 558
+harkTheHeraldAngelsSing = {
+  \time 4/4
+  c4^"Hark! The Herald Angels Sing, SM 558" f f4. e8 f4 a a(g) c c c4. bf8 a4 g a2
+  c,4 f f4. e8 f4 a a(g) c g g4. e8 e4 d c2 c'4 c c f, bf a a(g) c c c f, bf a a(g) d' d d c bf a bf2 g4 a8(bf) c4. f,8 f4 g a2 d4. d8 d4 c bf a bf2 g4 a8(bf) c4. f,8 f4 g f2\bar "|.|"
+}
+
+% SM 618
+loHowARoseEerBlooming = {
+  \time 3/1
+  c'2^"Lo, How a Rose E'er Blooming, SM 618" c4 c d c c2 a bf a4 g2 f e4 f2 c' c4 c d c c2 a bf a4 g2 f e4 f2 r4 a g e f d c2 r4 c' c c d c c2 a bf a4 g2 f e4 f1\bar "|.|"
+}
+
+% SM 792
+thisIsMySong = {
+  \time 4/4
+  \partial 2.
+  a4^"This Is My Song, SM 792" g a
+  bf2. a4 g a f4. g8 g4 a2.~a4 a g a bf2. a4 g a f4. g8 a1~a4 c c c d2. a4 a c c4. g8 g4 bf2.~ bf4 bf a g a2. f4 f g g4. a8 a1~a4 c c c d2. a4 a c c4. g8 g4 bf2.~bf4 bf a g a2. f4 f g g4. f8 f1~f4\bar "|.|"
+}
+
+% SM 800
+toJesusChristOurSovereignKing = {
+  \time 4/4
+  \partial 4
+  c4^"To Jesus Christ, Our Sovereign King, SM 800"
+  f g a8(bf) c4 bf a g a a f bf a g2 f4 c f g a8(bf) c4 bf a g a a f bf a g2 f c' c4 c d2 d bf a4 g c2 c c, f4 a c2 bf4 a g1 \partial 2. f2.\bar "|.|"
+}
+
+% SM 805
+ubiCaritas = {
+  \time 2/4
+  a8^"Ubi Caritas, SM 805" a g g f4. f8 bf4(a) g2 a8 a g g f2 d8 d \tuplet 3/2 { e(d) e } f2\bar "|.|"
+}
+
 scoreAMelody = \relative c'' {
   \global
   % Music follows here.
@@ -205,6 +268,15 @@ scoreAMelody = \relative c'' {
   \nunSingeLobDuChristenheit % GL , EG
   \naeherMeinGottZuDir % GL , EG
   \wohlDenenDieDaWandeln % GL 543, EG 295
+  \amazingGrace % SM 430
+  \america
+  \awayInAManger
+  \goTellItOnTheMountains % SM 532
+  \harkTheHeraldAngelsSing % SM 558
+  \loHowARoseEerBlooming
+  \thisIsMySong
+  \toJesusChristOurSovereignKing
+  \ubiCaritas
 }
 
 % GL 93, EG 482
@@ -347,6 +419,95 @@ wohlDenenDieDaWandelnV = \lyricmode {
   sind stets bei ihm in Gnad.
 }
 
+amazingGraceV = \lyricmode {
+  A -- maz -- ing grace, how sweet the sound
+  That saved a wretch like me
+  I once was lost, but now I'm found
+  Was blind, but now I see
+}
+
+americaV = \lyricmode {
+  My coun -- try tis of thee sweet land of lib -- er -- ty
+  Of thee I sing land where my fa -- thers died
+  Land of the pil -- grim's pride
+  From ev -- ery moun -- tain side let free -- dom ring
+}
+
+awayInAMangerV = \lyricmode {
+  A -- way in a man -- ger
+  No crib for a bed
+  The lit -- tle Lord Je -- sus
+  Lay down His sweet head
+  The stars in the bright sky
+  Look down where He lay
+  The lit -- tle Lord Je -- sus
+  A -- sleep on the hay
+}
+
+% SM 532
+goTellItOnTheMountainsV = \lyricmode {
+  Go tell it on the moun -- tain, o -- ver the hills and ev -- 'ry -- where;
+  go tell it on the moun -- tain, that Je -- sus Christ is born.
+}
+
+% SM 558
+harkTheHeraldAngelsSingV = \lyricmode {
+  Hark! The her -- ald an -- gels sing
+  'Glo -- ry to the new -- born king;
+  Peace on earth and mer -- cy mild,
+  God and sin -- ners rec -- on -- ciled'
+  Joy -- ful all ye na -- tions rise,
+  Join the tri -- umph of the skies
+  With th'an -- gel -- ic host pro -- claim
+  'Christ is born in Beth -- le -- hem'
+  Hark! The her -- ald an -- gels sing
+  'Glo -- ry to the new  born king!'
+}
+
+% SM 618
+loHowARoseEerBloomingV = \lyricmode {
+  Lo, how a rose e'er bloom -- ing,
+  From ten -- der stem hath sprung.
+  Of Jes -- se's lin -- eage com -- ing,
+  As men of old have sung;
+  It came, a flow'r -- et bright,
+  A -- mid the cold of win -- ter,
+  When half spent was the night.
+}
+
+% SM 792
+thisIsMySongV = \lyricmode {
+  This is my song,
+  O God of all the na -- tions,
+  A song of peace for lands a -- far
+  and mine.
+  This is my home, the coun -- try
+  where my heart is;
+  Here are my hopes, my dreams,
+  my ho -- ly shrine;
+  But oth -- er hearts in oth -- er lands
+  are beat -- ing
+  With hopes and dreams as true
+  and high as mine.
+}
+
+% SM 800
+toJesusChristOurSovereignKingV = \lyricmode {
+  To Je -- sus Christ, our Sov -- ’reign King,
+  Who is the world’s sal -- va -- tion,
+  All praise and hom -- age do we bring,
+  And thanks and ad -- o -- ra -- tion.
+  Christ Je -- sus Vic -- tor,
+  Christ Je -- sus Ru -- ler!
+  Christ Je -- sus, Lord and Re -- deem -- er!
+}
+
+% SM 805
+ubiCaritasV = \lyricmode {
+  U -- bi ca -- ri -- tas et a -- mor
+U -- bi ca -- ri -- tas, De -- us i -- bi est
+}
+
 allLyrics = {
   \mondAufgegangenAV
   \nunRuhenWaelderV
@@ -363,6 +524,15 @@ allLyrics = {
   \nunSingeLobDuChristenheitV
   \naeherMeinGottZuDirV
   \wohlDenenDieDaWandelnV
+  \amazingGraceV
+  \americaV
+  \awayInAMangerV
+  \goTellItOnTheMountainsV
+  \harkTheHeraldAngelsSingV
+  \loHowARoseEerBloomingV
+  \thisIsMySongV
+  \toJesusChristOurSovereignKingV
+  \ubiCaritasV
 }
 
 \bookpart {
@@ -372,7 +542,7 @@ allLyrics = {
   \score {
     <<
       \new Staff \with {
-          midiInstrument = "choir aahs"
+        midiInstrument = "choir aahs"
       }{
         \new Voice = "melody" {
           \relative c' {
@@ -753,65 +923,65 @@ allBassFigsII = {
   }
   \score {
     \unfoldRepeats {
-    <<
-      \new ChordNames \allChords
-      \new FiguredBass \allBassFigs
-      \new Staff \with {
-        midiInstrument = "choir aahs"
-      } {
-        \new Voice = "melody" {
-          \relative c' {
-            \scoreAMelody
+      <<
+        \new ChordNames \allChords
+        \new FiguredBass \allBassFigs
+        \new Staff \with {
+          midiInstrument = "choir aahs"
+        } {
+          \new Voice = "melody" {
+            \relative c' {
+              \scoreAMelody
+            }
           }
         }
-      }
-      \new Lyrics = "a"
-      \context Lyrics = "a" {
-        \lyricsto "melody" {
-          \allLyrics
+        \new Lyrics = "a"
+        \context Lyrics = "a" {
+          \lyricsto "melody" {
+            \allLyrics
+          }
         }
-      }
-      \new Lyrics = "b"
-      \context Lyrics = "b" {
-        \lyricsto "melody" {
-          \mondAufgegangenBV
+        \new Lyrics = "b"
+        \context Lyrics = "b" {
+          \lyricsto "melody" {
+            \mondAufgegangenBV
+          }
         }
-      }
-%      \new ChordNames \allChordsII
-%      \new FiguredBass \allBassFigsII
-    >>
+        %      \new ChordNames \allChordsII
+        %      \new FiguredBass \allBassFigsII
+      >>
     }
     \midi { }
   }
   \score {
     \unfoldRepeats {
-    <<
-%      \new ChordNames \allChords
-%      \new FiguredBass \allBassFigs
-      \new Staff \with {
-        midiInstrument = "choir aahs"
-      } {
-        \new Voice = "melody" {
-          \relative c' {
-            \scoreAMelody
+      <<
+        %      \new ChordNames \allChords
+        %      \new FiguredBass \allBassFigs
+        \new Staff \with {
+          midiInstrument = "choir aahs"
+        } {
+          \new Voice = "melody" {
+            \relative c' {
+              \scoreAMelody
+            }
           }
         }
-      }
-      \new Lyrics = "a"
-      \context Lyrics = "a" {
-        \lyricsto "melody" {
-          \allLyrics
+        \new Lyrics = "a"
+        \context Lyrics = "a" {
+          \lyricsto "melody" {
+            \allLyrics
+          }
         }
-      }
-      \new Lyrics = "b"
-      \context Lyrics = "b" {
-        \lyricsto "melody" {
-          \mondAufgegangenBV
+        \new Lyrics = "b"
+        \context Lyrics = "b" {
+          \lyricsto "melody" {
+            \mondAufgegangenBV
+          }
         }
-      }
-      \new ChordNames \allChordsII
-      \new FiguredBass \allBassFigsII
-    >>
+        \new ChordNames \allChordsII
+        \new FiguredBass \allBassFigsII
+      >>
     }
     \midi { }
   }
