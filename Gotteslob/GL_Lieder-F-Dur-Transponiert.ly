@@ -535,32 +535,162 @@ allChordsIIC = \transpose f g \allChordsII
   }
 }
 
-scoreDMelody = \relative c'' {
-  \global
-  % Music follows here.
+globalD = {\key d \major
+            \global}
 
+scoreDMelody = \relative c'' {
+  \globalD
+  % Music follows here.
+  \transpose f d \scoreAMelody
 }
 
 scoreDVerse = \lyricmode {
   % Lyrics follow here.
-
+  \scoreAVerse
 }
 
 \bookpart {
+  \header {title = "Lieder in F-Dur, transponiert nach D-Dur"}
   \score {
-    \new Staff \with {
-      \consists "Ambitus_engraver"
-    } { \scoreDMelody }
-    \addlyrics { \scoreDVerse }
+    <<
+      \new Staff \with {
+        midiInstrument = "choir aahs"
+      }{
+        \new Voice = "melody" {
+          \relative c' {
+            \scoreDMelody
+          }
+        }
+      }
+      \new Lyrics = "a"
+      \context Lyrics = "a" {
+        \lyricsto "melody" {
+          \allLyrics
+        }
+      }
+      \new Lyrics = "b"
+      \context Lyrics = "b" {
+        \lyricsto "melody" {
+          \mondAufgegangenBV
+        }
+      }
+    >>
     \layout { }
     \midi { }
   }
 }
 
-scoreEMelody = \relative c'' {
-  \global
-  % Music follows here.
+allChordsD = \transpose f d \allChords
+allChordsIID = \transpose f d \allChordsII
 
+\bookpart {
+  \header {
+    title = "Lieder in F-Dur, transponiert nach D-Dur"
+    subtitle = "mit Akkorden und bezifferten Bass"
+  }
+  \score {
+    <<
+      \new ChordNames \allChordsD
+      \new FiguredBass \allBassFigs
+      \new Staff \with {
+        midiInstrument = "choir aahs"
+      } {
+        \new Voice = "melody" {
+          \relative c' {
+            \scoreDMelody
+          }
+        }
+      }
+      \new Lyrics = "a"
+      \context Lyrics = "a" {
+        \lyricsto "melody" {
+          \allLyrics
+        }
+      }
+      \new Lyrics = "b"
+      \context Lyrics = "b" {
+        \lyricsto "melody" {
+          \mondAufgegangenBV
+        }
+      }
+      \new ChordNames \allChordsIID
+      \new FiguredBass \allBassFigsII
+    >>
+    \layout { }
+  }
+  \score {
+    \unfoldRepeats {
+      <<
+        \new ChordNames \allChordsD
+        \new FiguredBass \allBassFigs
+        \new Staff \with {
+          midiInstrument = "choir aahs"
+        } {
+          \new Voice = "melody" {
+            \relative c' {
+              \scoreDMelody
+            }
+          }
+        }
+        \new Lyrics = "a"
+        \context Lyrics = "a" {
+          \lyricsto "melody" {
+            \allLyrics
+          }
+        }
+        \new Lyrics = "b"
+        \context Lyrics = "b" {
+          \lyricsto "melody" {
+            \mondAufgegangenBV
+          }
+        }
+        %      \new ChordNames \allChordsII
+        %      \new FiguredBass \allBassFigsII
+      >>
+    }
+    \midi { }
+  }
+  \score {
+    \unfoldRepeats {
+      <<
+        %      \new ChordNames \allChords
+        %      \new FiguredBass \allBassFigs
+        \new Staff \with {
+          midiInstrument = "choir aahs"
+        } {
+          \new Voice = "melody" {
+            \relative c' {
+              \scoreDMelody
+            }
+          }
+        }
+        \new Lyrics = "a"
+        \context Lyrics = "a" {
+          \lyricsto "melody" {
+            \allLyrics
+          }
+        }
+        \new Lyrics = "b"
+        \context Lyrics = "b" {
+          \lyricsto "melody" {
+            \mondAufgegangenBV
+          }
+        }
+        \new ChordNames \allChordsIID
+        \new FiguredBass \allBassFigsII
+      >>
+    }
+    \midi { }
+  }
+}
+
+globalE = {\key bf \major
+            \global}
+
+scoreEMelody = \relative c'' {
+  \globalE
+  % Music follows here.
+  \transpose f bf \scoreAMelody
 }
 
 scoreEVerse = \lyricmode {
@@ -569,188 +699,1328 @@ scoreEVerse = \lyricmode {
 }
 
 \bookpart {
+  \header {title = "Lieder in F-Dur, transponiert nach B-Dur"}
   \score {
-    \new Staff \with {
-      \consists "Ambitus_engraver"
-    } { \scoreEMelody }
-    \addlyrics { \scoreEVerse }
+    <<
+      \new Staff \with {
+        midiInstrument = "choir aahs"
+      }{
+        \new Voice = "melody" {
+          \relative c' {
+            \scoreEMelody
+          }
+        }
+      }
+      \new Lyrics = "a"
+      \context Lyrics = "a" {
+        \lyricsto "melody" {
+          \allLyrics
+        }
+      }
+      \new Lyrics = "b"
+      \context Lyrics = "b" {
+        \lyricsto "melody" {
+          \mondAufgegangenBV
+        }
+      }
+    >>
     \layout { }
     \midi { }
   }
 }
 
-scoreFMelody = \relative c'' {
-  \global
-  % Music follows here.
+allChordsE = \transpose f bf \allChords
+allChordsIIE = \transpose f bf \allChordsII
 
+\bookpart {
+  \header {
+    title = "Lieder in F-Dur, transponiert nach B-Dur"
+    subtitle = "mit Akkorden und bezifferten Bass"
+  }
+  \score {
+    <<
+      \new ChordNames \allChordsE
+      \new FiguredBass \allBassFigs
+      \new Staff \with {
+        midiInstrument = "choir aahs"
+      } {
+        \new Voice = "melody" {
+          \relative c' {
+            \scoreEMelody
+          }
+        }
+      }
+      \new Lyrics = "a"
+      \context Lyrics = "a" {
+        \lyricsto "melody" {
+          \allLyrics
+        }
+      }
+      \new Lyrics = "b"
+      \context Lyrics = "b" {
+        \lyricsto "melody" {
+          \mondAufgegangenBV
+        }
+      }
+      \new ChordNames \allChordsIIE
+      \new FiguredBass \allBassFigsII
+    >>
+    \layout { }
+  }
+  \score {
+    \unfoldRepeats {
+      <<
+        \new ChordNames \allChordsE
+        \new FiguredBass \allBassFigs
+        \new Staff \with {
+          midiInstrument = "choir aahs"
+        } {
+          \new Voice = "melody" {
+            \relative c' {
+              \scoreEMelody
+            }
+          }
+        }
+        \new Lyrics = "a"
+        \context Lyrics = "a" {
+          \lyricsto "melody" {
+            \allLyrics
+          }
+        }
+        \new Lyrics = "b"
+        \context Lyrics = "b" {
+          \lyricsto "melody" {
+            \mondAufgegangenBV
+          }
+        }
+        %      \new ChordNames \allChordsII
+        %      \new FiguredBass \allBassFigsII
+      >>
+    }
+    \midi { }
+  }
+  \score {
+    \unfoldRepeats {
+      <<
+        %      \new ChordNames \allChords
+        %      \new FiguredBass \allBassFigs
+        \new Staff \with {
+          midiInstrument = "choir aahs"
+        } {
+          \new Voice = "melody" {
+            \relative c' {
+              \scoreEMelody
+            }
+          }
+        }
+        \new Lyrics = "a"
+        \context Lyrics = "a" {
+          \lyricsto "melody" {
+            \allLyrics
+          }
+        }
+        \new Lyrics = "b"
+        \context Lyrics = "b" {
+          \lyricsto "melody" {
+            \mondAufgegangenBV
+          }
+        }
+        \new ChordNames \allChordsIIE
+        \new FiguredBass \allBassFigsII
+      >>
+    }
+    \midi { }
+  }
+}
+
+globalF = {\key a \major
+            \global}
+
+scoreFMelody = \relative c'' {
+  \globalF
+  % Music follows here.
+  \transpose f a \scoreAMelody
 }
 
 scoreFVerse = \lyricmode {
   % Lyrics follow here.
-
+  \scoreAVerse
 }
 
 \bookpart {
+  \header {title = "Lieder in F-Dur, transponiert nach A-Dur"}
   \score {
-    \new Staff \with {
-      \consists "Ambitus_engraver"
-    } { \scoreFMelody }
-    \addlyrics { \scoreFVerse }
+    <<
+      \new Staff \with {
+        midiInstrument = "choir aahs"
+      }{
+        \new Voice = "melody" {
+          \relative c' {
+            \scoreFMelody
+          }
+        }
+      }
+      \new Lyrics = "a"
+      \context Lyrics = "a" {
+        \lyricsto "melody" {
+          \allLyrics
+        }
+      }
+      \new Lyrics = "b"
+      \context Lyrics = "b" {
+        \lyricsto "melody" {
+          \mondAufgegangenBV
+        }
+      }
+    >>
     \layout { }
     \midi { }
   }
 }
 
-scoreGMelody = \relative c'' {
-  \global
-  % Music follows here.
+allChordsF = \transpose f a \allChords
+allChordsIIF = \transpose f a \allChordsII
 
+\bookpart {
+  \header {
+    title = "Lieder in F-Dur, transponiert nach A-Dur"
+    subtitle = "mit Akkorden und bezifferten Bass"
+  }
+  \score {
+    <<
+      \new ChordNames \allChordsF
+      \new FiguredBass \allBassFigs
+      \new Staff \with {
+        midiInstrument = "choir aahs"
+      } {
+        \new Voice = "melody" {
+          \relative c' {
+            \scoreFMelody
+          }
+        }
+      }
+      \new Lyrics = "a"
+      \context Lyrics = "a" {
+        \lyricsto "melody" {
+          \allLyrics
+        }
+      }
+      \new Lyrics = "b"
+      \context Lyrics = "b" {
+        \lyricsto "melody" {
+          \mondAufgegangenBV
+        }
+      }
+      \new ChordNames \allChordsIIF
+      \new FiguredBass \allBassFigsII
+    >>
+    \layout { }
+  }
+  \score {
+    \unfoldRepeats {
+      <<
+        \new ChordNames \allChordsF
+        \new FiguredBass \allBassFigs
+        \new Staff \with {
+          midiInstrument = "choir aahs"
+        } {
+          \new Voice = "melody" {
+            \relative c' {
+              \scoreFMelody
+            }
+          }
+        }
+        \new Lyrics = "a"
+        \context Lyrics = "a" {
+          \lyricsto "melody" {
+            \allLyrics
+          }
+        }
+        \new Lyrics = "b"
+        \context Lyrics = "b" {
+          \lyricsto "melody" {
+            \mondAufgegangenBV
+          }
+        }
+        %      \new ChordNames \allChordsII
+        %      \new FiguredBass \allBassFigsII
+      >>
+    }
+    \midi { }
+  }
+  \score {
+    \unfoldRepeats {
+      <<
+        %      \new ChordNames \allChords
+        %      \new FiguredBass \allBassFigs
+        \new Staff \with {
+          midiInstrument = "choir aahs"
+        } {
+          \new Voice = "melody" {
+            \relative c' {
+              \scoreFMelody
+            }
+          }
+        }
+        \new Lyrics = "a"
+        \context Lyrics = "a" {
+          \lyricsto "melody" {
+            \allLyrics
+          }
+        }
+        \new Lyrics = "b"
+        \context Lyrics = "b" {
+          \lyricsto "melody" {
+            \mondAufgegangenBV
+          }
+        }
+        \new ChordNames \allChordsIIF
+        \new FiguredBass \allBassFigsII
+      >>
+    }
+    \midi { }
+  }
+}
+
+globalG = {\key ef \major
+            \global}
+
+scoreGMelody = \relative c'' {
+  \globalG
+  % Music follows here.
+  \transpose f ef \scoreAMelody
 }
 
 scoreGVerse = \lyricmode {
   % Lyrics follow here.
-
+  \scoreAVerse
 }
 
 \bookpart {
+  \header {title = "Lieder in F-Dur, transponiert nach Es-Dur"}
   \score {
-    \new Staff \with {
-      \consists "Ambitus_engraver"
-    } { \scoreGMelody }
-    \addlyrics { \scoreGVerse }
+    <<
+      \new Staff \with {
+        midiInstrument = "choir aahs"
+      }{
+        \new Voice = "melody" {
+          \relative c' {
+            \scoreGMelody
+          }
+        }
+      }
+      \new Lyrics = "a"
+      \context Lyrics = "a" {
+        \lyricsto "melody" {
+          \allLyrics
+        }
+      }
+      \new Lyrics = "b"
+      \context Lyrics = "b" {
+        \lyricsto "melody" {
+          \mondAufgegangenBV
+        }
+      }
+    >>
     \layout { }
     \midi { }
   }
 }
 
-scoreHMelody = \relative c'' {
-  \global
-  % Music follows here.
+allChordsG = \transpose f ef \allChords
+allChordsIIG = \transpose f ef \allChordsII
 
+\bookpart {
+  \header {
+    title = "Lieder in F-Dur, transponiert nach Es-Dur"
+    subtitle = "mit Akkorden und bezifferten Bass"
+  }
+  \score {
+    <<
+      \new ChordNames \allChordsG
+      \new FiguredBass \allBassFigs
+      \new Staff \with {
+        midiInstrument = "choir aahs"
+      } {
+        \new Voice = "melody" {
+          \relative c' {
+            \scoreGMelody
+          }
+        }
+      }
+      \new Lyrics = "a"
+      \context Lyrics = "a" {
+        \lyricsto "melody" {
+          \allLyrics
+        }
+      }
+      \new Lyrics = "b"
+      \context Lyrics = "b" {
+        \lyricsto "melody" {
+          \mondAufgegangenBV
+        }
+      }
+      \new ChordNames \allChordsIIG
+      \new FiguredBass \allBassFigsII
+    >>
+    \layout { }
+  }
+  \score {
+    \unfoldRepeats {
+      <<
+        \new ChordNames \allChordsG
+        \new FiguredBass \allBassFigs
+        \new Staff \with {
+          midiInstrument = "choir aahs"
+        } {
+          \new Voice = "melody" {
+            \relative c' {
+              \scoreGMelody
+            }
+          }
+        }
+        \new Lyrics = "a"
+        \context Lyrics = "a" {
+          \lyricsto "melody" {
+            \allLyrics
+          }
+        }
+        \new Lyrics = "b"
+        \context Lyrics = "b" {
+          \lyricsto "melody" {
+            \mondAufgegangenBV
+          }
+        }
+        %      \new ChordNames \allChordsII
+        %      \new FiguredBass \allBassFigsII
+      >>
+    }
+    \midi { }
+  }
+  \score {
+    \unfoldRepeats {
+      <<
+        %      \new ChordNames \allChords
+        %      \new FiguredBass \allBassFigs
+        \new Staff \with {
+          midiInstrument = "choir aahs"
+        } {
+          \new Voice = "melody" {
+            \relative c' {
+              \scoreGMelody
+            }
+          }
+        }
+        \new Lyrics = "a"
+        \context Lyrics = "a" {
+          \lyricsto "melody" {
+            \allLyrics
+          }
+        }
+        \new Lyrics = "b"
+        \context Lyrics = "b" {
+          \lyricsto "melody" {
+            \mondAufgegangenBV
+          }
+        }
+        \new ChordNames \allChordsIIG
+        \new FiguredBass \allBassFigsII
+      >>
+    }
+    \midi { }
+  }
+}
+
+globalH = {\key e \major
+            \global}
+
+scoreHMelody = \relative c'' {
+  \globalH
+  % Music follows here.
+  \transpose f e \scoreAMelody
 }
 
 scoreHVerse = \lyricmode {
   % Lyrics follow here.
-
+  \scoreAVerse
 }
 
 \bookpart {
+  \header {title = "Lieder in F-Dur, transponiert nach E-Dur"}
   \score {
-    \new Staff \with {
-      \consists "Ambitus_engraver"
-    } { \scoreHMelody }
-    \addlyrics { \scoreHVerse }
+    <<
+      \new Staff \with {
+        midiInstrument = "choir aahs"
+      }{
+        \new Voice = "melody" {
+          \relative c' {
+            \scoreHMelody
+          }
+        }
+      }
+      \new Lyrics = "a"
+      \context Lyrics = "a" {
+        \lyricsto "melody" {
+          \allLyrics
+        }
+      }
+      \new Lyrics = "b"
+      \context Lyrics = "b" {
+        \lyricsto "melody" {
+          \mondAufgegangenBV
+        }
+      }
+    >>
     \layout { }
     \midi { }
   }
 }
 
-scoreIMelody = \relative c'' {
-  \global
-  % Music follows here.
+allChordsH = \transpose f e \allChords
+allChordsIIH = \transpose f e \allChordsII
 
+\bookpart {
+  \header {
+    title = "Lieder in F-Dur, transponiert nach E-Dur"
+    subtitle = "mit Akkorden und bezifferten Bass"
+  }
+  \score {
+    <<
+      \new ChordNames \allChordsE
+      \new FiguredBass \allBassFigs
+      \new Staff \with {
+        midiInstrument = "choir aahs"
+      } {
+        \new Voice = "melody" {
+          \relative c' {
+            \scoreEMelody
+          }
+        }
+      }
+      \new Lyrics = "a"
+      \context Lyrics = "a" {
+        \lyricsto "melody" {
+          \allLyrics
+        }
+      }
+      \new Lyrics = "b"
+      \context Lyrics = "b" {
+        \lyricsto "melody" {
+          \mondAufgegangenBV
+        }
+      }
+      \new ChordNames \allChordsIIE
+      \new FiguredBass \allBassFigsII
+    >>
+    \layout { }
+  }
+  \score {
+    \unfoldRepeats {
+      <<
+        \new ChordNames \allChordsE
+        \new FiguredBass \allBassFigs
+        \new Staff \with {
+          midiInstrument = "choir aahs"
+        } {
+          \new Voice = "melody" {
+            \relative c' {
+              \scoreEMelody
+            }
+          }
+        }
+        \new Lyrics = "a"
+        \context Lyrics = "a" {
+          \lyricsto "melody" {
+            \allLyrics
+          }
+        }
+        \new Lyrics = "b"
+        \context Lyrics = "b" {
+          \lyricsto "melody" {
+            \mondAufgegangenBV
+          }
+        }
+        %      \new ChordNames \allChordsII
+        %      \new FiguredBass \allBassFigsII
+      >>
+    }
+    \midi { }
+  }
+  \score {
+    \unfoldRepeats {
+      <<
+        %      \new ChordNames \allChords
+        %      \new FiguredBass \allBassFigs
+        \new Staff \with {
+          midiInstrument = "choir aahs"
+        } {
+          \new Voice = "melody" {
+            \relative c' {
+              \scoreEMelody
+            }
+          }
+        }
+        \new Lyrics = "a"
+        \context Lyrics = "a" {
+          \lyricsto "melody" {
+            \allLyrics
+          }
+        }
+        \new Lyrics = "b"
+        \context Lyrics = "b" {
+          \lyricsto "melody" {
+            \mondAufgegangenBV
+          }
+        }
+        \new ChordNames \allChordsIIE
+        \new FiguredBass \allBassFigsII
+      >>
+    }
+    \midi { }
+  }
+}
+
+globalI = {\key af \major
+            \global}
+
+scoreIMelody = \relative c'' {
+  \globalI
+  % Music follows here.
+  \transpose f af \scoreAMelody
 }
 
 scoreIVerse = \lyricmode {
   % Lyrics follow here.
-
+  \scoreAVerse
 }
 
 \bookpart {
+  \header {title = "Lieder in F-Dur, transponiert nach As-Dur"}
   \score {
-    \new Staff \with {
-      \consists "Ambitus_engraver"
-    } { \scoreIMelody }
-    \addlyrics { \scoreIVerse }
+    <<
+      \new Staff \with {
+        midiInstrument = "choir aahs"
+      }{
+        \new Voice = "melody" {
+          \relative c' {
+            \scoreIMelody
+          }
+        }
+      }
+      \new Lyrics = "a"
+      \context Lyrics = "a" {
+        \lyricsto "melody" {
+          \allLyrics
+        }
+      }
+      \new Lyrics = "b"
+      \context Lyrics = "b" {
+        \lyricsto "melody" {
+          \mondAufgegangenBV
+        }
+      }
+    >>
     \layout { }
     \midi { }
   }
 }
 
-scoreJMelody = \relative c'' {
-  \global
-  % Music follows here.
+allChordsI = \transpose f af \allChords
+allChordsIII = \transpose f af \allChordsII
 
+\bookpart {
+  \header {
+    title = "Lieder in F-Dur, transponiert nach As-Dur"
+    subtitle = "mit Akkorden und bezifferten Bass"
+  }
+  \score {
+    <<
+      \new ChordNames \allChordsI
+      \new FiguredBass \allBassFigs
+      \new Staff \with {
+        midiInstrument = "choir aahs"
+      } {
+        \new Voice = "melody" {
+          \relative c' {
+            \scoreIMelody
+          }
+        }
+      }
+      \new Lyrics = "a"
+      \context Lyrics = "a" {
+        \lyricsto "melody" {
+          \allLyrics
+        }
+      }
+      \new Lyrics = "b"
+      \context Lyrics = "b" {
+        \lyricsto "melody" {
+          \mondAufgegangenBV
+        }
+      }
+      \new ChordNames \allChordsIII
+      \new FiguredBass \allBassFigsII
+    >>
+    \layout { }
+  }
+  \score {
+    \unfoldRepeats {
+      <<
+        \new ChordNames \allChordsI
+        \new FiguredBass \allBassFigs
+        \new Staff \with {
+          midiInstrument = "choir aahs"
+        } {
+          \new Voice = "melody" {
+            \relative c' {
+              \scoreIMelody
+            }
+          }
+        }
+        \new Lyrics = "a"
+        \context Lyrics = "a" {
+          \lyricsto "melody" {
+            \allLyrics
+          }
+        }
+        \new Lyrics = "b"
+        \context Lyrics = "b" {
+          \lyricsto "melody" {
+            \mondAufgegangenBV
+          }
+        }
+        %      \new ChordNames \allChordsII
+        %      \new FiguredBass \allBassFigsII
+      >>
+    }
+    \midi { }
+  }
+  \score {
+    \unfoldRepeats {
+      <<
+        %      \new ChordNames \allChords
+        %      \new FiguredBass \allBassFigs
+        \new Staff \with {
+          midiInstrument = "choir aahs"
+        } {
+          \new Voice = "melody" {
+            \relative c' {
+              \scoreIMelody
+            }
+          }
+        }
+        \new Lyrics = "a"
+        \context Lyrics = "a" {
+          \lyricsto "melody" {
+            \allLyrics
+          }
+        }
+        \new Lyrics = "b"
+        \context Lyrics = "b" {
+          \lyricsto "melody" {
+            \mondAufgegangenBV
+          }
+        }
+        \new ChordNames \allChordsIII
+        \new FiguredBass \allBassFigsII
+      >>
+    }
+    \midi { }
+  }
+}
+
+globalJ = {\key b \major
+            \global}
+
+scoreJMelody = \relative c'' {
+  \globalJ
+  % Music follows here.
+  \transpose f b \scoreAMelody
 }
 
 scoreJVerse = \lyricmode {
   % Lyrics follow here.
-
+  \scoreAVerse
 }
 
 \bookpart {
+  \header {title = "Lieder in F-Dur, transponiert nach H-Dur"}
   \score {
-    \new Staff \with {
-      \consists "Ambitus_engraver"
-    } { \scoreJMelody }
-    \addlyrics { \scoreJVerse }
+    <<
+      \new Staff \with {
+        midiInstrument = "choir aahs"
+      }{
+        \new Voice = "melody" {
+          \relative c' {
+            \scoreJMelody
+          }
+        }
+      }
+      \new Lyrics = "a"
+      \context Lyrics = "a" {
+        \lyricsto "melody" {
+          \allLyrics
+        }
+      }
+      \new Lyrics = "b"
+      \context Lyrics = "b" {
+        \lyricsto "melody" {
+          \mondAufgegangenBV
+        }
+      }
+    >>
     \layout { }
     \midi { }
   }
 }
 
-scoreKMelody = \relative c'' {
-  \global
-  % Music follows here.
+allChordsJ = \transpose f b \allChords
+allChordsIIJ = \transpose f b \allChordsII
 
+\bookpart {
+  \header {
+    title = "Lieder in F-Dur, transponiert nach H-Dur"
+    subtitle = "mit Akkorden und bezifferten Bass"
+  }
+  \score {
+    <<
+      \new ChordNames \allChordsJ
+      \new FiguredBass \allBassFigs
+      \new Staff \with {
+        midiInstrument = "choir aahs"
+      } {
+        \new Voice = "melody" {
+          \relative c' {
+            \scoreJMelody
+          }
+        }
+      }
+      \new Lyrics = "a"
+      \context Lyrics = "a" {
+        \lyricsto "melody" {
+          \allLyrics
+        }
+      }
+      \new Lyrics = "b"
+      \context Lyrics = "b" {
+        \lyricsto "melody" {
+          \mondAufgegangenBV
+        }
+      }
+      \new ChordNames \allChordsIIJ
+      \new FiguredBass \allBassFigsII
+    >>
+    \layout { }
+  }
+  \score {
+    \unfoldRepeats {
+      <<
+        \new ChordNames \allChordsC
+        \new FiguredBass \allBassFigs
+        \new Staff \with {
+          midiInstrument = "choir aahs"
+        } {
+          \new Voice = "melody" {
+            \relative c' {
+              \scoreJMelody
+            }
+          }
+        }
+        \new Lyrics = "a"
+        \context Lyrics = "a" {
+          \lyricsto "melody" {
+            \allLyrics
+          }
+        }
+        \new Lyrics = "b"
+        \context Lyrics = "b" {
+          \lyricsto "melody" {
+            \mondAufgegangenBV
+          }
+        }
+        %      \new ChordNames \allChordsII
+        %      \new FiguredBass \allBassFigsII
+      >>
+    }
+    \midi { }
+  }
+  \score {
+    \unfoldRepeats {
+      <<
+        %      \new ChordNames \allChords
+        %      \new FiguredBass \allBassFigs
+        \new Staff \with {
+          midiInstrument = "choir aahs"
+        } {
+          \new Voice = "melody" {
+            \relative c' {
+              \scoreJMelody
+            }
+          }
+        }
+        \new Lyrics = "a"
+        \context Lyrics = "a" {
+          \lyricsto "melody" {
+            \allLyrics
+          }
+        }
+        \new Lyrics = "b"
+        \context Lyrics = "b" {
+          \lyricsto "melody" {
+            \mondAufgegangenBV
+          }
+        }
+        \new ChordNames \allChordsIIJ
+        \new FiguredBass \allBassFigsII
+      >>
+    }
+    \midi { }
+  }
+}
+
+globalK = {\key df \major
+            \global}
+
+scoreKMelody = \relative c'' {
+  \globalK
+  % Music follows here.
+  \transpose f df \scoreAMelody
 }
 
 scoreKVerse = \lyricmode {
   % Lyrics follow here.
-
+  \scoreAVerse
 }
 
 \bookpart {
+  \header {title = "Lieder in F-Dur, transponiert nach Des-Dur"}
   \score {
-    \new Staff \with {
-      \consists "Ambitus_engraver"
-    } { \scoreKMelody }
-    \addlyrics { \scoreKVerse }
+    <<
+      \new Staff \with {
+        midiInstrument = "choir aahs"
+      }{
+        \new Voice = "melody" {
+          \relative c' {
+            \scoreKMelody
+          }
+        }
+      }
+      \new Lyrics = "a"
+      \context Lyrics = "a" {
+        \lyricsto "melody" {
+          \allLyrics
+        }
+      }
+      \new Lyrics = "b"
+      \context Lyrics = "b" {
+        \lyricsto "melody" {
+          \mondAufgegangenBV
+        }
+      }
+    >>
     \layout { }
     \midi { }
   }
 }
 
-scoreLMelody = \relative c'' {
-  \global
-  % Music follows here.
+allChordsK = \transpose f df \allChords
+allChordsIIK = \transpose f df \allChordsII
 
+\bookpart {
+  \header {
+    title = "Lieder in F-Dur, transponiert nach Des-Dur"
+    subtitle = "mit Akkorden und bezifferten Bass"
+  }
+  \score {
+    <<
+      \new ChordNames \allChordsK
+      \new FiguredBass \allBassFigs
+      \new Staff \with {
+        midiInstrument = "choir aahs"
+      } {
+        \new Voice = "melody" {
+          \relative c' {
+            \scoreKMelody
+          }
+        }
+      }
+      \new Lyrics = "a"
+      \context Lyrics = "a" {
+        \lyricsto "melody" {
+          \allLyrics
+        }
+      }
+      \new Lyrics = "b"
+      \context Lyrics = "b" {
+        \lyricsto "melody" {
+          \mondAufgegangenBV
+        }
+      }
+      \new ChordNames \allChordsIIK
+      \new FiguredBass \allBassFigsII
+    >>
+    \layout { }
+  }
+  \score {
+    \unfoldRepeats {
+      <<
+        \new ChordNames \allChordsK
+        \new FiguredBass \allBassFigs
+        \new Staff \with {
+          midiInstrument = "choir aahs"
+        } {
+          \new Voice = "melody" {
+            \relative c' {
+              \scoreKMelody
+            }
+          }
+        }
+        \new Lyrics = "a"
+        \context Lyrics = "a" {
+          \lyricsto "melody" {
+            \allLyrics
+          }
+        }
+        \new Lyrics = "b"
+        \context Lyrics = "b" {
+          \lyricsto "melody" {
+            \mondAufgegangenBV
+          }
+        }
+        %      \new ChordNames \allChordsII
+        %      \new FiguredBass \allBassFigsII
+      >>
+    }
+    \midi { }
+  }
+  \score {
+    \unfoldRepeats {
+      <<
+        %      \new ChordNames \allChords
+        %      \new FiguredBass \allBassFigs
+        \new Staff \with {
+          midiInstrument = "choir aahs"
+        } {
+          \new Voice = "melody" {
+            \relative c' {
+              \scoreKMelody
+            }
+          }
+        }
+        \new Lyrics = "a"
+        \context Lyrics = "a" {
+          \lyricsto "melody" {
+            \allLyrics
+          }
+        }
+        \new Lyrics = "b"
+        \context Lyrics = "b" {
+          \lyricsto "melody" {
+            \mondAufgegangenBV
+          }
+        }
+        \new ChordNames \allChordsIIK
+        \new FiguredBass \allBassFigsII
+      >>
+    }
+    \midi { }
+  }
+}
+
+globalL = {\key fs \major
+            \global}
+
+scoreLMelody = \relative c'' {
+  \globalL
+  % Music follows here.
+  \transpose f fs \scoreAMelody
 }
 
 scoreLVerse = \lyricmode {
   % Lyrics follow here.
-
+  \scoreAVerse
 }
 
 \bookpart {
+  \header {title = "Lieder in F-Dur, transponiert nach Fis-Dur"}
   \score {
-    \new Staff \with {
-      \consists "Ambitus_engraver"
-    } { \scoreLMelody }
-    \addlyrics { \scoreLVerse }
+    <<
+      \new Staff \with {
+        midiInstrument = "choir aahs"
+      }{
+        \new Voice = "melody" {
+          \relative c' {
+            \scoreLMelody
+          }
+        }
+      }
+      \new Lyrics = "a"
+      \context Lyrics = "a" {
+        \lyricsto "melody" {
+          \allLyrics
+        }
+      }
+      \new Lyrics = "b"
+      \context Lyrics = "b" {
+        \lyricsto "melody" {
+          \mondAufgegangenBV
+        }
+      }
+    >>
     \layout { }
     \midi { }
   }
 }
 
-scoreMMelody = \relative c'' {
-  \global
-  % Music follows here.
+allChordsL = \transpose f fs \allChords
+allChordsIIL = \transpose f fs \allChordsII
 
+\bookpart {
+  \header {
+    title = "Lieder in F-Dur, transponiert nach Fis-Dur"
+    subtitle = "mit Akkorden und bezifferten Bass"
+  }
+  \score {
+    <<
+      \new ChordNames \allChordsL
+      \new FiguredBass \allBassFigs
+      \new Staff \with {
+        midiInstrument = "choir aahs"
+      } {
+        \new Voice = "melody" {
+          \relative c' {
+            \scoreLMelody
+          }
+        }
+      }
+      \new Lyrics = "a"
+      \context Lyrics = "a" {
+        \lyricsto "melody" {
+          \allLyrics
+        }
+      }
+      \new Lyrics = "b"
+      \context Lyrics = "b" {
+        \lyricsto "melody" {
+          \mondAufgegangenBV
+        }
+      }
+      \new ChordNames \allChordsIIL
+      \new FiguredBass \allBassFigsII
+    >>
+    \layout { }
+  }
+  \score {
+    \unfoldRepeats {
+      <<
+        \new ChordNames \allChordsL
+        \new FiguredBass \allBassFigs
+        \new Staff \with {
+          midiInstrument = "choir aahs"
+        } {
+          \new Voice = "melody" {
+            \relative c' {
+              \scoreLMelody
+            }
+          }
+        }
+        \new Lyrics = "a"
+        \context Lyrics = "a" {
+          \lyricsto "melody" {
+            \allLyrics
+          }
+        }
+        \new Lyrics = "b"
+        \context Lyrics = "b" {
+          \lyricsto "melody" {
+            \mondAufgegangenBV
+          }
+        }
+        %      \new ChordNames \allChordsII
+        %      \new FiguredBass \allBassFigsII
+      >>
+    }
+    \midi { }
+  }
+  \score {
+    \unfoldRepeats {
+      <<
+        %      \new ChordNames \allChords
+        %      \new FiguredBass \allBassFigs
+        \new Staff \with {
+          midiInstrument = "choir aahs"
+        } {
+          \new Voice = "melody" {
+            \relative c' {
+              \scoreCMelody
+            }
+          }
+        }
+        \new Lyrics = "a"
+        \context Lyrics = "a" {
+          \lyricsto "melody" {
+            \allLyrics
+          }
+        }
+        \new Lyrics = "b"
+        \context Lyrics = "b" {
+          \lyricsto "melody" {
+            \mondAufgegangenBV
+          }
+        }
+        \new ChordNames \allChordsIIL
+        \new FiguredBass \allBassFigsII
+      >>
+    }
+    \midi { }
+  }
+}
+
+globalM = {\key gf \major
+            \global}
+
+scoreMMelody = \relative c'' {
+  \globalM
+  % Music follows here.
+  \transpose f gf \scoreAMelody
 }
 
 scoreMVerse = \lyricmode {
   % Lyrics follow here.
-
+  \scoreAVerse
 }
 
 \bookpart {
+  \header {title = "Lieder in F-Dur, transponiert nach Ges-Dur"}
   \score {
-    \new Staff \with {
-      \consists "Ambitus_engraver"
-    } { \scoreMMelody }
-    \addlyrics { \scoreMVerse }
+    <<
+      \new Staff \with {
+        midiInstrument = "choir aahs"
+      }{
+        \new Voice = "melody" {
+          \relative c' {
+            \scoreMMelody
+          }
+        }
+      }
+      \new Lyrics = "a"
+      \context Lyrics = "a" {
+        \lyricsto "melody" {
+          \allLyrics
+        }
+      }
+      \new Lyrics = "b"
+      \context Lyrics = "b" {
+        \lyricsto "melody" {
+          \mondAufgegangenBV
+        }
+      }
+    >>
     \layout { }
+    \midi { }
+  }
+}
+
+allChordsM = \transpose f gf \allChords
+allChordsIIM = \transpose f gf \allChordsII
+
+\bookpart {
+  \header {
+    title = "Lieder in F-Dur, transponiert nach Ges-Dur"
+    subtitle = "mit Akkorden und bezifferten Bass"
+  }
+  \score {
+    <<
+      \new ChordNames \allChordsM
+      \new FiguredBass \allBassFigs
+      \new Staff \with {
+        midiInstrument = "choir aahs"
+      } {
+        \new Voice = "melody" {
+          \relative c' {
+            \scoreMMelody
+          }
+        }
+      }
+      \new Lyrics = "a"
+      \context Lyrics = "a" {
+        \lyricsto "melody" {
+          \allLyrics
+        }
+      }
+      \new Lyrics = "b"
+      \context Lyrics = "b" {
+        \lyricsto "melody" {
+          \mondAufgegangenBV
+        }
+      }
+      \new ChordNames \allChordsIIM
+      \new FiguredBass \allBassFigsII
+    >>
+    \layout { }
+  }
+  \score {
+    \unfoldRepeats {
+      <<
+        \new ChordNames \allChordsM
+        \new FiguredBass \allBassFigs
+        \new Staff \with {
+          midiInstrument = "choir aahs"
+        } {
+          \new Voice = "melody" {
+            \relative c' {
+              \scoreLMelody
+            }
+          }
+        }
+        \new Lyrics = "a"
+        \context Lyrics = "a" {
+          \lyricsto "melody" {
+            \allLyrics
+          }
+        }
+        \new Lyrics = "b"
+        \context Lyrics = "b" {
+          \lyricsto "melody" {
+            \mondAufgegangenBV
+          }
+        }
+        %      \new ChordNames \allChordsII
+        %      \new FiguredBass \allBassFigsII
+      >>
+    }
+    \midi { }
+  }
+  \score {
+    \unfoldRepeats {
+      <<
+        %      \new ChordNames \allChords
+        %      \new FiguredBass \allBassFigs
+        \new Staff \with {
+          midiInstrument = "choir aahs"
+        } {
+          \new Voice = "melody" {
+            \relative c' {
+              \scoreMMelody
+            }
+          }
+        }
+        \new Lyrics = "a"
+        \context Lyrics = "a" {
+          \lyricsto "melody" {
+            \allLyrics
+          }
+        }
+        \new Lyrics = "b"
+        \context Lyrics = "b" {
+          \lyricsto "melody" {
+            \mondAufgegangenBV
+          }
+        }
+        \new ChordNames \allChordsIIM
+        \new FiguredBass \allBassFigsII
+      >>
+    }
     \midi { }
   }
 }
