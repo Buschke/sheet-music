@@ -1193,7 +1193,7 @@ allChordsIIH = \transpose f e \allChordsII
       } {
         \new Voice = "melody" {
           \relative c' {
-            \scoreEMelody
+            \scoreHMelody
           }
         }
       }
@@ -1209,7 +1209,7 @@ allChordsIIH = \transpose f e \allChordsII
           \mondAufgegangenBV
         }
       }
-      \new ChordNames \allChordsIIE
+      \new ChordNames \allChordsIIH
       \new FiguredBass \allBassFigsII
     >>
     \layout { }
@@ -1217,7 +1217,7 @@ allChordsIIH = \transpose f e \allChordsII
   \score {
     \unfoldRepeats {
       <<
-        \new ChordNames \allChordsE
+        \new ChordNames \allChordsH
         \new FiguredBass \allBassFigs
         \new Staff \with {
           midiInstrument = "choir aahs"
@@ -1256,7 +1256,7 @@ allChordsIIH = \transpose f e \allChordsII
         } {
           \new Voice = "melody" {
             \relative c' {
-              \scoreEMelody
+              \scoreHMelody
             }
           }
         }
@@ -1272,7 +1272,7 @@ allChordsIIH = \transpose f e \allChordsII
             \mondAufgegangenBV
           }
         }
-        \new ChordNames \allChordsIIE
+        \new ChordNames \allChordsIIH
         \new FiguredBass \allBassFigsII
       >>
     }
