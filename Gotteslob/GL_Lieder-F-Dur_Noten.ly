@@ -232,6 +232,17 @@ ubiCaritas = {
   a8^"Ubi Caritas, SM 805" a g g f4. f8 bf4(a) g2 a8 a g g f2 d8 d \tuplet 3/2 { e(d) e } f2\bar "|.|"
 }
 
+%%%%%%%%%%%%%%% Lieder in Moll
+% GL 224 Maria durch ein Dornwald ging, e-Moll
+mariaDurchEinDornwaldGing = {
+  \time 4/4
+  \partial 4
+  b4 e e8 fs g4 b g fs8 e f4 f g g8 g a2 b r4
+  g8 a b4. a8 b4 c8 b a4. g8 a4 b8 a g4 g8 fs g g a g fs4 fs8 e fs4 fs\breathe
+  e4. fs8 g4 b g8 fs e2 r4
+  \bar "|.|"
+}
+
 % GL 93, EG 482
 mondAufgegangenAV = \lyricmode {Der Mond ist auf -- ge -- gan -- gen, die gold -- nen Stern -- lein pran -- gen am Him -- mel hell und klar \repeat unfold 1 { \skip 1 \skip 1 \skip 1 }}
 
