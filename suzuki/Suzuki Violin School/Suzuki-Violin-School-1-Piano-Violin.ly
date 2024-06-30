@@ -43,7 +43,7 @@ globalA = {
   \key a \major
   %  \numericTimeSignature
   \time 4/4
-  \tempo "Andante" 4=100
+  \tempo "Andante" 4=60
 }
 
 scoreAViolin = \relative c'' {
@@ -133,7 +133,7 @@ claveA = { \new DrumStaff { \drummode { \globalA << { \repeat unfold 4 {hh8 cl} 
 globalB = {
   \key a \major
   \time 2/2
-  \tempo "Moderato" 4=100
+  \tempo "Moderato" 4=60
 }
 
 scoreBViolin = \relative c'' {
@@ -1094,7 +1094,7 @@ globalN = {
   \key g \major
   %\numericTimeSignature
   \time 3/4
-  \tempo "Andantino" 4=46
+  \tempo "Andantino" 4=30
 }
 
 scoreNViolin = \relative c'' {
