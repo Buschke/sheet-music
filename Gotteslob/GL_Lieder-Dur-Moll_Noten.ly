@@ -280,7 +280,7 @@ mariaDurchEinDornwaldGing = {
 ichStehAnDeinerKrippeHier = {
   \key a \minor
   \time 4/4
-  \relative c' {
+  \relative c'' {
     \partial 4
     \repeat volta 2 {
       e4^"GL 256, EG : Ich steh an deiner Krippe hier" a b c a g4. f8 e4\breathe
