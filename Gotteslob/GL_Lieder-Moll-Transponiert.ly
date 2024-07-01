@@ -2,40 +2,46 @@
 \language "english"
 
 \header {
-  dedication = "n"
-  title = "n"
-  subtitle = "n"
-  subsubtitle = "n"
-  instrument = "n"
-  composer = "n"
-  arranger = "n"
-  poet = "n"
-  meter = "nn"
-  piece = "n"
-  opus = "n"
-  copyright = "n"
-  tagline = "n"
+  dedication = ""
+  title = "Lieder in Moll, nachher auch transponiert"
+  subtitle = ""
+  subsubtitle = "Gotteslob, zur Harmonisierung"
+  instrument = "Orgel / Chor"
+  composer = "M: diverse"
+  arranger = \markup {"Satz: " \with-url "https://buschke.com" "Sven Buschke"}
+  poet = "T: diverse"
+  meter = ""
+  piece = ""
+  opus = ""
+  copyright = \markup {"© Satz, 11.06.2024: " \with-url "https://buschke.com" "Sven Buschke"}
+  tagline = "best of Gotteslob"
 }
 
 \paper {
   #(set-paper-size "a4")
 }
 
+\include "GL_Lieder-Dur-Moll_Noten.ly"
+
 global = {
-  \key c \major
   \time 4/4
   \tempo "Getragen" 4=100
 }
 
-scoreAMelody = \relative c'' {
+globalA = {
+  \key a \minor
   \global
+}
+
+scoreAMelody = \relative c'' {
+  \globalA
   % Music follows here.
-  
+  \allNotesMinor
 }
 
 scoreAVerse = \lyricmode {
   % Lyrics follow here.
-  
+  \allLyricsMinor
 }
 
 \bookpart {
@@ -49,18 +55,24 @@ scoreAVerse = \lyricmode {
   }
 }
 
-scoreBMelody = \relative c'' {
+globalB = {
+  \key e \minor
   \global
+}
+
+scoreBMelody = \relative c'' {
+  \globalB
   % Music follows here.
-  
+  \transpose a e \scoreAMelody
 }
 
 scoreBVerse = \lyricmode {
   % Lyrics follow here.
-  
+  \scoreAVerse
 }
 
 \bookpart {
+  \header { title = "Lieder in Dur, e-Moll"}
   \score {
     \new Staff \with {
       \consists "Ambitus_engraver"
@@ -71,18 +83,24 @@ scoreBVerse = \lyricmode {
   }
 }
 
-scoreCMelody = \relative c'' {
+globalC = {
+  \key d \minor
   \global
+}
+
+scoreCMelody = \relative c'' {
+  \globalC
   % Music follows here.
-  
+  \transpose a d \scoreAMelody  
 }
 
 scoreCVerse = \lyricmode {
   % Lyrics follow here.
-  
+  \scoreAVerse  
 }
 
 \bookpart {
+  \header { title = "Lieder in Dur, d-Moll"}
   \score {
     \new Staff \with {
       \consists "Ambitus_engraver"
@@ -93,18 +111,24 @@ scoreCVerse = \lyricmode {
   }
 }
 
-scoreDMelody = \relative c'' {
+globalD = {
+  \key b \minor
   \global
+}
+
+scoreDMelody = \relative c'' {
+  \globalD
   % Music follows here.
-  
+  \transpose a b \scoreAMelody
 }
 
 scoreDVerse = \lyricmode {
   % Lyrics follow here.
-  
+  \scoreAVerse  
 }
 
 \bookpart {
+  \header { title = "Lieder in Dur, h-Moll"}
   \score {
     \new Staff \with {
       \consists "Ambitus_engraver"
@@ -115,18 +139,24 @@ scoreDVerse = \lyricmode {
   }
 }
 
-scoreEMelody = \relative c'' {
+globalE = {
+  \key g \minor
   \global
+}
+
+scoreEMelody = \relative c'' {
+  \globalE
   % Music follows here.
-  
+  \transpose a g \scoreAMelody  
 }
 
 scoreEVerse = \lyricmode {
   % Lyrics follow here.
-  
+  \scoreAVerse  
 }
 
 \bookpart {
+  \header { title = "Lieder in Dur, g-Moll"}
   \score {
     \new Staff \with {
       \consists "Ambitus_engraver"
@@ -137,18 +167,24 @@ scoreEVerse = \lyricmode {
   }
 }
 
-scoreFMelody = \relative c'' {
+globalF = {
+  \key fs \minor
   \global
+}
+
+scoreFMelody = \relative c'' {
+  \globalF
   % Music follows here.
-  
+  \transpose a fs \scoreAMelody  
 }
 
 scoreFVerse = \lyricmode {
   % Lyrics follow here.
-  
+  \scoreAVerse  
 }
 
 \bookpart {
+  \header { title = "Lieder in Dur, fis-Moll"}
   \score {
     \new Staff \with {
       \consists "Ambitus_engraver"
@@ -159,18 +195,24 @@ scoreFVerse = \lyricmode {
   }
 }
 
-scoreGMelody = \relative c'' {
+globalG = {
+  \key c \minor
   \global
+}
+
+scoreGMelody = \relative c'' {
+  \globalG
   % Music follows here.
-  
+  \transpose a c \scoreAMelody
 }
 
 scoreGVerse = \lyricmode {
   % Lyrics follow here.
-  
+  \scoreAVerse  
 }
 
 \bookpart {
+  \header { title = "Lieder in Dur, c-Moll"}
   \score {
     \new Staff \with {
       \consists "Ambitus_engraver"
@@ -181,18 +223,24 @@ scoreGVerse = \lyricmode {
   }
 }
 
-scoreHMelody = \relative c'' {
+globalH = {
+  \key cs \minor
   \global
+}
+
+scoreHMelody = \relative c'' {
+  \globalH
   % Music follows here.
-  
+  \transpose a cs \scoreAMelody  
 }
 
 scoreHVerse = \lyricmode {
   % Lyrics follow here.
-  
+  \scoreAVerse  
 }
 
 \bookpart {
+  \header { title = "Lieder in Dur, cis-Moll"}
   \score {
     \new Staff \with {
       \consists "Ambitus_engraver"
@@ -203,18 +251,24 @@ scoreHVerse = \lyricmode {
   }
 }
 
-scoreIMelody = \relative c'' {
+globalI = {
+  \key f \minor
   \global
+}
+
+scoreIMelody = \relative c'' {
+  \globalI
   % Music follows here.
-  
+  \transpose a f \scoreAMelody
 }
 
 scoreIVerse = \lyricmode {
   % Lyrics follow here.
-  
+  \scoreAVerse  
 }
 
 \bookpart {
+  \header { title = "Lieder in Dur, f-Moll"}
   \score {
     \new Staff \with {
       \consists "Ambitus_engraver"
@@ -225,18 +279,24 @@ scoreIVerse = \lyricmode {
   }
 }
 
-scoreJMelody = \relative c'' {
+globalJ = {
+  \key gs \minor
   \global
+}
+
+scoreJMelody = \relative c'' {
+  \globalJ
   % Music follows here.
-  
+  \transpose a gs \scoreAMelody  
 }
 
 scoreJVerse = \lyricmode {
   % Lyrics follow here.
-  
+  \scoreAVerse  
 }
 
 \bookpart {
+  \header { title = "Lieder in Dur, gis-Moll"}
   \score {
     \new Staff \with {
       \consists "Ambitus_engraver"
@@ -247,18 +307,24 @@ scoreJVerse = \lyricmode {
   }
 }
 
-scoreKMelody = \relative c'' {
+globalK = {
+  \key bf \minor
   \global
+}
+
+scoreKMelody = \relative c'' {
+  \globalK
   % Music follows here.
-  
+  \transpose a bf \scoreAMelody  
 }
 
 scoreKVerse = \lyricmode {
   % Lyrics follow here.
-  
+  \scoreAVerse  
 }
 
 \bookpart {
+  \header { title = "Lieder in Dur, b-Moll"}
   \score {
     \new Staff \with {
       \consists "Ambitus_engraver"
@@ -269,18 +335,24 @@ scoreKVerse = \lyricmode {
   }
 }
 
-scoreLMelody = \relative c'' {
+globalL = {
+  \key ds \minor
   \global
+}
+
+scoreLMelody = \relative c'' {
+  \globalL
   % Music follows here.
-  
+  \transpose a ds \scoreAMelody  
 }
 
 scoreLVerse = \lyricmode {
   % Lyrics follow here.
-  
+  \scoreAVerse  
 }
 
 \bookpart {
+  \header { title = "Lieder in Dur, dis-Moll"}
   \score {
     \new Staff \with {
       \consists "Ambitus_engraver"
@@ -291,18 +363,24 @@ scoreLVerse = \lyricmode {
   }
 }
 
-scoreMMelody = \relative c'' {
+globalM = {
+  \key ef \minor
   \global
+}
+
+scoreMMelody = \relative c'' {
+  \globalM
   % Music follows here.
-  
+  \transpose a ef \scoreAMelody  
 }
 
 scoreMVerse = \lyricmode {
   % Lyrics follow here.
-  
+  \scoreAVerse  
 }
 
 \bookpart {
+  \header { title = "Lieder in Dur, es-Moll"}
   \score {
     \new Staff \with {
       \consists "Ambitus_engraver"

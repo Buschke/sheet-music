@@ -5,7 +5,7 @@
 
 \header {
   dedication = ""
-  title = "Lieder in F-Dur, nachher auch transponiert"
+  title = "Lieder in Dur, nachher auch transponiert"
   subtitle = ""
   subsubtitle = "Gotteslob, zur Harmonisierung"
   instrument = "Orgel / Chor"
@@ -34,7 +34,6 @@
 }
 
 global = {
-%  \key c \major
   \time 4/4
   \tempo "Gemächlich" 4=100
 }
@@ -45,62 +44,14 @@ globalA = {
 }
 
 scoreAMelody = \relative c'' {
-  \global
+  \globalA
   % Music follows here.
-  \global
-  % Music follows here.
-  \mondAufgegangen % GL 93, EG 482
-  \nunRuhenWaelder % GL , EG
-  \lammGottes % GL , EG
-  \alleinGottInDerHoehSeiEhr % GL , EG
-  \christeDuLammGottes % GL 208, EG 190.2
-  \wirSagenEuchAnDenLiebenAdvent % GL 223, EG 17
-  \adesteFideles % GL 242, EG x
-  \inDulciJubilo % GL 253, EG x
-  \nunBittenWirDenHeiligenGeist % GL 348, EG x
-  \meineHoffnungUndMeineFreude % GL 365, EG 697
-  \grosserGottWirLobenDich % GL 380, EG 331
-  \lobeDenHerrnDenMaechtigenKoenigDerEhren % GL 392, EG 316
-  \nunSingeLobDuChristenheit % GL , EG
-  \naeherMeinGottZuDir % GL , EG
-  \wohlDenenDieDaWandeln % GL 543, EG 295
-  \amazingGrace % SM 430
-  \america
-  \awayInAManger
-  \goTellItOnTheMountains % SM 532
-  \harkTheHeraldAngelsSing % SM 558
-  \loHowARoseEerBlooming
-  \thisIsMySong
-  \toJesusChristOurSovereignKing
-  \ubiCaritas
+  \allNotesMajor
 }
 
 scoreAVerse = \lyricmode {
   % Lyrics follow here.
-  \mondAufgegangenAV
-  \nunRuhenWaelderV
-  \lammGottesV
-  \alleinGottInDerHoehSeiEhrV
-  \christeDuLammGottesV
-  \wirSagenEuchAnDenLiebenAdventV
-  \adesteFidelesV
-  \inDulciJubiloV
-  \nunBittenWirDenHeiligenGeistV
-  \meineHoffnungUndMeineFreudeV
-  \grosserGottWirLobenDichV
-  \lobeDenHerrnDenMaechtigenKoenigDerEhrenV
-  \nunSingeLobDuChristenheitV
-  \naeherMeinGottZuDirV
-  \wohlDenenDieDaWandelnV
-  \amazingGraceV
-  \americaV
-  \awayInAMangerV
-  \goTellItOnTheMountainsV
-  \harkTheHeraldAngelsSingV
-  \loHowARoseEerBloomingV
-  \thisIsMySongV
-  \toJesusChristOurSovereignKingV
-  \ubiCaritasV
+  \allLyricsMajor
 }
 
 \bookpart {
@@ -121,7 +72,7 @@ scoreAVerse = \lyricmode {
       \new Lyrics = "a"
       \context Lyrics = "a" {
         \lyricsto "melody" {
-          \allLyrics
+          \allLyricsMajor
         }
       }
       \new Lyrics = "b"
@@ -156,7 +107,7 @@ scoreAVerse = \lyricmode {
       \new Lyrics = "a"
       \context Lyrics = "a" {
         \lyricsto "melody" {
-          \allLyrics
+          \allLyricsMajor
         }
       }
       \new Lyrics = "b"
@@ -187,7 +138,7 @@ scoreAVerse = \lyricmode {
         \new Lyrics = "a"
         \context Lyrics = "a" {
           \lyricsto "melody" {
-            \allLyrics
+            \allLyricsMajor
           }
         }
         \new Lyrics = "b"
@@ -219,7 +170,7 @@ scoreAVerse = \lyricmode {
         \new Lyrics = "a"
         \context Lyrics = "a" {
           \lyricsto "melody" {
-            \allLyrics
+            \allLyricsMajor
           }
         }
         \new Lyrics = "b"
@@ -266,7 +217,7 @@ scoreBVerse = \lyricmode {
       \new Lyrics = "a"
       \context Lyrics = "a" {
         \lyricsto "melody" {
-          \allLyrics
+          \allLyricsMajor
         }
       }
       \new Lyrics = "b"
@@ -306,7 +257,7 @@ allChordsIIB = \transpose f c \allChordsII
       \new Lyrics = "a"
       \context Lyrics = "a" {
         \lyricsto "melody" {
-          \allLyrics
+          \allLyricsMajor
         }
       }
       \new Lyrics = "b"
@@ -337,7 +288,7 @@ allChordsIIB = \transpose f c \allChordsII
         \new Lyrics = "a"
         \context Lyrics = "a" {
           \lyricsto "melody" {
-            \allLyrics
+            \allLyricsMajor
           }
         }
         \new Lyrics = "b"
@@ -369,7 +320,7 @@ allChordsIIB = \transpose f c \allChordsII
         \new Lyrics = "a"
         \context Lyrics = "a" {
           \lyricsto "melody" {
-            \allLyrics
+            \allLyricsMajor
           }
         }
         \new Lyrics = "b"
@@ -416,7 +367,7 @@ scoreCVerse = \lyricmode {
       \new Lyrics = "a"
       \context Lyrics = "a" {
         \lyricsto "melody" {
-          \allLyrics
+          \allLyricsMajor
         }
       }
       \new Lyrics = "b"
@@ -455,7 +406,7 @@ allChordsIIC = \transpose f g \allChordsII
       \new Lyrics = "a"
       \context Lyrics = "a" {
         \lyricsto "melody" {
-          \allLyrics
+          \allLyricsMajor
         }
       }
       \new Lyrics = "b"
@@ -486,7 +437,7 @@ allChordsIIC = \transpose f g \allChordsII
         \new Lyrics = "a"
         \context Lyrics = "a" {
           \lyricsto "melody" {
-            \allLyrics
+            \allLyricsMajor
           }
         }
         \new Lyrics = "b"
@@ -518,7 +469,7 @@ allChordsIIC = \transpose f g \allChordsII
         \new Lyrics = "a"
         \context Lyrics = "a" {
           \lyricsto "melody" {
-            \allLyrics
+            \allLyricsMajor
           }
         }
         \new Lyrics = "b"
@@ -565,7 +516,7 @@ scoreDVerse = \lyricmode {
       \new Lyrics = "a"
       \context Lyrics = "a" {
         \lyricsto "melody" {
-          \allLyrics
+          \allLyricsMajor
         }
       }
       \new Lyrics = "b"
@@ -604,7 +555,7 @@ allChordsIID = \transpose f d \allChordsII
       \new Lyrics = "a"
       \context Lyrics = "a" {
         \lyricsto "melody" {
-          \allLyrics
+          \allLyricsMajor
         }
       }
       \new Lyrics = "b"
@@ -635,7 +586,7 @@ allChordsIID = \transpose f d \allChordsII
         \new Lyrics = "a"
         \context Lyrics = "a" {
           \lyricsto "melody" {
-            \allLyrics
+            \allLyricsMajor
           }
         }
         \new Lyrics = "b"
@@ -667,7 +618,7 @@ allChordsIID = \transpose f d \allChordsII
         \new Lyrics = "a"
         \context Lyrics = "a" {
           \lyricsto "melody" {
-            \allLyrics
+            \allLyricsMajor
           }
         }
         \new Lyrics = "b"
@@ -714,7 +665,7 @@ scoreEVerse = \lyricmode {
       \new Lyrics = "a"
       \context Lyrics = "a" {
         \lyricsto "melody" {
-          \allLyrics
+          \allLyricsMajor
         }
       }
       \new Lyrics = "b"
@@ -753,7 +704,7 @@ allChordsIIE = \transpose f bf \allChordsII
       \new Lyrics = "a"
       \context Lyrics = "a" {
         \lyricsto "melody" {
-          \allLyrics
+          \allLyricsMajor
         }
       }
       \new Lyrics = "b"
@@ -784,7 +735,7 @@ allChordsIIE = \transpose f bf \allChordsII
         \new Lyrics = "a"
         \context Lyrics = "a" {
           \lyricsto "melody" {
-            \allLyrics
+            \allLyricsMajor
           }
         }
         \new Lyrics = "b"
@@ -816,7 +767,7 @@ allChordsIIE = \transpose f bf \allChordsII
         \new Lyrics = "a"
         \context Lyrics = "a" {
           \lyricsto "melody" {
-            \allLyrics
+            \allLyricsMajor
           }
         }
         \new Lyrics = "b"
@@ -863,7 +814,7 @@ scoreFVerse = \lyricmode {
       \new Lyrics = "a"
       \context Lyrics = "a" {
         \lyricsto "melody" {
-          \allLyrics
+          \allLyricsMajor
         }
       }
       \new Lyrics = "b"
@@ -902,7 +853,7 @@ allChordsIIF = \transpose f a \allChordsII
       \new Lyrics = "a"
       \context Lyrics = "a" {
         \lyricsto "melody" {
-          \allLyrics
+          \allLyricsMajor
         }
       }
       \new Lyrics = "b"
@@ -933,7 +884,7 @@ allChordsIIF = \transpose f a \allChordsII
         \new Lyrics = "a"
         \context Lyrics = "a" {
           \lyricsto "melody" {
-            \allLyrics
+            \allLyricsMajor
           }
         }
         \new Lyrics = "b"
@@ -965,7 +916,7 @@ allChordsIIF = \transpose f a \allChordsII
         \new Lyrics = "a"
         \context Lyrics = "a" {
           \lyricsto "melody" {
-            \allLyrics
+            \allLyricsMajor
           }
         }
         \new Lyrics = "b"
@@ -1012,7 +963,7 @@ scoreGVerse = \lyricmode {
       \new Lyrics = "a"
       \context Lyrics = "a" {
         \lyricsto "melody" {
-          \allLyrics
+          \allLyricsMajor
         }
       }
       \new Lyrics = "b"
@@ -1051,7 +1002,7 @@ allChordsIIG = \transpose f ef \allChordsII
       \new Lyrics = "a"
       \context Lyrics = "a" {
         \lyricsto "melody" {
-          \allLyrics
+          \allLyricsMajor
         }
       }
       \new Lyrics = "b"
@@ -1082,7 +1033,7 @@ allChordsIIG = \transpose f ef \allChordsII
         \new Lyrics = "a"
         \context Lyrics = "a" {
           \lyricsto "melody" {
-            \allLyrics
+            \allLyricsMajor
           }
         }
         \new Lyrics = "b"
@@ -1114,7 +1065,7 @@ allChordsIIG = \transpose f ef \allChordsII
         \new Lyrics = "a"
         \context Lyrics = "a" {
           \lyricsto "melody" {
-            \allLyrics
+            \allLyricsMajor
           }
         }
         \new Lyrics = "b"
@@ -1161,7 +1112,7 @@ scoreHVerse = \lyricmode {
       \new Lyrics = "a"
       \context Lyrics = "a" {
         \lyricsto "melody" {
-          \allLyrics
+          \allLyricsMajor
         }
       }
       \new Lyrics = "b"
@@ -1200,7 +1151,7 @@ allChordsIIH = \transpose f e \allChordsII
       \new Lyrics = "a"
       \context Lyrics = "a" {
         \lyricsto "melody" {
-          \allLyrics
+          \allLyricsMajor
         }
       }
       \new Lyrics = "b"
@@ -1231,7 +1182,7 @@ allChordsIIH = \transpose f e \allChordsII
         \new Lyrics = "a"
         \context Lyrics = "a" {
           \lyricsto "melody" {
-            \allLyrics
+            \allLyricsMajor
           }
         }
         \new Lyrics = "b"
@@ -1263,7 +1214,7 @@ allChordsIIH = \transpose f e \allChordsII
         \new Lyrics = "a"
         \context Lyrics = "a" {
           \lyricsto "melody" {
-            \allLyrics
+            \allLyricsMajor
           }
         }
         \new Lyrics = "b"
@@ -1310,7 +1261,7 @@ scoreIVerse = \lyricmode {
       \new Lyrics = "a"
       \context Lyrics = "a" {
         \lyricsto "melody" {
-          \allLyrics
+          \allLyricsMajor
         }
       }
       \new Lyrics = "b"
@@ -1349,7 +1300,7 @@ allChordsIII = \transpose f af \allChordsII
       \new Lyrics = "a"
       \context Lyrics = "a" {
         \lyricsto "melody" {
-          \allLyrics
+          \allLyricsMajor
         }
       }
       \new Lyrics = "b"
@@ -1380,7 +1331,7 @@ allChordsIII = \transpose f af \allChordsII
         \new Lyrics = "a"
         \context Lyrics = "a" {
           \lyricsto "melody" {
-            \allLyrics
+            \allLyricsMajor
           }
         }
         \new Lyrics = "b"
@@ -1412,7 +1363,7 @@ allChordsIII = \transpose f af \allChordsII
         \new Lyrics = "a"
         \context Lyrics = "a" {
           \lyricsto "melody" {
-            \allLyrics
+            \allLyricsMajor
           }
         }
         \new Lyrics = "b"
@@ -1459,7 +1410,7 @@ scoreJVerse = \lyricmode {
       \new Lyrics = "a"
       \context Lyrics = "a" {
         \lyricsto "melody" {
-          \allLyrics
+          \allLyricsMajor
         }
       }
       \new Lyrics = "b"
@@ -1498,7 +1449,7 @@ allChordsIIJ = \transpose f b \allChordsII
       \new Lyrics = "a"
       \context Lyrics = "a" {
         \lyricsto "melody" {
-          \allLyrics
+          \allLyricsMajor
         }
       }
       \new Lyrics = "b"
@@ -1529,7 +1480,7 @@ allChordsIIJ = \transpose f b \allChordsII
         \new Lyrics = "a"
         \context Lyrics = "a" {
           \lyricsto "melody" {
-            \allLyrics
+            \allLyricsMajor
           }
         }
         \new Lyrics = "b"
@@ -1561,7 +1512,7 @@ allChordsIIJ = \transpose f b \allChordsII
         \new Lyrics = "a"
         \context Lyrics = "a" {
           \lyricsto "melody" {
-            \allLyrics
+            \allLyricsMajor
           }
         }
         \new Lyrics = "b"
@@ -1608,7 +1559,7 @@ scoreKVerse = \lyricmode {
       \new Lyrics = "a"
       \context Lyrics = "a" {
         \lyricsto "melody" {
-          \allLyrics
+          \allLyricsMajor
         }
       }
       \new Lyrics = "b"
@@ -1647,7 +1598,7 @@ allChordsIIK = \transpose f df \allChordsII
       \new Lyrics = "a"
       \context Lyrics = "a" {
         \lyricsto "melody" {
-          \allLyrics
+          \allLyricsMajor
         }
       }
       \new Lyrics = "b"
@@ -1678,7 +1629,7 @@ allChordsIIK = \transpose f df \allChordsII
         \new Lyrics = "a"
         \context Lyrics = "a" {
           \lyricsto "melody" {
-            \allLyrics
+            \allLyricsMajor
           }
         }
         \new Lyrics = "b"
@@ -1710,7 +1661,7 @@ allChordsIIK = \transpose f df \allChordsII
         \new Lyrics = "a"
         \context Lyrics = "a" {
           \lyricsto "melody" {
-            \allLyrics
+            \allLyricsMajor
           }
         }
         \new Lyrics = "b"
@@ -1757,7 +1708,7 @@ scoreLVerse = \lyricmode {
       \new Lyrics = "a"
       \context Lyrics = "a" {
         \lyricsto "melody" {
-          \allLyrics
+          \allLyricsMajor
         }
       }
       \new Lyrics = "b"
@@ -1796,7 +1747,7 @@ allChordsIIL = \transpose f fs \allChordsII
       \new Lyrics = "a"
       \context Lyrics = "a" {
         \lyricsto "melody" {
-          \allLyrics
+          \allLyricsMajor
         }
       }
       \new Lyrics = "b"
@@ -1827,7 +1778,7 @@ allChordsIIL = \transpose f fs \allChordsII
         \new Lyrics = "a"
         \context Lyrics = "a" {
           \lyricsto "melody" {
-            \allLyrics
+            \allLyricsMajor
           }
         }
         \new Lyrics = "b"
@@ -1859,7 +1810,7 @@ allChordsIIL = \transpose f fs \allChordsII
         \new Lyrics = "a"
         \context Lyrics = "a" {
           \lyricsto "melody" {
-            \allLyrics
+            \allLyricsMajor
           }
         }
         \new Lyrics = "b"
@@ -1906,7 +1857,7 @@ scoreMVerse = \lyricmode {
       \new Lyrics = "a"
       \context Lyrics = "a" {
         \lyricsto "melody" {
-          \allLyrics
+          \allLyricsMajor
         }
       }
       \new Lyrics = "b"
@@ -1945,7 +1896,7 @@ allChordsIIM = \transpose f gf \allChordsII
       \new Lyrics = "a"
       \context Lyrics = "a" {
         \lyricsto "melody" {
-          \allLyrics
+          \allLyricsMajor
         }
       }
       \new Lyrics = "b"
@@ -1976,7 +1927,7 @@ allChordsIIM = \transpose f gf \allChordsII
         \new Lyrics = "a"
         \context Lyrics = "a" {
           \lyricsto "melody" {
-            \allLyrics
+            \allLyricsMajor
           }
         }
         \new Lyrics = "b"
@@ -2008,7 +1959,7 @@ allChordsIIM = \transpose f gf \allChordsII
         \new Lyrics = "a"
         \context Lyrics = "a" {
           \lyricsto "melody" {
-            \allLyrics
+            \allLyricsMajor
           }
         }
         \new Lyrics = "b"

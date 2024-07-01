@@ -2,12 +2,6 @@
 \language "english"
 
 
-global = {
-  \key f \major
-%  \tempo "Getragen" 4=100
-}
-
-
 % GL 93, EG 482
 mondAufgegangen = {
   \time 4/4
@@ -232,128 +226,192 @@ ubiCaritas = {
   a8^"Ubi Caritas, SM 805" a g g f4. f8 bf4(a) g2 a8 a g g f2 d8 d \tuplet 3/2 { e(d) e } f2\bar "|.|"
 }
 
+allNotesMajor = {
+  \mondAufgegangen % GL 93, EG 482
+  \nunRuhenWaelder % GL , EG
+  \lammGottes % GL , EG
+  \alleinGottInDerHoehSeiEhr % GL , EG
+  \christeDuLammGottes % GL 208, EG 190.2
+  \wirSagenEuchAnDenLiebenAdvent % GL 223, EG 17
+  \adesteFideles % GL 242, EG x
+  \inDulciJubilo % GL 253, EG x
+  \nunBittenWirDenHeiligenGeist % GL 348, EG x
+  \meineHoffnungUndMeineFreude % GL 365, EG 697
+  \grosserGottWirLobenDich % GL 380, EG 331
+  \lobeDenHerrnDenMaechtigenKoenigDerEhren % GL 392, EG 316
+  \nunSingeLobDuChristenheit % GL , EG
+  \naeherMeinGottZuDir % GL , EG
+  \wohlDenenDieDaWandeln % GL 543, EG 295
+  \amazingGrace % SM 430
+  \america
+  \awayInAManger
+  \goTellItOnTheMountains % SM 532
+  \harkTheHeraldAngelsSing % SM 558
+  \loHowARoseEerBlooming
+  \thisIsMySong
+  \toJesusChristOurSovereignKing
+  \ubiCaritas
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%% Lieder in Moll
-% GL 224 Maria durch ein Dornwald ging, e-Moll
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% GL 224, EG : Maria durch ein Dornwald ging, e-Moll
 mariaDurchEinDornwaldGing = {
   \time 4/4
   \partial 4
-  b4 e e8 fs g4 b g fs8 e f4 f g g8 g a2 b r4
+  \transpose e a' {b,4^"GL 224, EG : Maria durch ein Dornwald ging, e-Moll" e e8 fs g4 b g fs8 e fs4 fs g g8 g a2 b r4
   g8 a b4. a8 b4 c8 b a4. g8 a4 b8 a g4 g8 fs g g a g fs4 fs8 e fs4 fs\breathe
-  e4. fs8 g4 b g8 fs e2 r4
+  e4. fs8 g4 b g8 fs e2 r4}
   \bar "|.|"
 }
 
-% GL 256 Ich steh an deiner Krippe hier, a-Moll
+% GL 256, EG : Ich steh an deiner Krippe hier, a-Moll
 ichStehAnDeinerKrippeHier = {
   \partial 4
-  e4 a b c a g4. f8 e4\breathe
-  g c,4. b8 c4 d e2 e4
-  g c g a g f4. g8 e\breathe
+  \repeat volta 2 {
+    e4^"GL 256, EG : Ich steh an deiner Krippe hier" a b c a g4. f8 e4\breathe
+    g c,4. b8 c4 d e2 e4
+  }
+  g c g a g f4. g8 e4\breathe
   g c g a g f4. g8 e4\breathe
   e fs gs a8 c b a gs2 a4
   \bar "|.|"
 }
 
-% GL 290 Herzliebster Jesu, was hast du verbrochen, f-Moll
+% GL 290, EG : Herzliebster Jesu, was hast du verbrochen, f-Moll
 herzliebsterJesuWasHastDuVerbrochen = {
   \time 2/2
-  f2 f4 f ef2 c f4 g af af bf2 g\breathe
+  \transpose f a {
+  f2^"GL 290, EG : Herzliebster Jesu, was hast du verbrochen" f4 f ef2 c f4 g af af bf2 g\breathe
   g af4 bf c2 af d4 d c c bf2 af\breathe
   af g4 f ef2 c ef4 ef f ef df2 c\breathe
-  c'bf4 af g2 f\bar "|.|"
+  c'bf4 af g2 f}\bar "|.|"
 }
 
-% GL 295 O Traurigkeit, o Herzeleid! e-Moll
+% GL 295, EG : O Traurigkeit, o Herzeleid! e-Moll
 oTraurigkeitOHerzeleid = {
   \time 2/2
-  b2 g4 e f2 r4
+  \transpose e a {b2^"GL 295, EG : O Traurigkeit, o Herzeleid! e-Moll" g4 e f2 r4
   ds e e d2 r4
   b' b b c b a2 g\breathe
-  fs4 g a b a g fs2 e4 fs g a fs2 e\bar "|.|"
+  fs4 g a b a g fs2 e4 fs g a fs2 e}\bar "|.|"
 }
 
-% GL 349 Komm, o Tröster, Heilger Geist, e-Moll
+% GL 349, EG : Komm, o Tröster, Heilger Geist, e-Moll
 kommOTroesterHeilgerGeist = {
   \time 6/4
-  \partial 2.
-  e2 g4 fs2 b4 a2 g4 fs2.\breathe
+  \transpose e a {  \partial 2.
+  e2^"GL 349, EG : Komm, o Tröster, Heilger Geist, e-Moll" g4 fs2 b4 a2 g4 fs2.\breathe
   fs2 g4 a2 b4 b a2 b2.\breathe
-  b2 g4 fs2 e4 e ds2 e2.\bar "|.|"
+  b2 g4 fs2 e4 e ds2 e2.}\bar "|.|"
 }
 
-% GL 418 Befiehl du deine Wege, a-Moll, Kirchentonart
+% GL 418, EG : Befiehl du deine Wege, a-Moll, Kirchentonart
 befiehlDuDeineWege = {
   \time 2/2
+  \transpose a a' {
   \partial 4
-  d4 f e f g a2 a4 c b a a gs a2 r4
+  d4^"GL 418, EG : Befiehl du deine Wege, a-Moll, Kirchentonart" f e f g a2 a4 c b a a gs a2 r4
   \partial 4
   a4 b c d b c2 a4 a g f f e f2 r4
-  a f g a g f2 e4 f g a f e d2.\bar "|.|"
+  a f g a g f2 e4 f g a f e d2.}\bar "|.|"
 }
 
-% GL 424 Wer nu den lieben Gott lässt walten
+% GL 424, EG : Wer nur den lieben Gott lässt walten, g-Moll
 werNurDenLiebenGotLaesstWalten = {
   \time 4/4
-  \partial 4
-  d4
+  \transpose g a' {  \partial 4
+  d4^"GL 424, EG : Wer nur den lieben Gott lässt walten, -Moll"
   g a bf a g a8 g fs4 d r
   f f ef d g g fs g2 r4
   \partial 4
   a bf c d d c4. bf8 bf4\breathe
-  d c bf a g8 a bf4 a g\bar "|.|"
+  d c bf a g8 a bf4 a g}\bar "|.|"
 }
   
-% GL 448 Herr, gib uns Mut zum Hören
+% GL 448, EG : Herr, gib uns Mut zum Hören, d-Moll
 herrGibUnsMutZumHoeren = {
   \time 2/2
-  \partial 4
-  d4 f f e c d2 d4 d f f g g a2.\breathe
-  a4 c 2 a g2. a4 f e d c d2.\bar "|.|"
+  \transpose d a' {  \partial 4
+  d4^"GL 448, EG : Herr, gib uns Mut zum Hören, -Moll" f f e c d2 d4 d f f g g a2.\breathe
+  a4 c 2 a g2. a4 f e d c d2.}\bar "|.|"
 }
 
-% M 471, Christ Jesus Lay in Death's Strong Bands, g-Moll
+% M 471: Christ Jesus Lay in Death's Strong Bands, g-Moll
 christJesusLayInDeathsStrongBands = {
   \time 4/4
-  \partial 4
-  g4
+  \transpose g a' {  \partial 4
+  g4^"M 471: Christ Jesus Lay in Death's Strong Bands, g-Moll"
   f g bf c bf a g g ef f g ef d2 c4 g'f g bf c bf a g g ef f g ef d2 c
-  c4 ef f c ef f g g c bf c d bf a g g bf g bf f  ef(d) c2 g'4 f8(ef) d2 c2.\bar "|.|"
+  c4 ef f c ef f g g c bf c d bf a g g bf g bf f  ef(d) c2 g'4 f8(ef) d2 c2.}\bar "|.|"
 }
 
-% M 514, El Dios de Paz, d-Moll
+% M 514: El Dios de Paz, d-Moll
 elDiosDePaz = {
   \time 2/4
-  a4 a8 a d4 c f, g a a a a8 bf a4 g f e d2
-  a4 a8 a d4 c f, g a a bf a8 g f4 g8(f) e4 d a'2
+  \transpose d a' {  a4^"M 514: El Dios de Paz, d-Moll" a8 a d4 c f, g a a a a8 bf a4 g f e d2
+  a'4 a8 a d4 c f, g a a bf a8 g f4 g8(f) e4 d a'2
   d,8(e) f g a2 bf8(a) bf d a2
-  g4 g8 g f4 f e8 d e f d2
+  g4 g8 g f4 f e8 d e f d2}
   \bar "|.|"
 }
 
-% M 527, From All Thy Saints in Warfare, d-Moll
+% M 527: From All Thy Saints in Warfare, d-Moll
 fromAllThySaintsInWarfare = {
   \time 4/4
-  \partial 4
-  a4 g e d, e f(g) c bf8(a) g4. f8 d4 c d2.
+  \transpose d a {  \partial 4
+  a'4^"M 527: From All Thy Saints in Warfare, d-Moll" g a d, e f(g) c bf8(a) g4. f8 d4 c d2.
   d8(e) f4 g a c8(a) d2 d4 c a c a g a2.
   d,8(e) f4 g a c8(a) d2 c4 a c c a g a2. a4
-  g a d, e f(g) c bf8(a) g4. f8 d c d2.\bar "|.|"
+  g a d, e f(g) c bf8(a) g4. f8 d c d2.}\bar "|.|"
 }
 
-% M 741, Savior of Nations, Come, g-Moll
+% M 741: Savior of Nations, Come, g-Moll
 saviorOfTheNationsCome = {
   \time 4/4
-  g4 g f bf a8(g) a4 g2 g4 bf c4. bf8 c4 d bf2 bf4 c d bf c bf8(a) g2
-  g4 g f bf a8(g) a4 g2\bar "|.|"
+  \transpose g a {  g4^"M 741: Savior of Nations, Come, g-Moll" g f bf a8(g) a4 g2 g4 bf c4. bf8 c4 d bf2 bf4 c d bf c bf8(a) g2
+  g4 g f bf a8(g) a4 g2}\bar "|.|"
 }
 
-% M 781 The Glory of These Forty Days, e-Moll
+% M 781: The Glory of These Forty Days, e-Moll
 theGloryOfTheseFortyDays = {
   \time 4/4
+  \transpose e a {
   \partial 4
-  e8(fs)
-  g4 fs8(e) ds4 e8(fs) g4 fs e g a a b g a a b b c b8(c) d(c) b a8(g) a4 g b g a g fs e ds e\bar "|.|"
+  e8^"M 781: The Glory of These Forty Days, e-Moll"(fs)
+  g4 fs8(e) ds4 e8(fs) g4 fs e g a a b g a a b b c b8(c) d(c) b a8(g) a4 g b g a g fs e ds e}\bar "|.|"
 }
+
+allNotesMinor = {
+  \mariaDurchEinDornwaldGing
+  \ichStehAnDeinerKrippeHier
+  \herzliebsterJesuWasHastDuVerbrochen
+  \oTraurigkeitOHerzeleid
+  \kommOTroesterHeilgerGeist
+  \befiehlDuDeineWege
+  \werNurDenLiebenGotLaesstWalten
+  \herrGibUnsMutZumHoeren
+  \christJesusLayInDeathsStrongBands
+  \elDiosDePaz
+  \fromAllThySaintsInWarfare
+  \saviorOfTheNationsCome
+  \theGloryOfTheseFortyDays
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%% Lieder in Dur
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 % GL 93, EG 482
 mondAufgegangenAV = \lyricmode {Der Mond ist auf -- ge -- gan -- gen, die gold -- nen Stern -- lein pran -- gen am Him -- mel hell und klar \repeat unfold 1 { \skip 1 \skip 1 \skip 1 }}
 
@@ -583,7 +641,9 @@ ubiCaritasV = \lyricmode {
 U -- bi ca -- ri -- tas, De -- us i -- bi est
 }
 
-allLyrics = {
+
+
+allLyricsMajor = {
   \mondAufgegangenAV
   \nunRuhenWaelderV
   \lammGottesV
@@ -608,6 +668,44 @@ allLyrics = {
   \thisIsMySongV
   \toJesusChristOurSovereignKingV
   \ubiCaritasV
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%% Lieder in Moll
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% GL 224, EG
+mariaDurchEinDornwaldGingV = \lyricmode {
+  Ma -- ri _ -- a durch ein Dorn -- wald _ ging, _
+  Ky -- rie e -- lei -- son.
+  Ma _ -- ri -- a durch ein _ Dorn -- wald ging,
+  der _ hat _ in sie -- ben Jahrn kein Laub _ ge -- tra -- gen.
+  Je -- sus und Ma -- ri _ -- a.
+}
+
+% GL 256, EG
+ichStehAnDeinerKrippeHierV = \lyricmode {
+  <<{Ich steh an dei -- ner Krip -- pen hier,
+  o Je -- su, du mein Le -- ben; }
+  \new Lyrics {ich kom -- me, bring und schen -- ke dir,
+  was du mir hast ge -- ge -- ben. }>>
+  Nimm hin, es ist mein Geist und Sinn,
+  Herz, Seel und Mut, nimm al -- les hin
+  und lass dir’s wohl _ -- ge _ -- fal -- len.
+}
+
+% GL 290
+herzliebsterJesuWasHastDuVerbrochenV = \lyricmode {
+}
+
+allLyricsMinor = {
+  \mariaDurchEinDornwaldGingV
+  \ichStehAnDeinerKrippeHierV
+  \herzliebsterJesuWasHastDuVerbrochenV
 }
 
 mondAufgegangenAC = \chordmode {
