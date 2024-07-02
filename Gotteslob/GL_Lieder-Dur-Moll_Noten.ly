@@ -7,7 +7,7 @@ mondAufgegangen = {
   \time 4/4
   \repeat volta 2 {
     \partial 4
-    f,4^"Der Mond ist aufgegangen, GL 93, EG 482"
+    f,4^"GL 93, EG 482, F-Dur"^"Der Mond ist aufgegangen"
     g f bf a g2 f4\breathe
     a a a d c bf2 a4\breathe
     a a a bf a
@@ -20,7 +20,7 @@ mondAufgegangen = {
 nunRuhenWaelder = {
   \time 4/4
   \partial 4
-  a4^"Nun ruhen alle Wälder, GL 101, EG 477"
+  a4^"GL 101, EG 477, F-Dur"^"Nun ruhen alle Wälder"
   f g a c bf2 a4\breathe
   a c c g a f2 e4\breathe
   e f g a a g2.\breathe
@@ -32,7 +32,7 @@ nunRuhenWaelder = {
 % GL 139, EG
 lammGottes = {
   \time 4/4
-  \repeat volta 2 { f4^"Lamm Gottes, GL 139" g(a) a2\breathe a4 g a bf a g f g a2\breathe a4 c bf a g2 a }
+  \repeat volta 2 { f4^"GL 139, F-Dur"^"Lamm Gottes" g(a) a2\breathe a4 g a bf a g f g a2\breathe a4 c bf a g2 a }
   f4 g(a) a2\breathe
   a4 g a bf a g f g a2\breathe
   a4 c bf a g2 \partial 2 f\bar "|.|"
@@ -43,7 +43,7 @@ alleinGottInDerHoehSeiEhr = {
   \time 3/1
   \repeat volta 2 {
     \partial 4
-    f4^"Allein Gott in der Höh' sei Ehr, GL 170, EG 179" a2 bf4 c2 bf4 a2 g4 a2\breathe
+    f4^"GL 170, EG 179, F-Dur"^"Allein Gott in der Höh' sei Ehr" a2 bf4 c2 bf4 a2 g4 a2\breathe
     a4 a2 g4 bf(a) g f2(e4) f2
   } f4 f2 g4 bf bf a g2 f4 g2\breathe
   g4 a2 bf4 c2 bf4 a2 g4 a2\breathe
@@ -53,24 +53,153 @@ alleinGottInDerHoehSeiEhr = {
 % GL 208, EG 190.2
 christeDuLammGottes = {
   \time 4/4
-  \repeat volta 2 { f4^"Christ, du Lamm Gottes, GL 208, EG 190.2" g a a bf2 a\breathe a4 g a bf c bf a2 r4 a g f a2 g }
+  \repeat volta 2 { f4^"GL 208, EG 190.2, F-Dur"^"Christ, du Lamm Gottes" g a a bf2 a\breathe a4 g a bf c bf a2 r4 a g f a2 g }
   f4 g a a bf2 a\breathe a4 g a bf c bf a2\breathe a4 a g f a2 g f4( g a bf a g) f2(g4~) g2.\bar "|."
 }
 
+% GL 218, EG : Macht hoch die Tür, Es-Dur
+machtHochDieTuer = {
+%  \transpose ef ef {
+    \key ef \major
+    \time 6/4
+    \relative c'' {
+      \partial 4
+      g4^"GL 218, EG, Es-Dur"^"Macht hoch die Tür"
+      bf2 af4 g2 f4 ef(f) g f2
+      bf4 af2 af4 g2 g4 f(ef) f ef2\breathe g4
+      f2 f4 g(a) bf bf(c) a bf2 f4
+      g2 f4 g(a) bf bf(c) a bf2\breathe
+      bf4 c2 bf4 c2 bf4 c(bf) af g2
+      bf4 c2 bf4 c2 bf4 c(bf) af g2\breathe
+      bf4 ef,2 ef4 af2 g4 f2.~f2
+      bf4 af2 g4 f(ef) f ef2.~ef2\bar "|.|"
+    }
+%  }
+}
+
+% TODO
 % GL 223, EG 17
 wirSagenEuchAnDenLiebenAdvent = {
   \time 3/4
   \repeat volta 2 {
     \partial 4
-    a4^"Wir sagen euch an den lieben Advent, GL 223, EG 17" a f g a2 f4 g4. f8 e4 f2 r4 a a bf c2 a4 g2 g4 a2
+    a4^"GL 223, EG 17"^"Wir sagen euch an den lieben Advent" a f g a2 f4 g4. f8 e4 f2 r4 a a bf c2 a4 g2 g4 a2
   }
   r4 c c g a f r c' c g a2 r4 f2 a4 g4. f8 e4 f2.~ f2\bar "|.|"
 }
 
+% GL 228, EG , D-Dur: Tochter Zion
+tochterZion = {
+  \transpose d f {
+    \key d \major
+    \time 2/2
+    \relative c'' {
+      a2^"GL 228, EG: , D-Dur"^"Tochter Zion" fs4.(g8) a2 d, e8(fs g a g4) fs e1\breathe
+      fs8(g a b a4) a d2 a g4(fs e4.) d8 d1
+      fs8(e fs g fs4) fs e2 d g4(fs e) d cs1\breathe
+      d8(cs d e d4) d b'2 gs a4(b8a gs4.) a8 a1
+      \bar "|.|"
+    }
+  }
+}
+
+% GL 237, EG , C-Dur: Vom Himmel hoch
+vomHimmelHoch = {
+  \transpose c f {
+    \key c \major
+    \time 4/4
+    \relative c'' {
+      \partial 4
+      c4^"GL 231, EG x"^"Vom Himmel hoch"
+      b a b g a b c\breathe
+      c c g g e g f e\breathe
+      e a a g b c a g\breathe
+      c b a g g f8 e d4 c2\bar "|.|"
+    }
+  }
+}
+
+% GL 238, EG , D-Dur: Oh du fröhliche
+ohDuFroehliche = {
+  \transpose d f {
+    \key d \major
+    \time 4/4
+    \relative c'' {
+      a2 b a4. g8 fs4(g) a2 b a4. g8 fs4(g)\breathe
+      a2 a b cs4 d cs2 b a1\breathe
+      e4.(fs8) e4 fs g4.(a8) g2 fs4.(g8) fs4 g a4.(b8) a2\breathe
+      d4(cs) b(a) d b a g fs2 e d1\bar "|.|"
+    }
+  }
+}
+
+% 1234
+% GL 243, EG , Es-Dur: Es ist ein Ros entsprungen
+esIstEinRosEntsprungen = {
+  \transpose ef ef {
+    \key ef \major
+    \time 2/1
+    \relative c'' {
+      \repeat volta 2 {
+        bf2^"GL 236, EG x"^"Es ist ein Ros entsprungen" bf4 bf c bf bf2 g\breathe
+        af g4 f2 ef d4 ef2
+      }
+      r4 g f d ef c bf2 r4
+      bf' bf bf c bf bf2 g\breathe
+      af g4 f2 ef d4 ef1\bar "|.|"
+    }
+  }
+}
+
+% GL 247, EG , Es-Dur: Lobt Gott ihr Christen alle gleich
+lobtGottIhrChristenAlleGleich = {
+}
+
+% GL 248, EG , C-Dur: Ihr Kinderlein kommet
+ihrKinderleinKommet = {
+}
+
+% GL 249, EG , B-Dur: Stille Nacht
+stilleNacht = {
+}
+
+% GL 267, EG , C-Dur: O Mensch bewein dein Sünde groß
+oMenschBeweinDeinSuendeGross = {
+}
+
+% GL , EG : Wir wollen alle fröhlich sein
+wirWollenAlleFroehlichSein = {
+}
+
+% GL , EG : Wie schön leuchtet der Morgenstern
+wieSchoenLeuchtetDerMorgenstern = {
+}
+
+% GL , EG : Heilig
+heilig = {
+}
+
+% GL , EG : Was Gott tut, das ist wohlgetan
+wasGotTutDasIstWohlgetan = {
+}
+
+% GL , EG : Wachet auf, ruft uns die Stimme
+wachetAufRuftUnsDieStimme = {
+}
+
+% GL , EG : Bayernlied
+bayernlied = {}
+
+% GL , EG : America the Beautiful
+americaTheBeautiful = {
+
+}
+
+% GL , EG : %
 adesteFideles = {
   \time 2/2
   \partial 4
-  f4^"Adeste Fideles, GL 242, EG x" f2 c4 f g2 c, a'4 g a bf a2 g4\breathe
+  f4^"GL 242, EG x"^"Adeste Fideles" f2 c4 f g2 c, a'4 g a bf a2 g4\breathe
   f f2 e4 d e(f) g a8 f e2(d4.) c8 c2. r4 c'2 bf4 a bf2 a  g4 a f g e(d) c\breathe
   f f e f g f2 c4 a' a g a bf a2 g4\breathe
   c bf a g f e2 f4(bf) a2(g4.) f8 f2 r4\bar "|.|"
@@ -80,7 +209,7 @@ adesteFideles = {
 inDulciJubilo = {
   \time 6/4
   \partial 4
-  f4^"In dulci jubilo, GL 253"
+  f4^"GL 253, EG , F-Dur"^"In dulci jubilo"
   f2 f4 a2 bf4 c2(d4 c2) c4 f,2 f4 a2 bf4 c2(d4 c2) r4
   c2 d4 c2 bf4 a2. f2 f4 g2 g4 a2 g4 f2(g4 a2)\breathe
   a4 c2 d4 c2 bf4 a2. f2 f4 g2 g4 a2 g4 f2(g4 a2) r4
@@ -90,7 +219,7 @@ inDulciJubilo = {
 % GL 348, EG x
 nunBittenWirDenHeiligenGeist = {
   \time 2/2
-  f2^"Nun bitten wir den Heiligen Geist, GL 348, EG x" g4 g f2 d4 c d f f2\breathe
+  f2^"GL 348, EG x"^"Nun bitten wir den Heiligen Geist" g4 g f2 d4 c d f f2\breathe
   a4 c d c a f d f f2\breathe
   a4 a a g a2 f4 f g g a2 f\breathe
   g4 g a2 f d g4 g f2 d c\breathe
@@ -102,7 +231,7 @@ meineHoffnungUndMeineFreude = {
   \time 3/4
   \repeat volta 2 {
     \partial 4
-    f8^"Meine Hoffnung und meine Freude, GL 365, EG 697" g
+    f8^"GL 365, EG 697, F-Dur"^"Meine Hoffnung und meine Freude" g
     a4 a8 a g f d4 c\breathe
     f8 g a4. a8 f4 g2\breathe
     c,8 c d4. d8 \tuplet 3/2 { e d e } f4.\breathe
@@ -115,7 +244,7 @@ meineHoffnungUndMeineFreude = {
 grosserGottWirLobenDich = {
   \time 3/4
   \repeat volta 2 {
-    f2^"Großer Gott, wir loben dich, GL 380, EG 697" f4 f(e) f g(a) g f2 r4
+    f2^"GL 380, EG 697, F-Dur"^"Großer Gott, wir loben dich" f4 f(e) f g(a) g f2 r4
     a2 a4 a(g) f c'(bf) a a g r
   }
   g2 a4 bf2 a4 a2 bf4 c2 r4
@@ -174,7 +303,7 @@ amazingGrace = {
 % SM 431
 america = {
   \time 3/4
-  f4^"America, SM 431" f  g e4. f8 g4 a a bf a4. g8 f4 g f e f2. c'4 c c c4. bf8 a4 bf bf bf bf4. a8 g4 a bf8(a) g(f) a4. bf8 c4 d(bf) a4 g f2.\bar "|.|"
+  f4^"SM 431, F-Dur"^"America" f  g e4. f8 g4 a a bf a4. g8 f4 g f e f2. c'4 c c c4. bf8 a4 bf bf bf bf4. a8 g4 a bf8(a) g(f) a4. bf8 c4 d(bf) a4 g f2.\bar "|.|"
 }
 
 % SM 447
@@ -227,30 +356,46 @@ ubiCaritas = {
 }
 
 allNotesMajor = {
-  \mondAufgegangen % GL 93, EG 482
-  \nunRuhenWaelder % GL , EG
-  \lammGottes % GL , EG
-  \alleinGottInDerHoehSeiEhr % GL , EG
-  \christeDuLammGottes % GL 208, EG 190.2
-  \wirSagenEuchAnDenLiebenAdvent % GL 223, EG 17
-  \adesteFideles % GL 242, EG x
-  \inDulciJubilo % GL 253, EG x
-  \nunBittenWirDenHeiligenGeist % GL 348, EG x
-  \meineHoffnungUndMeineFreude % GL 365, EG 697
-  \grosserGottWirLobenDich % GL 380, EG 331
-  \lobeDenHerrnDenMaechtigenKoenigDerEhren % GL 392, EG 316
-  \nunSingeLobDuChristenheit % GL , EG
-  \naeherMeinGottZuDir % GL , EG
-  \wohlDenenDieDaWandeln % GL 543, EG 295
-  \amazingGrace % SM 430
-  \america
-  \awayInAManger
-  \goTellItOnTheMountains % SM 532
-  \harkTheHeraldAngelsSing % SM 558
-  \loHowARoseEerBlooming
-  \thisIsMySong
-  \toJesusChristOurSovereignKing
-  \ubiCaritas
+  \mondAufgegangen % GL 93, EG 482, F-Dur
+  \nunRuhenWaelder % GL , EG, F-Dur
+  \lammGottes % GL , EG, F-Dur
+  \alleinGottInDerHoehSeiEhr % GL , EG, F-Dur
+  \christeDuLammGottes % GL 208, EG 190.2, F-Dur
+  \wirSagenEuchAnDenLiebenAdvent % GL 223, EG 17, F-Dur
+  \adesteFideles % GL 242, EG x, F-Dur
+  \inDulciJubilo % GL 253, EG x, F-Dur
+  \nunBittenWirDenHeiligenGeist % GL 348, EG x, F-Dur
+  \meineHoffnungUndMeineFreude % GL 365, EG 697, F-Dur
+  \grosserGottWirLobenDich % GL 380, EG 331, F-Dur
+  \lobeDenHerrnDenMaechtigenKoenigDerEhren % GL 392, EG 316, F-Dur
+  \nunSingeLobDuChristenheit % GL , EG, F-Dur
+  \naeherMeinGottZuDir % GL , EG, F-Dur
+  \wohlDenenDieDaWandeln % GL 543, EG 295, F-Dur
+  \amazingGrace % SM 430, F-Dur
+  \america % M, F-Dur
+  \awayInAManger % , F-Dur
+  \goTellItOnTheMountains % SM 532, F-Dur
+  \harkTheHeraldAngelsSing % SM 558, F-Dur
+  \loHowARoseEerBlooming % , F-Dur
+  \thisIsMySong % , F-Dur
+  \toJesusChristOurSovereignKing % , F-Dur
+  \ubiCaritas % , F-Dur
+  \machtHochDieTuer % GL 218, EG, Es-Dur
+  \tochterZion % GL 228, EG, D-Dur
+  \vomHimmelHoch % GL 237, EG, C-Dur
+  \ohDuFroehliche % GL 238, EG, D-Dur
+  \esIstEinRosEntsprungen % GL 243, EG, Es-Dur
+  \lobtGottIhrChristenAlleGleich % GL 247, EG, Es-Dur
+  \ihrKinderleinKommet % GL 248, EG, C-Dur
+  \stilleNacht % GL 249, EG, B-Dur
+  \oMenschBeweinDeinSuendeGross % GL 267, EG, C-Dur
+  \wirWollenAlleFroehlichSein % GL, EG
+  \wieSchoenLeuchtetDerMorgenstern % GL, EG
+  \heilig % GL, EG
+  \wasGotTutDasIstWohlgetan % GL, EG
+  \wachetAufRuftUnsDieStimme % GL, EG
+  \bayernlied % GL, EG
+  \americaTheBeautiful % GL, EG
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -504,6 +649,68 @@ christeDuLammGottesV = \lyricmode {
   Chris -- te, du Lamm Got -- tes, der du trägst die Sünd der Welt, er -- barm dich un -- ser. Chris -- te, du Lamm Got -- tes, der du trägst die Sünd der Welt, gib uns dei -- nen Frie -- den. A -- men.
 }
 
+% GL 218, EG : Macht hoch die Tür
+machtHochDieTuerV = \lyricmode {
+  Macht hoch die Tür, die Tor macht weit;
+  Es kommt der Herr der Herr -- lich -- keit,
+  Ein Kö -- nig al -- ler Kö -- nig -- reich,
+  Ein Hei -- land al -- ler Welt zu -- gleich,
+  Der Heil und Le -- ben mit sich bringt;
+  Der -- hal -- ben jauchzt, mit Freu -- den singt:
+  Ge -- lo -- bet sei mein Gott,
+  Mein Schöp -- fer reich von Rat.
+}
+
+% GL , EG : Tochter Zion
+tochterZionV = \lyricmode {
+  Toch -- ter Zi -- on, freu -- e dich, jauch -- ze laut, Je -- ru -- sa -- lem!
+  Sieh, dein Kö -- nig kommt zu dir,
+  ja, er kommt, der Frie -- de -- fürst.
+  Toch -- ter Zi -- on, freue dich,
+  jauch -- ze laut, Je -- ru -- sa -- lem!
+}
+
+% GL 237, EG : Vom Himmel hoch
+vomHimmelHochV = \lyricmode {
+  Vom Him -- mel hoch, da komm' ich her,
+  ich bring' euch gu -- te neu -- e Mär,
+  der gu -- ten Mär bring' ich so -- viel,
+  da -- von ich sing'n und sa _ -- gen will.
+}
+
+% GL 238, EG : Oh du fröhliche
+oDuFroehlicheV = \lyricmode {
+  O du fröh -- li -- che, o du se -- li -- ge,
+  gna -- den -- brin -- gen -- de Weih -- nachts -- zeit!
+  Welt ging ver -- lo -- ren, Christ ist ge -- bo -- ren:
+  Freu -- e, freu -- e dich, o Chris -- ten -- heit!
+}
+
+% 1234
+% GL 243, EG : Es ist ein Ros entsprungen
+esIstEinRosEntsprungenV = \lyricmode {
+<<{Es ist ein Ros' ent -- sprun -- gen 
+aus ei -- ner Wur -- zel zart,} \new Lyrics {
+wie uns die Al -- ten sun -- gen,
+von Jes -- se kam die Art }>>
+und hat ein Blüm -- lein 'bracht
+mit -- ten im kal -- ten Win -- ter,
+wohl zu der hal -- ben Nacht.
+}
+
+% GL , EG : Lobt Gott ihr Christen alle gleich
+% GL , EG : Ihr Kinderlein kommet
+% GL , EG : Stille Nacht
+% GL , EG : O Mensch bewein dein Sünde groß
+% GL , EG : Wir wollen alle fröhlich sein
+% GL , EG : Nun bitten wir den Heiligen Geist
+% GL , EG : Wie schön leuchtet der Morgenstern
+% GL , EG : Heilig
+% GL , EG : Was Gott tut, das ist wohlgetan
+% GL , EG : Wachet auf, ruft uns die Stimme
+% GL , EG : Bayernlied
+% GL , EG : America the Beautiful
+
 % GL 223, EG 17
 wirSagenEuchAnDenLiebenAdventV = \lyricmode {
   <<
@@ -727,6 +934,7 @@ allLyricsMajor = {
   \thisIsMySongV
   \toJesusChristOurSovereignKingV
   \ubiCaritasV
+  \machtHochDieTuerV
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -765,6 +973,7 @@ ichStehAnDeinerKrippeHierV = \lyricmode {
 
 % GL 290
 herzliebsterJesuWasHastDuVerbrochenV = \lyricmode {
+  Herzliebster Jesu
 }
 
 allLyricsMinor = {
