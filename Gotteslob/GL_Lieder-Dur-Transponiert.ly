@@ -5,7 +5,7 @@
 
 \header {
   dedication = ""
-  title = "Lieder in Dur, nachher auch transponiert"
+  title = "Lieder in Dur, F-Dur"
   subtitle = ""
   subsubtitle = "Gotteslob, zur Harmonisierung"
   instrument = "Orgel / Chor"
