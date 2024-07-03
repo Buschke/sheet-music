@@ -72,7 +72,7 @@ allNotesMajor = {
   % \tochterZion % GL 228, EG, D-Dur
   % \vomHimmelHoch % GL 237, EG, C-Dur
   % \ohDuFroehliche % GL 238, EG, D-Dur
-   \esIstEinRosEntsprungen % GL 243, EG, Es-Dur
+  % \esIstEinRosEntsprungen % GL 243, EG, Es-Dur
   % \lobtGottIhrChristenAlleGleich % GL 247, EG, Es-Dur
   % \ihrKinderleinKommet % GL 248, EG, C-Dur
   % \stilleNacht % GL 249, EG, B-Dur
@@ -80,10 +80,10 @@ allNotesMajor = {
   % \wirWollenAlleFroehlichSein % GL, EG
   % \wieSchoenLeuchtetDerMorgenstern % GL, EG
   % \heilig % GL, EG
-  % \wasGotTutDasIstWohlgetan % GL, EG
+  %\wasGottTutDasIstWohlgetan % GL 416, EG
   % \wachetAufRuftUnsDieStimme % GL, EG
   % \bayernlied % GL, EG
-  % \americaTheBeautiful % GL, EG
+   \americaTheBeautiful % GL, EG
 }
 
 allLyricsMajor = {
@@ -115,7 +115,18 @@ allLyricsMajor = {
   %\tochterZionV
   %\vomHimmelHochV
   %\oDuFroehlicheV
-  \esIstEinRosEntsprungenV
+  %\esIstEinRosEntsprungenV
+  %\lobtGottIhrChristenAlleGleichV
+  %\ihrKinderleinKommetV
+  %\stilleNachtV
+  %\oMenschBeweinDeinSuendeGrossV
+  %\wirWollenAlleFroehlichSeinV
+  %\wieSchoenLeuchtetDerMorgensternV
+  %\heiligV
+  %\wasGottTutDasIstWohlgetanV
+  %\wachetAufRuftUnsDieStimmeV
+  %\bayernliedV
+  \americaTheBeautifulV
 }
 
 scoreAMelody = \relative c'' {
