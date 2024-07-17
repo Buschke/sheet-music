@@ -553,6 +553,7 @@ ubiCaritas = {
 % Eingangs-Lied: EG 455, 1-3, Morgenlicht leuchtet, C-Dur
 morgenLichtLeuchtet = {
   \transpose c f {
+  % \transpose f f {
     \key c \major
     \time 9/4
     \relative c' {
@@ -569,6 +570,7 @@ morgenLichtLeuchtet = {
 % Wochen-Lied: EG 321, 1-3, Nun danket alle Gott, Es-Dur
 nunDanketAlleGott = {
   \transpose ef f {
+  % \transpose f f {
     \key ef \major
     \time 4/4
     \relative c'' {
@@ -590,6 +592,7 @@ nunDanketAlleGott = {
 % Predigt-Lied: KAA 057, 1-3, Licht der Liebe, Lebenslicht, G-Dur
 lichtDerLiebeLebenslicht = {
   \transpose g f {
+  % \transpose f f {
     \key g \major
     \time 4/4
     \relative c' {
@@ -608,6 +611,7 @@ lichtDerLiebeLebenslicht = {
 % Schlussvers EG 170, 1-4, Komm, Herr, segne uns, G-Dur
 kommHerrSegneUns = {
   \transpose g f {
+  % \transpose f f {
     \key g \major
     \time 2/2
     \relative c'' {
