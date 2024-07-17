@@ -80,10 +80,14 @@ allNotesMajor = {
   % \wirWollenAlleFroehlichSein % GL, EG
   % \wieSchoenLeuchtetDerMorgenstern % GL, EG
   % \heilig % GL, EG
-  %\wasGottTutDasIstWohlgetan % GL 416, EG
+  % \wasGottTutDasIstWohlgetan % GL, EG
   % \wachetAufRuftUnsDieStimme % GL, EG
   % \bayernlied % GL, EG
-   \americaTheBeautiful % GL, EG
+  % \americaTheBeautiful % GL, EG
+  \morgenLichtLeuchtet % GL , EG 455, 1-3, -Dur
+  \nunDanketAlleGott % GL , EG 321, 1-3, -Dur
+  \lichtDerLiebeLebenslicht % KAA 057, 1-3, -Dur
+  \kommHerrSegneUns % GL , EG 170, 1-4, -Dur
 }
 
 allLyricsMajor = {
@@ -111,22 +115,26 @@ allLyricsMajor = {
   % \thisIsMySongV
   % \toJesusChristOurSovereignKingV
   % \ubiCaritasV
-  %\machtHochDieTuerV
-  %\tochterZionV
-  %\vomHimmelHochV
-  %\oDuFroehlicheV
-  %\esIstEinRosEntsprungenV
-  %\lobtGottIhrChristenAlleGleichV
-  %\ihrKinderleinKommetV
-  %\stilleNachtV
-  %\oMenschBeweinDeinSuendeGrossV
-  %\wirWollenAlleFroehlichSeinV
-  %\wieSchoenLeuchtetDerMorgensternV
-  %\heiligV
-  %\wasGottTutDasIstWohlgetanV
-  %\wachetAufRuftUnsDieStimmeV
-  %\bayernliedV
-  \americaTheBeautifulV
+  % \machtHochDieTuerV % GL 218, EG, Es-Dur
+  % \tochterZionV % GL 228, EG, D-Dur
+  % \vomHimmelHochV % GL 237, EG, C-Dur
+  % \oDuFroehlicheV % GL 238, EG, D-Dur
+  % \esIstEinRosEntsprungenV % GL 243, EG, Es-Dur
+  % \lobtGottIhrChristenAlleGleichV % GL 247, EG, Es-Dur
+  % \ihrKinderleinKommetV % GL 248, EG, C-Dur
+  % \stilleNachtV % GL 249, EG, B-Dur
+  % \oMenschBeweinDeinSuendeGrossV % GL 267, EG, C-Dur
+  % \wirWollenAlleFroehlichSeinV % GL, EG
+  % \wieSchoenLeuchtetDerMorgensternV % GL, EG
+  % \heiligV % GL, EG
+  % \wasGottTutDasIstWohlgetanV % GL, EG
+  % \wachetAufRuftUnsDieStimmeV % GL, EG
+  % \bayernliedV % GL, EG
+  % \americaTheBeautifulV % GL, EG
+  \morgenLichtLeuchtetV % GL , EG 455, 1-3, -Dur
+  \nunDanketAlleGottV % GL , EG 321, 1-3, -Dur
+  \lichtDerLiebeLebenslichtV % KAA 057, 1-3, -Dur
+  \kommHerrSegneUnsV % GL , EG 170, 1-4, -Dur
 }
 
 scoreAMelody = \relative c'' {
