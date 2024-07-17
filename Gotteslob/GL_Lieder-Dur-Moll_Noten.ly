@@ -584,7 +584,7 @@ nunDanketAlleGott = {
         bf bf c c bf2 r4
         g af g f g f2 ef
       }
-      f
+      f4
       f f g g f2 r4
       f g bf bf a bf2 r4
       bf c bf af g af2 r4
