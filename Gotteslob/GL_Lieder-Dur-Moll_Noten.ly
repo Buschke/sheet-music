@@ -2,7 +2,7 @@
 \language "english"
 
 
-% GL 93, EG 482
+% GL 93, EG 482, F-Dur
 mondAufgegangen = {
   \time 4/4
   \relative c' {
@@ -18,7 +18,7 @@ mondAufgegangen = {
   }
 }
 
-% GL 101, EG 477
+% GL 101, EG 477, F-Dur
 nunRuhenWaelder = {
   \time 4/4
   \relative c'' {
@@ -33,7 +33,7 @@ nunRuhenWaelder = {
   }
 }
 
-% GL 139, EG
+% GL 139, EG, F-Dur
 lammGottes = {
   \time 4/4
   \relative c' {
@@ -44,7 +44,7 @@ lammGottes = {
   }
 }
 
-% GL 170, EG 179
+% GL 170, EG 179, F-Dur
 alleinGottInDerHoehSeiEhr = {
   \time 3/1
   \relative c' {
@@ -58,7 +58,7 @@ alleinGottInDerHoehSeiEhr = {
   }
 }
 
-% GL 208, EG 190.2
+% GL 208, EG 190.2, F-Dur
 christeDuLammGottes = {
   \time 4/4
   \relative c' {
@@ -87,7 +87,7 @@ machtHochDieTuer = {
   }
 }
 
-% GL 223, EG 17
+% GL 223, EG 17, F-Dur
 wirSagenEuchAnDenLiebenAdvent = {
   \time 3/4
   \relative c'' {
@@ -304,7 +304,6 @@ wasGottTutDasIstWohlgetan = {
   }
 }
 
-
 % GL 554, EG , B-Dur: Wachet auf, ruft uns die Stimme
 wachetAufRuftUnsDieStimme = {
   \transpose bf f {
@@ -355,7 +354,7 @@ americaTheBeautiful = {
   }
 }
 
-% GL , EG : %
+% GL , EG :, F-Dur
 adesteFideles = {
   \time 2/2
   \relative c' {
@@ -367,7 +366,7 @@ adesteFideles = {
   }
 }
 
-% GL , EG
+% GL , EG, F-Dur
 inDulciJubilo = {
   \time 6/4
   \relative c' {
@@ -380,7 +379,7 @@ inDulciJubilo = {
   }
 }
 
-% GL 348, EG x
+% GL 348, EG x, F-Dur
 nunBittenWirDenHeiligenGeist = {
   \time 2/2
   \relative c' {
@@ -392,7 +391,7 @@ nunBittenWirDenHeiligenGeist = {
   }
 }
 
-% GL 365, EG 697
+% GL 365, EG 697, F-Dur
 meineHoffnungUndMeineFreude = {
   \time 3/4
   \relative c' {
@@ -408,60 +407,60 @@ meineHoffnungUndMeineFreude = {
   }
 }
 
-% GL 380, EG 331
+% GL 380, EG 331, F-Dur
 grosserGottWirLobenDich = {
   \time 3/4
   \relative c' {
     \repeat volta 2 {
-      f2^"GL 380, EG 697, F-Dur"^"Großer Gott, wir loben dich" f4 f(e) f g(a) g f2 r4
+      f2^"GL 380, EG 331, F-Dur"^"Großer Gott, wir loben dich" f4 f(e) f g(a) g f2 r4
       a2 a4 a(g) f c'(bf) a a g r
     }
-    g2 a4 bf2 a4 a2 bf4 c2 r4
+    g2 a4 bf2 g4 a2 bf4 c2 r4
     d2 d4 c(bf) a bf(a) g f2.\bar "|.|"
   }
 }
 
-% GL 392, EG 316
+% GL 392, EG 316, F-Dur
 lobeDenHerrnDenMaechtigenKoenigDerEhren = {
   \time 9/4
   \relative c' {
     \repeat volta 2 {
       \partial 2.
-      f4^"Lobe den Herren, GL 392, EG 316" f c' a4. g8 f4 e d c d e f g2. f
+      f4^"GL 392, EG 316"^"Lobe den Herren" f c' a4. g8 f4 e d c d e f g2. f
     } c'4 c c d2. a4 bf c c4. bf8 a4 g2.\breathe
     c,4 d e f g a g2. f r\bar "|.|"
   }
 }
 
-% GL 487, EG 265
+% GL 487, EG 265, F-Dur
 nunSingeLobDuChristenheit = {
   \time 2/1
   \relative c' {
-    f2^"Nun singe Lob, du Christenheit, GL 487, EG 265" d4 c f2 g a4 a g2 r4
+    f2^"GL 487, EG 265"^"Nun singe Lob, du Christenheit" d4 c f2 g a4 a g2 r4
     a c bf a2 g f1\breathe
     c'2 a4 c d2 c bf4 a g2 r4
     c4 f, bf a2 g f1\bar "|.|"
   }
 }
 
-% GL 502, EG
+% GL 502, EG, F-Dur
 naeherMeinGottZuDir = {
   \time 4/4
   \relative c'' {
-    a2^"Näher, mein Gott, zu dir, GL 502" g4 f f4. d8 d2 c f4 a g2. r4
+    a2^"GL 502"^"Näher, mein Gott, zu dir" g4 f f4. d8 d2 c f4 a g2. r4
     a2 g4 f f4. d8 d2 c4(f) e g f2. r4
     c'2 d4 c c4. a8 c2 c d4 c c4. a8 g2\breathe
     a g4 f f4. d8 d2 c4(f) e g f1\bar "|.|"
   }
 }
 
-% GL 543, EG 295
+% GL 543, EG 295, F-Dur
 wohlDenenDieDaWandeln = {
   \time 2/2
   \relative c' {
     \repeat volta 2 {
       \partial 4
-      c4^"Wohl denen, die da wandeln, GL 543, EG 295"
+      c4^"GL 543, EG 295"^"Wohl denen, die da wandeln"
       f g a c bf2 a4 g f g a g8 f g2 r4
     } \partial 4
     g
@@ -470,17 +469,17 @@ wohlDenenDieDaWandeln = {
   }
 }
 
-% SM 430
+% SM 430, F-Dur
 amazingGrace = {
   \time 3/4
   \relative c' {
     \partial 4
-    c4^"Amazing Grace, SM 430"
+    c4^"SM 430"^"Amazing Grace"
     f2 a8(f) a2 g4 f2 d4 c2 c4 f2 a8(f) a2 g4 c2.~ c2 a4 c4.(a8) c(a) f2 c4 d4.(f8) f(d) c2 c4 f2 a8(f) a2 g4 f2.~f2\bar "|.|"
   }
 }
 
-% SM 431
+% SM 431, F-Dur
 america = {
   \time 3/4
   \relative c' {
@@ -488,66 +487,134 @@ america = {
   }
 }
 
-% SM 447
+% SM 447, F-Dur
 awayInAManger = {
   \time 3/4
   \relative c' {
     \partial 4
-    c4^"Away in a Manger, SM 447"
+    c4^"SM 447"^"Away in a Manger"
     f f g8(a) f4 f a8(bf) c4 c d bf2 g8(a) bf4 bf c a a f8(a) g4 d f e2 c4 f f g8(a) f4 f a8(bf) c4 c d bf2 g8(a) bf4 bf c a a f8(a) g4 d e \partial 2 f2\bar "|.|"
   }
 }
 
-% SM 532
+% SM 532, F-Dur
 goTellItOnTheMountains = {
   \time 4/4
   \relative c'' {
-    a2^"Go, Tell It on the Mountains, SM 532" a8. g16 f8. d16 c2 f g8 g4 g8 f4 g a8(g) a(g) f2 a a8. g16 f8. d16 c2 f4 bf a a g8(f) g4 \partial 2. f2.\bar "|.|"
+    a2^"SM 532"^"Go, Tell It on the Mountains" a8. g16 f8. d16 c2 f g8 g4 g8 f4 g a8(g) a(g) f2 a a8. g16 f8. d16 c2 f4 bf a a g8(f) g4 \partial 2. f2.\bar "|.|"
   }
 }
 
-% SM 558
+% SM 558, F-Dur
 harkTheHeraldAngelsSing = {
   \time 4/4
   \relative c' {
-    c4^"Hark! The Herald Angels Sing, SM 558" f f4. e8 f4 a a(g) c c c4. bf8 a4 g a2
+    c4^"SM 558"^"Hark! The Herald Angels Sing" f f4. e8 f4 a a(g) c c c4. bf8 a4 g a2
     c,4 f f4. e8 f4 a a(g) c g g4. e8 e4 d c2 c'4 c c f, bf a a(g) c c c f, bf a a(g) d' d d c bf a bf2 g4 a8(bf) c4. f,8 f4 g a2 d4. d8 d4 c bf a bf2 g4 a8(bf) c4. f,8 f4 g f2\bar "|.|"
   }
 }
 
-% SM 618
+% SM 618, F-Dur
 loHowARoseEerBlooming = {
   \time 3/1
   \relative c' {
-    c'2^"Lo, How a Rose E'er Blooming, SM 618" c4 c d c c2 a bf a4 g2 f e4 f2 c' c4 c d c c2 a bf a4 g2 f e4 f2 r4 a g e f d c2 r4 c' c c d c c2 a bf a4 g2 f e4 f1\bar "|.|"
+    c'2^"SM 618"^"Lo, How a Rose E'er Blooming" c4 c d c c2 a bf a4 g2 f e4 f2 c' c4 c d c c2 a bf a4 g2 f e4 f2 r4 a g e f d c2 r4 c' c c d c c2 a bf a4 g2 f e4 f1\bar "|.|"
   }
 }
 
-% SM 792
+% SM 792, F-Dur
 thisIsMySong = {
   \time 4/4
   \relative c'' {
     \partial 2.
-    a4^"This Is My Song, SM 792" g a
+    a4^"SM 792"^"This Is My Song" g a
     bf2. a4 g a f4. g8 g4 a2.~a4 a g a bf2. a4 g a f4. g8 a1~a4 c c c d2. a4 a c c4. g8 g4 bf2.~ bf4 bf a g a2. f4 f g g4. a8 a1~a4 c c c d2. a4 a c c4. g8 g4 bf2.~bf4 bf a g a2. f4 f g g4. f8 f1~f4\bar "|.|"
   }
 }
 
-% SM 800
+% SM 800, F-Dur
 toJesusChristOurSovereignKing = {
   \time 4/4
   \relative c' {
     \partial 4
-    c4^"To Jesus Christ, Our Sovereign King, SM 800"
+    c4^"SM 800"^"To Jesus Christ, Our Sovereign King"
     f g a8(bf) c4 bf a g a a f bf a g2 f4 c f g a8(bf) c4 bf a g a a f bf a g2 f c' c4 c d2 d bf a4 g c2 c c, f4 a c2 bf4 a g1 \partial 2. f2.\bar "|.|"
   }
 }
 
-% SM 805
+% SM 805, F-Dur
 ubiCaritas = {
   \time 2/4
   \relative c'' {
-    a8^"Ubi Caritas, SM 805" a g g f4. f8 bf4(a) g2 a8 a g g f2 d8 d \tuplet 3/2 { e(d) e } f2\bar "|.|"
+    a8^"SM 805"^"Ubi Caritas" a g g f4. f8 bf4(a) g2 a8 a g g f2 d8 d \tuplet 3/2 { e(d) e } f2\bar "|.|"
+  }
+}
+
+% Eingangs-Lied: EG 455, 1-3, Morgenlicht leuchtet, C-Dur
+morgenLichtLeuchtet = {
+  \transpose c f {
+    \key c \major
+    \time 9/4
+    \relative c' {
+      \partial 2.
+      c4^"Eingangs-Lied"^"EG 455, 1-3, C-Dur"^"Morgenlicht leuchtet" e g
+      c2. d b4 a g a2. g\breathe
+      c,4 d e g2. a f4 e c d2.~ d\breathe
+      g4 e g c2. a g4 e c c2. d\breathe
+      e4 d e g2. a d,4 e d c2.~ c\bar "|.|"
+    }
+  }
+}
+
+% Wochen-Lied: EG 321, 1-3, Nun danket alle Gott, Es-Dur
+nunDanketAlleGott = {
+  \transpose ef f {
+    \key ef \major
+    \time 4/4
+    \relative c'' {
+      \repeat volta 2 {
+        \partial 4
+        bf4^"Wochen-Lied"^"EG 321, 1-3, Es-Dur"^"Nun danket alle Gott"
+        bf bf c c bf2 r4
+        g a g f g f2 ef
+      }
+      f
+      f f g g f2 r4
+      f g bf bf a bf2 r4
+      bf c bf af g af2 r4
+      g f g f f ef2.\bar "|.|"
+    }
+  }
+}
+
+% Predigt-Lied: KAA 057, 1-3, Licht der Liebe, Lebenslicht, G-Dur
+lichtDerLiebeLebenslicht = {
+  \transpose g f {
+    \key g \major
+    \time 4/4
+    \relative c' {
+      \partial 4
+      d4^"Predigt-Lied"^"KAA 057, 1-3, G-Dur"^"Licht der Liebe, Lebenslicht"
+      g g8 fs e2 d8 e d c b4.\breathe
+      g'8 g4 g a2 fs8 g fs e d2
+      e4 fs g d b'4 a8 g~g4 r
+      c4 c8 b4 b8 a g a2 r
+      e4 fs g d b' a8 g~g4 r
+      c b8 a4 a8 g fs \partial 2. g2 r4\bar "|.|"
+    }
+  }
+}
+
+% Schlussvers EG 170, 1-4, Komm, Herr, segne uns, G-Dur
+kommHerrSegneUns = {
+  \transpose g f {
+    \key g \major
+    \time 2/2
+    \relative c'' {
+      \repeat volta 2 { g2^"Schlussvers"^"EG 170, 1-4, G-Dur"^"Komm, Herr, segne uns" d g4 a b2 c4 b a g a2 g }
+      d'4. d8 a4 b c1 b4 a g fs e2 fs\breathe
+      g4. g8 a4 b c2 b d4 b a a g1\bar "|.|"
+    }
   }
 }
 
@@ -592,6 +659,10 @@ allNotesMajor = {
   \wachetAufRuftUnsDieStimme % GL, EG
   \bayernlied % GL, EG
   \americaTheBeautiful % GL, EG
+  \morgenLichtLeuchtet % GL , EG 455, 1-3, C-Dur
+  \nunDanketAlleGott % GL , EG 321, 1-3, Es-Dur
+  \lichtDerLiebeLebenslicht % KAA 057, 1-3, G-Dur
+  \kommHerrSegneUns % GL , EG 170, 1-4, G-Dur
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1255,7 +1326,49 @@ ubiCaritasV = \lyricmode {
   U -- bi ca -- ri -- tas, De -- us i -- bi est
 }
 
+% Eingangs-Lied: EG 455, 1-3, Morgenlicht leuchtet
+morgenLichtLeuchtetV = \lyricmode {
+  Mor -- gen -- licht leuch -- tet, rein wie am An -- fang. Früh -- lied der Am -- sel, Schöp -- fer -- lob klingt. Dank für die Lie -- der, Dank für den Mor -- gen, Dank für das Wort, dem bei -- des ent -- springt.
+}
 
+% Wochen-Lied: EG 321, 1-3, Nun danket alle Gott
+nunDanketAlleGottV = \lyricmode {
+  <<
+    {
+      Nun dan -- ket al -- le Gott
+      mit Her -- zen, Mund und Hän -- den,
+    } \new Lyrics
+    {
+      der gro -- ße Din -- ge tut
+      an uns und al -- len En -- den,
+    }
+  >>
+  der uns von Mut -- ter -- leib
+  und Kin -- des -- bei -- nen an
+  un -- zäh -- lig viel zu gut
+  bis hier -- her hat ge -- tan.
+}
+
+% Predigt-Lied: KAA 057, 1-3, Licht der Liebe, Lebenslicht
+lichtDerLiebeLebenslichtV = \lyricmode {
+  Ein Licht geht uns auf in der Dun -- kel -- heit,
+  Durch -- bricht die Nacht und er -- hellt die Zeit.
+  Licht der Lie -- be, Le -- bens -- licht,
+  Got -- tes Geist ver -- lässt uns nicht.
+  Licht der Lie -- be, Le -- bens -- licht,
+  Got -- tes Geist ver -- lässt uns nicht.
+}
+
+% Schlussvers EG 170, 1-4, Komm, Herr, segne uns
+kommHerrSegneUnsV = \lyricmode {
+  <<
+    {Komm, Herr, seg -- ne uns, dass wir uns nicht tren -- nen, } \new Lyrics {
+      son -- dern ü -- ber -- all uns zu dir be -- ken -- nen.
+    }
+  >>
+  Nie sind wir al -- lein, stets sind wir die Dei -- nen.
+  La -- chen o -- der Wei -- nen wird ge -- seg -- net sein.
+}
 
 allLyricsMajor = {
   \mondAufgegangenAV
@@ -1298,6 +1411,10 @@ allLyricsMajor = {
   \wachetAufRuftUnsDieStimmeV % GL, EG
   \bayernliedV % GL, EG
   \americaTheBeautifulV % GL, EG
+  \morgenLichtLeuchtetV % GL , EG 455, 1-3, -Dur
+  \nunDanketAlleGottV % GL , EG 321, 1-3, -Dur
+  \lichtDerLiebeLebenslichtV % KAA 057, 1-3, -Dur
+  \kommHerrSegneUnsV % GL , EG 170, 1-4, -Dur
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1360,10 +1477,16 @@ kommOTroesterHeilgerGeistV = \lyricmode {
 
 %
 befiehlDuDeineWegeV = \lyricmode {
-  <<{Be -- fiehl du dei -- ne We -- ge
-  und was dein Her -- ze kränkt }
-  \new Lyrics {der al -- ler -- treus -- ten Pfle -- ge
-  des, der den Him -- mel lenkt. }>>
+  <<
+    {
+      Be -- fiehl du dei -- ne We -- ge
+      und was dein Her -- ze kränkt
+    }
+    \new Lyrics {
+      der al -- ler -- treus -- ten Pfle -- ge
+      des, der den Him -- mel lenkt.
+    }
+  >>
   Der Wol -- ken, Luft und Win -- den
   gibt We -- ge, Lauf und Bahn,
   der wird auch We -- ge fin -- den,
@@ -1372,10 +1495,16 @@ befiehlDuDeineWegeV = \lyricmode {
 
 %
 werNurDenLiebenGotLaesstWaltenV = \lyricmode {
-  <<{Wer nur den lie -- ben Gott lässt _ wal -- ten
-  Und hof -- fet auf Ihn al -- le -- zeit }
-  \new Lyrics {Der wird Ihn wun -- der -- lich er _ -- hal -- ten
-  In al -- ler Noht und Trau -- rig -- keit. }>>
+  <<
+    {
+      Wer nur den lie -- ben Gott lässt _ wal -- ten
+      Und hof -- fet auf Ihn al -- le -- zeit
+    }
+    \new Lyrics {
+      Der wird Ihn wun -- der -- lich er _ -- hal -- ten
+      In al -- ler Noht und Trau -- rig -- keit.
+    }
+  >>
   Wer Gott dem Al -- ler -- höchs -- ten traut
   Der hat auf kei -- nen _ Sand ge -- baut.
 }
