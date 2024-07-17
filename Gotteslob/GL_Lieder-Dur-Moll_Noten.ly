@@ -4,7 +4,9 @@
 
 % GL 93, EG 482, F-Dur
 mondAufgegangen = {
+  \key f \major
   \time 4/4
+  \tempo "Gemächlich" 4=100
   \relative c' {
     \repeat volta 2 {
       \partial 4
@@ -556,6 +558,7 @@ morgenLichtLeuchtet = {
   % \transpose f f {
     \key c \major
     \time 9/4
+    \tempo "Gemächlich" 4.=100
     \relative c' {
       \partial 2.
       c4^"Eingangs-Lied"^"EG 455, 1-3, C-Dur"^"Morgenlicht leuchtet" e g
@@ -573,12 +576,13 @@ nunDanketAlleGott = {
   % \transpose f f {
     \key ef \major
     \time 4/4
+    \tempo "Getragen" 4=100
     \relative c'' {
       \repeat volta 2 {
         \partial 4
-        bf4^"Wochen-Lied"^"EG 321, 1-3, Es-Dur"^"Nun danket alle Gott"
+        bf4^"Wochen-Lied"^"EG 321, GL 405, 1-3, Es-Dur"^"Nun danket alle Gott"
         bf bf c c bf2 r4
-        g a g f g f2 ef
+        g af g f g f2 ef
       }
       f
       f f g g f2 r4
@@ -595,6 +599,7 @@ lichtDerLiebeLebenslicht = {
   % \transpose f f {
     \key g \major
     \time 4/4
+    \tempo "Flott" 4=150
     \relative c' {
       \partial 4
       d4^"Predigt-Lied"^"KAA 057, 1-3, G-Dur"^"Licht der Liebe, Lebenslicht"
@@ -614,8 +619,9 @@ kommHerrSegneUns = {
   % \transpose f f {
     \key g \major
     \time 2/2
+    \tempo "Getragen" 2=50
     \relative c'' {
-      \repeat volta 2 { g2^"Schlussvers"^"EG 170, 1-4, G-Dur"^"Komm, Herr, segne uns" d g4 a b2 c4 b a g a2 g }
+      \repeat volta 2 { g2^"Schlussvers"^"EG 170, GL 451, 1-4, G-Dur"^"Komm, Herr, segne uns" d g4 a b2 c4 b a g a2 g }
       d'4. d8 a4 b c1 b4 a g fs e2 fs\breathe
       g4. g8 a4 b c2 b d4 b a a g1\bar "|.|"
     }

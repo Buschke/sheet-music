@@ -34,8 +34,6 @@
 }
 
 global = {
-  \time 4/4
-  \tempo "Gemächlich" 4=100
 }
 
 globalA = {
@@ -84,10 +82,10 @@ allNotesMajor = {
   % \wachetAufRuftUnsDieStimme % GL, EG
   % \bayernlied % GL, EG
   % \americaTheBeautiful % GL, EG
-  \morgenLichtLeuchtet % GL , EG 455, 1-3, -Dur
-  \nunDanketAlleGott % GL , EG 321, 1-3, -Dur
-  \lichtDerLiebeLebenslicht % KAA 057, 1-3, -Dur
-  \kommHerrSegneUns % GL , EG 170, 1-4, -Dur
+  \transpose f c {\morgenLichtLeuchtet} % GL , EG 455, 1-3, -Dur
+  \transpose f ef {\nunDanketAlleGott} % GL , EG 321, 1-3, -Dur
+  \transpose f g {\lichtDerLiebeLebenslicht} % KAA 057, 1-3, -Dur
+  \transpose f g {\kommHerrSegneUns} % GL , EG 170, 1-4, -Dur
 }
 
 allLyricsMajor = {

@@ -34,12 +34,9 @@
 }
 
 global = {
-  \time 4/4
-  \tempo "Gemächlich" 4=100
 }
 
 globalA = {
-  \key f \major
   \global
 }
 
