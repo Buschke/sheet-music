@@ -15,7 +15,7 @@
   meter = ""
   piece = ""
   opus = ""
-  copyright = \markup {"© Satz, 11.06.2024: " \with-url "https://buschke.com" "Sven Buschke"}
+  copyright = \markup {"© Satz, 17.07.2024: " \with-url "https://buschke.com" "Sven Buschke"}
   tagline = "best of Gotteslob"
 }
 
@@ -82,10 +82,11 @@ allNotesMajor = {
   % \wachetAufRuftUnsDieStimme % GL, EG
   % \bayernlied % GL, EG
   % \americaTheBeautiful % GL, EG
-  \transpose f c {\morgenLichtLeuchtet} % GL , EG 455, 1-3, -Dur
-  \transpose f ef {\nunDanketAlleGott} % GL , EG 321, 1-3, -Dur
-  \transpose f g {\lichtDerLiebeLebenslicht} % KAA 057, 1-3, -Dur
-  \transpose f g {\kommHerrSegneUns} % GL , EG 170, 1-4, -Dur
+  \transpose f c {\morgenLichtLeuchtet} % GL , EG 455, 1-3, C-Dur
+  \transpose f d {\sonneDerGerechtigkeit} % GL , EG 326, 1-2, 6-7, D-Dur
+  %\transpose f ef {\nunDanketAlleGott} % GL , EG 321, 1-3, Es-Dur
+  \transpose f g {\lichtDerLiebeLebenslicht} % KAA 057, 1-3, G-Dur
+  \transpose f g {\kommHerrSegneUns} % GL , EG 170, 1-4, G-Dur
 }
 
 allLyricsMajor = {
@@ -129,10 +130,11 @@ allLyricsMajor = {
   % \wachetAufRuftUnsDieStimmeV % GL, EG
   % \bayernliedV % GL, EG
   % \americaTheBeautifulV % GL, EG
-  \morgenLichtLeuchtetV % GL , EG 455, 1-3, -Dur
-  \nunDanketAlleGottV % GL , EG 321, 1-3, -Dur
-  \lichtDerLiebeLebenslichtV % KAA 057, 1-3, -Dur
-  \kommHerrSegneUnsV % GL , EG 170, 1-4, -Dur
+  \morgenLichtLeuchtetV % GL , EG 455, 1-3, C-Dur
+  \sonneDerGerechtigkeitV % GL , EG 326, 1-2, 6-7, D-Dur
+  %\nunDanketAlleGottV % GL , EG 321, 1-3, Es-Dur
+  \lichtDerLiebeLebenslichtV % KAA 057, 1-3, G-Dur
+  \kommHerrSegneUnsV % GL , EG 170, 1-4, G-Dur
 }
 
 scoreAMelody = \relative c'' {

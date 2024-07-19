@@ -565,7 +565,23 @@ morgenLichtLeuchtet = {
       c2. d b4 a g a2. g\breathe
       c,4 d e g2. a f4 e c d2.~ d\breathe
       g4 e g c2. a g4 e c c2. d\breathe
-      e4 d e g2. a d,4 e d c2.~ c\bar "|.|"
+      e4 d e g2. a d,4 e d \partial 1. c2.~ c\bar "|.|"
+    }
+  }
+}
+
+% Wochen-Lied: EG 262, 1-2, 6-7, Sonne der Gerechtigkeit, D-Dur
+sonneDerGerechtigkeit = {
+  \transpose d f {
+    \key d \major
+    \time 4/4
+    \tempo "Gemächlich" 4 = 100
+    \relative c' {
+      d2^"Wochen-Lied"^"EG 262, 1-2, 6-7, D-Dur"^"Sonne der Gerechtigkeit" d a' d cs4(b8 a b4) b a1\breathe
+      b2 b cs b a4(b a) g fs1\breathe
+      fs4 e fs g a a d,2\breathe
+      fs4 e fs d cs d e\breathe
+      g fs2 e d1\bar "|.|"
     }
   }
 }
@@ -670,6 +686,7 @@ allNotesMajor = {
   \bayernlied % GL, EG
   \americaTheBeautiful % GL, EG
   \morgenLichtLeuchtet % GL , EG 455, 1-3, C-Dur
+  \sonneDerGerechtigkeit % GL , EG 262, 1-2, 6-7, D-Dur
   \nunDanketAlleGott % GL , EG 321, 1-3, Es-Dur
   \lichtDerLiebeLebenslicht % KAA 057, 1-3, G-Dur
   \kommHerrSegneUns % GL , EG 170, 1-4, G-Dur
@@ -1341,6 +1358,15 @@ morgenLichtLeuchtetV = \lyricmode {
   Mor -- gen -- licht leuch -- tet, rein wie am An -- fang. Früh -- lied der Am -- sel, Schöp -- fer -- lob klingt. Dank für die Lie -- der, Dank für den Mor -- gen, Dank für das Wort, dem bei -- des ent -- springt.
 }
 
+% Eingangs-Lied: EG 326, 1-2, 6-7, D-Dur 
+sonneDerGerechtigkeitV = \lyricmode {
+  Son -- ne der Ge -- rech -- tig -- keit,
+  ge -- he auf zu uns -- rer Zeit;
+  brich in Dei -- ner Kir -- che an,
+  dass die Welt es se -- hen kann.
+  Er -- barm Dich, Herr.
+}
+
 % Wochen-Lied: EG 321, 1-3, Nun danket alle Gott
 nunDanketAlleGottV = \lyricmode {
   <<
@@ -1421,10 +1447,11 @@ allLyricsMajor = {
   \wachetAufRuftUnsDieStimmeV % GL, EG
   \bayernliedV % GL, EG
   \americaTheBeautifulV % GL, EG
-  \morgenLichtLeuchtetV % GL , EG 455, 1-3, -Dur
-  \nunDanketAlleGottV % GL , EG 321, 1-3, -Dur
-  \lichtDerLiebeLebenslichtV % KAA 057, 1-3, -Dur
-  \kommHerrSegneUnsV % GL , EG 170, 1-4, -Dur
+  \morgenLichtLeuchtetV % GL , EG 455, 1-3, C-Dur
+  \sonneDerGerechtigkeitV % GL, EG 326, 1-2, 6-7, D-Dur
+  \nunDanketAlleGottV % GL , EG 321, 1-3, Es-Dur
+  \lichtDerLiebeLebenslichtV % KAA 057, 1-3, G-Dur
+  \kommHerrSegneUnsV % GL , EG 170, 1-4, G-Dur
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
