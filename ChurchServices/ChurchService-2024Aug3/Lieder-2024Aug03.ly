@@ -5,9 +5,9 @@
 
 \header {
   dedication = ""
-  title = "Lieder, Gottesdienst 21.07.2024"
+  title = "Lieder, Taufgottesdienst 3. August2024"
   subtitle = "Stephanuskirche"
-  subsubtitle = "EG und KAA"
+  subsubtitle = "EG"
   instrument = "Orgel"
   composer = ""
   arranger = \markup {"Arr: " \with-url "https://buschke.com" "Sven Buschke"}
