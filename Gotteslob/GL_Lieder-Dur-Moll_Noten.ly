@@ -424,6 +424,7 @@ grosserGottWirLobenDich = {
 
 % GL 392, EG 316, F-Dur
 lobeDenHerrnDenMaechtigenKoenigDerEhren = {
+  \key f \major
   \time 9/4
   \relative c' {
     \repeat volta 2 {
