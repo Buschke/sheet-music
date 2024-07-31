@@ -644,6 +644,38 @@ kommHerrSegneUns = {
   }
 }
 
+% Gott, der du alles Leben schufst (EG 211)
+gottDerDuAllesLebenSchufst = {
+  \key f \major
+  \time 6/4
+  \tempo "Flotter" 2. = 50
+  \relative c' {
+    \partial 2.
+    f4^"EG 211, F-Dur"^"Gott, der du alles Leben schufst" f g
+    a2 c4 f,4.(g8) a4 g2 r4
+    g a bf c2 a4 g2 g4 f2 r4
+    e e f g4.(f8) e4 d2 d4 c2 r4
+    f g a bf2 a4 g2 g4 f2.\bar "|.|"
+  }
+}
+
+% Ich bin getauft auf deinen Namen (EG 200)
+ichBinGetauftAuDdeinenNamen = {
+  \key f \major
+  \time 4/4
+  \tempo "Getragen" 4 = 60
+  \relative c'' {
+    \partial 2.
+    c4^"EG 200, F-Dur"^"Ich bin getauft auf deinen Namen" a c
+    d c bf a g2 f4\breathe
+    a g f g a bf a g2 r4
+    c a c d c bf a g2 f4\breathe
+    a g f g a bf a g2 r4
+    g g g a c c b c2 r4
+    c a f d' bf a g f2 \bar "|.|"
+  }
+}
+
 allNotesMajor = {
   \mondAufgegangen % GL 93, EG 482, F-Dur
   \nunRuhenWaelder % GL , EG, F-Dur
@@ -1404,6 +1436,18 @@ kommHerrSegneUnsV = \lyricmode {
   >>
   Nie sind wir al -- lein, stets sind wir die Dei -- nen.
   La -- chen o -- der Wei -- nen wird ge -- seg -- net sein.
+}
+
+% Gott, der du alles Leben schufst (EG 211)
+gottDerDuAllesLebenSchufstV = \lyricmode {
+  Gott, der du al -- les Le -- ben schufst
+  und uns durch Chris -- tus zu dir rufst,
+  wir dan -- ken dir für die -- ses Kind
+  und al -- les Glück, das nun be -- ginnt.
+}
+
+ichBinGetauftAuDdeinenNamenV = \lyricmode {
+  Ich bin ge -- tauft auf dei -- nen Na -- men, Gott Va -- ter, Sohn und Heil' -- ger Geist, Ich bin ge -- zählt zu dei -- nem Sa -- men, Zum Volk, das dir ge -- hei -- ligt heißt, Ich bin in Chris -- tum ein -- ge -- senkt, Ich bin mit sei -- nem Geist be -- schenkt.
 }
 
 allLyricsMajor = {
