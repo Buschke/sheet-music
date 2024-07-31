@@ -5,7 +5,7 @@
 
 \header {
   dedication = ""
-  title = "Lieder, Taufgottesdienst 3. August2024"
+  title = "Lieder, Taufgottesdienst 3. August 2024"
   subtitle = "Stephanuskirche"
   subsubtitle = "EG"
   instrument = "Orgel"
