@@ -429,9 +429,9 @@ lobeDenHerrnDenMaechtigenKoenigDerEhren = {
   \relative c' {
     \repeat volta 2 {
       \partial 2.
-      f4^"GL 392, EG 316, 1-4"^"Lobe den Herren" f c' a4. g8 f4 e d c d e f g2. f
+      f4^"GL 392, EG 316, 1,2,4"^"Lobe den Herren" f c' a4. g8 f4 e d c d e f g2. f
     } c'4 c c d2. a4 bf c c4. bf8 a4 g2.\breathe
-    c,4 d e f g a g2. f r\bar "|.|"
+    c,4 d e f g a \partial 1. g2. f \bar "|.|"
   }
 }
 
@@ -652,7 +652,7 @@ gottDerDuAllesLebenSchufst = {
   \tempo "Flotter" 2. = 50
   \relative c' {
     \partial 2.
-    f4^"EG 211, F-Dur"^"Gott, der du alles Leben schufst" f g
+    f4^"EG 211, F-Dur, 1-4"^"Gott, der du alles Leben schufst" f g
     a2 c4 f,4.(g8) a4 g2 r4
     g a bf c2 a4 g2 g4 f2 r4
     e e f g4.(f8) e4 d2 d4 c2 r4
@@ -667,7 +667,7 @@ ichBinGetauftAuDdeinenNamen = {
   \tempo "Getragen" 4 = 60
   \relative c'' {
     \partial 2.
-    c4^"EG 200, F-Dur"^"Ich bin getauft auf deinen Namen" a c
+    c4^"EG 200, F-Dur, 1,2,4"^"Ich bin getauft auf deinen Namen" a c
     d c bf a g2 f4\breathe
     a g f g a bf a g2 r4
     c a c d c bf a g2 f4\breathe
@@ -1269,6 +1269,22 @@ lobeDenHerrnDenMaechtigenKoenigDerEhrenV = \lyricmode {
   las -- set den Lob -- ge -- sang hö -- ren!
 }
 
+lobeDenHerrnDenMaechtigenKoenigDerEhrenVTwo = \lyricmode {
+<<
+  {Lo -- be den Her -- ren, der al -- les so herr -- lich re -- gie -- ret, }
+  \new Lyrics {der dich auf Ade -- lers Fit -- ti -- chen si -- cher ge -- füh -- ret, }
+>>
+ der dich er -- hält, wie es dir sel -- ber ge -- fällt; hast du nicht die -- ses ver -- spü -- ret?
+}
+
+lobeDenHerrnDenMaechtigenKoenigDerEhrenVFour = \lyricmode {
+  <<
+    {Lo -- be den Her -- ren, der dei -- nen Stand sicht -- bar ge -- seg -- net, }
+    \new Lyrics {der aus dem Him -- mel mit Strö -- men der Lie -- be ge -- reg -- net. }
+  >>
+  Den -- ke dar -- an, was der All -- mäch -- ti -- ge kann, der dir mit Lie -- be be -- geg -- net.
+}
+
 nunSingeLobDuChristenheitV = \lyricmode {
   Nun sin -- ge Lob, du Chris -- ten -- heit, dem Va -- ter, Sohn und Geist, der al -- ler -- orts und al -- le -- zeit sich gü -- tig uns er -- weist,
 }
@@ -1447,8 +1463,30 @@ gottDerDuAllesLebenSchufstV = \lyricmode {
   und al -- les Glück, das nun be -- ginnt.
 }
 
+% Gott, der du alles Leben schufst (EG 211)
+gottDerDuAllesLebenSchufstVTwo = \lyricmode {
+  Wir bit -- ten dich Herr Je -- su Christ, weil du ein Freund der Kin -- der bist, nimm dich des jun -- gen Le -- bens an, dass es be -- hü -- tet wach -- sen kann.
+}
+
+% Gott, der du alles Leben schufst (EG 211)
+gottDerDuAllesLebenSchufstVFour = \lyricmode {
+  Gott, der du durch die Tau -- fe jetzt, im Glau -- ben ei -- nen An -- fang setzt, gib auch den Mut zum nächs -- ten Schritt. Zeig uns den Weg und geh ihn mit.
+}
+
+% Gott, der du alles Leben schufst (EG 211)
+gottDerDuAllesLebenSchufstVThree = \lyricmode {
+  So seg -- ne nun auch die -- ses Kind, und die, die sei -- ne Nächs -- ten sind. Wo Schuld be -- las -- tet, Herr, ver -- zeih. Wo Angst be -- drückt mach Hoff -- nung frei.  
+}
+
 ichBinGetauftAuDdeinenNamenV = \lyricmode {
   Ich bin ge -- tauft auf dei -- nen Na -- men, Gott Va -- ter, Sohn und Heil' -- ger Geist, Ich bin ge -- zählt zu dei -- nem Sa -- men, Zum Volk, das dir ge -- hei -- ligt heißt, Ich bin in Chris -- tum ein -- ge -- senkt, Ich bin mit sei -- nem Geist be -- schenkt.
+}
+
+ichBinGetauftAuDdeinenNamenVTwo = \lyricmode {
+  Du hast zu dei -- nem Kind und Er -- ben, mein lie -- ber Va -- ter, mich er -- klärt; du hast die Frucht von dei -- nem Ster -- ben, mein treu -- er Hei -- land, mir ge -- währt; du willst in al -- ler Not und Pein, o gu -- ter Geist, mein Trös -- ter sein.
+}
+ichBinGetauftAuDdeinenNamenVFour = \lyricmode {
+  Mein treu -- er Gott, auf dei -- ner Sei -- te bleibt die -- ser Bund wohl fes -- te stehn; wenn a -- ber ich ihn ü -- ber -- schrei -- te, so lass mich nicht ver -- lo -- ren gehn; nimm mich, dein Kind, zu Gna -- den an, wenn ich hab ei -- nen Fall ge -- tan.
 }
 
 allLyricsMajor = {
