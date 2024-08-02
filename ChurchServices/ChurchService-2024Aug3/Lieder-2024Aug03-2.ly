@@ -132,8 +132,7 @@ allLyricsMajorVTwo = {
 
 allLyricsMajorVThree = {
   \lobeDenHerrnDenMaechtigenKoenigDerEhrenVFour
-  \gottDerDuAllesLebenSchufstVThree
-  \ichBinGetauftAuDdeinenNamenVThree
+
 }
 
 allLyricsMajorVFour = {
