@@ -429,7 +429,7 @@ lobeDenHerrnDenMaechtigenKoenigDerEhren = {
   \relative c' {
     \repeat volta 2 {
       \partial 2.
-      f4^"GL 392, EG 316"^"Lobe den Herren" f c' a4. g8 f4 e d c d e f g2. f
+      f4^"GL 392, EG 316, 1-4"^"Lobe den Herren" f c' a4. g8 f4 e d c d e f g2. f
     } c'4 c c d2. a4 bf c c4. bf8 a4 g2.\breathe
     c,4 d e f g a g2. f r\bar "|.|"
   }
