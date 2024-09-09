@@ -257,14 +257,14 @@ stlh = {
   }
 }
 
-dvlha = \relative c' { r16 g,_5( a b cs d e-3 fs g4-.\sf) r }
+dvlha = \relative c' { r16 g,_5( a bf c d e-3 fs g4-.\sf) r }
 
 dvlh = \relative c {
   <g g'>4 r r \clef treble <d'' a' c>(
   <g-3 bf-1>) r r \clef bass <d, a' c>
   \dvlha
-  \transpose c d \dvlha
-  <d, d'>4 r r \clef treble <a'' e' g>(
+  r16 a b cs d e fs gs a4 r
+  <d,, d'>4 r r \clef treble <a'' e' g>(
   <d-3 f-1>4-.) r r \clef bass <a, e' g>(
 
   <d_5 f_4>4-.) r r16 d'-3( f e d c-1 b a
