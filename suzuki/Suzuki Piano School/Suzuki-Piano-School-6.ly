@@ -195,7 +195,7 @@ stvrh = {
 %%% Left Hand
 
 ptlha = \relative c'' {
-  c,8-5(\p g'-1 e-3 g  c,  g' e g)
+  \clef treble c,8-5(\p g'-1 e-3 g  c,  g' e g)
   d-4 g-1 f-2 g  c,-5 g'-1 e-3 g
   c, a'-1 f-2 a  c, g'-1 e-3 g
   b,-5 g'-1 d-3 g  c,-4 g'-1 e-2 g
@@ -257,7 +257,7 @@ stlh = {
   }
 }
 
-dvlha = \relative c' { r16 g_5( a bf  c d e-3 fs g4-.\sf) r }
+dvlha = \relative c' { r16 g,_5( a b cs d e-3 fs g4-.\sf) r }
 
 dvlh = \relative c {
   <g g'>4 r r \clef treble <d'' a' c>(
