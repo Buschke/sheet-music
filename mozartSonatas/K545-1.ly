@@ -10,7 +10,7 @@
   mutopiacomposer = "MozartWA"
   mutopiainstrument = "Piano"
   style = "Classical"
-  copyright = "Creative Commons Attribution-ShareAlike 3.0"
+  copyright = "© Fingerings: Sven Buschke, 09.09.2024"
   source = "IMSLP"
   maintainer = "Alejandro Sierra"
   maintainerEmail = "algsierra@gmail.com"
