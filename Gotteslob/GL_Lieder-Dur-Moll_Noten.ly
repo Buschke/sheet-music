@@ -677,6 +677,79 @@ ichBinGetauftAuDdeinenNamen = {
   }
 }
 
+% Ins Wasser fällt ein Stein
+insWasserFaelltEinStein = {
+  \key d \major
+  \time 4/4
+  \tempo "Gemäßigt" 4 = 60
+  \relative c' {
+    \repeat volta 2 {
+      \partial 4
+      a4^"GL 365, EG 697, F-Dur"^"Ins Wasser fällt ein Stein" fs'4. e8 fs4 g a2.\breathe
+      fs4 d4. cs8 d4 g fs8 e e2
+    }
+    d4 b'4. a8 b4 cs d2 a r4
+    b a g a4. a8 d,4.\breathe
+    d8 g4 fs d4. d8 g4 fs d4.\breathe
+    d8 g4 fs e4. d8 d2.\bar "|."
+  }
+}
+
+meineHoffnungUndMeineFreudeF = {
+  \key f \major
+  \time 3/4
+  \tempo "Flotter" 4 = 60
+  \relative c' {
+    \repeat volta 2 {
+      \partial 4
+      f8^"GL 365, EG 697, F-Dur"^"Meine Hoffnung" g a4 a8 a g f d4 c\breathe
+      f8 g a4. a8 f4 g2\breathe
+      c,8 c d4. d8 \tuplet 3/2 { e8 d e } f4.\breathe
+      f8 g g a4 a8 a d bf g4.\breathe
+      g8 c a f4 f8 d f e f2
+    }
+  }
+}
+
+weisstDuWieVielSternleinStehen = {
+  \key f \major
+  \time 3/4
+  \tempo "Wiegend" 4 = 60
+  \relative c' {
+    \repeat volta 2 {
+      \partial 4
+      f8^"GL 365, EG 697, F-Dur"^"Weisst Du wie viel Sternlein" g a4 a bf8 g d' c c4\breathe
+      a8 c c bf bf4 c8 bf a2
+    }
+    c8 a a g g4 d'8 bf bf a a4\breathe
+    c8 a a g g4 d'8 bf bf a a4\breathe
+    f8 g a4 a bf8 g d'4(c)\breathe
+    a8 c c bf bf4 c8 bf a2\bar "|."
+  }
+}
+
+vomAnfangBisZumEndeHaeltGottSeineHaende = {
+  \key d \major
+  \time 4/4
+  \tempo "Wiegend" 4 = 60
+  \relative c' {
+    \partial 8
+    d8^"GL 365, EG 697, F-Dur"^"Vom Anfang bis zum Ende" fs4 d fs a b(a8) g~g4 r
+    e cs e g a(g8) fs~fs4 r
+    e8 e e4 r2
+    r r4 d e8 e e4 r2 
+    r r4 r8 d8 fs4 d fs a b(a8) g~g4 r8
+    f e4 cs e g a(g8) f~f4 r
+    e8 e e4 r2
+    r4 e fs e e1(a2) r
+    \repeat volta 2 {
+      fs8 d4. r4 a' b a8 g~g2 e8 cs4. r4
+      g' a g8 fs~fs2 g fs e d
+      \alternative {{e1 r}{d2. r8}}\bar "|."
+    } 
+  }
+}
+
 allNotesMajor = {
   \mondAufgegangen % GL 93, EG 482, F-Dur
   \nunRuhenWaelder % GL , EG, F-Dur
@@ -1487,6 +1560,107 @@ ichBinGetauftAuDdeinenNamenVTwo = \lyricmode {
 }
 ichBinGetauftAuDdeinenNamenVFour = \lyricmode {
   Mein treu -- er Gott, auf dei -- ner Sei -- te bleibt die -- ser Bund wohl fes -- te stehn; wenn a -- ber ich ihn ü -- ber -- schrei -- te, so lass mich nicht ver -- lo -- ren gehn; nimm mich, dein Kind, zu Gna -- den an, wenn ich hab ei -- nen Fall ge -- tan.
+}
+
+insWasserFaelltEinSteinV = \lyricmode {
+  <<{Ins Was -- ser fällt ein Stein
+  Ganz heim -- lich, still und lei _ -- se } \new Lyrics {
+  Und ist er noch so klein
+  Er zieht doch wei -- te Krei _ -- se}
+  >>
+  Wo Got -- tes gro -- ße Lie -- be
+  In ei -- nen Men -- schen fällt
+  Da wirkt sie fort, in Tat und Wort
+  Hin -- aus in uns -- re Welt
+}
+
+insWasserFaelltEinSteinVTwo = \lyricmode {
+  <<{Ein Fun -- ke, kaum zu se -- hen
+  Ent -- facht doch hel -- le Flam -- men } \new Lyrics {
+  Und die im Dun -- keln stehn
+  Die ruft der Schein zu -- sam -- men }
+  >>
+  Wo Got -- tes gro -- ße Lie -- be
+  In ei -- nem Men -- schen brennt
+  Da wird die Welt, vom Licht er -- hellt
+  Da bleibt nichts was uns trennt
+}
+
+insWasserFaelltEinSteinVThree = \lyricmode {
+  <<{Nimm Got -- tes Lie -- be an
+  Du brauchst dich nicht al -- lein zu mü -- hen} \new Lyrics {
+  Denn sei -- ne Lie -- be kann
+  In dei -- nem Le -- ben Krei -- se zie -- hen}
+  >>
+
+  Und füllt sie erst dein Le -- ben
+  Und setzt sie dich in Brand
+  Gehst du hin -- aus, teilst Lie -- be aus
+  Denn Gott füllt dir die Hand
+
+  Gott füllt dir die Hand
+}
+
+weisstDuWieVielSternleinStehenV = \lyricmode {
+  <<
+    {
+      Weißt du, wie viel Stern -- lein ste _ -- hen
+      An dem blau _ -- en Him -- mels -- zelt} \new Lyrics {
+        Weißt du, wie viel Wol -- ken ge _ -- hen
+        Weit -- hin ü _ -- ber al -- le Welt}>>
+        Gott der Herr _ hat sie ge -- zäh _ -- let
+        Dass ihm auch _ nicht ei -- nes feh _ -- let
+        An der gan -- zen gro -- ßen Zahl
+        An der gan _ -- zen gro -- ßen Zahl
+}
+
+weisstDuWieVielSternleinStehenVTwo = \lyricmode {
+  Weißt du, wie viel Mücklein spielen
+In der heißen Sonnenglut
+Wie viel Fischlein auch sich kühlen
+In der hellen Wasserflut
+Gott der Herr rief sie beim Namen
+Dass sie all ins Leben kamen
+Dass sie nun so fröhlich sind
+Dass sie nun so fröhlich sind
+
+Weißt du, wie viel Kinder frühe
+Stehen aus ihrem Bettlein auf
+Dass sie ohne Sorg und Mühe
+Fröhlich sind im Tageslauf
+Gott im Himmel hat an allen
+Seine Lust, sein Wohlgefallen
+Kennt auch dich und hat dich lieb
+Kennt auch dich und hat dich lieb
+
+Weißt du, wie viel Sternlein stehen
+An dem blauen Himmelszelt
+Weißt du, wie viel Wolken gehen
+Weithin über alle Welt
+}
+
+vomAnfangBisZumEndeHaeltGottSeineHaendeV = \lyricmode {
+  Vom An -- fang bis zum En -- de
+  hält Gott sei -- ne Hän -- de
+  ü -- ber mir und ü -- ber dir.
+  Ja, er hat es ver -- spro -- chen,
+  hat nie sein Wort ge -- bro -- chen:
+  'Glau -- be mir, ich bin bei dir!'
+  Im -- mer und ü -- ber -- all,
+  im -- mer und ü -- ber -- all,
+  im -- mer bin ich da! da!
+}
+
+vomAnfangBisZumEndeHaeltGottSeineHaendeVTwo = \lyricmode {
+Vom Anfang bis zum Ende 
+hält Gott seine Hände
+über mir und über dir.
+Ja, er hat es versprochen, 
+hat nie sein Wort gebrochen: 
+'Glaube mir, ich bin bei dir!'
+Immer und überall, 
+immer und überall, 
+immer bin ich da! (2x)
 }
 
 allLyricsMajor = {
