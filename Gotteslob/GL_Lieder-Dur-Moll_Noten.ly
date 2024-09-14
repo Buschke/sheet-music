@@ -686,12 +686,12 @@ insWasserFaelltEinStein = {
     \repeat volta 2 {
       \partial 4
       a4^"GL 365, EG 645, D-Dur"^"Ins Wasser fällt ein Stein" fs'4. e8 fs4 g a2.\breathe
-      fs4 d4. cs8 d4 g fs8 e e2
+      fs4 d4. cs8 d4 g fs4 e8 e8~e4
     }
     d4 b'4. a8 b4 cs d2 a r4
     b a g a4. a8 d,4.\breathe
     d8 g4 fs d4. d8 g4 fs d4.\breathe
-    d8 g4 fs e4. d8 d2.\bar "|."
+    d8 g4 fs e4 e8 d~d2.\bar "|."
   }
 }
 
