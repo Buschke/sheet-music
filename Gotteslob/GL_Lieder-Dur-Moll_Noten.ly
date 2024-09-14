@@ -739,7 +739,7 @@ vomAnfangBisZumEndeHaeltGottSeineHaende = {
     e8 e e4 r2
     r r4 d e8 e e4 r2 
     r r4 r8 d8 fs4 d fs a b(a8) g~g4 r8
-    f e4 cs e g a(g8) f~f4 r
+    fs e4 cs e g a(g8) f~f4 r
     e8 e e4 r2
     r4 e fs e e1(a2) r
     \repeat volta 2 {
