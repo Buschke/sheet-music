@@ -194,6 +194,47 @@ scoreBVerseThree = \lyricmode {
     \layout { }
     \midi { }
   }
+  \markup {
+    \fill-line {
+      \hspace #0.1 % moves the column off the left margin;
+      % can be removed if space on the page is tight
+      \column {
+        \line {
+          \bold "2."
+          \column {
+            \line{ Meine Hoffnung und meine Freude,}
+            \line{ meine Stärke, mein Licht:}
+            \line{ Christus meine Zuversicht,}
+            \line{ auf dich vertrau ich und fürcht mich nicht,}
+            \line{ auf dich vertrau ich und fürcht mich nicht.}
+          }
+        }
+        \combine \null \vspace #0.1 % adds vertical spacing between verses
+        \line {
+          \bold ""
+          \column {
+
+          }
+        }
+      }
+      \hspace #0.1 % adds horizontal spacing between columns;
+      \column {
+        \line {
+          \bold "3."
+          \column {
+            \line{ Meine Hoffnung und meine Freude,}
+            \line{ meine Stärke, mein Licht:}
+            \line{ Christus meine Zuversicht,}
+            \line{ auf dich vertrau ich und fürcht mich nicht,}
+            \line{ auf dich vertrau ich und fürcht mich nicht.}
+          }
+        }
+        \hspace #0.1 % gives some extra space on the right margin;
+        % can be removed if page space is tight
+      }
+    }
+
+  }
 }
 
 global = {
@@ -247,6 +288,64 @@ scoreCVerseThree = \lyricmode {
     \layout { }
     \midi { }
   }
+  \markup {
+    \fill-line {
+      \hspace #0.1 % moves the column off the left margin;
+      % can be removed if space on the page is tight
+      \column {
+        \line {
+          \bold "2."
+          \column {
+            \line{ Weißt du, wie viel Mücklein spielen}
+            \line{ In der heißen Sonnenglut}
+            \line{ Wie viel Fischlein auch sich kühlen}
+            \line{ In der hellen Wasserflut}
+            \line{ Gott der Herr rief sie beim Namen}
+            \line{ Dass sie all ins Leben kamen}
+            \line{ Dass sie nun so fröhlich sind}
+            \line{ Dass sie nun so fröhlich sind}
+          }
+        }
+        \combine \null \vspace #0.1 % adds vertical spacing between verses
+        \line {
+          \bold "3."
+          \column {
+            \line{ Weißt du, wie viel Kinder frühe}
+            \line{ Stehen aus ihrem Bettlein auf}
+            \line{ Dass sie ohne Sorg und Mühe}
+            \line{ Fröhlich sind im Tageslauf}
+            \line{ Gott im Himmel hat an allen}
+            \line{ Seine Lust, sein Wohlgefallen}
+            \line{ Kennt auch dich und hat dich lieb}
+            \line{ Kennt auch dich und hat dich lieb}
+          }
+        }
+      }
+      \hspace #0.1 % adds horizontal spacing between columns;
+      \column {
+        \line {
+          \bold "4. "
+          \column {
+            \line{ nicht singen?}
+            \line{ Weißt du, wie viel Sternlein stehen}
+            \line{ An dem blauen Himmelszelt}
+            \line{ Weißt du, wie viel Wolken gehen}
+            \line{ Weithin über alle Welt}
+          }
+        }
+        \combine \null \vspace #0.1 % adds vertical spacing between verses
+        \line {
+          \bold ""
+          \column {
+
+          }
+        }
+      }
+      \hspace #0.1 % gives some extra space on the right margin;
+      % can be removed if page space is tight
+    }
+  }
+
 }
 
 global = {
@@ -292,5 +391,45 @@ scoreDVerseTwo = \lyricmode {
     >>
     \layout { }
     \midi { }
+  }
+  \markup {
+    \fill-line {
+      \hspace #0.1 % moves the column off the left margin;
+      % can be removed if space on the page is tight
+      \column {
+        \line {
+          \bold "2."
+          \column {
+            \line{ Vom Anfang bis zum Ende}
+            \line{ hält Gott seine Hände}
+            \line{ über mir und über dir.}
+            \line{ Ja, er hat es versprochen,}
+            \line{ hat nie sein Wort gebrochen:}
+            \line{ 'Glaube mir, ich bin bei dir!'}
+            \line{ Immer und überall,}
+            \line{ immer und überall,}
+            \line{ immer bin ich da!}
+          }
+        }
+        \combine \null \vspace #0.1 % adds vertical spacing between verses
+        \line {
+          \bold ""
+          \column {
+
+          }
+        }
+      }
+      \hspace #0.1 % adds horizontal spacing between columns;
+      \column {
+        \line {
+          \bold ""
+          \column {
+          }
+        }
+        \hspace #0.1 % gives some extra space on the right margin;
+        % can be removed if page space is tight
+      }
+    }
+
   }
 }

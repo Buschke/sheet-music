@@ -685,7 +685,7 @@ insWasserFaelltEinStein = {
   \relative c' {
     \repeat volta 2 {
       \partial 4
-      a4^"GL 365, EG 697, F-Dur"^"Ins Wasser fällt ein Stein" fs'4. e8 fs4 g a2.\breathe
+      a4^"GL 365, EG 645, D-Dur"^"Ins Wasser fällt ein Stein" fs'4. e8 fs4 g a2.\breathe
       fs4 d4. cs8 d4 g fs8 e e2
     }
     d4 b'4. a8 b4 cs d2 a r4
@@ -718,7 +718,7 @@ weisstDuWieVielSternleinStehen = {
   \relative c' {
     \repeat volta 2 {
       \partial 4
-      f8^"GL 365, EG 697, F-Dur"^"Weisst Du wie viel Sternlein" g a4 a bf8 g d' c c4\breathe
+      f8^"GL 365, EG 511, F-Dur"^"Weißt Du, wieviel Sternlein stehen" g a4 a bf8 g d' c c4\breathe
       a8 c c bf bf4 c8 bf a2
     }
     c8 a a g g4 d'8 bf bf a a4\breathe
