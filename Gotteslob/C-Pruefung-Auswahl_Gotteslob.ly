@@ -301,24 +301,24 @@ scoreDSoprano = \relative c'' {
 scoreDAlto = \relative c' {
   \global
   % Music follows here.
-  
+  \heiligIstGottInHerrlichkeitA
 }
 
 scoreDTenor = \relative c' {
   \global
   % Music follows here.
-  
+  \heiligIstGottInHerrlichkeitT
 }
 
 scoreDBass = \relative c {
   \global
   % Music follows here.
-  
+  \heiligIstGottInHerrlichkeitB
 }
 
 scoreDVerse = \lyricmode {
   % Lyrics follow here.
-  
+  \heiligIstGottInHerrlichkeitV
 }
 
 \bookpart {

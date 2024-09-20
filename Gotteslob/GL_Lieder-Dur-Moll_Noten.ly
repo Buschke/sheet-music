@@ -181,7 +181,44 @@ alleinGottInDerHoehSeiEhrB = {
 heiligIstGottInHerrlichkeit = {
   \time 2/1
   \relative c'' {
-    g2^"Heilig ist Gott in Herrlichkeit"
+    g2^"Heilig ist Gott in Herrlichkeit" g4 g e fs g e d2 r
+    g a4 b a g a a g2 r
+    g c a b4 a g fs e2 d r
+    d' c4 b a d c2 b a r
+    c b4 a g a b c a2 g1\bar "|."
+  }
+}
+
+heiligIstGottInHerrlichkeitA = {
+  \time 2/1
+  \relative c' {
+    d2 d4 b c d d a a2 r
+    d d e c4 d b2 r
+    d c d d b4 d2 cs4 d2 r
+    g g fs4 g g1 fs2 r
+    a fs d g2. fs4 d1\bar "|."
+  }
+}
+
+heiligIstGottInHerrlichkeitT = {
+  \time 2/1
+  \relative c' {
+    b2 g g4 a g2 fs r
+    g fs e e4 fs g2 r
+    b g a g4 fs g2 a fs r
+    d' e4 d d2 e d d r
+     e d d d4 e d2 b1\bar "|."
+  }
+}
+
+heiligIstGottInHerrlichkeitB = {
+  \time 2/1
+  \relative c {
+    g2 b4 g c2 b4 cs d2 r
+    b d4 b c2 a4 d g,2 r
+     g' e fs g4 d e2 a, d r
+     b c4 g d' b c2 g d' r
+     a d b g4 c d2 g,1\bar "|."
   }
 }
 
@@ -1173,6 +1210,15 @@ lammGottesV = \lyricmode {
 % GL 170, EG 179
 alleinGottInDerHoehSeiEhrV = \lyricmode {
   <<{Al -- lein Gott in der Höh sei Ehr und Dank für sei -- ne Gna -- de, } \new Lyrics {dar -- um dass nun und nim -- mer -- mehr uns rüh -- ren kann kein Scha -- de. }>> Ein Wohl -- ge -- fall -- en Gott an uns hat; nun ist groß Fried ohn Un -- ter -- lass, all Fehd hat nun ein En -- de.
+}
+
+% GL 199, EG xx, G-Dur
+heiligIstGottInHerrlichkeitV = \lyricmode {
+  Hei -- lig ist Gott in Herr -- lich -- keit;
+  sein Ruhm er -- füllt die Him -- mel weit.
+  Lob -- sin -- get, ju -- belt ihm Ho -- san -- na.
+  Preis ihm, der kommt in uns -- re Zeit.
+  Lob -- sin -- get, ju -- belt ihm. Ho -- san -- na.
 }
 
 % GL 208, EG 190.2
