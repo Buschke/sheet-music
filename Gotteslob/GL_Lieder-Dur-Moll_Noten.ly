@@ -20,6 +20,79 @@ mondAufgegangen = {
   }
 }
 
+mondAufgegangenS = {
+  \key f \major
+  \time 4/4
+  \tempo "Gemächlich" 4=100
+  \relative c' {
+    \partial 4
+    f4^"GL 93, EG 482, F-Dur"^"Der Mond ist aufgegangen"
+    g f bf a g2 f4\breathe
+    a a a d c bf2 a4\breathe
+    a a a bf a
+    g2 r4
+    f4
+    g f bf a g2 f4\breathe
+    a a a d c bf2 a4\breathe
+    a a a bf a    g g f
+    \bar "|.|"
+  }
+}
+
+mondAufgegangenA = {
+  \key f \major
+  \time 4/4
+  \tempo "Gemächlich" 4=100
+  \relative c' {
+    \partial 4
+    c4
+    c a f'8 e f4 f e c\breathe
+    g' f2 f~f4 e f\breathe
+    g f1 e2 r4
+    c
+    c
+    d d8 e f4 f e f\breathe
+    cs d ef f f f e f\breathe
+    g f1~f4 e c\bar "|."
+  }
+}
+
+mondAufgegangenT = {
+  \key f \major
+  \time 4/4
+  \tempo "Gemächlich" 4=100
+  \relative c' {
+    \partial 4
+    a4
+    e f g c d c8 bf a4\breathe
+    cs d ef bf c d c2\breathe
+    cs4 d ef d c c2 r4
+    a
+    g a bf c d c8 bf a4\breathe
+    g f c' bf c d c~c\breathe
+    cs d ef d2 g,8 a bf4 a\bar "|."
+  }
+}
+
+mondAufgegangenB = {
+  \key f \major
+  \time 4/4
+  \tempo "Gemächlich" 4=100
+  \relative c {
+    \repeat volta 2 {
+      \partial 4
+      f4
+      c d g, a bf c f\breathe
+      e d c bf a g c f\breathe
+      e d c bf f c'2 r4 f
+      e d g, a bf c d\breathe
+      e f f, bf a g c f\breathe
+      e d c bf b
+      c2 f4\bar"|."
+    }
+  }
+}
+
 % GL 101, EG 477, F-Dur
 nunRuhenWaelder = {
   \time 4/4
@@ -57,6 +130,58 @@ alleinGottInDerHoehSeiEhr = {
     } f4 f2 g4 bf bf a g2 f4 g2\breathe
     g4 a2 bf4 c2 bf4 a2 g4 a2\breathe
     f4 g2 bf4 a2 g4 f2(e4) f2\bar "|.|"
+  }
+}
+
+alleinGottInDerHoehSeiEhrA = {
+  \time 3/1
+  \relative c' {
+    \repeat volta 2 {
+      \partial 4
+      c4
+      f2 f4 g f2 f e4 f2\breathe
+      f4 e f2 e4 f e d bf c c2
+    }
+    c4 d2 d4 d e f~f e d c2\breathe
+    e4 f2 f4 g f2 f d4 e2\breathe
+    f4 e d e f2 e4 d b c c2\bar "|."
+  }
+}
+
+alleinGottInDerHoehSeiEhrT = {
+  \time 3/1
+  \relative c' {
+    \repeat volta 2 {
+      \partial 4
+      a4 c d2 c4 a d c2 c4 c2\breathe
+      d4 a d2 bf4 c c a f g a2
+    }
+    a4 a bf2 bf c4 c2 a4 g2\breathe
+    c4 c d2 c4 a d d2 d4 cs2\breathe
+    c4 bf2 bf4 c2 c4 a f g a2\bar "|."
+  }
+}
+
+alleinGottInDerHoehSeiEhrB = {
+  \time 3/1
+  \relative c, {
+    \repeat volta 2 {
+      \partial 4
+      f4
+      f' d2 e4 f2 a,4 bf c f,2\breathe
+      d'4 cs d bf g a c d2 c4 f,2
+    }
+    f'4 d bf2 g a4 c2 d4 e2\breathe
+    c4 f d2 e4 f2 d4 c bf a2\breathe
+    a4 g2 g4 a bf c d2 c4 f,2\bar "|."
+  }
+}
+
+% GL 199, EG xx, G-Dur
+heiligIstGottInHerrlichkeit = {
+  \time 2/1
+  \relative c'' {
+    g2^"Heilig ist Gott in Herrlichkeit"
   }
 }
 
@@ -556,7 +681,7 @@ ubiCaritas = {
 % Eingangs-Lied: EG 455, 1-3, Morgenlicht leuchtet, C-Dur
 morgenLichtLeuchtet = {
   \transpose c f {
-  % \transpose f f {
+    % \transpose f f {
     \key c \major
     \time 9/4
     \tempo "Gemächlich" 4.=100
@@ -590,7 +715,7 @@ sonneDerGerechtigkeit = {
 % Wochen-Lied: EG 321, 1-3, Nun danket alle Gott, Es-Dur
 nunDanketAlleGott = {
   \transpose ef f {
-  % \transpose f f {
+    % \transpose f f {
     \key ef \major
     \time 4/4
     \tempo "Getragen" 4=100
@@ -613,7 +738,7 @@ nunDanketAlleGott = {
 % Predigt-Lied: KAA 057, 1-3, Licht der Liebe, Lebenslicht, G-Dur
 lichtDerLiebeLebenslicht = {
   \transpose g f {
-  % \transpose f f {
+    % \transpose f f {
     \key g \major
     \time 4/4
     \tempo "Flott" 4=150
@@ -633,7 +758,7 @@ lichtDerLiebeLebenslicht = {
 % Schlussvers EG 170, 1-4, Komm, Herr, segne uns, G-Dur
 kommHerrSegneUns = {
   \transpose g f {
-  % \transpose f f {
+    % \transpose f f {
     \key g \major
     \time 2/2
     \tempo "Getragen" 2=50
@@ -737,7 +862,7 @@ vomAnfangBisZumEndeHaeltGottSeineHaende = {
     d8^"GL 365, EG 697, F-Dur"^"Vom Anfang bis zum Ende" fs4 d fs a b(a8) g~g4 r
     e cs e g a(g8) fs~fs4 r
     e8 e e4 r2
-    r r4 d e8 e e4 r2 
+    r r4 d e8 e e4 r2
     r r4 r8 d8 fs4 d fs a b(a8) g~g4 r8
     fs e4 cs e g a(g8) fs~fs4 r
     e8 e e4 r2
@@ -746,7 +871,7 @@ vomAnfangBisZumEndeHaeltGottSeineHaende = {
       fs8 d4. r4 a' b a8 g~g2 e8 cs4. r4
       g' a g8 fs~fs2 g fs e d
       \alternative {{e1 r}{d2. r8}}\bar "|."
-    } 
+    }
   }
 }
 
@@ -1023,7 +1148,9 @@ allNotesMinor = {
 % GL 93, EG 482
 mondAufgegangenAV = \lyricmode {Der Mond ist auf -- ge -- gan -- gen, die gold -- nen Stern -- lein pran -- gen am Him -- mel hell und klar \repeat unfold 1 { \skip 1 \skip 1 \skip 1 }}
 
-mondAufgegangenBV = \lyricmode {Der Wald steht schwarz ud schwei -- get und aus den Wie -- sen stei -- get der wei -- ße Ne -- bel \repeat unfold 1 { \skip 1 } wun -- der -- bar }
+mondAufgegangenBAV = \lyricmode {Der Mond ist auf -- ge -- gan -- gen, die gold -- nen Stern -- lein pran -- gen am Him -- mel hell und klar }
+
+mondAufgegangenBBV = \lyricmode {Der Wald steht schwarz ud schwei -- get und aus den Wie -- sen stei -- get der wei -- ße Ne -- bel  wun -- der -- bar }
 
 % GL 101, EG 477
 nunRuhenWaelderV = \lyricmode {
@@ -1343,11 +1470,11 @@ lobeDenHerrnDenMaechtigenKoenigDerEhrenV = \lyricmode {
 }
 
 lobeDenHerrnDenMaechtigenKoenigDerEhrenVTwo = \lyricmode {
-<<
-  {Lo -- be den Her -- ren, der al -- les so herr -- lich re -- gie -- ret, }
-  \new Lyrics {der dich auf Ade -- lers Fit -- ti -- chen si -- cher ge -- füh -- ret, }
->>
- der dich er -- hält, wie es dir sel -- ber ge -- fällt; hast du nicht die -- ses ver -- spü -- ret?
+  <<
+    {Lo -- be den Her -- ren, der al -- les so herr -- lich re -- gie -- ret, }
+    \new Lyrics {der dich auf Ade -- lers Fit -- ti -- chen si -- cher ge -- füh -- ret, }
+  >>
+  der dich er -- hält, wie es dir sel -- ber ge -- fällt; hast du nicht die -- ses ver -- spü -- ret?
 }
 
 lobeDenHerrnDenMaechtigenKoenigDerEhrenVFour = \lyricmode {
@@ -1480,7 +1607,7 @@ morgenLichtLeuchtetV = \lyricmode {
   Mor -- gen -- licht leuch -- tet, rein wie am An -- fang. Früh -- lied der Am -- sel, Schöp -- fer -- lob klingt. Dank für die Lie -- der, Dank für den Mor -- gen, Dank für das Wort, dem bei -- des ent -- springt.
 }
 
-% Eingangs-Lied: EG 326, 1-2, 6-7, D-Dur 
+% Eingangs-Lied: EG 326, 1-2, 6-7, D-Dur
 sonneDerGerechtigkeitV = \lyricmode {
   Son -- ne der Ge -- rech -- tig -- keit,
   ge -- he auf zu uns -- rer Zeit;
@@ -1548,7 +1675,7 @@ gottDerDuAllesLebenSchufstVFour = \lyricmode {
 
 % Gott, der du alles Leben schufst (EG 211)
 gottDerDuAllesLebenSchufstVThree = \lyricmode {
-  So seg -- ne nun auch die -- ses Kind, und die, die sei -- ne Nächs -- ten sind. Wo Schuld be -- las -- tet, Herr, ver -- zeih. Wo Angst be -- drückt mach Hoff -- nung frei.  
+  So seg -- ne nun auch die -- ses Kind, und die, die sei -- ne Nächs -- ten sind. Wo Schuld be -- las -- tet, Herr, ver -- zeih. Wo Angst be -- drückt mach Hoff -- nung frei.
 }
 
 ichBinGetauftAuDdeinenNamenV = \lyricmode {
@@ -1563,153 +1690,162 @@ ichBinGetauftAuDdeinenNamenVFour = \lyricmode {
 }
 
 insWasserFaelltEinSteinV = \lyricmode {
-  <<{Ins Was -- ser fällt ein Stein
-  Ganz heim -- lich, still und lei _ -- se } \new Lyrics {
-  Und ist er noch so klein
-  Er zieht doch wei -- te Krei _ -- se}
-  >>
-  Wo Got -- tes gro -- ße Lie -- be
-  In ei -- nen Men -- schen fällt
-  Da wirkt sie fort, in Tat und Wort
-  Hin -- aus in uns -- re Welt
-}
-
-insWasserFaelltEinSteinVTwo = \lyricmode {
-  <<{Ein Fun -- ke, kaum zu se -- hen
-  Ent -- facht doch hel -- le Flam -- men } \new Lyrics {
-  Und die im Dun -- keln stehn
-  Die ruft der Schein zu -- sam -- men }
-  >>
-  Wo Got -- tes gro -- ße Lie -- be
-  In ei -- nem Men -- schen brennt
-  Da wird die Welt, vom Licht er -- hellt
-  Da bleibt nichts was uns trennt
-}
-
-insWasserFaelltEinSteinVThree = \lyricmode {
-  <<{Nimm Got -- tes Lie -- be an
-  Du brauchst dich nicht al -- lein zu mü -- hen} \new Lyrics {
-  Denn sei -- ne Lie -- be kann
-  In dei -- nem Le -- ben Krei -- se zie -- hen}
-  >>
-
-  Und füllt sie erst dein Le -- ben
-  Und setzt sie dich in Brand
-  Gehst du hin -- aus, teilst Lie -- be aus
-  Denn Gott füllt dir die Hand
-
-  Gott füllt dir die Hand
-}
-
-weisstDuWieVielSternleinStehenV = \lyricmode {
   <<
     {
-      Weißt du, wie viel Stern -- lein ste _ -- hen
-      An dem blau _ -- en Him -- mels -- zelt} \new Lyrics {
-        Weißt du, wie viel Wol -- ken ge _ -- hen
-        Weit -- hin ü _ -- ber al -- le Welt}>>
-        Gott der Herr _ hat sie ge -- zäh _ -- let
-        Dass ihm auch _ nicht ei -- nes feh _ -- let
-        An der gan -- zen gro -- ßen Zahl
-        An der gan _ -- zen gro -- ßen Zahl
-}
+      Ins Was -- ser fällt ein Stein
+      Ganz heim -- lich, still und lei _ -- se
+    } \new Lyrics {
+      Und ist er noch so klein
+      Er zieht doch wei -- te Krei _ -- se}
+    >>
+    Wo Got -- tes gro -- ße Lie -- be
+    In ei -- nen Men -- schen fällt
+    Da wirkt sie fort, in Tat und Wort
+    Hin -- aus in uns -- re Welt
+  }
 
-weisstDuWieVielSternleinStehenVTwo = \lyricmode {
-  Weißt du, wie viel Mücklein spielen
-In der heißen Sonnenglut
-Wie viel Fischlein auch sich kühlen
-In der hellen Wasserflut
-Gott der Herr rief sie beim Namen
-Dass sie all ins Leben kamen
-Dass sie nun so fröhlich sind
-Dass sie nun so fröhlich sind
+  insWasserFaelltEinSteinVTwo = \lyricmode {
+    <<
+      {
+        Ein Fun -- ke, kaum zu se -- hen
+        Ent -- facht doch hel -- le Flam -- men
+      } \new Lyrics {
+        Und die im Dun -- keln stehn
+        Die ruft der Schein zu -- sam -- men
+      }
+    >>
+    Wo Got -- tes gro -- ße Lie -- be
+    In ei -- nem Men -- schen brennt
+    Da wird die Welt, vom Licht er -- hellt
+    Da bleibt nichts was uns trennt
+  }
 
-Weißt du, wie viel Kinder frühe
-Stehen aus ihrem Bettlein auf
-Dass sie ohne Sorg und Mühe
-Fröhlich sind im Tageslauf
-Gott im Himmel hat an allen
-Seine Lust, sein Wohlgefallen
-Kennt auch dich und hat dich lieb
-Kennt auch dich und hat dich lieb
+  insWasserFaelltEinSteinVThree = \lyricmode {
+    <<
+      {
+        Nimm Got -- tes Lie -- be an
+        Du brauchst dich nicht al -- lein zu mü -- hen} \new Lyrics {
+          Denn sei -- ne Lie -- be kann
+          In dei -- nem Le -- ben Krei -- se zie -- hen}
+        >>
 
-Weißt du, wie viel Sternlein stehen
-An dem blauen Himmelszelt
-Weißt du, wie viel Wolken gehen
-Weithin über alle Welt
-}
+        Und füllt sie erst dein Le -- ben
+        Und setzt sie dich in Brand
+        Gehst du hin -- aus, teilst Lie -- be aus
+        Denn Gott füllt dir die Hand
 
-vomAnfangBisZumEndeHaeltGottSeineHaendeV = \lyricmode {
-  Vom An -- fang bis zum En -- de
-  hält Gott sei -- ne Hän -- de
-  ü -- ber mir und ü -- ber dir.
-  Ja, er hat es ver -- spro -- chen,
-  hat nie sein Wort ge -- bro -- chen:
-  'Glau -- be mir, ich bin bei dir!'
-  Im -- mer und ü -- ber -- all,
-  im -- mer und ü -- ber -- all,
-  im -- mer bin ich da! da!
-}
+        Gott füllt dir die Hand
+      }
 
-vomAnfangBisZumEndeHaeltGottSeineHaendeVTwo = \lyricmode {
-Vom Anfang bis zum Ende 
-hält Gott seine Hände
-über mir und über dir.
-Ja, er hat es versprochen, 
-hat nie sein Wort gebrochen: 
-'Glaube mir, ich bin bei dir!'
-Immer und überall, 
-immer und überall, 
-immer bin ich da! (2x)
-}
+      weisstDuWieVielSternleinStehenV = \lyricmode {
+        <<
+          {
+            Weißt du, wie viel Stern -- lein ste _ -- hen
+            An dem blau _ -- en Him -- mels -- zelt} \new Lyrics {
+              Weißt du, wie viel Wol -- ken ge _ -- hen
+              Weit -- hin ü _ -- ber al -- le Welt}>>
+              Gott der Herr _ hat sie ge -- zäh _ -- let
+              Dass ihm auch _ nicht ei -- nes feh _ -- let
+              An der gan -- zen gro -- ßen Zahl
+              An der gan _ -- zen gro -- ßen Zahl
+            }
 
-allLyricsMajor = {
-  \mondAufgegangenAV
-  \nunRuhenWaelderV
-  \lammGottesV
-  \alleinGottInDerHoehSeiEhrV
-  \christeDuLammGottesV
-  \wirSagenEuchAnDenLiebenAdventV
-  \adesteFidelesV
-  \inDulciJubiloV
-  \nunBittenWirDenHeiligenGeistV
-  \meineHoffnungUndMeineFreudeV
-  \grosserGottWirLobenDichV
-  \lobeDenHerrnDenMaechtigenKoenigDerEhrenV
-  \nunSingeLobDuChristenheitV
-  \naeherMeinGottZuDirV
-  \wohlDenenDieDaWandelnV
-  \amazingGraceV
-  \americaV
-  \awayInAMangerV
-  \goTellItOnTheMountainsV
-  \harkTheHeraldAngelsSingV
-  \loHowARoseEerBloomingV
-  \thisIsMySongV
-  \toJesusChristOurSovereignKingV
-  \ubiCaritasV
-  \machtHochDieTuerV % GL 218, EG, Es-Dur
-  \tochterZionV % GL 228, EG, D-Dur
-  \vomHimmelHochV % GL 237, EG, C-Dur
-  \oDuFroehlicheV % GL 238, EG, D-Dur
-  \esIstEinRosEntsprungenV % GL 243, EG, Es-Dur
-  \lobtGottIhrChristenAlleGleichV % GL 247, EG, Es-Dur
-  \ihrKinderleinKommetV % GL 248, EG, C-Dur
-  \stilleNachtV % GL 249, EG, B-Dur
-  \oMenschBeweinDeinSuendeGrossV % GL 267, EG, C-Dur
-  \wirWollenAlleFroehlichSeinV % GL, EG
-  \wieSchoenLeuchtetDerMorgensternV % GL, EG
-  \heiligV % GL, EG
-  \wasGottTutDasIstWohlgetanV % GL, EG
-  \wachetAufRuftUnsDieStimmeV % GL, EG
-  \bayernliedV % GL, EG
-  \americaTheBeautifulV % GL, EG
-  \morgenLichtLeuchtetV % GL , EG 455, 1-3, C-Dur
-  \sonneDerGerechtigkeitV % GL, EG 326, 1-2, 6-7, D-Dur
-  \nunDanketAlleGottV % GL , EG 321, 1-3, Es-Dur
-  \lichtDerLiebeLebenslichtV % KAA 057, 1-3, G-Dur
-  \kommHerrSegneUnsV % GL , EG 170, 1-4, G-Dur
-}
+            weisstDuWieVielSternleinStehenVTwo = \lyricmode {
+              Weißt du, wie viel Mücklein spielen
+              In der heißen Sonnenglut
+              Wie viel Fischlein auch sich kühlen
+              In der hellen Wasserflut
+              Gott der Herr rief sie beim Namen
+              Dass sie all ins Leben kamen
+              Dass sie nun so fröhlich sind
+              Dass sie nun so fröhlich sind
+
+              Weißt du, wie viel Kinder frühe
+              Stehen aus ihrem Bettlein auf
+              Dass sie ohne Sorg und Mühe
+              Fröhlich sind im Tageslauf
+              Gott im Himmel hat an allen
+              Seine Lust, sein Wohlgefallen
+              Kennt auch dich und hat dich lieb
+              Kennt auch dich und hat dich lieb
+
+              Weißt du, wie viel Sternlein stehen
+              An dem blauen Himmelszelt
+              Weißt du, wie viel Wolken gehen
+              Weithin über alle Welt
+            }
+
+            vomAnfangBisZumEndeHaeltGottSeineHaendeV = \lyricmode {
+              Vom An -- fang bis zum En -- de
+              hält Gott sei -- ne Hän -- de
+              ü -- ber mir und ü -- ber dir.
+              Ja, er hat es ver -- spro -- chen,
+              hat nie sein Wort ge -- bro -- chen:
+              'Glau -- be mir, ich bin bei dir!'
+              Im -- mer und ü -- ber -- all,
+              im -- mer und ü -- ber -- all,
+              im -- mer bin ich da! da!
+            }
+
+            vomAnfangBisZumEndeHaeltGottSeineHaendeVTwo = \lyricmode {
+              Vom Anfang bis zum Ende
+              hält Gott seine Hände
+              über mir und über dir.
+              Ja, er hat es versprochen,
+              hat nie sein Wort gebrochen:
+              'Glaube mir, ich bin bei dir!'
+              Immer und überall,
+              immer und überall,
+              immer bin ich da! (2x)
+            }
+
+            allLyricsMajor = {
+              \mondAufgegangenAV
+              \nunRuhenWaelderV
+              \lammGottesV
+              \alleinGottInDerHoehSeiEhrV
+              \christeDuLammGottesV
+              \wirSagenEuchAnDenLiebenAdventV
+              \adesteFidelesV
+              \inDulciJubiloV
+              \nunBittenWirDenHeiligenGeistV
+              \meineHoffnungUndMeineFreudeV
+              \grosserGottWirLobenDichV
+              \lobeDenHerrnDenMaechtigenKoenigDerEhrenV
+              \nunSingeLobDuChristenheitV
+              \naeherMeinGottZuDirV
+              \wohlDenenDieDaWandelnV
+              \amazingGraceV
+              \americaV
+              \awayInAMangerV
+              \goTellItOnTheMountainsV
+              \harkTheHeraldAngelsSingV
+              \loHowARoseEerBloomingV
+              \thisIsMySongV
+              \toJesusChristOurSovereignKingV
+              \ubiCaritasV
+              \machtHochDieTuerV % GL 218, EG, Es-Dur
+              \tochterZionV % GL 228, EG, D-Dur
+              \vomHimmelHochV % GL 237, EG, C-Dur
+              \oDuFroehlicheV % GL 238, EG, D-Dur
+              \esIstEinRosEntsprungenV % GL 243, EG, Es-Dur
+              \lobtGottIhrChristenAlleGleichV % GL 247, EG, Es-Dur
+              \ihrKinderleinKommetV % GL 248, EG, C-Dur
+              \stilleNachtV % GL 249, EG, B-Dur
+              \oMenschBeweinDeinSuendeGrossV % GL 267, EG, C-Dur
+              \wirWollenAlleFroehlichSeinV % GL, EG
+              \wieSchoenLeuchtetDerMorgensternV % GL, EG
+              \heiligV % GL, EG
+              \wasGottTutDasIstWohlgetanV % GL, EG
+              \wachetAufRuftUnsDieStimmeV % GL, EG
+              \bayernliedV % GL, EG
+              \americaTheBeautifulV % GL, EG
+              \morgenLichtLeuchtetV % GL , EG 455, 1-3, C-Dur
+              \sonneDerGerechtigkeitV % GL, EG 326, 1-2, 6-7, D-Dur
+              \nunDanketAlleGottV % GL , EG 321, 1-3, Es-Dur
+              \lichtDerLiebeLebenslichtV % KAA 057, 1-3, G-Dur
+              \kommHerrSegneUnsV % GL , EG 170, 1-4, G-Dur
+            }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1719,476 +1855,476 @@ allLyricsMajor = {
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% GL 224, EG
-mariaDurchEinDornwaldGingV = \lyricmode {
-  Ma -- ri _ -- a durch ein Dorn -- wald _ ging, _
-  Ky -- rie e -- lei -- son.
-  Ma _ -- ri -- a durch ein _ Dorn -- wald ging,
-  der _ hat _ in sie -- ben Jahrn kein Laub _ ge -- tra -- gen.
-  Je -- sus und Ma -- ri _ -- a.
-}
+            % GL 224, EG
+            mariaDurchEinDornwaldGingV = \lyricmode {
+              Ma -- ri _ -- a durch ein Dorn -- wald _ ging, _
+              Ky -- rie e -- lei -- son.
+              Ma _ -- ri -- a durch ein _ Dorn -- wald ging,
+              der _ hat _ in sie -- ben Jahrn kein Laub _ ge -- tra -- gen.
+              Je -- sus und Ma -- ri _ -- a.
+            }
 
-% GL 256, EG
-ichStehAnDeinerKrippeHierV = \lyricmode {
-  <<
-    {
-      Ich steh an dei -- ner Krip -- pen hier,
-      o Je -- su, du mein Le -- ben;
-    }
-    \new Lyrics {
-      ich kom -- me, bring und schen -- ke dir,
-      was du mir hast ge -- ge -- ben.
-    }
-  >>
-  Nimm hin, es ist mein Geist und Sinn,
-  Herz, Seel und Mut, nimm al -- les hin
-  und lass dir’s wohl _ -- ge _ -- fal -- len.
-}
+            % GL 256, EG
+            ichStehAnDeinerKrippeHierV = \lyricmode {
+              <<
+                {
+                  Ich steh an dei -- ner Krip -- pen hier,
+                  o Je -- su, du mein Le -- ben;
+                }
+                \new Lyrics {
+                  ich kom -- me, bring und schen -- ke dir,
+                  was du mir hast ge -- ge -- ben.
+                }
+              >>
+              Nimm hin, es ist mein Geist und Sinn,
+              Herz, Seel und Mut, nimm al -- les hin
+              und lass dir’s wohl _ -- ge _ -- fal -- len.
+            }
 
-% GL 290
-herzliebsterJesuWasHastDuVerbrochenV = \lyricmode {
-  Herz -- liebs -- ter Je -- su, was hast Du ver -- bro -- chen,
-  dass man ein solch scharf Ur -- teil hat ge -- spro -- chen?
-  Was ist die Schuld, in was für Miss -- e -- ta -- ten
-  bist Du ge -- ra -- ten?
-}
+            % GL 290
+            herzliebsterJesuWasHastDuVerbrochenV = \lyricmode {
+              Herz -- liebs -- ter Je -- su, was hast Du ver -- bro -- chen,
+              dass man ein solch scharf Ur -- teil hat ge -- spro -- chen?
+              Was ist die Schuld, in was für Miss -- e -- ta -- ten
+              bist Du ge -- ra -- ten?
+            }
 
-%
-oTraurigkeitOHerzeleidV = \lyricmode {
-  O Trau -- rig -- keit,
-  o Her -- ze -- leid!
-  Ist das nicht zu be -- kla -- gen?
-  Gott, des Va -- ter ei -- nig Kind,
-  wird ins Grab ge -- tra -- gen.
-}
+            %
+            oTraurigkeitOHerzeleidV = \lyricmode {
+              O Trau -- rig -- keit,
+              o Her -- ze -- leid!
+              Ist das nicht zu be -- kla -- gen?
+              Gott, des Va -- ter ei -- nig Kind,
+              wird ins Grab ge -- tra -- gen.
+            }
 
-%
-kommOTroesterHeilgerGeistV = \lyricmode {
-  Komm, o Trös -- ter, Heil -- ger Geist,
-  Licht, das uns den Tag ver -- heißt,
-  Quell, der uns mit Ga -- ben speist.
-}
+            %
+            kommOTroesterHeilgerGeistV = \lyricmode {
+              Komm, o Trös -- ter, Heil -- ger Geist,
+              Licht, das uns den Tag ver -- heißt,
+              Quell, der uns mit Ga -- ben speist.
+            }
 
-%
-befiehlDuDeineWegeV = \lyricmode {
-  <<
-    {
-      Be -- fiehl du dei -- ne We -- ge
-      und was dein Her -- ze kränkt
-    }
-    \new Lyrics {
-      der al -- ler -- treus -- ten Pfle -- ge
-      des, der den Him -- mel lenkt.
-    }
-  >>
-  Der Wol -- ken, Luft und Win -- den
-  gibt We -- ge, Lauf und Bahn,
-  der wird auch We -- ge fin -- den,
-  da dein Fuß ge -- hen kann.
-}
+            %
+            befiehlDuDeineWegeV = \lyricmode {
+              <<
+                {
+                  Be -- fiehl du dei -- ne We -- ge
+                  und was dein Her -- ze kränkt
+                }
+                \new Lyrics {
+                  der al -- ler -- treus -- ten Pfle -- ge
+                  des, der den Him -- mel lenkt.
+                }
+              >>
+              Der Wol -- ken, Luft und Win -- den
+              gibt We -- ge, Lauf und Bahn,
+              der wird auch We -- ge fin -- den,
+              da dein Fuß ge -- hen kann.
+            }
 
-%
-werNurDenLiebenGotLaesstWaltenV = \lyricmode {
-  <<
-    {
-      Wer nur den lie -- ben Gott lässt _ wal -- ten
-      Und hof -- fet auf Ihn al -- le -- zeit
-    }
-    \new Lyrics {
-      Der wird Ihn wun -- der -- lich er _ -- hal -- ten
-      In al -- ler Noht und Trau -- rig -- keit.
-    }
-  >>
-  Wer Gott dem Al -- ler -- höchs -- ten traut
-  Der hat auf kei -- nen _ Sand ge -- baut.
-}
+            %
+            werNurDenLiebenGotLaesstWaltenV = \lyricmode {
+              <<
+                {
+                  Wer nur den lie -- ben Gott lässt _ wal -- ten
+                  Und hof -- fet auf Ihn al -- le -- zeit
+                }
+                \new Lyrics {
+                  Der wird Ihn wun -- der -- lich er _ -- hal -- ten
+                  In al -- ler Noht und Trau -- rig -- keit.
+                }
+              >>
+              Wer Gott dem Al -- ler -- höchs -- ten traut
+              Der hat auf kei -- nen _ Sand ge -- baut.
+            }
 
-%
-herrGibUnsMutZumHoerenV = \lyricmode {
-  Herr, gib uns Mut zum Hö -- ren auf das, was du uns sagst.
-  Wir dan -- ken dir, dass du es mit uns wagst.
-}
+            %
+            herrGibUnsMutZumHoerenV = \lyricmode {
+              Herr, gib uns Mut zum Hö -- ren auf das, was du uns sagst.
+              Wir dan -- ken dir, dass du es mit uns wagst.
+            }
 
-%
-christJesusLayInDeathsStrongBandsV = \lyricmode {
-  Christ Je -- sus lay in death’s strong bands,
-  for our of -- fens -- es giv -- en;
-  but now at God’s right hand He stands
-  and brings us light from heav -- en.
-  There -- fore let us joy -- ful be
-  and sing to God right thank -- ful -- ly
-  loud songs of hal -- le -- lu -- jah.
-  Hal -- le -- lu -- jah!
-}
+            %
+            christJesusLayInDeathsStrongBandsV = \lyricmode {
+              Christ Je -- sus lay in death’s strong bands,
+              for our of -- fens -- es giv -- en;
+              but now at God’s right hand He stands
+              and brings us light from heav -- en.
+              There -- fore let us joy -- ful be
+              and sing to God right thank -- ful -- ly
+              loud songs of hal -- le -- lu -- jah.
+              Hal -- le -- lu -- jah!
+            }
 
-%
-elDiosDePazV = \lyricmode {
-  El Dios de paz, el Ver -- bo_e -- ter -- no,
-  en nes -- tras al -- mas va_a mo -- rar;
-  Él es la luz, ca -- mi -- no_y vi -- da,
-  gra -- cia_y per -- dón pa -- ra_el mor -- tal.
-  Ven, Sal -- va -- dor, ven sin tar -- dar,
-  tu pue -- blo san -- to es -- pe -- ran -- do_es -- tá.
-}
+            %
+            elDiosDePazV = \lyricmode {
+              El Dios de paz, el Ver -- bo_e -- ter -- no,
+              en nes -- tras al -- mas va_a mo -- rar;
+              Él es la luz, ca -- mi -- no_y vi -- da,
+              gra -- cia_y per -- dón pa -- ra_el mor -- tal.
+              Ven, Sal -- va -- dor, ven sin tar -- dar,
+              tu pue -- blo san -- to es -- pe -- ran -- do_es -- tá.
+            }
 
-%
-fromAllThySaintsInWarfareV = \lyricmode {
-  From all Thy saints in war­ -- fare,
-  For all Thy saints at rest,
-  To Thee, O bless -- ­èd Je -- ­sus,
-  All prais -- ­es be ad -- ­dressed;
-  Thou, Lord, didst win the bat -- ­tle,
-  That they might con -- ­quer­ors be;
-  Their crowns of liv -- ­ing glo -- ­ry
-  Are lit with rays from Thee.
-}
+            %
+            fromAllThySaintsInWarfareV = \lyricmode {
+              From all Thy saints in war­ -- fare,
+              For all Thy saints at rest,
+              To Thee, O bless -- ­èd Je -- ­sus,
+              All prais -- ­es be ad -- ­dressed;
+              Thou, Lord, didst win the bat -- ­tle,
+              That they might con -- ­quer­ors be;
+              Their crowns of liv -- ­ing glo -- ­ry
+              Are lit with rays from Thee.
+            }
 
-%
-saviorOfTheNationsComeV = \lyricmode {
-  Sav -- ior of the na -- tions, come;
-  vir -- gin's Son, make here Thy home!
-  Mar -- vel now, O heav'n and earth,
-  that the Lord chose such a birth.
-}
+            %
+            saviorOfTheNationsComeV = \lyricmode {
+              Sav -- ior of the na -- tions, come;
+              vir -- gin's Son, make here Thy home!
+              Mar -- vel now, O heav'n and earth,
+              that the Lord chose such a birth.
+            }
 
-%
-theGloryOfTheseFortyDaysV = \lyricmode {
-  The glo -- ry of these for -- ty days
-  we cel -- e -- brate with songs of praise,
-  for Christ, by whom all things were made,
-  him -- self has fast -- ed and has prayed.
-}
+            %
+            theGloryOfTheseFortyDaysV = \lyricmode {
+              The glo -- ry of these for -- ty days
+              we cel -- e -- brate with songs of praise,
+              for Christ, by whom all things were made,
+              him -- self has fast -- ed and has prayed.
+            }
 
-allLyricsMinor = {
-  \mariaDurchEinDornwaldGingV
-  \ichStehAnDeinerKrippeHierV
-  \herzliebsterJesuWasHastDuVerbrochenV
-  \oTraurigkeitOHerzeleidV
-  \kommOTroesterHeilgerGeistV
-  \befiehlDuDeineWegeV
-  \werNurDenLiebenGotLaesstWaltenV
-  \herrGibUnsMutZumHoerenV
-  \christJesusLayInDeathsStrongBandsV
-  \elDiosDePazV
-  \fromAllThySaintsInWarfareV
-  \saviorOfTheNationsComeV
-  \theGloryOfTheseFortyDaysV
-}
+            allLyricsMinor = {
+              \mariaDurchEinDornwaldGingV
+              \ichStehAnDeinerKrippeHierV
+              \herzliebsterJesuWasHastDuVerbrochenV
+              \oTraurigkeitOHerzeleidV
+              \kommOTroesterHeilgerGeistV
+              \befiehlDuDeineWegeV
+              \werNurDenLiebenGotLaesstWaltenV
+              \herrGibUnsMutZumHoerenV
+              \christJesusLayInDeathsStrongBandsV
+              \elDiosDePazV
+              \fromAllThySaintsInWarfareV
+              \saviorOfTheNationsComeV
+              \theGloryOfTheseFortyDaysV
+            }
 
-mondAufgegangenAC = \chordmode {
-  \time 4/4
-  \repeat volta 2 {
-    \partial 4
-    f4 c f bf f c2 f4\breathe
-    \override ChordName.color = #red d:m d:m d:m \revert ChordName.color bf f bf2 f4\breathe
-    f f f bf f
-    \alternative {{c2 s4}{c c f}}
-  }
-}
-nunRuhenWaelderC = \chordmode {
-  \partial 4
-  f4
-  f c f c bf2 f4\breathe
-  f f f c f f2 e4:dim/g\breathe
-  e:dim/g f c f f c2.\breathe
-  f4 f c f f bf2 f4\breathe
-  f f f c f f2 e4:dim/g
-  f f c f bf f c f
-}
-lammGottesC = \chordmode {
-  f1
-}
-alleinGottInDerHoehSeiEhrC = \chordmode {
-  f1
-}
-christeDuLammGottesC = \chordmode {
-  f1
-}
-wirSagenEuchAnDenLiebenAdventC = \chordmode {
-  f1
-}
-adesteFidelesC = \chordmode {
-  f1
-}
-inDulciJubiloC = \chordmode {
-  f1
-}
-nunBittenWirDenHeiligenGeistC = \chordmode {
-  f1
-}
-meineHoffnungUndMeineFreudeC = \chordmode {
-  f1
-}
-grosserGottWirLobenDichC = \chordmode {
-  f1
-}
-lobeDenHerrnDenMaechtigenKoenigDerEhrenC = \chordmode {
-  f1
-}
-nunSingeLobDuChristenheitC = \chordmode {
-  f1
-}
-naeherMeinGottZuDirC = \chordmode {
-  f1
-}
-wohlDenenDieDaWandelnC = \chordmode {
-}
+            mondAufgegangenAC = \chordmode {
+              \time 4/4
+              \repeat volta 2 {
+                \partial 4
+                f4 c f bf f c2 f4\breathe
+                \override ChordName.color = #red d:m d:m d:m \revert ChordName.color bf f bf2 f4\breathe
+                f f f bf f
+                \alternative {{c2 s4}{c c f}}
+              }
+            }
+            nunRuhenWaelderC = \chordmode {
+              \partial 4
+              f4
+              f c f c bf2 f4\breathe
+              f f f c f f2 e4:dim/g\breathe
+              e:dim/g f c f f c2.\breathe
+              f4 f c f f bf2 f4\breathe
+              f f f c f f2 e4:dim/g
+              f f c f bf f c f
+            }
+            lammGottesC = \chordmode {
+              f1
+            }
+            alleinGottInDerHoehSeiEhrC = \chordmode {
+              f1
+            }
+            christeDuLammGottesC = \chordmode {
+              f1
+            }
+            wirSagenEuchAnDenLiebenAdventC = \chordmode {
+              f1
+            }
+            adesteFidelesC = \chordmode {
+              f1
+            }
+            inDulciJubiloC = \chordmode {
+              f1
+            }
+            nunBittenWirDenHeiligenGeistC = \chordmode {
+              f1
+            }
+            meineHoffnungUndMeineFreudeC = \chordmode {
+              f1
+            }
+            grosserGottWirLobenDichC = \chordmode {
+              f1
+            }
+            lobeDenHerrnDenMaechtigenKoenigDerEhrenC = \chordmode {
+              f1
+            }
+            nunSingeLobDuChristenheitC = \chordmode {
+              f1
+            }
+            naeherMeinGottZuDirC = \chordmode {
+              f1
+            }
+            wohlDenenDieDaWandelnC = \chordmode {
+            }
 
-allChords = {
-  \mondAufgegangenAC
-  \nunRuhenWaelderC
-  \lammGottesC
-  \alleinGottInDerHoehSeiEhrC
-  \christeDuLammGottesC
-  \wirSagenEuchAnDenLiebenAdventC
-  \adesteFidelesC
-  \inDulciJubiloC
-  \nunBittenWirDenHeiligenGeistC
-  \meineHoffnungUndMeineFreudeC
-  \grosserGottWirLobenDichC
-  \lobeDenHerrnDenMaechtigenKoenigDerEhrenC
-  \nunSingeLobDuChristenheitC
-  \naeherMeinGottZuDirC
-  \wohlDenenDieDaWandelnC
-}
+            allChords = {
+              \mondAufgegangenAC
+              \nunRuhenWaelderC
+              \lammGottesC
+              \alleinGottInDerHoehSeiEhrC
+              \christeDuLammGottesC
+              \wirSagenEuchAnDenLiebenAdventC
+              \adesteFidelesC
+              \inDulciJubiloC
+              \nunBittenWirDenHeiligenGeistC
+              \meineHoffnungUndMeineFreudeC
+              \grosserGottWirLobenDichC
+              \lobeDenHerrnDenMaechtigenKoenigDerEhrenC
+              \nunSingeLobDuChristenheitC
+              \naeherMeinGottZuDirC
+              \wohlDenenDieDaWandelnC
+            }
 
-mondAufgegangenABF = \figuremode {
-  \repeat volta 2 {
-    \partial 4
-    s4 s s s s s2 s4\breathe
-    s s s s s s2 s4\breathe
-    s s s s s
-    \alternative {{s2 s4}{s4 s s}}
-  }
-}
-nunRuhenWaelderBF = \figuremode {
-  \partial 4
-  <5>4
-  s s s s s2 s4\breathe
-  s s s s s s2 s4\breathe
-  s s s s s s2.\breathe
-  s4 s s s s s2 s4\breathe
-  s s s s s s2 s4\breathe
-  s s s s s s s s
-}
-lammGottesBF = \figuremode {
-  <5>4
-}
-alleinGottInDerHoehSeiEhrBF = \figuremode {
-  <5>4
-}
-christeDuLammGottesBF = \figuremode {
-  <5>4
-}
-wirSagenEuchAnDenLiebenAdventBF = \figuremode {
-  <5>4
-}
-adesteFidelesBF = \figuremode {
-  <5>4
-}
-inDulciJubiloBF = \figuremode {
-  <5>4
-}
-nunBittenWirDenHeiligenGeistBF = \figuremode {
-  <5>4
-}
-meineHoffnungUndMeineFreudeBF = \figuremode {
-  <5>4
-}
-grosserGottWirLobenDichBF = \figuremode {
-  <5>4
-}
-lobeDenHerrnDenMaechtigenKoenigDerEhrenBF = \figuremode {
-  <5>4
-}
-nunSingeLobDuChristenheitBF = \figuremode {
-  <5>4
-}
-naeherMeinGottZuDirBF = \figuremode {
-  <5>4
-}
-wohlDenenDieDaWandelnBF = \figuremode {
-  <5>4
-}
+            mondAufgegangenABF = \figuremode {
+              \repeat volta 2 {
+                \partial 4
+                s4 s s s s s2 s4\breathe
+                s s s s s s2 s4\breathe
+                s s s s s
+                \alternative {{s2 s4}{s4 s s}}
+              }
+            }
+            nunRuhenWaelderBF = \figuremode {
+              \partial 4
+              <5>4
+              s s s s s2 s4\breathe
+              s s s s s s2 s4\breathe
+              s s s s s s2.\breathe
+              s4 s s s s s2 s4\breathe
+              s s s s s s2 s4\breathe
+              s s s s s s s s
+            }
+            lammGottesBF = \figuremode {
+              <5>4
+            }
+            alleinGottInDerHoehSeiEhrBF = \figuremode {
+              <5>4
+            }
+            christeDuLammGottesBF = \figuremode {
+              <5>4
+            }
+            wirSagenEuchAnDenLiebenAdventBF = \figuremode {
+              <5>4
+            }
+            adesteFidelesBF = \figuremode {
+              <5>4
+            }
+            inDulciJubiloBF = \figuremode {
+              <5>4
+            }
+            nunBittenWirDenHeiligenGeistBF = \figuremode {
+              <5>4
+            }
+            meineHoffnungUndMeineFreudeBF = \figuremode {
+              <5>4
+            }
+            grosserGottWirLobenDichBF = \figuremode {
+              <5>4
+            }
+            lobeDenHerrnDenMaechtigenKoenigDerEhrenBF = \figuremode {
+              <5>4
+            }
+            nunSingeLobDuChristenheitBF = \figuremode {
+              <5>4
+            }
+            naeherMeinGottZuDirBF = \figuremode {
+              <5>4
+            }
+            wohlDenenDieDaWandelnBF = \figuremode {
+              <5>4
+            }
 
-allBassFigs = {
-  \mondAufgegangenABF
-  \nunRuhenWaelderBF
-  \lammGottesBF
-  \alleinGottInDerHoehSeiEhrBF
-  \christeDuLammGottesBF
-  \wirSagenEuchAnDenLiebenAdventBF
-  \adesteFidelesBF
-  \inDulciJubiloBF
-  \nunBittenWirDenHeiligenGeistBF
-  \meineHoffnungUndMeineFreudeBF
-  \grosserGottWirLobenDichBF
-  \lobeDenHerrnDenMaechtigenKoenigDerEhrenBF
-  \nunSingeLobDuChristenheitBF
-  \naeherMeinGottZuDirBF
-  \wohlDenenDieDaWandelnBF
-}
+            allBassFigs = {
+              \mondAufgegangenABF
+              \nunRuhenWaelderBF
+              \lammGottesBF
+              \alleinGottInDerHoehSeiEhrBF
+              \christeDuLammGottesBF
+              \wirSagenEuchAnDenLiebenAdventBF
+              \adesteFidelesBF
+              \inDulciJubiloBF
+              \nunBittenWirDenHeiligenGeistBF
+              \meineHoffnungUndMeineFreudeBF
+              \grosserGottWirLobenDichBF
+              \lobeDenHerrnDenMaechtigenKoenigDerEhrenBF
+              \nunSingeLobDuChristenheitBF
+              \naeherMeinGottZuDirBF
+              \wohlDenenDieDaWandelnBF
+            }
 
-mondAufgegangenACII = \chordmode {
-  \time 4/4
-  \repeat volta 2 {
-    \partial 4
-    f4 e:dim/g f g:m7/bf f/a e2:dim/g f4\breathe
-    f/a f/a f/a d:m c g2:m7/bf f4/a\breathe
-    f/a f/a f/a g:m7/bf f/a
-    \alternative {{e2:dim/g s4}{e4:dim/g e:dim/g f}}
-  }
-}
-nunRuhenWaelderCII = \chordmode {
-  \partial 4
-  f4/a
-  f e:dim/g f/a c g2:m7/bf f4/a\breathe
-  f/a c c e:dim/g f/a f2 c4/e\breathe
-  c/e f e:dim/g f/a f/a e2.:dim/g\breathe
-  f4/a f e:dim/g f/a c g2:m7/bf f4/a\breathe
-  f/a c c e:dim/g f/a f2 c4/e\breathe
-  c f e:dim/g f/a g:m7/bf f/a e:dim/g f
-}
-lammGottesCII = \chordmode {
-  \repeat volta 2 {
-    f4 e:dim/g f/a f2/a\breathe
-    f4/a e:dim/g f/a g:m7/bf f/a e:dim/g f e:dim/g f2/a\breathe
-    f4/a c g:m7/bf f/a e2:dim/g f/a
-  }
-  \partial 4
-  f4
-  e:dim/g f/a f2/a\breathe
-  f4/a e:dim/g f/a g:m7/bf f/a e:dim/g f e:dim/g f2/a\breathe
-  f4/a c g:m7/bf f/a e2:dim/g f
-}
-alleinGottInDerHoehSeiEhrCII = \chordmode {
-  \repeat volta 2 {
-    \partial 4
-    f4
-    f2/a g4:m7/bf c2 g4:m7/bf f2/a e4:dim/g f2/a\breathe
-    f4/a f2/a e4:dim/g g:m7/bf f/a e:dim/g f2 c4/e f2
-  } \partial 4
-  f4 f2 e4:dim/g g:m7/bf g:m7/bf f/a e2:dim/g f4 e2:dim/g\breathe
-  e4:dim/g f2/a g4:m7/bf c2 g4:m7/bf
-}
-christeDuLammGottesCII = \chordmode {
-  f1
-}
-wirSagenEuchAnDenLiebenAdventCII = \chordmode {
-  f1
-}
-adesteFidelesCII = \chordmode {
-  f1
-}
-inDulciJubiloCII = \chordmode {
-  f1
-}
-nunBittenWirDenHeiligenGeistCII = \chordmode {
-  f1
-}
-meineHoffnungUndMeineFreudeCII = \chordmode {
-  f1
-}
-grosserGottWirLobenDichCII = \chordmode {
-  f1
-}
-lobeDenHerrnDenMaechtigenKoenigDerEhrenCII = \chordmode {
-  f1
-}
-nunSingeLobDuChristenheitCII = \chordmode {
-  f1
-}
-naeherMeinGottZuDirCII = \chordmode {
-  f1
-}
-wohlDenenDieDaWandelnCII = \chordmode {
-  f1
-}
+            mondAufgegangenACII = \chordmode {
+              \time 4/4
+              \repeat volta 2 {
+                \partial 4
+                f4 e:dim/g f g:m7/bf f/a e2:dim/g f4\breathe
+                f/a f/a f/a d:m c g2:m7/bf f4/a\breathe
+                f/a f/a f/a g:m7/bf f/a
+                \alternative {{e2:dim/g s4}{e4:dim/g e:dim/g f}}
+              }
+            }
+            nunRuhenWaelderCII = \chordmode {
+              \partial 4
+              f4/a
+              f e:dim/g f/a c g2:m7/bf f4/a\breathe
+              f/a c c e:dim/g f/a f2 c4/e\breathe
+              c/e f e:dim/g f/a f/a e2.:dim/g\breathe
+              f4/a f e:dim/g f/a c g2:m7/bf f4/a\breathe
+              f/a c c e:dim/g f/a f2 c4/e\breathe
+              c f e:dim/g f/a g:m7/bf f/a e:dim/g f
+            }
+            lammGottesCII = \chordmode {
+              \repeat volta 2 {
+                f4 e:dim/g f/a f2/a\breathe
+                f4/a e:dim/g f/a g:m7/bf f/a e:dim/g f e:dim/g f2/a\breathe
+                f4/a c g:m7/bf f/a e2:dim/g f/a
+              }
+              \partial 4
+              f4
+              e:dim/g f/a f2/a\breathe
+              f4/a e:dim/g f/a g:m7/bf f/a e:dim/g f e:dim/g f2/a\breathe
+              f4/a c g:m7/bf f/a e2:dim/g f
+            }
+            alleinGottInDerHoehSeiEhrCII = \chordmode {
+              \repeat volta 2 {
+                \partial 4
+                f4
+                f2/a g4:m7/bf c2 g4:m7/bf f2/a e4:dim/g f2/a\breathe
+                f4/a f2/a e4:dim/g g:m7/bf f/a e:dim/g f2 c4/e f2
+              } \partial 4
+              f4 f2 e4:dim/g g:m7/bf g:m7/bf f/a e2:dim/g f4 e2:dim/g\breathe
+              e4:dim/g f2/a g4:m7/bf c2 g4:m7/bf
+            }
+            christeDuLammGottesCII = \chordmode {
+              f1
+            }
+            wirSagenEuchAnDenLiebenAdventCII = \chordmode {
+              f1
+            }
+            adesteFidelesCII = \chordmode {
+              f1
+            }
+            inDulciJubiloCII = \chordmode {
+              f1
+            }
+            nunBittenWirDenHeiligenGeistCII = \chordmode {
+              f1
+            }
+            meineHoffnungUndMeineFreudeCII = \chordmode {
+              f1
+            }
+            grosserGottWirLobenDichCII = \chordmode {
+              f1
+            }
+            lobeDenHerrnDenMaechtigenKoenigDerEhrenCII = \chordmode {
+              f1
+            }
+            nunSingeLobDuChristenheitCII = \chordmode {
+              f1
+            }
+            naeherMeinGottZuDirCII = \chordmode {
+              f1
+            }
+            wohlDenenDieDaWandelnCII = \chordmode {
+              f1
+            }
 
-allChordsII = {
-  \mondAufgegangenACII
-  \nunRuhenWaelderCII
-  \lammGottesCII
-  \alleinGottInDerHoehSeiEhrCII
-  \christeDuLammGottesCII
-  \wirSagenEuchAnDenLiebenAdventCII
-  \adesteFidelesCII
-  \inDulciJubiloCII
-  \nunBittenWirDenHeiligenGeistCII
-  \meineHoffnungUndMeineFreudeCII
-  \grosserGottWirLobenDichCII
-  \lobeDenHerrnDenMaechtigenKoenigDerEhrenCII
-  \nunSingeLobDuChristenheitCII
-  \naeherMeinGottZuDirCII
-  \wohlDenenDieDaWandelnCII
-}
+            allChordsII = {
+              \mondAufgegangenACII
+              \nunRuhenWaelderCII
+              \lammGottesCII
+              \alleinGottInDerHoehSeiEhrCII
+              \christeDuLammGottesCII
+              \wirSagenEuchAnDenLiebenAdventCII
+              \adesteFidelesCII
+              \inDulciJubiloCII
+              \nunBittenWirDenHeiligenGeistCII
+              \meineHoffnungUndMeineFreudeCII
+              \grosserGottWirLobenDichCII
+              \lobeDenHerrnDenMaechtigenKoenigDerEhrenCII
+              \nunSingeLobDuChristenheitCII
+              \naeherMeinGottZuDirCII
+              \wohlDenenDieDaWandelnCII
+            }
 
-mondAufgegangenABFII = \figuremode {
-  \repeat volta 2 {
-    \partial 4
-    s4 <6> s <6 4 3> <6> <6>2 s4\breathe
-    <6> <6> <6> s s <6 4 3>2 <6>4\breathe
-    <6> <6> <6> <6 4 3> <6>
-    \alternative {{<6>2 s4}{<6>4 <6> s}}
-  }
-}
-nunRuhenWaelderBFII = \figuremode {
-  <5>4
-}
-lammGottesBFII = \figuremode {
-  <5>4
-}
-alleinGottInDerHoehSeiEhrBFII = \figuremode {
-  <5>4
-}
-christeDuLammGottesBFII = \figuremode {
-  <5>4
-}
-wirSagenEuchAnDenLiebenAdventBFII = \figuremode {
-  <5>4
-}
-adesteFidelesBFII = \figuremode {
-  <5>4
-}
-inDulciJubiloBFII = \figuremode {
-  <5>4
-}
-nunBittenWirDenHeiligenGeistBFII = \figuremode {
-  <5>4
-}
-meineHoffnungUndMeineFreudeBFII = \figuremode {
-  <5>4
-}
-grosserGottWirLobenDichBFII = \figuremode {
-  <5>4
-}
-lobeDenHerrnDenMaechtigenKoenigDerEhrenBFII = \figuremode {
-  <5>4
-}
-nunSingeLobDuChristenheitBFII = \figuremode {
-  <5>4
-}
-naeherMeinGottZuDirBFII = \figuremode {
-  <5>4
-}
-wohlDenenDieDaWandelnBFII = \figuremode {
-  <5>4
-}
+            mondAufgegangenABFII = \figuremode {
+              \repeat volta 2 {
+                \partial 4
+                s4 <6> s <6 4 3> <6> <6>2 s4\breathe
+                <6> <6> <6> s s <6 4 3>2 <6>4\breathe
+                <6> <6> <6> <6 4 3> <6>
+                \alternative {{<6>2 s4}{<6>4 <6> s}}
+              }
+            }
+            nunRuhenWaelderBFII = \figuremode {
+              <5>4
+            }
+            lammGottesBFII = \figuremode {
+              <5>4
+            }
+            alleinGottInDerHoehSeiEhrBFII = \figuremode {
+              <5>4
+            }
+            christeDuLammGottesBFII = \figuremode {
+              <5>4
+            }
+            wirSagenEuchAnDenLiebenAdventBFII = \figuremode {
+              <5>4
+            }
+            adesteFidelesBFII = \figuremode {
+              <5>4
+            }
+            inDulciJubiloBFII = \figuremode {
+              <5>4
+            }
+            nunBittenWirDenHeiligenGeistBFII = \figuremode {
+              <5>4
+            }
+            meineHoffnungUndMeineFreudeBFII = \figuremode {
+              <5>4
+            }
+            grosserGottWirLobenDichBFII = \figuremode {
+              <5>4
+            }
+            lobeDenHerrnDenMaechtigenKoenigDerEhrenBFII = \figuremode {
+              <5>4
+            }
+            nunSingeLobDuChristenheitBFII = \figuremode {
+              <5>4
+            }
+            naeherMeinGottZuDirBFII = \figuremode {
+              <5>4
+            }
+            wohlDenenDieDaWandelnBFII = \figuremode {
+              <5>4
+            }
 
-allBassFigsII = {
-  \mondAufgegangenABFII
-  \nunRuhenWaelderBFII
-  \lammGottesBFII
-  \alleinGottInDerHoehSeiEhrBFII
-  \christeDuLammGottesBFII
-  \wirSagenEuchAnDenLiebenAdventBFII
-  \adesteFidelesBFII
-  \inDulciJubiloBFII
-  \nunBittenWirDenHeiligenGeistBFII
-  \meineHoffnungUndMeineFreudeBFII
-  \grosserGottWirLobenDichBFII
-  \lobeDenHerrnDenMaechtigenKoenigDerEhrenBFII
-  \nunSingeLobDuChristenheitBFII
-  \naeherMeinGottZuDirBFII
-  \wohlDenenDieDaWandelnBFII
-}
+            allBassFigsII = {
+              \mondAufgegangenABFII
+              \nunRuhenWaelderBFII
+              \lammGottesBFII
+              \alleinGottInDerHoehSeiEhrBFII
+              \christeDuLammGottesBFII
+              \wirSagenEuchAnDenLiebenAdventBFII
+              \adesteFidelesBFII
+              \inDulciJubiloBFII
+              \nunBittenWirDenHeiligenGeistBFII
+              \meineHoffnungUndMeineFreudeBFII
+              \grosserGottWirLobenDichBFII
+              \lobeDenHerrnDenMaechtigenKoenigDerEhrenBFII
+              \nunSingeLobDuChristenheitBFII
+              \naeherMeinGottZuDirBFII
+              \wohlDenenDieDaWandelnBFII
+            }
