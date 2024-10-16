@@ -364,7 +364,7 @@ scoreDATenorVoice = \relative c' {
   R4.*15 r4.
   c4^"C" c8 g'4. a,8 bf d d4 cs8 d16 e f8 e d g f g g, bf e, d' cs a4^"D" a8 a4 a8 bf16 a bf c a c bf c d c b a
   g4 g8 g g g a16 g a bf g bf a bf c bf a g f8 e d g a g a4 a8 d, a' d bf8. a16 bf g a8 d16 cs d8 d cs4 d r8 r4. R4.*15
-  d4^"E" d,8 g f e a g g g f g c4 b8 a d e d gs, a b4 b8 a^"F" c e a,4 a8 d16 cs d e cs e d e f e d c b8 g d' g, g g c16 b c d b d c d e d c b a8 c a a e' d bf d g, a4.~a8 b c d d c^"end"
+  d4^"E" d,8 g f e a g g g f g c4 b8 a d e d gs, a b4 b8 a^"F" c e a,4 a8 d16 cs d e cs e d e f e d c b8 g d' g, g g c16 b c d b d c d e d c b a8 c a a e' d bf d g, a4.~a8 b c d d c
   f e d c4 r8 c4^"G" d8 bf4 a8 r4. r
   c8 d ef f f r r4. r bf,4 c8 c d e c bf d c4 r8
   e^"H" f g g f e f e f~f e f g f e e f g a, bf c~c bf a g4 c8 c d e f4 f8 f f r
@@ -381,14 +381,14 @@ scoreDAVerse = \lyricmode {
   Fallt mit Dan -- ken, fallt mit Lo -- ben,
   fallt _ mit Dan -- ken, fallt mit Lo -- ben,
   fallt mit Dan -- ken, fallt mit Lo -- ben
-  Vor des Höchs _ -- ten Gna -- den -- thron!
+  Vor des höchs _ -- ten Gna -- den -- thron!
   Fallt mit Lo -- ben, fallt mit Dan -- ken, 
   Fallt mit Lo -- ben, _ _ vor des Höch -- sten Gna -- _ den - Thron,
   fallt mit Dan _ -- ken, 
   fallt mit Lo _ _ _ _ -- ben,
   fallt mit Dan _ -- ken, 
   fallt _ mit Lo -- ben,
-  vor _ des Höch _ -- sten Gna -- _ den -- thron!
+  vor _ des höch _ -- sten Gna -- _ den -- thron!
   Got -- tes Sohn
   will _ der Er -- den
   Hei _ _ -- land und _ Er -- lö  _ -- ser wer _ -- den,
@@ -403,6 +403,25 @@ scoreDAVerse = \lyricmode {
   Er -- lö _ _ _ _ _ _ _ _ _ _ _ _ _ -- ser wer _ -- den,
   Got _ -- tes Sohn
   dämpft der Fein -- de Wut und To _ -- ben.
+  Fallt mit Dan -- ken,
+  fallt _ mit Lo -- ben,
+  vor des höch _ -- sten Gna -- _ den -- thron,
+  fallt _ mit Dan _ _ _ _ _ _ -- ken, 
+  fallt _ mit Lo _ _ _ _ _ _ -- ben,
+  fallt mit Dan _ -- ken, 
+  fallt mit Lo -- ben,  
+  vor _ des Höch -- sten Gna -- den -- thron,
+  fallt mit Dan -- ken, 
+  fallt mit Lo -- ben,
+  fallt _ mit Lo -- ben, _ _
+  vor des Höch -- sten Gna _ _ -- den -- thron! 
+  Fallt mit Dan _ -- ken, 
+  fallt _ mit Lo -- ben,
+  fallt _ mit Dan _ _ _ _ _ _ -- ken, 
+  fallt _ mit Lo _ _ _ _ _ _ -- ben,
+  fallt mit Dan _ -- ken, 
+  fallt mit Lo -- ben,
+  vor _ des Höch _ -- sten Gna -- den _ -- thron!
 }
 
 globalDB = {
