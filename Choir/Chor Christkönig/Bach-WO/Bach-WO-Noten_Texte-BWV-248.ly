@@ -14,7 +14,7 @@ scoreAATenorVoice = \relative c' {
   \compressEmptyMeasures
   % Music follows here.
   \repeat segno 2 { R4.*32
-  d8^"A" d d d a r r4. r8 r a a d16 a fs d a'8 a r r fs' d
+  d8^"Nr. 1"^"A" d d d a r r4. r8 r a a d16 a fs d a'8 a r r fs' d
   r r d d a r r4. d8^"B" d d d cs16 b cs d
   e8 e e e d16 cs d8 d d d d d e a,16 b cs8 d e a,16 b b16.\trill(a64 b cs8)^"C" cs ds
   e e d d g g fs fs r r a,16 b b16.\trill(a64 b cs8) e gs a a, a'
@@ -659,17 +659,17 @@ scoreFATenorVoice = \relative c' {
   r8 r b e4 e8 e cs16(d e8) as, b cs e16(d) fs(e d cs) fs(es) gs(fs e ds) gs4.~ gs16 fs a(gs fs es)
   fs8 cs es fs e16 ds e8 ds fs a a g16 fs e fs b,4^"H" b8 cs e g fs e16 d cs d e8 d fs
   b, r fs b4 b8 b gs16 a b8 e,(fs) gs a a e' fs(cs) fs fs(ds) fs fs(e) b
-  b g fs e^"I" g b e cs e e(d) a a fs b b4.~ b16 cs d8 e fs g fs
-  d r r r2. r8 cs cs fs b, fs' d4 r8 R4.*3
+  b g fs e^"I" g b e cs e e(d) a a fs b b4.~b16 cs d8 e fs g fs
+  d r r r4. r8 cs cs fs b, fs' d4 r8 R4.*3
   r8^"K" r d fs4 fs8 e4 e8 d4 cs8 d a r R4.*3
-  r8 r a d4 a8 e'4 a,8 fs' e16 fs g e g^"L-XY"(fs e d) fs(d)
-  e(d cs b) d(b) e8 d16 cs b cs
-  a8 cs cs d4 d8 a cs e d4 cs8 a a r R4.*3
-  r8 r b cs(fs16 e) d(cs) a8(d) cs b e4~ e8 d16 cs d8 d cs fs b, e16 d cs b
-  a8(d) cs d4 e8 cs c4 b8 cs d cs16 d e8 fs~ fs b, e~ e a, d g, a b
+  r8 r a d4 a8 e'4 a,8 fs' e16 fs g e g^"L"(fs e d) fs(d)
+  fs(e d cs) e(cs) e(d cs b) d(b) e8 d16 cs b cs
+  a8 cs cs d4 d8 a cs e d4 cs8 a a r R4.*3^"M"
+  r8 r b cs(fs16 e) d(cs) b8 e16 d cs b a8(d) cs b e4~ e8 d16 cs d8 d cs fs b, e16 d cs b
+  a8(d) cs d4 e8 cs c4 b8 cs d cs16^"N" d e8 fs~ fs b, e~ e a, d g, a b
   e d e d d, g a d, d'16 e fs8 g a e a, cs d a e' d gs, b
-  e fs e cs r r r4. r8 b b e a, e' cs4 e8 a, r c fs, fs' ds
-  ds(e) b b b b b r e, a e' cs cs(d) a a a a g d' g
+  e fs e cs r r r4. r8^"0" b b e a, e' cs4 e8 a, r c fs, fs' ds
+  ds(e) b b b b b r e, a e' cs cs(d) a a a a g^"P-XY" d' g
   fs b, fs' b, fs' g fs4 a,8 e'4 e8 e(cs) cs cs(d) e d4 fs,8
   bf d d e4 e8 d b e d r r d f16 e f8 f r r fs e16 d e8 fs4\fermata
   \bar "|."
@@ -690,14 +690,14 @@ scoreFAVerse = \lyricmode {
   trau -- en, so kön _ -- nen wir _ den schar -- fen Klau -- en des Fein -- des un -- ver -- sehrt _ ent --
   gehn, un -- ver -- sehrt _ ent -- gehn.
   Herr, wenn die stol -- zen Fein -- de schnau -- ben,
-  Herr, wenn die stol -- zen Fein _ _ -- de _ schnau -- ben, so gib, dass wir im fe -- sten Glau -- ben
-  nach dei -- ner Macht und Hül -- fe sehn, nach dei -- ner Macht und Hül -- fe
-  sehn, so gib, dass wir im fe -- sten Glau -- ben nach dei -- ner Macht und
-  Hül -- fe sehn, dass wir im fe -- sten Glau -- ben nach dei -- ner Macht und
-  Hül -- fe sehn, dei -- ner Hül -- fe sehn, Herr, wenn die stol -- zen
-  Fein -- de schnau -- ben, so gib, dass wir im fe -- sten Glau -- ben nach dei -- ner
-  Macht und Hül -- fe sehn, so gib, dass wir im fe -- sten Glau -- ben
-  nach dei -- ner Macht und Hü -- lfe sehn, nach dei -- ner Macht und Hül -- fe sehn!
+  Herr, wenn die stol -- zen Fein _ _ -- de _ schnau _ _ _ _ _ _ _ _ _ _ _ -- ben, so gib, dass wir _ im fe -- sten Glau -- ben
+  nach dei -- ner Macht _ _ und _ Hül -- fe sehn, nach dei _ -- ner Macht _ und Hül _ _ -- fe _
+  sehn, so gib, dass wir im fe _ -- sten Glau _ _ _ -- ben nach dei -- ner Macht _ und
+  Hül _ -- fe sehn, _ dass wir _ im _ fe _ -- sten Glau -- ben nach dei _ -- ner Macht _ und
+  Hül _ -- fe sehn, dei -- ner Hül _ -- fe sehn, Herr, wenn die stol _ -- zen
+  Fein -- de schnau -- ben, so gib, dass wir _ im fe -- sten Glau -- ben nach dei _ -- ner
+  Macht _ und Hül _ -- fe sehn, so gib, dass wir im fe -- sten Glau -- ben
+  nach dei -- ner Macht und Hü _ -- lfe sehn, nach dei _ -- ner Macht und Hül _ -- fe sehn!
 }
 
 globalFB = {
