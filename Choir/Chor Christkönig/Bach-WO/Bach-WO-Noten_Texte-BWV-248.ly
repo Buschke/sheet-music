@@ -13,17 +13,36 @@ scoreAATenorVoice = \relative c' {
   \dynamicUp
   \compressEmptyMeasures
   % Music follows here.
-  R4.*32
-  d8^"Bis 77" d d d a r r4. r8 r a a d16 a fs d a'8 a r r fs' d
-  r r d d a r r4. d8 d d d cs16 b cs d
-  e8 e e e d16 cs d8 d d d d d e a,16 b cs8 d e a,16 b b16.\trill a64 b cs8 cs ds
-  e e d d g g fs fs r r a,16 b b16.\trill a64 b cs8 e gs a a, a'
-  g c, c b(a g fs) d r r a'16 cs b16.\trill a64 b cs8 e b b b r b e g
-  g(as, b e) as, as b fs cs' fs fs d~d b fs' b, b b
+  \repeat segno 2 { R4.*32
+  d8^"A" d d d a r r4. r8 r a a d16 a fs d a'8 a r r fs' d
+  r r d d a r r4. d8^"B" d d d cs16 b cs d
+  e8 e e e d16 cs d8 d d d d d e a,16 b cs8 d e a,16 b b16.\trill(a64 b cs8)^"C" cs ds
+  e e d d g g fs fs r r a,16 b b16.\trill(a64 b cs8) e gs a a, a'
+  g c, c b(a g fs) d r r a'16 cs b16.\trill(a64 b cs8) e b b b r b e g
+  g^"D"(as, b e) as, as b fs cs' fs fs d~d b fs' b, b b
   b a b e4 e8 fs a, cs b b ds e e b
-  a a r d b e fs16(e d cs b a e'8) d d
-  cs b e cs4 r8 R2.*7
-  d8 d d d a r r2.
+  a a r d^"E" b e fs16(e d cs b a e'8) d d
+  cs b e cs4 r8
+  d^"F" d d d a r
+  r1.
+  r8 r a a d16 a fs d a'8 a r
+  r fs' d r r d d a r r1.
+  d8 d d d cs16 b cs d e8 e e e8 d16 cs d8 d d d d d e a,16 b cs8 d e4 r8
+  r^"G" b16 cs cs16.\trill(b64 cs d8) cs b a a a' a e b b d r r
+  d16 e e16.\trill(d64 e64 fs8) fs e e b e a,
+  a16 b b16.\trill(a64 b) cs16 d e8 a, r
+  g16 a a16.\trill(g64 a b8) b e a, d16 cs d8 e e e fs^"H" ds e fs ds ds e b b b e g
+  g e b e cs e e d e a,4 d8 d b fs' e b b a a e' d a r g e a b16 a g fs e d a'8. d16 cs8 a d e fs4.\fermata
+  fs8^"I"\mf e16 d cs b cs8 fs fs
+  fs b, e e16 d e fs e fs d cs b8 r e d16 cs b a gs8 a16 b cs b as8 b r g' fs16 e d cs b8 cs16 d e8~e a, r r4.
+  e'8 d16 cs b a b8 b e e d16 cs d8(d) cs16 b cs8 d^"K" a r
+  e' d16 cs b a d cs d8 d d16 cs b a b cs
+  d4.~d8 e g fs16 g fs e d fs e fs e d cs8~cs b16 as b8 e16 d cs b cs as b8 b r
+  cs d16 cs b as b8 fs'16 g fs e d e cs e d cs b8 cs b d e cs d d r r4. R4.*14
+  fs8^"L"\f d fs e gs, gs e' e e e e r e e e e e e fs a, a a fs' e d16 cs b cs d8 e16 fs g fs e g fs8 fs, cs' b gs cs es fs d cs b cs cs cs cs a4 a8
+  \volta 2 \fine
+  \bar "|."
+  }
 }
 
 scoreAAVerse = \lyricmode {
@@ -33,9 +52,9 @@ scoreAAVerse = \lyricmode {
   Jauch -- zet, froh -- lo -- cket, _
   auf, _ prei -- set _ die Ta _ -- ge,
   Rüh -- met, was heu -- te der Höchs _ -- te ge -- tan,
-  Las _ _ _ _ _ -- set das Za -- gen, ver -- ban -- net die Kla -- ge,
-  Las _ _ _ _ _ -- set das Za -- gen, ver -- ban -- net die Kla -- ge,
-  Las _ _ _ _ _ -- set das Za -- gen,
+  Las _ _ -- set das Za -- gen, ver -- ban -- net die Kla -- ge,
+  Las _ _ -- set das Za -- gen, ver -- ban -- net die Kla -- ge,
+  Las _ _ -- set das Za -- gen,
   Las -- set das Za -- gen,
   ver -- ban -- net die Kla -- ge,
   Las -- set das Za -- gen,
@@ -44,9 +63,25 @@ scoreAAVerse = \lyricmode {
   ver -- ban -- net die Kla -- ge,
   Stim -- met voll Jauch -- zen und Fröh -- lich -- keit an.
   Jauch -- zet, froh -- lo -- cket, auf, prei -- set _ die _ Ta -- ge,
-
-  Die -- net dem Höchs -- ten mit herr -- li -- chen Chö -- ren,
-  Laßt uns den Na -- men des Herr -- schers ver -- eh -- ren.
+  Jauch -- zet, froh -- lo -- cket, 
+  Jauch -- zet, froh -- lo -- cket, _ auf, _
+  prei -- set die Ta _ _ -- ge, rüh -- met, was heu -- te der Höch _ -- ste ge -- tan!
+  Las _ _ -- set das Za -- gen, ver -- ban -- net die Kla -- ge,
+  las _ _ -- set das Za -- gen, ver -- ban -- net die Kla -- ge,
+  las _ _ -- set das Za -- gen, ver -- ban -- net die Kla -- ge,
+  las _ _ -- set das Za -- gen, ver -- ban -- net die Kla _ -- ge,
+  las -- set das Za -- gen, ver -- ban -- net die Kla -- ge,
+  las -- set das Za -- gen, ver -- ban -- net die Kla -- ge,
+  stim -- met voll Jauch _ _ _ _ _ _ -- zen und Fröh -- lich -- keit an!
+  Die -- net _ dem _ Höchs -- ten mit herr -- li -- chen Chö _ _ _ _ _ _ _ -- ren,
+  die -- net _ dem _ Höchs _ _ _ _ _ -- ten,
+  die -- net _ dem _ Höchs _ _ _ -- ten,
+  die -- net _ dem _ Höchs -- ten mit herr _ _ _ -- li _ -- chen Chö -- ren,
+  die -- net _ dem _ Höchs _ -- ten mit herr _ _ _ _ _ _ -- li -- chen Chö _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ -- ren,
+  die -- net _ dem _ Höchs _ _ _ _ _ _ _ _ _ _ _ -- ten mit herr -- li -- chen Chö -- ren!
+  Lasst uns den Na -- men des Herr -- schers ver -- eh -- ren.
+  lasst uns den Na -- men des Herr -- schers ver -- eh _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ -- ren,
+  lasst uns den Na -- men des Herr -- schers ver -- eh -- ren.
 }
 
 globalAB = {
@@ -103,11 +138,11 @@ scoreACTenorVoice = \relative c' {
   \dynamicUp
   % Music follows here.
   \partial 4
-  fs4
+  fs4\mf
   e d cs d8 cs b a g4 a r r1
   r4 a d d cs c8 b a4 a a r r2
   r2 r4 a
-  a gs a8 d cs b a cs fs e cs4 r r1 r4 d8(b) b(a) a(g) a4 g8 fs e4 a8(g) fs4 r r2 r1 r2 r4\fermata
+  a gs a8 d cs b a cs fs e cs4 r r1 r4 d8(b) b(a) a(g) a4 g8 fs e4 a8(g) fs4 r r2 r1 r2 r4\fermata\bar "|."
 }
 
 scoreACVerse = \lyricmode {
@@ -129,9 +164,18 @@ scoreBATenorVoice = \relative c' {
   \globalBA
   \dynamicUp
   % Music follows here.
+  \repeat volta 2 {
+    \partial 4
+    b8^"Bis 2"
+    b8 c~ c d b a a4 a a\fermata
+    b8(a) g(a) b(c) d4 d d4.(c8) b4\fermata
+  }
   \partial 4
-  b8^"Bis 2"
-  b8 c~ c d b a a4 a a\fermata
+  d8(e)
+  fs(e) d4 e fs b, e8(d) c4\fermata
+  g8(a) b(c) d(e) c4 cs b b b\fermata
+  d d g g,8(a) b4 e8(d e cs) d4\fermata
+  d d8(c) c(b) b(a) g4 g8(fs16 e fs8) b4\fermata\bar "|."
 }
 
 scoreBAVerse = \lyricmode {
@@ -309,22 +353,23 @@ scoreDATenorVoice = \relative c' {
   c4^"Bis 51" d8 bf4 a8 c(d) ef f f r
   r4.*2 d8 ef f f(ef d c4) a8 f'4 c8
   bf(a g e' f) bf, c4 d8 bf4 a8 c(d) ef f f r f c4 f,8 a c
-  c(bf) d c4. R4.*2
+  c(bf) d c4. r4.^"A" r
   c4 bf8 c4 c8 c4 d8 a4 bf8
-  a^"51"(bf) c
-  R4.*16
-  d4(d,8 g f) e
-  R4.*16\fermata\bar "|."
+  a(bf) c
+  d c16 d bf8 f' f8 e4.~e4 e8
+  d4.~d c4.~c8 d e d4 r8
+  c4^"B"^"end"
 }
 
 scoreDAVerse = \lyricmode {
   % Lyrics follow here.
-  Fallt mit Dan -- ken, fallt mit Lo -- ben
-  Fallt _ mit Dan -- ken, fallt mit Lo -- ben
-  Fallt mit Dan -- ken, fallt mit Lo -- ben
-  Vor des Höchs _ -- ten Gna -- den -- thron.
+  Fallt mit Dan -- ken, fallt mit Lo -- ben,
+  fallt _ mit Dan -- ken, fallt mit Lo -- ben,
+  fallt mit Dan -- ken, fallt mit Lo -- ben
+  Vor des Höchs _ -- ten Gna -- den -- thron!
   Fallt mit Lo -- ben, fallt mit Dan -- ken, 
-  Fallt mit Lo -- ben, fallt mit Dan -- ken, 
+  Fallt mit Lo -- ben, _ _ vor des Höch -- sten Gna -- _ den - Thron,
+  fallt mit Dan -- ken, 
   Got -- tes Sohn
   Will der Er -- den
   Hei -- land und Er -- lö -- ser wer -- den,
@@ -352,7 +397,7 @@ scoreDBTenorVoice = \relative c' {
   R2.*4
   c2 e4 c2 bf4~bf a d8(c) bf4(a8 g a4) a2 r4
   R2.*3
-  bf4.(g8) c4 c2 g4 f2 d'4 g(c bf) a2 r4
+  bf4.(g8) c4 c2 g4 f2 d'4 g,(c bf) a2 r4
   R2.*3 r2.\fermata\bar "|."
 }
 
@@ -378,37 +423,40 @@ scoreEATenorVoice = \relative c' {
   \globalEA
   \dynamicUp
   % Music follows here.
-  R2. * 16
+  \repeat segno 2 {
+    R2.*16^"K"
   r2.
   r8 cs16(d e8) e fs16 e fs8 e r r4 r
   cs8 cs e cs b b cs cs16(b a8) r r4
   r8 gs16(a b8) b cs16(b) cs8 b b4 gs8 e e' e r r4 r
-  e8 e b e ds ds e4 b8 r r4
+  e8^"L" e b e ds ds e4 b8 r r4
   r8 a16(b cs8) cs d16(cs) d8 e e(d) cs b a e' r r4 r
   e8 cs cs e e e e e16 d cs8 e4 cs8
-  a(b16 cs d e) fs8 e d16(cs)
+  a^"M"(b16 cs d e) fs8 e d16(cs)
   b8 gs16 a b cs d8 d4~ d8
   cs16 b cs ds e8 fs e ds fs4 ds8 b ds
   e b16 a b8 e, d'16 cs d8 cs e4 cs8 a e'
-  fs4~ fs16 e d cs b8 e e e,16(fs gs a) b8 b e e a,4 g8 fs g16 a
-  b8 ds4 fs,8 b fs' e4 r8 b4 d8 cs2.~
-  cs8 cs16 b cs8 as fs as b fs'4 fs8 ds b fs ds'~ ds16 e fs g a8 fs e2.~ e~ e2~ e16 ds cs b cs8 ds fs4 b, b8 r a r e' r cs a'4 gs a16 gs fs8 fs e4 b b r r
+  fs4~ fs16 e d cs b8 e e e,16(fs gs a) b8 b e e a,4 gs8 fs gs16 a
+  b8^"N" ds4 fs,8 b fs' e4 r8 b4 d8 cs2.~
+  cs8 cs16 b cs8 as fs as b fs'4 fs8 ds b fs ds'~ ds16 e fs gs a8 fs e2.~ e~ e2~ e16 ds cs b cs8 ds fs4 b, b8^"O" r a r e' r cs a'4 gs a16 gs fs8 fs e4 b b r r
   R2. * 3
-  r2.
+  r2.^"P"
   r8 cs16(d e8 fs16 gs a8) cs, b e e e e e e e16(d cs8) r r4
   R2. * 3
-  r8 a16(b cs8) d16 b cs8 a d cs d d4(cs16 d e8) a, e'16(d e4) e8 d r r4 r
+  r8^"Q" a16(b cs8) d16 b cs8 a d cs d d4(cs16 d e8) a, e'16(d e4) e8 d r r4 r
   r8 gs,16 a b8 b b16 a b8 e, r r4 r r8 d'16 e fs8 fs fs16 e fs8 b, d16(cs b8) b b b
-  b d16(cs b8) e fs gs e fs(e) d e fs e4 e8 r r4 r2.
+  b d16(cs b8) e fs gs e fs(e) d e fs e4 e8 r r4 r2.^"R"
   r4 r8 e4 cs8 a(b16 cs d e) fs8 e d16 cs b8 gs16(a b cs) d8 d4~ d8 cs16(b a b cs d e8) e
-  e8(d16 cs d e) fs8 fs4~ fs8 e16(d cs8) d e d cs e4 cs8 a cs d d4 cs8 b e e2.~ e8 a,4 e'8 cs a fs'2.~ fs8 fs16(e fs8) ds b ds
-  e b4 b8 gs e b' gs8. a16 b cs d8 b a2.~ a~ a2~ a16 gs fs e fs8 gs b4 e e8 r d r a r fs(d'4 cs d16 cs
+  e8(d16 cs d e) fs8 fs4~ fs8 e16(d cs8) d e d cs e4 cs8 a cs d d4 cs8 b e e2.^"S"~ e8 a,4 e'8 cs a fs'2.~ fs8 fs16(e fs8) ds b ds
+  e b4 b8 gs e b' gs8. a16 b cs d8 b a2.~ a~ a2~ a16 gs fs e fs8 gs b4 e e8^"T" r d r a r fs(d'4 cs d16 cs
   b8) b a(e) e'(d) cs4\fermata r8
-  e16(d cs8) b a(b cs) d cs cs cs4 r r r2. r4 r8 fs, b4~ b8 fs'(e) a, b cs b4 r r
+  e16(d cs8) b a(b cs) d cs cs cs4 r r r2. r4^"U" r8 fs, b4~ b8 fs'(e) a, b cs b4 r r
   r2. r4 r cs8 fs fs4. b,4 e8 e4. a,8 a a gs4 gs8 bs cs ds ds cs16(bs cs8) cs fs e16 ds e4 r r r2.
-  r4 r gs,8 a b4. e8 cs fs fs4 r r r2. r8 d4 cs8 b4~ b8 a16 gs a b cs8~ cs16 a b8 a4 r r  r2. r4 r fs'8 d
+  r4^"V" r gs,8 a b4. e8 cs fs fs4 r r r2. r8 d4 cs8 b4~ b8 a16 gs a b cs8~ cs16 a b8 a4 r r  r2. r4^"W" r fs'8 d
   b e4 e8 e a, a fs b2~ b8 a gs cs fs, cs' cs fs,16(gs a8) a b a16 gs a4 r r
+  \volta 2 \fine
   \bar "|."
+  }
 }
 
 scoreEAVerse = \lyricmode {
@@ -456,7 +504,7 @@ scoreEBTenorVoice = \relative c' {
   fs8 fs d d16 d d8 d e r
   fs4 r r2 r1 r r2 r8 b, b cs d d d e fs fs r d
   cs4 b8(a) e' e, r4
-  r8 fs' fs gs a a g fs g g r e fs b, cs(es) cs4 r8 b~ b d g fs fs fs16 e d8 cs cs a r4
+  r8 fs' fs gs a a g fs g g r e fs b, cs(es) cs4 r8 b4 d8 g fs fs fs16 e d8 cs cs a r4
   a8 g fs(g) a a a gs a4 a8 cs d a d4~
   d8 fs e ds e(cs) d(fs) b,2 cs4 r
   R1 * 10

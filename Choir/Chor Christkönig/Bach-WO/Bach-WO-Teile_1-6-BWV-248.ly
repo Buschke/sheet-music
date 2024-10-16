@@ -1,6 +1,11 @@
 \version "2.24.3"
 \language "english"
 
+\include "oll-core/package.ily"
+\loadPackage lilypond-export
+
+opts.exporter = #exportMusicXML
+
 \header {
   dedication = ""
   instrument = "Tenor"
@@ -19,6 +24,8 @@
 }
 
 \layout {
+% for MusicXML export, see http://www.mankin.org.uk/howto/lilypond-to-xml.html
+\FileExport #opts
   \context {
     \Voice
     \consists "Melody_engraver"
