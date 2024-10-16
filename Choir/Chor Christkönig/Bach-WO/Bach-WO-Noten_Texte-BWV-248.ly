@@ -13,8 +13,9 @@ scoreAATenorVoice = \relative c' {
   \dynamicUp
   \compressEmptyMeasures
   % Music follows here.
-  \repeat segno 2 { R4.*32
-  d8^"Nr. 1 Chor"^"A" d d d a r r4. r8 r a a d16 a fs d a'8 a r r fs' d
+  \repeat segno 2 {
+    R4.*32^"Nr. 1 Chor"
+  d8^"A" d d d a r r4. r8 r a a d16 a fs d a'8 a r r fs' d
   r r d d a r r4. d8^"B" d d d cs16 b cs d
   e8 e e e d16 cs d8 d d d d d e a,16 b cs8 d e a,16 b b16.\trill(a64 b cs8)^"C" cs ds
   e e d d g g fs fs r r a,16 b b16.\trill(a64 b cs8) e gs a a, a'
