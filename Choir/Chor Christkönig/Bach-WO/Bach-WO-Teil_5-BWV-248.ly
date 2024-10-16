@@ -113,56 +113,56 @@ scoreDVerse = \scoreEDVerse
   }
 }
 
-\bookpart {
-  \header {
-    title = "WO 5. Teil"
-    subsubtitle = "BWV 248"}
-  \score {
-    \header { opus = "43. Coro"}
-    \new Staff \with {
-      instrumentName = "Tenor"
-      shortInstrumentName = "T."
-      midiInstrument = "choir aahs"
-      \consists "Ambitus_engraver"
-    } { \clef "treble_8" \scoreATenorVoice }
-    \addlyrics { \scoreAVerse }
-    \layout { }
-    \midi { }
-  }
-  \score {
-    \header { opus = "45. Chor"}
-    \new Staff \with {
-      instrumentName = "Tenor"
-      shortInstrumentName = "T."
-      midiInstrument = "choir aahs"
-      \consists "Ambitus_engraver"
-    } { \clef "treble_8" \scoreBTenorVoice }
-    \addlyrics { \scoreBVerse }
-    \layout { }
-    \midi { }
-  }
-  \score {
-    \header { opus = "46. Choral"}
-    \new Staff \with {
-      instrumentName = "Tenor"
-      shortInstrumentName = "T."
-      midiInstrument = "choir aahs"
-      \consists "Ambitus_engraver"
-    } { \clef "treble_8" \scoreCTenorVoice }
-    \addlyrics { \scoreCVerse }
-    \layout { }
-    \midi { }
-  }
-  \score {
-    \header { opus = "53. Choral"}
-    \new Staff \with {
-      instrumentName = "Tenor"
-      shortInstrumentName = "T."
-      midiInstrument = "choir aahs"
-      \consists "Ambitus_engraver"
-    } { \clef "treble_8" \scoreDTenorVoice }
-    \addlyrics { \scoreDVerse }
-    \layout { }
-    \midi { }
-  }
-}
+% \bookpart {
+%   \header {
+%     title = "WO 5. Teil"
+%     subsubtitle = "BWV 248"}
+%   \score {
+%     \header { opus = "43. Coro"}
+%     \new Staff \with {
+%       instrumentName = "Tenor"
+%       shortInstrumentName = "T."
+%       midiInstrument = "choir aahs"
+%       \consists "Ambitus_engraver"
+%     } { \clef "treble_8" \scoreATenorVoice }
+%     \addlyrics { \scoreAVerse }
+%     \layout { }
+%     \midi { }
+%   }
+%   \score {
+%     \header { opus = "45. Chor"}
+%     \new Staff \with {
+%       instrumentName = "Tenor"
+%       shortInstrumentName = "T."
+%       midiInstrument = "choir aahs"
+%       \consists "Ambitus_engraver"
+%     } { \clef "treble_8" \scoreBTenorVoice }
+%     \addlyrics { \scoreBVerse }
+%     \layout { }
+%     \midi { }
+%   }
+%   \score {
+%     \header { opus = "46. Choral"}
+%     \new Staff \with {
+%       instrumentName = "Tenor"
+%       shortInstrumentName = "T."
+%       midiInstrument = "choir aahs"
+%       \consists "Ambitus_engraver"
+%     } { \clef "treble_8" \scoreCTenorVoice }
+%     \addlyrics { \scoreCVerse }
+%     \layout { }
+%     \midi { }
+%   }
+%   \score {
+%     \header { opus = "53. Choral"}
+%     \new Staff \with {
+%       instrumentName = "Tenor"
+%       shortInstrumentName = "T."
+%       midiInstrument = "choir aahs"
+%       \consists "Ambitus_engraver"
+%     } { \clef "treble_8" \scoreDTenorVoice }
+%     \addlyrics { \scoreDVerse }
+%     \layout { }
+%     \midi { }
+%   }
+% }
