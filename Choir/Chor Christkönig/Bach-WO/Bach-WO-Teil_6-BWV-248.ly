@@ -54,7 +54,7 @@ scoreBVerse = \scoreFBVerse
 \bookpart {
   \header {
     title = "Ich steh an deiner Krippen hier"
-    subsubtitle = "Coro"
+    subsubtitle = "Nr. 59 Coro"
   }
   \score {
     \new Staff \with {
@@ -81,7 +81,7 @@ scoreCVerse = \scoreFCVerse
 \bookpart {
   \header {
     title = "Nun seid ihr wohl gerochen"
-    subsubtitle = "64. Choral, D-Dur"
+    subsubtitle = "No. 64 Choral, D-Dur"
   }
   \score {
     \new Staff \with {

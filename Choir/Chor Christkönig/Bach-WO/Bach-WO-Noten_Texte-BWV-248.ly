@@ -350,15 +350,30 @@ scoreDATenorVoice = \relative c' {
   \dynamicUp
   % Music follows here.
   R4.*24
-  c4^"Bis 51" d8 bf4 a8 c(d) ef f f r
+  c4 d8 bf4 a8 c(d) ef f f r
   r4.*2 d8 ef f f(ef d c4) a8 f'4 c8
   bf(a g e' f) bf, c4 d8 bf4 a8 c(d) ef f f r f c4 f,8 a c
   c(bf) d c4. r4.^"A" r
   c4 bf8 c4 c8 c4 d8 a4 bf8
   a(bf) c
-  d c16 d bf8 f' f8 e4.~e4 e8
+  d c16 d bf8 f'4 f8 e4.~e4 e8
   d4.~d c4.~c8 d e d4 r8
-  c4^"B"^"end"
+  c4^"B" c8 c b c c4 c8
+  c4.~c~c~c~c~c~c8 b c d4.~d8 e f
+  g4 a8 g f e g f bf, a c r c f d d c c e d f e4 r8
+  R4.*15 r4.
+  c4^"C" c8 g'4. a,8 bf d d4 cs8 d16 e f8 e d g f g g, bf e, d' cs a4^"D" a8 a4 a8 bf16 a bf c a c bf c d c b a
+  g4 g8 g g g a16 g a bf g bf a bf c bf a g f8 e d g a g a4 a8 d, a' d bf8. a16 bf g a8 d16 cs d8 d cs4 d r8 r4. R4.*15
+  d4^"E" d,8 g f e a g g g f g c4 b8 a d e d gs, a b4 b8 a^"F" c e a,4 a8 d16 cs d e cs e d e f e d c b8 g d' g, g g c16 b c d b d c d e d c b a8 c a a e' d bf d g, a4.~a8 b c d d c^"end"
+  f e d c4 r8 c4^"G" d8 bf4 a8 r4. r
+  c8 d ef f f r r4. r bf,4 c8 c d e c bf d c4 r8
+  e^"H" f g g f e f e f~f e f g f e e f g a, bf c~c bf a g4 c8 c d e f4 f8 f f r
+  d c d d4 d8 c4 c8 c4 r8
+  e4^"I" f8 bf,4 a8 c4 bf8 c4 c8 r4. r4.
+  a8 bf c d c16 d bf8 f'4 f8 e4.~e4 e8 d4.~d c~c8 d d c4 r8
+  c4^"K" d8 d cs a f' ef ef f f r
+  bf, c d d c bf a bf c~c bf a d ef f f ef d c d ef~ef d c bf4 g8 ef' c d bf4 d8 c e r c bf c bf c a d c bf a4 r8
+  R4.*16\bar "|."
 }
 
 scoreDAVerse = \lyricmode {
@@ -369,12 +384,25 @@ scoreDAVerse = \lyricmode {
   Vor des Höchs _ -- ten Gna -- den -- thron!
   Fallt mit Lo -- ben, fallt mit Dan -- ken, 
   Fallt mit Lo -- ben, _ _ vor des Höch -- sten Gna -- _ den - Thron,
-  fallt mit Dan -- ken, 
+  fallt mit Dan _ -- ken, 
+  fallt mit Lo _ _ _ _ -- ben,
+  fallt mit Dan _ -- ken, 
+  fallt _ mit Lo -- ben,
+  vor _ des Höch _ -- sten Gna -- _ den -- thron!
   Got -- tes Sohn
-  Will der Er -- den
-  Hei -- land und Er -- lö -- ser wer -- den,
+  will _ der Er -- den
+  Hei _ _ -- land und _ Er -- lö  _ -- ser wer _ -- den,
+  Hei -- land und _ Er -- lö  _ _ _ _ _ _ _ _ _ _ _ -- ser wer -- den,
+  Er -- lö  _ _ _ _ _ _ _ _ _ _ _ _ _ -- ser wer _ -- den,
   Got -- tes Sohn
-  Dämpft der Fein -- de Wut und To -- ben.
+  dämpft der Fein _ _ _ _ -- de _ Wut und To -- ben.
+  Got _ _ _ -- tes Sohn
+  will der Er _ -- den
+  Hei -- land und _ Er -- lö _ -- ser wer -- den,
+  Hei _ -- land und Er -- lö _ _ _ _ _ _ _ _ _ _ _ _ _ -- ser wer -- den,
+  Er -- lö _ _ _ _ _ _ _ _ _ _ _ _ _ -- ser wer _ -- den,
+  Got _ -- tes Sohn
+  dämpft der Fein -- de Wut und To _ -- ben.
 }
 
 globalDB = {
@@ -530,6 +558,7 @@ globalEC = {
 scoreECTenorVoice = \relative c' {
   \globalEC
   \dynamicUp
+  \compressEmptyMeasures
   % Music follows here.
   \partial 4
   cs8 d
@@ -560,6 +589,7 @@ globalED = {
 scoreEDTenorVoice = \relative c' {
   \globalED
   \dynamicUp
+  \compressEmptyMeasures
   % Music follows here.
   \repeat volta 2 {
     cs4 b a8(b) cs(d) e(b) b4 b8.(a16) g4\fermata
@@ -659,6 +689,7 @@ globalFB = {
 
 scoreFBTenorVoice = \relative c' {
   \globalFB
+  \compressEmptyMeasures
   \dynamicUp
   % Music follows here.
   \repeat volta 2 {
@@ -670,7 +701,7 @@ scoreFBTenorVoice = \relative c' {
   d
   d d8(c) b(c) fs,(b) b(a) a(g) fs4\fermata
   fs g8(a) b(c) b(a) g4 g fs8 e fs4\fermata
-  e8 fs g4. a8 b(c) d4~ d(c8 b) b4\fermata
+  e8 fs g4. a8 b(c) d4 d(c8 b) b4\fermata
   \bar "|."
 }
 
@@ -689,8 +720,8 @@ scoreFBVerse = \lyricmode {
     >>
   }
   Nimm hin, es ist mein Geist und Sinn,
-  Herz, Seel und Mut, nimm al -- les _ hin
-  Und lass dir's wohl ge -- fal -- len.
+  Herz, Seel und Mut, nimm al -- les _ hin,
+  und _ lass dir's wohl ge -- fal -- len.
 }
 
 globalFC = {
@@ -700,6 +731,7 @@ globalFC = {
 
 scoreFCTenorVoice = \relative c' {
   \globalFC
+  \compressEmptyMeasures
   \dynamicUp
   % Music follows here.
   \partial 4
