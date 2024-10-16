@@ -25,7 +25,7 @@ opts.exporter = #exportMusicXML
 
 \layout {
 % for MusicXML export, see http://www.mankin.org.uk/howto/lilypond-to-xml.html
-\FileExport #opts
+%\FileExport #opts
   \context {
     \Voice
     \consists "Melody_engraver"
