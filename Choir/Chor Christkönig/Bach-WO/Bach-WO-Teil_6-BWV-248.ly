@@ -5,7 +5,7 @@
   dedication = ""
   title = "Herr, wenn die stolzen Feinde schnauben"
   subtitle = "Weihnachtsoratorium, 6. Teil"
-  subsubtitle = "Nr. 54 Chorus"
+  subsubtitle = "Nr. 54 Chorus, D-Dur"
   instrument = "Tenor"
   composer = "Johann Sebastian Bach"
   arranger = ""
@@ -54,7 +54,7 @@ scoreBVerse = \scoreFBVerse
 \bookpart {
   \header {
     title = "Ich steh an deiner Krippen hier"
-    subsubtitle = "Nr. 59 Coro"
+    subsubtitle = "Nr. 59 Coro, G-Dur"
   }
   \score {
     \new Staff \with {

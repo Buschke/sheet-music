@@ -14,7 +14,7 @@ scoreAATenorVoice = \relative c' {
   \compressEmptyMeasures
   % Music follows here.
   \repeat segno 2 { R4.*32
-  d8^"Nr. 1"^"A" d d d a r r4. r8 r a a d16 a fs d a'8 a r r fs' d
+  d8^"Nr. 1 Chor"^"A" d d d a r r4. r8 r a a d16 a fs d a'8 a r r fs' d
   r r d d a r r4. d8^"B" d d d cs16 b cs d
   e8 e e e d16 cs d8 d d d d d e a,16 b cs8 d e a,16 b b16.\trill(a64 b cs8)^"C" cs ds
   e e d d g g fs fs r r a,16 b b16.\trill(a64 b cs8) e gs a a, a'
@@ -96,7 +96,7 @@ scoreABTenorVoice = \relative c' {
   % Music follows here.
   \repeat volta 2 {
     \partial 4
-    gs4
+    gs4^"Nr. 5 Choral"
     a b c8(d) g,4 a8(gs a4) gs\fermata
     gs a8 b c4 f e8 d c2.
   }
@@ -138,7 +138,7 @@ scoreACTenorVoice = \relative c' {
   \dynamicUp
   % Music follows here.
   \partial 4
-  fs4\mf
+  fs4^"Nr. 9 Choral"\mf
   e d cs d8 cs b a g4 a r r1
   r4 a d d cs c8 b a4 a a r r2
   r2 r4 a
@@ -166,7 +166,7 @@ scoreBATenorVoice = \relative c' {
   % Music follows here.
   \repeat volta 2 {
     \partial 4
-    b8^"Bis 2"
+    b8^"Nr. 12 Choral"
     b8 c~ c d b a a4 a a\fermata
     b8(a) g(a) b(c) d4 d d4.(c8) b4\fermata
   }
@@ -194,7 +194,7 @@ scoreBBTenorVoice = \relative c' {
   \dynamicUp
   % Music follows here.
   \partial 4
-  e4^"Bis 1"
+  e4^"Nr. 17 Choral"
   d4. c8 b4 c8 b a g f4 g\fermata
 }
 
@@ -213,7 +213,7 @@ scoreBCTenorVoice = \relative c' {
   \globalBC
   \dynamicUp
   % Music follows here.
-  b8^"Bis 1" c d b c b c b16 c d8 c b a g4 c~ c b8 a g4 e'~ e
+  b8^"Nr. 21 Chor" c d b c b c b16 c d8 c b a g4 c~ c b8 a g4 e'~ e
 }
 
 scoreBCVerse = \lyricmode {
@@ -232,7 +232,7 @@ scoreBDTenorVoice = \relative c' {
   \dynamicUp
   % Music follows here.
   \partial 4.
-  d4.^"Bis 1"
+  d4.^"Nr. 23 Choral"
   a4. b4(a8) a4. g g4(c8) b(a8) b4. r
 }
 
@@ -254,7 +254,7 @@ scoreCATenorVoice = \relative c' {
   \dynamicUp
   % Music follows here.
   R4.*16
-  d8^"Bis 1" d d d fs16 e d cs d8
+  d8^"Nr. 24 Chor" fs16 e d cs d8
 }
 
 scoreCAVerse = \lyricmode {
@@ -272,7 +272,7 @@ scoreCBTenorVoice = \relative c' {
   \globalCB
   \dynamicUp
   % Music follows here.
-  r4 a8^"Bis 1" b cs d e4 e a fs2 fs4 e r
+  r4 a8^"Nr. 26 Chor" b cs d e4 e a fs2 fs4 e r
 }
 
 scoreCBVerse = \lyricmode {
@@ -291,7 +291,7 @@ scoreCCTenorVoice = \relative c' {
   \dynamicUp
   % Music follows here.
   \partial 4
-  cs4^"Bis 1" cs d8 cs a(e) cs(e) a(d4) cs8 a2\fermata
+  cs4^"Nr. 28 Choral" cs d8 cs a(e) cs(e) a(d4) cs8 a2\fermata
 }
 
 scoreCCVerse = \lyricmode {
@@ -309,7 +309,7 @@ scoreCDTenorVoice = \relative c' {
   \globalCD
   \dynamicUp
   % Music follows here.
-  b4^"Bis 1" c fs, g c c8 b e4(d) e2\fermata
+  b4^"Nr. 33 Choral" c fs, g c c8 b e4(d) e2\fermata
 }
 
 scoreCDVerse = \lyricmode {
@@ -328,7 +328,7 @@ scoreCETenorVoice = \relative c' {
   \dynamicUp
   % Music follows here.
   \partial 4
-  a8^"Bis 1" b
+  a8^"Nr. 35 Choral" b
   cs4 cs8 b a4\fermata
 }
 
@@ -349,7 +349,7 @@ scoreDATenorVoice = \relative c' {
   \compressEmptyMeasures
   \dynamicUp
   % Music follows here.
-  R4.*24
+  R4.*24^"Nr. 36 Chor"
   c4 d8 bf4 a8 c(d) ef f f r
   r4.*2 d8 ef f f(ef d c4) a8 f'4 c8
   bf(a g e' f) bf, c4 d8 bf4 a8 c(d) ef f f r f c4 f,8 a c
@@ -435,7 +435,7 @@ scoreDBTenorVoice = \relative c' {
   \compressEmptyMeasures
   \dynamicUp
   % Music follows here.
-  R2.*1
+  R2.*1^"Nr. 42 Choral"
   \repeat volta 2 {
     R2.*3
     f4 c2 c4.(bf8) a4 bf2 a8(bf16 c) c4(bf8 a bf4) a2 r4 R2.*3
@@ -471,8 +471,8 @@ scoreEATenorVoice = \relative c' {
   \dynamicUp
   % Music follows here.
   \repeat segno 2 {
-    R2.*16^"K"
-  r2.
+    R2.*16^"Nr. 43 Chor"
+  r2.^"K"
   r8 cs16(d e8) e fs16 e fs8 e r r4 r
   cs8 cs e cs b b cs cs16(b a8) r r4
   r8 gs16(a b8) b cs16(b) cs8 b b4 gs8 e e' e r r4 r
@@ -547,7 +547,7 @@ scoreEBTenorVoice = \relative c' {
   \compressEmptyMeasures
   % Music follows here.
   \partial 2
-  d4 r cs r8 as b4 r8 b e e ds e16 fs g8 g e e16 e e8 e r a, d d cs d16 e
+  d4^"Nr. 45 Chor und Rezitativ" r cs r8 as b4 r8 b e e ds e16 fs g8 g e e16 e e8 e r a, d d cs d16 e
   fs8 fs d d16 d d8 d e r
   fs4 r r2 r1 r r2 r8 b, b cs d d d e fs fs r d
   cs4 b8(a) e' e, r4
@@ -580,7 +580,7 @@ scoreECTenorVoice = \relative c' {
   \compressEmptyMeasures
   % Music follows here.
   \partial 4
-  cs8 d
+  cs8^"Nr. 46 Choral" d
   e4 d8 cs b4(a b) a8 g a4 e'8 d cs2\fermata
   r4 a a gs b8(a) b4 b8(e4) ds8 e4\fermata
   e fs fs fs e e8\((d) e(ds)\) e4\fermata
@@ -611,7 +611,7 @@ scoreEDTenorVoice = \relative c' {
   \compressEmptyMeasures
   % Music follows here.
   \repeat volta 2 {
-    cs4 b a8(b) cs(d) e(b) b4 b8.(a16) g4\fermata
+    cs4^"Nr. 53 Choral" b a8(b) cs(d) e(b) b4 b8.(a16) g4\fermata
     b8 cs d e a,4 e a4. gs8 cs2
   }
   e4 e8(ds) e(d) cs(b) a(b) cs(ds) e4 e\fermata
@@ -644,7 +644,7 @@ scoreFATenorVoice = \relative c' {
   \dynamicUp
   % Music follows here.
   \partial 8
-  r8
+  r8^"Nr. 54 Chor"
   R4. * 47
   r8^"A" r a d4 a8 e'4 a,8 fs' e16 fs g e g(fs e d) fs(d)
   fs(e d cs) e(cs) e(d cs b) d(b) e8 d16 cs b cs a4.~ a~ a8 cs e d(e16 d) e cs d8^"B" fs a~ a a,16 cs b a
@@ -713,7 +713,7 @@ scoreFBTenorVoice = \relative c' {
   % Music follows here.
   \repeat volta 2 {
     \partial 4
-    b4
+    b4^"Nr. 59 Choral"
     b e e8(d) d4 e8(c) a(d) d4\fermata e d g,8(a) b(c) d4 d(c8 b) b4
   }
   \partial 4
@@ -754,7 +754,7 @@ scoreFCTenorVoice = \relative c' {
   \dynamicUp
   % Music follows here.
   \partial 4
-  r4
+  r4^"Nr. 64 Choral"
   r1
   \repeat volta 2 {
     R1*10
