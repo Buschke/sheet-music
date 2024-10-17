@@ -181,7 +181,7 @@ alleinGottInDerHoehSeiEhrB = {
 heiligIstGottInHerrlichkeit = {
   \time 2/1
   \relative c'' {
-    g2^"Heilig ist Gott in Herrlichkeit" g4 g e fs g e d2 r
+    g2^"GL 199, Heilig ist Gott in Herrlichkeit" g4 g e fs g e d2 r
     g a4 b a g a a g2 r
     g c a b4 a g fs e2 d r
     d' c4 b a d c2 b a r
@@ -246,8 +246,50 @@ machtHochDieTuer = {
       bf4 c2 bf4 c2 bf4 c(bf) af g2
       bf4 c2 bf4 c2 bf4 c(bf) af g2\breathe
       bf4 ef,2 ef4 af2 g4 f2.~f2
-      bf4 af2 g4 f(ef) f ef2.~ef2 s4\bar "|.|"
+      bf4 af2 g4 f(ef) f ef2.~ef2\bar "|.|"
     }
+  }
+}
+
+machtHochDieTuerA = {
+  \key ef \major
+  \time 6/4
+  \relative c' {
+    \partial 4
+    ef4
+    ef2 ef4 ef2 d4 c2 ef4 d2 ef4 ef d2 ef2. c2 d4 bf2\breathe
+    ef4 f ef d ef f2 g f4 f2 d4 ef2 f4 ef2 f4 g2 f4 f2\breathe
+    ef4 ef2 ef4 ef2 g4 ef2 d4 ef2\breathe
+    g4 af2 g4 af2 g4 g2 d4 e2\breathe
+    ef4 ef d c c d ef d2.~d2 ef4~ef d ef c2 d4 bf2.~bf2\bar "|."
+  }
+}
+
+machtHochDieTuerT = {
+  \key ef \major
+  \time 6/4
+  \relative c' {
+    \partial 4
+    bf4
+    bf2 c4 bf2 bf4 g af bf bf2 bf4 c bf2 bf2. af4 g bf g2\breathe
+    bf4 bf2 bf4 bf c bf ef2 c4 d2 bf4 bf2 bf4  bf c bf ef2 c4 d2\breathe
+    g,4 af2 g4 af2 g4 g2 af4 bf2\breathe
+    ef4 ef2 ef4 ef2 ef4 c2 af4 c2\breathe
+    bf4 c bf af af2 bf4 bf2.~bf2 bf4 bf2 bf4 af g bf g2.~g2\bar "|."
+  }
+}
+
+machtHochDieTuerB = {
+  \key ef \major
+  \time 6/4
+  \relative c {
+    \partial 4
+    ef4
+    g,2 af4 ef'2 bf4 c af g bf2 g'4 f2 bf,4 ef g,2 af4 c bf ef2\breathe
+    ef4 d c bf ef2 d4 c2 f4 bf,2 bf4 ef2 d4 ef c d ef2 f4 bf,2\breathe
+    ef4 af,2 ef'4 af,2 ef'4 c2 f4 ef2\breathe
+    ef4 af2 ef4 af2 ef4 e2 f4 c2\breathe
+    g4 af2 af4 f2 g4 bf2.~bf2 g4 f2 g4 af c bf ef2.~ef2\bar "|."
   }
 }
 

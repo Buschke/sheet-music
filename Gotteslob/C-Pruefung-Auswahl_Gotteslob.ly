@@ -424,33 +424,39 @@ scoreEVerse = \lyricmode {
   }
 }
 
+global = {
+  \key ef \major
+  \time 6/4
+  \tempo "Gottesdiensttempo" 4=100
+}
+
 scoreFSoprano = \relative c'' {
   \global
   % Music follows here.
-  
+  \transpose f ef \machtHochDieTuer
 }
 
 scoreFAlto = \relative c' {
   \global
   % Music follows here.
-  
+  \machtHochDieTuerA
 }
 
 scoreFTenor = \relative c' {
   \global
   % Music follows here.
-  
+  \machtHochDieTuerT
 }
 
 scoreFBass = \relative c {
   \global
   % Music follows here.
-  
+  \machtHochDieTuerB
 }
 
 scoreFVerse = \lyricmode {
   % Lyrics follow here.
-  
+  \machtHochDieTuerV
 }
 
 \bookpart {
