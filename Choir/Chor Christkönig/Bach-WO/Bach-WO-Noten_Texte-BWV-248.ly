@@ -93,6 +93,7 @@ globalAB = {
 
 scoreABTenorVoice = \relative c' {
   \globalAB
+  \compressEmptyMeasures
   \dynamicUp
   % Music follows here.
   \repeat volta 2 {
@@ -136,6 +137,7 @@ globalAC = {
 
 scoreACTenorVoice = \relative c' {
   \globalAC
+  \compressEmptyMeasures
   \dynamicUp
   % Music follows here.
   \partial 4
@@ -163,6 +165,7 @@ globalBA = {
 
 scoreBATenorVoice = \relative c' {
   \globalBA
+  \compressEmptyMeasures
   \dynamicUp
   % Music follows here.
   \repeat volta 2 {
@@ -181,7 +184,8 @@ scoreBATenorVoice = \relative c' {
 
 scoreBAVerse = \lyricmode {
   % Lyrics follow here.
-  Brich an, _ o schö -- nes Mor -- gen -- licht
+  <<{Brich an, _ o schö -- nes Mor -- gen -- licht, und lass den Him -- mel ta -- gen!} \new Lyrics {Du Hir -- ten --volk, er -- schre -- cke nicht, weil dir die En --gel sa -- gen:} >>
+     dass die -- ses schwa -- che Knä -- be -- lein soll un -- ser Trost und Freu -- de sein, da -- zu den Sa -- tan zwin -- gen und letzt -- lich Frie -- den brin -- gen.
 }
 
 globalBB = {
@@ -192,29 +196,46 @@ globalBB = {
 
 scoreBBTenorVoice = \relative c' {
   \globalBB
+  \compressEmptyMeasures
   \dynamicUp
   % Music follows here.
   \partial 4
   e4^"Nr. 17 Choral"
   d4. c8 b4 c8 b a g f4 g\fermata
+  a a8(b) c4 b8(a) g(a) bf4. a8 g4\fermata
+  c8(b) a(g) f4 f g8(f) e(c) c'4 c\fermata
+  e e8(b) c4 b a8(b) c(a) d,(g) e4\fermata\bar "|."
 }
 
 scoreBBVerse = \lyricmode {
   % Lyrics follow here.
-  Schaut hin, dort liegt im _ fins _ -- tern Stall
+  Schaut hin, dort liegt im _ fins _ -- tern Stall,
+  des Herr -- schaft ge -- het ü -- ber -- all.\fermata
+  Da Spei -- se vor -- mals sucht' ein Rind, da ru -- het jetzt der Jung -- fraun Kind.
 }
 
 globalBC = {
   \key g \major
-  \time 2/2
+  \time 4/4
   \tempo "Vivace" 2=80
 }
 
 scoreBCTenorVoice = \relative c' {
   \globalBC
+  \compressEmptyMeasures
   \dynamicUp
   % Music follows here.
-  b8^"Nr. 21 Chor" c d b c b c b16 c d8 c b a g4 c~ c b8 a g4 e'~ e
+  b8^"Nr. 21 Chor" c d b c b c b16 c d8 c b a g4 c~ c b8 a g4 e'~e d8 cs b4 e8 d cs a fs' e16 d e2~e8 d16 cs d8 b e cs a a d4 a'8 a a a, d e16 fs e4. e8 d b a4
+  a^"M" r b e~e d8 c b c d4~d c8 b a4 d~d8 c d b c16 e fs g fs8 e
+  ds b e8 fs16 g fs2~fs8 e16 ds e8 ds16 e fs8 ds e b a a'4 fs8 b, c16 d e8 d c d16 c b8 c16 b a4 r
+  b^"N" e2 d8 c b4 gs'8 e e d c4~c8 b a4 r2 a4 fs'2 e8 d cs b16 as b4. as16 gs as8 b16 cs d4. cs16 d e4 d8 d d4 cs8 cs cs4 b~b8 b as as b8. cs16 as4
+  b^"O" r8 ds\p e4(fs8 e ds4 e2) d8 d b b e2(d4~d c b) b8 b a4 a8 f' bf,2(a g8f) e a a4 a r2
+  r1^"P" r4 d8\f c b c d b e d16 c b8 e cs16 b cs d e d cs b a g a b cs8 a r4 d8 c b c d b e d16 cs b8 e cs16 b cs d e d cs b a4~a16 b cs a fs8 fs r d' d(g4) b,8 c^"Q" c c b a b c a d c16 b a8 d b16 a b c d c d b e d e fs g fs e d c b c d e d c b a g a b c b a g d' a d4 cs8
+  d4 r8 d d e f d c b16 a g8 c e4. ds16 e fs4~fs16 g fs e ds cs ds e fs e ds cs
+  b8 e16 fs ds4 e8 b e4~e4. e8 d c16 b a b c a d4~d16 e f d g4. b,8
+  c4^"R" r a d~d c8 b a4 a~a g8 f e4 c'~c b8 a g e'4 d16 c
+  d8 fs, g4. fs16 e fs8 g16 a b4. a16 b c4 b8 b b4 a8 a b c16 d e4~e8 a, a a g(e' d4)
+  d8^"S" g,\p d'2 c4~c b2 a8 a d4 d8 g, e'2 d c4 c8 c d4 d r c8\f b a b c e d a d4~d16 e d c b2 bf4~bf a4. g8 a b16 c b1\fermata\bar "|."
 }
 
 scoreBCVerse = \lyricmode {
@@ -230,16 +251,26 @@ globalBD = {
 
 scoreBDTenorVoice = \relative c' {
   \globalBD
+  \compressEmptyMeasures
   \dynamicUp
   % Music follows here.
   \partial 4.
-  d4.^"Nr. 23 Choral"
-  a4. b4(a8) a4. g g4(c8) b(a8) b4. r
+  d4.\ff^"Nr. 23 Choral"
+  d d4(cs8) d4(c8) c4(b8) b4(a8) d4. d r
+  r1.
+  r4. d4. e fs4(g8) d4. d4(e8) a,4(b8) c8.(e16 ds8)
+  e4. r4. r2.
+  r2. r4. e e4(d8) c4. b4(cs8) d4. g,4(d'8) d4(cs8) fs4. r
+  r1.
+  r4. e e4(d8) d4(c8) c4(b8) c4(b8) c4(d8) e4(d8) b4. r r2. r1.\fermata\bar "|."
 }
 
 scoreBDVerse = \lyricmode {
   % Lyrics follow here.
   Wir sin -- gen dir in dei -- nem Herr
+  aus al -- ler Kraft Lob, Preis und Ehr'.
+  dass du, o lang' ge -- wünsch -- ter Gast,
+  dich nun -- mehr ein -- ge -- stel --let hast.
 }
 
 % Teil 3
@@ -254,13 +285,27 @@ scoreCATenorVoice = \relative c' {
   \compressEmptyMeasures
   \dynamicUp
   % Music follows here.
+  R4.*16^"Nr. 24 Chor"
+  d8^"T" d d d fs16 e d cs d8 cs16 b a g fs8 e16 d a'8 a4.~a~a16 gs a b cs d e g fs e d cs d4.~d~d~d~d~d~d8 d d d4 a8
+  a^"U" a a d fs d cs e b b e fs e b e a, cs16 b cs d e8 d a a fs' e d e e e e e fs e e e4 r8
+  r^"V" r fs cs16 b a b cs d e8 a, a a4.
   R4.*16
-  d8^"Nr. 24 Chor" fs16 e d cs d8
+  e'8^"W" e e cs d16 cs b a d8 e fs b, cs16 d e cs d4.~d~d16 cs d e fs g a8 a, gs a4.~a~a8 a a a4.~a~a8 a a a4.~a16 gs a8 e
+  e'^"X" e e e cs cs cs a g d' g e d a a a d fs fs d d d e a, d b g' e a, d a e a a4 r8 r r d fs a g fs d16 cs d e fs4\fermata\bar "|."
 }
 
 scoreCAVerse = \lyricmode {
   % Lyrics follow here.
-  Herrscher des Himmels, erhöhre das Lallen
+  Herr -- scher des Him -- mels, _ er _ -- höh -- re _ das _ Lal _ -- len,
+  er hö _ _ _ _ _ _ _ _ _ _ _ _ -- re das Lal -- len,
+  Herr -- scher des Him -- mels, er -- höh -- re das Lal _ -- len,
+  lass dir die mat -- ten _ Ge _ --sän -- ge ge -- fal _ -- len, wenn dich dein Zi -- on mit Psal -- men er -- höht,
+  mit Psal _ _ _ _ _ _ -- men er -- höht!
+  Hö -- re der Her -- zen _ froh _ -- lo -- cken des Prei _ _ _ _ _ _ _ _ _ _ _ -- sen,
+  der Her -- zen froh -- lo -- cken des Prei _ _ -- sen,
+  Hö -- re der Her -- zen froh -- lo -- cken des Prei _ -- sen,
+  wenn wir dir je -- tzo die Ehr -- furcht er -- wei _ -- sen, weil uns -- re Wohl -- fahrt be -- fe -- sti -get steht,
+  be -- fe _ _ _ -- sti _ -- get _ steht.
 }
 
 globalCB = {
@@ -271,14 +316,32 @@ globalCB = {
 
 scoreCBTenorVoice = \relative c' {
   \globalCB
+  \compressEmptyMeasures
   \dynamicUp
   % Music follows here.
-  r4 a8^"Nr. 26 Chor" b cs d e4 e a fs2 fs4 e r
+  r4 a8\f^"Nr. 26 Chor" b cs d e4 e a, fs'2 fs4 e r a8 g fs e d4 d r cs8 d e fs gs4 gs r
+  a,8^"Y" b cs d e4
+  as,4. cs8 fs e d cs b cs d4 d r r a8 b cs d e d cs b e2~e8 ds cs b a4
+  b^"Z" gs cs~cs8 b cs4. fs,8 cs' as b4 es8 fs gs4 cs, r r cs fs~fs8 e fs4. gs16 a gs4 gs, r8 fs b4 r r8 b e4 r8 cs a' cs, bs ds gs, gs gs'4 fs8 r r cs fs e ds4 r8 gs, a b cs cs16 bs cs8 ds bs4\bar "||"
+  \time 4/4 cs4 r^"Nr. 27 Rezitativ" r2 R1*7\fermata\bar "|."
 }
 
 scoreCBVerse = \lyricmode {
   % Lyrics follow here.
-  Las -- set uns nun ge -- hen nach Beth -- le -- hem
+  Las -- set uns nun ge -- hen gen Beth -- le -- hem,
+  las -- set uns nun ge -- hen,
+  las -- set uns nun ge -- hen,
+  las -- set uns nun ge -- hen
+  gen Beth -- le -- hem,
+  gen Beth _ -- le -- hem
+  las -- set uns nun ge _ -- hen,
+  gen Beth _ _ _ -- le -- hem
+  und die Ge -- schich -- te se _ -- hen,
+  die Ge -- schich -- te,
+  und die Ge -- schich -- te _ se -- hen,
+  die da, die da ge -- sche --hen ist,
+  die uns der Herr kund -- ge -- tan _ hat,
+  die uns der Herr kund _ -- ge - tan hat.
 }
 
 globalCC = {
@@ -289,15 +352,20 @@ globalCC = {
 
 scoreCCTenorVoice = \relative c' {
   \globalCC
+  \compressEmptyMeasures
   \dynamicUp
   % Music follows here.
   \partial 4
-  cs4^"Nr. 28 Choral" cs d8 cs a(e) cs(e) a(d4) cs8 a2\fermata
+  cs4^"Nr. 28 Choral" cs d8(cs) a(e) cs(e) a(d4) cs8 a2\fermata
+  fs'4 e d e e8(fs4) e16(d) cs4\fermata
+  a fs'8(e) e4 e e8(b) cs(e) b(a) gs4\fermata
+  a8(fs) gs4 a gs a a8(gs) fs b cs(d e4 fs e2) d4~d cs8(b) cs4\fermata\bar "|."
 }
 
 scoreCCVerse = \lyricmode {
   % Lyrics follow here.
-  Dies hat er al -- les uns ge -- tan
+  Dies hat er al -- les uns ge -- tan,
+  sein' groß Lieb zu zei -- gen an; des freu sich al -- le Chri -- sten -- heit, und dank ihm des in E -- wig _ -- keit. Ky -- rie -- leis!
 }
 
 globalCD = {
@@ -311,11 +379,20 @@ scoreCDTenorVoice = \relative c' {
   \dynamicUp
   % Music follows here.
   b4^"Nr. 33 Choral" c fs, g c c8 b e4(d) e2\fermata
+  g8(f) e4 e2\fermata
+  e4 d d2\fermata
+  a4 b c d e(d8 c) b2\fermata
+  c4 g fs g g8(f) g(a) g4(e') e2\fermata
+  d8(c) b4 a2\fermata
+  g8(a) b(g) d'2\fermata
+  b8(c) d4 e8(fs) g4 d8(c16 b c4) b2\fermata\bar "|."
 }
 
 scoreCDVerse = \lyricmode {
   % Lyrics follow here.
-  Ich will dich mit Fleiß be _ -- wah -- ren
+  Ich will dich mit Fleiß be _ -- wah -- ren,
+  ich will dir le -- ben hier, dir will ich ab -- fah -- ren.
+  Mit dir will ich end -- lich schwe -- ben vol -- ler Freund, oh -- ne Zeit dort im an -- dern Le -- ben.
 }
 
 globalCE = {
@@ -330,12 +407,18 @@ scoreCETenorVoice = \relative c' {
   % Music follows here.
   \partial 4
   a8^"Nr. 35 Choral" b
-  cs4 cs8 b a4\fermata
+  cs4 cs8(b) a4\fermata
+  b cs cs8(b) a4\fermata
+  a b cs cs\fermata
+  cs cs d d8(e16 fs) e8(d) cs4 b8(a) d(cs) cs(d) d(b gs cs) a4\fermata
+  a b8(cs) ds4 cs\fermata
+  cs fs, b b\fermata
+  cs cs8(a) d4 d8(b) e4 e8(cs) fs(e) d(cs) ds4 cs8(gs cs b) a4\fermata\bar "|."
 }
 
 scoreCEVerse = \lyricmode {
   % Lyrics follow here.
-  Seid _ froh die _ -- weil
+  Seid _ froh die -- weil, seid froh, die -- weil dass eu -- er Heil ist hie ein Gott und auch ein Mensch ge -- bo -- ren, der wel -- cher ist der Herr und Christ in Da -- vids Stadt, von vie -- len aus -- er -- ko -- ren. 
 }
 
 % Teil 4
