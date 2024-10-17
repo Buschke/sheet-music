@@ -528,7 +528,7 @@ globalDB = {
 }
 
 scoreDBTenorVoice = \relative c' {
-  \transposition b
+  \transposition c
   \globalDB
   \compressEmptyMeasures
   \dynamicUp
@@ -564,7 +564,7 @@ globalEA = {
 }
 
 scoreEATenorVoice = \relative c' {
-  \transposition b
+  \transposition c
   \compressEmptyMeasures
   \globalEA
   \dynamicUp
