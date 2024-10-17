@@ -1,6 +1,11 @@
 \version "2.24.1"
 \language "english"
 
+\include "oll-core/package.ily"
+\loadPackage lilypond-export
+
+opts.exporter = #exportMusicXML
+
 \header {
   dedication = ""
   title = ""
@@ -25,10 +30,12 @@
 }
 
 \layout {
+% for MusicXML export, see http://www.mankin.org.uk/howto/lilypond-to-xml.html
+%\FileExport #opts
   \context {
     \Voice
     \consists "Melody_engraver"
-    \override Stem #'neutral-direction = #'()
+    \override Stem.neutral-direction = #'()
   }
 }
 
@@ -316,7 +323,7 @@ stvlh = {
 scoreARight = \relative c'' {
   \globalA
   % Music follows here.
-        \override Fingering #'avoid-slur = #'inside
+        \override Fingering.avoid-slur = #'inside
       \keepWithTag #'first
         \repeat volta 2 { \ptrh \strh } \break
       \repeat volta 2 {
@@ -384,7 +391,7 @@ scoreARight = \relative c'' {
 scoreALeft = \relative c' {
   \globalA
   % Music follows here.
-  \override Fingering #'avoid-slur = #'inside
+  \override Fingering.avoid-slur = #'inside
       \repeat volta 2 { \ptlh \stlh }
       \repeat volta 2 {
 	\dvlh
@@ -791,7 +798,7 @@ mtrh = \relative c'' {
   <b gs'-4>-.-4 r a'16\mp-5( e-3 c a)
   c-3 bf bf-3 bf-2 d-3 cs cs-3 cs-2
 
-  #34
+  %#34
   e-3 d-. f-3 e-.  g-3 f-. f-3 e-.
   e-3 ds-. c'4(-5 ds,8-2
   e)-. r b'16(-5 gs-4 e-2 d)
@@ -890,7 +897,7 @@ mtlh = \relative c' {
   e16 ds f e  \clef treble <c-5 e-3>4
   <d f> <e g>
 
-  #34
+  %#34
   << { f8_2 cs-5 d e } \\ { a2-1 } >>
   <f a>8 r <f a> r
   \clef bass

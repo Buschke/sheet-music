@@ -1,4 +1,4 @@
-\version "2.24.3"
+ \version "2.24.3"
 \language "english"
 
 \include "predefined-guitar-fretboards.ly"
