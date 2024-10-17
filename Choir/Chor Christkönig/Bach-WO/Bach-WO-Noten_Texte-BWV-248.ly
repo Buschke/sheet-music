@@ -9,6 +9,7 @@ globalAA = {
 }
 
 scoreAATenorVoice = \relative c' {
+  \transposition b
   \globalAA
   \dynamicUp
   \compressEmptyMeasures
@@ -92,6 +93,7 @@ globalAB = {
 }
 
 scoreABTenorVoice = \relative c' {
+  \transposition b
   \globalAB
   \compressEmptyMeasures
   \dynamicUp
@@ -136,6 +138,7 @@ globalAC = {
 }
 
 scoreACTenorVoice = \relative c' {
+  \transposition b
   \globalAC
   \compressEmptyMeasures
   \dynamicUp
@@ -164,6 +167,7 @@ globalBA = {
 }
 
 scoreBATenorVoice = \relative c' {
+  \transposition b
   \globalBA
   \compressEmptyMeasures
   \dynamicUp
@@ -195,6 +199,7 @@ globalBB = {
 }
 
 scoreBBTenorVoice = \relative c' {
+  \transposition b
   \globalBB
   \compressEmptyMeasures
   \dynamicUp
@@ -221,6 +226,7 @@ globalBC = {
 }
 
 scoreBCTenorVoice = \relative c' {
+  \transposition b
   \globalBC
   \compressEmptyMeasures
   \dynamicUp
@@ -250,6 +256,7 @@ globalBD = {
 }
 
 scoreBDTenorVoice = \relative c' {
+  \transposition b
   \globalBD
   \compressEmptyMeasures
   \dynamicUp
@@ -281,6 +288,7 @@ globalCA = {
 }
 
 scoreCATenorVoice = \relative c' {
+  \transposition b
   \globalCA
   \compressEmptyMeasures
   \dynamicUp
@@ -315,6 +323,7 @@ globalCB = {
 }
 
 scoreCBTenorVoice = \relative c' {
+  \transposition b
   \globalCB
   \compressEmptyMeasures
   \dynamicUp
@@ -351,6 +360,7 @@ globalCC = {
 }
 
 scoreCCTenorVoice = \relative c' {
+  \transposition b
   \globalCC
   \compressEmptyMeasures
   \dynamicUp
@@ -375,6 +385,7 @@ globalCD = {
 }
 
 scoreCDTenorVoice = \relative c' {
+  \transposition b
   \globalCD
   \dynamicUp
   % Music follows here.
@@ -402,6 +413,7 @@ globalCE = {
 }
 
 scoreCETenorVoice = \relative c' {
+  \transposition b
   \globalCE
   \dynamicUp
   % Music follows here.
@@ -429,6 +441,7 @@ globalDA = {
 }
 
 scoreDATenorVoice = \relative c' {
+  \transposition b
   \globalDA
   \compressEmptyMeasures
   \dynamicUp
@@ -515,6 +528,7 @@ globalDB = {
 }
 
 scoreDBTenorVoice = \relative c' {
+  \transposition b
   \globalDB
   \compressEmptyMeasures
   \dynamicUp
@@ -550,6 +564,7 @@ globalEA = {
 }
 
 scoreEATenorVoice = \relative c' {
+  \transposition b
   \compressEmptyMeasures
   \globalEA
   \dynamicUp
@@ -626,6 +641,7 @@ globalEB = {
 }
 
 scoreEBTenorVoice = \relative c' {
+  \transposition b
   \globalEB
   \dynamicUp
   \compressEmptyMeasures
@@ -659,6 +675,7 @@ globalEC = {
 }
 
 scoreECTenorVoice = \relative c' {
+  \transposition b
   \globalEC
   \dynamicUp
   \compressEmptyMeasures
@@ -690,6 +707,7 @@ globalED = {
 }
 
 scoreEDTenorVoice = \relative c' {
+  \transposition b
   \globalED
   \dynamicUp
   \compressEmptyMeasures
@@ -723,6 +741,7 @@ globalFA = {
 }
 
 scoreFATenorVoice = \relative c' {
+  \transposition b
   \globalFA
   \compressEmptyMeasures
   \dynamicUp
@@ -791,6 +810,7 @@ globalFB = {
 }
 
 scoreFBTenorVoice = \relative c' {
+  \transposition b
   \globalFB
   \compressEmptyMeasures
   \dynamicUp
@@ -833,6 +853,7 @@ globalFC = {
 }
 
 scoreFCTenorVoice = \relative c' {
+  \transposition b
   \globalFC
   \compressEmptyMeasures
   \dynamicUp
