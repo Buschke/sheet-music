@@ -737,7 +737,7 @@ scoreEDVerse = \lyricmode {
 globalFA = {
   \key d \major
   \time 3/8
-  \tempo "Vivace" 4=100
+  \tempo "Vivace" 4=50
 }
 
 scoreFATenorVoice = \relative c' {
