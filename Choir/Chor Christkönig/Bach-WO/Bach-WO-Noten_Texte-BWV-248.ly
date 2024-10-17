@@ -760,7 +760,7 @@ scoreFATenorVoice = \relative c' {
   c(b16 a) b8 b^"F" a g cs d e d4 d8~ d cs16 b cs8 d a a a a cs
   fs, d g a d, d'16 e fs8 g a e16(d cs b) cs8 d a e' d gs, b e fs e
   cs r r R4.*7^"G"
-  r8 r b e4 e8 e cs16(d e8) as, b cs e16(d) fs(e d cs) fs(es) gs(fs e ds) gs4.~ gs16 fs a(gs fs es)
+  r8 r b e4 e8 e cs16(d e8) as, b cs e16(d) fs(e d cs) fs(es) gs(fs es ds) gs4.~ gs16 fs a(gs fs es)
   fs8 cs es fs e16 ds e8 ds fs a a g16 fs e fs b,4^"H" b8 cs e g fs e16 d cs d e8 d fs
   b, r fs b4 b8 b gs16 a b8 e,(fs) gs a a e' fs(cs) fs fs(ds) fs fs(e) b
   b g fs e^"I" g b e cs e e(d) a a fs b b4.~b16 cs d8 e fs g fs
