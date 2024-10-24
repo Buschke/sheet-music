@@ -1,8 +1,8 @@
-\version "2.16.1"
+\version "2.24.0"
 
 \paper {
-    markup-system-spacing #'basic-distance = #12
-    system-system-spacing #'basic-distance = #22
+    markup-system-spacing.basic-distance = #12
+    system-system-spacing.basic-distance = #22
     ragged-bottom = ##f
 }
 
@@ -27,7 +27,7 @@
         maintainerEmail = "dl1sdz (at) gmail.com"
 	
  footer = "Mutopia-2013/02/17-1387"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \concat { \teeny www. \normalsize MutopiaProject \teeny .org } \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \concat { \teeny www. \normalsize LilyPond \teeny .org }} by \concat { \maintainer . } \hspace #0.5 Copyright © 2013. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details \concat { see: \hspace #0.3 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } } }
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url "http://www.MutopiaProject.org" \line { \concat { \teeny www. \normalsize MutopiaProject \teeny .org } \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url "http://www.LilyPond.org" \line { \concat { \teeny www. \normalsize LilyPond \teeny .org }} by \concat { \maintainer . } \hspace #0.5 Copyright © 2013. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details \concat { see: \hspace #0.3 \with-url "http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } } }
 }
 
 % Macros %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -35,9 +35,9 @@
  staffUpper = {\change Staff = upper \stemDown}
  staffLower = {\change Staff = lower \stemUp}
 
- indentRests = \override Voice.Rest #'extra-offset = #'(5.5 . 0.0 )
- noIndentRests = \revert Voice.Rest #'extra-offset
- ignoreClashNote = \once \override NoteColumn #'ignore-collision = ##t
+ indentRests = \override Voice.Rest.extra-offset = #'(5.5 . 0.0 )
+ noIndentRests = \revert Voice.Rest.extra-offset
+ ignoreClashNote = \once \override NoteColumn.ignore-collision = ##t
 
  nb = \noBreak
 
@@ -182,7 +182,7 @@ bassOne =   \relative d' {
         d1\rest | % 22
         d1\rest | % 23
         d1\rest | % 24
-        \override Voice.Rest #'extra-offset = #'(2.8 . 0.0 )
+        \override Voice.Rest.extra-offset = #'(2.8 . 0.0 )
         d1\rest | % 25
         \indentRests
         d1\rest | % 26

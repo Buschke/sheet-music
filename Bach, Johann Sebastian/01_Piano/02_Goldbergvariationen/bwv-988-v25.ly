@@ -1,7 +1,7 @@
-\version "2.16.1"
+\version "2.24.0"
 
 \paper {
-	top-system-spacing #'basic-distance = #0.0
+	top-system-spacing.basic-distance = #0.0
 	%indent = 0.0
 	line-width = 18.0\cm
 	ragged-bottom = ##f
@@ -29,28 +29,28 @@
 	maintainerEmail = "dl1sdz (at) gmail.com"
 
  footer = "Mutopia-2013/01/22-1419"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \concat { \teeny www. \normalsize MutopiaProject \teeny .org } \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \concat { \teeny www. \normalsize LilyPond \teeny .org }} by \concat { \maintainer . } \hspace #0.5 Copyright © 2013. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details \concat { see: \hspace #0.3 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } } }
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url "http://www.MutopiaProject.org" \line { \concat { \teeny www. \normalsize MutopiaProject \teeny .org } \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url "http://www.LilyPond.org" \line { \concat { \teeny www. \normalsize LilyPond \teeny .org }} by \concat { \maintainer . } \hspace #0.5 Copyright © 2013. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details \concat { see: \hspace #0.3 \with-url "http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } } }
 }
 
 soprano = \relative d'' {
 	\repeat volta 2 { %begin repeated section
-		r16 d16 [ \grace es16 d32 cis d16 ] \once \override Slur #'direction = #UP \appoggiatura d16 bes'8 ~ [ bes32 a g f ] es16 [ d8 cis!16 ~ ] | % 1
+		r16 d16 [ \grace es16 d32 cis d16 ] \once \override Slur.direction = #UP \appoggiatura d16 bes'8 ~ [ bes32 a g f ] es16 [ d8 cis!16 ~ ] | % 1
 		cis16 [ c \grace d!16 c32 b c16 ]  \appoggiatura  f16 as8 ~ [ as32 g f es ] des16 [ c8 b!16 ~ ] | % 2
 		b16 [ bes  \appoggiatura  c16 bes32 a bes16 ] fis' [ g8 cis,16 ~ ] cis [ d8 g,16 ] | % 3
 		g16 [ a32 bes a8 ] r4 r4 | % 4
 		r16 d,16 [ \grace ees16 d32 cis d16 ] d'8 ~ [ d32 c! bes a ] g [ f as16 ~ as32 d, f16 ~ ] | % 5
 		f16 [ es  \appoggiatura  f16 es32 d es16 ] es'8 ~ [ es32 d c bes ] a32 [ g bes16 ~ bes32 e,32 g16 ~] | % 6
 		g16 [ fis \grace g16 fis32 e fis16 ] 
-		\times 2/3 { b16 [ c es! ] } 
-		\times 2/3 { cis16  [d fis,! ] } 
-		\times 2/3 { bes16 [ a d,] } 
-		\times 2/3 { es16 [ b c ~ ] } | % 7
+		\tuplet 3/2 { b16 [ c es! ] } 
+		\tuplet 3/2 { cis16  [d fis,! ] } 
+		\tuplet 3/2 { bes16 [ a d,] } 
+		\tuplet 3/2 { es16 [ b c ~ ] } | % 7
 		c16 [ bes!32 a bes8 ] r4 r4 | % 8
 		r32 d32 [ e fis g bes a16 ~ ] a16 [ bes8 b16 ] c16 [ cis8 d16 ] | % 9
 		dis16 [ e ~ e32 bes' a g ] fis [ e d8 d16 ] d' [ cis8 c16 ] | % 10
 		b16 [ bes ~ bes32 a gis16 ~ ] gis [ a ~ a32 d, c bes ] c [ a bes g! f e f d' ] | % 11
 		f,32 \prallprall [ e f16 e8 ] r32 d32 [ cis d e f g a ] bes [ a d16 ~ d32 cis e16 ~ ] | % 12
-		e16 [ a, \grace bes16 a32 gis a16 ] \once \override Slur #'direction = #UP  \appoggiatura a16 a'8 ~ [ a32 bes (a gis ) ] a-. [ d, c bes c-. c (bes a ) ] | % 13
+		e16 [ a, \grace bes16 a32 gis a16 ] \once \override Slur.direction = #UP  \appoggiatura a16 a'8 ~ [ a32 bes (a gis ) ] a-. [ d, c bes c-. c (bes a ) ] | % 13
 		a16 [ bes \grace c16 bes32 a bes16 ] bes'8 ~ [ bes32 es,! d cis ] d [ c'! b8 d,16 ] | % 14
 		cis16 [ bes!8 a16 ] es'!16 [ d ~ d32 cis! e g ] bes16 [ a ~ a64 g f e d32 cis ] | % 15 
 	} %end of repeated section
@@ -69,7 +69,7 @@ soprano = \relative d'' {
 		bes16 [ ces  \appoggiatura des16 ces32 bes ces16 ] ces [ ces' ~ ces32 fes, es d] es [ des' c8 es,16 ] | % 22
 		d!16 [ ces8 bes16 ] fes' [ es ~ es32 d f as ] ces16 [ bes ~ bes64 as64 ges64 f64 es32 d ] | % 23
 		d8\( [ es8\) ] r4 r4 | % 24
-		r16 g,16 [ \appoggiatura as16 g32 fis g16 ] \once \override Slur #'direction = #UP \appoggiatura g16 es'8 ~ [ es32 d c bes ] as!16 [ g8 fis!16 ] ~ | % 25
+		r16 g,16 [ \appoggiatura as16 g32 fis g16 ] \once \override Slur.direction = #UP \appoggiatura g16 es'8 ~ [ es32 d c bes ] as!16 [ g8 fis!16 ] ~ | % 25
 		fis16 [ f \grace g16 f32 e f16 ] des'8 ~ [ des32 c bes as ] ges16 [ f8 e!16 ~ ] | % 26
 		e16 [ es  \appoggiatura f16 es32 d es16 ] c'8 ~ [ c32 bes as g ] fis16 [ es' ~ es32 d cis16 ] | % 27
 		cis16 [ (d) es, (d) ] r32 e32 [ fis g a bes c d ] es! [ d g16 ~ g32 fis a16 ~ ] | % 28

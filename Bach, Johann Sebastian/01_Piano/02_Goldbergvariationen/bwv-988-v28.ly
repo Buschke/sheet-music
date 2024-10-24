@@ -1,10 +1,10 @@
-\version "2.16.1"
+\version "2.24.0"
 
 \paper {
-    top-markup-spacing  #'basic-distance = 6\mm
-    markup-system-spacing #'basic-distance = #15
-    system-system-spacing #'basic-distance = #23
-    top-system-spacing #'basic-distance = #13
+    top-markup-spacing.basic-distance = 6\mm
+    markup-system-spacing.basic-distance = #15
+    system-system-spacing.basic-distance = #23
+    top-system-spacing.basic-distance = #13
     line-width = 18.0\cm
     ragged-bottom = ##t
     ragged-last-bottom = ##t
@@ -31,15 +31,15 @@
         maintainerEmail = "dl1sdz (at) gmail.com"
 	
  footer = "Mutopia-2013/03/22-1420"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \concat { \teeny www. \normalsize MutopiaProject \teeny .org } \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \concat { \teeny www. \normalsize LilyPond \teeny .org }} by \concat { \maintainer . } \hspace #0.5 Copyright © 2013. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details \concat { see: \hspace #0.3 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } } }
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url "http://www.MutopiaProject.org" \line { \concat { \teeny www. \normalsize MutopiaProject \teeny .org } \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url "http://www.LilyPond.org" \line { \concat { \teeny www. \normalsize LilyPond \teeny .org }} by \concat { \maintainer . } \hspace #0.5 Copyright © 2013. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details \concat { see: \hspace #0.3 \with-url "http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } } }
 }
 
 %--------MACROS
-flatBeam = \once \override Beam #'positions = #'(-0.8 . -0.8 )
-flatBeamTwo = \once \override Beam #'positions = #'( 0.3 . 0.4 )
-liftBeam = \once \override Beam #'positions = #'(-3.8 . -2.8 )
-liftBeamTwo = \once \override Beam #'positions = #'(-1.5 . -0.8 )
-shiftNote = \once \override NoteColumn #'force-hshift = #0.5
+flatBeam = \once \override Beam.positions = #'(-0.8 . -0.8 )
+flatBeamTwo = \once \override Beam.positions = #'( 0.3 . 0.4 )
+liftBeam = \once \override Beam.positions = #'(-3.8 . -2.8 )
+liftBeamTwo = \once \override Beam.positions = #'(-1.5 . -0.8 )
+shiftNote = \once \override NoteColumn.force-hshift = #0.5
 %--------------
 
 sopranoOne =   \relative b'' {

@@ -1,7 +1,7 @@
-\version "2.16.1"
+\version "2.24.0"
 
 \paper {
-    top-markup-spacing #'basic-distance = #6
+    top-markup-spacing.basic-distance = #6
     line-width = 18.0\cm
     ragged-bottom = ##f
     ragged-last-bottom = ##f
@@ -28,19 +28,19 @@
         maintainerEmail = "dl1sdz (at) gmail.com"
 	
  footer = "Mutopia-2013/04/07-1405"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \abs-fontsize #10 \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \concat { \abs-fontsize #8 www. \abs-fontsize #11 MutopiaProject \abs-fontsize #8 .org } \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \abs-fontsize #10 \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \concat { \abs-fontsize #8 www. \abs-fontsize #11 LilyPond \abs-fontsize #8 .org }} by \concat { \maintainer . } \hspace #0.5 Copyright © 2013. \hspace #0.5 Reference: \footer } } \line { \abs-fontsize #8 \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details \concat { see: \hspace #0.3 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } } }
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \abs-fontsize #10 \line { Sheet music from \with-url "http://www.MutopiaProject.org" \line { \concat { \abs-fontsize #8 www. \abs-fontsize #11 MutopiaProject \abs-fontsize #8 .org } \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \abs-fontsize #10 \line { Typeset using \with-url "http://www.LilyPond.org" \line { \concat { \abs-fontsize #8 www. \abs-fontsize #11 LilyPond \abs-fontsize #8 .org }} by \concat { \maintainer . } \hspace #0.5 Copyright © 2013. \hspace #0.5 Reference: \footer } } \line { \abs-fontsize #8 \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details \concat { see: \hspace #0.3 \with-url "http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } } }
 }
 
 %------------------ MACROS
-raiseMMRest = \once \override MultiMeasureRest #'staff-position = #6
-raiseMMRestTwo = \once \override MultiMeasureRest #'staff-position = #10
+raiseMMRest = \once \override MultiMeasureRest.staff-position = #6
+raiseMMRestTwo = \once \override MultiMeasureRest.staff-position = #10
 staffUp = \change Staff = "upper"
 staffDown = \change Staff = "lower"
-shortenStem = \once \override Stem #'length-fraction = #(magstep -2)
-lengthenStem = \once \override Stem #'length-fraction = #(magstep 1.5)
-shiftNoteColLeft = \once \override NoteColumn #'force-hshift = #-0.3
-shiftBeam = \once \override Beam #'positions = #'(5.2 . 5.3)
-ignoreClashNote = \override NoteColumn #'ignore-collision = ##t
+shortenStem = \once \override Stem.length-fraction = #(magstep -2)
+lengthenStem = \once \override Stem.length-fraction = #(magstep 1.5)
+shiftNoteColLeft = \once \override NoteColumn.force-hshift = #-0.3
+shiftBeam = \once \override Beam.positions = #'(5.2 . 5.3)
+ignoreClashNote = \override NoteColumn.ignore-collision = ##t
 %------------------
 
 

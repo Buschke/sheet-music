@@ -1,7 +1,7 @@
-\version "2.16.1"
+\version "2.24.0"
 
 \paper {
-    obsolete-page-top-space = #0.0  top-system-spacing #'basic-distance = #(/ obsolete-page-top-space staff-space)
+    obsolete-page-top-space = #0.0  top-system-spacing.basic-distance = #(/ obsolete-page-top-space staff-space)
     %indent = 0.0
     line-width = 18.0\cm
     ragged-bottom = ##f
@@ -29,7 +29,7 @@
         maintainerEmail = "dl1sdz (at) gmail.com"
 	
  footer = "Mutopia-2013/02/17-1411"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \concat { \teeny www. \normalsize MutopiaProject \teeny .org } \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \concat { \teeny www. \normalsize LilyPond \teeny .org }} by \concat { \maintainer . } \hspace #0.5 Copyright © 2013. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details \concat { see: \hspace #0.3 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } } }
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url "http://www.MutopiaProject.org" \line { \concat { \teeny www. \normalsize MutopiaProject \teeny .org } \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url "http://www.LilyPond.org" \line { \concat { \teeny www. \normalsize LilyPond \teeny .org }} by \concat { \maintainer . } \hspace #0.5 Copyright © 2013. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details \concat { see: \hspace #0.3 \with-url "http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } } }
 }
 
      soprano =   \relative b' {
@@ -39,7 +39,7 @@
         g32 [ a g fis g8 ~ ] g32 [ fis e fis g16 e ] a, [ b' a g ] | % 3
         \appoggiatura  g32 fis32 [ e fis e d8 ~ ] d32 [ cis d e fis16 g ] a [ b32 c! b16 a ] | % 4
         
-        g32 [ f e16 \once \override Script #'extra-offset = #'(0.0 . 0.8 ) f8 ~ \prallmordent ] f32 [ d g a b c d16 ] c [ b a g ] | % 5
+        g32 [ f e16 \once \override Script.extra-offset = #'(0.0 . 0.8 ) f8 ~ \prallmordent ] f32 [ d g a b c d16 ] c [ b a g ] | % 5
         f32 [ e d16  \appoggiatura d16 e8 ~ ] e32 [ d c b c d e16 ] d [ g e c ] | % 6
         b32 [ a g16 a8 ~ ] a32 [ g a b c fis, g a ] d, [ fis e d a' g fis c' ] | % 7
         c32^[ b a16 b8 ~ ] b32 [ a g fis g b d fis ] g [ fis32 e d fis a b c ] | % 8
@@ -62,7 +62,7 @@
         c'32-. [ e,( dis e f e dis e )] c' [ e, b' e, a e g e ] fis [ e g e a e dis! cis ] | % 22
         dis32-. [ a' ( g a b a g a )] b,-. [ g' ( fis g a g fis g ) ] a,-. [ fis'( e fis g a g fis ) ] | % 23
         <<{ g16 _[( dis ) dis  (e ) ] e [( a,) a ( g ) ] g8^~ \prallmordent [ g32 b c d ]| }\\{s4 r8 dis,\noBeam e r8 |}>>  % 24
-        e'32 [ f e dis e8 ~ ] \once \override Beam #'positions = #'(5.5 . 3.5) e16^[ a, \appoggiatura  b32  a16 g ] \appoggiatura  a32 \once \override Beam #'positions = #'(3.5 . 5.2) g16 [ fis! fis e' ] | % 25
+        e'32 [ f e dis e8 ~ ] \once \override Beam.positions = #'(5.5 . 3.5) e16^[ a, \appoggiatura  b32  a16 g ] \appoggiatura  a32 \once \override Beam.positions = #'(3.5 . 5.2) g16 [ fis! fis e' ] | % 25
         d32 [ e d cis d8 ~ ] d16 [ g, \appoggiatura  a32 g16 f ] \appoggiatura  g32 f16 [ e e d' ] | % 26
         c32 [ b a16 ~ a32 g fis16 ~ ] fis32 [ e d16 ~ d32 e fis16 ~ ] fis32 [ g a16 ~ a32 b c16 ~] | % 27
         c32 [ d c b c g' fis e ] fis [ b a g a d c b ] c [ b a g fis e d c ] | % 28

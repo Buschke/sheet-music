@@ -1,16 +1,16 @@
-\version "2.16.1"
+\version "2.24.0"
 
 % Uncomment paper block below for fewer pages.
 %\paper {
-%       obsolete-between-system-padding = #0.1  system-system-spacing #'padding = #(/ obsolete-between-system-padding staff-space)  score-system-spacing #'padding = #(/ obsolete-between-system-padding staff-space)
-%       obsolete-between-system-space = #0.1  system-system-spacing #'basic-distance = #(/ obsolete-between-system-space staff-space)  score-system-spacing #'basic-distance = #(/ obsolete-between-system-space staff-space)
+%       obsolete-between-system-padding = #0.1  system-system-spacing.padding = #(/ obsolete-between-system-padding staff-space)  score-system-spacing.padding = #(/ obsolete-between-system-padding staff-space)
+%       obsolete-between-system-space = #0.1  system-system-spacing.basic-distance = #(/ obsolete-between-system-space staff-space)  score-system-spacing.basic-distance = #(/ obsolete-between-system-space staff-space)
 %       ragged-last-bottom = ##f
 %       ragged-bottom = ##f
 %}
 
 %Uncomment paper block below for evenly-filled pages.
 %\paper {
-%    obsolete-page-top-space = #0.0  top-system-spacing #'basic-distance = #(/ obsolete-page-top-space staff-space)
+%    obsolete-page-top-space = #0.0  top-system-spacing.basic-distance = #(/ obsolete-page-top-space staff-space)
 %    %indent = 0.0
 %    line-width = 18.0\cm
 %    ragged-bottom = ##f
@@ -40,7 +40,7 @@
         maintainerEmail = "erickson.jd@gmail.com"
 
  footer = "Mutopia-2013/01/22-979"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \concat { \teeny www. \normalsize MutopiaProject \teeny .org } \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \concat { \teeny www. \normalsize LilyPond \teeny .org }} by \concat { \maintainer . } \hspace #0.5 Copyright © 2013. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details \concat { see: \hspace #0.3 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } } }
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url "http://www.MutopiaProject.org" \line { \concat { \teeny www. \normalsize MutopiaProject \teeny .org } \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url "http://www.LilyPond.org" \line { \concat { \teeny www. \normalsize LilyPond \teeny .org }} by \concat { \maintainer . } \hspace #0.5 Copyright © 2013. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details \concat { see: \hspace #0.3 \with-url "http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } } }
 }
 
 % Macros %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -57,8 +57,8 @@ endRepeat = {\set Score.repeatCommands = #'(end-repeat)}
 %%
 
 soprano = \relative c'' {
-    \override Staff.NoteCollision #'merge-differently-dotted = ##t
-    \override Script #'padding = #1.0
+    \override Staff.NoteCollision.merge-differently-dotted = ##t
+    \override Script.padding = #1.0
     \repeat volta 2 { %begin repeated section
         %1-5
         \stemDown g'4-2 g4( a8.\prallmordent) b16
@@ -69,15 +69,15 @@ soprano = \relative c'' {
 
         %6-10
         e8 \appoggiatura d16 c8 \appoggiatura b16 \stemUp a4. \stemDown fis'8\turn
-        \stemDown g32[( fis16.) a32( g16.)] fis32[( e16.) d32( c16.)] \once \override Slur #'direction = #UP \appoggiatura c8 a'8. c,16
+        \stemDown g32[( fis16.) a32( g16.)] fis32[( e16.) d32( c16.)] \once \override Slur.direction = #UP \appoggiatura c8 a'8. c,16
         \stemUp b32[( g16.) fis8] \appoggiatura fis8 g2\prallmordent
         b4 b4( cis8.\prallmordent) d16
         d16 cis16 b16 a16_~ \stemDown a2 \stemUp
 
         %11-15
         <g b e g>4\arpeggio \stemDown g'4.\downprall fis16 g16
-        \override NoteColumn #'ignore-collision = ##t
-        g8 \appoggiatura fis16 e8 \once \override Stem #'length-fraction = #(magstep -6) cis4.\downprall e8
+        \override NoteColumn.ignore-collision = ##t
+        g8 \appoggiatura fis16 e8 \once \override Stem.length-fraction = #(magstep -6) cis4.\downprall e8
         a16( g16 fis16 e16) d8 \stemUp a4_~ a32 b32 c16
         b16( a16 g16 fis16) e8 \appoggiatura d'16 cis4_~ cis32 d32 e16
         d16^( cis16 b16 a16) g'8 b,4 cis8
@@ -161,11 +161,11 @@ bassOne = \relative c' {
 
     %31-32
     fis8 d8 g8 b8 d8 d,8
-    g4. d8 \stemUp \once \override Script #'padding = #.8 g,4_\fermata
+    g4. d8 \stemUp \once \override Script.padding = #.8 g,4_\fermata
 }
 
 bassTwo = \relative c' {
-    \override Script #'padding = #1.0
+    \override Script.padding = #1.0
     %1-5
     \stemDown f4\rest b,2
     f'4\rest a,2
@@ -189,7 +189,7 @@ bassTwo = \relative c' {
 
     %16-20
     g4 fis2
-    \staffLower a8\rest e8 \once \override Stem #'length-fraction = #(magstep -2) fis2^\prallmordent
+    \staffLower a8\rest e8 \once \override Stem.length-fraction = #(magstep -2) fis2^\prallmordent
     f8\rest c8 d2
     f8\rest e8 g4 fis8^\prallprall e8
     dis8 e8 \staffUpper fis2
@@ -251,7 +251,7 @@ bassThree = \relative c' {
     f'4\rest f4\rest a,4^~
 
     %26-30
-    a8 fis8 \once \override Slur #'direction = #DOWN \appoggiatura e16 d8[ e16 fis16] g16[ fis16 g8]^~
+    a8 fis8 \once \override Slur.direction = #DOWN \appoggiatura e16 d8[ e16 fis16] g16[ fis16 g8]^~
     g8[ e8] a8 a8\rest a4\rest
 
 }

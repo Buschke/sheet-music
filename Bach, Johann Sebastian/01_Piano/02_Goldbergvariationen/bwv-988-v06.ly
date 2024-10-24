@@ -1,9 +1,9 @@
-\version "2.16.1"
+\version "2.24.0"
 
 \paper {
-	markup-system-spacing #'basic-distance = #25 %distance from header/title to 1st system
-	top-system-spacing #'basic-distance = #20 %dist. from top to 1st system when no titles exist
-	system-system-spacing #'basic-distance = #30  %fixed distance between systems
+	markup-system-spacing.basic-distance = #25 %distance from header/title to 1st system
+	top-system-spacing.basic-distance = #20 %dist. from top to 1st system when no titles exist
+	system-system-spacing.basic-distance = #30  %fixed distance between systems
 	ragged-bottom = ##t
 	ragged-last-bottom = ##t
 }
@@ -29,7 +29,7 @@
         maintainerEmail = "dl1sdz (at) gmail.com"
 	
  footer = "Mutopia-2013/02/17-1385"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \concat { \teeny www. \normalsize MutopiaProject \teeny .org } \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \concat { \teeny www. \normalsize LilyPond \teeny .org }} by \concat { \maintainer . } \hspace #0.5 Copyright © 2013. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details \concat { see: \hspace #0.3 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } } }
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url "http://www.MutopiaProject.org" \line { \concat { \teeny www. \normalsize MutopiaProject \teeny .org } \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url "http://www.LilyPond.org" \line { \concat { \teeny www. \normalsize LilyPond \teeny .org }} by \concat { \maintainer . } \hspace #0.5 Copyright © 2013. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details \concat { see: \hspace #0.3 \with-url "http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } } }
 }
 
 % Macros %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -38,17 +38,17 @@ staffUpper = {\change Staff = upper \stemDown}
 staffLower = {\change Staff = lower \stemUp}
 
 
-extendLaissezVibrer = #(define-music-function (parser location further) (number?) 
+extendLaissezVibrer = #(define-music-function (further) (number?) 
 #{
-   \once \override LaissezVibrerTie  #'X-extent = #'(0 . 0)
-   \once \override LaissezVibrerTie  #'details #'note-head-gap = #(/ further -2)
-   \once \override LaissezVibrerTie  #'extra-offset = #(cons (/ further 2) -0.8)
+   \once \override LaissezVibrerTie.X-extent = #'(0 . 0)
+   \once \override LaissezVibrerTie.details.note-head-gap = #(/ further -2)
+   \once \override LaissezVibrerTie.extra-offset = #(cons (/ further 2) -0.8)
 #})
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 sopranoOne =   \relative a'' {
-    \once \override Voice.Rest #'extra-offset = #'(7.9 . 0 ) r1*3/8 | % 1
+    \once \override Voice.Rest.extra-offset = #'(7.9 . 0 ) r1*3/8 | % 1
     \repeat volta 2 { %begin repeated section
     \stemUp
         
@@ -70,7 +70,7 @@ sopranoOne =   \relative a'' {
     \alternative {
 	    {d16 [ c! \staffLower b a g fis ] | % 16
 	    \staffUpper \extendLaissezVibrer #9 g''4._\laissezVibrer}% 17
-	    { \stemNeutral d,4. \once \override Voice.Rest #'extra-offset = #'(6.6 . 0.0 ) a''1*3/8\rest}
+	    { \stemNeutral d,4. \once \override Voice.Rest.extra-offset = #'(6.6 . 0.0 ) a''1*3/8\rest}
     } %end of alternative
     \pageBreak
     \repeat volta 2 { %begin repeated section
@@ -106,7 +106,7 @@ sopranoTwo =   \relative a'' {
     b4. ( | % 3
     b8 ) [ a16 g16 fis16 e16 ] | % 4
     d4. ( | % 5
-    \once \override Beam #'positions = #'(-3.8 . -3.8)
+    \once \override Beam.positions = #'(-3.8 . -3.8)
     d8 ) [ \staffLower c16 b16 a16 g16 ] | % 6
     a4.^( | % 7
     a16 ) [ g16 b16 a16 g16 fis16 ] | % 8
@@ -131,16 +131,16 @@ sopranoTwo =   \relative a'' {
     e4. ~ | % 21
     e16 [ dis16 cis16 e16 dis16 cis16 ] | % 22
     dis16 [ cis16 \staffLower b16 a16 g16 fis16 ] | % 23
-    g8 \staffLower c8\rest \once \override Voice.Rest #'extra-offset = #'(-0.8 . 0.3 ) e,8\rest | % 24
+    g8 \staffLower c8\rest \once \override Voice.Rest.extra-offset = #'(-0.8 . 0.3 ) e,8\rest | % 24
     \staffUpper c'4. ~ | % 25
     c16 [ a16 b16 g16 b16 d16 ] | % 26
-    \once \override Tie #'control-points = #'( ( 0.8759 . -3.6791) ( 3.3287 . -5.6062) ( 15.942 . -5.4311) ( 18.746 . -2.8907) )
+    \once \override Tie.control-points = #'( ( 0.8759 . -3.6791) ( 3.3287 . -5.6062) ( 15.942 . -5.4311) ( 18.746 . -2.8907) )
     e4. ~ | % 27
     e16  [ cis16 d16 b16 d16 fis16 ] | % 28
     \break
     g4. ( | % 29
     g16 ) [ fis16 e16 g16 fis16 e16 ] | % 30
-    \once \override Beam #'positions = #'(-5 . -5)
+    \once \override Beam.positions = #'(-5 . -5)
     fis16 [ e16 d16 c16 \staffLower b16 a16 ] | % 31
     } %end repeated section
     \alternative {

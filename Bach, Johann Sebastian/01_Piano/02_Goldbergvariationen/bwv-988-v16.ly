@@ -1,12 +1,12 @@
-\version "2.16.1"
+\version "2.24.0"
 
 \paper {
 
     %indent = 0.0
-    top-markup-spacing  #'basic-distance = 4\mm
-    markup-system-spacing #'basic-distance = #8
-    system-system-spacing #'basic-distance = #21
-    top-system-spacing #'basic-distance = #15
+    top-markup-spacing.basic-distance = 4\mm
+    markup-system-spacing.basic-distance = #8
+    system-system-spacing.basic-distance = #21
+    top-system-spacing.basic-distance = #15
     line-width = 18.0\cm
     ragged-bottom = ##t
     ragged-last-bottom = ##t
@@ -35,20 +35,20 @@
         maintainerEmail = "dl1sdz (at) gmail.com"
 	
  footer = "Mutopia-2013/03/22-1413"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \concat { \teeny www. \normalsize MutopiaProject \teeny .org } \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \concat { \teeny www. \normalsize LilyPond \teeny .org }} by \concat { \maintainer . } \hspace #0.5 Copyright © 2013. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details \concat { see: \hspace #0.3 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } } }
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url "http://www.MutopiaProject.org" \line { \concat { \teeny www. \normalsize MutopiaProject \teeny .org } \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url "http://www.LilyPond.org" \line { \concat { \teeny www. \normalsize LilyPond \teeny .org }} by \concat { \maintainer . } \hspace #0.5 Copyright © 2013. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details \concat { see: \hspace #0.3 \with-url "http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } } }
 }
 
 %--------MACROS
-delayTurn = \once \override Voice.Script #'X-offset = #10
+delayTurn = \once \override Voice.Script.X-offset = #10
 staffDown = \change Staff = "lower"
-liftTie = \shape Tie #'((0 . 1.8) (0 . 2.2) (0 . 2.2) (0 . 1.8))
-hideTupletBracket = \override TupletBracket #'bracket-visibility = ##f
-hideTupletNumber = \override TupletNumber #'transparent = ##t
-tupletBracketDown = \override TupletBracket #'direction = #DOWN
-ignoreClashNote = \override NoteColumn #'ignore-collision = ##t
-fixBeamAngle = \once \override Beam #'positions = #'(5 . 5)
-shiftNoteCol = \once \override NoteColumn #'force-hshift = #0.3
-vcenterRest = \override MultiMeasureRest #'staff-position = #0
+liftTie = \shape #'((0 . 1.8) (0 . 2.2) (0 . 2.2) (0 . 1.8)) Tie
+hideTupletBracket = \override TupletBracket.bracket-visibility = ##f
+hideTupletNumber = \override TupletNumber.transparent = ##t
+tupletBracketDown = \override TupletBracket.direction = #DOWN
+ignoreClashNote = \override NoteColumn.ignore-collision = ##t
+fixBeamAngle = \once \override Beam.positions = #'(5 . 5)
+shiftNoteCol = \once \override NoteColumn.force-hshift = #0.3
+vcenterRest = \override MultiMeasureRest.staff-position = #0
 %------------
 
 sopranoOne =   \relative g' {
@@ -58,32 +58,32 @@ sopranoOne =   \relative g' {
 		\stemDown
 		b4\rest b32\rest g32 [ a b c d e fis ] g8. [ d16 b8. g16 ] | % 1
 		d'4. \prallmordent e8 c4 ~ \downprall 
-		c8. [ \tupletBracketDown \times 2/3 {b32 c d ] } | % 2
+		c8. [ \tupletBracketDown \tuplet 3/2 {b32 c d ] } | % 2
 		\hideTupletBracket \hideTupletNumber
 		g,8. [ g'32 fis32 ] g8. [ e16 ] \stemUp \grace d8 \stemDown cis8. [ b'16 a8. g16 ] | % 3
 		\stemUp fis4. \downprall \stemDown g8 \stemUp \grace g8 \stemDown a2 ~ | % 4
-		a8. [ \times 2/3 { a32 g fis ]  } 
+		a8. [ \tuplet 3/2 { a32 g fis ]  } 
 		g8. [ d16 ] _~ d2 | % 5 
 		\stemUp \grace f8 
-		e8. [ \times 2/3 { d32 c b ] } 
-		c8. [ \times 2/3 { b32 a g ] } a8. [ a16] \stemDown g'8. \prallmordent [ g16] | % 6
+		e8. [ \tuplet 3/2 { d32 c b ] } 
+		c8. [ \tuplet 3/2 { b32 a g ] } a8. [ a16] \stemDown g'8. \prallmordent [ g16] | % 6
 		\stemUp <d g>4 \arpeggio ~ \stemDown g32 [ b a g fis e d c ] a'8. [ c,16 ] a'8. [ c,16 ] | % 7
 		b4 ~ \downprall \stemUp 
-		b8. [ \times 2/3 { a32 g fis ] } 
+		b8. [ \tuplet 3/2 { a32 g fis ] } 
 		\stemDown g16 [ d'-. e-. fis-. ] g-. [ fis-. g-. a-. ] | % 8
-		b8. [ \times 2/3 {  a32 g fis ] } 
-		g8. [ \times 2/3 {  fis32 e dis ] } \stemUp e8. [ b16 cis8. \mordent d16 ] | % 9
+		b8. [ \tuplet 3/2 {  a32 g fis ] } 
+		g8. [ \tuplet 3/2 {  fis32 e dis ] } \stemUp e8. [ b16 cis8. \mordent d16 ] | % 9
 		\grace d8 
-		cis8. [ \times 2/3 {  e32 fis g ] } a8. [ a16 ] a4 ~ 
-		a8. [ \times 2/3 { a32 g fis ] } | % 10
-		g8. [ \times 2/3 { fis32 e dis ] } e8. [ b'16 ] d,4. \downprall cis16 [ b16 ] | % 11
-		cis8. [ \times 2/3 { d32 cis d ] } d8. \prallprall [ cis32 d ] e4 ~ e32 [ d cis b a g fis e ] | % 12
+		cis8. [ \tuplet 3/2 {  e32 fis g ] } a8. [ a16 ] a4 ~ 
+		a8. [ \tuplet 3/2 { a32 g fis ] } | % 10
+		g8. [ \tuplet 3/2 { fis32 e dis ] } e8. [ b'16 ] d,4. \downprall cis16 [ b16 ] | % 11
+		cis8. [ \tuplet 3/2 { d32 cis d ] } d8. \prallprall [ cis32 d ] e4 ~ e32 [ d cis b a g fis e ] | % 12
 		d8. [ fis16 a8. \prallmordent b16 ] <a c>4 ~ 
-		c8. [ \times 2/3 {  c32 b a ] } | % 13
+		c8. [ \tuplet 3/2 {  c32 b a ] } | % 13
 		\stemDown 
-		b8. [ \times 2/3 {  cis32 d e ] }
-		d8. \prallprall [ \times 2/3 { cis32 d e ] }
-		a,8. [ \times 2/3 {  e'32 fis g ]} a8. [ cis,16 ] \stemUp| % 14
+		b8. [ \tuplet 3/2 {  cis32 d e ] }
+		d8. \prallprall [ \tuplet 3/2 { cis32 d e ] }
+		a,8. [ \tuplet 3/2 {  e'32 fis g ]} a8. [ cis,16 ] \stemUp| % 14
 		\delayTurn d4.\turn e8 e4. \downprall d8 |  % 15
     } %end of repeated section
 
@@ -335,31 +335,31 @@ bassTwo = \relative c {
 		\stemDown g4 r4 r4 r8 r16 g'16 | % 1
 		fis4 ~ fis32 [ d e fis g a b c ] d8. [ a16 fis8. d16 ] | % 2
 		e4. g8 e4 ^~ ^\downprall 
-		e8. [ \times 2/3 { d32 e fis ] } | % 3
+		e8. [ \tuplet 3/2 { d32 e fis ] } | % 3
 		d8. [ c'32 b ] c8. [ a16 ] fis8. [ e'16 d8. c16 ] | % 4
 		b4. ^\downprall b8 
-		b8. [ \times 2/3 { c32  b a ] } 
+		b8. [ \tuplet 3/2 { c32  b a ] } 
 		b8. [ g16 ] | % 5
 		c4 ^~ ^\prallmordent 
-		c8. [ \times 2/3 { d32 c b ] }
-		c8. [ \times 2/3 { b32 a g ] }
-		a8. [ \times 2/3 { g32 fis e ] }| % 6
+		c8. [ \tuplet 3/2 { d32 c b ] }
+		c8. [ \tuplet 3/2 { b32 a g ] }
+		a8. [ \tuplet 3/2 { g32 fis e ] }| % 6
 		d2 ^~ \stemUp d16  [ c32 b a g fis e ] d16 [ fis a d ] | % 7
 		g,16-. [ d'-. e-. fis-. ] \stemDown g^. [ fis^. g^. a^. ] b4 ^~ ^\prallprall 
-		b8. [ \times 2/3 {  a32 g fis ] } | % 8
+		b8. [ \tuplet 3/2 {  a32 g fis ] } | % 8
 		g16^. [ b^. cis^. dis^.] e^. [ dis^. e^. fis^. ] g8. [ g,16 g'8. g16 ] | % 9
 		g4 ^~ 
-		g8. [ \times 2/3 { g32  fis e ] }
-		fis8. [ \times 2/3 {  b,32  cis dis ] } e8. [ e16 ] | % 10
+		g8. [ \tuplet 3/2 { g32  fis e ] }
+		fis8. [ \tuplet 3/2 {  b,32  cis dis ] } e8. [ e16 ] | % 10
 		e4 ^~ 
-		e8. [ \times 2/3 {  c32 b a ] } gis8. [ b16 e,8. gis16 ] | % 11
+		e8. [ \tuplet 3/2 {  c32 b a ] } gis8. [ b16 e,8. gis16 ] | % 11
 		a4 ^~ a16 [ a,32 b cis d e fis ] g8. [ e16 ] cis8. [ a16 ] | % 12
 		fis'4 ^~ 
-		fis8. [ \times 2/3 {  g32 fis e ] } \stemUp 
-		d8. [ \times 2/3 { c32 b a ] } 
-		g8. [ \times 2/3 { d'32 e fis ] } \stemDown | % 13
+		fis8. [ \tuplet 3/2 {  g32 fis e ] } \stemUp 
+		d8. [ \tuplet 3/2 { c32 b a ] } 
+		g8. [ \tuplet 3/2 { d'32 e fis ] } \stemDown | % 13
 		g8. ^\prallmordent [ g,16  g'8.  g16 ] g4 ~ 
-		g8. [ \times 2/3 {  g32 fis e ] } | % 14
+		g8. [ \tuplet 3/2 {  g32 fis e ] } | % 14
 		fis16 ~ [ fis32 d e fis g a ] b8. [ g16 ] a4 \stemUp a, | % 15
 	} %end of repeated section
 

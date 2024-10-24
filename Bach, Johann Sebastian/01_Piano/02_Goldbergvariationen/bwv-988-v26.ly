@@ -1,4 +1,4 @@
-\version "2.18.2"
+\version "2.24.0"
 
 \paper {
     top-margin = 8\mm
@@ -34,7 +34,7 @@
         maintainerEmail = "dl1sdz (at) gmail.com"
 	
  footer = "Mutopia-2014/07/27-1446"
- copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2014 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans { " " \with-url #"http://creativecommons.org/licenses/by-sa/3.0/" "Creative Commons Attribution ShareAlike 3.0 (Unported) License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url "http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url "http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2014 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans { " " \with-url "http://creativecommons.org/licenses/by-sa/3.0/" "Creative Commons Attribution ShareAlike 3.0 (Unported) License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
  tagline = ##f
 }
 
@@ -55,7 +55,7 @@ trebleToBass = {
   \once \override Staff.TimeSignature.text = \markup {
     \hspace #1.2
     \raise #1
-    \musicglyph #"clefs.F_change"
+    \musicglyph "clefs.F_change"
   }
   \once \override Staff.TimeSignature.stencil = #(lambda (grob)
     (append-markup grob (ly:time-signature::print grob)))
@@ -70,7 +70,7 @@ bassToTreble = {
   \once \override Staff.TimeSignature.text = \markup {
     \hspace #1.2
     \raise #-1
-    \musicglyph #"clefs.G_change"
+    \musicglyph "clefs.G_change"
   }
   \once \override Staff.TimeSignature.stencil = #(lambda (grob)
     (append-markup grob (ly:time-signature::print grob)))
@@ -139,7 +139,7 @@ sopranoOne =   \relative g {
         
         % Place a fermata over the final barline
         \override Staff.RehearsalMark.break-visibility = #begin-of-line-invisible
-        \mark \markup \musicglyph #"scripts.ufermata"
+        \mark \markup \musicglyph "scripts.ufermata"
 		}
     } %end repeated section
 
@@ -259,7 +259,7 @@ bassOne = \relative b' {
         \once \override Staff.Clef.extra-spacing-width = #'(+inf.0 . -inf.0)
         \once \override Staff.Clef.stencil = #ly:text-interface::print
         \once \override Staff.Clef.text = \markup \override #'(baseline-skip . 0) {
-          \musicglyph #"clefs.F_change" \lower #1 \with-dimensions #'(0 . 3.5) #'(0 . 0) \number \column  { 18 16 }
+          \musicglyph "clefs.F_change" \lower #1 \with-dimensions #'(0 . 3.5) #'(0 . 0) \number \column  { 18 16 }
         }
         \once \override Staff.TimeSignature.stencil = ##f
         % 2. A bit more elegant, but places time signature too close to rest (difficult to fix easily)
@@ -279,7 +279,7 @@ bassOne = \relative b' {
           % Place a fermata under the final barline
           \override Staff.RehearsalMark.break-visibility = #begin-of-line-invisible
           \override Staff.RehearsalMark.direction = #DOWN
-          \mark \markup \musicglyph #"scripts.dfermata"
+          \mark \markup \musicglyph "scripts.dfermata"
 
           \bar ":|." % 32
 			}
@@ -356,7 +356,6 @@ bass = << \bassOne \\ \bassTwo>>
    \context {
      \Score
      \remove "Timing_translator"
-     \remove "Default_bar_line_engraver"
      % removed from Score context to allow rehearsal marks (in this case, fermatas)
      % on each stave
      \remove "Mark_engraver"
@@ -365,7 +364,6 @@ bass = << \bassOne \\ \bassTwo>>
    \context {
      \Staff
      \consists "Timing_translator"
-     \consists "Default_bar_line_engraver"
      \consists "Mark_engraver"
      
    }

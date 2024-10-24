@@ -1,7 +1,7 @@
-\version "2.16.1"
+\version "2.24.0"
 
 \paper {
-    %obsolete-page-top-space = #0.0  top-system-spacing #'basic-distance = #(/ obsolete-page-top-space staff-space)
+    %obsolete-page-top-space = #0.0  top-system-spacing.basic-distance = #(/ obsolete-page-top-space staff-space)
     %indent = 0.0
     line-width = 18.0\cm
     ragged-bottom = ##f
@@ -30,7 +30,7 @@
         maintainerEmail = "dl1sdz (at) gmail.com"
 	
  footer = "Mutopia-2013/01/22-1390"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \concat { \teeny www. \normalsize MutopiaProject \teeny .org } \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \concat { \teeny www. \normalsize LilyPond \teeny .org }} by \concat { \maintainer . } \hspace #0.5 Copyright © 2013. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details \concat { see: \hspace #0.3 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } } }
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url "http://www.MutopiaProject.org" \line { \concat { \teeny www. \normalsize MutopiaProject \teeny .org } \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url "http://www.LilyPond.org" \line { \concat { \teeny www. \normalsize LilyPond \teeny .org }} by \concat { \maintainer . } \hspace #0.5 Copyright © 2013. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details \concat { see: \hspace #0.3 \with-url "http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } } }
 }
 
 % Macros %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -78,8 +78,8 @@ soprano =   \relative a' {
         fis,16 [ g a b c a ] b [ d g8 ] r8 | % 30
         r8 e8 [ d8 ] c8 [ d16 c b a ] | % 31
         b16 [ d b g a fis ] g4. _\mordent % 32
-        \override Score.RehearsalMark #'break-visibility = #begin-of-line-invisible
-	\mark \markup { \musicglyph #"scripts.ufermata" }
+        \override Score.RehearsalMark.break-visibility = #begin-of-line-invisible
+	\mark \markup { \musicglyph "scripts.ufermata" }
     } %end repeated section
 }
 
@@ -124,8 +124,8 @@ bass = \relative g {
         c16 [ b c d e fis ] g [ d b g a b ] | % 30
         e,16 [ fis g a b g ] a [ c fis8 ] r8 | % 31
         r8 d8 [ c8 ] b8 [ c16 b a g ] % 32
-        \override Staff.RehearsalMark #'direction = #DOWN
-	\mark \markup { \musicglyph #"scripts.dfermata" }
+        \override Staff.RehearsalMark.direction = #DOWN
+	\mark \markup { \musicglyph "scripts.dfermata" }
     } %end repeated section
 }
 

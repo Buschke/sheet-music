@@ -1,4 +1,4 @@
-\version "2.18.2"
+\version "2.24.0"
 
 \paper {
 top-margin = 8\mm
@@ -33,7 +33,7 @@ top-margin = 8\mm
         maintainerEmail = "dl1sdz (at) gmail.com"
 	
  footer = "Mutopia-2014/07/27-1417"
- copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2014 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans { " " \with-url #"http://creativecommons.org/licenses/by-sa/3.0/" "Creative Commons Attribution ShareAlike 3.0 (Unported) License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url "http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url "http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2014 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans { " " \with-url "http://creativecommons.org/licenses/by-sa/3.0/" "Creative Commons Attribution ShareAlike 3.0 (Unported) License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
  tagline = ##f
 }
 
@@ -50,7 +50,7 @@ staffUp = { \change Staff = "upper" \stemDown \tieDown }
 staffDown = { \change Staff = "lower" \stemUp \tieUp }
 posNoteColum = \once \override NoteColumn.force-hshift = #0.5
 ignoreClashNote = \temporary \override NoteColumn.ignore-collision = ##t 
-tempoMark = #(define-music-function (parser location markp) (string?)
+tempoMark = #(define-music-function (markp) (string?)
      #{
        \once \override Score.RehearsalMark.self-alignment-X = #left
        \mark \markup { \bold \smaller $markp }

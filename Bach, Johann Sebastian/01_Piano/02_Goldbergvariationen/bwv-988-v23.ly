@@ -1,4 +1,4 @@
-\version "2.18.2"
+\version "2.24.0"
 
 \paper {
     top-margin = 8\mm
@@ -33,7 +33,7 @@
         maintainerEmail = "dl1sdz (at) gmail.com"
 	
  footer = "Mutopia-2014/07/27-1418"
- copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2014 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans { " " \with-url #"http://creativecommons.org/licenses/by-sa/3.0/" "Creative Commons Attribution ShareAlike 3.0 (Unported) License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url "http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url "http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2014 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans { " " \with-url "http://creativecommons.org/licenses/by-sa/3.0/" "Creative Commons Attribution ShareAlike 3.0 (Unported) License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
  tagline = ##f
 }
 
@@ -41,7 +41,7 @@
 posBeamA = \once \override Beam.positions = #'(0.7 . 0.7)
 posBeamB = \once \override Beam.positions = #'(0 . 0)
 posBeamC = \once \override Beam.positions = #'(-0.2 . -0.2)
-doKneedBm = \once \override Beam #'auto-knee-gap = #1
+doKneedBm = \once \override Beam.auto-knee-gap = #1
 ignoreClash = \temporary \override NoteColumn.ignore-collision = ##t
 
 %---------Pavel's snippet from LSR to change clef at beginning of staff
@@ -59,7 +59,7 @@ bassToTreble = {
   \once \override Staff.TimeSignature.text = \markup {
     \hspace #1.2
     \raise #-1
-    \musicglyph #"clefs.G_change"
+    \musicglyph "clefs.G_change"
   }
   \once \override Staff.TimeSignature.stencil = #(lambda (grob)
     (append-markup grob (ly:time-signature::print grob)))

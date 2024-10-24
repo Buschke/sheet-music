@@ -1,9 +1,9 @@
-\version "2.16.1"
+\version "2.24.0"
 
 \paper {
     line-width = 18.0\cm
-    markup-system-spacing #'basic-distance = #11
-    system-system-spacing #'basic-distance = #18
+    markup-system-spacing.basic-distance = #11
+    system-system-spacing.basic-distance = #18
     ragged-bottom = ##t
     ragged-last-bottom = ##t
     page-count = 1
@@ -30,7 +30,7 @@
         maintainerEmail = "dl1sdz (at) gmail.com"
 	
  footer = "Mutopia-2013/02/17-1386"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \concat { \teeny www. \normalsize MutopiaProject \teeny .org } \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \concat { \teeny www. \normalsize LilyPond \teeny .org }} by \concat { \maintainer . } \hspace #0.5 Copyright © 2013. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details \concat { see: \hspace #0.3 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } } }
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url "http://www.MutopiaProject.org" \line { \concat { \teeny www. \normalsize MutopiaProject \teeny .org } \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url "http://www.LilyPond.org" \line { \concat { \teeny www. \normalsize LilyPond \teeny .org }} by \concat { \maintainer . } \hspace #0.5 Copyright © 2013. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details \concat { see: \hspace #0.3 \with-url "http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } } }
 }
 
 % Macros %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -38,7 +38,7 @@
 global = {\key g \major \time 4/4 }
 staffUpper = {\change Staff = upper \stemDown}
 staffLower = {\change Staff = lower \stemUp}
-shortenStem = { \once \override Stem #'length-fraction = #(magstep -1.2) }
+shortenStem = { \once \override Stem.length-fraction = #(magstep -1.2) }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -49,9 +49,9 @@ sopranoOne =   \relative b' {
         b8 [ d8 ] g4 ~ g8 [ a16 g16 ] fis4 | % 2
         g8 [ fis8 g8 a8 ] b8 [ fis8 b8 a8 ] | % 3
         g8 [ a16 b16 ] c4 ~ c8 [ b16 a16 ] b8 [ b,8 ] | % 4
-        \override Beam #'positions = #'(4.6 . 5.2)
-        cis8 [ b8 cis8 dis8 ] \override Beam #'positions = #'(4.5 . 4.5) e8 [ b8 e8 d8 ] | % 5
-        \revert Beam #'positions
+        \override Beam.positions = #'(4.6 . 5.2)
+        cis8 [ b8 cis8 dis8 ] \override Beam.positions = #'(4.5 . 4.5) e8 [ b8 e8 d8 ] | % 5
+        \revert Beam.positions
         c8 [ d16 e16 ] f4 ~ f8 [ e16 d16 ] e16 [ fis16 g8 ~ ] | % 6
         g8 fis4 e8 fis8 [ g8 a8 g8 ] | % 7
         fis4 e4 d2  % 8

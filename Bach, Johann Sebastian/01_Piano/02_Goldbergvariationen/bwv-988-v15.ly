@@ -1,4 +1,4 @@
-\version "2.18.0"
+\version "2.24.0"
 
 \paper {
     top-margin = 8\mm
@@ -32,12 +32,12 @@
         maintainerEmail = "dl1sdz (at) gmail.com"
 	
  footer = "Mutopia-2014/03/24-1389"
- copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2014 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans { " " \with-url #"http://creativecommons.org/licenses/by-sa/3.0/" "Creative Commons Attribution ShareAlike 3.0 (Unported) License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url "http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url "http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2014 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans { " " \with-url "http://creativecommons.org/licenses/by-sa/3.0/" "Creative Commons Attribution ShareAlike 3.0 (Unported) License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
  tagline = ##f
 }
 
 %-------------------definitions
-tempoMark = #(define-music-function (parser location markp) (string?)
+tempoMark = #(define-music-function (markp) (string?)
      #{
        \once \override Score.RehearsalMark.self-alignment-X = #left
        \once \override Score.RehearsalMark.extra-spacing-width = #'(+inf.0 . -inf.0)
@@ -68,7 +68,7 @@ adjSlurOne = \shape #'((0 . 0.0) (0 . 0.3) (0 . 0.5) (0 . 0.3)) Slur
 adjSlurOne = \shape #'((0 . 0.8) (0 . 0.5) (-0.3 . 0.1) (-0.3 . -0.3)) Slur
 
 lengthenStemOne = \once \override Stem.length-fraction = #(magstep +2)
-pushNoteColRight = \once \override NoteColumn #'force-hshift = #0.3
+pushNoteColRight = \once \override NoteColumn.force-hshift = #0.3
 allowScriptInStaff = \once \override Script.staff-padding = #'()
 
 sopranoOne =   \relative d'' {
