@@ -55,7 +55,7 @@ soprano = \relative c' {
 alto = \relative c' {
   \global
  
-  r8 c d e f8. g32 f e8 a | % m. 1
+  r8^"WC I: C-Dur, 4 voci, BWV 846" c d e f8. g32 f e8 a | % m. 1
   d,8 g~ g16 a g f e f e d c d c b | % m. 2
   a8 fis' g4~ g8 fis16 e fis8 d | % m. 3
   g8 f! e d c r r g'~ | % m. 4

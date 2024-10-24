@@ -29,7 +29,7 @@ preambleDown = {\clef bass \global}
 soprano = \relative c'' {
   \global
 
-  R\breve | % m. 1
+  R\breve^"WC 2: E-Dur, 4 voci, BWV 878" | % m. 1
   R\breve | % m. 2
   R\breve | % m. 3
   R\breve | % m. 4

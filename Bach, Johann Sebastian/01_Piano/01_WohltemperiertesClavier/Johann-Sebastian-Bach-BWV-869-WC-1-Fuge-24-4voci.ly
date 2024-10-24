@@ -24,7 +24,7 @@ preambleDown = {\clef bass \global}
 soprano = \relative c'' {
   \global
   
-  R1 | % m. 1
+  R1^"WC I: h-Moll, 4 voci, BWV 869" | % m. 1
   R1 | % m. 2
   R1 | % m. 3
   R1 | % m. 4
@@ -107,7 +107,7 @@ soprano = \relative c'' {
 alto = \relative c' {
   \global
   
-  r8 fis d b g' (fis) b (ais) | % m. 1
+  r8^"" fis d b g' (fis) b (ais) | % m. 1
   e8 (dis) c'! (b) fis (eis) d'! (cis) | % m. 2
   bis8 cis a fis gis2 \trill | % m. 3
   fis8. eis16 fis gis a cis b gis a c! fis4 | % m. 4
