@@ -26,12 +26,12 @@
 \header {
         title = "Aria con 30 Variazioni"
         subtitle = "\"Goldberg-Variationen\""
-        piece = "Aria"
+%        piece = "Aria"
         mutopiatitle = "Goldberg Variations - Aria"
-        composer = "Johann Sebastian Bach (1685-1750)"
+        composer = "Johann Sebastian Bach (1685-1750), BWV 988"
         mutopiacomposer = "BachJS"
-        poet = "Fingerings: Sven Buschke"
-        opus = "BWV 988"
+%        poet = "Fingerings: Sven Buschke"
+%        opus = "BWV 988"
         date = "1741"
         mutopiainstrument = "Harpsichord,Clavichord"
         style = "Baroque"
@@ -62,7 +62,7 @@ soprano = \relative c'' {
     \override Script.padding = #1.0
     \repeat volta 2 { %begin repeated section
         %1-5
-        \stemDown g'4-2 g4( a8.\prallmordent) b16
+        \stemDown g'4-2^"Aria" g4( a8.\prallmordent) b16
         a8 \appoggiatura g16 fs8 \appoggiatura e16 d2
         \stemUp g,4\prallmordent g4.\downprall fs16 g16
         a32[( g32 fs16) g32( fs32 e16)] \appoggiatura e8 d2

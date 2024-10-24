@@ -18,12 +18,12 @@
 \header {
         title = "Aria con 30 Variazioni"
         subtitle = "\"Goldberg-Variationen\""
-        piece = "Variatio 1. a 1 Clav."
+%        piece = "Variatio 1. a 1 Clav."
         mutopiatitle = "Goldberg Variations - 1"
-        composer = "Johann Sebastian Bach (1685-1750)"
+        composer = "Johann Sebastian Bach (1685-1750), BWV 988"
         mutopiacomposer = "BachJS"
-        poet = "Fingerings: Sven Buschke"
-        opus = "BWV 988"
+%        poet = "Fingerings: Sven Buschke"
+%        opus = "BWV 988"
         date = "1741"
         mutopiainstrument = "Harpsichord,Clavichord"
         style = "Baroque"
@@ -61,7 +61,7 @@ soprano = \relative c'' {
     \override Script.padding = #1.0
     \repeat volta 2 { %begin repeated section
         %1-5
-        \stemUp g16 fs16 g8_~ g16 d16 e16 fs16 g16 a16 b16 cs16
+        \stemUp g16^"Variatio 1. a 1 Clav." fs16 g8_~ g16 d16 e16 fs16 g16 a16 b16 cs16
         \stemDown d16 cs16 d8^~ d16 a16 b16 cs16 d16 e16 fs16 d16
         g16 fs16 g8^~ g16 fs16 e16 d16 \stemUp cs16 e16 a,16 g16
         fs16 e16 d16 cs16 \adjustBeamOne d16 fs16 \staffLower \stemExtend \noFlag a,16 \stemExtend \noFlag g16 \adjustBeamTwo fs16 a16 d,8

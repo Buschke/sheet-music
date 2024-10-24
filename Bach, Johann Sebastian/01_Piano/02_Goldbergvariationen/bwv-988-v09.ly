@@ -7,7 +7,7 @@
     system-system-spacing.basic-distance = #18
     ragged-bottom = ##t
     ragged-last-bottom = ##t
-    page-count = 1
+%    page-count = 1
 }
 
 %#(set-default-paper-size "letter")
@@ -137,8 +137,6 @@ bass = \relative g, {
         c16 [ b c a ] d8 [ d,8 ] g8 [ b16 d16 ] g4 } % 16
       } %end repeated section
 
-
-bass = << \bassOne \\ \bassTwo>>
 
 
 %% Merge score - Piano staff in key of G Major, 12/8 time.
