@@ -1,4 +1,5 @@
 \version "2.24.0"
+\language "english"
 
 \paper {
     top-margin = 8\mm
@@ -86,56 +87,56 @@ sopranoOne =   \relative g {
 			    \time 18/16
 			    \set Timing.measureLength = #(ly:make-moment 3/4)   
 				  \oneVoice
-			    g16-\hidePP [ a g  d  e fis ] g16 [ fis g  a  g a ] b16 [ a b  c  b cis ] 
+			    g16-\hidePP [ a g  d  e fs ] g16 [ fs g  a  g a ] b16 [ a b  c  b cs ] 
 			    \clef "treble" | % 1
 				
-			    d16 [ e d a b cis ] d16 [ cis d e d e ] fis16 [ e fis g e fis ] | % 2
-			    g16 [ a g b, e fis ] g16 [ fis g a g a ] b16 [ a b cis b cis ] | % 3
-			    d16 [ e d a b cis ]  d16 [ cis d e d e ]  fis16 [ e fis g e fis ] | % 4
-			    g16 [ fis g d c! d ]  b16 [ g fis! g b d ]  f16 [ e f d b d ] | % 5
+			    d16 [ e d a b cs ] d16 [ cs d e d e ] fs16 [ e fs g e fs ] | % 2
+			    g16 [ a g b, e fs ] g16 [ fs g a g a ] b16 [ a b cs b cs ] | % 3
+			    d16 [ e d a b cs ]  d16 [ cs d e d e ]  fs16 [ e fs g e fs ] | % 4
+			    g16 [ fs g d c! d ]  b16 [ g fs! g b d ]  f16 [ e f d b d ] | % 5
 			    e16 [ d e c b c ]  g16 [ e d e g c ]  e16 [ d e c a c ] | % 6
-			    d16 [ c d a g a ]  fis16 [ d cis d fis a ]  c!16 [ b c a fis a ] | % 7
-			    b16 [ a b g fis g ] d16 [ b a b d g ]  b16 [ g fis g b d ] | % 8
+			    d16 [ c d a g a ]  fs16 [ d cs d fs a ]  c!16 [ b c a fs a ] | % 7
+			    b16 [ a b g fs g ] d16 [ b a b d g ]  b16 [ g fs g b d ] | % 8
 		    }
         \voiceOne
 		    \time 3/4 
-		    g8.-\hideMP [ fis32 e32 ] d4 r8 b'8 | % 9
+		    g8.-\hideMP [ fs32 e32 ] d4 r8 b'8 | % 9
 		    a4 a4 r8 a8 | % 10
 		    a4 g4 r8 g8 | % 11
 		    g8. [ e16 ] a,4 r8 g'8 | % 12
-		    g8. [ e16 ] fis4 r8 a8 | % 13
-		    b8. [ fis16 ] g4 r8 g8 | % 14
-		    g4 cis,4 r8 a8 | % 15
-		    a8. [ e16 ] fis4 r4 \bar ":..:" % 16
+		    g8. [ e16 ] fs4 r8 a8 | % 13
+		    b8. [ fs16 ] g4 r8 g8 | % 14
+		    g4 cs,4 r8 a8 | % 15
+		    a8. [ e16 ] fs4 r4 \bar ":..:" % 16
 	    } %end of repeated section
 	    \oneVoice
 	    \repeat volta 2 { %begin repeated section
 		    \scaleDurations #'(4 . 6) {
 			    \time 18/16
 			    \set Timing.measureLength = #(ly:make-moment 3/4)      
-			    a'16-\hidePP [ g a d c b ] a16 [ b a g a g ]  fis16 [ g fis e fis e ] | % 17
-			    d16 [ c d g fis e ] d16 [ e d c d c ]  b16 [ c b a b a ] | % 18
-			    g16 [ fis g b a g ] fis16 [ g fis e fis e ] dis16 [ e dis cis dis cis ]  | % 19 
+			    a'16-\hidePP [ g a d c b ] a16 [ b a g a g ]  fs16 [ g fs e fs e ] | % 17
+			    d16 [ c d g fs e ] d16 [ e d c d c ]  b16 [ c b a b a ] | % 18
+			    g16 [ fs g b a g ] fs16 [ g fs e fs e ] ds16 [ e ds cs ds cs ]  | % 19 
 			    \clef "bass"
-			    b16 [ ais b e dis cis ] b16 [ c b a b a ] g16 [ a g fis g fis ] | % 20
-			    e16 [ dis e b' a b ] g16 [ fis g \clef "treble" b e fis ] g16 [ fis g e dis e ] | % 21
-				c16 [ b c e d e ] a,16 [ gis  a c f a ] c16  [ b c a f a ] | % 22
-				dis,16 [ cis dis fis! e fis ] b,16 [ ais b dis fis g ] a!16 [ g a fis dis fis ] | % 23
-				g16 [ fis g b a b ] e,16 [ dis e g b dis ] e16 [ c b a g fis ] | % 24
+			    b16 [ as b e ds cs ] b16 [ c b a b a ] g16 [ a g fs g fs ] | % 20
+			    e16 [ ds e b' a b ] g16 [ fs g \clef "treble" b e fs ] g16 [ fs g e ds e ] | % 21
+				c16 [ b c e d e ] a,16 [ gs  a c f a ] c16  [ b c a f a ] | % 22
+				ds,16 [ cs ds fs! e fs ] b,16 [ as b ds fs g ] a!16 [ g a fs ds fs ] | % 23
+				g16 [ fs g b a b ] e,16 [ ds e g b ds ] e16 [ c b a g fs ] | % 24
 		    }
 		 \time 3/4 
-		 e8-\hideMP \voiceOne r8 r8 r16 g'16 fis8. [ e16 ] | % 25
+		 e8-\hideMP \voiceOne r8 r8 r16 g'16 fs8. [ e16 ] | % 25
 		 d4 ~ d8. [ f16 ] e8. [ d16 ] | % 26	
 		 c2 ~ c8. [ c16 ] | % 27
      \voiceTwo
 		\scaleDurations #'(4 . 6) {
 			    \time 18/16
 			    \set Timing.measureLength = #(ly:make-moment 3/4) 
-				fis,16-\hidePP [ g fis cis d e ] \oneVoice fis16 [ e fis g fis g ] a16 [ g a  b g a ] | % 28		
-				b16 [ c b  fis  g a ] b16^[ a b c b c ]  \voiceOne d16 [ c d  e c d ] | % 29
-				e16 [ f e  b c d ] \oneVoice e16 [ d e  fis e fis ] g16 [ fis g a  fis g ]| % 30
-				a16 [ b a  fis g a ] b16 [ a b d c b ]  a16 [ g fis e  d c ] | % 31
-				b16 [ a g fis g d ] b8 r8 r8 r4. \bar ":|." % 32
+				fs,16-\hidePP [ g fs cs d e ] \oneVoice fs16 [ e fs g fs g ] a16 [ g a  b g a ] | % 28		
+				b16 [ c b  fs  g a ] b16^[ a b c b c ]  \voiceOne d16 [ c d  e c d ] | % 29
+				e16 [ f e  b c d ] \oneVoice e16 [ d e  fs e fs ] g16 [ fs g a  fs g ]| % 30
+				a16 [ b a  fs g a ] b16 [ a b d c b ]  a16 [ g fs e  d c ] | % 31
+				b16 [ a g fs g d ] b8 r8 r8 r4. \bar ":|." % 32
         
         % Place a fermata over the final barline
         \override Staff.RehearsalMark.break-visibility = #begin-of-line-invisible
@@ -164,12 +165,12 @@ sopranoTwo =   \relative b' {
 		}
 		\time 3/4 
 		b4-\hideMP b4 r8 g'8 | % 9
-		g8. [ e16 ] fis4 r8 c8 | % 10
-		b8. [ dis16 ] e4 r8 e8 | % 11
-		a,8. [ cis16 ] e,4 r8 cis'8 | % 12
-		cis4 d4 r8 d8 | % 13
+		g8. [ e16 ] fs4 r8 c8 | % 10
+		b8. [ ds16 ] e4 r8 e8 | % 11
+		a,8. [ cs16 ] e,4 r8 cs'8 | % 12
+		cs4 d4 r8 d8 | % 13
 		d4 e4 r8 e8 | % 14
-		a,8. [ g32 fis32 ] e4 r8 a,8 | % 15
+		a,8. [ g32 fs32 ] e4 r8 a,8 | % 15
 		d4 d4 r4 | % 16
     } %end of repeated section
     
@@ -187,13 +188,13 @@ sopranoTwo =   \relative b' {
 				s1*18/16 | % 24
 		 }
 		\time 3/4  
-        r8  r16 gis16-\hideMP a8. [ b16 ] c4 ~ | % 25
-        c8. [ fis,16 ] g8. [ a16 ] b4 ~  | % 26
-		b8. [ e,16 ] fis8. [ g16 ] a8. [ g16 ] | % 27
+        r8  r16 gs16-\hideMP a8. [ b16 ] c4 ~ | % 25
+        c8. [ fs,16 ] g8. [ a16 ] b4 ~  | % 26
+		b8. [ e,16 ] fs8. [ g16 ] a8. [ g16 ] | % 27
 		\scaleDurations #'(4 . 6) {
 			    \time 18/16
 			    \set Timing.measureLength = #(ly:make-moment 3/4) 
-				\voiceOne c8-\hideMP s1*10/16 \voiceTwo fis,8 s1*4/16 | % 28
+				\voiceOne c8-\hideMP s1*10/16 \voiceTwo fs,8 s1*4/16 | % 28
 				g8 s1*10/16 b8 s1*4/16 | % 29
 				c8 s1*16/16  | % 30
 				s1*18/16 | % 31
@@ -216,8 +217,8 @@ bassOne = \relative b' {
 		    \time 3/4 
 		    b4-\hideMP b4 r8 b8 | % 1
 		    a4 a4 r8 d8 | % 2
-		    d4 cis4 \prallprall r8 g8 | % 3
-		    g8. [ e16 ] fis4 r8 a8 | % 4
+		    d4 cs4 \prallprall r8 g8 | % 3
+		    g8. [ e16 ] fs4 r8 a8 | % 4
 		    d,8. [ e16 ] f4 r8 
 		    \clef "bass" g8 | % 5
 		    g8. [ e16 ] c4 r8 e8 | % 6
@@ -227,29 +228,29 @@ bassOne = \relative b' {
 		    \scaleDurations #'(4 . 6) {
 			    \time 18/16
 			    \set Timing.measureLength = #(ly:make-moment 3/4)
-			    g,16-\hidePP [ a g  d e fis ] g16 [ fis g  a g a ]  b16 [ a b c b cis ] | % 9
-			    d16 [ e d  a b cis ] d16 [ cis d e d e ] fis16 [ e fis g e fis ]| % 10
-			    g16 [ a g  b, e fis ] g16 [ fis g a g a ]  b16 [ a b cis a b ] | % 11
-			    cis16 [ d cis  e, a b ]
+			    g,16-\hidePP [ a g  d e fs ] g16 [ fs g  a g a ]  b16 [ a b c b cs ] | % 9
+			    d16 [ e d  a b cs ] d16 [ cs d e d e ] fs16 [ e fs g e fs ]| % 10
+			    g16 [ a g  b, e fs ] g16 [ fs g a g a ]  b16 [ a b cs a b ] | % 11
+			    cs16 [ d cs  e, a b ]
 			    \clef "treble" 
-			    cis16 [ b cis  d  cis d ] e16 [ d e fis d e ] | % 12
-			    fis16 [ e fis  a g a ] d,16 [ cis d fis a b ] c!16 [ b c a fis a ] | % 13
-			    g16 [ fis g b a b ] e,16 [ dis e g b cis ]  d!16 [ cis d  b g b ] | % 14
-			    cis16 [ b cis  e d e ] a,16 [ gis a cis e fis ]  g!16 [ fis g e cis e ] | % 15
-			    fis16 [ e fis a g a ] d,16 [ cis d fis a cis ] d4. \prallmordent \bar ":..:" % 16
+			    cs16 [ b cs  d  cs d ] e16 [ d e fs d e ] | % 12
+			    fs16 [ e fs  a g a ] d,16 [ cs d fs a b ] c!16 [ b c a fs a ] | % 13
+			    g16 [ fs g b a b ] e,16 [ ds e g b cs ]  d!16 [ cs d  b g b ] | % 14
+			    cs16 [ b cs  e d e ] a,16 [ gs a cs e fs ]  g!16 [ fs g e cs e ] | % 15
+			    fs16 [ e fs a g a ] d,16 [ cs d fs a cs ] d4. \prallmordent \bar ":..:" % 16
 		    }
 	    } %end of repeated section
 	    \voiceOne
 		\repeat volta 2 { %begin repeated section
 			\time 3/4  
-			fis,,8.-\hideMP [ e16 ] fis4 r8 d8 | % 17
+			fs,,8.-\hideMP [ e16 ] fs4 r8 d8 | % 17
 			g8. [ a16 ] b4 r8 g'8 | % 18
 			e8. [ b'16 ] a4 r8 a8 | % 19 
-			a8. [ fis16 ] dis4 r8 fis8 | % 20
-			g8. [ fis16 ] e4 r8 g8 | % 21
+			a8. [ fs16 ] ds4 r8 fs8 | % 20
+			g8. [ fs16 ] e4 r8 g8 | % 21
 			g4 f4 r8 a8 | % 22
-			a8. [ fis16 ] dis4 r8 fis8 | % 23
-			fis8. [ dis16 ] e4
+			a8. [ fs16 ] ds4 r8 fs8 | % 23
+			fs8. [ ds16 ] e4
       \oneVoice
 			\scaleDurations #'(4 . 6) {
         \set Timing.measureLength = #(ly:make-moment 3/4)
@@ -267,14 +268,14 @@ bassOne = \relative b' {
         %\once \override Staff.Clef.space-alist.time-signature = #'(extra-space . 0.5)
         
           \clef "bass" \time 18/16 s1*6/16 | % 24
-					c,16 [ b c f e d ] c16 [ d c  b c b ] a16 [ b a g a fis! ] | % 25
-					b16 [ a b e d c ] b16 [ c b a b a ] g16 [ a g fis! g e ] | % 26
-					a16 [ g a d c b ]  a16 [ b a g a g ] fis16 [ g fis e fis e ] | % 27
-					d16 [ cis d g fis e ] d16^[ e d c d c ] b16 [ c b a b a ] | % 28
-					g16 [ fis g c b a ] g16 [ a g f g f ] e16 [ f e d e d ] | % 29
+					c,16 [ b c f e d ] c16 [ d c  b c b ] a16 [ b a g a fs! ] | % 25
+					b16 [ a b e d c ] b16 [ c b a b a ] g16 [ a g fs! g e ] | % 26
+					a16 [ g a d c b ]  a16 [ b a g a g ] fs16 [ g fs e fs e ] | % 27
+					d16 [ cs d g fs e ] d16^[ e d c d c ] b16 [ c b a b a ] | % 28
+					g16 [ fs g c b a ] g16 [ a g f g f ] e16 [ f e d e d ] | % 29
 					c8. [ g'16 a b ] c16 [ b c d c d] e16 [ d c b a g ] | % 30
-					fis16 [ e fis d e fis ] g16 [ fis g a b c ] d16 [ cis d e fis d ] | % 31
-					g8 r8 r8 r16 a16 [ g fis g d ] g,4.
+					fs16 [ e fs d e fs ] g16 [ fs g a b c ] d16 [ cs d e fs d ] | % 31
+					g8 r8 r8 r16 a16 [ g fs g d ] g,4.
           
           % Place a fermata under the final barline
           \override Staff.RehearsalMark.break-visibility = #begin-of-line-invisible
@@ -293,12 +294,12 @@ bassTwo = \relative g' {
 			\clef "treble"  
 			\time 3/4 
 			g4-\hideMP d4 r8 g8 | % 1
-			g8. [ e16 ] fis4 r8 a8 | % 2
+			g8. [ e16 ] fs4 r8 a8 | % 2
 			b8. [ g16 ] e4 r8 a,8 | % 3
 			d4 d4 r8 c!8 | % 4
 			b8. [ c16 ] d4 r8 \clef "bass" g,8  | % 5
 			c4 e,4 r8 g8 | % 6
-			fis8. [ g16 ] a4 r8 d,8 | % 7
+			fs8. [ g16 ] a4 r8 d,8 | % 7
 			g4 g,4 r4 | % 8
 			\scaleDurations #'(4 . 6) {
 			    \time 18/16
@@ -320,18 +321,18 @@ bassTwo = \relative g' {
 			\time 3/4  
 			d''4-\hideMP c4 r8 c8 | % 17
 			b8. [ d16 ] g4 r8 d'8 | % 18
-			cis4 dis4 r8 e8 | % 19
-			dis4 fis,4 r8 dis'8 | % 20
+			cs4 ds4 r8 e8 | % 19
+			ds4 fs,4 r8 ds'8 | % 20
 			e4 b4 r8 b8 | % 21
 			a8. [ b16 ] c4 r8 c8 | % 22
 			b4 a4 r8 a8 | % 23
-			a8. [ fis16 ] g4 
+			a8. [ fs16 ] g4 
       \oneVoice
 			\scaleDurations #'(4 . 6) {
 				    \time 18/16
 					\set Timing.measureLength = #(ly:make-moment 3/4) 
 					\clef "bass" 
-					r16 e,16-\hidePP [ fis g  a b ] | % 24
+					r16 e,16-\hidePP [ fs g  a b ] | % 24
 					s1*18/16 | % 25
 					s1*18/16 | % 26
 					s1*18/16 | % 27

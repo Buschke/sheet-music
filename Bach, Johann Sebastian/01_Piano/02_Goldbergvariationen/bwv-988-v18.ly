@@ -1,4 +1,5 @@
 \version "2.24.0"
+\language "english"
 
 % Goldberg Variations - Variation 18, Canone alla Sesta
 % J.S. Bach - BWV 988
@@ -54,20 +55,20 @@ soprano = \relative c''' {
 
     \repeat volta 2 {
 		r2 g2 ~
-		g2 fis ~
-		fis4 g8 fis \adjTieUp e2 ~
-		e4 d8 cis d2
+		g2 fs ~
+		fs4 g8 fs \adjTieUp e2 ~
+		e4 d8 cs d2
 		r2 \adjTieUp e2 ~
-		e4 d8 e fis2 ~
-		fis4 a8 g a2 ~
-		a8 g a fis g2
+		e4 d8 e fs2 ~
+		fs4 a8 g a2 ~
+		a8 g a fs g2
 		r2 \adjTieUp e2 ~
 		e2 \adjTieUp d ~ \noBreak
-		d4 e8 fis g2 ~
-		g8 fis g e fis2 ~
-		fis4 fis \adjTieUp e2 ~
+		d4 e8 fs g2 ~
+		g8 fs g e fs2 ~
+		fs4 fs \adjTieUp e2 ~
 		e4 e \adjTieUp d2 ~
-		d4 g cis,8 d e4 ~
+		d4 g cs,8 d e4 ~
 		e2 d \break
 	}        
     \repeat volta 2 {
@@ -76,16 +77,16 @@ soprano = \relative c''' {
 		g4 a8 b c2 ~
 		c8 b c4 b2
 		d,2\rest e2 ~ \noBreak
-		e2 dis4 e \break
-		fis2. e8 fis
-		g2 ~ g8 fis e d
+		e2 ds4 e \break
+		fs2. e8 fs
+		g2 ~ g8 fs e d
 		c4 r a'2 ~
 		a2 \adjTieUp g ~
 		g4 a8 b \adjTieUp c2 ~
 		c8 b c a b2 ~
 		b4 b a2 ~
 		a4 a g2 ~
-		g4 c fis,8 g a4 ~
+		g4 c fs,8 g a4 ~
 		a2 g
     }
 }
@@ -97,30 +98,30 @@ alto = \relative c'' {
     \repeat volta 2 {
 		b1
 		a2. b8 a
-		g2. fis8 e
-		fis2 r2
-		g2. fis8 g
+		g2. fs8 e
+		fs2 r2
+		g2. fs8 g
 		a2. c8 b
 		c2 ~ c8 b c a
 		b2 r2
 		g1
-		fis2. g8 a
+		fs2. g8 a
 		b2 ~ b8 a b g
 		a2. a4
 		g2. g4
-		fis2. b4
-		e,8 fis g2.
-		fis1
+		fs2. b4
+		e,8 fs g2.
+		fs1
 	}        
     \repeat volta 2 {
 		c'1
 		b2. c8 d
-		e2 ~ e8 dis e4
-		dis2 b\rest
+		e2 ~ e8 ds e4
+		ds2 b\rest
 		g1
-		fis4 g \adjTieOne a2 ~
+		fs4 g \adjTieOne a2 ~
 		a4 g8 a \adjTieTwo b2 ~
-		b8 a g fis e4 r
+		b8 a g fs e4 r
 		c'1
 		b2. c8 d
 		\adjTieDown e2 ~ e8 d e c
@@ -140,36 +141,36 @@ bass = \relative c' {
     \repeat volta 2 {
 		r4 g8 a b4 c
 		d4 d, d'2
-		r4 e8 d cis4 a
+		r4 e8 d cs4 a
 		d4 d, d' c?
 		b4-\prallprall a8 b c4 c,
 		c'4 b8 c d4 a
-		d,4 fis8 e fis4 d
+		d,4 fs8 e fs4 d
 		g4 d g, g'8 a
-		b4 a8 b cis4 b8 cis
-		d4 cis b a
-		g fis e d
-		cis4 b8 cis d4 cis8 d
-		b4 a8 b cis4 b8 cis
-		ais4 gis8 ais b a g fis
+		b4 a8 b cs4 b8 cs
+		d4 cs b a
+		g fs e d
+		cs4 b8 cs d4 cs8 d
+		b4 a8 b cs4 b8 cs
+		as4 gs8 as b a g fs
 		g4 e a a,
 		d a' d2
 	}        
     \repeat volta 2 {
-		r4 d8 e fis4 d
+		r4 d8 e fs4 d
 		g4 g, g' a8 b
 		c4 b a g8 a
-		b4. a8 g fis e dis
+		b4. a8 g fs e ds
 		e4 e'8 d c4 b
-		a4 b8 c fis,4 g8 a
-		dis,4 e8 fis b,4 cis8 dis
-		e4 \clef treble e'8 dis e4 fis8 g
-		a4 g8 a fis4 e8 fis
-		g4 fis e d
+		a4 b8 c fs,4 g8 a
+		ds,4 e8 fs b,4 cs8 ds
+		e4 \clef treble e'8 ds e4 fs8 g
+		a4 g8 a fs4 e8 fs
+		g4 fs e d
 		c4 b \clef bass a g
-		fis4 e8 fis g4 fis8 g
-		e4 d8 e fis4 e8 fis
-		dis4 cis8_[ dis] e_[ d c b]
+		fs4 e8 fs g4 fs8 g
+		e4 d8 e fs4 e8 fs
+		ds4 cs8_[ ds] e_[ d c b]
 		c4 a d d,
 		g d' g2
     }

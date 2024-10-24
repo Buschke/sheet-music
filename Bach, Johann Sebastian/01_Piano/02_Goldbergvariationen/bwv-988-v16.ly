@@ -1,4 +1,5 @@
 \version "2.24.0"
+\language "english"
 
 \paper {
 
@@ -56,78 +57,78 @@ sopranoOne =   \relative g' {
     \repeat volta 2 { %begin repeated section
     	        \ignoreClashNote
 		\stemDown
-		b4\rest b32\rest g32 [ a b c d e fis ] g8. [ d16 b8. g16 ] | % 1
+		b4\rest b32\rest g32 [ a b c d e fs ] g8. [ d16 b8. g16 ] | % 1
 		d'4. \prallmordent e8 c4 ~ \downprall 
 		c8. [ \tupletBracketDown \tuplet 3/2 {b32 c d ] } | % 2
 		\hideTupletBracket \hideTupletNumber
-		g,8. [ g'32 fis32 ] g8. [ e16 ] \stemUp \grace d8 \stemDown cis8. [ b'16 a8. g16 ] | % 3
-		\stemUp fis4. \downprall \stemDown g8 \stemUp \grace g8 \stemDown a2 ~ | % 4
-		a8. [ \tuplet 3/2 { a32 g fis ]  } 
+		g,8. [ g'32 fs32 ] g8. [ e16 ] \stemUp \grace d8 \stemDown cs8. [ b'16 a8. g16 ] | % 3
+		\stemUp fs4. \downprall \stemDown g8 \stemUp \grace g8 \stemDown a2 ~ | % 4
+		a8. [ \tuplet 3/2 { a32 g fs ]  } 
 		g8. [ d16 ] _~ d2 | % 5 
 		\stemUp \grace f8 
 		e8. [ \tuplet 3/2 { d32 c b ] } 
 		c8. [ \tuplet 3/2 { b32 a g ] } a8. [ a16] \stemDown g'8. \prallmordent [ g16] | % 6
-		\stemUp <d g>4 \arpeggio ~ \stemDown g32 [ b a g fis e d c ] a'8. [ c,16 ] a'8. [ c,16 ] | % 7
+		\stemUp <d g>4 \arpeggio ~ \stemDown g32 [ b a g fs e d c ] a'8. [ c,16 ] a'8. [ c,16 ] | % 7
 		b4 ~ \downprall \stemUp 
-		b8. [ \tuplet 3/2 { a32 g fis ] } 
-		\stemDown g16 [ d'-. e-. fis-. ] g-. [ fis-. g-. a-. ] | % 8
-		b8. [ \tuplet 3/2 {  a32 g fis ] } 
-		g8. [ \tuplet 3/2 {  fis32 e dis ] } \stemUp e8. [ b16 cis8. \mordent d16 ] | % 9
+		b8. [ \tuplet 3/2 { a32 g fs ] } 
+		\stemDown g16 [ d'-. e-. fs-. ] g-. [ fs-. g-. a-. ] | % 8
+		b8. [ \tuplet 3/2 {  a32 g fs ] } 
+		g8. [ \tuplet 3/2 {  fs32 e ds ] } \stemUp e8. [ b16 cs8. \mordent d16 ] | % 9
 		\grace d8 
-		cis8. [ \tuplet 3/2 {  e32 fis g ] } a8. [ a16 ] a4 ~ 
-		a8. [ \tuplet 3/2 { a32 g fis ] } | % 10
-		g8. [ \tuplet 3/2 { fis32 e dis ] } e8. [ b'16 ] d,4. \downprall cis16 [ b16 ] | % 11
-		cis8. [ \tuplet 3/2 { d32 cis d ] } d8. \prallprall [ cis32 d ] e4 ~ e32 [ d cis b a g fis e ] | % 12
-		d8. [ fis16 a8. \prallmordent b16 ] <a c>4 ~ 
+		cs8. [ \tuplet 3/2 {  e32 fs g ] } a8. [ a16 ] a4 ~ 
+		a8. [ \tuplet 3/2 { a32 g fs ] } | % 10
+		g8. [ \tuplet 3/2 { fs32 e ds ] } e8. [ b'16 ] d,4. \downprall cs16 [ b16 ] | % 11
+		cs8. [ \tuplet 3/2 { d32 cs d ] } d8. \prallprall [ cs32 d ] e4 ~ e32 [ d cs b a g fs e ] | % 12
+		d8. [ fs16 a8. \prallmordent b16 ] <a c>4 ~ 
 		c8. [ \tuplet 3/2 {  c32 b a ] } | % 13
 		\stemDown 
-		b8. [ \tuplet 3/2 {  cis32 d e ] }
-		d8. \prallprall [ \tuplet 3/2 { cis32 d e ] }
-		a,8. [ \tuplet 3/2 {  e'32 fis g ]} a8. [ cis,16 ] \stemUp| % 14
+		b8. [ \tuplet 3/2 {  cs32 d e ] }
+		d8. \prallprall [ \tuplet 3/2 { cs32 d e ] }
+		a,8. [ \tuplet 3/2 {  e'32 fs g ]} a8. [ cs,16 ] \stemUp| % 14
 		\delayTurn d4.\turn e8 e4. \downprall d8 |  % 15
     } %end of repeated section
 
 	\alternative {
-		{<fis, a d>1 | } % 16
-		{ \time 3/8 \stemDown d'8 [ a'16 g fis e ] |} % 16
+		{<fs, a d>1 | } % 16
+		{ \time 3/8 \stemDown d'8 [ a'16 g fs e ] |} % 16
     } %end alternative
 
 	
     \repeat volta 2   { %begin repeated section
-		\stemUp fis8\turn [ g a ] | % 17
-		d,16 [ fis e g fis a ]| % 18
-		g8 [ fis g ] | % 19
-		e8 [dis e ]| % 20
+		\stemUp fs8\turn [ g a ] | % 17
+		d,16 [ fs e g fs a ]| % 18
+		g8 [ fs g ] | % 19
+		e8 [ds e ]| % 20
 		\liftTie a4. ~ | % 21
-		a8 [ g16 e fis dis ] | % 22
+		a8 [ g16 e fs ds ] | % 22
 		\liftTie b'4. ~ | % 23
-		b16 [ c b a g fis ] | % 24
+		b16 [ c b a g fs ] | % 24
 		g16 [ e a e b' e, ] | % 25
-		c'16 [ b a g fis e ] | % 26
-		d16 [ fis e g fis a ] | % 27
+		c'16 [ b a g fs e ] | % 26
+		d16 [ fs e g fs a ] | % 27
 		g16 [ a a8. \prallprall g32 a ] | % 28
 		b4 g8 | % 29
-		e8 [fis dis ] | % 30
+		e8 [fs ds ] | % 30
 		e4 d8\rest | % 31
 		r8 e16 [ d c b ] | % 32
 		c8 [ d e ] | % 33
-		a,16 [ c b d cis e ] | % 34
-		d32 [ e fis16 ] fis8. \downprall [e32 fis] | % 35
-		g8 [ fis16 e d c ] | % 36
+		a,16 [ c b d cs e ] | % 34
+		d32 [ e fs16 ] fs8. \downprall [e32 fs] | % 35
+		g8 [ fs16 e d c ] | % 36
 		b16 [ d c e d f ] | % 37
 		\liftTie e4. ~ | % 38
-		e16 [ d c b c fis ] | % 39
+		e16 [ d c b c fs ] | % 39
 		\stemDown a16 [ d, c b c a ] | % 40
-		b16 [ e d c d gis ] | % 41
+		b16 [ e d c d gs ] | % 41
 		b16 [ e, d c d b ] | % 42
 		\stemUp c4. ~| % 43
 		c16 [ b a b c a ] | % 44
 		d4 b8 | % 45
-		g8 [ a fis ] | % 46
+		g8 [ a fs ] | % 46
     } %end repeated section
 
 	\alternative {
-		{g4 b8\rest | b8\rest \stemDown a'16 [g fis e ] | } % 47
+		{g4 b8\rest | b8\rest \stemDown a'16 [g fs e ] | } % 47
 		{ \time 2/2 < d, g>1 |} % 46
 		
     } %end alternative
@@ -146,12 +147,12 @@ sopranoTwo =   \relative c'' {
 		b4 \arpeggio s1*3/4  | % 7
 		s1 | % 8
 		s1*15/16 b16| % 9
-		a4 b8\rest b16\rest a'16 dis,8. [fis16] b,4 ~ | % 10
+		a4 b8\rest b16\rest a'16 ds,8. [fs16] b,4 ~ | % 10
 		b4 s4 b2 | % 11
-		a4 b cis s4 | % 12
-		s2 fis,4 s4| % 13
+		a4 b cs s4 | % 12
+		s2 fs,4 s4| % 13
 		s1 | % 14
-		s2 cis'2 | % 15
+		s2 cs'2 | % 15
 	} %end of repeated section
    
 	\alternative {
@@ -164,10 +165,10 @@ sopranoTwo =   \relative c'' {
 		s1*3/8  | % 18
 		s1*3/8 | % 19
 		c4. ~ | % 20
-		\fixBeamAngle \shiftNoteCol c16 [ g' fis e dis e ]  | % 21
+		\fixBeamAngle \shiftNoteCol c16 [ g' fs e ds e ]  | % 21
 		b4. ^~  | % 22
-		\fixBeamAngle \shiftNoteCol b16 [ cis dis e fis dis ]  | % 23
-		\stemDown c,8\rest e8 [ dis ] | % 24
+		\fixBeamAngle \shiftNoteCol b16 [ cs ds e fs ds ]  | % 23
+		\stemDown c,8\rest e8 [ ds ] | % 24
 		e4. ~   | % 25
 		e4 r8  | % 26
 		s1*3/8  | % 27
@@ -227,32 +228,32 @@ sopranoThree =   \relative c'' {
 		\stemDown b8\rest d16 [ c b a ] | % 17
 		b8 [ c d ] | % 18
 		g,16 [ b a c b d ] | % 19
-		e,8\rest a16 [ g fis e ]    | % 20
-		fis8 [ g a ]   | % 21
-		dis,16 [ fis e g fis a ]   | % 22
-		g8 [ fis] e8\rest | % 23
+		e,8\rest a16 [ g fs e ]    | % 20
+		fs8 [ g a ]   | % 21
+		ds,16 [ fs e g fs a ]   | % 22
+		g8 [ fs] e8\rest | % 23
 		e'8 s4 | % 24
 		s1*3/8   | % 25
 		s1*3/8   | % 26
 		a,8 [ b c ]  | % 27
-		d8 [ e fis ]  | % 28
+		d8 [ e fs ]  | % 28
 		g4 d8 | % 29
-		g,8 [a fis ]   | % 30
-		g8 [ gis8. \prallprall fis32 gis ]  | % 31
-		a4 gis8  | % 32
+		g,8 [a fs ]   | % 30
+		g8 [ gs8. \prallprall fs32 gs ]  | % 31
+		a4 gs8  | % 32
 		a8 g!4  | % 33
-		fis8 [g e ]  | % 34
-		fis16 e16\rest e8\rest e8\rest  | % 35
+		fs8 [g e ]  | % 34
+		fs16 e16\rest e8\rest e8\rest  | % 35
 		s1*3/8   | % 36
 		s1*3/8   | % 37
-		g8\rest fis8 [ g ] \turn   | % 38
+		g8\rest fs8 [ g ] \turn   | % 38
 		a8 e8\rest e8\rest  | % 39
 		s1*3/8   | % 40
 		s1*3/8   | % 41
 		s1*3/8   | % 42
-		e16\rest g16 [ fis g a fis ] | % 43
+		e16\rest g16 [ fs g a fs ] | % 43
 		d4. _~   | % 44
-		d16 [ fis e g fis8 ]   | % 45
+		d16 [ fs e g fs8 ]   | % 45
 		s1*3/8 | % 46
 	} %end repeated section
 
@@ -285,7 +286,7 @@ bassOne =   \relative d {
 		s1   | % 11
 		s1   | % 12
 		s1   | % 13
-		s4 r8 r16 b16 cis4 s4   | % 14
+		s4 r8 r16 b16 cs4 s4   | % 14
 		s1   | % 15
 	} %end of repeated section
 
@@ -301,29 +302,29 @@ bassOne =   \relative d {
 		s1*3/8 | % 20
 		s1*3/8 | % 21
 		s1*3/8 | % 22
-		\stemDown d,8\rest b'16 [a g fis ] | % 23
+		\stemDown d,8\rest b'16 [a g fs ] | % 23
 		g8 [ a b ] | % 24
-		e,16 [ g fis a g b ] | % 25
+		e,16 [ g fs a g b ] | % 25
 		a8 [ b c ] | % 26
-		fis,16 [ a  g b a c ] | % 27
+		fs,16 [ a  g b a c ] | % 27
 		b8 [ c d ] | % 28
 		g,16 [ b a c a d ]| % 29
 		c8 [ a b ] | % 30
 		r8 e16 [d c b ] | % 31
 		c8 [ d e ] | % 32
-		a,16 [ c b d cis e ]| % 33
+		a,16 [ c b d cs e ]| % 33
 		d4. ~ | % 34
 		d8 a8\rest r8 | % 35
-		\stemUp r8 g8 [fis] | % 36
+		\stemUp r8 g8 [fs] | % 36
 		g4. ~ | % 37
 		g8 s8 s8 | % 38
-		fis,8 [g \turn a ] | % 39
-		d,16 [ fis e g fis a ] | % 40
+		fs,8 [g \turn a ] | % 39
+		d,16 [ fs e g fs a ] | % 40
 		g8 [ a \turn  b ] | % 41
-		e,16 [ gis fis a gis b ] | % 42
-		\stemDown a16 [ e' a g fis e ] | % 43
-		fis16 [ g fis e d c ] | % 44
-		b16 [ d c e d fis ]| % 45
+		e,16 [ gs fs a gs b ] | % 42
+		\stemDown a16 [ e' a g fs e ] | % 43
+		fs16 [ g fs e d c ] | % 44
+		b16 [ d c e d fs ]| % 45
 		e8 [ c d ] | % 46
 	} %end repeated section
 
@@ -333,38 +334,38 @@ bassTwo = \relative c {
 	\repeat volta 2 { %begin repeated section
 		\hideTupletBracket \hideTupletNumber \ignoreClashNote
 		\stemDown g4 r4 r4 r8 r16 g'16 | % 1
-		fis4 ~ fis32 [ d e fis g a b c ] d8. [ a16 fis8. d16 ] | % 2
+		fs4 ~ fs32 [ d e fs g a b c ] d8. [ a16 fs8. d16 ] | % 2
 		e4. g8 e4 ^~ ^\downprall 
-		e8. [ \tuplet 3/2 { d32 e fis ] } | % 3
-		d8. [ c'32 b ] c8. [ a16 ] fis8. [ e'16 d8. c16 ] | % 4
+		e8. [ \tuplet 3/2 { d32 e fs ] } | % 3
+		d8. [ c'32 b ] c8. [ a16 ] fs8. [ e'16 d8. c16 ] | % 4
 		b4. ^\downprall b8 
 		b8. [ \tuplet 3/2 { c32  b a ] } 
 		b8. [ g16 ] | % 5
 		c4 ^~ ^\prallmordent 
 		c8. [ \tuplet 3/2 { d32 c b ] }
 		c8. [ \tuplet 3/2 { b32 a g ] }
-		a8. [ \tuplet 3/2 { g32 fis e ] }| % 6
-		d2 ^~ \stemUp d16  [ c32 b a g fis e ] d16 [ fis a d ] | % 7
-		g,16-. [ d'-. e-. fis-. ] \stemDown g^. [ fis^. g^. a^. ] b4 ^~ ^\prallprall 
-		b8. [ \tuplet 3/2 {  a32 g fis ] } | % 8
-		g16^. [ b^. cis^. dis^.] e^. [ dis^. e^. fis^. ] g8. [ g,16 g'8. g16 ] | % 9
+		a8. [ \tuplet 3/2 { g32 fs e ] }| % 6
+		d2 ^~ \stemUp d16  [ c32 b a g fs e ] d16 [ fs a d ] | % 7
+		g,16-. [ d'-. e-. fs-. ] \stemDown g^. [ fs^. g^. a^. ] b4 ^~ ^\prallprall 
+		b8. [ \tuplet 3/2 {  a32 g fs ] } | % 8
+		g16^. [ b^. cs^. ds^.] e^. [ ds^. e^. fs^. ] g8. [ g,16 g'8. g16 ] | % 9
 		g4 ^~ 
-		g8. [ \tuplet 3/2 { g32  fis e ] }
-		fis8. [ \tuplet 3/2 {  b,32  cis dis ] } e8. [ e16 ] | % 10
+		g8. [ \tuplet 3/2 { g32  fs e ] }
+		fs8. [ \tuplet 3/2 {  b,32  cs ds ] } e8. [ e16 ] | % 10
 		e4 ^~ 
-		e8. [ \tuplet 3/2 {  c32 b a ] } gis8. [ b16 e,8. gis16 ] | % 11
-		a4 ^~ a16 [ a,32 b cis d e fis ] g8. [ e16 ] cis8. [ a16 ] | % 12
-		fis'4 ^~ 
-		fis8. [ \tuplet 3/2 {  g32 fis e ] } \stemUp 
+		e8. [ \tuplet 3/2 {  c32 b a ] } gs8. [ b16 e,8. gs16 ] | % 11
+		a4 ^~ a16 [ a,32 b cs d e fs ] g8. [ e16 ] cs8. [ a16 ] | % 12
+		fs'4 ^~ 
+		fs8. [ \tuplet 3/2 {  g32 fs e ] } \stemUp 
 		d8. [ \tuplet 3/2 { c32 b a ] } 
-		g8. [ \tuplet 3/2 { d'32 e fis ] } \stemDown | % 13
+		g8. [ \tuplet 3/2 { d'32 e fs ] } \stemDown | % 13
 		g8. ^\prallmordent [ g,16  g'8.  g16 ] g4 ~ 
-		g8. [ \tuplet 3/2 {  g32 fis e ] } | % 14
-		fis16 ~ [ fis32 d e fis g a ] b8. [ g16 ] a4 \stemUp a, | % 15
+		g8. [ \tuplet 3/2 {  g32 fs e ] } | % 14
+		fs16 ~ [ fs32 d e fs g a ] b8. [ g16 ] a4 \stemUp a, | % 15
 	} %end of repeated section
 
 	\alternative {
-		{d,4 ~ \stemDown d16 [ d'32 e fis g a b ] c8. [ a16 fis8. d16 ] | } % 16
+		{d,4 ~ \stemDown d16 [ d'32 e fs g a b ] c8. [ a16 fs8. d16 ] | } % 16
 		{ \time 3/8 \stemNeutral d,4 d'8\rest |} % 16
 	} %end alternative
 
@@ -391,7 +392,7 @@ bassTwo = \relative c {
 		\stemDown r8 d16 [ c b a ] 
 		b8 [c d] | % 36
 		g,16 [ b a c b d ] | % 37
-		c16 [b a g fis e ]  | % 38
+		c16 [b a g fs e ]  | % 38
 		s1*3/8| % 39
 		s1*3/8| % 40
 		s1*3/8| % 41
@@ -404,7 +405,7 @@ bassTwo = \relative c {
 
 	\alternative {
 		% {b4 r8 |  s1*3/8 | } % 46-47
-		{g,16 [ fis g a b c ] |  d8 [d,] d'8\rest | } % 46-47
+		{g,16 [ fs g a b c ] |  d8 [d,] d'8\rest | } % 46-47
 		{ \time 2/2 <g, b'>1 |} % 46
 	} %end alternative
 }

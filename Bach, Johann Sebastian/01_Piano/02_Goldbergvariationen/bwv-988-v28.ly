@@ -1,4 +1,5 @@
 \version "2.24.0"
+\language "english"
 
 \paper {
     top-markup-spacing.basic-distance = 6\mm
@@ -46,32 +47,32 @@ sopranoOne =   \relative b'' {
     \repeat volta 2 { %begin repeated section
     \stemUp
         b16 r16 r8 d16 r16 r8 g,16 r16 r8 | % 1
-        a16 r16 r8 d16 r16 r8 fis,16 r16 r8 | % 2
+        a16 r16 r8 d16 r16 r8 fs,16 r16 r8 | % 2
         g16 r16 r8 b16 r16 r8 a16 r16 r8 | % 3
-        fis16 r16 r8 cis'16 r16 r8 d16 r16 r8 | % 4
+        fs16 r16 r8 cs'16 r16 r8 d16 r16 r8 | % 4
         \stemDown g,8 [ \clef bass g,, ] \stemUp a [ \clef treble e'' ] f [ d ] | % 5
-        e8 [ \clef bass a,, ] b [ \clef treble fis'' ] s8 a8 | % 6
-        b8 [ \clef "bass" a,,8 ] b [ e, ] fis r8 | % 7
-        r8 \clef "treble" c'''8 b [ a ] << { g [ fis ] } \\ {s4 } \\ { s4 } \\ {  s8 \shiftNote a, } >> | % 8
-        <b d g b>16 [ g'16 fis g ] 
+        e8 [ \clef bass a,, ] b [ \clef treble fs'' ] s8 a8 | % 6
+        b8 [ \clef "bass" a,,8 ] b [ e, ] fs r8 | % 7
+        r8 \clef "treble" c'''8 b [ a ] << { g [ fs ] } \\ {s4 } \\ { s4 } \\ {  s8 \shiftNote a, } >> | % 8
+        <b d g b>16 [ g'16 fs g ] 
 		\stemDown e [ b a b ] g [ b e g ] | % 9
-        a16 [ fis e fis ] d [ a g a ] fis [ a d fis ] | % 10
-        g16 [ e dis e ] 
-		\stemUp b [ g fis g ] e [ g b d ] | % 11
-        cis16 [ g fis g ] e [ cis b cis ] a [ cis e g ] | % 12
-        fis16 r16 r8 g16 r16 r8 a16 r16 r8 | % 13
+        a16 [ fs e fs ] d [ a g a ] fs [ a d fs ] | % 10
+        g16 [ e ds e ] 
+		\stemUp b [ g fs g ] e [ g b d ] | % 11
+        cs16 [ g fs g ] e [ cs b cs ] a [ cs e g ] | % 12
+        fs16 r16 r8 g16 r16 r8 a16 r16 r8 | % 13
         b16 r16 r8 a16 r16 r8 g16 r16 r8 | % 14
         a16 r16 r8 b16 r16 r8 a16 r16 r8 | % 15
-        fis16 [ d cis d ] \clef "bass" a16 [ fis e fis ] d4 \clef "treble" | % 16
+        fs16 [ d cs d ] \clef "bass" a16 [ fs e fs ] d4 \clef "treble" | % 16
     } %end of repeated section
      \repeat volta 2 { %begin repeated section
-        fis'16 [ a g a ] 
-		\stemDown d [ fis e fis ] a [ fis c a ] | % 17
+        fs'16 [ a g a ] 
+		\stemDown d [ fs e fs ] a [ fs c a ] | % 17
         b16 [ d c d ] g [ b a b ] d [ b f d ] | % 18
         e8 [ b8 ] 
-		\stemUp c8 [ dis,8 ] e8 [ \clef bass g,8 ] | % 19
-        fis8 [ \clef treble e''8 ] 
-		\stemDown dis16 [ fis e fis ] a [ fis dis fis] | % 20
+		\stemUp c8 [ ds,8 ] e8 [ \clef bass g,8 ] | % 19
+        fs8 [ \clef treble e''8 ] 
+		\stemDown ds16 [ fs e fs ] a [ fs ds fs] | % 20
         r32 g32 [ a g a g a g ] 
 		r32 g32 [ a g a g a g ] 
 		r32 g32 [ a g a g a g ] | % 21
@@ -80,12 +81,12 @@ sopranoOne =   \relative b'' {
 		r32 g32 [ a g a g a g ] | % 22
         r32 g32 [ a g a g a g ] 
 		r32 g32 [ a g a g a g ] 
-		r32 fis32 [ g fis g fis g fis ] | % 23
+		r32 fs32 [ g fs g fs g fs ] | % 23
 		\stemDown
-        e16 [ g, fis g ] b [ e dis e ] g32 [  (f e16 ) f32 ( e d16 ) ] 
+        e16 [ g, fs g ] b [ e ds e ] g32 [  (f e16 ) f32 ( e d16 ) ] 
 		\stemUp| % 24
-        e8 [ e,8 ] dis8 [ d8 ] \flatBeam cis8 [ \stemDown e'8 ] \stemNeutral | % 25
-        d8 [ d,8 ] cis8 [ c8 ] \flatBeam b8 [ \stemDown d'8 ] \stemUp | % 26
+        e8 [ e,8 ] ds8 [ d8 ] \flatBeam cs8 [ \stemDown e'8 ] \stemNeutral | % 25
+        d8 [ d,8 ] cs8 [ c8 ] \flatBeam b8 [ \stemDown d'8 ] \stemUp | % 26
         r32 c32 [ d c d c d c ] 
 		r32 c32 [ d c d c d c ] 
 		r32 c32 [ d c d c d c ]  | % 27
@@ -94,11 +95,11 @@ sopranoOne =   \relative b'' {
 		r32 c32 [ d c d c d c ] | % 28
         b16 r16 r8 c16 r16 r8 d16 r16 r8 | % 29
         e,8 [ e'8 ] 
-		\stemDown f8 [ fis8 ] g8 [ gis8 ] | % 30
-        \flatBeamTwo a16 [ \stemUp fis, e fis ] 
-		g [ b a b ] c [ a fis d ] | % 31
+		\stemDown f8 [ fs8 ] g8 [ gs8 ] | % 30
+        \flatBeamTwo a16 [ \stemUp fs, e fs ] 
+		g [ b a b ] c [ a fs d ] | % 31
         g16 [ b a b ] 
-		\stemDown d [ g fis g ] b4 | % 32
+		\stemDown d [ g fs g ] b4 | % 32
 
     } %end repeated section
 
@@ -116,13 +117,13 @@ sopranoTwo =   \relative c' {
 		r32 d32 [ e d e d e d ] | % 2
         r32 d32 [ e d e d e d ] 
 		r32 d32 [ e d e d e d ] 
-		r32 cis32 [ d cis d cis d cis ] | % 3
+		r32 cs32 [ d cs d cs d cs ] | % 3
         r32 d32 [ e d e d e d ] 
 		r32 d32 [ e d e d e d ] 
 		r32 d32 [ e d e d e d ]  | % 4
 		s2 s8 b | % 5
-        c8 s8*3 g'8  [ cis,8 ]  | % 6
-		d8 [ \clef "bass"   fis,,8 ]  g8 [cis,] d [d,] | % 7
+        c8 s8*3 g'8  [ cs,8 ]  | % 6
+		d8 [ \clef "bass"   fs,,8 ]  g8 [cs,] d [d,] | % 7
 		g8 [ \clef "treble" e'''8 ] d [ c ] b [  c ]  | % 8
         b16 s16 s8 s2 | % 9
 		s1*3/4 | % 10
@@ -136,7 +137,7 @@ sopranoTwo =   \relative c' {
 		r32 d32 [ e d e d e d ] | % 14
         r32 d32 [ e d e d e d ] 
 		r32 d32 [ e d e d e d ] 
-		r32 cis32 [ d cis d cis d cis ] | % 15
+		r32 cs32 [ d cs d cs d cs ] | % 15
 		s4 \clef "bass" s2 \clef "treble" | % 16 
     } %end of repeated section
 
@@ -145,16 +146,16 @@ sopranoTwo =   \relative c' {
         s1*3/4 | % 18
         s1*3/4 | % 19
         s1*3/4 | % 20
-        b'16 r16 r8 cis16 r16 r8 dis16 r16 r8 | % 21
-        e16 r16 r8 dis16 r16 r8 e16 r16 r8 | % 22
-        cis16 r16 r8 b16 r16 r8 a16 r16 r8 | % 23
+        b'16 r16 r8 cs16 r16 r8 ds16 r16 r8 | % 21
+        e16 r16 r8 ds16 r16 r8 e16 r16 r8 | % 22
+        cs16 r16 r8 b16 r16 r8 a16 r16 r8 | % 23
 		s1*3/4 | % 24
         s1*3/4 | % 25
         s1*3/4 | % 26
         e16 r16 r8 d16 r16 r8 e16 r16 r8  | % 27
-        fis16 r16 r8 e16 r16 r8 fis16 r16 r8 | % 28
+        fs16 r16 r8 e16 r16 r8 fs16 r16 r8 | % 28
         r32 g32 [ a g a g a g ] 
-		r32 fis32 [ g fis g fis g fis ] 
+		r32 fs32 [ g fs g fs g fs ] 
 		r32 f32 [ g f g f g f ] | % 29
         s1*3/4 | % 30
         s1*3/4 | % 31
@@ -174,10 +175,10 @@ soprano = << \sopranoOne \\ \sopranoTwo>>
 bassOne = \relative g {
 	\repeat volta 2 { %begin repeated section
 	\stemDown
-        g8 [ b'8 ] a8 [ fis,8 ] e8 [ g'8 ] | % 1
-        fis,8 [ a'8 ] g8 [ e,8 ] d8 [ fis'8 ] | % 2
-        e,8 [ g'8 ] fis8 [ g,8 ] a8 [ e'8 ] | % 3
-        d,8 [ fis'8 ] e8 [ g,8 ] fis8 [ c'8 ] \clef "treble" | % 4
+        g8 [ b'8 ] a8 [ fs,8 ] e8 [ g'8 ] | % 1
+        fs,8 [ a'8 ] g8 [ e,8 ] d8 [ fs'8 ] | % 2
+        e,8 [ g'8 ] fs8 [ g,8 ] a8 [ e'8 ] | % 3
+        d,8 [ fs'8 ] e8 [ g,8 ] fs8 [ c'8 ] \clef "treble" | % 4
 		\stemUp
         b'32\rest g32 [ a g a g a g ] 
 		b32\rest g32 [ a g a g a g ] 
@@ -187,41 +188,41 @@ bassOne = \relative g {
 		b32\rest g32 [ a g a g a g ] | % 6
         b32\rest g32 [ a g a g a g ] 
 		d'32\rest g,32 [ a g a g a g ] 
-		b32\rest fis32 [ g fis g fis g fis ] | % 7
+		b32\rest fs32 [ g fs g fs g fs ] | % 7
         b32\rest g32 [ a g a g a g ] 
 		b32\rest g32 [ a g a g a g ] 
 		b32\rest g32 [ a g a g a g ]  | % 8
-        g,16 [ b a b ] e [ g fis g ] b [ g e cis ] | % 9
-        fis,16 [ a g a ] d [ fis e fis ] a [ fis d b ] | % 10
-        e,16 [ g fis g ] b [ e dis e ] g [ e b g ] | % 11
-        a16 [ e' d e ] g [ a g a ] g [ e cis a ] \clef "bass" | % 12
-        r32 fis32 [ g fis g fis g fis ] 
-		r32 fis32 [ g fis g fis g fis ] 
-		r32 fis32 [ g fis g fis g fis ]  | % 13
-        r32 fis32 [ g fis g fis g fis ] 
-		r32 fis32 [ g fis g fis g fis ] 
-		r32 fis32 [ g fis g fis g fis ] | % 14
-        r32 fis32 [ g fis g fis g fis ] 
-		r32 fis32 [ g fis g fis g fis ] 
-		r32 e32 [ fis e fis e fis e ] | % 15
-        d,16 [ fis e fis ] a [ d cis d ] fis4 | % 16
+        g,16 [ b a b ] e [ g fs g ] b [ g e cs ] | % 9
+        fs,16 [ a g a ] d [ fs e fs ] a [ fs d b ] | % 10
+        e,16 [ g fs g ] b [ e ds e ] g [ e b g ] | % 11
+        a16 [ e' d e ] g [ a g a ] g [ e cs a ] \clef "bass" | % 12
+        r32 fs32 [ g fs g fs g fs ] 
+		r32 fs32 [ g fs g fs g fs ] 
+		r32 fs32 [ g fs g fs g fs ]  | % 13
+        r32 fs32 [ g fs g fs g fs ] 
+		r32 fs32 [ g fs g fs g fs ] 
+		r32 fs32 [ g fs g fs g fs ] | % 14
+        r32 fs32 [ g fs g fs g fs ] 
+		r32 fs32 [ g fs g fs g fs ] 
+		r32 e32 [ fs e fs e fs e ] | % 15
+        d,16 [ fs e fs ] a [ d cs d ] fs4 | % 16
 
     } %end of repeated section
   	    \repeat volta 2 { %begin repeated section
-        \stemDown d'8 [ e,8 ] fis8 [ c'8 ] \stemNeutral d,8 [ \clef "treble" fis'8 ] | % 17
+        \stemDown d'8 [ e,8 ] fs8 [ c'8 ] \stemNeutral d,8 [ \clef "treble" fs'8 ] | % 17
         g8 [ a,8 ] b8 [ f'8 ] g,8 [ d''8 ] | % 18
         c16 [ g f g ] e [ c b c ] a [ c e a ]  | % 19
-        dis,16 [b ais b ] \clef "bass" fis16 [ dis cis dis ] b [ dis fis a ] \clef "treble" | % 20
-        b'32\rest e,32 [ fis e fis e fis e ] 
-		b'32\rest e,32 [ fis e fis e fis e ] 
-		b'32\rest e,32 [ fis e fis e fis e ] | % 21
-        b'32\rest e,32 [ fis e fis e fis e ] 
-		b'32\rest e,32 [ fis e fis e fis e ] 
-		b'32\rest e,32 [ fis e fis e fis e ] | % 22
-        b'32\rest e,32 [ fis e fis e fis e ] 
-		b'32\rest e,32 [ fis e fis e fis e ] 
-		b'32\rest dis,32 [ e dis e dis e dis ] | % 23
-        e,16 [ e' dis e ] b [ g fis g ] e [ g b d ] | % 24
+        ds,16 [b as b ] \clef "bass" fs16 [ ds cs ds ] b [ ds fs a ] \clef "treble" | % 20
+        b'32\rest e,32 [ fs e fs e fs e ] 
+		b'32\rest e,32 [ fs e fs e fs e ] 
+		b'32\rest e,32 [ fs e fs e fs e ] | % 21
+        b'32\rest e,32 [ fs e fs e fs e ] 
+		b'32\rest e,32 [ fs e fs e fs e ] 
+		b'32\rest e,32 [ fs e fs e fs e ] | % 22
+        b'32\rest e,32 [ fs e fs e fs e ] 
+		b'32\rest e,32 [ fs e fs e fs e ] 
+		b'32\rest ds,32 [ e ds e ds e ds ] | % 23
+        e,16 [ e' ds e ] b [ g fs g ] e [ g b d ] | % 24
         b'32\rest g32 [ a g a g a g ] 
 		b32\rest g32 [ a g a g a g ] 
 		b32\rest g32 [ a g a g a g ] | % 25
@@ -229,16 +230,16 @@ bassOne = \relative g {
 		b32\rest g32 [ a g a g a g ] 
 		b32\rest g32 [ a g a g a g ] | % 26
         \flatBeam a,8 [ \stemDown e''8 ] \stemNeutral 
-		\stemDown f8 [ fis8 ] g8 [  \clef "bass" fis,,8 ]| % 27
-        \liftBeam d8 [ \clef "treble" fis''8 ] g8 [ gis8 ] \liftBeamTwo a8 [ \clef "bass" d,,8 ] 
+		\stemDown f8 [ fs8 ] g8 [  \clef "bass" fs,,8 ]| % 27
+        \liftBeam d8 [ \clef "treble" fs''8 ] g8 [ gs8 ] \liftBeamTwo a8 [ \clef "bass" d,,8 ] 
 		\stemUp | % 28
-        g,8 [ g,8 ] as8 [ a8 ] bes8 [ b8 ] | % 29
+        g,8 [ g,8 ] af8 [ a8 ] bf8 [ b8 ] | % 29
         r32 c'32 [ d c d c d c ] 
 		r32 b32 [ c b c b c b ] 
-		r32 bes32 [ c bes c bes c bes ] | % 30
+		r32 bf32 [ c bf c bf c bf ] | % 30
 		\stemDown 
-        fis16 [ d' c d ] b [ g fis g ] d [ fis a c ] | % 31
-        b16 [ g fis g ] 
+        fs16 [ d' c d ] b [ g fs g ] d [ fs a c ] | % 31
+        b16 [ g fs g ] 
 		\stemUp d [ b a b ] g4 | % 32
     } %end repeated section
 
@@ -273,7 +274,7 @@ bassTwo = \relative c' {
         s1*3/4  \clef "treble" | % 20
         g'16 r16 r8 a16 r16 r8 b16 r16 r8 | % 21
         c16 r16 r8 b16 r16 r8 c16 r16 r8 | % 22
-        ais16 r16 r8 b16 r16 r8 b16 r16 r8 | % 23
+        as16 r16 r8 b16 r16 r8 b16 r16 r8 | % 23
 		s1*3/4 | % 24
         c16 r16 r8 b16 r16 r8 a16 r16 r8 | % 25
         b16 r16 r8 a16 r16 r8 g16 r16 r8 | % 26

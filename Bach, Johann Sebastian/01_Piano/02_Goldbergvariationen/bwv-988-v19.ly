@@ -1,4 +1,5 @@
 \version "2.24.0"
+\language "english"
 
 \paper {
     top-margin = 8\mm
@@ -72,30 +73,30 @@ sopranoOne =   \relative d'' {
     \stemUp
 	d8 \adjTieUp d4 ~ | % 1
         d8 \adjTieUp d4 ~ | % 2
-        d8 [ d cis ] | % 3
+        d8 [ d cs ] | % 3
         d4 r8 | % 4
-        \adjBeamOne g16 [ fis g d b d ] | % 5
+        \adjBeamOne g16 [ fs g d b d ] | % 5
         \adjBeamTwo e16 [ d e c a c ] | % 6
         \adjBeamTre d16 [ c d e d c ] | % 7
         \adjBeamQtr b16 [ a b c b a ] | % 8
         g8 g'4 ~ | % 9
-        g8 fis4 ~ | % 10
-        fis8  [ e d ] | % 11
-        cis16 [ d ] \adjTieUp e4 ~ | % 12
+        g8 fs4 ~ | % 10
+        fs8  [ e d ] | % 11
+        cs16 [ d ] \adjTieUp e4 ~ | % 12
         e8 d c! ~ | % 13
         c8 [ b g' ~ ] | % 14
-        \adjBeamSix g16 [ e fis d e cis! ] | % 15
+        \adjBeamSix g16 [ e fs d e cs! ] | % 15
         d4. | % 16
     } %end of repeated section
   
     \repeat volta 2 { %begin repeated section
-        \adjBeamOne fis16 [ e16 fis d a d ] | % 17
-        \adjBeamOne g16 [ fis g d b d ] | % 18
-        e16 [ dis e g fis e ] | % 19
-        \adjBeamOct dis16 [ e fis dis b dis ] | % 20
+        \adjBeamOne fs16 [ e16 fs d a d ] | % 17
+        \adjBeamOne g16 [ fs g d b d ] | % 18
+        e16 [ ds e g fs e ] | % 19
+        \adjBeamOct ds16 [ e fs ds b ds ] | % 20
         e8 \adjTieTwo e4 ~ | % 21
         e8 \adjTieUp e4 ~ | % 22
-        e8 [ e dis ] | % 23
+        e8 [ e ds ] | % 23
         e4 f8\rest | % 24
         r8 e16 [ c a c ] | % 25
         \adjTieQtr d4. ~ \noBreak | % 26
@@ -103,8 +104,8 @@ sopranoOne =   \relative d'' {
         c8 [ d16 c b a ] | % 28
         \stemDown d16 [ c d b g b ] | % 29
         e16 [ d e c a c ] | % 30
-        fis16 [ e fis a d, fis ] | % 31
-        g16 [ fis g d b g ] | % 32
+        fs16 [ e fs a d, fs ] | % 31
+        g16 [ fs g d b g ] | % 32
 
     } %end repeated section
 }
@@ -113,32 +114,32 @@ sopranoTwo =   \relative b' {
   \repeat volta 2 { %begin repeated section
   \stemDown
         b16 [ a b g d g ] | % 1
-        a16 [ g a fis d fis ] | % 2
-        g16 [ fis g b a g ] | % 3
-        fis16 [ e fis g a fis ] | % 4
+        a16 [ g a fs d fs ] | % 2
+        g16 [ fs g b a g ] | % 3
+        fs16 [ e fs g a fs ] | % 4
         g8  \adjTieOne g4 ~ | % 5
         g8 \adjTieOne g4 ~ | % 6
-        g8 [ g fis ] | % 7
+        g8 [ g fs ] | % 7
         g4 e8\rest | % 8
         c8\rest r8 d'8 | % 9
-        cis4 c8 | % 10
-        b8 [ e, gis ] | % 11
+        cs4 c8 | % 10
+        b8 [ e, gs ] | % 11
         a4 g!8 | % 12
-        fis4 a8 | % 13
+        fs4 a8 | % 13
         d,8 [ g b ] | % 14
-        cis8 [ a \adjTieDown g ~ ] | % 15
-        g8 fis4  | % 16 
+        cs8 [ a \adjTieDown g ~ ] | % 15
+        g8 fs4  | % 16 
     } %end of repeated section
   
     \repeat volta 2 { %begin repeated section
         \staffDown \stemUp d8 d4^~ | % 17
         \adjBeamSev d8 b \staffUp \stemDown \adjTieOne g' ~ | % 18
         g8 [ g c ] | % 19
-        fis,8 r8 e8\rest | % 20
+        fs,8 r8 e8\rest | % 20
         b'16  [ a b g e g ] | % 21
-        c16 [ b c a fis a ] | % 22
+        c16 [ b c a fs a ] | % 22
         b16 [ a b c b a ] | % 23
-        g16 [ fis g a b g ] | % 24
+        g16 [ fs g a b g ] | % 24
         e4 r8 | % 25
         r8 d16 [ g b g ] | % 26
         e4. | % 27
@@ -159,7 +160,7 @@ soprano = << \sopranoOne \\ \sopranoTwo>>
 bass = \relative g {
 	\repeat volta 2 { %begin repeated section
        g8  [ g, g' ] | % 1
-        fis8 [ fis, fis' ] | % 2
+        fs8 [ fs, fs' ] | % 2
         e8 [ e, e' ] | % 3
         d8 [ d, c' ] | % 4
         b8 [ b' g ] | % 5
@@ -167,28 +168,28 @@ bass = \relative g {
         b16 [ a b c d8 ] | % 7
         g,8 [ g,16 d' g a ] | % 8
         b16 [ a b g e g ] | % 9
-        a16 [ g a fis d fis ] | % 10
-        g16 [ fis g e b e ] | % 11
-        g16 [ fis g e cis e ] | % 12
-        a16 [ g a fis d fis ] | % 13
+        a16 [ g a fs d fs ] | % 10
+        g16 [ fs g e b e ] | % 11
+        g16 [ fs g e cs e ] | % 12
+        a16 [ g a fs d fs ] | % 13
         b16 [ a b g e g ] | % 14
         \adjBeamCin a8 [ \stemUp a, \stemNeutral a' ] | % 15
-        d16 [ cis d a fis d16 ] | % 16
+        d16 [ cs d a fs d16 ] | % 16
     } %end of repeated section
   
     \repeat volta 2 { %begin repeated section
         d'8  d, c' | % 17
         b8 g b | % 18
         c8 [ b a ] | % 19
-        b8 [ a16 g a fis ] | % 20
+        b8 [ a16 g a fs ] | % 20
         g8 [ e g ] | % 21
         \adjBeamCin a8 [ \stemUp a, \stemNeutral a' ] | % 22
-        g16 [ fis g a b8 ] | % 23
+        g16 [ fs g a b8 ] | % 23
         e,8 [ e' d ] | % 24
-        c16 [ b c a fis a ] | % 25
+        c16 [ b c a fs a ] | % 25
         b16 [ a b g e g ] | % 26
         a16 [ g a c e, g ] | % 27
-        fis16 [ e fis a d, fis ] | % 28
+        fs16 [ e fs a d, fs ] | % 28
         b,8_[ g b ] | %29
         c8_[ a c ] | % 30
         d8_[ c d ] | % 31

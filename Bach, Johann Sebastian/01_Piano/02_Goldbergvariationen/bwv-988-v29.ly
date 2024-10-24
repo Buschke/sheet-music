@@ -1,4 +1,5 @@
 \version "2.24.0"
+\language "english"
 
 \paper {
     top-margin = 8\mm
@@ -50,7 +51,7 @@ sopranoOne = \relative a'' {
  		r8 r16 g,16 r16 g16 r16 g16 r16 g16 r16 g16 | % 1
 		r8 r16 d'16 r16 d16 r16 d16 r16 d16 r16 d16 | % 2
 		r8 r16 g16 r16 g16 r16 g16 r16 g16 r16 g16 | % 3
-		fis16 s16 s8 s2 | % 4
+		fs16 s16 s8 s2 | % 4
 		g8 s16 g16 r16 g16 r16 g16 r16 g16 r16 f16 | % 5
 		s8 s16 e16 r16 e16 r16 e16 r16 e16 r16 e16 | % 6
 		s8 s16 d16 r16 d16 r16 d16 r16 d16 r16 c16 | % 7
@@ -60,35 +61,35 @@ sopranoOne = \relative a'' {
 		\tuplet 3/2 { b16 [ a g ] }
 		\tuplet 3/2 { e'16 [ d c ] } \undo \hideTupletNum | % 8
 		\tuplet 3/2 { d16 b16\rest g16 } \hideTupletNum
-		\tuplet 3/2 { fis16 [ c16 ] b'16\rest } \undo \hideTupletNum
+		\tuplet 3/2 { fs16 [ c16 ] b'16\rest } \undo \hideTupletNum
 		\tuplet 3/2 { b16\rest b16\rest g16 } \hideTupletNum
-		\tuplet 3/2 { a16 [ fis16 ] b16\rest }
+		\tuplet 3/2 { a16 [ fs16 ] b16\rest }
 		\tuplet 3/2 { b16\rest b16\rest b16 }
-		\tuplet 3/2 { cis16  [a16 ] b16\rest } | % 9
+		\tuplet 3/2 { cs16  [a16 ] b16\rest } | % 9
 		\tuplet 3/2 { b16\rest b16\rest d16 }
-		\tuplet 3/2 { cis16 [ g16 ] b16\rest }
+		\tuplet 3/2 { cs16 [ g16 ] b16\rest }
 		\tuplet 3/2 { b16\rest b16\rest d16 }
-		\tuplet 3/2 { e16 [ cis!16 ] b16\rest }
-		\tuplet 3/2 { b16\rest b16\rest fis'16 }
+		\tuplet 3/2 { e16 [ cs!16 ] b16\rest }
+		\tuplet 3/2 { b16\rest b16\rest fs'16 }
 		\tuplet 3/2 { d16 [ b16 ] b16\rest } | % 10
 		\oneVoice
 		\tuplet 3/2 { r16 r16 c!16 }
 		\tuplet 3/2 { b16 [ g16 ] r16 }
 		\tuplet 3/2 { r16 r16 a16 }
 		\tuplet 3/2 { g16 [ e16 ] r16 }
-		\tuplet 3/2 { r16 r16 fis16 }
-		\tuplet 3/2 { e16 [ cis16 ] r16 } | % 11
-		\tuplet 3/2 { r16 r16 fis16 }
-		\tuplet 3/2 { e16 [ cis16 ] r16 }
+		\tuplet 3/2 { r16 r16 fs16 }
+		\tuplet 3/2 { e16 [ cs16 ] r16 } | % 11
+		\tuplet 3/2 { r16 r16 fs16 }
+		\tuplet 3/2 { e16 [ cs16 ] r16 }
 		\clef "bass" 
 		\tuplet 3/2 { r16 r16 d16 }
-		\tuplet 3/2 { cis16 [ a16 ] r16 }
+		\tuplet 3/2 { cs16 [ a16 ] r16 }
 		\tuplet 3/2 { r16 r16 b16 }
-		\tuplet 3/2 { a16 [ fis16 ] r16 } | % 12
+		\tuplet 3/2 { a16 [ fs16 ] r16 } | % 12
 		\tuplet 3/2 { r16 r16 b16 }
-		\tuplet 3/2 { a16 [ fis16 ] r16 }
+		\tuplet 3/2 { a16 [ fs16 ] r16 }
 		\tuplet 3/2 { r16 r16 g16 }
-		\tuplet 3/2 { fis16 [ d16 ] r16 }
+		\tuplet 3/2 { fs16 [ d16 ] r16 }
 		\tuplet 3/2 { r16 r16 e16 }
 		\tuplet 3/2 { d16 [ b16 ] r16 } | % 13
 		\tuplet 3/2 { r16 r16 e16 }
@@ -96,13 +97,13 @@ sopranoOne = \relative a'' {
 		\tuplet 3/2 { r16 r16 c16 }
 		\tuplet 3/2 { b16 [ g16 ] r16 }
 		\tuplet 3/2 { r16 r16 a16 }
-		\tuplet 3/2 { fis16 [ e16 ] r16 } | % 14
+		\tuplet 3/2 { fs16 [ e16 ] r16 } | % 14
 		\tuplet 3/2 { r16 g'16 [ a16 ] }
 		\tuplet 3/2 { e'16 [ a,16 g16 ] }
-		\tuplet 3/2 { r16 fis16 [ a16 ] }
-		\tuplet 3/2 { d16 [ a16 fis16 ] }
+		\tuplet 3/2 { r16 fs16 [ a16 ] }
+		\tuplet 3/2 { d16 [ a16 fs16 ] }
 		\tuplet 3/2 { r16 e16 [ g16 ] }
-		\tuplet 3/2 { cis16 [ g16 e16 ] } | % 15
+		\tuplet 3/2 { cs16 [ g16 e16 ] } | % 15
 		\voiceOne
 		r8 r16 d'16 r16 d16 r16 d16 r4 | % 16
 		\clef "treble" 
@@ -111,9 +112,9 @@ sopranoOne = \relative a'' {
   	\repeat volta 2 { %begin repeated section
   	    \oneVoice
 		\tuplet 3/2 { r16 r16 b''16  }
-		\tuplet 3/2 { a16 [ fis16 ] r16 }
+		\tuplet 3/2 { a16 [ fs16 ] r16 }
 		\tuplet 3/2 { r16 r16 g16  }
-		\tuplet 3/2 { fis16 [ d16 ] r16 }
+		\tuplet 3/2 { fs16 [ d16 ] r16 }
 		\tuplet 3/2 { r16 r16 e16  }
 		\tuplet 3/2 { d16 [ b16 ] r16 } | % 17
 		\tuplet 3/2 { r16 r16 e16 }
@@ -127,49 +128,49 @@ sopranoOne = \relative a'' {
 		\tuplet 3/2 { r16 r16 \clef "bass" d16 }
 		\tuplet 3/2 { c16 [ a16 ] r16 }
 		\tuplet 3/2 { r16 r16 b16  }
-		\tuplet 3/2 { a16 [ fis16 ] r16 } | % 19
+		\tuplet 3/2 { a16 [ fs16 ] r16 } | % 19
 		\tuplet 3/2 { r16 r16 g16 }
-		\tuplet 3/2 { fis16 [ dis16 ] r16 }
+		\tuplet 3/2 { fs16 [ ds16 ] r16 }
 		\tuplet 3/2 { r16 r16 e16  }
-		\tuplet 3/2 { dis16 [ b16 ] r16 }
+		\tuplet 3/2 { ds16 [ b16 ] r16 }
 		\tuplet 3/2 { r16 r16 c!16 }
 		\tuplet 3/2 { b16 [ g16 ] r16 } \clef "treble" | % 20
 		\voiceOne
 		r8 r16 e'''16 r16 e16 r16 e16 r16 e16 r16 e16 | % 21
 		r8 r16 e16 r16 e16 r16 e16 r16 e16 r16 e16 | % 22
 		\oneVoice \undo \hideTupletNum \tupletUp
-		\tuplet 3/2 { r16 fis16 [ g16 ] } \hideTupletNum
+		\tuplet 3/2 { r16 fs16 [ g16 ] } \hideTupletNum
 		\tuplet 3/2 { a16 [b16 c16 ~ ] }
 		\tuplet 3/2 { c16 [ b16 a16] }
-		\tuplet 3/2 { g16 [ fis16 e16 ] }
-		\tuplet 3/2 { dis16 [ c16 b16 ] }
-		\tuplet 3/2 { a16 [g16 fis16 ] } | % 23
+		\tuplet 3/2 { g16 [ fs16 e16 ] }
+		\tuplet 3/2 { ds16 [ c16 b16 ] }
+		\tuplet 3/2 { a16 [g16 fs16 ] } | % 23
 		\voiceOne
 		e16 [ e'16 ] r16 e16 r16 c16 r16 c16 r16 g16 r16 g16 \clef "bass" | % 24
 		\oneVoice \undo \hideTupletNum \tupletUp
 		\tuplet 3/2 { r16 e,16 [ f16 ] }
-		\tuplet 3/2 { fis16 [ g16 gis16 ] } \hideTupletNum
+		\tuplet 3/2 { fs16 [ g16 gs16 ] } \hideTupletNum
 		\tuplet 3/2 { r16 b16 [ c16 ] }
 		\tuplet 3/2 { d16 c16 b16 ] } \clef "treble"
 		\tuplet 3/2 { c16 [ d16 e16 ]  }
-		\tuplet 3/2 { fis16[  g16 a16 ] } \clef "bass" | % 25		
-		\tuplet 3/2 { r16 d,,16 [ es16 ] }
-		\tuplet 3/2 { e16 [ f16 fis16 ] }
+		\tuplet 3/2 { fs16[  g16 a16 ] } \clef "bass" | % 25		
+		\tuplet 3/2 { r16 d,,16 [ ef16 ] }
+		\tuplet 3/2 { e16 [ f16 fs16 ] }
 		\tuplet 3/2 { r16 a16 [ b16 ] }
 		\tuplet 3/2 { c16 [ b16 a16 ] }
 		\clef "treble" 
 		\tuplet 3/2 { b16 [ c16 d16 ] }
-		\tuplet 3/2 { e16 [ fis16 g16 ] } | % 26
+		\tuplet 3/2 { e16 [ fs16 g16 ] } | % 26
 		\tuplet 3/2 { c,16 r16 f16 }
 		\tuplet 3/2 { e16 [c16 ] r16 }
 		\tuplet 3/2 { r16 r16 \clef "bass" d16  }
 		\tuplet 3/2 { c16 [ a16 ] r16 }
 		\tuplet 3/2 { r16 r16 b16 }
-		\tuplet 3/2 { a16 [ fis!16 ] r16 } \clef "treble" | % 27
+		\tuplet 3/2 { a16 [ fs!16 ] r16 } \clef "treble" | % 27
 		\tuplet 3/2 { r16 r16 b'16 }
-		\tuplet 3/2 { a16 [ fis16 ] r16 }
+		\tuplet 3/2 { a16 [ fs16 ] r16 }
 		\tuplet 3/2 { r16 r16 g16 }
-		\tuplet 3/2 { fis16 [ d16 ] r16 }
+		\tuplet 3/2 { fs16 [ d16 ] r16 }
 		\tuplet 3/2 { r16 r16 e16 }
 		\tuplet 3/2 { d16 [ b16 ] r16 } | % 28
 		\tuplet 3/2 { r16 r16 e'16 }
@@ -188,7 +189,7 @@ sopranoOne = \relative a'' {
 		\tuplet 3/2 { c16 [ d16 e16 ~] }
 		\tuplet 3/2 { e16 [ d16 c16 ] }
 		\tuplet 3/2 { b16 [ a16 g16 ~] }
-		\tuplet 3/2 { g16 [ fis16 g16 ] }
+		\tuplet 3/2 { g16 [ fs16 g16 ] }
 		\tuplet 3/2 { a16 [ b16 c16 ] }| % 31
 		\grace c8 b \voiceOne r16 g'16 r16 g16 r16 g16 r4 
 
@@ -200,16 +201,16 @@ sopranoTwo = \relative c'' {
 	\repeat volta 2 { %begin repeated section
 		\stemDown
 		r8 r16 <b, d>16 r16 <b d>16 r16 <b d>16 r16 <b d>16 r16 <b d>16 | % 1
-		r8 r16 <fis' a>16 r16 <fis a>16 r16 <fis a>16 r16 <fis a>16 r16 <fis a>16 | % 2 
-		r8 r16 <b e>16 r16 <b e>16 r16 <b e>16 r16 <b e>16 r16 <cis e>16 | % 3
+		r8 r16 <fs' a>16 r16 <fs a>16 r16 <fs a>16 r16 <fs a>16 r16 <fs a>16 | % 2 
+		r8 r16 <b e>16 r16 <b e>16 r16 <b e>16 r16 <b e>16 r16 <cs e>16 | % 3
 		<a d>16 b16\rest b8\rest \tupletUp 
 		\tuplet 3/2 { b16\rest c'16 [ b ] }
 		\tuplet 3/2 { c, [ b' a ]} 
 		\tuplet 3/2 { b, [ a' g] }
-		\tuplet 3/2 { a, [ g' fis ] } | % 4
+		\tuplet 3/2 { a, [ g' fs ] } | % 4
 		<b, d>8 b16\rest <b d>16 r16 <b d>16 r16 <b d>16 r16 <b d>16 r16 <b d>16 | % 5
 		b8\rest b16\rest <g c>16 r16 <g c>16 r16 <g c>16 r16 <g c>16 r16 <g c>16 | % 6
-		b8\rest b16\rest <fis a>16 r16 <fis a>16 r16 <fis a>16 r16 <fis a>16 r16 <fis a>16 | % 7
+		b8\rest b16\rest <fs a>16 r16 <fs a>16 r16 <fs a>16 r16 <fs a>16 r16 <fs a>16 | % 7
 		<d g>16 s16 s8 s2 | % 8 
 		s1*3/4 | % 9
 		s1*3/4 | % 10
@@ -218,7 +219,7 @@ sopranoTwo = \relative c'' {
 		s1*3/4 | % 13
 		s1*3/4 | % 14
 		s1*3/4 | % 15
-		r8 r16 <fis, a>16 r16 <fis a>16 r16 <fis a>16 r4 \clef "treble" | % 16
+		r8 r16 <fs, a>16 r16 <fs a>16 r16 <fs a>16 r4 \clef "treble" | % 16
 
  } %end of repeated section
  \repeat volta 2 { %begin repeated section
@@ -252,17 +253,17 @@ soprano = << \sopranoOne \\ \sopranoTwo>>
 bassOne = \relative g {
 	\repeat volta 2 { %begin repeated section
 		\stemUp \hideTupletBracket
-		g8 [ g,8 ] \clef "treble" fis''16 r16 fis16 r16 fis16 r16 fis16 r16 \clef "bass" | % 1
-		fis,8 [ fis,8 ] \clef "treble" cis'''16 r16 cis16 r16 cis16 r16 cis16 r16 \clef "bass" | % 2
-		e,,8 [ e,8 ] \clef "treble" fis'''16 r16 e16 r16 fis16 r16 e16 r16 \clef "bass" | % 3
+		g8 [ g,8 ] \clef "treble" fs''16 r16 fs16 r16 fs16 r16 fs16 r16 \clef "bass" | % 1
+		fs,8 [ fs,8 ] \clef "treble" cs'''16 r16 cs16 r16 cs16 r16 cs16 r16 \clef "bass" | % 2
+		e,,8 [ e,8 ] \clef "treble" fs'''16 r16 e16 r16 fs16 r16 e16 r16 \clef "bass" | % 3
 		\stemDown 
-		d,,16\rest d'16 [ a16 fis16 ] d16. [ d'32 e,16. c'32 ] d,16. [ b'32 c,16. a'32 ] 
+		d,,16\rest d'16 [ a16 fs16 ] d16. [ d'32 e,16. c'32 ] d,16. [ b'32 c,16. a'32 ] 
 		\stemUp | % 4
-		b,8_[b'8] \clef "treble" fis''16  r16 fis16  r16 fis16 r16 d16 r16 \clef "bass" | % 5
+		b,8_[b'8] \clef "treble" fs''16  r16 fs16  r16 fs16 r16 d16 r16 \clef "bass" | % 5
 		c,,8_[c'8] \clef "treble" d'16 r16 d16 r16 d16 r16 c16 r16 \clef "bass" | % 6
-		d,,8_[ d'8 ] \clef "treble" cis'16 r16 cis16 r16 cis16 r16 a16 r16 \clef "bass" | % 7
+		d,,8_[ d'8 ] \clef "treble" cs'16 r16 cs16 r16 cs16 r16 a16 r16 \clef "bass" | % 7
 		\stemDown 
-		d,,16\rest g16 [ d16 b16 ] g16. [ g'32 fis16. d'32 ] g,16. [ e'32 a,16. fis'32 ] 
+		d,,16\rest g16 [ d16 b16 ] g16. [ g'32 fs16. d'32 ] g,16. [ e'32 a,16. fs'32 ] 
 		\stemNeutral | % 8
 		\tuplet 3/2 { b,16 [ d16 ] d,16\rest } \hideTupletNum
 		\tuplet 3/2 { d16\rest d16\rest a'16 } \undo \hideTupletNum
@@ -270,56 +271,56 @@ bassOne = \relative g {
 		\tuplet 3/2 { d16\rest d16\rest  \clef "treble" c'16 }
 		\tuplet 3/2 { d16 [ g16 ] b16\rest }
 		\tuplet 3/2 { b16\rest b16\rest e,16 } | % 9
-		\tuplet 3/2 { fis16 [ a ] b16\rest }
+		\tuplet 3/2 { fs16 [ a ] b16\rest }
 		\tuplet 3/2 { b16\rest b16\rest e,16 }
-		\tuplet 3/2 { fis16 [ a16 ] b16\rest }
+		\tuplet 3/2 { fs16 [ a16 ] b16\rest }
 		\tuplet 3/2 { b16\rest b16\rest g16 }
 		\tuplet 3/2 { a16 [ d16 ] b16\rest }
 		\tuplet 3/2 { b16\rest b16\rest a16 } | % 10
 		\oneVoice
 		\tuplet 3/2 { g16 [ b16 ] r16 }
-		\tuplet 3/2 { r16 r16 fis16 }
+		\tuplet 3/2 { r16 r16 fs16 }
 		\tuplet 3/2 { e16 [ g16 ] r16 }
 		\tuplet 3/2 { r16 r16 d16 }
-		\tuplet 3/2 { cis16 [ d16 ] r16 }
+		\tuplet 3/2 { cs16 [ d16 ] r16 }
 		\tuplet 3/2 { r16 r16 \clef "bass" b16 } | % 11
-		\tuplet 3/2 { a16 [ cis16 ] r16 }
+		\tuplet 3/2 { a16 [ cs16 ] r16 }
 		\tuplet 3/2 { r16 r16 b16  }
-		\tuplet 3/2 { a16 [ cis16 ] r16 }
+		\tuplet 3/2 { a16 [ cs16 ] r16 }
 		\tuplet 3/2 { r16 r16 g16 }
-		\tuplet 3/2 { fis16 [ a16 ] r16 }
+		\tuplet 3/2 { fs16 [ a16 ] r16 }
 		\tuplet 3/2 { r16 r16 e16 } | % 12
-		\tuplet 3/2 { d16 [ fis16 ] r16 }
+		\tuplet 3/2 { d16 [ fs16 ] r16 }
 		\tuplet 3/2 { r16 r16 e16 }
-		\tuplet 3/2 { d16 [ fis16 ] r16 }
+		\tuplet 3/2 { d16 [ fs16 ] r16 }
 		\tuplet 3/2 { r16 r16 c16 }
 		\tuplet 3/2 { b16 [ d16 ] r16 }
 		\tuplet 3/2 { r16 r16 a16 } | % 13
-		\tuplet 3/2 { fis16 [ b16 ] r16 }
+		\tuplet 3/2 { fs16 [ b16 ] r16 }
 		\tuplet 3/2 { r16 r16 a16 }
 		\tuplet 3/2 { g16 [ b16 ] r16 }
-		\tuplet 3/2 { r16 r16 fis16 }
+		\tuplet 3/2 { r16 r16 fs16 }
 		\tuplet 3/2 { e16 [ g16 ] r16 }
 		\tuplet 3/2 { r16 r16 d16 } | % 14
-		cis8 [ cis'8 ] d8 [ fis,8 ] g8 [ a8 ] | % 15
+		cs8 [ cs'8 ] d8 [ fs,8 ] g8 [ a8 ] | % 15
 		\voiceThree
-		d,8 [ d'8 ] cis'16  r16 cis16 r16 d,,4 | % 16
+		d,8 [ d'8 ] cs'16  r16 cs16 r16 d,,4 | % 16
 
  } %end of repeated section
  
  	\repeat volta 2 { %begin repeated section
 		\clef "treble"
 		\oneVoice
-		\tuplet 3/2 { d'''16 [ fis16] r16 }
+		\tuplet 3/2 { d'''16 [ fs16] r16 }
 		\tuplet 3/2 { r16 r16 e16  }
-		\tuplet 3/2 { d16 [ fis16]  r16 }
+		\tuplet 3/2 { d16 [ fs16]  r16 }
 		\tuplet 3/2 { r16 r16 c16  }
 		\tuplet 3/2 { b16 [ d16 ] r16 }
 		\tuplet 3/2 { r16 r16 a16  } | % 17
 		\tuplet 3/2 { g16 [ b16 ] r16 }
 		\tuplet 3/2 { r16 r16 a16 }
 		\tuplet 3/2 { g16 [ b16 ] r16 }
-		\tuplet 3/2 { r16 r16 fis16 }
+		\tuplet 3/2 { r16 r16 fs16 }
 		\tuplet 3/2 { e16 [ g16 ] r16 }
 		\tuplet 3/2 { r16 r16 d16 } | % 18
 		\tuplet 3/2 { c16 [ e16 ] r16 }
@@ -327,31 +328,31 @@ bassOne = \relative g {
 		\tuplet 3/2 { r16 r16 b16  }
 		\tuplet 3/2 { a16 [ c16 ] r16 }
 		\tuplet 3/2 { r16 r16 g16 }
-		\tuplet 3/2 { fis16 [ a16 ] r16 }
+		\tuplet 3/2 { fs16 [ a16 ] r16 }
 		\tuplet 3/2 { r16 r16 e16 } | % 19
-		\tuplet 3/2 { dis16 [ fis16 ] r16 }
-		\tuplet 3/2 { r16 r16 cis16 }
-		\tuplet 3/2 { b16 [ dis16 ] r16 }
+		\tuplet 3/2 { ds16 [ fs16 ] r16 }
+		\tuplet 3/2 { r16 r16 cs16 }
+		\tuplet 3/2 { b16 [ ds16 ] r16 }
 		\tuplet 3/2 { r16 r16 a16 }
 		\tuplet 3/2 { g16 [ b16 ] r16 }
-		\tuplet 3/2 { r16 r16 fis16  } | % 20
+		\tuplet 3/2 { r16 r16 fs16  } | % 20
 		\voiceThree
-		e8 [ e'8 ] \clef "treble" dis''16 r16 dis16 r16 g,16 r16 dis'16 r16 \clef "bass" | % 21
-		c,,8_[ c'8 ] \clef "treble" dis'16 r16 dis16 r16 b16 r16 dis16 r16 \clef "bass" | % 22
-		\oneVoice a,8 [ dis,8 e8 a8 b8 b,8 ] | % 23
+		e8 [ e'8 ] \clef "treble" ds''16 r16 ds16 r16 g,16 r16 ds'16 r16 \clef "bass" | % 21
+		c,,8_[ c'8 ] \clef "treble" ds'16 r16 ds16 r16 b16 r16 ds16 r16 \clef "bass" | % 22
+		\oneVoice a,8 [ ds,8 e8 a8 b8 b,8 ] | % 23
 		\voiceThree
-		s8 \clef "treble" dis''16 r16 b16 r16 b16  r16 fis16 r16 fis16 r16 \clef "bass" | % 24
-		\oneVoice c,8 [ b'8 a8 gis8 a8 c,8 ] | % 25
-		b8 [ a'8 g8 fis8 g8 b,8 ] | % 26
+		s8 \clef "treble" ds''16 r16 b16 r16 b16  r16 fs16 r16 fs16 r16 \clef "bass" | % 24
+		\oneVoice c,8 [ b'8 a8 gs8 a8 c,8 ] | % 25
+		b8 [ a'8 g8 fs8 g8 b,8 ] | % 26
 		\tuplet 3/2 { a16 [ a'16 ] r16 }
 		\tuplet 3/2 { r16 r16 b16  }
 		\tuplet 3/2 { a16 [ c16 ] r16 }
 		\tuplet 3/2 { r16 r16 g16 }
-		\tuplet 3/2 { fis16 [ a16 ] r16 }
+		\tuplet 3/2 { fs16 [ a16 ] r16 }
 		\tuplet 3/2 { r16 r16 e16 } | % 27
 		\tuplet 3/2 { d16 [ d'16 ] r16 }
 		\tuplet 3/2 { r16 r16 e16  }
-		\tuplet 3/2 { d16 [ fis16 ] r16 }
+		\tuplet 3/2 { d16 [ fs16 ] r16 }
 		\tuplet 3/2 { r16 r16 c16 }
 		\tuplet 3/2 { b16 [ d16 ] r16 }
 		\tuplet 3/2 { r16 r16 a16 } | % 28
@@ -367,8 +368,8 @@ bassOne = \relative g {
 		\tuplet 3/2 { r16 r16 b16 }
 		\tuplet 3/2 { a16 [ c16 ] r16 }
 		\tuplet 3/2 { r16 r16 g16  } | % 30
-		fis8 [ \clef "bass" a,8 b8 c8 ] d8 [ d,8 ] | % 31
-		g8_[ g,8 ] \clef "treble" \voiceThree fis'''16 r16 fis16 r16 \clef "bass" s4 \clef "treble" | % 32
+		fs8 [ \clef "bass" a,8 b8 c8 ] d8 [ d,8 ] | % 31
+		g8_[ g,8 ] \clef "treble" \voiceThree fs'''16 r16 fs16 r16 \clef "bass" s4 \clef "treble" | % 32
  } %end repeated section
 }
 
@@ -382,7 +383,7 @@ bassTwo = \relative a {
 		<e' g>16 r16 <e g>16  r16 <e g>16  r16 <e g>16 r16 
 		\clef "bass" | % 2
 		s4 \clef "treble" 
-		<a d>16 r16 <g cis>16  r16 <a d>16  r16 <g cis>16 r16 
+		<a d>16 r16 <g cs>16  r16 <a d>16  r16 <g cs>16 r16 
 		\clef "bass" | % 3 
 		s1*3/4 | % 4
 		s4 \clef "treble" 
@@ -392,7 +393,7 @@ bassTwo = \relative a {
 		<f b>16 r16 <f b>16  r16 <f b>16  r16 <e a>16 r16 
 		\clef "bass" | % 6 
 		s4 \clef "treble" 
-		<e g>16 r16 <e g>16  r16 <e g>16  r16 <d fis>16 r16 
+		<e g>16 r16 <e g>16  r16 <e g>16  r16 <d fs>16 r16 
 		\clef "bass" | % 7
 		s1*3/4 | % 8
 		s1*3/4 | % 9
@@ -411,12 +412,12 @@ bassTwo = \relative a {
 		s1*3/4 | % 19
 		s1*3/4 | % 20
 		s4 \clef "treble" 
-		<fis' a>16 r16 <fis a>16 r16 g,16 r16 <fis' a>16 r16 \clef "bass" | % 21
+		<fs' a>16 r16 <fs a>16 r16 g,16 r16 <fs' a>16 r16 \clef "bass" | % 21
 		s4 \clef "treble" 
-		<fis a>16 r16 <fis a>16 r16 b,16 r16 <fis' a>16 r16 \clef "bass" | % 22
+		<fs a>16 r16 <fs a>16 r16 b,16 r16 <fs' a>16 r16 \clef "bass" | % 22
 		s1*3/4 | % 23
 		e,8\noBeam \clef "treble" 
-		<fis' a>16 r16 <dis fis>16 r16 <dis fis>16 r16 <a dis>16 r16 <a dis>16 r16 \clef "bass" | % 24
+		<fs' a>16 r16 <ds fs>16 r16 <ds fs>16 r16 <a ds>16 r16 <a ds>16 r16 \clef "bass" | % 24
 	 	s1*3/4 | % 25
 		s1*3/4 | % 26
 		s1*3/4 | % 27

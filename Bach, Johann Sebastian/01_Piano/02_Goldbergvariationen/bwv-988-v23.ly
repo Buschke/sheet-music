@@ -1,4 +1,5 @@
 \version "2.24.0"
+\language "english"
 
 \paper {
     top-margin = 8\mm
@@ -68,42 +69,42 @@ bassToTreble = {
 sopranoOne =   \relative g' {
     \repeat volta 2 { %begin repeated section
         \stemNeutral
-     	b8\rest g8 b'16 [ a g fis ] e [ d cis b ] | % 1
-	a16 [ g fis8 ] a'16 [ g fis e ] d [ cis b a ] | % 2
-	g16 [ fis e8 ] g'16 [ fis e d ] cis_[ b a g ] | % 3
-	fis16 [ e d8 ] b'8\rest b16\rest e,32 [ fis32 ] g^[ a b cis d8 ~ ] | % 4
-	\doKneedBm \posBeamC d8 [ b,16 c ] d [ e fis g ] a [ b c d ] | % 5
-	\doKneedBm \posBeamB e8 [ c,16 d ] e [ fis g a ] b [ c d e ] | % 6
-	\doKneedBm \posBeamA fis8 [ d,16 e ] fis [ g a b ] c [ d e fis ] | % 7
-	g8 b,8\rest b16\rest fis'32 [ e d c b a ] g16 b16\rest b8\rest | % 8
-	\stemUp r16 b'16 [ b ] b,16\rest b32\rest g'32_[ fis e d16 ] b16\rest b32\rest c32 [ b a g16 ] b16\rest | % 9
-	r16 a'16 [ a ] b,16\rest b32\rest d32_[ cis b a16 ] b16\rest b32\rest g32 [ fis e d16 ] b'16\rest | % 10
-	r16 g'16 [ g ] b,16\rest b32\rest c!32 [ b a g16 ] b16\rest b32\rest a32 [ g fis e16 ] b'16\rest | % 11
-	r16 g'16 [ g ] b,16\rest b32\rest fis32 [ e d cis16 ] b'16\rest b32\rest d,32 [ cis b a16 ] b'16\rest | % 12
-	\stemNeutral b16\rest a16 [ a' g ] fis [ e d c ] b [ a g fis ] | % 13
-	b16 [ g fis e ] d [ c b a ] g [ b e d ] | % 14
-	cis16 [ b a b ] cis [ d e fis ] g [ a b cis ] | % 15
-	d16 [ cis32 b a g fis e ] d8 b'8\rest b4\rest | % 16
+     	b8\rest g8 b'16 [ a g fs ] e [ d cs b ] | % 1
+	a16 [ g fs8 ] a'16 [ g fs e ] d [ cs b a ] | % 2
+	g16 [ fs e8 ] g'16 [ fs e d ] cs_[ b a g ] | % 3
+	fs16 [ e d8 ] b'8\rest b16\rest e,32 [ fs32 ] g^[ a b cs d8 ~ ] | % 4
+	\doKneedBm \posBeamC d8 [ b,16 c ] d [ e fs g ] a [ b c d ] | % 5
+	\doKneedBm \posBeamB e8 [ c,16 d ] e [ fs g a ] b [ c d e ] | % 6
+	\doKneedBm \posBeamA fs8 [ d,16 e ] fs [ g a b ] c [ d e fs ] | % 7
+	g8 b,8\rest b16\rest fs'32 [ e d c b a ] g16 b16\rest b8\rest | % 8
+	\stemUp r16 b'16 [ b ] b,16\rest b32\rest g'32_[ fs e d16 ] b16\rest b32\rest c32 [ b a g16 ] b16\rest | % 9
+	r16 a'16 [ a ] b,16\rest b32\rest d32_[ cs b a16 ] b16\rest b32\rest g32 [ fs e d16 ] b'16\rest | % 10
+	r16 g'16 [ g ] b,16\rest b32\rest c!32 [ b a g16 ] b16\rest b32\rest a32 [ g fs e16 ] b'16\rest | % 11
+	r16 g'16 [ g ] b,16\rest b32\rest fs32 [ e d cs16 ] b'16\rest b32\rest d,32 [ cs b a16 ] b'16\rest | % 12
+	\stemNeutral b16\rest a16 [ a' g ] fs [ e d c ] b [ a g fs ] | % 13
+	b16 [ g fs e ] d [ c b a ] g [ b e d ] | % 14
+	cs16 [ b a b ] cs [ d e fs ] g [ a b cs ] | % 15
+	d16 [ cs32 b a g fs e ] d8 b'8\rest b4\rest | % 16
 	\pageBreak
 	} %end of repeated section
   
     \repeat volta 2 { %begin repeated section
-		a'8 \prallmordent  b,16\rest g'16 \once \stemUp \grace { g16 } fis8  b,16\rest e16 \once \stemUp \grace { e16 } d8 b16\rest c16  | % 17
-		b8 \prallprall b16\rest a16 \grace a16 g8 b16\rest fis16 \grace fis16 e8 \clef "bass" d,16\rest d'16 | % 18
-		c8 d,16\rest  b'16 \once \stemUp \grace { b16 } a8 d,16\rest g16 \once \stemUp \grace { g16 } fis8 d16\rest e16 | % 19
-		\once \stemUp \grace { e16 } dis8 d16\rest fis16 a8 d,16\rest c'16 b8 \prallprall d,16\rest a'16 | % 20
-		g8 d8\rest \clef "treble" b''16\rest dis16 [ e fis ] g [ gis a b ] | % 21
-		c16 [ a g f ] e [ d c b ] a [ g fis! e ] | % 22
-		dis16_[ \once \stemUp \grace { d'!16 } c b8 ] b32\rest b32 [ cis dis e fis g16 ~ ] g [ fis e \prallprall dis ] | % 23
-		e32^[ c b a b ] r32 r16 r32 fis32 [ e dis e ] s4 s16 s32 | % 24
+		a'8 \prallmordent  b,16\rest g'16 \once \stemUp \grace { g16 } fs8  b,16\rest e16 \once \stemUp \grace { e16 } d8 b16\rest c16  | % 17
+		b8 \prallprall b16\rest a16 \grace a16 g8 b16\rest fs16 \grace fs16 e8 \clef "bass" d,16\rest d'16 | % 18
+		c8 d,16\rest  b'16 \once \stemUp \grace { b16 } a8 d,16\rest g16 \once \stemUp \grace { g16 } fs8 d16\rest e16 | % 19
+		\once \stemUp \grace { e16 } ds8 d16\rest fs16 a8 d,16\rest c'16 b8 \prallprall d,16\rest a'16 | % 20
+		g8 d8\rest \clef "treble" b''16\rest ds16 [ e fs ] g [ gs a b ] | % 21
+		c16 [ a g f ] e [ d c b ] a [ g fs! e ] | % 22
+		ds16_[ \once \stemUp \grace { d'!16 } c b8 ] b32\rest b32 [ cs ds e fs g16 ~ ] g [ fs e \prallprall ds ] | % 23
+		e32^[ c b a b ] r32 r16 r32 fs32 [ e ds e ] s4 s16 s32 | % 24
 		r16 e16 [ f g ] \stemUp a [ b c d ] e8 r8 | % 25
-		r16 d16 [ c b ] a [ g fis e ] d8 r8 \clef "bass" | % 26
+		r16 d16 [ c b ] a [ g fs e ] d8 r8 \clef "bass" | % 26
 		r16 d16 r16 b16 r16 d16 r16 b16 r16 b16 r16 g16 | % 27
 		r16 g16  r16 e16  r16 g16  r16 e16  r16 e16  r16 c16  | % 28
 		r16 c16 r16 a16 r16 c16 r16 e16 r16 g16 r16 b16 | % 29
-		r16 d16 r16 b16 r16 d16 r16 \clef "treble" fis!16 r16 a16 r16 c16 | % 30
-		r16 cis16 [ d e ] fis [ g a b ] c!8 r8 | % 31
-		r16 b16 [ a g ] fis [ e d c ] b8 r8  | % 32
+		r16 d16 r16 b16 r16 d16 r16 \clef "treble" fs!16 r16 a16 r16 c16 | % 30
+		r16 cs16 [ d e ] fs [ g a b ] c!8 r8 | % 31
+		r16 b16 [ a g ] fs [ e d c ] b8 r8  | % 32
     } %end repeated section
 }
 
@@ -137,15 +138,15 @@ sopranoTwo =   \relative b' {
 		s1*3/4 | % 21
 		s1*3/4 | % 22
 		s1*3/4 | % 23
-		s8 s32 a32 [ g fis g ] s4 s8 s16 s32 | % 24
+		s8 s32 a32 [ g fs g ] s4 s8 s16 s32 | % 24
 		r16 c,16 [ d e ] f! [ g a b ] c8 r8 | % 25
-		r16 b16 [ a g ] fis [ e d c ] b8 r8 \clef "bass" | % 26
-		r16 b16  r16 gis16 r16 b16 r16 g16 r16 g16 r16 e16 | % 27
-		r16 e16 r16 cis16 r16 e16 r16 c16 r16 c16 r16 a16 | % 28
-		r16 a16 r16 fis16 r16 a16 r16 c16 r16 e16 r16 g16 | %29
+		r16 b16 [ a g ] fs [ e d c ] b8 r8 \clef "bass" | % 26
+		r16 b16  r16 gs16 r16 b16 r16 g16 r16 g16 r16 e16 | % 27
+		r16 e16 r16 cs16 r16 e16 r16 c16 r16 c16 r16 a16 | % 28
+		r16 a16 r16 fs16 r16 a16 r16 c16 r16 e16 r16 g16 | %29
 		r16 f16 r16 d16 r16 f16 r16 \clef "treble" a16 r16 c16 r16 e16 | % 30
-		r16 a16 [ b cis ] d [ e fis g ] a8 r8 | % 31
-		r16 d,16 [ c b ] a [ g fis e ] d8 r8 | % 32 
+		r16 a16 [ b cs ] d [ e fs g ] a8 r8 | % 31
+		r16 d,16 [ c b ] a [ g fs e ] d8 r8 | % 32 
 
     } %end repeated section
 }
@@ -159,22 +160,22 @@ soprano = << \sopranoOne \\ \sopranoTwo>>
 bassOne = \relative g' {
 	\repeat volta 2 { %begin repeated section
 		\stemNeutral
-		\bassToTreble \doKneedBm \posBeamA g8 [ b'16 a ] g [ fis e d ] cis_[ b a g ] | % 1
-		\doKneedBm \posBeamB fis8 [ a'16 g ] fis [ e d cis ] b^[ a g fis ] | % 2
-		\doKneedBm \posBeamC e8 [ g'16 fis ] e [ d cis b ] a^[ g fis e ] | % 3
-		\stemNeutral d8 \clef "bass" d,16\rest c'32 [ b ] a [ g fis e d8 ] d8\rest d16\rest c16 | % 4
-		b8 d8\rest \clef "treble" b'16 [ c d e ] fis [ g a b ] | % 5
-		c16 [ d e8 ] c,16 [ d e fis ] g [ a b c ] | % 6
-		d16 [ e fis8 ] d,16 [ e fis g ] a [ b c a ] | % 7
-		b32 [ g a b c d e fis ] g16 d16\rest d8\rest d16\rest fis,32 [ e d c b a ] | % 8
+		\bassToTreble \doKneedBm \posBeamA g8 [ b'16 a ] g [ fs e d ] cs_[ b a g ] | % 1
+		\doKneedBm \posBeamB fs8 [ a'16 g ] fs [ e d cs ] b^[ a g fs ] | % 2
+		\doKneedBm \posBeamC e8 [ g'16 fs ] e [ d cs b ] a^[ g fs e ] | % 3
+		\stemNeutral d8 \clef "bass" d,16\rest c'32 [ b ] a [ g fs e d8 ] d8\rest d16\rest c16 | % 4
+		b8 d8\rest \clef "treble" b'16 [ c d e ] fs [ g a b ] | % 5
+		c16 [ d e8 ] c,16 [ d e fs ] g [ a b c ] | % 6
+		d16 [ e fs8 ] d,16 [ e fs g ] a [ b c a ] | % 7
+		b32 [ g a b c d e fs ] g16 d16\rest d8\rest d16\rest fs,32 [ e d c b a ] | % 8
 		g8 b'16\rest a,16 b8 \prallmordent b'16\rest c,16 d8 \prallmordent b'16\rest e,16 | % 9
-		fis8 \prallmordent b16\rest g16 a8 \prallmordent b16\rest b16 cis8 \prallmordent b16\rest d16 | % 10
-		e8 \prallmordent b16\rest fis'16 g8 \prallmordent b,16\rest a'16  b8 b,16\rest d16 | % 11
-		cis8 b16\rest e16 g,8 b16\rest b16 a8 \prallmordent b16\rest g16 | % 12
-		fis8 b16\rest a,16 a' [ g fis e ] d [ c b a ] | % 13
-		g16 [ b d c ] b [ a g fis ]  \clef "bass" e_[ d cis b ] | % 14
-		a16 [ e' g fis ] e_[ d cis b ] a [ g fis e ] | % 15
-		d4_~ d16 [ e32 fis g a b cis ] d8 b8\rest | % 16
+		fs8 \prallmordent b16\rest g16 a8 \prallmordent b16\rest b16 cs8 \prallmordent b16\rest d16 | % 10
+		e8 \prallmordent b16\rest fs'16 g8 \prallmordent b,16\rest a'16  b8 b,16\rest d16 | % 11
+		cs8 b16\rest e16 g,8 b16\rest b16 a8 \prallmordent b16\rest g16 | % 12
+		fs8 b16\rest a,16 a' [ g fs e ] d [ c b a ] | % 13
+		g16 [ b d c ] b [ a g fs ]  \clef "bass" e_[ d cs b ] | % 14
+		a16 [ e' g fs ] e_[ d cs b ] a [ g fs e ] | % 15
+		d4_~ d16 [ e32 fs g a b cs ] d8 b8\rest | % 16
     } %end of repeated section
   
     \repeat volta 2 { %begin repeated section
@@ -183,18 +184,18 @@ bassOne = \relative g' {
 		r16 g16 [ g ] s16 s1*2/4 | % 18
 		r16 a'16 [ a ] s16 s1*2/4  | % 19
 		r16 c'16 [ c ] s16 s1*2/4 | % 20
-		b,16\rest e16_[ d! c ] b [ a g fis ] e [ d c b ] | % 21
-		a8 b'8\rest b16\rest gis,16 [ a b ] c [ cis dis e ] | % 22
-		fis8 \clef "bass" d,16\rest \stemNeutral a'16 g8 [ c8 ] a8 [ b8 ] | % 23
+		b,16\rest e16_[ d! c ] b [ a g fs ] e [ d c b ] | % 21
+		a8 b'8\rest b16\rest gs,16 [ a b ] c [ cs ds e ] | % 22
+		fs8 \clef "bass" d,16\rest \stemNeutral a'16 g8 [ c8 ] a8 [ b8 ] | % 23
 		e,8 r32 s4 c'32 [ b a b ] r32 r16 r32 f32 [ e d ] | % 24
-		c8 d8\rest r16 \stemUp d'16 [ c b ] a [ g  fis  e ]  | % 25
-		\ignoreClash d8 r8 r16 c16 [ d e ] fis [ g a b ] \undo \ignoreClash | % 26
+		c8 d8\rest r16 \stemUp d'16 [ c b ] a [ g  fs  e ]  | % 25
+		\ignoreClash d8 r8 r16 c16 [ d e ] fs [ g a b ] \undo \ignoreClash | % 26
 		c8 [ c c c a a ] | % 27
-		fis8 [ fis fis fis d d ] | % 28
+		fs8 [ fs fs fs d d ] | % 28
 		b8 [ b b d f a ] | % 29
 		c8 [ c c \clef "treble" e g b ] | % 30
-		d16 r16 r8 \clef "bass" r16 e,16 [ d c! ] b [ a g fis ] | % 31
-		g16 [ b, c d ] e [ fis g a ] b8 r8 | % 32
+		d16 r16 r8 \clef "bass" r16 e,16 [ d c! ] b [ a g fs ] | % 31
+		g16 [ b, c d ] e [ fs g a ] b8 r8 | % 32
   
     } %end repeated section
 }
@@ -221,22 +222,22 @@ bassTwo = \relative d, {
     } %end of repeated section
   
     \repeat volta 2 { %begin repeated section
-		r16 d16 [ d ] d'16\rest d32\rest e32 [ fis g a16 ] d,16\rest d32\rest a'32 [ b c32 d16 ] d,16\rest | % 17
-		r16 g,16 [ g ] d'16\rest d32\rest \clef "treble" \stemNeutral d'32 [ e fis g16 ] b16\rest b32\rest fis32 [ g a b16 ] b16\rest | % 18
-		r16 e,16_[ e ] b'16\rest b32\rest b32 [ c d e16 ] b16\rest b32\rest e32 [ fis g a16 ] b,16\rest | % 19
-		r16 a'16 [ a ] b,16\rest b32\rest b'32 [ a g fis16 ] b,16\rest b32\rest g'32 [ fis e dis16 ] b16\rest | % 20
+		r16 d16 [ d ] d'16\rest d32\rest e32 [ fs g a16 ] d,16\rest d32\rest a'32 [ b c32 d16 ] d,16\rest | % 17
+		r16 g,16 [ g ] d'16\rest d32\rest \clef "treble" \stemNeutral d'32 [ e fs g16 ] b16\rest b32\rest fs32 [ g a b16 ] b16\rest | % 18
+		r16 e,16_[ e ] b'16\rest b32\rest b32 [ c d e16 ] b16\rest b32\rest e32 [ fs g a16 ] b,16\rest | % 19
+		r16 a'16 [ a ] b,16\rest b32\rest b'32 [ a g fs16 ] b,16\rest b32\rest g'32 [ fs e ds16 ] b16\rest | % 20
 		s1*3/4 | % 21
 		s1*3/4 | % 22
 		s1*3/4 | % 23
-		s2 s32 a,32 [ g fis g ]  s16 s32 | % 24
-		s8 s8 r16 b16 [ a  g ] fis! [ e  d  c ] | % 25
-		b8 r8 r16 a16_[ b c ] d [ e fis g ] | % 26
-		a8 [ a a a fis fis ] | % 27
+		s2 s32 a,32 [ g fs g ]  s16 s32 | % 24
+		s8 s8 r16 b16 [ a  g ] fs! [ e  d  c ] | % 25
+		b8 r8 r16 a16_[ b c ] d [ e fs g ] | % 26
+		a8 [ a a a fs fs ] | % 27
 		\stemDown d8 [ d d d b b ] | % 28
 		g8 [ g g b d f ] | % 29
 		e8 [ e e g b d ] | % 30
-		fis16 r16 r8 \clef "bass" r16 g,16 [ fis e ] d [ c b a ] | % 31
-		g8 [ a16 b ] c [ d e fis ] g8 r8 | % 32
+		fs16 r16 r8 \clef "bass" r16 g,16 [ fs e ] d [ c b a ] | % 31
+		g8 [ a16 b ] c [ d e fs ] g8 r8 | % 32
 
     } %end repeated section
 }

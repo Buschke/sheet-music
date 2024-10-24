@@ -1,4 +1,5 @@
 \version "2.24.0"
+\language "english"
 
 \paper {
     top-margin = 8\mm
@@ -76,83 +77,83 @@ sopranoOne =   \relative d'' {
     \stemUp
 	\tempoMark #"Andante"
        R1*1/2 | % 1
-        r16 d16 [ d ( e ) ] e ( [ fis ) fis ( g ) ] \noBreak | % 2
-        \adjTieTwo g4 ~ \adjBeamTwo g16 [ a bes c ] | % 3
-        d16 [ a a32 gis a16 ] \adjTieTwo d,4 ~ | % 4
-        d8 [ es16 ( f ) ] es ( [ d ) d ( c ) ] | % 5
-        bes8 d8\rest d8\rest c8 | % 6
-        g'32 [ a fis16 g a ] bes [ c d c ] | % 7
-        \adjBeamCin bes16 [ \grace a16 g16 \adjTieTwo d8 ~ ] \adjBeamQtr d8  [ es ] | % 8
-        d8 r8 f16\rest es16 [ d ( c ) ] | % 9
-        bes16 ( [ c ) c ( d ) ] d ( [ es ) es ( d ) ] | % 10
+        r16 d16 [ d ( e ) ] e ( [ fs ) fs ( g ) ] \noBreak | % 2
+        \adjTieTwo g4 ~ \adjBeamTwo g16 [ a bf c ] | % 3
+        d16 [ a a32 gs a16 ] \adjTieTwo d,4 ~ | % 4
+        d8 [ ef16 ( f ) ] ef ( [ d ) d ( c ) ] | % 5
+        bf8 d8\rest d8\rest c8 | % 6
+        g'32 [ a fs16 g a ] bf [ c d c ] | % 7
+        \adjBeamCin bf16 [ \grace a16 g16 \adjTieTwo d8 ~ ] \adjBeamQtr d8  [ ef ] | % 8
+        d8 r8 f16\rest ef16 [ d ( c ) ] | % 9
+        bf16 ( [ c ) c ( d ) ] d ( [ ef ) ef ( d ) ] | % 10
         d8 r8 r8 a'8 | % 11
-        bes8 [ d,16 \adjTieTwo e ~ ] e [ f8 g16 ] | % 12
-        \stemDown \adjBeamSix a8 [ \stemUp bes, ] c [ a' ] | % 13
+        bf8 [ d,16 \adjTieTwo e ~ ] e [ f8 g16 ] | % 12
+        \stemDown \adjBeamSix a8 [ \stemUp bf, ] c [ a' ] | % 13
         r8 g32 [ a g16 ~ ] g [ g8 g16 ~ ] | % 14
-        g16 [ f32 g32 a16 bes ] a [ f cis8 ] | % 15
-        r8 g'8 ~ g16 [ fis32 e fis8 ] | % 16 
+        g16 [ f32 g32 a16 bf ] a [ f cs8 ] | % 15
+        r8 g'8 ~ g16 [ fs32 e fs8 ] | % 16 
 	
     } %end of repeated section
   
     \repeat volta 2 { %begin repeated section
         R1*1/2 | % 17
-        d8\rest es8 [ d  c ] | % 18
-        g'16 [ g,8 as16 ~ ] as  [ bes8 c16 ] | % 19
-        bes8 [ f' ] g [ d ] | % 20
-        es16 [ d c8 ] e'16\rest bes,8 [ c16 ] | % 21
-        d16 [ bes f d ] es [ f g as ] | % 22
-        \adjTieCin bes2 ~ | % 23
-        bes16 [ c32 d es d c16 ] d [ es32 f es f g16 ] | % 24
+        d8\rest ef8 [ d  c ] | % 18
+        g'16 [ g,8 af16 ~ ] af  [ bf8 c16 ] | % 19
+        bf8 [ f' ] g [ d ] | % 20
+        ef16 [ d c8 ] e'16\rest bf,8 [ c16 ] | % 21
+        d16 [ bf f d ] ef [ f g af ] | % 22
+        \adjTieCin bf2 ~ | % 23
+        bf16 [ c32 d ef d c16 ] d [ ef32 f ef f g16 ] | % 24
         f8 r8 r4 | % 25
-        r16 c16 [ c ( d ) ] es [ e g, e' ] | % 26
-        fis4 ~ fis16 [ g a bes ] | % 27
-        c16 [ bes a g ] fis [ g fis8 ~ ] | % 28
-        fis16 [ a g8 ] f8\rest c8 | % 29
-        g8. [ a16 ] bes [ c d e ] | % 30
-        fis16 [ g a fis ] \stemNeutral g [ fis e32 d c'16 ~ ] | % 31
-        c16 [ fis, g a ] bes [ c d8 ] | % 32
+        r16 c16 [ c ( d ) ] ef [ e g, e' ] | % 26
+        fs4 ~ fs16 [ g a bf ] | % 27
+        c16 [ bf a g ] fs [ g fs8 ~ ] | % 28
+        fs16 [ a g8 ] f8\rest c8 | % 29
+        g8. [ a16 ] bf [ c d e ] | % 30
+        fs16 [ g a fs ] \stemNeutral g [ fs e32 d c'16 ~ ] | % 31
+        c16 [ fs, g a ] bf [ c d8 ] | % 32
     } %end repeated section
 }
 
 sopranoTwo =   \relative g' {
     \repeat volta 2 { %begin repeated section
     \stemDown
-        b16\rest g16 [ g ( f ) ] f ( [ es ) es ( d ) ] | % 1
-        d4 ( \adjBeamOne  d16 ) [ \stemUp \staffDown c bes a ] | % 2
-        g16 [ cis cis32 d cis16 ] \stemDown \staffUp g'4 ( | % 3
-        g8 ) [ fis16 e ] fis [( g) g( a ]) | % 4
-        bes8 r8 r8 a8 | % 5
-        d,32 [ c es16 d c ] \staffDown \stemUp bes [ a g a ] | % 6
-        bes16 [ d \staffUp \stemDown \adjTieTre g8 ~ ] g [ \allowScriptInStaff fis ^\prallprall ] | % 7
-        g8 r8 r16 fis16 [ g a ] | % 8
-        bes16 ( [ a ) a ( g ) ] g ( [ fis ) fis ( g ) ] | % 9
+        b16\rest g16 [ g ( f ) ] f ( [ ef ) ef ( d ) ] | % 1
+        d4 ( \adjBeamOne  d16 ) [ \stemUp \staffDown c bf a ] | % 2
+        g16 [ cs cs32 d cs16 ] \stemDown \staffUp g'4 ( | % 3
+        g8 ) [ fs16 e ] fs [( g) g( a ]) | % 4
+        bf8 r8 r8 a8 | % 5
+        d,32 [ c ef16 d c ] \staffDown \stemUp bf [ a g a ] | % 6
+        bf16 [ d \staffUp \stemDown \adjTieTre g8 ~ ] g [ \allowScriptInStaff fs ^\prallprall ] | % 7
+        g8 r8 r16 fs16 [ g a ] | % 8
+        bf16 ( [ a ) a ( g ) ] g ( [ fs ) fs ( g ) ] | % 9
         g8 r8 r8 c,8 | % 10
-        bes8 [ g'16 \adjTieOne f ~ 
+        bf8 [ g'16 \adjTieOne f ~ 
 		] f [ e8 d16 ] | % 11
-        cis8 [ bes' ] a [ cis, ] | % 12
-        g'8\rest d32 [ cis d16 ~ ] d [ d8 d16 ] ~ | % 13
-        d16 [ e32 d cis16 b ] cis [ e a8 ] | % 14
+        cs8 [ bf' ] a [ cs, ] | % 12
+        g'8\rest d32 [ cs d16 ~ ] d [ d8 d16 ] ~ | % 13
+        d16 [ e32 d cs16 b ] cs [ e a8 ] | % 14
         r8 d, ~ d16 [ e32 f e d e16 ] | % 15
         \stemUp d4 g4\rest  | % 16
 	
     } %end of repeated section
   
     \repeat volta 2 { %begin repeated section
-        g8\rest fis8_[ g a ] | % 17
-        \stemDown d,16 [ d'8 c16 ~ ] c [ bes8 a16 ] | % 18
-        bes8 [ es, ] d [ g ] | % 19
-        f16 [ g as8 ] b16\rest bes8 [ as16 ] | % 20
-        g16 [ bes es g ] f [ es d c ] | % 21
-        \adjTieQtr bes2 ~ | % 22
-        bes16 [ as32 g f g as16 ] g [ f32 es f es d16 ] | % 23
-        es8 r8 r4 | % 24
-        r16 as16 [ as ( g ) ] fis [ f d' f, ] | % 25
-        es4 ~ \adjBeamOct es16 [ d \staffDown \stemUp c bes ] | % 26
-        \adjBeamNov a16 [ bes \staffUp \stemDown c d ] es [ d es8 ~ ] | % 27
-        es16 [ c d8 ] g8\rest a8 | % 28
-        d8. [ c16 ] bes [ a g f ] | % 29
-        es16 [ d c es ] \adjBeamOnc d [ e fis32 g \staffDown \stemUp a,16^~ ] | % 30
-        \adjBeamNov a16 [ \staffUp \stemDown es'! d \staffDown \stemUp c ] bes [ a g fis ] | % 31
+        g8\rest fs8_[ g a ] | % 17
+        \stemDown d,16 [ d'8 c16 ~ ] c [ bf8 a16 ] | % 18
+        bf8 [ ef, ] d [ g ] | % 19
+        f16 [ g af8 ] b16\rest bf8 [ af16 ] | % 20
+        g16 [ bf ef g ] f [ ef d c ] | % 21
+        \adjTieQtr bf2 ~ | % 22
+        bf16 [ af32 g f g af16 ] g [ f32 ef f ef d16 ] | % 23
+        ef8 r8 r4 | % 24
+        r16 af16 [ af ( g ) ] fs [ f d' f, ] | % 25
+        ef4 ~ \adjBeamOct ef16 [ d \staffDown \stemUp c bf ] | % 26
+        \adjBeamNov a16 [ bf \staffUp \stemDown c d ] ef [ d ef8 ~ ] | % 27
+        ef16 [ c d8 ] g8\rest a8 | % 28
+        d8. [ c16 ] bf [ a g f ] | % 29
+        ef16 [ d c ef ] \adjBeamOnc d [ e fs32 g \staffDown \stemUp a,16^~ ] | % 30
+        \adjBeamNov a16 [ \staffUp \stemDown ef'! d \staffDown \stemUp c ] bf [ a g fs ] | % 31
         g4 a4\rest | % 32
     } %end repeated section
 }
@@ -168,40 +169,40 @@ soprano = << \sopranoOne \\ \sopranoTwo>>
 bass =   \relative g {
     \repeat volta 2 { %begin repeated section
        g8 [ g, ] r8 \adjTieTwo g' ~ | % 1
-        g16 [ fis32 e fis8 ] r8 d8 | % 2
-        es8 [ e ] r8 es'! | % 3
-        d16 [ cis d8 ] r16 c16 [ bes a ] | % 4
-        g32 ( [ fis g16 ) c, g' ] c ( [ fis, ) fis ( g ) ] | % 5
-        g16 [ fis g a ] d,8 [ es ] | % 6
-        bes8 [ bes'16 c ] d8 [ d ] | % 7
-        g,8^[ bes,32 c d bes ] g8 r8 | % 8
-        r16 fis'16 [ g a ] bes8 [ a ] | % 9
-        g16 [ fis8 e16 ] fis32 [ a g8 fis16 ] | % 10
-        \adjBeamTen g16 [ a bes a ] g32 [ a g16 f32 g f16 ] | % 11
-        e16 [ f g e ] cis_[ d e cis ] | % 12
-        f32 [ e d16 ] g4 fis8 | % 13
-        bes8 [ e, ] a [ cis, ] | % 14
+        g16 [ fs32 e fs8 ] r8 d8 | % 2
+        ef8 [ e ] r8 ef'! | % 3
+        d16 [ cs d8 ] r16 c16 [ bf a ] | % 4
+        g32 ( [ fs g16 ) c, g' ] c ( [ fs, ) fs ( g ) ] | % 5
+        g16 [ fs g a ] d,8 [ ef ] | % 6
+        bf8 [ bf'16 c ] d8 [ d ] | % 7
+        g,8^[ bf,32 c d bf ] g8 r8 | % 8
+        r16 fs'16 [ g a ] bf8 [ a ] | % 9
+        g16 [ fs8 e16 ] fs32 [ a g8 fs16 ] | % 10
+        \adjBeamTen g16 [ a bf a ] g32 [ a g16 f32 g f16 ] | % 11
+        e16 [ f g e ] cs_[ d e cs ] | % 12
+        f32 [ e d16 ] g4 fs8 | % 13
+        bf8 [ e, ] a [ cs, ] | % 14
         d8 [ f16 e ] f8 [ a ] | % 15
-        \stemDown \staffUp \adjBeamSev d16 [ \staffDown c32 bes a g a16 ] d,4 | % 16
+        \stemDown \staffUp \adjBeamSev d16 [ \staffDown c32 bf a g a16 ] d,4 | % 16
     } %end of repeated section
   
     \repeat volta 2 { %begin repeated section
-       \adjSlurOne d16 [ ( es' ) es ( d ) ] d [ ( c)  c ( bes ) ] | % 17
-        bes16 [ ( fis ) fis ( g ) ] g [ ( d ) \adjTieOne d8_~ ] | % 18
-        d16^[ c32 bes c16 f, ] f'^[ bes, es8_~ ] | % 19
-        \stemUp es16 [ d32 c d c bes16 ] es [ g, as bes ] | % 20
-        c,16 [ g' c bes ] as [ g \adjTieOne as8_~ ] \stemNeutral | % 21
-        as16 [ as' bes as ] g [ f es f ] | % 22
-        g16 [ as bes8 ] bes,8. [ as'16 ] | % 23
-        g16 ( [ f ) f ( es ) ] f ( [ g ) \adjSlurOne g ( as ) ] | % 24
+       \adjSlurOne d16 [ ( ef' ) ef ( d ) ] d [ ( c)  c ( bf ) ] | % 17
+        bf16 [ ( fs ) fs ( g ) ] g [ ( d ) \adjTieOne d8_~ ] | % 18
+        d16^[ c32 bf c16 f, ] f'^[ bf, ef8_~ ] | % 19
+        \stemUp ef16 [ d32 c d c bf16 ] ef [ g, af bf ] | % 20
+        c,16 [ g' c bf ] af [ g \adjTieOne af8_~ ] \stemNeutral | % 21
+        af16 [ af' bf af ] g [ f ef f ] | % 22
+        g16 [ af bf8 ] bf,8. [ af'16 ] | % 23
+        g16 ( [ f ) f ( ef ) ] f ( [ g ) \adjSlurOne g ( af ) ] | % 24
         c,8 [ b ] r16 a16 [ b g ] | % 25
         c8 [ c' ] r8 \stemDown c,8_~ | % 26
-        c16 [ \staffUp \shiftOn d' es \staffDown bes ] a [ bes c g ] | % 27
-        g8 [ ( fis16)  g ] a [ bes32 c d es c16 ] | % 28
-        bes32 [ d c16 bes32 c a16 ] g32 [ a f16 es32 f d16 ] | % 29
-        c16 [ es32 d es16 fis, ] \stemUp g8 \stemDown  r16 c16  | % 30
-        d8 r16 es16 c8 [ d ] | % 31
-        g16 [ d32 c bes c a16 ] g4 | % 32 
+        c16 [ \staffUp \shiftOn d' ef \staffDown bf ] a [ bf c g ] | % 27
+        g8 [ ( fs16)  g ] a [ bf32 c d ef c16 ] | % 28
+        bf32 [ d c16 bf32 c a16 ] g32 [ a f16 ef32 f d16 ] | % 29
+        c16 [ ef32 d ef16 fs, ] \stemUp g8 \stemDown  r16 c16  | % 30
+        d8 r16 ef16 c8 [ d ] | % 31
+        g16 [ d32 c bf c a16 ] g4 | % 32 
     } %end repeated section
 }
 
@@ -211,8 +212,8 @@ bass =   \relative g {
 \score {
     \context PianoStaff <<
         \set PianoStaff.midiInstrument = "harpsichord"
-        \context Staff = "upper" { \clef "treble" \key bes \major \time 2/4 \soprano  }
-        \context Staff = "lower"  { \clef "bass" \key bes \major \time 2/4 \bass }
+        \context Staff = "upper" { \clef "treble" \key bf \major \time 2/4 \soprano  }
+        \context Staff = "lower"  { \clef "bass" \key bf \major \time 2/4 \bass }
     >>
     \layout{  }
     \midi { \tempo 8 = 66 }

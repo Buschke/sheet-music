@@ -1,4 +1,5 @@
 \version "2.24.0"
+\language "english"
 
 \paper {
     markup-system-spacing.basic-distance = #12
@@ -58,31 +59,31 @@ sopranoOne =   \relative c'' {
         d1\rest | % 7
         d1\rest | % 8
      \noIndentRests
-        g2 ^\mordent g4. ^\prallprall fis16 [ g ] | % 9
-        a4 fis d fis | % 10
+        g2 ^\mordent g4. ^\prallprall fs16 [ g ] | % 9
+        a4 fs d fs | % 10
         b,4 e e, d' | % 11
-        cis4 ^\prall b8 [ cis ] a [ b cis a ]| % 12
+        cs4 ^\prall b8 [ cs ] a [ b cs a ]| % 12
         d4 d, d'2 ~ | % 13
         d4 d, d'2 ~| % 14
-        d2 cis | % 15
+        d2 cs | % 15
         d1 | % 16
 	
     } %end of repeated section
   
     \repeat volta 2 { %begin repeated section
-        fis2 ^\downmordent fis4. ^\prallprall e16 [ fis ] | % 17
+        fs2 ^\downmordent fs4. ^\prallprall e16 [ fs ] | % 17
         g4 d b d | % 18
         c4 f f, e' | % 19
-        dis4 ^\prall cis8 [ dis ] b [ cis dis b ] | % 20
+        ds4 ^\prall cs8 [ ds ] b [ cs ds b ] | % 20
         e4 e, e'2 ~ | % 21
         e4 e, e'2 ~ | % 22
-        e2 dis | % 23
-        e2 ~ e8 [ d cis b ] | % 24
+        e2 ds | % 23
+        e2 ~ e8 [ d cs b ] | % 24
         a4 g'2 f8 [ e ] | % 25
         f2. e8 [ d ]|  % 26
-        e2. fis!8 [ g ] | % 27
-        a8 [ b g a ] fis4 a ~ | % 28
-        a4 g8 [ fis ] g4 b, ~ | % 29
+        e2. fs!8 [ g ] | % 27
+        a8 [ b g a ] fs4 a ~ | % 28
+        a4 g8 [ fs ] g4 b, ~ | % 29
         b4 a8 [ b ] c2 ~ | % 30
         c4 b a2 | % 31
         g1  % 32
@@ -109,7 +110,7 @@ sopranoTwo =   \relative c'' {
         a'2 a4. _\prallprall g16 [ a ] | % 13
         b4 g e g | % 14
         e4 a \staffLower \stemDown a, \staffUpper g' | % 15
-        fis4 _\prall e8 [ fis ] d2 | % 16
+        fs4 _\prall e8 [ fs ] d2 | % 16
 	
     } %end of repeated section
   
@@ -121,16 +122,16 @@ sopranoTwo =   \relative c'' {
         r1 | % 20
         \noIndentRests
         b'2 b4. _\prallprall a16 [ b ]| % 21
-        c4 a fis a | % 22
-        fis4 b b, a'| % 23
-        g4_\prall fis8 [ g ] e2 ~| % 24
+        c4 a fs a | % 22
+        fs4 b b, a'| % 23
+        g4_\prall fs8 [ g ] e2 ~| % 24
         e4 r4 a2 ~| % 25
         a4 d b g | % 26
         g4 c8 [ b ] c2 (| % 27
         c2. ) c4| % 28
         \ignoreClashNote b2 a4\rest g4| % 29
         <e>2. a8 [ g ] | % 30
-        fis4 g ~ g fis | % 31
+        fs4 g ~ g fs | % 31
         g8 [ d c d ] b2| % 32
     } %end repeated section
 }
@@ -165,11 +166,11 @@ bassOne =   \relative d' {
         b8 [ a ] b4 e2 ~ | % 9
         e4 a, d2 ~ | % 10
         d4 b \staffUpper e2_~ | % 11
-        e4 \staffLower d cis \staffUpper e | % 12
-        \staffLower a,8 [ b a g ] fis2 | % 13
+        e4 \staffLower d cs \staffUpper e | % 12
+        \staffLower a,8 [ b a g ] fs2 | % 13
         g2 r2 | % 14
         r4 e4 \stemUp a2 ~ | % 15
-        a8 [ a g a ] fis2 | % 16	
+        a8 [ a g a ] fs2 | % 16	
     } %end of repeated section
   
     \repeat volta 2 { %begin repeated section
@@ -199,37 +200,37 @@ bassOne =   \relative d' {
 bassTwo =   \relative c'' {
     \repeat volta 2 { %begin repeated section
     \stemDown
-        g,2^\mordent g4. ^\prallprall fis16 [ g ] | % 1
-        a4 fis4 d fis | % 2
+        g,2^\mordent g4. ^\prallprall fs16 [ g ] | % 1
+        a4 fs4 d fs | % 2
         e4 a a, g' | % 3
-        fis4 ^\prall e8 [ fis ] d [ e c d ] | % 4
-        b8 [ d e fis ] g4 b, | % 5
+        fs4 ^\prall e8 [ fs ] d [ e c d ] | % 4
+        b8 [ d e fs ] g4 b, | % 5
         c2 r4 a4 | % 6
-        fis2 r4 d4 | % 7
+        fs2 r4 d4 | % 7
         g4 d' b d | % 8
         g2 r4 e4 | % 9
-        fis2 r4 d4 | % 10
+        fs2 r4 d4 | % 10
         g2 r4 e4 | % 11
         a2 r4 g4 | % 12
-        fis2 r4 d4 | % 13
+        fs2 r4 d4 | % 13
         g,4 b g e | % 14
         a2 r4 a4 | % 15
         d1 	| % 16
     } %end of repeated section
   
     \repeat volta 2 { %begin repeated section
-        d8 [ e fis g ] a4 c, | % 17
-        b8 [ d e fis ] g [ a ] b4 ^~ | % 18
-        b4 a8 [ gis8 ] a2 ^~ | % 19
-        a4 fis b a | % 20
-        g8 [ a b a ] g [ fis g e ] | % 21
-        a8 [ b c b ] a [ g a fis ] | % 22
+        d8 [ e fs g ] a4 c, | % 17
+        b8 [ d e fs ] g [ a ] b4 ^~ | % 18
+        b4 a8 [ gs8 ] a2 ^~ | % 19
+        a4 fs b a | % 20
+        g8 [ a b a ] g [ fs g e ] | % 21
+        a8 [ b c b ] a [ g a fs ] | % 22
         b8 [ a g a ] b [ a b b, ] | % 23
-        e8 ^[ b a b ] g ^[ fis g e ] | % 24
-        \stemUp cis'2 cis4.^\prallprall b16 [ cis ] | % 25
+        e8 ^[ b a b ] g ^[ fs g e ] | % 24
+        \stemUp cs'2 cs4.^\prallprall b16 [ cs ] | % 25
         d4 b g b | % 26
         c4 e a, \stemDown g' | % 27
-        fis4 e8 [ fis ] d [ e fis d ] | % 28
+        fs4 e8 [ fs ] d [ e fs d ] | % 28
         g4 a b g | % 29
         c,2 r4 a'4 | % 30
         d,2 r4 d4 | % 31

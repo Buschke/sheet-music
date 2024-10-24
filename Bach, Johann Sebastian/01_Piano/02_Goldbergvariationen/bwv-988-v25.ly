@@ -1,4 +1,5 @@
 \version "2.24.0"
+\language "english"
 
 \paper {
 	top-system-spacing.basic-distance = #0.0
@@ -34,52 +35,52 @@
 
 soprano = \relative d'' {
 	\repeat volta 2 { %begin repeated section
-		r16 d16 [ \grace es16 d32 cis d16 ] \once \override Slur.direction = #UP \appoggiatura d16 bes'8 ~ [ bes32 a g f ] es16 [ d8 cis!16 ~ ] | % 1
-		cis16 [ c \grace d!16 c32 b c16 ]  \appoggiatura  f16 as8 ~ [ as32 g f es ] des16 [ c8 b!16 ~ ] | % 2
-		b16 [ bes  \appoggiatura  c16 bes32 a bes16 ] fis' [ g8 cis,16 ~ ] cis [ d8 g,16 ] | % 3
-		g16 [ a32 bes a8 ] r4 r4 | % 4
-		r16 d,16 [ \grace ees16 d32 cis d16 ] d'8 ~ [ d32 c! bes a ] g [ f as16 ~ as32 d, f16 ~ ] | % 5
-		f16 [ es  \appoggiatura  f16 es32 d es16 ] es'8 ~ [ es32 d c bes ] a32 [ g bes16 ~ bes32 e,32 g16 ~] | % 6
-		g16 [ fis \grace g16 fis32 e fis16 ] 
-		\tuplet 3/2 { b16 [ c es! ] } 
-		\tuplet 3/2 { cis16  [d fis,! ] } 
-		\tuplet 3/2 { bes16 [ a d,] } 
-		\tuplet 3/2 { es16 [ b c ~ ] } | % 7
-		c16 [ bes!32 a bes8 ] r4 r4 | % 8
-		r32 d32 [ e fis g bes a16 ~ ] a16 [ bes8 b16 ] c16 [ cis8 d16 ] | % 9
-		dis16 [ e ~ e32 bes' a g ] fis [ e d8 d16 ] d' [ cis8 c16 ] | % 10
-		b16 [ bes ~ bes32 a gis16 ~ ] gis [ a ~ a32 d, c bes ] c [ a bes g! f e f d' ] | % 11
-		f,32 \prallprall [ e f16 e8 ] r32 d32 [ cis d e f g a ] bes [ a d16 ~ d32 cis e16 ~ ] | % 12
-		e16 [ a, \grace bes16 a32 gis a16 ] \once \override Slur.direction = #UP  \appoggiatura a16 a'8 ~ [ a32 bes (a gis ) ] a-. [ d, c bes c-. c (bes a ) ] | % 13
-		a16 [ bes \grace c16 bes32 a bes16 ] bes'8 ~ [ bes32 es,! d cis ] d [ c'! b8 d,16 ] | % 14
-		cis16 [ bes!8 a16 ] es'!16 [ d ~ d32 cis! e g ] bes16 [ a ~ a64 g f e d32 cis ] | % 15 
+		r16 d16 [ \grace ef16 d32 cs d16 ] \once \override Slur.direction = #UP \appoggiatura d16 bf'8 ~ [ bf32 a g f ] ef16 [ d8 cs!16 ~ ] | % 1
+		cs16 [ c \grace d!16 c32 b c16 ]  \appoggiatura  f16 af8 ~ [ af32 g f ef ] df16 [ c8 b!16 ~ ] | % 2
+		b16 [ bf  \appoggiatura  c16 bf32 a bf16 ] fs' [ g8 cs,16 ~ ] cs [ d8 g,16 ] | % 3
+		g16 [ a32 bf a8 ] r4 r4 | % 4
+		r16 d,16 [ \grace ef16 d32 cs d16 ] d'8 ~ [ d32 c! bf a ] g [ f af16 ~ af32 d, f16 ~ ] | % 5
+		f16 [ ef  \appoggiatura  f16 ef32 d ef16 ] ef'8 ~ [ ef32 d c bf ] a32 [ g bf16 ~ bf32 e,32 g16 ~] | % 6
+		g16 [ fs \grace g16 fs32 e fs16 ] 
+		\tuplet 3/2 { b16 [ c ef! ] } 
+		\tuplet 3/2 { cs16  [d fs,! ] } 
+		\tuplet 3/2 { bf16 [ a d,] } 
+		\tuplet 3/2 { ef16 [ b c ~ ] } | % 7
+		c16 [ bf!32 a bf8 ] r4 r4 | % 8
+		r32 d32 [ e fs g bf a16 ~ ] a16 [ bf8 b16 ] c16 [ cs8 d16 ] | % 9
+		ds16 [ e ~ e32 bf' a g ] fs [ e d8 d16 ] d' [ cs8 c16 ] | % 10
+		b16 [ bf ~ bf32 a gs16 ~ ] gs [ a ~ a32 d, c bf ] c [ a bf g! f e f d' ] | % 11
+		f,32 \prallprall [ e f16 e8 ] r32 d32 [ cs d e f g a ] bf [ a d16 ~ d32 cs e16 ~ ] | % 12
+		e16 [ a, \grace bf16 a32 gs a16 ] \once \override Slur.direction = #UP  \appoggiatura a16 a'8 ~ [ a32 bf (a gs ) ] a-. [ d, c bf c-. c (bf a ) ] | % 13
+		a16 [ bf \grace c16 bf32 a bf16 ] bf'8 ~ [ bf32 ef,! d cs ] d [ c'! b8 d,16 ] | % 14
+		cs16 [ bf!8 a16 ] ef'!16 [ d ~ d32 cs! e g ] bf16 [ a ~ a64 g f e d32 cs ] | % 15 
 	} %end of repeated section
 	
 	\alternative {
-		{cis8\( [ d\) ] r4 r4 }
-		{cis8\( [ d\) ] r4 r4 }
+		{cs8\( [ d\) ] r4 r4 }
+		{cs8\( [ d\) ] r4 r4 }
 	}
 
  	\repeat volta 2 { %begin repeated section
-		r16 a'16 [ \appoggiatura  bes16  a32 gis a16 ] es! [ d ~ d32 e fis g ] a [ c, es8 d16 ~ ] | % 17
-		d16 [ f  \appoggiatura g16 f32 es f16 ] as, [ g ~ g32 a b c ] d [ f, as8 g16 ~ ] | % 18
-		g16 [ c8 b16 ] c32 [ es des8 c16 ~ ] c32 [ f es16 ~ es32 f es d ] | % 19
-		es32 [ a! ( bes16 es, d ) ] r4 r4 | % 20
-		r16 bes16 [ \appoggiatura ces16 bes32 as bes16 ] bes [ bes' ~ bes32 ces bes as ] bes16 [ des, ~ des32 ces bes16 ~ ] | % 21
-		bes16 [ ces  \appoggiatura des16 ces32 bes ces16 ] ces [ ces' ~ ces32 fes, es d] es [ des' c8 es,16 ] | % 22
-		d!16 [ ces8 bes16 ] fes' [ es ~ es32 d f as ] ces16 [ bes ~ bes64 as64 ges64 f64 es32 d ] | % 23
-		d8\( [ es8\) ] r4 r4 | % 24
-		r16 g,16 [ \appoggiatura as16 g32 fis g16 ] \once \override Slur.direction = #UP \appoggiatura g16 es'8 ~ [ es32 d c bes ] as!16 [ g8 fis!16 ] ~ | % 25
-		fis16 [ f \grace g16 f32 e f16 ] des'8 ~ [ des32 c bes as ] ges16 [ f8 e!16 ~ ] | % 26
-		e16 [ es  \appoggiatura f16 es32 d es16 ] c'8 ~ [ c32 bes as g ] fis16 [ es' ~ es32 d cis16 ] | % 27
-		cis16 [ (d) es, (d) ] r32 e32 [ fis g a bes c d ] es! [ d g16 ~ g32 fis a16 ~ ] | % 28
-		a16 [ d,  \appoggiatura es16 d32 cis d16 ] d'8 ~ [ d32 c! bes a ] g [ d' f,16 ~ f32 es d c ] | % 29
-		d32 [ as' g f es d c b ] c [ f es d c bes a! g ] a [ d c bes a g fis e ] | % 30
-		fis32 [ bes a g fis e d cis ] d [ g fis e d c bes a ] bes [ es d c bes a g fis ] | % 31	
+		r16 a'16 [ \appoggiatura  bf16  a32 gs a16 ] ef! [ d ~ d32 e fs g ] a [ c, ef8 d16 ~ ] | % 17
+		d16 [ f  \appoggiatura g16 f32 ef f16 ] af, [ g ~ g32 a b c ] d [ f, af8 g16 ~ ] | % 18
+		g16 [ c8 b16 ] c32 [ ef df8 c16 ~ ] c32 [ f ef16 ~ ef32 f ef d ] | % 19
+		ef32 [ a! ( bf16 ef, d ) ] r4 r4 | % 20
+		r16 bf16 [ \appoggiatura cf16 bf32 af bf16 ] bf [ bf' ~ bf32 cf bf af ] bf16 [ df, ~ df32 cf bf16 ~ ] | % 21
+		bf16 [ cf  \appoggiatura df16 cf32 bf cf16 ] cf [ cf' ~ cf32 ff, ef d] ef [ df' c8 ef,16 ] | % 22
+		d!16 [ cf8 bf16 ] ff' [ ef ~ ef32 d f af ] cf16 [ bf ~ bf64 af64 gf64 f64 ef32 d ] | % 23
+		d8\( [ ef8\) ] r4 r4 | % 24
+		r16 g,16 [ \appoggiatura af16 g32 fs g16 ] \once \override Slur.direction = #UP \appoggiatura g16 ef'8 ~ [ ef32 d c bf ] af!16 [ g8 fs!16 ] ~ | % 25
+		fs16 [ f \grace g16 f32 e f16 ] df'8 ~ [ df32 c bf af ] gf16 [ f8 e!16 ~ ] | % 26
+		e16 [ ef  \appoggiatura f16 ef32 d ef16 ] c'8 ~ [ c32 bf af g ] fs16 [ ef' ~ ef32 d cs16 ] | % 27
+		cs16 [ (d) ef, (d) ] r32 e32 [ fs g a bf c d ] ef! [ d g16 ~ g32 fs a16 ~ ] | % 28
+		a16 [ d,  \appoggiatura ef16 d32 cs d16 ] d'8 ~ [ d32 c! bf a ] g [ d' f,16 ~ f32 ef d c ] | % 29
+		d32 [ af' g f ef d c b ] c [ f ef d c bf a! g ] a [ d c bf a g fs e ] | % 30
+		fs32 [ bf a g fs e d cs ] d [ g fs e d c bf a ] bf [ ef d c bf a g fs ] | % 31	
 	} %end repeated section
 
 	\alternative {
-		{ \grace fis16  g4 r4 r4 |} % 32 % \grace fis16
+		{ \grace fs16  g4 r4 r4 |} % 32 % \grace fis16
 		{ g4 r4 r4 \bar "|." |}% 32 
 	}
 }
@@ -91,49 +92,49 @@ soprano = \relative d'' {
 bassOne = \relative c' {
 	\repeat volta 2 { %begin repeated section
 		\stemUp
-		bes4 r8 d8 [ c! bes ] | % 1
-		a4 r8 c8 [ bes! as ] | % 2
-		g4 r8 bes8 [ a g ~ ] | % 3
-		g8 [ fis16 e ] fis [ a8 c16 ~ ] c [ fis,8 a16 ~ ] | % 4
-		a16 [ fis g8 ] r8 g8 d16 [ f g as ] | % 5
-		as8 [ g ] r8 a e16 [ g a bes ] | % 6
-		bes8 [ a ] r8 a [ g fis ~ ] | % 7
-		fis8 [ g16 fis ] g [ d8 es16 ~ ] es32 [ d g16 ~ g32 fis! c'16  ~ ] | % 8
-		c16 [ bes32 a bes8 ] r8 g' [ g g ] | %9
-		g8 [ fis ] r8 f [ f f ] | % 10
-		f8 [ e ] r8 es [ es d ] | % 11
-		d8 [ cis ] r4 r4 | % 12
-		r8 d8 [ d es ] es4 | % 13
+		bf4 r8 d8 [ c! bf ] | % 1
+		a4 r8 c8 [ bf! af ] | % 2
+		g4 r8 bf8 [ a g ~ ] | % 3
+		g8 [ fs16 e ] fs [ a8 c16 ~ ] c [ fs,8 a16 ~ ] | % 4
+		a16 [ fs g8 ] r8 g8 d16 [ f g af ] | % 5
+		af8 [ g ] r8 a e16 [ g a bf ] | % 6
+		bf8 [ a ] r8 a [ g fs ~ ] | % 7
+		fs8 [ g16 fs ] g [ d8 ef16 ~ ] ef32 [ d g16 ~ g32 fs! c'16  ~ ] | % 8
+		c16 [ bf32 a bf8 ] r8 g' [ g g ] | %9
+		g8 [ fs ] r8 f [ f f ] | % 10
+		f8 [ e ] r8 ef [ ef d ] | % 11
+		d8 [ cs ] r4 r4 | % 12
+		r8 d8 [ d ef ] ef4 | % 13
 		r8 e8 [ e f ] f4 | % 14
-		r8 fis8 [ fis g ] g4 ~ | % 15
+		r8 fs8 [ fs g ] g4 ~ | % 15
 	} %end of repeated section
 
 	\alternative { 
-		{ g8 [ fis16 e ] fis4 fis4\rest }
-		{ g8 [ fis16 e ] fis4 r4 }
+		{ g8 [ fs16 e ] fs4 fs4\rest }
+		{ g8 [ fs16 e ] fs4 r4 }
 	}
  
 	\repeat volta 2 { %begin repeated section
-		r8 f8 [ f fis fis g ] | % 17
-		g8 [ d ] r8 f8 [ f es ] | % 18
-		es8 [ d es e f ges ~] | % 19
-		ges8 [ f16 ges ] as [ d,8 es32 f ] ges [ es f8 ces16 ] | % 20
-		ces16 [ bes es8 ] es [ fes ] fes4 | % 21
-		r8 f! [ f ges ] ges4 | % 22
-		r8 g! [ g as ] as4 ~ | % 23
-		as8 [ g!16 f ] g8. [ a32 b ] c [ f, as8 g16 ] | % 24
-		f8 [ es ] r8 \clef "bass" g [ f es ] | % 25
-		d4 r8 f8 [ es des ] | % 26
-		c4 r8 es16 [ d ] c8 [ bes ] | % 27
-		a8. [ a16 ] d8 [ c bes a ] | % 28
-		d,8 [ fis fis g g as ] | % 29
-		r8 g [ g a! a bes ] | % 30
-		r8 a [ a bes bes c ~ ] | % 31
+		r8 f8 [ f fs fs g ] | % 17
+		g8 [ d ] r8 f8 [ f ef ] | % 18
+		ef8 [ d ef e f gf ~] | % 19
+		gf8 [ f16 gf ] af [ d,8 ef32 f ] gf [ ef f8 cf16 ] | % 20
+		cf16 [ bf ef8 ] ef [ ff ] ff4 | % 21
+		r8 f! [ f gf ] gf4 | % 22
+		r8 g! [ g af ] af4 ~ | % 23
+		af8 [ g!16 f ] g8. [ a32 b ] c [ f, af8 g16 ] | % 24
+		f8 [ ef ] r8 \clef "bass" g [ f ef ] | % 25
+		d4 r8 f8 [ ef df ] | % 26
+		c4 r8 ef16 [ d ] c8 [ bf ] | % 27
+		a8. [ a16 ] d8 [ c bf a ] | % 28
+		d,8 [ fs fs g g af ] | % 29
+		r8 g [ g a! a bf ] | % 30
+		r8 a [ a bf bf c ~ ] | % 31
 	} %end repeated section
 
 	\alternative {
-		{c8 [ bes16 a ] bes4 r4 |} % 32
-		{c8\repeatTie [ bes16 a ] bes8 r8 r4 |} % 34
+		{c8 [ bf16 a ] bf4 r4 |} % 32
+		{c8\repeatTie [ bf16 a ] bf8 r8 r4 |} % 34
 	}
 }
 
@@ -141,49 +142,49 @@ bassTwo = \relative g {
 	\repeat volta 2 { %begin repeated section
 		\stemDown	 
 		g4 r8 g8 [ g g ] | % 1
-		g8 [ fis ] b, \rest f' [ f f ] | % 2
-		f8 [ e ] b8\rest es8 [ es es ] | % 3
-		d4 r8 es8 [ d  c ] | % 4
-		bes4 r8 bes8 [ b b ] | % 5
-		b8 [ c ] r8 c8 [ cis cis ] | % 6
-		cis8 [ d ] r8 d [ d d ] | % 7
-		g,4 r8 g [ bes d ] | % 8
-		g8. [ d'16 ] g8 [ f! es! d ] | % 9
-		cis8 [ a d c bes a ] | % 10
-		g8 [ c ] f, [ fis g gis ] | % 11
-		a8 [ bes a g f e ] | % 12
-		f4 r8 fis8 [ fis g ] | % 13
-		g4 r8 gis8 [ gis a ] | % 14
-		a4 r8 a8 [ cis a ] | % 15
+		g8 [ fs ] b, \rest f' [ f f ] | % 2
+		f8 [ e ] b8\rest ef8 [ ef ef ] | % 3
+		d4 r8 ef8 [ d  c ] | % 4
+		bf4 r8 bf8 [ b b ] | % 5
+		b8 [ c ] r8 c8 [ cs cs ] | % 6
+		cs8 [ d ] r8 d [ d d ] | % 7
+		g,4 r8 g [ bf d ] | % 8
+		g8. [ d'16 ] g8 [ f! ef! d ] | % 9
+		cs8 [ a d c bf a ] | % 10
+		g8 [ c ] f, [ fs g gs ] | % 11
+		a8 [ bf a g f e ] | % 12
+		f4 r8 fs8 [ fs g ] | % 13
+		g4 r8 gs8 [ gs a ] | % 14
+		a4 r8 a8 [ cs a ] | % 15
 	} %end of repeated section
 
 	\alternative { 
-		{ d4. c8 [ bes a ] | } % 16
+		{ d4. c8 [ bf a ] | } % 16
 		{ d4. a8 d,4 | } % 16
 	}
  
 	\repeat volta 2 { %begin repeated section
 		\clef "treble" 
-		d'4 r8 c [ c bes ] | % 17
-		bes8 [ g16 a ] bes8 [ b b c ] | % 18
-		c4 r8 g8 [ as a ] | % 19
-		bes4 r8 ces8 [ bes as] | % 20
-		ges4 r8 g8 [ g  as ] | % 21
-		as4 r8 a8 [ a bes ] | % 22
-		bes4 r8 bes8 [ d bes ] | % 23
-		es4 r8 f8 [ es  d ] | % 24
+		d'4 r8 c [ c bf ] | % 17
+		bf8 [ g16 a ] bf8 [ b b c ] | % 18
+		c4 r8 g8 [ af a ] | % 19
+		bf4 r8 cf8 [ bf af] | % 20
+		gf4 r8 g8 [ g  af ] | % 21
+		af4 r8 a8 [ a bf ] | % 22
+		bf4 r8 bf8 [ d bf ] | % 23
+		ef4 r8 f8 [ ef  d ] | % 24
 		c4 r8 \clef "bass" c8 [ c c ] | % 25
-		c8 [ b ] r8 bes8 [ bes! bes ] | % 26
-		bes8 [ a! ] r8 as8 [ as g ] | % 27
-		g8 [ fis ] r8 fis8 [ g c, ] | % 28
-		bes4 r8 bes8 [ bes b ] | % 29
-		b16 [ d c8 ] r8 c8 [ c cis ] | % 30
-		cis16 [ e d8 ] r8 d8 d [ d ] | % 31
+		c8 [ b ] r8 bf8 [ bf! bf ] | % 26
+		bf8 [ a! ] r8 af8 [ af g ] | % 27
+		g8 [ fs ] r8 fs8 [ g c, ] | % 28
+		bf4 r8 bf8 [ bf b ] | % 29
+		b16 [ d c8 ] r8 c8 [ c cs ] | % 30
+		cs16 [ e d8 ] r8 d8 d [ d ] | % 31
 	} %end repeated section
 	
 	\alternative {
-		{ g4 ~ g8 [ d ] g,16 [ a' bes c ] |} % 32
-		{ g4 ~ g16 [ fis g d ] g,4 |} % 32
+		{ g4 ~ g8 [ d ] g,16 [ a' bf c ] |} % 32
+		{ g4 ~ g16 [ fs g d ] g,4 |} % 32
 	}
 }
 
