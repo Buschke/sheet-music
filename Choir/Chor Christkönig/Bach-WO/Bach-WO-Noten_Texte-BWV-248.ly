@@ -25,10 +25,11 @@ scoreAATenorVoice = \relative c' {
   b a b e4 e8 fs a, cs b b ds e e b
   a a r d^"E" b e fs16(e d cs b a e'8) d d
   cs b e cs4 r8
-  d^"F" d d d a r
-  r1.
+  R4.*7
+  d8^"F" d d d a r
+  r4.
   r8 r a a d16 a fs d a'8 a r
-  r fs' d r r d d a r r1.
+  r fs' d r r d d a r r4.
   d8 d d d cs16 b cs d e8 e e e8 d16 cs d8 d d d d d e a,16 b cs8 d e4 r8
   r^"G" b16 cs cs16.\trill(b64 cs d8) cs b a a a' a e b b d r r
   d16 e e16.\trill(d64 e64 fs8) fs e e b e a,
@@ -537,9 +538,9 @@ scoreDBTenorVoice = \relative c' {
   \repeat volta 2 {
     R2.*3
     f4 c2 c4.(bf8) a4 bf2 a8(bf16 c) c4(bf8 a bf4) a2 r4 R2.*3
-    f'4 d2 c8(bf a4) a d8 c c2 c2. r2.
+    f'4 d2 c8(bf a4) a d8 c c2 c2. \alternative{{r2.}{r2.}}
   }
-  R2.*4
+  R2.*3
   c2 e4 c2 bf4~bf a d8(c) bf4(a8 g a4) a2 r4
   R2.*3
   bf4.(g8) c4 c2 g4 f2 d'4 g,(c bf) a2 r4
@@ -713,7 +714,7 @@ scoreEDTenorVoice = \relative c' {
   \compressEmptyMeasures
   % Music follows here.
   \repeat volta 2 {
-    cs4^"Nr. 53 Choral" b a8(b) cs(d) e(b) b4 b8.(a16) g4\fermata
+    cs4^"Nr. 53 Choral" b a8(b) cs(d) e(b) b4 b8.(a16) gs4\fermata
     b8 cs d e a,4 e a4. gs8 cs2
   }
   e4 e8(ds) e(d) cs(b) a(b) cs(ds) e4 e\fermata
@@ -876,7 +877,7 @@ scoreFCTenorVoice = \relative c' {
 scoreFCVerse = \lyricmode {
   % Lyrics follow here.
   \repeat volta 2 {
-    <<{Nun seid _ ihr wohl ge -- ro -- chen an eu -- rer Fein -- de Schar} \new Lyrics{denn Chris -- tus hat zer -- bro -- chen, was euch zu -- wi -- der war. }>> }
+    <<{Nun seid _ ihr wohl ge -- ro -- chen an eu -- rer Fein -- de Schar} \new Lyrics{denn Chris -- tus hat zer -- bro -- chen, was was euch zu -- wi -- der war. }>> }
     Tod, Teu -- fel, Sünd und _ Höl -- le sind ganz und gar ge -- schwächt;
     bei Gott hat sei -- ne Stel -- le das mensch _ _ -- li  -- che Ge -- schlecht.
   }
