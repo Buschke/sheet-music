@@ -70,12 +70,11 @@ scoreAAVerse = \lyricmode {
   Jauch -- zet, froh -- lo -- cket, _ auf, _
   prei -- set die Ta _ _ -- ge, rüh -- met, was heu -- te der Höch _ -- ste ge -- tan!
   Las _ _ -- set das Za -- gen, ver -- ban -- net die Kla -- ge,
-  las _ _ -- set das Za -- gen, ver -- ban -- net die Kla -- ge,
-  las _ _ -- set das Za -- gen, ver -- ban -- net die Kla -- ge,
-  las _ _ -- set das Za -- gen, ver -- ban -- net die Kla _ -- ge,
+  las _ _ -- set das Za -- gen, ver -- ban -- net die _ Kla _ _ -- ge,
+  las _ _ -- set das Za _ _ _ _ -- gen, ver -- ban _ _ _ -- net, ver -- ban -- net die Kla _ -- ge,
   las -- set das Za -- gen, ver -- ban -- net die Kla -- ge,
   las -- set das Za -- gen, ver -- ban -- net die Kla -- ge,
-  stim -- met voll Jauch _ _ _ _ _ _ -- zen und Fröh -- lich -- keit an!
+  stim -- met -voll Jauch _ _ _ _ _ _ -- zen und Fröh -- lich -- keit -- an!
   Die -- net _ dem _ Höchs -- ten mit herr -- li -- chen Chö _ _ _ _ _ _ _ -- ren,
   die -- net _ dem _ Höchs _ _ _ _ _ -- ten,
   die -- net _ dem _ Höchs _ _ _ -- ten,
@@ -449,7 +448,7 @@ scoreDATenorVoice = \relative c' {
   % Music follows here.
   R4.*24^"Nr. 36 Chor"
   c4 d8 bf4 a8 c(d) ef f f r
-  r4.*2 d8 ef f f(ef d c4) a8 f'4 c8
+  R4.*2 d8 ef f f(ef d c4) a8 f'4 c8
   bf(a g e' f) bf, c4 d8 bf4 a8 c(d) ef f f r f c4 f,8 a c
   c(bf) d c4. r4.^"A" r
   c4 bf8 c4 c8 c4 d8 a4 bf8
@@ -552,7 +551,7 @@ scoreDBVerse = \lyricmode {
   <<{Je -- sus rich -- te mein Be -- gin -- nen,
   Je -- sus blei -- be stets _ bei mir, } \new Lyrics {
   Je -- sus zäu -- me mir die Sin -- nen,
-  Je -- sus sein nur mein _ Be -- gier, }>>
+  Je -- sus sei nur mein _ Be -- gier, }>>
   Je -- sus sei mir in Ge -- dan -- ken,
   Je -- su, las -- se mich nicht wan -- ken.
 }
@@ -877,7 +876,7 @@ scoreFCTenorVoice = \relative c' {
 scoreFCVerse = \lyricmode {
   % Lyrics follow here.
   \repeat volta 2 {
-    <<{Nun seid _ ihr wohl ge -- ro -- chen an eu -- rer Fein -- de Schar} \new Lyrics{denn Chris -- tus hat zer -- bro -- chen, was was euch zu -- wi -- der war. }>> }
+    <<{Nun seid _ ihr wohl ge -- ro -- chen an eu -- rer Fein -- de Schar} \new Lyrics{denn Chris _ -- tus hat zer -- bro -- chen, was euch zu -- wi -- der war. }>> }
     Tod, Teu -- fel, Sünd und _ Höl -- le sind ganz und gar ge -- schwächt;
     bei Gott hat sei -- ne Stel -- le das mensch _ _ -- li  -- che Ge -- schlecht.
   }
