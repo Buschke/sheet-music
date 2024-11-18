@@ -30,7 +30,7 @@ scoreAATenorVoice = \relative c' {
   r4.
   r8 r a a d16 a fs d a'8 a r
   r fs' d r r d d a r r4.
-  d8 d d d cs16 b cs d e8 e e e8 d16 cs d8 d d d d d e a,16 b cs8 d e4 r8
+  d8 d d d cs16 b cs d e8 e e e8 d16 cs d8 d d d d d e a,16 b cs8 d <<{\override NoteHead.color = #red \override Beam.color = red e4}\\{\override NoteHead.color = #red \override Beam.color = red e8 r }>> r8
   r^"G" b16 cs cs16.\trill(b64 cs d8) cs b a a a' a e b b d r r
   d16 e e16.\trill(d64 e64 fs8) fs e e b e a,
   a16 b b16.\trill(a64 b) cs16 d e8 a, r
@@ -53,7 +53,7 @@ scoreAAVerse = \lyricmode {
   Jauch -- zet, froh -- lo -- cket, auf, prei -- set _ die _ Ta -- ge,
   Jauch -- zet, froh -- lo -- cket,
   Jauch -- zet, froh -- lo -- cket, _
-  auf, _ prei -- set _ die Ta _ -- ge,
+  auf, _ prei -- set die Ta -- ge, _ _
   Rüh -- met, was heu -- te der Höchs _ -- te ge -- tan,
   Las _ _ -- set das Za -- gen, ver -- ban -- net die Kla -- ge,
   Las _ _ -- set das Za -- gen, ver -- ban -- net die Kla -- ge,
@@ -615,9 +615,9 @@ scoreEAVerse = \lyricmode {
   dir sei Lob und Dank be -- reit',
   Lob _ _ _ und Dank, Lob _ _ _ und Dank be -- reit',
   dir sei Lob und Dank, Lob _ _ und Dank _ be -- reit',
-  dir sei Lob und Dank _ _ _ _ be _ -- reit',
+  dir sei Lob und Dank _ _ _ _ be -- reit',
   Lob und Dank be -- reit',
-  Lob und Dank be -- reit',
+  Lob und Dank be _ -- reit',
   dir sei Lob und Dank, dir sei Lob, Lob _ _ und Dank be --reit',
   dir sei Lob und Dank, Lob _ _ _ _ und Dank, _ _ _ _
   und Dank be -- reit', dir sei Lob _ _ _ _ _ und Dank be -- reit';
@@ -684,8 +684,8 @@ scoreECTenorVoice = \relative c' {
   cs8^"Nr. 46 Choral" d
   e4 d8 cs b4(a b) a8 g a4 e'8 d cs2\fermata
   r4 a a gs b8(a) b4 b8(e4) ds8 e4\fermata
-  e fs fs fs e e8\((d) e(ds)\) e4\fermata
-  e d8(c) d(e) fs4\fermata
+  e fs fs fs e e8\((d) cs(ds)\) e4\fermata
+  e d8(cs) d(e) fs4\fermata
   fs8 e d4 e a,\fermata
   a b cs8 ds e2~ e8 cs a cs fs d b e cs2.\fermata
   \bar "|."
