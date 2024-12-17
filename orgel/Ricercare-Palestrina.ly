@@ -18,9 +18,8 @@
 }
 
 \paper {
-  #(set-paper-size "a4")
+  #(set-paper-size "a4landscape")
 }
-
 global = {
   \key c \major
   \time 2/1
