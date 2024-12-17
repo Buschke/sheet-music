@@ -33,7 +33,7 @@ global = {
 globalKyrie = {
   \key g \major
   \time 6/8
-  \tempo "Andante con moto" 4=100
+  \tempo "Andante con moto" 4.=90
 }
 
 tenorKyrieVoice = \relative c' {
@@ -51,7 +51,7 @@ tenorKyrieVoice = \relative c' {
   ef'2.\f(c4.) c4 c8 af2.\>(a4.)\p c b8 r4 r4.
   R2.*3
   g4 g8 g4 g8 g4 g8 b4.\breathe b4 b8 b4 b8 c4 c8 b4 r8 r2.
-  d4.\f~d8(b) g d4 r8 r4 d'8 d2 b8 g\breathe
+  d4.\f~d8(b) g d4 r8 r4 d'8 d4.~d8 b g\breathe
   b4 b8 b4 e8 d4 d8 d4(b8)\breathe
   b4 b8 b4 e8 d4 c8 b4 r8
   R2.*5 r2.^\markup { \italic "rit." }
@@ -61,7 +61,7 @@ tenorKyrieVoice = \relative c' {
 globalGloria = {
   \key g \major
   \time 4/4
-  \tempo "Allegro" 4=100
+  \tempo "Allegro" 4=130
 }
 
 tenorGloriaVoice = \relative c' {
@@ -91,7 +91,7 @@ tenorGloriaVoice = \relative c' {
 globalCredo = {
   \key g \major
   \time 2/2
-  \tempo 4=100
+  \tempo "Allegro moderato" 2=70
 }
 
 tenorCredoVoice = \relative c' {
@@ -142,7 +142,7 @@ tenorCredoVoice = \relative c' {
 globalSanctus = {
   \key g \major
   \time 6/8
-  \tempo 4=100
+  \tempo "Andante" 4.=90
 }
 
 tenorSanctusVoice = \relative c' {
@@ -161,7 +161,7 @@ tenorSanctusVoice = \relative c' {
 globalBenedictus = {
   \key d \major
   \time 6/8
-  \tempo 4=100
+  \tempo "Andante quasi Allegretto" 4.=140
 }
 
 tenorBenedictusVoice = \relative c' {
@@ -182,7 +182,7 @@ tenorBenedictusVoice = \relative c' {
 globalAgnusDei = {
   \key g \minor
   \time 4/4
-  \tempo 4=100
+  \tempo "Andante ostenuto" 4=80
 }
 
 tenorAgnusDeiVoice = \relative c' {
@@ -191,7 +191,7 @@ tenorAgnusDeiVoice = \relative c' {
   \clef tenor
   % Music follows here.
   R1*3 \expandEmptyMeasures \compressEmptyMeasures R1*18 \expandEmptyMeasures \compressEmptyMeasures R1*2
-  bf2 d es4.(d8) c4 c c c8 c bf4 d d(cs) d r r1 a2 a4 r\bar "||"\key g \major
+  bf2 d ef4.(d8) c4 c c c8 c bf4 d d(cs) d r r1 a2 a4 r\bar "||"\key g \major
   R1*8
   d4 d d d d4.(c8) b4 r R1*2 f'4 e8 r f4 e8 r d2(cs c4 b2 a4) g r r2 b2(c4 a) g\breathe
   b2 g4 b2(c) b4 r r2 R1*3 \bar "|."
@@ -220,7 +220,7 @@ verseGloria = \lyricmode {
   ho -- mi -- ni -- bus bo -- nae vo -- lun -- ta -- tis.
   Lau -- da -- mus te, ad -- o -- ra -- mus te, glo -- ri -- fi -- ca -- mus te.
   pro -- pter ma -- gnam glo -- ri -- am tu -- am.
-  Do -- mi -- ne De -- us, Rex co -- eles -- tis, De -- us Pa -- ter o -- mni -- po -- tens.
+  Do -- mi -- ne De -- us, Rex coe -- les -- tis, De -- us Pa -- ter o -- mni -- po -- tens.
   Do -- mi -- ne De -- us, A -- gnus De -- i, Fi -- li -- us Pa -- tris.
   sus -- ci -- pe de -- pre -- ca -- ti -- o -- nem no -- stram.
   Qui se -- des ad dex -- te -- ram Pa -- tris,
@@ -235,40 +235,43 @@ verseGloria = \lyricmode {
 verseCredo = \lyricmode {
   % Lyrics follow here.
   Cre -- do in un -- um De -- um, Pa -- trem om -- ni -- po -- ten -- tem, fac -- to -- rem co -- eli et ter -- rae, vi -- si -- bi -- li -- um om -- ni -- um et in -- vi -- si -- bi -- li -- um.
-  Et in un -- um Do -- mi -- num Je -- sum Chris -- tum, Fi -- li -- um Dei uni -- ge -- ni -- tum, et ex Pa -- tre na -- tum an -- te om -- nia sae -- cu -- la.
-  De -- um de Deo, lu -- men de lu -- mi -- ne, De -- um ver -- um de Deo ve -- ro, ge -- ni -- tum, non fac -- tum, con -- sub -- stan -- ti -- a -- lem Pa -- tri: per quem om -- nia fac -- ta sunt.
-  Qui propter nos ho -- mi -- nes et propter no -- stram sa -- lu -- tem de -- scen -- dit de co -- elis.
-  Et in -- car -- na -- tus est de Spi -- ri -- tu Sanc -- to ex Ma -- ria Vir -- gi -- ne, et ho -- mo fac -- tus est.
-  Cru -- ci -- fi -- xus eti -- am pro no -- bis sub Pon -- tio Pi -- la -- to; pas -- sus et se -- pul -- tus est.
-  Et re -- s -- urr -- e -- xit ter -- tia die, se -- cund -- um scrip -- tu -- ras.
-  Et ascen -- dit in co -- elum, se -- det ad dex -- teram Pa -- tris.
-  Et ite -- rum ven -- tu -- rus est cum glo -- ria, ju -- di -- care vi -- vos et mor -- tu -- os, cu -- jus reg -- ni non erit fi -- nis.
-  Et in Spi -- ri -- tum Sanc -- tum, Do -- mi -- num et vi -- vi -- fi -- can -- tem: qui ex Pa -- tre Fi -- lio -- que pro -- ce -- dit.
-  Qui cum Pa -- tre et Fi -- lio si -- mul ad -- ora -- tur et conglo -- ri -- fi -- ca -- tur: qui lo -- cu -- tus est per Pro -- phe -- tas.
-  Et un -- am, sanc -- tam, ca -- tho -- li -- cam et apo -- sto -- li -- cam ec -- cle -- si -- am.
-  Con -- fi -- te -- or un -- um bap -- tis -- ma in re -- mis -- si -- o -- nem pec -- ca -- torum.
-  Et ex -- spec -- to re -- s -- ur -- rec -- ti -- o -- nem mor -- tuorum, et vit -- am ven -- tu -- ri sae -- cu -- li. Amen.
+  De -- um de De -- o, lu -- men de lu -- mi -- ne, De -- um ver -- um de De -- o ve -- ro, ge -- ni -- tum, non fac -- tum, con -- sub -- stan -- ti -- a -- lem Pa -- tri: per quem om -- ni -- a fac -- ta sunt.
+  Qui pro -- pter nos ho -- mi -- nes et pro -- pter no -- stram sa -- lu -- tem de -- scen -- dit, de -- scen -- dit de co -- elis.
+  Cru -- ci -- fi -- xus e -- ti -- am pro no -- bis, pro no -- bis  sub Pon -- ti -- o Pi -- la -- to; et se -- pul -- tus est.
+  Et a -- scen -- dit in coe -- lum. Se -- det, se -- det ad dex -- te -- ram, se -- det ad dex -- te -- ram Pa -- tris.
+  Et i -- te -- rum ven -- tu -- rus est cum glo -- ri -- a, ju -- di -- ca -- re vi -- vos et mor -- tu -- os, cu -- jus re -- gni non e -- rit fi -- nis.
+  Et in Spi -- ri -- tum Sanc -- tum, Do -- mi -- num et vi -- vi -- fi -- can -- tem: qui ex Pa -- tre Fi -- li -- o -- que pro -- ce -- dit.
+  et con -- glo -- ri -- fi -- ca -- tur: qui lo -- cu -- tus est per Pro -- phe -- tas.
+  Et un -- am, sanc -- tam, sanc -- tam, ca -- tho -- li -- cam et a -- po -- sto -- li -- cam ec -- cle -- si -- am.
+  Et ex -- spec -- to re -- sur -- rec -- ti -- o -- nem et vi -- tam ven -- tu -- ri sae -- cu -- li. A -- men. A -- men. A _ -- men.
 }
 
 verseSanctus = \lyricmode {
   % Lyrics follow here.
-  Sanc -- tus, sanc -- tus, sanc -- tus Do -- mi -- nus De -- us Sa -- ba -- oth.
-  Ple -- ni sunt co -- eli et ter -- ra glo -- ria tua.
+  Sanc -- tus, sanc -- tus, Do -- mi -- nus De -- us, De -- us Sa -- ba -- oth.
+  Ple -- ni sunt co -- eli et ter -- ra glo -- ri -- a tu -- a.
+  Ho -- san -- na, ho -- san -- na in ex -- cel -- sis.
+  Ho -- san -- na, ho -- san -- na in ex -- cel -- sis.
   Ho -- san -- na in ex -- cel -- sis.
-
 }
 
 verseBenedictus = \lyricmode {
   % Lyrics follow here.
   Be -- ne -- dic -- tus qui ve -- nit in no -- mi -- ne Do -- mi -- ni.
+  Be _ -- ne -- dic -- tus qui ve -- nit in no -- mi -- ne Do _ -- mi -- ni.
+  Be -- ne -- dic -- tus qui ve -- nit, qui ve -- nit in no -- mi -- ne Do -- mi -- ni.
+  Be _ -- ne -- dic -- tus qui ve -- nit in no -- mi -- ne Do _ -- mi -- ni.
+  Ho -- san -- na in ex -- cel -- sis.
   Ho -- san -- na in ex -- cel -- sis.
 }
 
 verseAgnusDei = \lyricmode {
   % Lyrics follow here.
-  Ag -- nus Dei, qui tol -- lis pec -- ca -- ta mun -- di, mi -- se -- re -- re no -- bis.
-  Ag -- nus Dei, qui tol -- lis pec -- ca -- ta mun -- di, mi -- se -- re -- re no -- bis.
-  Ag -- nus Dei, qui tol -- lis pec -- ca -- ta mun -- di, do -- na no -- bis pacem.
+  Ag -- nus De -- i, qui tol -- lis pec -- ca -- ta mun -- di,
+  do -- na
+  do -- na no -- bis pa -- cem.
+  do -- na no -- bis pa -- cem.
+  pa -- cem,   do -- na pa -- cem.
 }
 
 \score {
