@@ -39,6 +39,7 @@ globalKyrie = {
 tenorKyrieVoice = \relative c' {
   \globalKyrie
   \dynamicUp
+  \clef tenor
   % Music follows here.
   \compressEmptyMeasures R2.*6 \expandEmptyMeasures \compressEmptyMeasures R2.*2
   b4 b8 b4 b8 d4 d8 g,4 r8
@@ -66,6 +67,7 @@ globalGloria = {
 tenorGloriaVoice = \relative c' {
   \globalGloria
   \dynamicUp
+  \clef tenor
   % Music follows here.
   R1*2
   d4\f d8 d d4 e d cs c(d) b r r2 r1 d4 d8 d d4 cs d d c(a) b r r2 R1*2
@@ -95,6 +97,7 @@ globalCredo = {
 tenorCredoVoice = \relative c' {
   \globalCredo
   \dynamicUp
+  \clef tenor
   % Music follows here.
   R1*8
   b1\f b2. b4 c2 b b(a) b r r1 r2 b~b g d' d4 d g2 d4\breathe
@@ -145,6 +148,7 @@ globalSanctus = {
 tenorSanctusVoice = \relative c' {
   \globalSanctus
   \dynamicUp
+  \clef tenor
   % Music follows here.
   R2.*2 c2.\p~c b4 r8 r4. r2.
   d4.(cs) d4 r8 r4. d8 d b b4 b8 g4 g8 a8. a16 a8\breathe
@@ -163,6 +167,7 @@ globalBenedictus = {
 tenorBenedictusVoice = \relative c' {
   \globalBenedictus
   \dynamicUp
+  \clef tenor
   % Music follows here.
   R2.*2 \expandEmptyMeasures \compressEmptyMeasures R2.*8
   a4\f a8 a a a d4. a8 r a a a a a4 a8 a4 r8 r4.
@@ -183,6 +188,7 @@ globalAgnusDei = {
 tenorAgnusDeiVoice = \relative c' {
   \globalAgnusDei
   \dynamicUp
+  \clef tenor
   % Music follows here.
   R1*3 \expandEmptyMeasures \compressEmptyMeasures R1*18 \expandEmptyMeasures \compressEmptyMeasures R1*2
   bf2 d es4.(d8) c4 c c c8 c bf4 d d(cs) d r r1 a2 a4 r\bar "||"\key g \major
