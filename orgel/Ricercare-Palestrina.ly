@@ -7,7 +7,7 @@
   subtitle = ""
   subsubtitle = ""
   instrument = ""
-  composer = "G. F. da Palestrina"
+  composer = "Giovanni Pierluigi da Palestrina (1524-1594)"
   arranger = ""
   poet = "Ricercare"
   meter = ""
@@ -21,6 +21,8 @@
   #(set-paper-size "a4landscape")
 }
 global = {
+  
+  
   \key c \major
   \time 2/1
   \tempo "Largo" 4=100
