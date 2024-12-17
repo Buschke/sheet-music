@@ -8,7 +8,7 @@
 
 tenorVoice = \relative c' {
   \clef tenor
-  \key C \major
+  \key c \major
   \time 4/4
 
   % Hier beginnt der Tenorpart
