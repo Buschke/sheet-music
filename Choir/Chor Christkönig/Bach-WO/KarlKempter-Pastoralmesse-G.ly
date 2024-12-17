@@ -48,7 +48,7 @@ tenorKyrieVoice = \relative c' {
   b4 b8 b4 e8 d4 c8 b4 r8
   R2.*4 \expandEmptyMeasures \compressEmptyMeasures R2.*6
   d4(bf8) g4 r8 r2.
-  ef'2.\f(c4.) c4 c8 af2.\>(a4.)\p c b8 r4 r4.
+  ef'2.\f(c4.) c4 c8 af2.\>(a!4.)\p c b8 r4 r4.
   R2.*3
   g4 g8 g4 g8 g4 g8 b4.\breathe b4 b8 b4 b8 c4 c8 b4 r8 r2.
   d4.\f~d8(b) g d4 r8 r4 d'8 d4.~d8 b g\breathe
