@@ -34,7 +34,7 @@ global = {
 
 globalA = {
   \key b \minor
-%   \numericTimeSignature
+  %   \numericTimeSignature
   \time 4/4
   \tempo "Andante" 4=60
 }
@@ -2291,7 +2291,7 @@ scoreKChordsPart = \new ChordNames \scoreKChordNames
 
 globalL = {
   \key f \major
-%   \numericTimeSignature
+  %   \numericTimeSignature
   \time 4/4
   \tempo "Andante" 4=60
 }
@@ -2466,14 +2466,14 @@ scoreLBcFigures = \figuremode {
   \globalL
   \override Staff.BassFigureAlignmentPositioning #'direction = #DOWN
   % Figures follow here.
-  
+
 }
 
 scoreLChordNames = \chordmode {
   \globalL
   \germanChords
   % Chords follow here.
-  
+
 }
 
 scoreLChoirPart = <<
@@ -2486,15 +2486,22 @@ scoreLChoirPart = <<
     } \new Voice = "soprano" \scoreLSoprano
     \new Lyrics \with {
       \override VerticalAxisGroup #'staff-affinity = #CENTER
-    } \lyricsto "soprano" {<<\scoreLVerseOneA 	\new Lyrics {
-	  \set associatedVoice = "soprano" \scoreLVerseOneB
-    }>> \scoreLVerseOneC}
+    } \lyricsto "soprano" {
+      <<
+        \scoreLVerseOneA 	\new Lyrics {
+          \set associatedVoice = "soprano" \scoreLVerseOneB
+        }
+      >> \scoreLVerseOneC
+    }
     \new Lyrics \with {
       \override VerticalAxisGroup #'staff-affinity = #CENTER
-    } \lyricsto "soprano" {<<\scoreLVerseTwoA 	\new Lyrics {
-	  \set associatedVoice = "soprano" \scoreLVerseTwoB
-	}
-  >> \scoreLVerseTwoC}
+    } \lyricsto "soprano" {
+      <<
+        \scoreLVerseTwoA 	\new Lyrics {
+          \set associatedVoice = "soprano" \scoreLVerseTwoB
+        }
+      >> \scoreLVerseTwoC
+    }
     \new Staff \with {
       midiInstrument = "choir aahs"
       instrumentName = "Alto"
@@ -2503,15 +2510,22 @@ scoreLChoirPart = <<
     } \new Voice = "alto" \scoreLAlto
     \new Lyrics \with {
       \override VerticalAxisGroup #'staff-affinity = #CENTER
-    } \lyricsto "alto" {<<\scoreLVerseOneA 	\new Lyrics {
-	  \set associatedVoice = "alto" \scoreLVerseOneB
-    }>> \scoreLVerseOneC}
+    } \lyricsto "alto" {
+      <<
+        \scoreLVerseOneA 	\new Lyrics {
+          \set associatedVoice = "alto" \scoreLVerseOneB
+        }
+      >> \scoreLVerseOneC
+    }
     \new Lyrics \with {
       \override VerticalAxisGroup #'staff-affinity = #CENTER
-    } \lyricsto "alto" {<<\scoreLVerseTwoA 	\new Lyrics {
-	  \set associatedVoice = "alto" \scoreLVerseTwoB
-	}
-  >> \scoreLVerseTwoC}
+    } \lyricsto "alto" {
+      <<
+        \scoreLVerseTwoA 	\new Lyrics {
+          \set associatedVoice = "alto" \scoreLVerseTwoB
+        }
+      >> \scoreLVerseTwoC
+    }
     \new Staff \with {
       midiInstrument = "choir aahs"
       instrumentName = "Tenor"
@@ -2523,15 +2537,22 @@ scoreLChoirPart = <<
     }
     \new Lyrics \with {
       \override VerticalAxisGroup #'staff-affinity = #CENTER
-    } \lyricsto "tenor" {<<\scoreLVerseOneA 	\new Lyrics {
-	  \set associatedVoice = "tenor" \scoreLVerseOneB
-    }>> \scoreLVerseOneC}
+    } \lyricsto "tenor" {
+      <<
+        \scoreLVerseOneA 	\new Lyrics {
+          \set associatedVoice = "tenor" \scoreLVerseOneB
+        }
+      >> \scoreLVerseOneC
+    }
     \new Lyrics \with {
       \override VerticalAxisGroup #'staff-affinity = #CENTER
-    } \lyricsto "tenor" {<<\scoreLVerseTwoA 	\new Lyrics {
-	  \set associatedVoice = "tenor" \scoreLVerseTwoB
-	}
-  >> \scoreLVerseTwoC}
+    } \lyricsto "tenor" {
+      <<
+        \scoreLVerseTwoA 	\new Lyrics {
+          \set associatedVoice = "tenor" \scoreLVerseTwoB
+        }
+      >> \scoreLVerseTwoC
+    }
     \new Staff \with {
       midiInstrument = "choir aahs"
       instrumentName = "Bass"
@@ -2543,15 +2564,19 @@ scoreLChoirPart = <<
     }
     \new Lyrics \with {
       \override VerticalAxisGroup #'staff-affinity = #CENTER
-    } \lyricsto "bass" {<<\scoreLVerseOneA 	\new Lyrics {
-	  \set associatedVoice = "bass" \scoreLVerseOneB
-    }>> \scoreLVerseOneC}
-%     \new Lyrics \with {
-%       \override VerticalAxisGroup #'staff-affinity = #CENTER
-%     } \lyricsto "bass" {<<\scoreLVerseTwoA 	\new Lyrics {
-% 	  \set associatedVoice = "bass" \scoreLVerseTwoB
-% 	}
-%   >> \scoreLVerseTwoC}
+    } \lyricsto "bass" {
+      <<
+        \scoreLVerseOneA 	\new Lyrics {
+          \set associatedVoice = "bass" \scoreLVerseOneB
+        }
+      >> \scoreLVerseOneC
+    }
+    %     \new Lyrics \with {
+    %       \override VerticalAxisGroup #'staff-affinity = #CENTER
+    %     } \lyricsto "bass" {<<\scoreLVerseTwoA 	\new Lyrics {
+    % 	  \set associatedVoice = "bass" \scoreLVerseTwoB
+    % 	}
+    %   >> \scoreLVerseTwoC}
   >>
   \scoreLPianoReduction
 >>
@@ -2578,17 +2603,17 @@ scoreLChordsPart = \new ChordNames \scoreLChordNames
       \scoreLChordsPart
     >>
     \layout { }
-%     \midi { }
+    %     \midi { }
   }
   \score {
     \unfoldRepeats {
-    <<
-      \scoreLChoirPart
-      \scoreLBassoContinuoPart
-      \scoreLChordsPart
-    >>
+      <<
+        \scoreLChoirPart
+        \scoreLBassoContinuoPart
+        \scoreLChordsPart
+      >>
     }
-%     \layout { }
+    %     \layout { }
     \midi { }
   }
 }
@@ -2629,7 +2654,7 @@ scoreLChordsPart = \new ChordNames \scoreLChordNames
 
 
 % %%%%%%%%%%%%%%%%%%%%%
-% % 
+% %
 % %%%%%%%%%%%%%%%%%%%%%
 
 scoreMSoprano = \relative c'' {

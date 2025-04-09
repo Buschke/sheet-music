@@ -447,7 +447,7 @@ scoreCBassoContinuoPart = <<
   \score {
     <<
       \scoreCLeadSheetPart
-%       \scoreCBassoContinuoPart
+      %       \scoreCBassoContinuoPart
     >>
     \layout { }
     \midi { }
@@ -822,7 +822,7 @@ scoreEBassoContinuoPart = <<
   \score {
     <<
       \scoreELeadSheetPart
-%       \scoreEBassoContinuoPart
+      %       \scoreEBassoContinuoPart
     >>
     \layout { }
     \midi { }
@@ -1022,7 +1022,7 @@ scoreFChoirPart = <<
     }
     \new Lyrics \with {
       \override VerticalAxisGroup #'staff-affinity = #CENTER
-    } \lyricsto "bass" {<<\scoreFVerse \new Lyrics{\scoreFVerseB}>>\scoreFVerseC}    
+    } \lyricsto "bass" {<<\scoreFVerse \new Lyrics{\scoreFVerseB}>>\scoreFVerseC}
   >>
   \scoreFPianoReduction
 >>
@@ -1039,7 +1039,7 @@ scoreFBassoContinuoPart = <<
 scoreFChordsPart = \new ChordNames \scoreFChordNames
 
 \bookpart {
-    \header {
+  \header {
     title = "Erkenne mich mein Hüter"
     subsubtitle = "Choräle, Nr. 15, 3. Choral, E-Dur"
     instrument = "Chor und B.C."
@@ -1051,17 +1051,17 @@ scoreFChordsPart = \new ChordNames \scoreFChordNames
       \scoreFChordsPart
     >>
     \layout { }
-%     \midi { }
+    %     \midi { }
   }
   \score {
     \unfoldRepeats {
-    <<
-      \scoreFChoirPart
-      \scoreFBassoContinuoPart
-      \scoreFChordsPart
-    >>
+      <<
+        \scoreFChoirPart
+        \scoreFBassoContinuoPart
+        \scoreFChordsPart
+      >>
     }
-%     \layout { }
+    %     \layout { }
     \midi { }
   }
 }
@@ -1401,7 +1401,7 @@ scoreHChoirPart = <<
       \clef bass
       \new Voice = "bass" \scoreHBass
     }
-        \new Lyrics \with {
+    \new Lyrics \with {
       \override VerticalAxisGroup #'staff-affinity = #CENTER
     } \lyricsto "bass" {<<\scoreHVerse \new Lyrics{\scoreHVerseB}>> \scoreHVerseC}
   >>
@@ -1420,7 +1420,7 @@ scoreHBassoContinuoPart = <<
 scoreHChordsPart = \new ChordNames \scoreHChordNames
 
 \bookpart {
-    \header {
+  \header {
     title = "Ich will hier bei dir stehen"
     subsubtitle = "Choräle, Nr. 17, 4. Choral, Es-Dur"
     instrument = "Chor und B.C."
