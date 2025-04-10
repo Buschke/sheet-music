@@ -454,7 +454,7 @@ scoreEVerseC = \lyricmode {
       \new Staff \with {
         \consists "Ambitus_engraver"
       } { \scoreEMelody }
-      \addlyrics { \scoreEVerse }
+      \addlyrics { <<\scoreEVerse \new Lyrics{\scoreEVerseB}>>\scoreEVerseC }
     >>
     \layout { }
   }
@@ -575,7 +575,7 @@ scoreFChoirPart = \new ChoirStaff <<
   >>
   \new Lyrics \with {
     \override VerticalAxisGroup.staff-affinity = #CENTER
-  } \lyricsto "soprano" \scoreFVerse
+  } \lyricsto "soprano" {<<\scoreFVerse \new Lyrics{\scoreFVerseB}>>\scoreFVerseC}
   \new Staff \with {
     midiInstrument = "choir aahs"
     instrumentName = \markup \center-column { "Tenor" "Baß" }
@@ -670,7 +670,7 @@ scoreGVerseC = \lyricmode {
       \new Staff \with {
         \consists "Ambitus_engraver"
       } { \scoreGMelody }
-      \addlyrics { \scoreGVerse }
+      \addlyrics { <<\scoreGVerse \new Lyrics{\scoreGVerseB}>> \scoreGVerseC }
     >>
     \layout { }
   }
@@ -788,7 +788,7 @@ scoreHChoirPart = \new ChoirStaff <<
   >>
   \new Lyrics \with {
     \override VerticalAxisGroup.staff-affinity = #CENTER
-  } \lyricsto "soprano" \scoreHVerse
+  } \lyricsto "soprano" {<<\scoreHVerse \new Lyrics{\scoreHVerseB}>> \scoreHVerseC}
   \new Staff \with {
     midiInstrument = "choir aahs"
     instrumentName = \markup \center-column { "Tenor" "Baß" }
@@ -891,7 +891,7 @@ scoreIVerseC = \lyricmode {
       \new Staff \with {
         \consists "Ambitus_engraver"
       } { \scoreIMelody }
-      \addlyrics { \scoreIVerse }
+      \addlyrics { <<\scoreIVerse \new Lyrics{\scoreIVerseB}>> \scoreIVerseC }
     >>
     \layout { }
   }
@@ -1007,7 +1007,7 @@ scoreJChoirPart = \new ChoirStaff <<
   >>
   \new Lyrics \with {
     \override VerticalAxisGroup.staff-affinity = #CENTER
-  } \lyricsto "soprano" \scoreJVerse
+  } \lyricsto "soprano"  {<<\scoreJVerse \new Lyrics{\scoreJVerseB}>> \scoreJVerseC }
   \new Staff \with {
     midiInstrument = "choir aahs"
     instrumentName = \markup \center-column { "Tenor" "Baß" }
@@ -1149,25 +1149,53 @@ scoreLBassFiguresPart = \new FiguredBass \scoreLFigBass
   }
 }
 
+%%%%%%%%%%%%%%%%%%%%%
+% Nr. 32 (7. Choral, p. 163) Mir hat die Welt trüglich gericht't, **B-Dur**, CF
+%%%%%%%%%%%%%%%%%%%%%
+
+globalM = {
+  \key bf \major
+  %   \numericTimeSignature
+  \time 4/4
+  \tempo "Andante" 4=60
+}
+
 scoreMChordNames = \chordmode {
-  \global
+  \globalM
   \germanChords
   % Chords follow here.
-
+  \partial 4
 }
 
 scoreMMelody = \relative c'' {
-  \global
+  \globalM
   % Music follows here.
-
+  \partial 4
+  bf4
+  bf f' f(ef8 d c4) d ef8(d) c4 bf\fermata
+  bf c d ef c f g f\fermata
+  d d8(ef) f4 ef d8(c) bf( c d c) c4\fermata
+  d bf8(c) d4 ef\fermata
+  d c d ef\fermata
+  d c bf f'4.(ef8 d4) ef8(d) c2 bf4\fermata
+  \bar "|."
 }
 
 scoreMVerse = \lyricmode {
   % Lyrics follow here.
-
+  Mir hat die Welt trüg -- lich ge -- richt'
+  mit Lü -- gen und mit fal -- schem Gdicht,
+  viel Netz und heim -- lich Stri -- cke,
+  Herr, nimm mein wahr in die -- ser Gfahr,
+  bhüt mich für fal -- schen Tü -- cken.
 }
 
 \bookpart {
+  \header {
+    title = "Mir hat die Welt trüglich gericht't"
+    subsubtitle = "Nr. 32, 7. Choral, B-Dur"
+    instrument = "C.F. (und B.C.)"
+  }
   \score {
     <<
       \new ChordNames \scoreMChordNames
@@ -1180,39 +1208,78 @@ scoreMVerse = \lyricmode {
   }
 }
 
-scoreNSoprano = \relative c'' {
-  \global
-  % Music follows here.
+%%%%%%%%%%%%%%%%%%%%%
+% Nr. 32 (7. Choral, p. 163) Mir hat die Welt trüglich gericht't, **B-Dur**, Chor
+%%%%%%%%%%%%%%%%%%%%%
 
+globalN = \globalM
+
+scoreNSoprano = \relative c'' {
+  \globalM
+  % Music follows here.
+  \scoreMMelody
 }
 
 scoreNAlto = \relative c' {
-  \global
+  \globalN
   % Music follows here.
-
+  \partial 4
+  f4
+  g a8(bf) c4(bf8 a g4) f bf a f\fermata
+  g fs f e8(f) g4 f4. e8 a4\fermata
+  a g f c' bf d,(g) f\fermata
+  f g8(a) b4 c\fermata
+  bf bf af g\fermata
+  f f8(ef) d(ef) f(g a2) g4 g(f8 ef) d4\fermata
+  \bar "|."
 }
 
 scoreNTenor = \relative c' {
-  \global
+  \globalN
   % Music follows here.
-
+  \partial 4
+  d4
+  d8(ef) f4 f(g8 f ef4) f bf, f'8(ef) d4\fermata
+  ef ef d g, g8(a) bf(c) d(c) c4\fermata
+  c bf8(c) d(ef) f4 f g(bf,) a\fermata
+  bf8(a) g4 f g\fermata
+  g'8(f) ef4 f bf,\fermata
+  bf a bf c2. bf4 bf(a) f\fermata
+  \bar "|."
 }
 
 scoreNBass = \relative c {
-  \global
+  \globalN
   % Music follows here.
-
+  \partial 4
+  bf'8(a)
+  g4 d a'(bf bf) af g8(ef) f4 bf,\fermata
+  ef a, b c8(d) ef4 d8(c) bf(c) f4\fermata
+  fs g af a bf8(a) g(f e4) f\fermata
+  bf, ef d c\fermata
+  g' af8(g) f4 ef\fermata
+  bf f' g a8(g f4 fs) g8(f) e4(f) bf,\fermata
+  \bar "|."
 }
 
 scoreNVerse = \lyricmode {
   % Lyrics follow here.
-
+  \scoreMVerse
 }
 
 scoreNFigBass = \figuremode {
-  \global
+  \globalN
+  \override Staff.BassFigureAlignmentPositioning #'direction = #DOWN
   % Figures follow here.
-
+  \partial 4
+  s4
+  <5>8 <6> <5> <6> <6>4 <4>8 <3> <6 4 2>4 <6 4 2> <6>8 <7 5> s4 s\fermata
+  s <6/ 5> <6 5!> s <6> <6> <6 5>8 <_!> s4\fermata
+  <6 5> <5>8 <6> <6>4 <6 5> s s <7 5>8 <6> s4\fermata
+  s <5 3>8 <6 4> <6!>4 s\fermata
+  <_-> <5> <6 _-> s\fermata
+  s s <5>8 <6> <6>8 <6> <8> <7> <6 5>4 <6>8 <6 4 2> <6 5>4 s s\fermata
+  \bar "|."
 }
 
 scoreNChoirPart = \new ChoirStaff <<
@@ -1249,6 +1316,11 @@ scoreNChoirPart = \new ChoirStaff <<
 scoreNBassFiguresPart = \new FiguredBass \scoreNFigBass
 
 \bookpart {
+  \header {
+    title = "Mir hat die Welt trüglich gericht't"
+    subsubtitle = "Nr. 32, 7. Choral, B-Dur"
+    instrument = "C.F. (und B.C.)"
+  }
   \score {
     <<
       \scoreNChoirPart
@@ -1258,6 +1330,18 @@ scoreNBassFiguresPart = \new FiguredBass \scoreNFigBass
   }
 }
 
+%%%%%%%%%%%%%%%%%%%%%
+% Nr. 37 (8. Choral, p. 175) Wer hat dich so geschlagen, F-Dur, CF
+%%%%%%%%%%%%%%%%%%%%%
+
+globalO = {
+  \key f \major
+  %   \numericTimeSignature
+  \time 4/4
+  \tempo "Andante" 4=60
+}
+
+
 scoreOChordNames = \chordmode {
   \global
   \germanChords
@@ -1266,17 +1350,35 @@ scoreOChordNames = \chordmode {
 }
 
 scoreOMelody = \relative c'' {
-  \global
+  \globalO
   % Music follows here.
-
+  \partial 4
+  a4
+  f g a8(bf) c4 bf2 a4\fermata
+  a8(bf) c4 c g a8(g) f2 e4\fermata
+  c f g a8(bf16 c) b8(a) g2.\fermata
+  a4 f g a8(bf) c4 bf2 a4\fermata
+  a8(bf) c4 c g a8(g) f2 e4\fermata
+  c f g a g8(a16 bf) a4 g f\fermata
+  \bar "|."
 }
 
 scoreOVerse = \lyricmode {
   % Lyrics follow here.
-
+  Wer hat dich so ge -- schla -- gen,
+  mein Heil, und dich mit Pla -- gen
+  so ü -- bel zu -- ge -- richt'?
+  Du bist ja nicht ein Sün -- der,
+  wie wir und uns -- re Kin -- der,
+  von Miss -- e -- ta -- ten weißt du nicht.
 }
 
 \bookpart {
+  \header {
+    title = "Wer hat dich so geschlagen"
+    subsubtitle = "Choräle, Nr. 37, 8. Choral, F-Dur"
+    instrument = "C.F. (und B.C.)"
+  }
   \score {
     <<
       \new ChordNames \scoreOChordNames
@@ -1289,39 +1391,72 @@ scoreOVerse = \lyricmode {
   }
 }
 
-scorePSoprano = \relative c'' {
-  \global
-  % Music follows here.
+%%%%%%%%%%%%%%%%%%%%%
+% Nr. 37 (8. Choral, p. 175) Wer hat dich so geschlagen, F-Dur, Chor
+%%%%%%%%%%%%%%%%%%%%%
 
+globalP = \globalO
+
+scorePSoprano = \relative c'' {
+  \globalP
+  % Music follows here.
+  \scoreOMelody
 }
 
 scorePAlto = \relative c' {
-  \global
+  \globalP
   % Music follows here.
-
+  \partial 4
+  f4
+  d e f8(g) a4 a(g) f\fermata
+  f f8(e) f(g) e(d) c4 c(b) c\fermata
+  e d c c d e2.\fermata
+  e4 d c c d d(g) fs\fermata
+  f f f e8(d) c4 c(b) c\fermata
+  g c bf a8(c) f4 f e c\fermata
+  \bar "|."
 }
 
 scorePTenor = \relative c' {
-  \global
+  \globalP
   % Music follows here.
-
+  \partial 4
+  c4
+  d c8(bf) a4. g8 f4(c') c\fermata
+  c c c c c8(b) a(g f4) g\fermata
+  bf a g f f c'2.\fermata
+  a4 a g f8(g) a4 g8(a bf c) d4\fermata
+  d c8(bf) c(d) e4 f f,8(a g f) g4\fermata
+  e f8(c') d(e) f(c) bf(f) c'4. bf8 a4\fermata
+  \bar "|."
 }
 
 scorePBass = \relative c {
-  \global
+  \globalP
   % Music follows here.
-
+  \partial 4
+  f4
+  bf a8(g) f4. e8 d4(e) f\fermata
+  f8(g) a4 a,8(bf) c4 a d2 c4\fermata
+  c d e f bf, c2.\fermata
+  cs4 d e f fs g(g,) d'\fermata
+  d' a8(g) a(bf) c4 f,8(e) d(c d4) c\fermata
+  bf a g f d' c8(bf) c4 f,\fermata
+  \bar "|."
 }
 
 scorePVerse = \lyricmode {
   % Lyrics follow here.
-
+  \scoreOVerse
 }
 
-scorePFigBass = \figuremode {
-  \global
-  % Figures follow here.
 
+scorePFigBass = \figuremode {
+  \globalP
+  \override Staff.BassFigureAlignmentPositioning #'direction = #DOWN
+  % Figures follow here.
+  \partial 4
+  s4 s <7 5> s s
 }
 
 scorePChoirPart = \new ChoirStaff <<
@@ -1358,6 +1493,11 @@ scorePChoirPart = \new ChoirStaff <<
 scorePBassFiguresPart = \new FiguredBass \scorePFigBass
 
 \bookpart {
+  \header {
+    title = "Wer hat dich so geschlagen"
+    subsubtitle = "Choräle, Nr. 37, 8. Choral, F-Dur"
+    instrument = "C.F. (und B.C.)"
+  }
   \score {
     <<
       \scorePChoirPart
@@ -1367,25 +1507,56 @@ scorePBassFiguresPart = \new FiguredBass \scorePFigBass
   }
 }
 
+%%%%%%%%%%%%%%%%%%%%%
+% Nr. 40 (9. Choral, p. 185) Bin ich gleich von dir gewichen, **A-Dur**, CF
+%%%%%%%%%%%%%%%%%%%%%
+
+globalQ = {
+  \key a \major
+  %   \numericTimeSignature
+  \time 4/4
+  \tempo "Andante" 4=60
+}
+
 scoreQChordNames = \chordmode {
-  \global
+  \globalQ
   \germanChords
   % Chords follow here.
 
 }
 
 scoreQMelody = \relative c'' {
-  \global
+  \globalQ
   % Music follows here.
-
+  cs4 d e e d cs b b\fermata
+  cs d e d8(cs) b4. a8 a2\fermata
+  cs4 d e e d cs b b \fermata
+  cs d e d8(cs) b4. a8 a2\fermata
+  b4 cs d8(cs) d(e) cs4cs b2\fermata
+  d4 e fs e8(fs16 g) fs4 e8(d) d2\fermata
+  cs4 d e e d cs b b\fermata
+  cs d e a,8(b) cs4 b8(a) a4 a\fermata
+  \bar "|."
 }
 
 scoreQVerse = \lyricmode {
   % Lyrics follow here.
-
+  Bin ich gleich von dir ge -- wi -- chen,
+  stell ich mich doch wie -- der ein,
+  hat uns doch dein Sohn ver -- gli -- chen
+  durch sein Angst und To -- des -- pein.
+  Ich ver -- leug -- ne nicht die Schuld,
+  a -- ber dei -- ne Gnad und Huld
+  ist viel grö -- ßer als die Sün -- de,
+  die ich stets in mir be -- fin -- de.
 }
 
 \bookpart {
+  \header {
+    title = "Bin ich gleich von dir gewichen"
+    subsubtitle = "Nr. 40, 9. Choral, A-Dur"
+    instrument = "C.F. (und B.C.)"
+  }
   \score {
     <<
       \new ChordNames \scoreQChordNames
@@ -1398,39 +1569,78 @@ scoreQVerse = \lyricmode {
   }
 }
 
-scoreRSoprano = \relative c'' {
-  \global
-  % Music follows here.
+%%%%%%%%%%%%%%%%%%%%%
+% Nr. 40 (9. Choral, p. 185) Bin ich gleich von dir gewichen, **A-Dur**, Chor
+%%%%%%%%%%%%%%%%%%%%%
 
+globalR = \globalQ
+
+scoreRSoprano = \relative c'' {
+  \globalR
+  % Music follows here.
+  \scoreQMelody
 }
 
 scoreRAlto = \relative c' {
-  \global
+  \globalR
   % Music follows here.
-
+  a'8(gs) fs4 b8(a) gs4 fs e8(fs) gs4 gs\fermata
+  a8(gs) a4 a8(gs) a4 a8(fs) gs4 e2\fermata
+  a8(gs) fs4 b8(a) gs4 fs e8(fs) gs4 gs\fermata
+  a8(gs) a4 a8(gs) a4 a8(fs) gs4 e2\fermata
+  gs4 as b8(as) b4 b as fs2\fermata
+  b4 b8(a) a4 b a g8(fs) fs2\fermata
+  e4 a gs b8(a) a(gs) a4 e8(fs) gs4\fermata
+  a gs8(fs) e(gs) a4 a gs e e\fermata
+  \bar "|."
 }
 
 scoreRTenor = \relative c' {
-  \global
+  \globalR
   % Music follows here.
-
+  fs8(e) d(cs) b4 cs8(b) a(b) cs(d) e4 e\fermata
+  e a,8(b) cs(d) e4 fs e8(d) cs2\fermata
+  e4 d8(cs) b4 cs8(b) a(b) cs(d) e4 e\fermata
+  e a,8(b) cs(d) e4 fs e8(d) cs2\fermata
+  e4 e fs e8(d) g4 fs8(e) d2\fermata
+  fs4 e d8(cs) d4 d8(b) cs4 a2\fermata
+  a4 b8(cs) b4 cs d8(e) fs4 gs e\fermata
+  e d cs8(d) e(fs) e4 d8(cs) cs 4 cs\fermata
+  \bar "|."
 }
 
 scoreRBass = \relative c {
-  \global
+  \globalR
   % Music follows here.
-
+  fs4 b8(a) gs(fs) e4 fs8(gs) a4 e e\fermata
+  a fs cs b8(a) d4 e a,2\fermata
+  a'4 b8(a) gs(fs) e4 fs8(gs) a4 e e\fermata
+  a fs cs b8(a) d4 e a,2\fermata
+  e'4 d8(cs) b4 g'e fs b,2\fermata
+  b'4 cs d g, a a, d2\fermata
+  a'4 gs8(fs) gs4 cs fs, e8(ds) e4 e\fermata
+  a,8(gs) a(b) cs(b) cs(d) e4 e a, a\fermata
+  \bar "|."
 }
 
 scoreRVerse = \lyricmode {
   % Lyrics follow here.
-
+  \scoreQVerse
 }
 
 scoreRFigBass = \figuremode {
-  \global
+  \globalR
+  \override Staff.BassFigureAlignmentPositioning #'direction = #DOWN
   % Figures follow here.
-
+  <5>4 s <6> <6>8 <5> <6>4 <5>8 <6> s4 s\fermata
+  s <6> <6> <6> <6 5> s s2\fermata
+  <8>8 <7> <5>4 <6> <6>8 <5> <6>4 <5>8 <6> s4 s\fermata
+  s <6> <6> <6> <6 5> s s2\fermata
+  s4 <7 5 2> s s <6 5 _!> <_+> s2\fermata
+  s4 <7>8 <6> s4 <6 5> <6 4> <5 3> s2\fermata
+  s4 <7 5> <6> <7>8 <6> <6>4 <6 4 2> <5 4> <3>\fermata
+  s <4 7>8 <5> <7>4 <6>8 <6 5>8 <6 4>4 <5 3> s s\fermata
+  \bar "|."
 }
 
 scoreRChoirPart = \new ChoirStaff <<
@@ -1467,6 +1677,11 @@ scoreRChoirPart = \new ChoirStaff <<
 scoreRBassFiguresPart = \new FiguredBass \scoreRFigBass
 
 \bookpart {
+  \header {
+    title = "Bin ich gleich von dir gewichen"
+    subsubtitle = "Nr. 40, 9. Choral, A-Dur"
+    instrument = "Chor und B.C."
+  }
   \score {
     <<
       \scoreRChoirPart
@@ -1476,70 +1691,184 @@ scoreRBassFiguresPart = \new FiguredBass \scoreRFigBass
   }
 }
 
+%%%%%%%%%%%%%%%%%%%%%
+% Nr. 44 (10. Choral, p. 197) Befiehl du deine Wege, **D-Dur**, CF
+%%%%%%%%%%%%%%%%%%%%%
+
+globalS = {
+  \key d \major
+  %   \numericTimeSignature
+  \time 4/4
+  \tempo "Andante" 4=60
+}
+
 scoreSChordNames = \chordmode {
-  \global
+  \globalS
   \germanChords
   % Chords follow here.
-
+  \repeat volta 2 {
+    \partial 4
+    d
+    g s s s s s d\fermata
+    s b:min s s s b2.:min\fermata
+  }
+  \partial 4
+  b4:min
+  s s s s s s s\fermata
+  d g s s s s2.\fermata
+  s4 a s s s s s a\fermata
+  d s s s a d2.\fermata
+  \bar "|."
 }
 
 scoreSMelody = \relative c'' {
-  \global
+  \globalS
   % Music follows here.
-
+  \repeat volta 2 {
+    \partial 4
+    fs,4 b a g fs e2 fs4\fermata
+    cs' d d cs8(b) cs4 b2.
+  }
+  \partial 4
+  d4
+  cs8(b) a4 b cs d2 d4\fermata
+  a b a g g fs2.\fermata
+  d'4 cs8(d) e4 d cs b2 cs4\fermata
+  fs, g fs e a fs2.\fermata
+  \bar "|."
 }
 
 scoreSVerse = \lyricmode {
   % Lyrics follow here.
+  Be -- fiehl du dei -- ne We -- ge
+  und was dein Her -- ze kränkt
 
 }
 
+scoreSVerseB = \lyricmode {
+  % Lyrics follow here.
+  der al -- ler -- treus -- ten Pfle -- ge
+  des, der den Him -- mel lenkt,
+}
+
+scoreSVerseC = \lyricmode {
+  % Lyrics follow here.
+  der Wol -- ken, Luft und Win -- den
+  gibt We -- ge, Lauf und Bahn,
+  der wird auch We -- ge fin -- den,
+  da dein Fuß ge -- hen kann.
+}
+
 \bookpart {
+  \header {
+    title = "Befiehl du deine Wege"
+    subsubtitle = "Choräle, Nr. 44, 10. Choral, D-Dur, CF"
+    instrument = "C.F. (und B.C.)"
+  }
   \score {
     <<
       \new ChordNames \scoreSChordNames
       \new Staff \with {
         \consists "Ambitus_engraver"
       } { \scoreSMelody }
-      \addlyrics { \scoreSVerse }
+      \addlyrics { <<\scoreSVerse \new Lyrics {\scoreSVerseB}>> \scoreSVerseC }
     >>
     \layout { }
   }
 }
 
-scoreTSoprano = \relative c'' {
-  \global
-  % Music follows here.
+%%%%%%%%%%%%%%%%%%%%%
+% Nr. 44 (10. Choral, p. 197) Befiehl du deine Wege, **D-Dur**, Chor
+%%%%%%%%%%%%%%%%%%%%%
 
+globalT = \globalS
+
+scoreTSoprano = \relative c'' {
+  \globalT
+  % Music follows here.
+  \scoreSMelody
 }
 
 scoreTAlto = \relative c' {
-  \global
+  \globalT
   % Music follows here.
-
+  \repeat volta 2 {
+    \partial 4
+    d4
+    d d d8(e) fs(d) d4(cs) d\fermata
+    e d8(e) fs4 fs4. e8 d2.
+  }
+  \partial 4
+  fs4 e8(g) fs(e) d4 g g(fs8 e) fs4\fermata
+  fs g fs fs e ds2.\fermata
+  e4 e e fs8(gs) a4 a(gs) a\fermata
+  d,8(cs) b(cs) d4 d8(b) cs4 d2.\fermata
+  \bar "|."
 }
 
 scoreTTenor = \relative c' {
-  \global
+  \globalT
   % Music follows here.
-
+  \repeat volta 2 {
+    \partial 4
+    a4
+    g a b8(a) a4 b(a) a\fermata
+    as b b b as b2.
+  }
+  \partial 4
+  b8(a) g(b) d(cs) b(a) g(a) b4(a8 g) a4\fermata
+  d d c b b b2.\fermata
+  b4 a b a8(b) cs(a) fs'4(e) e\fermata
+  a, g a a a a2.\fermata
+  \bar "|."
 }
 
 scoreTBass = \relative c {
-  \global
+  \globalT
   % Music follows here.
-
-}
+  \repeat volta 2 {
+    \partial 4
+    d4 g fs b,8(cs) d4 g,(a) d\fermata
+    cs b8(cs) d(e) fs4 fs, b2.
+  }
+  \partial 4
+  b4 e fs g8(fs) e4 d2 d4\fermata
+  d g8(fs) e(ds) e(fs) g(a) b2.\fermata
+  gs4 a gs fs e ds(e) a,\fermata
+  d e fs8(g) a4 a, d2.\fermata
+  \bar "|."}
 
 scoreTVerse = \lyricmode {
   % Lyrics follow here.
+  \scoreSVerse
+}
 
+scoreTVerseB = \lyricmode {
+  % Lyrics follow here.
+  \scoreSVerseB
+}
+
+scoreTVerseC = \lyricmode {
+  % Lyrics follow here.
+  \scoreSVerseC
 }
 
 scoreTFigBass = \figuremode {
-  \global
+  \globalS
+  \override Staff.BassFigureAlignmentPositioning #'direction = #DOWN
   % Figures follow here.
-
+  \repeat volta 2 {
+    \partial 4
+    s4 s <6> <6>8 <6 5> <9> <8> <6 5>4 s s\fermata
+    <6/> s <6> <5 4> <_+> s2.\fermata
+  }
+  \partial 4
+  s4
+  <6>8 <5> <6> <5> <5>4 <6> <6 4>4 <5 3>8 <4 2> <5 3>4\fermata
+  s s <6! 4 2> <9> <6> <_+>2.\fermata
+  <6 5>4 s <6> <6> <6 4> <6 5> <_+> s\fermata
+  s <7>8 <6> <6>4 <5 4> <3> s2.\fermata
+  \bar "|."
 }
 
 scoreTChoirPart = \new ChoirStaff <<
@@ -1557,7 +1886,7 @@ scoreTChoirPart = \new ChoirStaff <<
   >>
   \new Lyrics \with {
     \override VerticalAxisGroup.staff-affinity = #CENTER
-  } \lyricsto "soprano" \scoreTVerse
+  } \lyricsto "soprano" {<<\scoreTVerse \new Lyrics{\scoreTVerseB}>> \scoreTVerseC}
   \new Staff \with {
     midiInstrument = "choir aahs"
     instrumentName = \markup \center-column { "Tenor" "Baß" }
@@ -1576,6 +1905,11 @@ scoreTChoirPart = \new ChoirStaff <<
 scoreTBassFiguresPart = \new FiguredBass \scoreTFigBass
 
 \bookpart {
+  \header {
+    title = "Befiehl du deine Wege"
+    subsubtitle = "Choräle, Nr. 44, 10. Choral, D-Dur, CF"
+    instrument = "Chor und B.C."
+  }
   \score {
     <<
       \scoreTChoirPart
@@ -1585,25 +1919,56 @@ scoreTBassFiguresPart = \new FiguredBass \scoreTFigBass
   }
 }
 
+%%%%%%%%%%%%%%%%%%%%%
+% Nr. 46 (11. Choral, p. 203) Wie wunderbarlich ist doch diese Strafe, h-Moll, C.F.
+%%%%%%%%%%%%%%%%%%%%%
+
+globalU = {
+  \key b \minor
+  %   \numericTimeSignature
+  \time 4/4
+  \tempo "Andante" 4=60
+}
+
 scoreUChordNames = \chordmode {
-  \global
+  \globalU
   \germanChords
   % Chords follow here.
-
+  \partial 4
+  s4
+  e:min s s fs:min s s b:min b:min s b:min fs\fermata
+  fs:min b:min a d8 d:maj7 g4 e:min e:min b:min s s a:min d\fermata
+  d s g s d d s g s s e:min b\fermata
+  b:min s s s fs b2.\fermata
+  \bar "|."
 }
 
 scoreUMelody = \relative c'' {
-  \global
+  \globalU
   % Music follows here.
-
+  \partial 4
+  b4
+  b b as fs b cs d d e(d) cs\fermata
+  cs d e fs8(e) d4 g g fs8(e) fs4 e2 d4\fermata
+  d c b a8(g) fs(g) a4 a b a g2 fs4\fermata
+  fs' e d8(cs) cs2 b2.\fermata
+  \bar "|."
 }
 
 scoreUVerse = \lyricmode {
   % Lyrics follow here.
-
+  Wie wun -- der -- bar -- lich ist doch die -- se Stra -- fe,
+  der gu -- te Hir -- te lei -- det für die Scha -- fe,
+  die Schuld be -- zahlt der Her -- re, der Ge -- rech -- te,
+  für sei -- ne Knech -- te.
 }
 
 \bookpart {
+  \header {
+    title = "Wie wunderbarlich ist doch diese Strafe"
+    subsubtitle = "Choräle, Nr. 46, 11. Choral, h-Moll"
+    instrument = "C.F. (und B.C.)"
+  }
   \score {
     <<
       \new ChordNames \scoreUChordNames
@@ -1616,40 +1981,70 @@ scoreUVerse = \lyricmode {
   }
 }
 
-scoreVSoprano = \relative c'' {
-  \global
-  % Music follows here.
+%%%%%%%%%%%%%%%%%%%%%
+% Nr. 46 (11. Choral, p. 203) Wie wunderbarlich ist doch diese Strafe, h-Moll, C.F.
+%%%%%%%%%%%%%%%%%%%%%
 
+globalV = \globalU
+
+scoreVSoprano = \relative c'' {
+  \globalV
+  % Music follows here.
+  \scoreUMelody
 }
 
 scoreVAlto = \relative c' {
-  \global
+  \globalV
   % Music follows here.
-
+  \partial 4
+  a'4
+  g gs fs cs b fs' fs b cs(b) as\fermata
+  fs fs a a b8(a) g(a) b4 b b e,8(fs g4) fs\fermata
+  b e, d e d8(e) fs4 fs g fs  fs8(ds e4) d\fermata
+  b' b8(as) b4 b8(gs a4) fs2.\fermata
+  \bar "|."
 }
 
 scoreVTenor = \relative c' {
-  \global
+  \globalV
   % Music follows here.
-
+  \partial 4
+  fs4
+  e d cs as e' e d8(e) fs4 g(fs) fs\fermata
+  as, b cs d8(cs) b4 b e d8(cs) b4 d(cs) a\fermata
+  fs gs8(as) b4 e, a d d d8(e) fs4 b,2 b4\fermata
+  d cs fs, fs'4.(e8) ds2.\fermata
+  \bar "|."
 }
 
 scoreVBass = \relative c {
-  \global
+  \globalV
   % Music follows here.
-
+  \partial 4
+  ds4
+  e es fs fs gs as b b as(b) fs\fermata
+  fs b a d, g8(fs) e(fs) g(a) b4 a8(gs) a2 d,4\fermata
+  d e8(fs) g4 c, d d'8(c) b(a) g(fs) e(ds) e2 b4\fermata
+  b cs d8(e) fs2 b2.\fermata
+  \bar "|."
 }
 
 scoreVVerse = \lyricmode {
   % Lyrics follow here.
-
+  \scoreUVerse
 }
 
 scoreVFigBass = \figuremode {
-  \global
+  \globalV
+  \override Staff.BassFigureAlignmentPositioning #'direction = #DOWN
   % Figures follow here.
-
-}
+  \partial 4
+  <6 5>4
+  s <7 5> <_+> s <6> <6 5> s s <7 5> s <_+>\fermata
+  s s s <8>8 <7> s4 s <6> s <6 4 2> <5 4> <3> s\fermata
+  s <6> s <6>8 <5> s4 s <7 5> s <6 4 2> <9> <8> <_+>\fermata
+  <_!> <7>8 <6/> <6>4 <5 4> <_+> <_+>2.\fermata
+  \bar "|."}
 
 scoreVChoirPart = \new ChoirStaff <<
   \new Staff \with {
@@ -1685,6 +2080,11 @@ scoreVChoirPart = \new ChoirStaff <<
 scoreVBassFiguresPart = \new FiguredBass \scoreVFigBass
 
 \bookpart {
+  \header {
+    title = "Wie wunderbarlich ist doch diese Strafe"
+    subsubtitle = "Choräle, Nr. 46, 11. Choral, h-Moll"
+    instrument = "Chor und B.C."
+  }
   \score {
     <<
       \scoreVChoirPart
@@ -1694,64 +2094,202 @@ scoreVBassFiguresPart = \new FiguredBass \scoreVFigBass
   }
 }
 
+%%%%%%%%%%%%%%%%%%%%%
+% O Haupt, voll Blut und Wunden, C.F.
+%%%%%%%%%%%%%%%%%%%%%
+
+globalW = {
+  \key f \major
+  %   \numericTimeSignature
+  \time 4/4
+  \tempo "Andante" 4=60
+}
+
 scoreWChordNames = \chordmode {
-  \global
+  \globalW
   \germanChords
   % Chords follow here.
 
 }
 
 scoreWMelody = \relative c'' {
-  \global
+  \globalW
   % Music follows here.
-
+  \repeat volta 2 {
+    \partial 4
+    a4
+    d c bf a g2 a4\fermata
+    e' f f e8(d) e4 d2.
+  }
+  \partial 4
+  f4
+  e8(d) c4 d e f2 f4\fermata
+  c d c bf8(a) bf4 a2.\fermata
+  f'4 e8(f) g4 f e d2 e4\fermata
+  a, bf a g c a2.\fermata
+  \bar "|."
 }
 
-scoreWVerse = \lyricmode {
+scoreWVerseOneA = \lyricmode {
+  \set stanza = "1."
   % Lyrics follow here.
-
+  O Haupt voll Blut und Wun -- den,
+  voll Schmerz und vol -- ler Hohn,
 }
+
+scoreWVerseOneB = \lyricmode {
+  % Lyrics follow here.
+  o Haupt, zum Spott ge -- bun -- den
+  mit ei -- ner Dor -- nen -- kron,
+}
+
+scoreWVerseOneC = \lyricmode {
+  % Lyrics follow here.
+  o Haupt, sonst schön ge -- zie -- ret
+  mit höchs -- ter Ehr und Zier,
+  jetzt a -- ber hoch schimp -- fie -- ret
+  ge -- grü -- ßet seist du mir!
+}
+
+scoreWVerseTwoA = \lyricmode {
+  \set stanza = "2."
+  % Lyrics follow here.
+  Du ed -- les An -- ge -- sich -- te,
+  da -- vor sonst schrickt und scheut
+}
+
+scoreWVerseTwoB = \lyricmode {
+  % Lyrics follow here.
+  das gro -- ße Welt -- ge -- wich -- te:
+  wie bist du so be -- speit,
+  wie bist du so er -- blei -- chet!
+}
+
+scoreWVerseTwoC = \lyricmode {
+  % Lyrics follow here.
+  Wer hat dein Au -- gen -- licht,
+  dem sonst kein Licht nicht glei -- chet,
+  so schänd -- lich zu -- ge -- richt’?
+}
+
+ scoreWVerse = \lyricmode {
+   % Lyrics follow here.
+  \scoreWVerseOneA
+ }
 
 \bookpart {
+  \header {
+    title = "O Haupt, voll Blut und Wunden"
+    instrument = "C.F. (und B.C.)"
+  }  
   \score {
     <<
       \new ChordNames \scoreWChordNames
       \new Staff \with {
         \consists "Ambitus_engraver"
       } { \scoreWMelody }
-      \addlyrics { \scoreWVerse }
+  \addlyrics { <<\scoreWVerseOneA \new Lyrics {\scoreWVerseOneB} >> \scoreWVerseOneC}
+  \addlyrics { <<\scoreWVerseTwoA \new Lyrics {\scoreWVerseTwoB} >> \scoreWVerseTwoC}
     >>
     \layout { }
   }
 }
 
-scoreXSoprano = \relative c'' {
-  \global
-  % Music follows here.
+%%%%%%%%%%%%%%%%%%%%%
+% O Haupt, voll Blut und Wunden, Chor
+%%%%%%%%%%%%%%%%%%%%%
 
+globalX = \globalW
+
+scoreXSoprano = \relative c'' {
+  \globalX
+  % Music follows here.
+  \scoreWMelody
 }
 
 scoreXAlto = \relative c' {
-  \global
+  \globalX
   % Music follows here.
-
+  \repeat volta 2 {
+    \partial 4
+    f4
+    f8(g) a4 d,8(e) f4 f(e) f\fermata
+    a a a a a8(g) f2.
+  }
+  \partial 4
+  a4
+  g g8(f) f4 bf bf(a8 g) a4\fermata
+  a a8(g) a4 g8(fs) g4 fs2.\fermata
+  g4 g c c c c(b) c\fermata
+  f,8(e) d(e) f4 f e f2.\fermata
 }
 
 scoreXTenor = \relative c' {
-  \global
+  \globalX
   % Music follows here.
-
+  \repeat volta 2 {
+    \partial 4
+    d4
+    d8(e) f4 g c, d(c) c\fermata
+    e e d d cs a2.
+  }
+  \partial 4
+  d8(c)
+  bf4 c c bf8(c) d4(c8 bf) c4\fermata
+  f8(ef) d4 d d d d2.\fermata
+  d4 c8(d) e4 f g a(g) g\fermata
+  c, bf c c8(bf16 a) g8(c) c2.\fermata
 }
 
 scoreXBass = \relative c {
-  \global
+  \globalX
   % Music follows here.
+  \repeat volta 2 {
+    \partial 4
+    d'8(c) bf4 a g f bf,(c) f\fermata
+    cs d8(e) f(g) a4 a, d2.
+  }
+  \partial 4
+  d4
+  g a bf8(a) g4 f2 f4\fermata
+  f bf fs g g, d'2.\fermata
+  b4 c c'8(b) a4 g f(g) c,\fermata
+  f g a8(bf) c4 c, f2.\fermata
+}
 
+scoreXVerseOneA = \lyricmode {
+  % Lyrics follow here.
+  \scoreWVerseOneA
+}
+
+scoreXVerseOneB = \lyricmode {
+  % Lyrics follow here.
+  \scoreWVerseOneB
+}
+
+scoreXVerseOneC = \lyricmode {
+  % Lyrics follow here.
+  \scoreWVerseOneC
+}
+
+scoreXVerseTwoA = \lyricmode {
+  % Lyrics follow here.
+  \scoreWVerseTwoA
+}
+
+scoreXVerseTwoB = \lyricmode {
+  % Lyrics follow here.
+  \scoreWVerseTwoB
+}
+
+scoreXVerseTwoC = \lyricmode {
+  % Lyrics follow here.
+  \scoreWVerseTwoC
 }
 
 scoreXVerse = \lyricmode {
   % Lyrics follow here.
-
+  \scoreXVerseOneA
 }
 
 scoreXFigBass = \figuremode {
@@ -1775,7 +2313,10 @@ scoreXChoirPart = \new ChoirStaff <<
   >>
   \new Lyrics \with {
     \override VerticalAxisGroup.staff-affinity = #CENTER
-  } \lyricsto "soprano" \scoreXVerse
+    } \lyricsto "soprano" { <<\scoreXVerseOneA \new Lyrics {\scoreXVerseOneB} >> \scoreXVerseOneC}
+    \new Lyrics \with {
+      \override VerticalAxisGroup #'staff-affinity = #CENTER
+    } \lyricsto "soprano" { <<\scoreXVerseTwoA \new Lyrics {\scoreXVerseTwoB} >> \scoreXVerseTwoC}
   \new Staff \with {
     midiInstrument = "choir aahs"
     instrumentName = \markup \center-column { "Tenor" "Baß" }
@@ -1794,6 +2335,10 @@ scoreXChoirPart = \new ChoirStaff <<
 scoreXBassFiguresPart = \new FiguredBass \scoreXFigBass
 
 \bookpart {
+  \header {
+    title = "O Haupt, voll Blut und Wunden"
+    instrument = "Chor und B.C."
+  }
   \score {
     <<
       \scoreXChoirPart
@@ -1803,70 +2348,186 @@ scoreXBassFiguresPart = \new FiguredBass \scoreXFigBass
   }
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Nr. 62 (13. Choral, p. 254) Wenn ich einmal soll scheiden, **a-Moll**, C.F.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+globalY = {
+  \key a \minor
+  %   \numericTimeSignature
+  \time 4/4
+  \tempo "Andante" 4=60
+}
+
 scoreYChordNames = \chordmode {
-  \global
+  \globalY
   \germanChords
   % Chords follow here.
-
+  \repeat volta 2 {
+    \partial 4
+    a4:min
+    f s s c s s a:min\fermata
+    s a:min s s s a2.:min
+  }
+  \partial 4
+  a4:min
+  s e:min s s s f a:min\fermata
+  c s s s d:min s a s\fermata
+  s g s s g s d g\fermata
+  c s c s s s a:min e\fermata
+  \bar "|."
 }
 
 scoreYMelody = \relative c'' {
-  \global
+  \globalY
   % Music follows here.
-
+  \repeat volta 2 {
+    \partial 4
+    e,4
+    a g f e d2 e4\fermata
+    b' c b8(c16 d) c4 b8(a) a2.
+  }
+  \partial 4
+  c4
+  b8(a) g4 a b c2 c4\fermata
+  g a g a8(g) f4 e2.\fermata
+  c'4 b8(c) d4 c b a2 b4\fermata
+  e, f e d g8(f) e2.\fermata
+  \bar "|."
 }
 
 scoreYVerse = \lyricmode {
   % Lyrics follow here.
+  Wenn ich ein -- mal soll schei -- den,
+  so schei -- de nicht von mir,
+}
 
+scoreYVerseB = \lyricmode {
+  % Lyrics follow here.
+  wenn ich den Tod soll lei -- den,
+  so tritt du denn her -- für,
+}
+
+scoreYVerseC = \lyricmode {
+  % Lyrics follow here.
+  wenn mir am al -- ler -- bängs -- ten
+  wird um das Her -- ze sein,
+  so reiß mich aus den Ängs -- ten
+  kraft dei -- ner Angst und Pein.
 }
 
 \bookpart {
+  \header {
+    title = "Wenn ich einmal soll scheiden (Nr. 62 (13. Choral), a-Moll)"
+    instrument = "C.F. (und B.C.)"
+  }
   \score {
     <<
       \new ChordNames \scoreYChordNames
       \new Staff \with {
         \consists "Ambitus_engraver"
       } { \scoreYMelody }
-      \addlyrics { \scoreYVerse }
+      \addlyrics { <<\scoreYVerse \new Lyrics {\scoreYVerseB}>> \scoreYVerseC }
     >>
     \layout { }
   }
 }
 
-scoreZSoprano = \relative c'' {
-  \global
-  % Music follows here.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Nr. 62 (13. Choral, p. 254) Wenn ich einmal soll scheiden, **a-Moll**, Chor
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+globalZ = \globalY
+
+scoreZSoprano = \relative c'' {
+  \globalZ
+  % Music follows here.
+  \scoreYMelody
 }
 
 scoreZAlto = \relative c' {
-  \global
+  \globalZ
   % Music follows here.
-
+  \repeat volta 2 {
+    \partial 4
+    c4
+    c8(d) e4 a,8(b) c4 c(b) c\fermata
+    e e f e d8(c) c2.
+  }
+  \partial 4
+  e4
+  fs e f f g(f) e\fermata
+  e e8(d) cs(d) e4 e8(d) d4(cs2)\fermata
+  a'4 g g g8(a) b(g) g4(fs) g\fermata
+  c, d c d e8(d) d4(c b)\fermata
+  \bar "|."
 }
 
 scoreZTenor = \relative c' {
-  \global
+  \globalZ
   % Music follows here.
-
+  \repeat volta 2 {
+    \partial 4
+    a4
+    a8(b) c4 d g, a(g) g\fermata
+    b a a a gs e2.
+  }
+  \partial 4
+  a8(g)
+  fs4 b c d c8(bf4 af8) g4\fermata
+  c8(b) a4 bf a a a2.\fermata
+  d4 d d8(e16 f) e4 d e(d) d\fermata
+  g, g g g8(a) bf4 b(a gs)\fermata
+  \bar "|."
 }
 
 scoreZBass = \relative c {
-  \global
+  \globalZ
   % Music follows here.
-
+  \repeat volta 2 {
+    \partial 4
+    a'8(g)
+    f4 e d c fs,(g) a\fermata
+    gs a d e e a,2.
+  }
+  a'4 ds e ef d e(f) a,\fermata
+  a f e8(d) cs4 d a2.\fermata
+  fs'4 g8(a) b4 e,8(fs) g4 cs,(d) g,\fermata
+  c b c bf8(a) g4 gs(a e')\fermata
+  \bar "|."
 }
 
 scoreZVerse = \lyricmode {
   % Lyrics follow here.
+  \scoreYVerse
+}
 
+scoreZVerseB = \lyricmode {
+  % Lyrics follow here.
+  \scoreYVerseB
+}
+
+scoreZVerseC = \lyricmode {
+  % Lyrics follow here.
+  \scoreYVerseC
 }
 
 scoreZFigBass = \figuremode {
-  \global
+  \globalZ
+  \override Staff.BassFigureAlignmentPositioning #'direction = #DOWN
   % Figures follow here.
-
+  \repeat volta 2 {
+    \partial 4
+    s4 s <6> <7>8 <6> s4 <6 5> s s\fermata
+    <6> s <6 5> <6 4> <5_+> s2.
+  }
+  \partial 4
+  s4
+  <6>8 <5> s4 <6 4 2> <6> <6 5-> s s\fermata
+  s <7>8 <6> <6 5->4 <6>8 <5> s4 <4> <_+>2\fermata
+  <6 5!>4 s <6> <6>8 <6 5> s4 <6 5> s s\fermata
+  s <6 5> s <6> <8 _->8 <7> <6 5>4 s <_+>\fermata
+  \bar "|."
 }
 
 scoreZChoirPart = \new ChoirStaff <<
@@ -1884,7 +2545,7 @@ scoreZChoirPart = \new ChoirStaff <<
   >>
   \new Lyrics \with {
     \override VerticalAxisGroup.staff-affinity = #CENTER
-  } \lyricsto "soprano" \scoreZVerse
+  } \lyricsto "soprano" { <<\scoreZVerse \new Lyrics {\scoreZVerseB}>> \scoreZVerseC }
   \new Staff \with {
     midiInstrument = "choir aahs"
     instrumentName = \markup \center-column { "Tenor" "Baß" }
@@ -1903,6 +2564,10 @@ scoreZChoirPart = \new ChoirStaff <<
 scoreZBassFiguresPart = \new FiguredBass \scoreZFigBass
 
 \bookpart {
+  \header {
+    title = "Wenn ich einmal soll scheiden (Nr. 62 (13. Choral), a-Moll)"
+    instrument = "Chor und B.C."
+  }
   \score {
     <<
       \scoreZChoirPart
