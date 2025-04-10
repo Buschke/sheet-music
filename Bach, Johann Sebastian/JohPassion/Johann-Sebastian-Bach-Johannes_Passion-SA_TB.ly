@@ -1402,7 +1402,7 @@ scoreOVerseC = \lyricmode {
       \new Staff \with {
         \consists "Ambitus_engraver"
       } { \scoreOMelody }
-      \addlyrics { \scoreOVerse }
+      \addlyrics { <<\scoreOVerse \new Lyrics{\scoreOVerseB}>> \scoreOVerseC }
     >>
     \layout { }
     \midi { }
@@ -1509,7 +1509,7 @@ scorePChoirPart = \new ChoirStaff <<
   >>
   \new Lyrics \with {
     \override VerticalAxisGroup.staff-affinity = #CENTER
-  } \lyricsto "soprano" \scorePVerse
+  } \lyricsto "soprano"  {<<\scorePVerse \new Lyrics{\scorePVerseB}>> \scorePVerseC}
   \new Staff \with {
     midiInstrument = "choir aahs"
     instrumentName = \markup \center-column { "Tenor" "Baß" }
@@ -1972,7 +1972,7 @@ scoreUVerseC = \lyricmode {
       \new Staff \with {
         \consists "Ambitus_engraver"
       } { \scoreUMelody }
-      \addlyrics { \scoreUVerse }
+      \addlyrics { <<\scoreUVerse \new Lyrics {\scoreUVerseB }>> \scoreUVerseC}
     >>
     \layout { }
     \midi { }
@@ -2092,7 +2092,7 @@ scoreVChoirPart = \new ChoirStaff <<
   >>
   \new Lyrics \with {
     \override VerticalAxisGroup.staff-affinity = #CENTER
-  } \lyricsto "soprano" \scoreVVerse
+  } \lyricsto "soprano" {<<\scoreVVerse \new Lyrics {\scoreVVerseB}>> \scoreVVerseC}
   \new Staff \with {
     midiInstrument = "choir aahs"
     instrumentName = \markup \center-column { "Tenor" "Baß" }
