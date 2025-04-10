@@ -1,4 +1,4 @@
-\version "2.24.3"
+ \version "2.24.3"
 \language "english"
 
 \header {
@@ -4338,21 +4338,21 @@ scoreYBcMusic = \relative c {
 }
 
 scoreYBcFigures = \figuremode {
-  \globalY
-  \override Staff.BassFigureAlignmentPositioning #'direction = #DOWN
-  % Figures follow here.
-  \repeat volta 2 {
+    \globalY
+    \override Staff.BassFigureAlignmentPositioning #'direction = #DOWN
+    % Figures follow here.
+    \repeat volta 2 {
+      \partial 4
+      s4 s <6> <7>8 <6> s4 <6 5> s s\fermata
+      <6> s <6 5> <6 4> <5_+> s2.
+    }
     \partial 4
-    s4 s <6> <7>8 <6> s4 <6 5> s s\fermata
-    <6> s <6 5> <6 4> <5_+> s2.
-  }
-  \partial 4
-  s4
-  <6>8 <5> s4 <6 4 2> <6> <6 5-> s s\fermata
-  s <7>8 <6> <6 5->4 <6>8 <5> s4 <4> <_+>2\fermata
-  <6 5!>4 s <6> <6>8 <6 5> s4 <6 5> s s\fermata
-  s <6 5> s <6> <8 _->8 <7> <6 5>4 s <_+>\fermata
-  \bar "|."
+    s4
+    <6>8 <5> s4 <6 4 2> <6> <6 5-> s s\fermata
+    s <7>8 <6> <6 5->4 <6>8 <5> s4 <4> <_+>2\fermata
+    <6 5!>4 s <6> <6>8 <6 5> s4 <6 5> s s\fermata
+    s <6 5> s <6> <8 _->8 <7> <6 5>4 s <_+>\fermata
+    \bar "|."
 }
 
 scoreYLeadSheetPart = <<
